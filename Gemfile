@@ -11,12 +11,11 @@ gem 'sqlite3'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem "compass", ">= 0.11.5"
+  gem 'compass', :git => 'git://github.com/chriseppstein/compass.git', :branch => 'rails31'
   gem 'sass-rails', "  ~> 3.1.0.rc"
   gem 'coffee-rails', "~> 3.1.0.rc"
   gem 'uglifier'
 end
-
 
 
 # Use unicorn as the web server

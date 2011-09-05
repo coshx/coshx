@@ -6,13 +6,13 @@ Syntax error: File to import not found or unreadable: colors.
                 /Users/mhickman84/dev/coshx/coshx/coshx/app/assets/stylesheets
                 /Users/mhickman84/.rvm/gems/ruby-1.9.2-p290@coshx/gems/compass-0.11.5/frameworks/blueprint/stylesheets
                 /Users/mhickman84/.rvm/gems/ruby-1.9.2-p290@coshx/gems/compass-0.11.5/frameworks/compass/stylesheets
-        on line 2 of /Users/mhickman84/dev/coshx/coshx/coshx/app/assets/stylesheets/global.css.scss
+        on line 1 of /Users/mhickman84/dev/coshx/coshx/coshx/app/assets/stylesheets/global.css.scss
 
-1: @import "compass/css3";
-2: @import "colors";
+1: @import "colors";
+2: @import "compass/css3";
 
 Backtrace:
-/Users/mhickman84/dev/coshx/coshx/coshx/app/assets/stylesheets/global.css.scss:2
+/Users/mhickman84/dev/coshx/coshx/coshx/app/assets/stylesheets/global.css.scss:1
 /Users/mhickman84/.rvm/gems/ruby-1.9.2-p290@coshx/gems/sass-3.1.7/lib/sass/tree/import_node.rb:64:in `rescue in import'
 /Users/mhickman84/.rvm/gems/ruby-1.9.2-p290@coshx/gems/sass-3.1.7/lib/sass/tree/import_node.rb:42:in `import'
 /Users/mhickman84/.rvm/gems/ruby-1.9.2-p290@coshx/gems/sass-3.1.7/lib/sass/tree/import_node.rb:25:in `imported_file'
@@ -81,4 +81,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: colors.\A               Load paths:\A                 Compass::SpriteImporter\A                 /Users/mhickman84/dev/coshx/coshx/coshx/public/stylesheets/sass\A                 /Users/mhickman84/dev/coshx/coshx/coshx/app/assets/stylesheets\A                 /Users/mhickman84/.rvm/gems/ruby-1.9.2-p290@coshx/gems/compass-0.11.5/frameworks/blueprint/stylesheets\A                 /Users/mhickman84/.rvm/gems/ruby-1.9.2-p290@coshx/gems/compass-0.11.5/frameworks/compass/stylesheets\A         on line 2 of /Users/mhickman84/dev/coshx/coshx/coshx/app/assets/stylesheets/global.css.scss\A \A 1: @import \"compass/css3\";\A 2: @import \"colors\";"; }
+  content: "Syntax error: File to import not found or unreadable: colors.\A               Load paths:\A                 Compass::SpriteImporter\A                 /Users/mhickman84/dev/coshx/coshx/coshx/public/stylesheets/sass\A                 /Users/mhickman84/dev/coshx/coshx/coshx/app/assets/stylesheets\A                 /Users/mhickman84/.rvm/gems/ruby-1.9.2-p290@coshx/gems/compass-0.11.5/frameworks/blueprint/stylesheets\A                 /Users/mhickman84/.rvm/gems/ruby-1.9.2-p290@coshx/gems/compass-0.11.5/frameworks/compass/stylesheets\A         on line 1 of /Users/mhickman84/dev/coshx/coshx/coshx/app/assets/stylesheets/global.css.scss\A \A 1: @import \"colors\";\A 2: @import \"compass/css3\";"; }

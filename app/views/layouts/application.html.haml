@@ -6,8 +6,10 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    #canvas
-      #header
-      #content
+    %section#canvas
+      %section#header
+        %h1=link_to "coshx", :root
+
+      %section#content
         = yield
-      #footer
+      %section#footer
