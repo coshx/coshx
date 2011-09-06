@@ -8,16 +8,19 @@
     = csrf_meta_tags
   %body
     %section#canvas
-      %header
-        %h1=link_to "coshx", :root, :id => "logo"
+      #header-wrapper
+        %header
+          #header-content
+          %h1=link_to "coshx", :root, :id => "logo"
 
-        %nav
-          %ul
-            %li=link_to "services", :services
-            %li=link_to "our work", :work
-            %li=link_to "our blog", :blog
-            %li=link_to "about", :about
-      #spacer
-      %section#content
-        = yield
-      %footer
+          %nav
+            %ul
+              %li=link_to "services", :services
+              %li=link_to "our work", :work
+              %li=link_to "our blog", :blog
+              %li=link_to "about", :about
+      #content-wrapper
+        %section#content
+          = yield
+      #footer-wrapper
+        %footer
