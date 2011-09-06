@@ -2,10 +2,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0.rc6'
 
+gem 'pg'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -15,6 +14,10 @@ group :assets do
   gem 'sass-rails', "  ~> 3.1.0.rc"
   gem 'coffee-rails', "~> 3.1.0.rc"
   gem 'uglifier'
+end
+
+group :development do
+  gem 'heroku_san'
 end
 
 
