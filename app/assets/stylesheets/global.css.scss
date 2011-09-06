@@ -1,7 +1,7 @@
 @import "compass/reset";
 @import "compass/css3";
 @import "compass/layout";
-@import "colors";
+@import "common";
 
 body {
     background: image-url('/assets/background-tile.jpg');
@@ -12,4 +12,29 @@ body {
     height: 100%;
     background: image-url('/assets/background-top.jpg') repeat-x;
     @include stretch;
+}
+
+#header {
+    margin: 0 auto;
+    width: $site-width;
+    height: $header-height;
+}
+
+#spacer {
+    background: image-url('/assets/curve.png') repeat-x;
+    height: 30px;
+    width: 100%;
+}
+
+#content {
+    
+}
+
+#logo {
+    text-indent: -9999em;
+    margin-top: 20px;
+    display: block;
+    width: 200px;
+    height: 61px;
+    background: image-url('/assets/logo.png') no-repeat;
 }
