@@ -1,4 +1,11 @@
+$blueprint-grid-columns: 24;
+$blueprint-grid-width: 30px;
+$blueprint-grid-margin: 10px;
+@import "blueprint/grid";
+
 $gray: #38383A;
+$light-gray: #525357;
+
 $blue: #659dff;
 $green: #afcf45;
 $purple: #94145e;
@@ -6,16 +13,26 @@ $purple: #94145e;
 $light-orange: #f47123;
 $dark-orange: #f05325;
 
-$site-width: 960px;
+$silver: #bbbdbf;
+$gold: #d6c29c;
+
 $header-height: 101px;
 
 @mixin centered {
     margin: 0 auto;
-    width: $site-width;
+    @include container;
 }
 
 @mixin nav-text {
     font-family: Arimo;
     font-size: 22px;
     color: $light-orange;
+}
+
+@mixin footer-header-text {
+    font-family: Arimo;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: $gold;
+    border-bottom: 7px solid $light-gray;
 }

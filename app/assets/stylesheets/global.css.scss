@@ -29,23 +29,6 @@ header {
     }
 }
 
-#content-wrapper {
-    background: image-url('/assets/background-top.jpg') repeat-x;
-    height: 700px;
-}
-
-#content {
-    @include centered;
-}
-
-footer {
-    @include centered;
-}
-
-#spacer {
-
-}
-
 nav {
     float: right;
     ul { list-style-type: none; }
@@ -61,6 +44,33 @@ nav {
         padding: 0 10px;
         border-right: 3px solid $blue;
     }
+}
+
+#content-wrapper {
+    background: image-url('/assets/background-top.jpg') repeat-x;
+    height: 700px;
+}
+
+#content {
+    @include centered;
+}
+
+footer {
+    @include centered;
+    h3 { @include footer-header-text; }
+    #contact {
+        @include column(12);
+    }
+    #links {
+        @include column(6);
+    }
+    #say-hello {
+        @include column(6, true);
+    }
+}
+
+#spacer {
+
 }
 
 #content {
