@@ -14,16 +14,40 @@ body {
     @include stretch;
 }
 
-#header {
-    margin: 0 auto;
-    width: $site-width;
+header {
+    @include centered;
     height: $header-height;
+}
+
+#content {
+    @include centered;
+}
+
+footer {
+    @include centered;
 }
 
 #spacer {
     background: image-url('/assets/curve.png') repeat-x;
     height: 30px;
     width: 100%;
+}
+
+nav {
+    float: right
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    text-decoration: none;
+    @include nav-text;
 }
 
 #content {

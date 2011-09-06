@@ -8,3 +8,15 @@ $dark-orange: #f05325;
 
 $site-width: 960px;
 $header-height: 80px;
+
+@mixin centered {
+    margin: 0 auto;
+    width: $site-width;
+}
+
+@mixin nav-text {
+    font-family: Arimo;
+    font-size: 23px;
+    color: $light-orange;
+    font-weight: bold;
+}
