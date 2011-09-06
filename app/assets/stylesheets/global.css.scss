@@ -17,6 +17,10 @@ body {
 header {
     @include centered;
     height: $header-height;
+    padding: 20px 0;
+    h1 {
+        float: left;
+    }
 }
 
 #content {
@@ -34,20 +38,20 @@ footer {
 }
 
 nav {
-    float: right
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav li {
-    float: left;
-}
-
-nav a {
-    text-decoration: none;
-    @include nav-text;
+    float: right;
+    ul { list-style-type: none; }
+    li {
+        float: left;
+        &:last-child a { border-right: none; }
+        }
+    a {
+        text-decoration: none;
+        @include nav-text;
+        display: block;
+        height: 20px;
+        padding: 0 10px;
+        border-right: 3px solid $blue;
+    }
 }
 
 #content {
@@ -56,7 +60,6 @@ nav a {
 
 #logo {
     text-indent: -9999em;
-    margin-top: 20px;
     display: block;
     width: 200px;
     height: 61px;
