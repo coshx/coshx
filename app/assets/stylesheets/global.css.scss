@@ -56,7 +56,14 @@ nav {
 
 footer {
     @include centered;
-    h3 { @include footer-header-text; }
+    @include footer-text;
+    h3 {
+        @include footer-header-text;
+    }
+    h4 {
+        @include footer-subheader-text;
+        margin: 10px 0;
+    }
     #contact {
         @include column(12);
     }
@@ -70,13 +77,15 @@ footer {
 
 @include sticky-footer(200px, "#content-wrapper", "#content-footer","#footer-wrapper");
 
-#spacer {
-
+#charlottesville, #boulder {
+    span {
+        display: block;
+        margin: 5px 0;
+    }
 }
 
-#content {
-    
-}
+#charlottesville { @include column(6) }
+#boulder { @include column(6, true) }
 
 #logo {
     text-indent: -9999em;

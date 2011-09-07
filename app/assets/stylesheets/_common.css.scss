@@ -4,7 +4,8 @@ $blueprint-grid-margin: 10px;
 @import "blueprint/grid";
 
 $gray: #38383A;
-$light-gray: #525357;
+$light-gray: #77777b;
+$medium-gray: #525357;
 
 $blue: #659dff;
 $green: #afcf45;
@@ -34,5 +35,18 @@ $header-height: 101px;
     text-transform: uppercase;
     font-size: 24px;
     color: $gold;
-    border-bottom: 7px solid $light-gray;
+    border-bottom: 7px solid $medium-gray;
+}
+
+@mixin footer-subheader-text {
+    font-family: Arimo;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: silver;
+}
+
+@mixin footer-text {
+    font-family: Arimo;
+    font-size: 13px;
+    color: $light-gray;
 }
