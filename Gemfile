@@ -18,6 +18,7 @@ end
 
 group :development do
   gem 'heroku_san'
+  gem 'sqlite3'
 end
 
 

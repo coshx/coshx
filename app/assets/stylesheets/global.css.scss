@@ -48,7 +48,6 @@ nav {
 
 #content-wrapper {
     background: image-url('/assets/background-top.jpg') repeat-x;
-    height: 700px;
 }
 
 #content {
@@ -68,6 +67,8 @@ footer {
         @include column(6, true);
     }
 }
+
+@include sticky-footer(200px, "#content-wrapper", "#content-footer","#footer-wrapper");
 
 #spacer {
 
