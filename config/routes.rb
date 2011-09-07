@@ -53,6 +53,8 @@ Coshx::Application.routes.draw do
   match '/our_work' => 'home#work', :as => :work
   match '/our_blog' => 'home#blog', :as => :blog
   match '/about' => 'home#about', :as => :about
+  match '/about' => 'home#careers', :as => :careers
+  match '/about' => 'home#news', :as => :news
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
