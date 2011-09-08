@@ -24,6 +24,7 @@ $header-height: 101px;
 @mixin centered {
     margin: 0 auto;
     @include container;
+    @include column-rule(1px, solid, #c00)
 }
 
 @mixin nav-text {
@@ -58,4 +59,15 @@ $header-height: 101px;
     font-weight: bold;
     text-decoration: none;
     font-size: 20px;
+}
+
+@mixin feature-text($color) {
+    font-family: Arimo;
+    font-size: 45px;
+    letter-spacing: 12px;
+    background-color: $color;
+    text-transform: uppercase;
+    color: white;
+    text-indent: 20px;
+    @include rotate(90deg);
 }

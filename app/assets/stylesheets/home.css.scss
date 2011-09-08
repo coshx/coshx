@@ -8,9 +8,20 @@
     @include column(16);
     height: 420px;
     background: image-url('/assets/feature.jpg');
+    #text-wrapper {
+        width: 50px;
+        height: 420px;
+        float: right;
+        background-color: $green;
+    }
+    h2 {
+        @include feature-text($green);
+        text-indent: 60px;
+    }
 }
 
 #blog {
-    @include column(8, true);
+    @include column(8);
+    @include last;
     height: 300px;
 }
