@@ -61,10 +61,10 @@ $header-height: 101px;
     font-size: 20px;
 }
 
-@mixin main-feature-text($size) {
+@mixin main-feature-text($size, $spacing) {
     font-family: Arimo;
     font-size: $size;
-    letter-spacing: 12px;
+    letter-spacing: $spacing;
     text-transform: uppercase;
     color: white;
     text-indent: 20px;

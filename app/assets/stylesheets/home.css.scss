@@ -9,7 +9,7 @@
     height: 420px;
     background: image-url('/assets/feature.jpg');
     h2 {
-        @include main-feature-text(45px);
+        @include main-feature-text(45px, 12px);
     }
     #text-wrapper {
         width: 50px;
@@ -27,7 +27,7 @@
     border-bottom: 2px solid $light-orange;
 
     h3 {
-        @include main-feature-text(24px);
+        @include main-feature-text(24px, 8px);
     }
 
     #text-wrapper {
