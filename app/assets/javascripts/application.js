@@ -8,4 +8,4 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
-//= require processing-1.3.0.min
+//= require raphael-min
