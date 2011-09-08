@@ -80,11 +80,18 @@ $header-height: 101px;
     text-align: center;
 }
 
-@mixin feature-text($color) {
+@mixin feature-header-text($color) {
     color: $color;
     font-family: Syncopate;
     font-size: 24px;
     text-align: center;
     text-transform: uppercase;
     padding: 10px 0;
+}
+
+@mixin feature-text {
+    font-family: Arimo;
+    font-size: 14px;
+    color: white;
+    line-height: 1.5em;
 }

@@ -15,6 +15,7 @@
         width: 50px;
         background-color: $green;
     }
+    border-bottom: 2px solid $green;
 }
 
 #blog {
@@ -23,6 +24,7 @@
     @include opacity(0.7);
     background-color: $gray;
     height: 420px;
+    border-bottom: 2px solid $light-orange;
 
     h3 {
         @include main-feature-text(24px);
@@ -56,19 +58,24 @@
             height: 198px;
         }
     }
+    p {
+        padding: 0 20px 20px 20px;
+        @include feature-text;
+    }
+
     #you { @include last; }
 
     #startups article {
-        border: 1px solid $green;
-        h3 { @include feature-text($green); }
+        border: 1px solid darken($green, 4);
+        h3 { @include feature-header-text($green); }
     }
     #enterprise article {
-        border: 1px solid $blue;
-        h3 { @include feature-text($blue); }
+        border: 1px solid darken($blue, 4);
+        h3 { @include feature-header-text($blue); }
     }
     #you article {
-        border: 1px solid $purple;
-        h3 { @include feature-text($purple); }
+        border: 1px solid darken($purple, 4);
+        h3 { @include feature-header-text($purple); }
     }
     #title { @include opacity(1.0)}
 }
