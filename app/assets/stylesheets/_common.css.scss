@@ -61,7 +61,7 @@ $header-height: 101px;
     font-size: 20px;
 }
 
-@mixin feature-text($size) {
+@mixin main-feature-text($size) {
     font-family: Arimo;
     font-size: $size;
     letter-spacing: 12px;
@@ -71,4 +71,20 @@ $header-height: 101px;
     @include rotate(90deg);
     white-space:nowrap;
     text-indent: 60px;
+}
+
+@mixin tagline-text {
+    color: $light-orange;
+    font-family: Arimo;
+    font-size: 30px;
+    text-align: center;
+}
+
+@mixin feature-text($color) {
+    color: $color;
+    font-family: Syncopate;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
 }
