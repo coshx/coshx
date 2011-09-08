@@ -8,6 +8,8 @@ body {
 
 em { color: $dark-orange; }
 
+p { line-height: 1.5em; }
+
 #canvas {
     width: 100%;
     height: 100%;
@@ -61,6 +63,7 @@ nav {
 footer {
     @include centered;
     @include footer-text;
+    a { @include footer-link-text }
     h3 {
         @include footer-header-text;
     }
@@ -69,18 +72,14 @@ footer {
         margin: 10px 0;
     }
     #contact {
-        @include column(12);
+        @include column(16);
     }
-    #links {
-        @include column(6);
-    }
-    #say-hello {
-        @include column(6, true);
+    #careers {
+        @include column(8, true);
     }
     li { margin: 5px 0; }
-    a { @include footer-link-text; }
-    #contact a { @include footer-text; }
     margin-top: 50px;
+    p { margin: 10px 0; }
 }
 
 @include sticky-footer(200px, "#content-wrapper", "#content-footer","#footer-wrapper");
@@ -92,8 +91,8 @@ footer {
     }
 }
 
-#charlottesville { @include column(6) }
-#boulder { @include column(6, true) }
+#charlottesville { @include column(8) }
+#boulder { @include column(8, true) }
 
 #logo {
     text-indent: -9999em;
