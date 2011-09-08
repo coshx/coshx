@@ -8,20 +8,33 @@
     @include column(16);
     height: 420px;
     background: image-url('/assets/feature.jpg');
+    h2 {
+        @include feature-text(45px);
+    }
     #text-wrapper {
         width: 50px;
-        height: 420px;
-        float: right;
         background-color: $green;
-    }
-    h2 {
-        @include feature-text($green);
-        text-indent: 60px;
     }
 }
 
 #blog {
     @include column(8);
     @include last;
-    height: 300px;
+    @include opacity(0.7);
+    background-color: $gray;
+    height: 420px;
+
+    h3 {
+        @include feature-text(24px);
+    }
+
+    #text-wrapper {
+        width: 30px;
+        background-color: $light-orange;
+    }
+}
+
+#text-wrapper {
+    height: 420px;
+    float: right;
 }

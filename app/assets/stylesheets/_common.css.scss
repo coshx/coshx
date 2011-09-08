@@ -61,13 +61,14 @@ $header-height: 101px;
     font-size: 20px;
 }
 
-@mixin feature-text($color) {
+@mixin feature-text($size) {
     font-family: Arimo;
-    font-size: 45px;
+    font-size: $size;
     letter-spacing: 12px;
-    background-color: $color;
     text-transform: uppercase;
     color: white;
     text-indent: 20px;
     @include rotate(90deg);
+    white-space:nowrap;
+    text-indent: 60px;
 }
