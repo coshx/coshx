@@ -21,6 +21,8 @@ $gold: #d6c29c;
 
 $header-height: 101px;
 
+$feature-height: 450px;
+
 @mixin centered {
     margin: 0 auto;
     @include container;
@@ -93,7 +95,25 @@ $header-height: 101px;
 
 @mixin feature-text {
     font-family: Arimo;
-    font-size: 14px;
+    font-size: 16px;
     color: white;
     line-height: 1.5em;
+    text-align: center;
+}
+
+@mixin blog-header-text {
+    font-family: Arimo;
+}
+
+@mixin quote-text {
+    font-style: italic;
+    font-size: 16px;
+    color: $gray;
+    line-height: 1.5em;
+}
+
+@mixin credit-text {
+    @include quote-text;
+    font-size: 14px;
+    font-style: normal;
 }

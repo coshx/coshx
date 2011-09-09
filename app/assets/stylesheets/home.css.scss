@@ -5,84 +5,104 @@
 @import "common";
 
 #main-feature {
-    @include column(16);
-    height: 420px;
-    background: image-url('/assets/feature.jpg');
+    @include column(24, true);
+    height: $feature-height;
+    background: image-url('/assets/feature-reframeit.jpg');
     h2 {
-        @include main-feature-text(45px, 12px);
+        @include main-feature-text(28px, 6px);
     }
     #text-wrapper {
         width: 50px;
-        background-color: $green;
+        background-color: $blue;
     }
-    border-bottom: 2px solid $green;
+    @include border-corner-radius(bottom, left, 12px);
+    @include border-corner-radius(bottom, right, 12px);
+    overflow: hidden;
+    border: 1px solid black;
+
+    .quote {
+        height: 30px;
+        margin-top: 385px;
+        margin-right: 25px;
+        width: 500px;
+        display: block;
+        float: right;
+        text-align: center;
+        @include quote-text;
+        .credit {
+            @include credit-text;
+            display: block;
+        }
+    }
 }
 
 #blog {
-    @include column(8);
+    @include column(24, true);
     @include last;
-    @include opacity(0.7);
-    background-color: $gray;
-    height: 420px;
-    border-bottom: 2px solid $light-orange;
+    height: 150px;
 
-    h3 {
-        @include main-feature-text(24px, 8px);
+    .wrapper {
+        border: 1px solid black;
+        @include opacity(0.7);
+        background-color: $gray;
+        @include border-radius(12px);
+        height: 148px;
     }
 
-    #text-wrapper {
-        width: 30px;
-        background-color: $light-orange;
+    h3 {
+        @include feature-header-text($light-orange);
+    }
+    #subscribe {
+        
     }
 }
 
 #main-feature, #blog {
-    @include border-corner-radius(bottom, right, 12px);
-    overflow: hidden !important;
 }
 
 #text-wrapper {
-    height: 422px;
+    height: $feature-height;
     float: right;
     overflow: hidden;
-    @include border-corner-radius(bottom, right, 12px);
 }
 
 #tagline {
     @include tagline-text;
     @include column(24);
     @include last;
-    margin: 30px 0;
+    margin: 50px 0;
 }
 
 #features {
     section {
-        @include column(8);
-        background-color: $gray;
-        @include opacity(0.7);
         height: 200px;
         article {
             height: 198px;
         }
     }
     p {
-        padding: 0 20px 20px 20px;
         @include feature-text;
     }
 
     #you { @include last; }
 
     #startups article {
-        border: 1px solid darken($green, 4);
-        h3 { @include feature-header-text($green); }
+        h3 {
+            @include feature-header-text($green);
+        }
+        @include column(7);
+        @include append(1);
     }
     #enterprise article {
-        border: 1px solid darken($blue, 4);
         h3 { @include feature-header-text($blue); }
+        @include column(8);
+        @include append(1);
     }
     #you article {
-        border: 1px solid darken($purple, 4);
-        h3 { @include feature-header-text($purple); }
+        @include column(7, true);
+        h3 {
+            @include feature-header-text($purple);
+        }
     }
     #title { @include opacity(1.0)}
 }
