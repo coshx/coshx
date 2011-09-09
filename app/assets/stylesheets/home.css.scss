@@ -36,9 +36,16 @@
     }
 }
 
+#main-feature, #blog {
+    @include border-corner-radius(bottom, right, 12px);
+    overflow: hidden !important;
+}
+
 #text-wrapper {
-    height: 420px;
+    height: 422px;
     float: right;
+    overflow: hidden;
+    @include border-corner-radius(bottom, right, 12px);
 }
 
 #tagline {
