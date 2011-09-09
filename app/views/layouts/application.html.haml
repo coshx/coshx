@@ -9,7 +9,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %section#canvas
+    %section#content-canvas
       #header-wrapper
         %header
           #header-content
@@ -24,28 +24,28 @@
         %section#content
           = yield
         #content-footer
-      #footer-wrapper
-        %footer
-          %section#contact
-            %h3 Contact Us
-            %section#charlottesville
-              %h4 Charlottesville
-              %span#street-1 1110 Market Street East
-              %span#street-2 Suite N7
-              %span#city-state-zip Charlottesville, VA 22903
-              %span#email=link_to "info+cville@coshx.com", "mailto:info+cville@coshx.com"
-            %section#boulder
-              %h4 Boulder
-              %span#street-1 3080 Valmont Rd
-              %span#street-2 Suite 280
-              %span#city-state-zip Boulder, CO 80301
-              %span#email=link_to "info+boulder@coshx.com", "mailto:info+boulder@coshx.com"
-          %section#careers
-            %h3 Careers
-            %p
-              Interested in working at Coshx?
-              %br
-              Send us an email with your resume and open source contributions:
-            = link_to "jobs@coshx.com", "mailto:jobs@coshx.com"
+    #footer-wrapper
+      %footer
+        %section#contact
+          %h3 Contact Us
+          %section#charlottesville
+            %h4 Charlottesville
+            %span#street-1 1110 Market Street East
+            %span#street-2 Suite N7
+            %span#city-state-zip Charlottesville, VA 22903
+            %span#email=link_to "info+cville@coshx.com", "mailto:info+cville@coshx.com"
+          %section#boulder
+            %h4 Boulder
+            %span#street-1 3080 Valmont Rd
+            %span#street-2 Suite 280
+            %span#city-state-zip Boulder, CO 80301
+            %span#email=link_to "info+boulder@coshx.com", "mailto:info+boulder@coshx.com"
+        %section#careers
+          %h3 Careers
+          %p
+            Interested in working at Coshx?
+            %br
+            Send us an email with your resume and open source contributions:
+          = link_to "jobs@coshx.com", "mailto:jobs@coshx.com"
 
             

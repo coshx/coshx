@@ -63,6 +63,7 @@ nav {
 footer {
     @include centered;
     @include footer-text;
+    height: 150px;
     a { @include footer-link-text }
     h3 {
         @include footer-header-text;
@@ -82,7 +83,7 @@ footer {
     p { margin: 10px 0; }
 }
 
-@include sticky-footer(200px, "#content-wrapper", "#content-footer","#footer-wrapper");
+@include sticky-footer(100px, "#content-wrapper", "#content-footer","#footer-wrapper");
 
 #charlottesville, #boulder {
     span {
