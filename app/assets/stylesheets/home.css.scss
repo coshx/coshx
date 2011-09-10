@@ -9,7 +9,7 @@
     height: $feature-height;
     background: image-url('/assets/feature-reframeit.jpg');
     h2 {
-        @include main-feature-text(28px, 6px);
+        @include main-feature-text(28px, 4px);
     }
     #text-wrapper {
         width: 50px;
@@ -107,3 +107,9 @@
     #title { @include opacity(1.0)}
 }
 
+section.primary {
+    padding-top: 50px;
+    h2 { @include header-text; }
+    h3 { @include feature-header-text($blue); }
+    min-height:400px;
+}

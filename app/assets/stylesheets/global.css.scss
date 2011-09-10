@@ -63,7 +63,6 @@ nav {
 footer {
     @include centered;
     @include footer-text;
-    height: 150px;
     a { @include footer-link-text }
     h3 {
         @include footer-header-text;
@@ -79,11 +78,12 @@ footer {
         @include column(8, true);
     }
     li { margin: 5px 0; }
-    margin-top: 50px;
     p { margin: 10px 0; }
 }
 
-@include sticky-footer(100px, "#content-wrapper", "#content-footer","#footer-wrapper");
+#content-footer { @include clearfix; }
+
+@include sticky-footer(160px, "#content-canvas", "#content-footer", "footer");
 
 #charlottesville, #boulder {
     span {

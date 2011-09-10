@@ -117,3 +117,10 @@ $feature-height: 450px;
     font-size: 14px;
     font-style: normal;
 }
+
+@mixin header-text {
+    color: $light-orange;
+    font-family: Arimo;
+    font-size: 40px;
+    text-align: left;
+}
