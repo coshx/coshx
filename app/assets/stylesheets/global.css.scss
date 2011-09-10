@@ -2,7 +2,7 @@
 @import "common";
 
 body {
-    background: image-url('/assets/background-tile.jpg');
+    background: image-url('/assets/background-tile.jpg') $gray;
     background-position: 0px 101px;
 }
 
