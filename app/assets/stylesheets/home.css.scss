@@ -113,3 +113,9 @@ section.primary {
     h3 { @include feature-header-text($blue); }
     min-height:400px;
 }
+
+section#activity-stream {
+    @include column(24, true);
+    height: 200px;
+    @include border-radius(12px);
+}
