@@ -56,6 +56,7 @@ nav {
 #content {
     @include centered;
     margin-top: -40px;
+    padding-bottom: 50px;
     position: relative;
     z-index: 0;
 }
