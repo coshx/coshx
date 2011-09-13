@@ -84,7 +84,7 @@ footer {
 
 #content-footer { @include clearfix; }
 
-@include sticky-footer(160px, "#content-canvas", "#content-footer", "footer");
+@include sticky-footer(180px, "#content-canvas", "#content-footer", "footer");
 
 #charlottesville, #boulder {
     span {
@@ -93,8 +93,9 @@ footer {
     }
 }
 
-#charlottesville { @include column(8) }
-#boulder { @include column(8, true) }
+#email { @include column(4) }
+#charlottesville { @include column(6) }
+#boulder { @include column(6, true) }
 
 #logo {
     text-indent: -9999em;
@@ -103,4 +104,3 @@ footer {
     height: 61px;
     background: image-url('/assets/logo.png') no-repeat;
 }
-
