@@ -22,7 +22,7 @@
 
     .quote {
         height: 30px;
-        margin-top: 385px;
+        margin-top: 375px;
         margin-right: 25px;
         width: 500px;
         display: block;
@@ -33,6 +33,11 @@
             @include credit-text;
             display: block;
         }
+    }
+
+    a {
+        display: block;
+        float: right;
     }
 }
 
