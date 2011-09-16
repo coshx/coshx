@@ -22,7 +22,7 @@
 
     .quote {
         height: 30px;
-        margin-top: 385px;
+        margin-top: 375px;
         margin-right: 25px;
         width: 500px;
         display: block;
@@ -33,6 +33,11 @@
             @include credit-text;
             display: block;
         }
+    }
+
+    a {
+        display: block;
+        float: right;
     }
 }
 
@@ -112,4 +117,10 @@ section.primary {
     h2 { @include header-text; }
     h3 { @include feature-header-text($blue); }
     min-height:400px;
+}
+
+section#activity-stream {
+    @include column(24, true);
+    height: 200px;
+    @include border-radius(12px);
 }

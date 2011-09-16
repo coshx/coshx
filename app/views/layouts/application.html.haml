@@ -6,8 +6,10 @@
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Arimo"
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Syncopate"
     = stylesheet_link_tag "application"
+    %link{:rel => "shortcut icon", :href => "logo.ico"}
     = javascript_include_tag "application"
     = csrf_meta_tags
+    = google_analytics_js
   %body
     %section#content-canvas
       #header-wrapper
@@ -27,22 +29,24 @@
     %footer
       %section#contact
         %h3 Contact Us
+        %section#email
+          %h4 Email
+          %span#email=link_to "info@coshx.com", "mailto:info@coshx.com"
         %section#charlottesville
           %h4 Charlottesville
           %span#street-1 1110 Market Street East
           %span#street-2 Suite N7
           %span#city-state-zip Charlottesville, VA 22903
-          %span#email=link_to "info+cville@coshx.com", "mailto:info+cville@coshx.com"
         %section#boulder
           %h4 Boulder
-          %span#street-1 3080 Valmont Rd
+          %span#street-1 3080 Valmont Road
           %span#street-2 Suite 280
           %span#city-state-zip Boulder, CO 80301
-          %span#email=link_to "info+boulder@coshx.com", "mailto:info+boulder@coshx.com"
       %section#careers
         %h3 Careers
         %p
           Interested in working at Coshx?
           %br
-          Send us an email with your resume and open source contributions:
-        = link_to "jobs@coshx.com", "mailto:jobs@coshx.com"
+          Shoot us an email showing us what you're interested in, what you've accomplished, and why you want to join our team.
+          %br
+          = link_to "jobs@coshx.com", "mailto:jobs@coshx.com"
