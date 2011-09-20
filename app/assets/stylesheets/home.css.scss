@@ -112,12 +112,6 @@
     #title { @include opacity(1.0)}
 }
 
-section.primary {
-    padding-top: 50px;
-    h2 { @include header-text; }
-    h3 { @include feature-header-text($blue); }
-    min-height:400px;
-}
 
 section#activity-stream {
     @include column(24, true);

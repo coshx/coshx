@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc6'
+gem 'rails', '~>3.1'
 
 gem 'pg'
 # Bundle edge Rails instead:
@@ -11,8 +11,8 @@ gem 'pg'
 # in production environments by default.
 group :assets do
   gem 'compass', :git => 'git://github.com/chriseppstein/compass.git', :branch => 'rails31'
-  gem 'sass-rails', "  ~> 3.1.0.rc"
-  gem 'coffee-rails', "~> 3.1.0.rc"
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'uglifier'
 end
 
@@ -37,3 +37,6 @@ gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "jquery-rails"
 gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
+
+# markdown-based blogging engine
+gem 'postmarkdown', :git => 'https://github.com/ivanvanderbyl/postmarkdown.git'

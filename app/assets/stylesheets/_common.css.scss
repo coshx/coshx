@@ -123,4 +123,35 @@ $feature-height: 450px;
     font-family: Arimo;
     font-size: 40px;
     text-align: left;
+    margin: 10px 0;
+}
+
+@mixin sub-header-text {
+    color: $blue;
+    font-family: Syncopate;
+    font-size: 24px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+@mixin lowercase-header-text {
+    font-family: Arimo;
+    color: $green;
+    text-transform: lowercase;
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+@mixin article-text {
+    font-family: Arimo;
+    font-size: 16px;
+    color: $silver;
+    line-height: 1.5em;
+    font-weight: normal;
+}
+
+@mixin meta-text {
+    font-family: Arimo;
+    text-align: left;
+    color: $gold;
 }

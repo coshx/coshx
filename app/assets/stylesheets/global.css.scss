@@ -8,7 +8,35 @@ body {
 
 em { color: $dark-orange; }
 
-p { line-height: 1.5em; }
+section, div, span, p {
+    font-family: Arimo;
+    color: $silver;
+}
+
+ul, ol {
+    color: $silver;
+    margin: 10px 0 10px 20px;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ul {
+    list-style-type: square;
+}
+
+li {
+    @include article-text;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+}
 
 #canvas {
     width: 100%;
@@ -80,6 +108,9 @@ footer {
     }
     li { margin: 5px 0; }
     p { margin: 10px 0; }
+    section, span, p {
+        color: $light-gray;
+    }
 }
 
 #content-footer { @include clearfix; }
@@ -103,4 +134,23 @@ footer {
     width: 200px;
     height: 61px;
     background: image-url('/assets/logo.png') no-repeat;
+}
+
+section.primary, section.secondary {
+    padding-top: 50px;
+    h2 { @include header-text; }
+    h3 { @include sub-header-text; }
+    h4 { @include lowercase-header-text; }
+    min-height:400px;
+    a {
+        color: $light-orange;
+        font-weight: bold;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    em {
+        color: $gold;
+    }
 }

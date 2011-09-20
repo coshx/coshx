@@ -1,0 +1,33 @@
+@import "common";
+
+#gutter {
+    @include column(2);
+}
+
+section.primary {
+    @include column(20);
+    header {
+        @include column(20);
+        padding-top: 0px;
+        height: auto;
+    }
+}
+
+section.secondary {
+    @include column(4, true);
+    h3 { text-align: center; }
+}
+
+.post {
+    p {
+        @include article-text;
+        margin-bottom: 25px;
+    }
+    hr {
+        border: 5px solid $light-gray;
+        border-style: none;
+    }
+    .meta {
+        @include meta-text;
+    }
+}

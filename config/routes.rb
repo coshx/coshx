@@ -1,4 +1,6 @@
 Coshx::Application.routes.draw do
+  postmarkdown :as => :posts
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -51,7 +53,6 @@ Coshx::Application.routes.draw do
   root :to => 'home#index'
   match '/services' => 'home#services', :as => :services
   match '/portfolio' => 'home#portfolio', :as => :portfolio
-  match '/blog' => 'home#blog', :as => :blog
   match '/about' => 'home#about', :as => :about
   # See how all your routes lay out with "rake routes"
 
