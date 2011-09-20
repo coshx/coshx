@@ -107,8 +107,8 @@ $feature-height: 450px;
 
 @mixin quote-text {
     font-style: italic;
-    font-size: 16px;
-    color: $gray;
+    font-size: 14px;
+    color: $medium-gray;
     line-height: 1.5em;
 }
 
