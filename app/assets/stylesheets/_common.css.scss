@@ -40,12 +40,13 @@ $feature-height: 450px;
     text-transform: uppercase;
     font-size: 24px;
     color: $gold;
-    border-bottom: 7px solid $medium-gray;
+    border-bottom: 5px solid $medium-gray;
+    padding-bottom: 10px;
 }
 
 @mixin footer-subheader-text {
     font-family: Arimo;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: 18px;
     color: $silver;
 }

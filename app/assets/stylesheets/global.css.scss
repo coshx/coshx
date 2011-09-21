@@ -71,9 +71,9 @@ nav {
         text-decoration: none;
         @include nav-text;
         display: block;
-        height: 20px;
-        padding: 0 10px;
-        border-right: 3px solid $blue;
+        height: 25px;
+        padding: 0 15px;
+        border-right: 2px solid $blue;
     }
 }
 
@@ -98,7 +98,7 @@ footer {
     }
     h4 {
         @include footer-subheader-text;
-        margin: 10px 0;
+        margin: 0 0 10px 0;
     }
     #contact {
         @include column(16);
