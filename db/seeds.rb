@@ -7,4 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 charlie = Admin.create({name: 'Charlie Kelly', email: 'charlie@bsmail.cc', password: 'alwayssunny'})
+puts "Created User #{charlie.name}"
 dennis = Admin.create({name: 'Dennis Reynolds', email: 'dennis@bsmail.cc', password: 'alwayssunny'})
+puts "Created User #{dennis.name}"
