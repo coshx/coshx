@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '~>3.1'
 
 gem 'pg'
+gem 'devise'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
@@ -18,7 +19,6 @@ end
 
 group :development do
   gem 'heroku_san'
-  gem 'sqlite3'
 end
 
 
