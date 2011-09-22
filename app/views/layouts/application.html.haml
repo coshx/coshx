@@ -12,45 +12,9 @@
   %body
     %section#content-canvas
       #header-wrapper
-        %header
-          - if admin_signed_in?
-            #admin
-              %span
-                Signed in as
-                = current_admin.name
-                = link_to('Sign Out', destroy_admin_session_path, :method => :delete)
-          %h1=link_to "coshx", :root, :id => "logo"
-          %nav#main
-            %ul
-              %li=link_to "services", :services
-              %li=link_to "portfolio", :portfolio
-              %li=link_to "about", :about
-              %li=link_to "blog", :posts
+        = render "layouts/header"
       #content-wrapper
         %section#content
           = yield
         #content-footer
-    %footer
-      %section#contact
-        %h3 Contact Us
-        %section#email
-          %h4 Email
-          %span#email=link_to "info@coshx.com", "mailto:info@coshx.com"
-        %section#charlottesville
-          %h4 Charlottesville
-          %span#street-1 1110 Market Street East
-          %span#street-2 Suite N7
-          %span#city-state-zip Charlottesville, VA 22903
-        %section#boulder
-          %h4 Boulder
-          %span#street-1 3080 Valmont Road
-          %span#street-2 Suite 280
-          %span#city-state-zip Boulder, CO 80301
-      %section#careers
-        %h3 Careers
-        %p
-          Interested in working at Coshx?
-          %br
-          Shoot us an email showing us what you're interested in, what you've accomplished, and why you want to join our team.
-          %br
-          = link_to "jobs@coshx.com", "mailto:jobs@coshx.com"
+    = render "layouts/footer"

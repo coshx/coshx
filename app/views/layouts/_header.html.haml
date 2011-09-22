@@ -1,0 +1,14 @@
+%header
+  - if admin_signed_in?
+    #admin
+      %span
+        Signed in as
+        = current_admin.name
+        = link_to('Sign Out', destroy_admin_session_path, :method => :delete)
+  %h1=link_to "coshx", :root, :id => "logo"
+  %nav#main
+    %ul
+      %li=link_to "services", :services
+      %li=link_to "portfolio", :portfolio
+      %li=link_to "about", :about
+      %li=link_to "blog", :posts
