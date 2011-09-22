@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-charlie = Admin.create({name: 'Charlie Kelly', email: 'charlie@bsmail.cc', password: 'alwayssunny'})
-puts "Created User #{charlie.name}"
-dennis = Admin.create({name: 'Dennis Reynolds', email: 'dennis@bsmail.cc', password: 'alwayssunny'})
-puts "Created User #{dennis.name}"
+ben = Admin.create({name: 'Ben Taitelbaum', email: 'ben@coshx.com', password: 'password'})
+puts "Created User #{ben.name}"
+mike = Admin.create({name: 'Mike Hickman', email: 'mike@coshx.com', password: 'password'})
+puts "Created User #{mike.name}"
