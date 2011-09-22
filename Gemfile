@@ -5,6 +5,7 @@ gem "rails", "~>3.1"
 gem "pg"
 gem "devise"
 gem "redcarpet", "2.0.0.b5"
+gem "pygmentize"
 # Bundle edge Rails instead:
 # gem "rails",     :git => "git://github.com/rails/rails.git"
 
