@@ -14,9 +14,14 @@
     %section#content-canvas
       #header-wrapper
         %header
-          #header-content
+          - if admin_signed_in?
+            #admin
+              %span
+                Signed in as
+                = current_admin.name
+                = link_to('Sign Out', destroy_admin_session_path, :method => :delete)
           %h1=link_to "coshx", :root, :id => "logo"
-          %nav
+          %nav#main
             %ul
               %li=link_to "services", :services
               %li=link_to "portfolio", :portfolio
