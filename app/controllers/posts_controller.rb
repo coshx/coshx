@@ -14,7 +14,6 @@ class PostsController < ApplicationController
 
   def create
     post = Post.new(:author => current_admin, :title => params[:post][:title], :body => params[:post][:body])
-    post.date = DateTime.now
 
     respond_to do |format|
       if post.save
