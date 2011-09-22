@@ -156,3 +156,8 @@ $feature-height: 450px;
     text-align: left;
     color: $gold;
 }
+
+@mixin code-text {
+    font-family: Droid Sans Mono;
+    line-height: 1.2em;
+}
