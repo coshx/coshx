@@ -1,4 +1,4 @@
-%h2=post.title
+%h3=post.title
 .post-author=post.author.name
-.post-date=post.date
-.post-body=post.body_html.html_safe
+.post-date=post.date.strftime("%B %e, %Y")
+.post-body=preserve post.body_html.html_safe
