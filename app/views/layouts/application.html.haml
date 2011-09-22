@@ -12,6 +12,8 @@
   %body
     %section#content-canvas
       #header-wrapper
+        - if admin_signed_in?
+          = render "layouts/admin_menu"
         = render "layouts/header"
       #content-wrapper
         %section#content

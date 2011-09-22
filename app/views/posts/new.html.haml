@@ -1,7 +1,6 @@
 %section.primary
   %h2 New Blog Post
-  %h4="Welcome, #{current_admin.name}"
-  = form_for :post, :url => posts_path(@post) do |f|
-    = f.text_field :title
-    = f.text_area :body, :size => "60x6"
+  = form_for :post, :url => posts_path(@post), :html => { :id => "new-post" } do |f|
+    = f.text_field :title, :placeholder => "Post Title"
+    = f.text_area :body, :placeholder => "Post Content"
     = f.submit "Save"
