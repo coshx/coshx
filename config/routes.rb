@@ -1,6 +1,7 @@
 Coshx::Application.routes.draw do
-  devise_for :admins
 
+  devise_for :admins
+  match 'dashboard' => 'dashboard#index', :as => :admin_root
   resources :posts, :path => "/blog"
 
   # The priority is based upon order of creation:
