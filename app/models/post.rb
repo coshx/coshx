@@ -13,7 +13,7 @@ class Post < ActiveRecord::Base
 
   private
   def highlight_syntax(html)
-    doc = Nokogiri::HTML(html)
+    doc = ::Nokogiri::HTML(html)
     doc.search("code").each do |code_tag|
       code_tag.replace Pygmentize.process(code_tag.text.rstrip, code_tag[:class].intern)
     end

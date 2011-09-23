@@ -204,6 +204,7 @@ DEPENDENCIES
   haml-rails
   heroku_san
   jquery-rails
+  nokogiri
   pg
   pygmentize
   rails (~> 3.1)
