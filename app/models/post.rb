@@ -15,7 +15,9 @@ class Post < ActiveRecord::Base
   def highlight_syntax(html)
     doc = ::Nokogiri::HTML(html)
     doc.search("code").each do |code_tag|
-      code_tag.replace Pygmentize.process(code_tag.text.rstrip, code_tag[:class].intern)
+      unless code_tag[:class].nil?
+        code_tag.replace Pygmentize.process(code_tag.text.rstrip, code_tag[:class].intern)
+      end
     end
     doc.to_s
   end

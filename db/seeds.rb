@@ -10,3 +10,5 @@ ben = Admin.create({name: 'Ben Taitelbaum', email: 'ben@coshx.com', password: 'p
 puts "Created User #{ben.name}"
 mike = Admin.create({name: 'Mike Hickman', email: 'mike@coshx.com', password: 'password'})
 puts "Created User #{mike.name}"
+
+# fake blog posts
