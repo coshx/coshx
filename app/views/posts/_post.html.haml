@@ -1,4 +1,7 @@
 %h3=post.title
 .post-author=post.author.name
 .post-date=post.created_at.strftime("%B %e, %Y")
-.post-body=preserve post.body_html.html_safe
+- if preview
+  .post-body=preserve post.preview.html_safe
+- else
+  .post-body=preserve post.body_html.html_safe

@@ -11,9 +11,17 @@ class Post < ActiveRecord::Base
     end
   end
 
+  def preview
+    lines = body_html.split(/(\n)+/)
+    
+    lines.reject do |line|
+      line =~ /^$\n/
+    end.take(4).join(' ').concat('...')
+  end
+  
   private
   def highlight_syntax(html)
-    doc = ::Nokogiri::HTML(html)
+    doc = Nokogiri::HTML::fragment(html)
     doc.search("code").each do |code_tag|
       unless code_tag[:class].nil?
         code_tag.replace Pygmentize.process(code_tag.text.rstrip, code_tag[:class].intern)
