@@ -1,4 +1,8 @@
-%h3=post.title
+%h3
+  -if preview
+    =link_to post.title, post
+  -else
+    =post.title
 .post-author=post.author.name
 .post-date=post.created_at.strftime("%B %e, %Y")
 - if preview

@@ -26,6 +26,6 @@ EOF
   end
 
   it "adds ... to the end of the preview content" do
-    @post.preview.should match /\.\.\.$/
+    @post.preview.should match /\.\.\.<\/p>$/
   end
 end

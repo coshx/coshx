@@ -13,10 +13,10 @@ class Post < ActiveRecord::Base
 
   def preview
     lines = body_html.split(/(\n)+/)
-    
-    lines.reject do |line|
+    preview = lines.reject do |line|
       line =~ /^$\n/
-    end.take(4).join(' ').concat('...')
+    end.take(4).join(' ')
+    add_ellipses preview
   end
   
   private
@@ -27,6 +27,14 @@ class Post < ActiveRecord::Base
         code_tag.replace Pygmentize.process(code_tag.text.rstrip, code_tag[:class].intern)
       end
     end
+    doc.to_s
+  end
+
+  def add_ellipses(html)
+    doc = Nokogiri::HTML::fragment(html)
+    debug = doc.search("*")
+    last_node = debug.last
+    last_node.content = "#{last_node.content}..."
     doc.to_s
   end
 end

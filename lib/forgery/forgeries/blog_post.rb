@@ -12,7 +12,7 @@ class Forgery::BlogPost < Forgery
     def body
       <<-BODY
 #### #{bs}
-#{Forgery::LoremIpsum.paragraphs 2}
+#{Forgery::LoremIpsum.paragraphs 4}
 #### #{bs}
 #{Forgery::LoremIpsum.paragraphs 3}
       BODY
