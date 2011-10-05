@@ -11,6 +11,7 @@ gem "factory_girl_rails"
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "jquery-rails"
+gem "forgery"
 
 # To use debugger
 # gem "ruby-debug19", :require => "ruby-debug"
@@ -29,4 +30,3 @@ end
 gem "cucumber-rails", :group => [:development, :test]
 gem "capybara", :group => [:development, :test]
 gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
-gem "forgery", :group => [:development, :test]
