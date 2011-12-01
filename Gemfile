@@ -24,7 +24,7 @@ group :assets do
 end
 
 group :development do
-  gem "heroku_san"
+  gem "heroku_san", :git => 'git://github.com/fastestforward/heroku_san.git'
 end
 
 gem "cucumber-rails", :group => [:development, :test]
