@@ -31,9 +31,9 @@ describe Post do
     
     it "returns posts in reverse-chronological order" do
       posts = Post.all
-      posts[0].posted_on.year.should == "2010"
-      posts[1].posted_on.year.should == "2009"
-      posts[2].posted_on.year.should == "2008"
+      posts[0].posted_on.year.should == 2010
+      posts[1].posted_on.year.should == 2009
+      posts[2].posted_on.year.should == 2008
     end
   end
 

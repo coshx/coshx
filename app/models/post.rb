@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   belongs_to :author, :class_name => "Admin"
+  default_scope :order => "created_at DESC"
 
   scope :recent, order("posts.created_at DESC")
 
