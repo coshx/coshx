@@ -118,3 +118,27 @@ section#activity-stream {
     height: 200px;
     @include border-radius(12px);
 }
+
+.team-members {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-top: 25px;
+}
+
+.team-member {
+  .float-left {
+    float: left;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  .personal-quips {
+    margin-left: 48px;
+    padding-left: 48px;
+  }
+
+  margin-bottom: 25px;
+}

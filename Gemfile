@@ -12,6 +12,7 @@ gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "jquery-rails"
 gem "forgery"
+gem "gravatar-ultimate"
 
 # To use debugger
 # gem "ruby-debug19", :require => "ruby-debug"
