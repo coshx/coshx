@@ -23,4 +23,4 @@
                 = link_to "github.com/#{person.github}", "https://www.github.com/#{person.github}"
 
           %p.clear
-            = person.bio
+            = raw(person.bio)
