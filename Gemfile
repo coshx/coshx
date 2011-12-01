@@ -7,7 +7,6 @@ gem "devise"
 gem "redcarpet", "2.0.0.b5"
 gem "pygmentize"
 gem "nokogiri"
-gem "factory_girl_rails"
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "jquery-rails"
@@ -28,6 +27,13 @@ group :development do
   gem "heroku_san", :git => 'git://github.com/fastestforward/heroku_san.git'
 end
 
-gem "cucumber-rails", :group => [:development, :test]
-gem "capybara", :group => [:development, :test]
-gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
+group :test do
+  gem "factory_girl_rails"
+  gem "forgery"
+end
+
+group :development, :test do
+  gem "cucumber-rails"
+  gem "capybara"
+  gem "rspec-rails", ">= 2.0.1"
+end
