@@ -32,3 +32,12 @@ dave_kapp = Admin.find_or_create_by_email("davidkapp@coshx.com") do |d|
   d.bio = "In a former life, Dave had a degree in Asian Studies and taught English in Japan. He was later reborn as a software developer and did C++ and Java for a few years before finding the awesomeness of Ruby and other dynamic languages. He lives in Littleton, CO with his fiance, Madeline, and two wonderful kitties. His spare time is eaten up by studying Japanese, videogames, manga, anime, and learning about new programming languages and techniques."
 end
 puts "Created User #{dave_kapp.name}"
+
+ryan = Admin.find_or_create_by_email("ryan@coshx.com") do |r|
+  r.name = 'Ryan Ahearn'
+  r.password = 'ryans_password'
+  r.twitter = "rcahearn"
+  r.github = "rahearn"
+  r.bio = "Ryan got started programming with his first QBASIC class in high school and hasn't looked back since. He's tried his hand at most programming languages and is most passionate about finding the simplest solution to any given problem. When not working, Ryan participates in most every recreational sport he can find in Baltimore and cheers on the New York Giants and Yankees."
+end
+puts "Created User #{ryan.name}"
