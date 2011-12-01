@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
   before_filter :authenticate_admin!, :only => [:new, :create]
+
   def index
-    @posts = Post.all
+    @posts = Post.recent
   end
 
   def new

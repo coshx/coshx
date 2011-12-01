@@ -28,4 +28,11 @@ EOF
   it "adds ... to the end of the preview content" do
     @post.preview.should match /\.\.\.<\/p>$/
   end
+
+  context "recent" do
+    it "lists the most recent post first" do
+      @post2 = Post.create(:body => "most recent")
+      Post.recent.first.should == @post2
+    end
+  end
 end
