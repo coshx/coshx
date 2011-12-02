@@ -9,9 +9,7 @@
           .client-logo
             = image_tag "client_logos/#{client.company_logo}"
           .client-name
-            = client.name
-          .client-url
-            = link_to client.site_url
+            = link_to client.site_url, client.name
           - if client.quote
             .client-quote
               「

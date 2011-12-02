@@ -45,3 +45,45 @@ ryan = Admin.find_or_create_by_email("ryan@coshx.com") do |r|
   r.bio = "Ryan got started programming with his first QBASIC class in high school and hasn't looked back since. He's tried his hand at most programming languages and is most passionate about finding the simplest solution to any given problem. When not working, Ryan participates in most every recreational sport he can find in Baltimore and cheers on the New York Giants and Yankees."
 end
 puts "Created User #{ryan.name}"
+
+# -----------------------------------------------------------------------------
+# clients
+
+reframeit = Client.find_or_create_by_name("Reframe It") do |r|
+  r.site_url = "http://reframeit.com"
+  r.quote = "I think the software is working superbly... I think we have a great chance of spreading its application. Well done. The new version is everything I had hoped it would be."
+  r.quoted_person = "Jim Fishkin, Reframe It Board Member"
+  r.company_logo = "reframeit_logo.png"
+end
+puts "Created Client #{reframeit.name}"
+
+aar = Client.find_or_create_by_name("American Academy of Religion") do |c|
+  c.site_url = "http://www.aarweb.org"
+  c.quote = "[Coshx was] very pleasant and professional."
+  c.quoted_person = "Susan Snider, Associate Director of External Relations"
+  c.company_logo = "aar_logo.png"
+end
+puts "Created Client #{aar.name}"
+
+tendril = Client.find_or_create_by_name("Tendril") do |c|
+  c.site_url = "http://www.tendrilinc.com"
+  c.quote = "I couldn't have gotten gotten any of this off the ground without you guys. The company is in good shape because of the headstart Coshx provided."
+  c.quoted_person = "Mike Bukhin, Tendril Software Czar"
+  c.company_logo = "tendril_logo.png"
+end
+puts "Created Client #{tendril.name}"
+
+abolish_cancer = Client.find_or_create_by_name("Abolish Cancer") do |c|
+  c.site_url = "http://www.abolishcancer.com"
+  c.quote = "While we were impressed with their technological knowhow, even more impressive was their willingness to spend countless hours helping to create, revise and get their hands dirty in the development of our plan."
+  c.quoted_person = "Darah Bonham, Founder"
+  c.company_logo = "abolish_cancer_logo.png"
+end
+puts "Created Client #{abolish_cancer.name}"
+
+bypass_lane = Client.find_or_create_by_name("Bypass Lane") do |c|
+  c.site_url = "http://bypasslane.com"
+  c.what_we_did = "We teamed with Bypass Lane to create an API gateway that allowed them to expand their interaction with their clients."
+  c.company_logo = "bypass_logo.png"
+end
+puts "Created Client #{bypass_lane.name}"

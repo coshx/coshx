@@ -12,6 +12,6 @@ class HomeController < ApplicationController
   end
 
   def portfolio
-    @clients = Client.all
+    @clients = Client.all.shuffle # randomizing for fun
   end
 end
