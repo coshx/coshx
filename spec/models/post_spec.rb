@@ -1,6 +1,13 @@
 require 'spec_helper'
 
 describe Post do
+  context "new post" do
+    it "is not published" do
+      post = Factory.create :post
+      post.published?.should be_false
+    end
+  end
+
   context "post body" do
     before :each do
       @post = Factory.create :post
@@ -41,6 +48,15 @@ describe Post do
     it "lists the most recent post first" do
       @post2 = Post.create(:body => "most recent")
       Post.recent.first.should == @post2
+    end
+  end
+
+  context "publish" do
+    it "assigns the current date/time to the :posted_on field" do
+      post = Factory.create :post
+      post = post.publish!
+      post.published?.should be_true
+      post.posted_on.day.should == DateTime.now.day
     end
   end
 end

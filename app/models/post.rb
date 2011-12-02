@@ -22,6 +22,18 @@ class Post < ActiveRecord::Base
     add_ellipses preview
   end
 
+  def publish!
+    unless self.published?
+      self.posted_on = DateTime.now
+      self.save!
+    end
+    self
+  end
+
+  def published?
+    true unless self.posted_on.nil?
+  end
+
   private
   def highlight_syntax(html)
     doc = Nokogiri::HTML::fragment(html)
