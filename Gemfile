@@ -4,7 +4,7 @@ gem "rails", "~>3.1"
 
 gem "pg"
 gem "devise"
-gem "redcarpet", "2.0.0.b5"
+gem "redcarpet"
 gem "pygmentize"
 gem "nokogiri"
 gem "haml", ">= 3.0.0"

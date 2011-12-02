@@ -226,7 +226,7 @@ DEPENDENCIES
   pg
   pygmentize
   rails (~> 3.1)
-  redcarpet (= 2.0.0.b5)
+  redcarpet
   rspec-rails (>= 2.0.1)
   sass-rails
   uglifier
