@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "common";
+@import "compass/layout/stretching";
+@import "compass/utilities";
+@import "compass/css3";
+
 
 #main-feature {
     @include column(24, true);
@@ -141,4 +145,80 @@ section#activity-stream {
   }
 
   margin-bottom: 25px;
+}
+
+// Taken from the stretching example on Compass' website - http://compass-style.org/examples/compass/layout/stretching/
+.stretch-container {
+  width: 380px;
+  height: 320px;
+  position: relative;
+  @include inline-block; }
+
+.stretched {
+  $stretch-color: #7c9bB9; // default 4c6b99
+  border: 3px solid $stretch-color;
+  @include border-radius(8px);
+  display: block;
+  background-color: darken($stretch-color, 30%);
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5em;
+ }
+
+.stretch-full {
+  @extend .stretched;
+  @include stretch; }
+
+.stretch-offset {
+  @extend .stretched;
+  @include stretch(1em, 1em, 1em, 1em); }
+
+.stretch-small-offset {
+    @extend .stretched;
+    @include stretch(0.5em, 0.5em, 0.5em, 0.5em);
+}
+
+.stretch-x {
+  @extend .stretched;
+  @include stretch-x; }
+
+.stretch-y {
+  @extend .stretched;
+  @include stretch-y; }
+
+.client-info {
+  text-align: left;
+  margin-left: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.client-name {
+  @extend .client-info;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.client-url {
+  @extend .client-info;
+}
+
+.client-quote, .what-we-did {
+  @extend .client-info;
+}
+
+.client-quote-sayer {
+  @extend .client-info;
+  margin-left: 35px;
+  font-style: italic;
+}
+
+.client-logo {
+  height: 115px;
+}
+
+.client-logo img {
+  background-color: white;
+  @include border-radius(8px);
 }

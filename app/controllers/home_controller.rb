@@ -10,4 +10,8 @@ class HomeController < ApplicationController
   def about
     @coshx_folks = Admin.all.sort_by{|a| a.name}
   end
+
+  def portfolio
+    @clients = Client.all.shuffle # randomizing for fun
+  end
 end
