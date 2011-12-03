@@ -54,7 +54,7 @@ describe Post do
   context "publish" do
     it "assigns the current date/time to the :posted_on field" do
       post = Factory.create :post
-      post = post.publish!
+      post = post.publish
       post.published?.should be_true
       post.posted_on.day.should == DateTime.now.day
     end

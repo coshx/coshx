@@ -22,10 +22,9 @@ class Post < ActiveRecord::Base
     add_ellipses preview
   end
 
-  def publish!
+  def publish
     unless self.published?
       self.posted_on = DateTime.now
-      self.save!
     end
     self
   end
