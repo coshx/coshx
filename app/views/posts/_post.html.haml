@@ -3,8 +3,15 @@
     =link_to post.title, post
   -else
     =post.title
-.post-author=post.author.name
-.post-date=post.created_at.strftime("%B %e, %Y")
+.post-info-wrapper
+  .post-author-image=image_tag Gravatar.new(post.author.email).image_url(:size => '50')
+  .post-info
+    %em=post.author.name
+    %br
+    - if post.published?
+      %em=post.posted_on.strftime("%B %e, %Y")
+    - else
+      %em="Draft"
 - if preview
   .post-body=preserve post.preview.html_safe
 - else
