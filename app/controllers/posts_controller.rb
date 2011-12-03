@@ -1,8 +1,12 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_admin!, :only => [:new, :create]
+  before_filter :authenticate_admin!, :only => [:new, :create, :publish]
 
   def index
-    @posts = Post.recent
+    if admin_signed_in?
+      @posts = Post.all
+    else
+      @posts = Post.select { |p| p.published? }
+    end
   end
 
   def new

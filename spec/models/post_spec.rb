@@ -12,6 +12,7 @@ describe Post do
     before :each do
       @post = Factory.create :post
     end
+
     it "renders as html" do
       @post.body_html.should match /<h3>Markdown header<\/h3>/
       @post.body_html.should match /<h4>Markdown subheader<\/h4>/
@@ -35,7 +36,7 @@ describe Post do
         Factory.create :post, :posted_on => DateTime.parse(date)
       end
     end
-    
+
     it "returns posts in reverse-chronological order" do
       posts = Post.all
       posts[0].posted_on.year.should == 2010
@@ -44,19 +45,14 @@ describe Post do
     end
   end
 
-  context "recent" do
-    it "lists the most recent post first" do
-      @post2 = Post.create(:body => "most recent")
-      Post.recent.first.should == @post2
-    end
-  end
-
   context "publish" do
     it "assigns the current date/time to the :posted_on field" do
-      post = Factory.create :post
-      post = post.publish
-      post.published?.should be_true
-      post.posted_on.day.should == DateTime.now.day
+      Timecop.freeze(DateTime.now) do
+        post = Factory.create :post
+        post = post.publish
+        post.published?.should be_true
+        post.posted_on.should == DateTime.now
+      end
     end
   end
 end
