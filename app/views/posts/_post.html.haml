@@ -6,13 +6,12 @@
 .post-info-wrapper
   .post-author-image=image_tag Gravatar.new(post.author.email).image_url(:size => '50')
   .post-info
-    %em=post.author.name
-    %br
+    =post.author.name
     - if post.published?
       %em=post.posted_on.strftime("%B %e, %Y")
     - else
       %em="Draft"
 - if preview
-  .post-body=preserve post.preview.html_safe
+  .post-body=preserve truncate(post.body_html.html_safe, :length => 310)
 - else
   .post-body=preserve post.body_html.html_safe

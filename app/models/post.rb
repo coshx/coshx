@@ -12,14 +12,6 @@ class Post < ActiveRecord::Base
     end
   end
 
-  def preview
-    lines = body_html.split(/(\n)+/)
-    preview = lines.reject do |line|
-      line =~ /^$\n/
-    end.take(4).join(' ')
-    add_ellipses preview
-  end
-
   def publish
     unless self.published?
       self.posted_on = DateTime.now
@@ -39,14 +31,6 @@ class Post < ActiveRecord::Base
         code_tag.replace Pygmentize.process(code_tag.text.rstrip, code_tag[:class].intern)
       end
     end
-    doc.to_s
-  end
-
-  def add_ellipses(html)
-    doc = Nokogiri::HTML::fragment(html)
-    debug = doc.search("*")
-    last_node = debug.last
-    last_node.content = "#{last_node.content}..."
     doc.to_s
   end
 end
