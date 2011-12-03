@@ -1,8 +1,12 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_admin!, :only => [:new, :create]
+  before_filter :authenticate_admin!, :only => [:new, :create, :publish]
 
   def index
-    @posts = Post.recent
+    if admin_signed_in?
+      @posts = Post.all
+    else
+      @posts = Post.select { |p| p.published? }
+    end
   end
 
   def new
@@ -37,9 +41,20 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     respond_to do |format|
       if @post.update_attributes(params[:post])
-        format.html  { redirect_to @post, :notice => 'Post was successfully updated.' }
+        format.html { redirect_to @post, :notice => 'Post was successfully updated.' }
       else
-        format.html  { render :action => "edit" }
+        format.html { render :action => "edit" }
+      end
+    end
+  end
+
+  def publish
+    @post = Post.find(params[:id])
+    respond_to do |format|
+      if @post.publish && @post.save
+        format.html { redirect_to :action => "index", :notice => 'Post has been published' }
+      else
+        format.html { redirect_to :action => "index" }
       end
     end
   end

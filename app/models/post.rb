@@ -2,8 +2,6 @@ class Post < ActiveRecord::Base
   belongs_to :author, :class_name => "Admin"
   default_scope :order => "created_at DESC"
 
-  scope :recent, order("posts.created_at DESC")
-
   def body_html
     markdown_renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
     if self.body
@@ -20,6 +18,17 @@ class Post < ActiveRecord::Base
       line =~ /^$\n/
     end.take(4).join(' ')
     add_ellipses preview
+  end
+
+  def publish
+    unless self.published?
+      self.posted_on = DateTime.now
+    end
+    self
+  end
+
+  def published?
+    true unless self.posted_on.nil?
   end
 
   private
