@@ -76,14 +76,14 @@ puts "Created User #{ant.name}"
 calvin = Admin.find_or_create_by_email("calvin@coshx.com") do |c|
   c.name = "Calvin Delamere"
   c.password = "calvins_password"
-  c.bio = "Although Calvin is the youngest software engineer at Coshx, he started programming nine years ago and built his first website eight years ago. In the last few years he has focused his computer science and applied math background on web development. In his free time, Calvin enjoys skiing, biking, bouldering, and ultimate frisbee."
+  c.bio = "Although Calvin is the youngest software engineer at Coshx, he started programming nine years ago and built his first website eight years ago. In the last few years he has focused his computer science and applied math background on web development. In his free time, Calvin enjoys skiing, biking, bouldering, and ultimate frisbee. Calvin also enjoys crushing the competition at foosball."
 end
 puts "Created User #{calvin.name}"
 
 justin = Admin.find_or_create_by_email("justin@coshx.com") do |j|
   j.name = "Justin Van Eaton"
   j.password = "justins_password"
-  j.bio = "The only member of the team to be called by his initials regularly, Justin is a skilled web developer with experience in many languages and frameworks. He has worked for and with multiple startups but is equally comfortable with larger projects."
+  j.bio = "The only member of the team to be called by his initials regularly, Justin is a skilled web developer with experience in many languages and frameworks. He has worked for and with multiple startups but is equally comfortable with large."
 end
 puts "Created User #{justin.name}"
 
