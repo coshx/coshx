@@ -21,7 +21,7 @@ mike = Admin.find_or_create_by_email("mike@coshx.com") do |m|
   m.password = 'password'
   m.twitter = "mhickman84"
   m.github = "mhickman84"
-  m.bio = "In addition to being a skilled developer, Mike has design skills as well. The combination of developing prowess and design sense is rare indeed, and makes Mike a valued member of any project. When he has free time, Mike enjoys fly fishing in tranquil mountain waters where the rest of his team cannot ask him for advice for a few moments."
+  m.bio = "Prior to joining coshx labs, Mike developed web applications in subject areas as diverse as event registration and biofuel trading. As a front and back-end developer, he enjoys distilling complex problems into elegant and obvious interfaces that even your mother-in-law could use. Outside of work, Mike enjoys fly-fishing, mountain biking and playing fetch with Walker, his labrador retriever."
 end
 puts "Created User #{mike.name}"
 
@@ -54,7 +54,7 @@ gabe = Admin.find_or_create_by_email("gabe@coshx.com") do |g|
   g.name = "Gabe Kopley"
   g.password = "gabes_password"
   #g.twitter = "kopley" # commented out per Gabe's request
-  g.bio = "Relentlessly refactoring and testing code until it meets his standards, Gabe is a developer based out of Taos, New Mexico. Legends in the area speak of a mournful howl that pierces the silent desert night when poor code is spotted. Odds are Gabe is the cause, but no one is certain."
+  g.bio = "Powered by Groove Salad and other nutritious snacks, Gabe loves solving puzzles and building great web applications. Hackathons are his favorite, and he's a big fan of test-driven development, but prefers not to do both at the same time. Gabe's non-technical interests include outdoor recreation, live music, and alternative energy and building techniques."
   g.github = "gkop"
 end
 puts "Created User #{gabe.name}"
