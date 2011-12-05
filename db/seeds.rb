@@ -19,12 +19,16 @@ puts "Created User #{ben.name}"
 mike = Admin.find_or_create_by_email("mike@coshx.com") do |m|
   m.name = 'Mike Hickman'
   m.password = 'password'
+  m.twitter = "mhickman84"
+  m.github = "mhickman84"
+  m.bio = "In addition to being a skilled developer, Mike has design skills as well. The combination of developing prowess and design sense is rare indeed, and makes Mike a valued member of any project. When he has free time, Mike enjoys fly fishing in tranquil mountain waters."
 end
 puts "Created User #{mike.name}"
 
 david = Admin.find_or_create_by_email("david@coshx.com") do |d|
   d.name = 'David Kovsky'
   d.password = 'password'
+  d.bio = "David loves watching online startups rapidly transform life as we know it for the better. An old C++ programmer, he shifted to Ruby several years ago so he could join the party. He loves the flow of writing clean code using TDD, pairing, and advocating agility internally and for established clients. Outside of work David enjoys climbing, cycling, kayaking, and spending time with his wife."
 end
 puts "Created User #{david.name}"
 
@@ -45,6 +49,43 @@ ryan = Admin.find_or_create_by_email("ryan@coshx.com") do |r|
   r.bio = "Ryan got started programming with his first QBASIC class in high school and hasn't looked back since. He's tried his hand at most programming languages and is most passionate about finding the simplest solution to any given problem. When not working, Ryan participates in most every recreational sport he can find in Baltimore and cheers on the New York Giants and Yankees."
 end
 puts "Created User #{ryan.name}"
+
+gabe = Admin.find_or_create_by_email("gabe@coshx.com") do |g|
+  g.name = "Gabe Kopley"
+  g.password = "gabes_password"
+  #g.twitter = "kopley" # commented out per Gabe's request
+  g.bio = "Relentlessly refactoring and testing code until it meets his standards, Gabe is a developer based out of Taos, New Mexico. Legends in the area speak of a mournful howl that pierces the silent desert night when poor code is spotted. Odds are Gabe is the cause of that."
+  g.github = "gkop"
+end
+puts "Created User #{gabe.name}"
+
+chielo = Admin.find_or_create_by_email("chielo@coshx.com") do |c|
+  c.name = "Chielo Zimmerman"
+  c.password = "chielos_password"
+  c.bio = "Laying Ruby code like concrete blocks, Chielo is a builder by trade and obsession.  He enjoys working and finds it highly rewarding to deliver value and quality through beautiful programming."
+end
+puts "Created User #{chielo.name}"
+
+ant = Admin.find_or_create_by_email("ant@coshx.com") do |a|
+  a.name = "Anthony Burton"
+  a.password = "anthonys_password"
+  a.bio = "Anthony Burton is a DevOps ninja that solves tough configuration problems in his sleep and eats lesser Linux distributions for breakfast. When not dishing out revenge on uncooperative servers, he spends time with his daughter and on a boat."
+end
+puts "Created User #{ant.name}"
+
+calvin = Admin.find_or_create_by_email("calvin@coshx.com") do |c|
+  c.name = "Calvin Delamere"
+  c.password = "calvins_password"
+  c.bio = "Although Calvin is the youngest software engineer at Coshx, he started programming nine years ago and built his first website eight years ago. In the last few years he has focused his computer science and applied math background on web development. In his free time, Calvin enjoys skiing, biking, bouldering, and ultimate frisbee."
+end
+puts "Created User #{calvin.name}"
+
+justin = Admin.find_or_create_by_email("justin@coshx.com") do |j|
+  j.name = "Justin Van Eaton"
+  j.password = "justins_password"
+  j.bio = "The only member of the team to be called by his initials regularly, Justin is a skilled web developer with experience in many languages and frameworks. He has worked for and with multiple startups but is equally comfortable with larger projects."
+end
+puts "Created User #{justin.name}"
 
 # -----------------------------------------------------------------------------
 # clients
