@@ -2,10 +2,29 @@ class Post < ActiveRecord::Base
   belongs_to :author, :class_name => "Admin"
   default_scope :order => "created_at DESC"
 
+  def preview
+    lines = self.body.split(/(\n)+/)
+    preview_text = lines.reject do |line|
+      line =~ /^$\n/
+    end.take(4).join
+    puts "Preview Text: #{preview_text.inspect}"
+    "#{preview_text.chomp}..."
+  end
+
   def body_html
     markdown_renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
     if self.body
       html = markdown_renderer.render(self.body)
+      highlight_syntax(html)
+    else
+      nil
+    end
+  end
+
+  def preview_html
+    markdown_renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
+    if self.body
+      html = markdown_renderer.render(self.preview)
       highlight_syntax(html)
     else
       nil

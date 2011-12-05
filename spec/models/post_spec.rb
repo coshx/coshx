@@ -18,6 +18,16 @@ describe Post do
       @post.body_html.should match /<h4>Markdown subheader<\/h4>/
       @post.body_html.should match /Yet another line of markdown text./
     end
+
+    it "generates a shortened preview" do
+      @post.preview.should match /Markdown header/
+      @post.preview.should match /This is some more markdown text./
+      @post.preview.should_not match /Yet another line of markdown text./
+    end
+
+    it "adds ... to the end of the preview content" do
+      @post.preview.should match /\.\.\.$/
+    end
   end
 
   context "querying posts" do
