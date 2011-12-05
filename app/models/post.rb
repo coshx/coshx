@@ -6,26 +6,21 @@ class Post < ActiveRecord::Base
     lines = self.body.split(/(\n)+/)
     preview_text = lines.reject do |line|
       line =~ /^$\n/
-    end.take(4).join
-    puts "Preview Text: #{preview_text.inspect}"
+    end.take(4).join(' ')
     "#{preview_text.chomp}..."
   end
 
   def body_html
-    markdown_renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
     if self.body
-      html = markdown_renderer.render(self.body)
-      highlight_syntax(html)
+      Post.format_as_html(self.body)
     else
       nil
     end
   end
 
   def preview_html
-    markdown_renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
-    if self.body
-      html = markdown_renderer.render(self.preview)
-      highlight_syntax(html)
+    if self.preview
+      Post.format_as_html(self.preview)
     else
       nil
     end
@@ -43,7 +38,7 @@ class Post < ActiveRecord::Base
   end
 
   private
-  def highlight_syntax(html)
+  def self.highlight_syntax(html)
     doc = Nokogiri::HTML::fragment(html)
     doc.search("code").each do |code_tag|
       unless code_tag[:class].nil?
@@ -51,5 +46,11 @@ class Post < ActiveRecord::Base
       end
     end
     doc.to_s
+  end
+
+  def self.format_as_html(text)
+    markdown_renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
+    html = markdown_renderer.render(text)
+    Post.highlight_syntax(html)
   end
 end
