@@ -2,22 +2,28 @@ class Post < ActiveRecord::Base
   belongs_to :author, :class_name => "Admin"
   default_scope :order => "created_at DESC"
 
+  def preview
+    lines = self.body.split(/(\n)+/)
+    preview_text = lines.reject do |line|
+      line =~ /^$\n/
+    end.take(4).join(' ')
+    "#{preview_text.chomp}..."
+  end
+
   def body_html
-    markdown_renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
     if self.body
-      html = markdown_renderer.render(self.body)
-      highlight_syntax(html)
+      Post.format_as_html(self.body)
     else
       nil
     end
   end
 
-  def preview
-    lines = body_html.split(/(\n)+/)
-    preview = lines.reject do |line|
-      line =~ /^$\n/
-    end.take(4).join(' ')
-    add_ellipses preview
+  def preview_html
+    if self.preview
+      Post.format_as_html(self.preview)
+    else
+      nil
+    end
   end
 
   def publish
@@ -32,7 +38,7 @@ class Post < ActiveRecord::Base
   end
 
   private
-  def highlight_syntax(html)
+  def self.highlight_syntax(html)
     doc = Nokogiri::HTML::fragment(html)
     doc.search("code").each do |code_tag|
       unless code_tag[:class].nil?
@@ -42,11 +48,9 @@ class Post < ActiveRecord::Base
     doc.to_s
   end
 
-  def add_ellipses(html)
-    doc = Nokogiri::HTML::fragment(html)
-    debug = doc.search("*")
-    last_node = debug.last
-    last_node.content = "#{last_node.content}..."
-    doc.to_s
+  def self.format_as_html(text)
+    markdown_renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
+    html = markdown_renderer.render(text)
+    Post.highlight_syntax(html)
   end
 end

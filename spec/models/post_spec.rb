@@ -20,13 +20,13 @@ describe Post do
     end
 
     it "generates a shortened preview" do
-      @post.preview.should match /<h3>Markdown header<\/h3>/
+      @post.preview.should match /Markdown header/
       @post.preview.should match /This is some more markdown text./
       @post.preview.should_not match /Yet another line of markdown text./
     end
 
     it "adds ... to the end of the preview content" do
-      @post.preview.should match /\.\.\.<\/p>$/
+      @post.preview.should match /\.\.\.$/
     end
   end
 
