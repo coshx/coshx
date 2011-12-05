@@ -21,7 +21,7 @@ mike = Admin.find_or_create_by_email("mike@coshx.com") do |m|
   m.password = 'password'
   m.twitter = "mhickman84"
   m.github = "mhickman84"
-  m.bio = "In addition to being a skilled developer, Mike has design skills as well. The combination of developing prowess and design sense is rare indeed, and makes Mike a valued member of any project. When he has free time, Mike enjoys fly fishing in tranquil mountain waters."
+  m.bio = "In addition to being a skilled developer, Mike has design skills as well. The combination of developing prowess and design sense is rare indeed, and makes Mike a valued member of any project. When he has free time, Mike enjoys fly fishing in tranquil mountain waters where the rest of his team cannot ask him for advice for a few moments."
 end
 puts "Created User #{mike.name}"
 
@@ -54,7 +54,7 @@ gabe = Admin.find_or_create_by_email("gabe@coshx.com") do |g|
   g.name = "Gabe Kopley"
   g.password = "gabes_password"
   #g.twitter = "kopley" # commented out per Gabe's request
-  g.bio = "Relentlessly refactoring and testing code until it meets his standards, Gabe is a developer based out of Taos, New Mexico. Legends in the area speak of a mournful howl that pierces the silent desert night when poor code is spotted. Odds are Gabe is the cause of that."
+  g.bio = "Relentlessly refactoring and testing code until it meets his standards, Gabe is a developer based out of Taos, New Mexico. Legends in the area speak of a mournful howl that pierces the silent desert night when poor code is spotted. Odds are Gabe is the cause, but no one is certain."
   g.github = "gkop"
 end
 puts "Created User #{gabe.name}"
