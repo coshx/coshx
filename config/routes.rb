@@ -3,6 +3,7 @@ Coshx::Application.routes.draw do
   devise_for :admins
   
   match 'dashboard' => 'dashboard#index', :as => :admin_root
+  match '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
 
   resources :posts, :path => "/blog" do
     put 'publish', :on => :member

@@ -58,4 +58,9 @@ class PostsController < ApplicationController
       end
     end
   end
+
+  def feed
+    @feed_url = feed_url
+    @posts = Post.select { |p| p.published? }
+  end
 end
