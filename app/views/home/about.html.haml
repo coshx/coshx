@@ -1,3 +1,26 @@
 %section.primary
   %h2 About Us
-  %h3 Coming Soon...
+  %h3 We're a distributed team of people passionate about software. Here's a little more about each of us.
+
+  %section#coshx-folks
+    %ul.team-members
+      - @coshx_folks.each do |person|
+        %li.team-member
+          .float-left
+            %p
+              = image_tag Gravatar.new(person.email).image_url
+          .personal-quips
+            %p
+              = person.name
+            - if person.twitter
+              %p
+                Twitter:
+                = link_to "@#{person.twitter}", "https://www.twitter.com/#{person.twitter}"
+
+            - if person.github
+              %p
+                GitHub:
+                = link_to "github.com/#{person.github}", "https://www.github.com/#{person.github}"
+
+          %p.clear
+            = raw(person.bio)

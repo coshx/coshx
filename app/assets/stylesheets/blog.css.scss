@@ -1,0 +1,53 @@
+@import "common";
+
+#gutter {
+    @include column(2);
+}
+
+section.primary {
+    @include column(20);
+    header {
+        @include column(20);
+        padding-top: 0px;
+        height: auto;
+    }
+    .post-author-image {
+      display: block;
+      float: left;
+      margin-right: 20px;
+    }
+    .post-info-wrapper, .post-info {
+      display: block;
+      height: 50px;
+    }
+
+    .post-info-wrapper { margin-bottom: 10px; }
+
+    .post-info {
+      margin-left: 20px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+    .post-body {
+        p {
+            @include article-text;
+            margin-bottom: 10px;
+        }
+        hr {
+            border: 5px solid $light-gray;
+            border-style: none;
+        }
+        .meta {
+            @include meta-text;
+        }
+
+        em {
+          font-weight: bolder;
+        }
+    }
+}
+
+section.secondary {
+    @include column(4, true);
+    h3 { text-align: center; }
+}

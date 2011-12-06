@@ -6,7 +6,7 @@ $blueprint-grid-margin: 10px;
 @import "blueprint/grid";
 
 $gray: #38383A;
-$light-gray: #77777b;
+$light-gray: #97979b;
 $medium-gray: #525357;
 
 $blue: #659dff;
@@ -16,7 +16,7 @@ $purple: #c64791;
 $light-orange: #f47123;
 $dark-orange: #f05325;
 
-$silver: #bbbdbf;
+$silver: #c1c5c9;
 $gold: #d6c29c;
 
 $header-height: 101px;
@@ -40,12 +40,13 @@ $feature-height: 450px;
     text-transform: uppercase;
     font-size: 24px;
     color: $gold;
-    border-bottom: 7px solid $medium-gray;
+    border-bottom: 5px solid $medium-gray;
+    padding-bottom: 10px;
 }
 
 @mixin footer-subheader-text {
     font-family: Arimo;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: 18px;
     color: $silver;
 }
@@ -107,8 +108,8 @@ $feature-height: 450px;
 
 @mixin quote-text {
     font-style: italic;
-    font-size: 16px;
-    color: $gray;
+    font-size: 14px;
+    color: $medium-gray;
     line-height: 1.5em;
 }
 
@@ -123,4 +124,40 @@ $feature-height: 450px;
     font-family: Arimo;
     font-size: 40px;
     text-align: left;
+    margin: 10px 0;
+}
+
+@mixin sub-header-text {
+    color: $blue;
+    font-family: Syncopate;
+    font-size: 24px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+@mixin lowercase-header-text {
+    font-family: Arimo;
+    color: $green;
+    text-transform: lowercase;
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+@mixin article-text {
+    font-family: Arimo;
+    font-size: 16px;
+    color: white;
+    line-height: 1.5em;
+    font-weight: normal;
+}
+
+@mixin meta-text {
+    font-family: Arimo;
+    text-align: left;
+    color: $gold;
+}
+
+@mixin code-text {
+    font-family: Droid Sans Mono;
+    line-height: 1.2em;
 }
