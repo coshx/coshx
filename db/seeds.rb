@@ -102,8 +102,8 @@ puts "Created Client #{reframeit.name}"
 
 aar = Client.find_or_create_by_name("American Academy of Religion") do |c|
   c.site_url = "http://www.aarweb.org"
-  c.quote = "[Coshx was] very pleasant and professional."
-  c.quoted_person = "Susan Snider, Associate Director of External Relations"
+  c.quote = "We engaged Coshx for a substantial, highly complex project having an incredibly tight deadline, and they came through for us wonderfully. Throughout they were thoughtful, flexible, highly responsive team players."
+  c.quoted_person = "Steve Herrick, CIO"
   c.company_logo = "aar_logo.png"
 end
 puts "Created Client #{aar.name}"
