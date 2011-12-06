@@ -78,7 +78,9 @@ puts "Created User #{calvin.name}"
 justin = Admin.find_or_create_by_email("justin@coshx.com") do |j|
   j.name = "Justin Van Eaton"
   j.password = "justins_password"
-  j.bio = "The only member of the team to be called by his initials regularly, Justin is a skilled web developer with experience in many languages and frameworks. He has worked for and with multiple startups but is equally comfortable with large."
+  j.twitter = "jstin"
+  j.github = "jstin"
+  j.bio = "The only member of the team to be called by his initials regularly, Justin is a skilled web developer with experience in many languages and frameworks. He has worked for and with multiple startups but is equally comfortable with large projects."
 end
 puts "Created User #{justin.name}"
 
