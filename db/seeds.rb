@@ -1,11 +1,4 @@
 # -*- coding: utf-8 -*-
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 
 ben = Admin.find_or_create_by_email("ben@coshx.com") do |b|
   b.name = 'Ben Taitelbaum'
@@ -134,23 +127,43 @@ puts "Created Client #{bypass_lane.name}"
 
 # -----------------------------------------------------------------------------
 # services
+# the current way we show services necessitates them having a sorting order. We need the longer ones to be consecutive, otherwise the layout looks awful.
+# using a sort order that is specified here is the simplest way to insure they show up in a consistently nice way.
 
 service = Service.find_or_create_by_title("Startups") do |s|
   s.description = "We focus on lean startup tactics, helping you get to your Minimum Viable Product (MVP) in a timely, cost-effective manner. We understand that as your business develops, requirements can change drastically, so we develop in a transparent, agile manner to ensure that you always have a good grasp of the project timelines and budgets."
+  s.sort_order = 1
 end
 puts "Created Service #{service.title}"
 
-service = Service.find_or_create_by_title("TAFT") do |s|
+service = Service.find_or_create_by_title("Better Living Through Testing") do |s|
   s.description = "What's that, you need tests? While no one wants to admit it, sometimes teams forget to maintain their testing infrastructure, or project deadlines force more emphasis on features than the reliability of those features. In these cases, we come in and <ol><li>get tests passing</li><li>setup continuous integration testing</li><li>speed up tests</li><li>add tests where needed</li><li>coach team on TDD and BDD best-practices</li></ol>"
+  s.sort_order = 3
 end
 puts "Created Service #{service.title}"
 
 service = Service.find_or_create_by_title("DevOps") do |s|
   s.description = "We swear by PaaS solutions like Heroku and EngineYard for most of our deployments, but sometimes they're not appropriate. For these times, we can deploy and manage large clusters on EC2 or in specific datacenters. We have experience maintaining production systems using both chef and puppet, and are happy to discuss with you which solution is best for your needs."
+  s.sort_order = 2
 end
 puts "Created Service #{service.title}"
 
 service = Service.find_or_create_by_title("Scalability") do |s|
-  s.description = "Having a site that's so popular you have to worry about scalability is a great problem to have... until your users start leaving. Or maybe you anticipate a large load and want to understand how your application will behave. We can help, as we've managed systems that handle millions of requests a day, and get a kick out of load testing systems and services to push the limits of their breaking points.<ul><li>scalability tests (database)</li><li>load tests (concurrency, throughput)</li><li>database optimizations</li><li>architecture reivew and optimizations</li><li>systematic profiling and bottleneck identification</li></ul>"
+  s.description = "Having a site that's so popular you have to worry about scalability is a great problem to have... until your users start leaving. Or maybe you anticipate a large load and want to understand how your application will behave. We can help. We've managed systems that handle millions of requests a day, and get a kick out of load testing systems and services to push them to the limit.<ul><li>scalability tests (database)</li><li>load tests (concurrency, throughput)</li><li>database optimizations</li><li>architecture reivew and optimizations</li><li>profiling and bottleneck identification</li></ul>"
+  s.sort_order = 4
 end
 puts "Created Service #{service.title}"
+
+service = Service.find_or_create_by_title("Mobile") do |s|
+  s.description = "Odds are pretty good that you own a smartphone. But even if you don't, odds are your customers do. Being able to engage with your users anywhere, anytime is an amazing opportunity - let us help you with crafting the right mobile solution, be it a mobile version of a website or a dedicated app."
+  s.sort_order = 5
+end
+puts "Created Service #{service.title}"
+
+service = Service.find_or_create_by_title("And so on...") do |s|
+  s.description = "Think you need something else? Maybe some training for your team? Some refinement for your business plan? Perhaps a pet sitter? We might not be able to offer much on the last one there, but we'd be happy to hear any special requests you have. Just drop us a line at <a href=\"mailto:info@coshx.com\">info@coshx.com</a> and we'll get back to you right away."
+  s.sort_order = 6
+end
+puts "Created Service #{service.title}"
+
+

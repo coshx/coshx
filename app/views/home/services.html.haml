@@ -4,9 +4,9 @@
 
   %ul
     - @services.each do |service|
-      %li.stretch-container
-        .stretch-small-offset.stretch-y
-          .service-title
+      %li{:class => class_for_service(service)}
+        .stretch-small-offset
+          .service-title          
             = service.title
           .service-description
             = service.description.html_safe

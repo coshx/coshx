@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   def index; end
 
   def services
-    @services = Service.all
+    @services = Service.all.sort_by{ |s| s.sort_order }
   end
 
   def work; end

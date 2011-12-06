@@ -153,6 +153,16 @@ section#activity-stream {
   height: 342px;
   position: relative;
   @include inline-block; }
+  
+.long-stretch-container {
+  @extend .stretch-container;
+  height: 405px;
+}
+
+.short-stretch-container {
+  @extend .stretch-container;
+  height: 300px;
+}
 
 .stretched {
   $stretch-color: #7c9bB9; // default 4c6b99
@@ -165,7 +175,7 @@ section#activity-stream {
   vertical-align: middle;
   padding: 0.5em;
  }
-
+ 
 .stretch-full {
   @extend .stretched;
   @include stretch; }
@@ -233,6 +243,7 @@ section#activity-stream {
 .service-title {
   @extend .client-info;
   margin-top: 10px;
-  font-style: italic;
   font-weight: bold;
+  color: white;
+  font-size: large;
 }
