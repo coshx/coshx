@@ -69,7 +69,9 @@ puts "Created User #{chielo.name}"
 ant = Admin.find_or_create_by_email("ant@coshx.com") do |a|
   a.name = "Anthony Burton"
   a.password = "anthonys_password"
-  a.bio = "Anthony Burton is a DevOps ninja that solves tough configuration problems in his sleep and eats lesser Linux distributions for breakfast. When not dishing out revenge on uncooperative servers, he spends time with his daughter and on a boat."
+  a.bio = "Anthony Burton is a DevOps <strike>ninja</strike> <strike>rockstar</strike> guy  who solves tough configuration problems in his sleep and eats lesser Linux distributions for breakfast. When not dishing out revenge on uncooperative servers, he spends time with his daughter and on a boat."
+  a.github = "ajburton"
+  a.twitter = "anthonyburton"
 end
 puts "Created User #{ant.name}"
 
