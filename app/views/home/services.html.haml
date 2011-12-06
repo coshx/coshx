@@ -1,3 +1,13 @@
 %section.primary
   %h2 Services
-  %h3 Coming Soon...
+  %h3 We love working on both new startup ideas as well as existing large application codebases. While we all enjoy experimenting with new technologies and ideas, our core services here reflect our <strong>core expertise</strong>.
+
+  %ul
+    - @services.each do |service|
+      %li.stretch-container
+        .stretch-small-offset.stretch-y
+          .service-title
+            = service.title
+          .service-description
+            = service.description.html_safe
+

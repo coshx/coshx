@@ -130,3 +130,27 @@ bypass_lane = Client.find_or_create_by_name("Bypass Lane") do |c|
   c.company_logo = "bypass_logo.png"
 end
 puts "Created Client #{bypass_lane.name}"
+
+
+# -----------------------------------------------------------------------------
+# services
+
+service = Service.find_or_create_by_title("Startups") do |s|
+  s.description = "We focus on lean startup tactics, helping you get to your Minimum Viable Product (MVP) in a timely, cost-effective manner. We understand that as your business develops, requirements can change drastically, so we develop in a transparent, agile manner to ensure that you always have a good grasp of the project timelines and budgets."
+end
+puts "Created Service #{service.title}"
+
+service = Service.find_or_create_by_title("TAFT") do |s|
+  s.description = "What's that, you need tests? While no one wants to admit it, sometimes teams forget to maintain their testing infrastructure, or project deadlines force more emphasis on features than the reliability of those features. In these cases, we come in and <ol><li>get tests passing</li><li>setup continuous integration testing</li><li>speed up tests</li><li>add tests where needed</li><li>coach team on TDD and BDD best-practices</li></ol>"
+end
+puts "Created Service #{service.title}"
+
+service = Service.find_or_create_by_title("DevOps") do |s|
+  s.description = "We swear by PaaS solutions like Heroku and EngineYard for most of our deployments, but sometimes they're not appropriate. For these times, we can deploy and manage large clusters on EC2 or in specific datacenters. We have experience maintaining production systems using both chef and puppet, and are happy to discuss with you which solution is best for your needs."
+end
+puts "Created Service #{service.title}"
+
+service = Service.find_or_create_by_title("Scalability") do |s|
+  s.description = "Having a site that's so popular you have to worry about scalability is a great problem to have... until your users start leaving. Or maybe you anticipate a large load and want to understand how your application will behave. We can help, as we've managed systems that handle millions of requests a day, and get a kick out of load testing systems and services to push the limits of their breaking points.<ul><li>scalability tests (database)</li><li>load tests (concurrency, throughput)</li><li>database optimizations</li><li>architecture reivew and optimizations</li><li>systematic profiling and bottleneck identification</li></ul>"
+end
+puts "Created Service #{service.title}"

@@ -222,3 +222,17 @@ section#activity-stream {
   background-color: white;
   @include border-radius(8px);
 }
+
+.service-description {
+  text-align: left;
+  margin-left: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.service-title {
+  @extend .client-info;
+  margin-top: 10px;
+  font-style: italic;
+  font-weight: bold;
+}
