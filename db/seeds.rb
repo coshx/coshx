@@ -110,7 +110,7 @@ puts "Created Client #{aar.name}"
 
 tendril = Client.find_or_create_by_name("Tendril") do |c|
   c.site_url = "http://www.tendrilinc.com"
-  c.quote = "I couldn't have gotten gotten any of this off the ground without you guys. The company is in good shape because of the headstart Coshx provided."
+  c.quote = "I couldn't have gotten any of this off the ground without you guys. The company is in good shape because of the headstart Coshx provided."
   c.quoted_person = "Mike Bukhin, Tendril Software Czar"
   c.company_logo = "tendril_logo.png"
 end
