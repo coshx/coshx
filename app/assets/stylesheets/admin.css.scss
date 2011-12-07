@@ -1,0 +1,30 @@
+@import "common";
+#admin-menu {
+    float: left;
+    width: 100%;
+    margin-bottom: -20px;
+    height: 20px;
+    background-color: $light-orange;
+
+    span, em, div, ul, li {
+        color: white;
+        font-size: 15px;
+    }
+    a {
+        color: $gray;
+        text-decoration: none;
+        &:hover { color: $light-gray; }
+    }
+    .status {
+        float: right;
+        margin-right: 30px;
+    }
+    ul, li {
+        float: left;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    ul { margin-left: 20px; }
+    li { margin: 0 10px; }
+}

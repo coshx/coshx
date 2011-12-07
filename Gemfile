@@ -1,39 +1,41 @@
-source 'http://rubygems.org'
+source "http://rubygems.org"
 
-gem 'rails', '3.1.0.rc6'
+gem "rails", "~>3.1"
 
-gem 'pg'
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'compass', :git => 'git://github.com/chriseppstein/compass.git', :branch => 'rails31'
-  gem 'sass-rails', "  ~> 3.1.0.rc"
-  gem 'coffee-rails', "~> 3.1.0.rc"
-  gem 'uglifier'
-end
-
-group :development do
-  gem 'heroku_san'
-  gem 'sqlite3'
-end
-
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
-gem "cucumber-rails", :group => [:development, :test]
-gem "capybara", :group => [:development, :test]
+gem "pg"
+gem "devise"
+gem "redcarpet"
+gem "pygmentize"
+gem "nokogiri"
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "jquery-rails"
-gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
+gem "forgery"
+gem "gravatar-ultimate"
+
+# To use debugger
+# gem "ruby-debug19", :require => "ruby-debug"
+
+group :assets do
+  gem "compass", :git => "git://github.com/chriseppstein/compass.git", :branch => "rails31"
+  gem "sass-rails"
+  gem "coffee-rails"
+  gem "uglifier"
+end
+
+group :development do
+  gem "heroku_san", :git => 'git://github.com/fastestforward/heroku_san.git'
+end
+
+group :test do
+  gem "factory_girl_rails"
+  gem "forgery"
+  gem "timecop"
+  gem "spork"
+end
+
+group :development, :test do
+  gem "cucumber-rails"
+  gem "capybara"
+  gem "rspec-rails", ">= 2.0.1"
+end

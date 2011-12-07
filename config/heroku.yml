@@ -11,9 +11,10 @@ production:
   config:
     BUNDLE_WITHOUT: "development:test"
     GOOGLE_ANALYTICS: "UA-25757046-1"
+    DISQUS_SHORTNAME: "coshxlabs"
 
 staging:
   app: coshx-web-staging
   config: &default
     BUNDLE_WITHOUT: "development:test"
-
+    DISQUS_SHORTNAME: "coshxlabsstaging"
