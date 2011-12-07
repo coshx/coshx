@@ -9,9 +9,8 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     = render "layouts/google_analytics"
+    = render "layouts/disqus_dev_mode" if Rails.env.development? || Rails.env.test?
     = auto_discovery_link_tag :atom, "/feed"
-    :javascript
-      var disqus_developer = 1
   %body{:class => body_class}
     %section#content-canvas
       #header-wrapper
