@@ -129,10 +129,11 @@ $feature-height: 450px;
 
 @mixin sub-header-text {
     color: $blue;
-    font-family: Syncopate;
+    font-family: Arimo;
     font-size: 24px;
     text-align: left;
-    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2em;
 }
 
 @mixin lowercase-header-text {
