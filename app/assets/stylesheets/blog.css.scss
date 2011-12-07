@@ -4,13 +4,8 @@
     @include column(2);
 }
 
+
 section.primary {
-    @include column(20);
-    header {
-        @include column(20);
-        padding-top: 0px;
-        height: auto;
-    }
     .post-author-image {
       display: block;
       float: left;
@@ -45,9 +40,4 @@ section.primary {
           font-weight: bolder;
         }
     }
-}
-
-section.secondary {
-    @include column(4, true);
-    h3 { text-align: center; }
 }
