@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_filter :authenticate_admin!, :only => [:new, :create, :publish]
 
   def index
+    puts "****APP CONFIG**** #{Rails.configuration.inspect}"
     if admin_signed_in?
       @posts = Post.all
     else
