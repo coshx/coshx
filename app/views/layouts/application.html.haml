@@ -10,7 +10,9 @@
     = csrf_meta_tags
     = render "layouts/google_analytics"
     = auto_discovery_link_tag :atom, "/feed"
-  %body
+    :javascript
+      var disqus_developer = 1
+  %body{:class => body_class}
     %section#content-canvas
       #header-wrapper
         - if admin_signed_in?
