@@ -21,6 +21,8 @@ puts "Created User #{mike.name}"
 david = Admin.find_or_create_by_email("david@coshx.com") do |d|
   d.name = 'David Kovsky'
   d.password = 'password'
+  d.twitter = 'davidkovsky'
+  d.github = 'davidkovsky'
   d.bio = "David loves watching online startups rapidly transform life as we know it for the better. An old C++ programmer, he shifted to Ruby several years ago so he could join the party. He loves the flow of writing clean code using TDD, pairing, and advocating agility internally and for established clients. Outside of work David enjoys climbing, cycling, kayaking, and spending time with his wife."
 end
 puts "Created User #{david.name}"
