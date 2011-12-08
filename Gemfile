@@ -12,7 +12,6 @@ gem "haml-rails"
 gem "jquery-rails"
 gem "forgery"
 gem "gravatar-ultimate"
-gem "tilt"
 
 # To use debugger
 # gem "ruby-debug19", :require => "ruby-debug"
@@ -33,10 +32,12 @@ group :test do
   gem "forgery"
   gem "timecop"
   gem "spork"
+  gem "database_cleaner"
 end
 
 group :development, :test do
   gem "cucumber-rails"
   gem "capybara"
   gem "rspec-rails", ">= 2.0.1"
+  gem "therubyracer", :require => 'v8'
 end
