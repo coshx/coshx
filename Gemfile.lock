@@ -232,5 +232,6 @@ DEPENDENCIES
   rspec-rails (>= 2.0.1)
   sass-rails
   spork
+  tilt
   timecop
   uglifier
