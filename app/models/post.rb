@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   extend MarkdownAttributes
+  include Publishable
 
   belongs_to :author, :class_name => "Admin"
   default_scope :order => "created_at DESC"
@@ -12,16 +13,5 @@ class Post < ActiveRecord::Base
       line =~ /^$\n/
     end.take(4).join(' ')
     "#{preview_text.chomp}..."
-  end
-
-  def publish
-    unless self.published?
-      self.posted_on = DateTime.now
-    end
-    self
-  end
-
-  def published?
-    true unless self.posted_on.nil?
   end
 end
