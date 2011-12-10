@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111206211639) do
+ActiveRecord::Schema.define(:version => 20111210220015) do
 
   create_table "admins", :force => true do |t|
-    t.string   "email",                                 :default => "",                                         :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "",                                         :null => false
+    t.string   "email",                                 :default => "",                                               :null => false
+    t.string   "encrypted_password",     :limit => 128, :default => "",                                               :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20111206211639) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.text     "bio",                                   :default => "I''m a developer at Coshx and I love it!"
+    t.text     "bio",                                   :default => "I''''''''m a developer at Coshx and I love it!"
     t.string   "twitter"
     t.string   "github"
   end
@@ -42,6 +42,14 @@ ActiveRecord::Schema.define(:version => 20111206211639) do
     t.string   "quoted_person"
     t.text     "what_we_did"
     t.string   "company_logo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "jobs", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "posted_on"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
