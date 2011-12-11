@@ -1,0 +1,11 @@
+= form_for @job, :html => { :class => "internal" } do |f|
+  -if @job.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@job.errors.count, "error")} prohibited this post from being saved:"
+      %ul
+        - @job.errors.full_messages.each do |msg|
+          %li= msg
+
+  = f.text_field :title, :placeholder => "Job Title"
+  = f.text_area :description, :placeholder => "Job Description"
+  = f.submit "Save"

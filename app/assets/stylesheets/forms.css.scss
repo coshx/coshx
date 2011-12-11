@@ -1,8 +1,8 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-form#new-post {
-    #post_title, #post_body {
+form.internal {
+    input[type=text], textarea {
         width: 100%;
     }
 }
