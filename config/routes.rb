@@ -9,6 +9,10 @@ Coshx::Application.routes.draw do
     put 'publish', :on => :member
   end
 
+  resources :jobs, :path => "/careers" do
+    put 'publish', :on => :member
+  end
+
   match '/services' => 'home#services', :as => :services
   match '/portfolio' => 'home#portfolio', :as => :portfolio
   match '/about' => 'home#about', :as => :about
