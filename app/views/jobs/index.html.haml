@@ -1,0 +1,8 @@
+%section.primary
+  %h2 Careers
+  - @jobs.each do |job|
+    = link_to job.title, job
+    - if admin_signed_in?
+      .job-admin
+        = link_to "Edit", edit_job_path(job)
+        = link_to("Publish", publish_job_path(job), :method => :put) unless job.published?
