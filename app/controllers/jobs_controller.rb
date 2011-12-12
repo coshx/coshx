@@ -44,7 +44,8 @@ class JobsController < ApplicationController
   end
 
   def show
-    @job ||= Job.find(params[:id])
+    title = params[:id].gsub("_", " ")
+    @job ||= Job.first(:conditions => [ "lower(title) = ?", title.downcase ])
   end
 
   def publish
@@ -57,4 +58,6 @@ class JobsController < ApplicationController
       end
     end
   end
+
+
 end
