@@ -1,4 +1,6 @@
 class JobsController < ApplicationController
+
+
   def index
     if admin_signed_in?
       @jobs = Job.all
@@ -29,11 +31,13 @@ class JobsController < ApplicationController
   end
 
   def edit
-    @job = Job.find(params[:id])
+    title = params[:id].downcase.gsub("_", " ")
+    @job ||= Job.first(:conditions => [ "lower(title) = ?", title.downcase ])
   end
 
   def update
-    @job = Job.find(params[:id])
+    title = params[:id].downcase.gsub("_", " ")
+    @job ||= Job.first(:conditions => [ "lower(title) = ?", title.downcase ])
     respond_to do |format|
       if @job.update_attributes(params[:job])
         format.html { redirect_to @job, :notice => 'Post was successfully updated.' }
@@ -44,12 +48,13 @@ class JobsController < ApplicationController
   end
 
   def show
-    title = params[:id].gsub("_", " ")
+    title = params[:id].downcase.gsub("_", " ")
     @job ||= Job.first(:conditions => [ "lower(title) = ?", title.downcase ])
   end
 
   def publish
-    @job = Job.find(params[:id])
+    title = params[:id].downcase.gsub("_", " ")
+    @job ||= Job.first(:conditions => [ "lower(title) = ?", title.downcase ])
     respond_to do |format|
       if @job.publish && @job.save
         format.html { redirect_to :action => "index", :notice => 'Job has been published' }
