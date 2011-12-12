@@ -1,0 +1,16 @@
+%section.primary
+  %h2 Careers
+  - unless @jobs.empty?
+    %h3 We're Hiring!
+    - @jobs.each do |job|
+      = link_to job.title, job
+      - if admin_signed_in?
+        .job-admin
+          = link_to "Edit", edit_job_path(job)
+          = link_to("Publish", publish_job_path(job), :method => :put) unless job.published?
+  -else
+    %h3 Interested in working at Coshx?
+    %br
+    Shoot us an email showing what you're interested in, what you've accomplished, and why you want to join our team.
+    %br
+    = link_to "jobs@coshx.com", "mailto:jobs@coshx.com"
