@@ -8,7 +8,7 @@
         %li.team-member
           .float-left
             %p
-              = image_tag Gravatar.new(person.email).image_url
+              = image_tag Gravatar.new(person.email).image_url, :size => "80x80"
           .personal-quips
             %p
               = person.name
