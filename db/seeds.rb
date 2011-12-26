@@ -14,7 +14,7 @@ mike = Admin.find_or_create_by_email("mike@coshx.com") do |m|
   m.password = 'password'
   m.twitter = "mhickman84"
   m.github = "mhickman84"
-  m.bio = "Prior to joining coshx labs, Mike developed web applications in subject areas as diverse as event registration and biofuel trading. As a front and back-end developer, he enjoys distilling complex problems into elegant and obvious interfaces that even your mother-in-law could use. Outside of work, Mike enjoys fly-fishing, mountain biking and playing fetch with Walker, his labrador retriever."
+  m.bio = "Prior to joining Coshx Labs, Mike developed web applications in subject areas as diverse as event registration and biofuel trading. As a front and back-end developer, he enjoys distilling complex problems into elegant and obvious interfaces that even your mother-in-law could use. Outside of work, Mike enjoys fly-fishing, mountain biking and playing fetch with Walker, his labrador retriever."
 end
 puts "Created User #{mike.name}"
 
