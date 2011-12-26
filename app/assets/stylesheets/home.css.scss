@@ -153,7 +153,11 @@ section#activity-stream {
   width: 380px;
   height: 342px;
   position: relative;
-  @include inline-block; }
+  @include inline-block; 
+  div {
+    color: $very-pale-blue;
+  }
+}
   
 .long-stretch-container {
   @extend .stretch-container;
@@ -239,6 +243,7 @@ section#activity-stream {
   margin-left: 5px;
   margin-top: 10px;
   font-size: 14px;
+  color: $very-pale-blue;
 }
 
 .service-title {
