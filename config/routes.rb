@@ -1,5 +1,9 @@
 Coshx::Application.routes.draw do
 
+  # eg www.coshx.com redirects to coshx.com
+  #   http://stackoverflow.com/a/7352878/283398
+  match '(*any)' => redirect { |p, req| req.url.sub('www.', '') }, :constraints => { :host => /^www\./ }
+
   devise_for :admins
   
   match 'dashboard' => 'dashboard#index', :as => :admin_root
