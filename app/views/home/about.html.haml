@@ -12,15 +12,13 @@
           .personal-quips
             %p
               = person.name
-            - if person.twitter
+            - if person.twitter.present?
               %p
-                Twitter:
-                = link_to "@#{person.twitter}", "https://www.twitter.com/#{person.twitter}"
+                = link_to "@#{person.twitter}", "https://twitter.com/#{person.twitter}"
 
-            - if person.github
+            - if person.github.present?
               %p
-                GitHub:
-                = link_to "github.com/#{person.github}", "https://www.github.com/#{person.github}"
+                = link_to "github.com/#{person.github}", "https://github.com/#{person.github}"
 
           %p.clear
             = raw(person.bio)
