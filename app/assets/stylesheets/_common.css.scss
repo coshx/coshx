@@ -59,11 +59,7 @@ $feature-height: 450px;
 
 @mixin footer-link-text {
     @include footer-text;
-    text-decoration: none;
     font-weight: bold;
-    &:hover {
-        text-decoration: underline;
-    }
 }
 
 @mixin main-feature-text($size, $spacing) {

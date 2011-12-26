@@ -68,7 +68,6 @@ nav#main {
         &:last-child a { border-right: none; }
         }
     a {
-        text-decoration: none;
         @include nav-text;
         display: block;
         height: 25px;
@@ -145,12 +144,16 @@ section.primary, section.secondary {
     a {
         color: $light-orange;
         font-weight: bold;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
     }
     em {
         color: $gold;
+    }
+    line-height: 1.2em
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
     }
 }
