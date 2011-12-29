@@ -127,8 +127,10 @@ section#activity-stream {
 .team-members {
   list-style-type: none;
   padding-left: 0px;
-  margin-left: 0px;
-  margin-top: 25px;
+  margin: 0px;
+  p {
+   color: white;
+  }
 }
 
 .team-member {
