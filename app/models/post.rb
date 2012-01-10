@@ -30,6 +30,15 @@ class Post < ActiveRecord::Base
     "#{params[:year]}/#{params[:month]}/#{params[:day]}/#{params[:title]}"
   end
 
+  def self.build_like_permalink(params)
+    build_permalink(
+      :year  => (params[:year]  || '%'),
+      :month => (params[:month] || '%'),
+      :day   => (params[:day]   || '%'),
+      :title => '%'
+    )
+  end
+
   private
 
   def set_permalink
