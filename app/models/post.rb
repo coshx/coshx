@@ -7,11 +7,34 @@ class Post < ActiveRecord::Base
 
   attr_markdown :preview, :body
 
+  before_save :set_permalink
+
   def preview
     lines = self.body.split(/(\n)+/)
     preview_text = lines.reject do |line|
       line =~ /^$\n/
     end.take(4).join(' ')
     "#{preview_text.chomp}..."
+  end
+
+  def permalink_attributes
+    {
+      :year  => posted_on.year,
+      :month => "%02d" % posted_on.month,
+      :day   => "%02d" % posted_on.day,
+      :title => title.downcase.gsub(/\s+/, '-')
+    }
+  end
+
+  def self.build_permalink(params)
+    "#{params[:year]}/#{params[:month]}/#{params[:day]}/#{params[:title]}"
+  end
+
+  private
+
+  def set_permalink
+    if published? && permalink.blank?
+      self.permalink = self.class.build_permalink permalink_attributes
+    end
   end
 end
