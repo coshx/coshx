@@ -22,7 +22,7 @@ class Post < ActiveRecord::Base
       :year  => posted_on.year,
       :month => "%02d" % posted_on.month,
       :day   => "%02d" % posted_on.day,
-      :title => title.downcase.gsub(/\s+/, '-')
+      :title => title.downcase.gsub(/[^\w\s]/, '').gsub(/\s+/, '-')
     }
   end
 
