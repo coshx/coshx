@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_admin!, :only => [:new, :create, :publish]
+  prepend_before_filter :authenticate_admin!, :except => [:index, :show, :feed]
+  before_filter :redirect_old_post_url, :only => :show
 
   def index
     if admin_signed_in?
@@ -30,7 +31,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post ||= Post.find(params[:id])
+    @post ||= Post.where(:permalink => Post.build_permalink(params)).first
   end
 
   def edit
@@ -62,5 +63,16 @@ class PostsController < ApplicationController
   def feed
     @feed_url = feed_url
     @posts = Post.select { |p| p.published? }
+  end
+
+  private
+
+  def redirect_old_post_url
+    if params[:id].present?
+      @post = Post.find params[:id]
+      if @post.published?
+        redirect_to show_posts_path(@post.permalink_attributes), :status => :moved_permanently
+      end
+    end
   end
 end

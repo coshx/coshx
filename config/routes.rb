@@ -11,6 +11,7 @@ Coshx::Application.routes.draw do
 
   resources :posts, :path => "/blog" do
     put 'publish', :on => :member
+    get ':year/:month/:day/:title' => 'posts#show', :on => :collection, :as => :show
   end
 
   resources :jobs, :path => "/careers" do
