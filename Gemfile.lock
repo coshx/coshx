@@ -117,6 +117,10 @@ GEM
       thor (~> 0.14)
     json (1.6.3)
     json_pure (1.6.3)
+    kaminari (0.13.0)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      railties (>= 3.0.0)
     launchy (2.0.5)
       addressable (~> 2.2.6)
     libv8 (3.3.10.4)
@@ -229,6 +233,7 @@ DEPENDENCIES
   haml-rails
   heroku_san!
   jquery-rails
+  kaminari
   nokogiri
   pg
   pygmentize

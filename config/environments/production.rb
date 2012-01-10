@@ -14,6 +14,10 @@ Coshx::Application.configure do
   # Compress JavaScripts and CSS
   config.assets.compress = true
 
+  config.assets.initialize_on_precompile = false
+  config.assets.compile = false
+  config.assets.digest = true
+
   # Specifies the header that your server uses for sending files
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
