@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20111212015115) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.text     "bio",                                   :default => "I''''''''''''''''m a developer at Coshx and I love it!"
+    t.text     "bio",                                   :default => "I'm a developer at Coshx and I love it!"
     t.string   "twitter"
     t.string   "github"
   end
