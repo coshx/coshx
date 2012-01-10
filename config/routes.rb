@@ -5,15 +5,13 @@ Coshx::Application.routes.draw do
   match '(*any)' => redirect { |p, req| req.url.sub('www.', '') }, :constraints => { :host => /^www\./ }
 
   devise_for :admins
-  
+
   match 'dashboard' => 'dashboard#index', :as => :admin_root
   match '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
 
-  resources :posts, :path => "/blog", :only => :index do
-    collection do
-      get ':year/:month/:day/:title' => 'posts#show',  :as => :show
-      get ':year(/:month(/:day))'    => 'posts#index', :as => :archive
-    end
+  scope "/blog" do
+    get ':year/:month/:day/:title' => 'posts#show',  :as => :show_post
+    get '(/:year(/:month(/:day)))' => 'posts#index', :as => :blog_posts
   end
 
   resources :posts, :except => :index do
