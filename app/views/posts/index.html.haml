@@ -4,7 +4,7 @@
   - @posts.each do |post|
     .wall-of-text
       = render :partial => "post", :locals => {:post => post, :preview => true }
-      = link_to "Read More", post
+      = link_to "Read More", blog_post_path(post)
       - if admin_signed_in?
         .post-admin
           = link_to "Edit", edit_post_path(post)
