@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   prepend_before_filter :authenticate_admin!, :except => [:index, :show, :feed]
   before_filter :redirect_old_blog_url, :only => :index
+  before_filter :redirect_published_posts, :only => :show
 
   def index
     if params[:year].present?
@@ -33,7 +34,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.where(:permalink => Post.build_permalink(params)).first || Post.find(params[:id])
+    @post ||= Post.where(:permalink => Post.build_permalink(params)).first
   end
 
   def edit
@@ -76,6 +77,15 @@ class PostsController < ApplicationController
         redirect_to show_posts_path(@post.permalink_attributes), :status => :moved_permanently
       else
         redirect_to @post, :status => :moved_permanently
+      end
+    end
+  end
+
+  def redirect_published_posts
+    if params[:id].present?
+      @post = Post.find params[:id]
+      if @post.published?
+        redirect_to show_posts_path(@post.permalink_attributes), :status => :moved_permanently
       end
     end
   end
