@@ -55,4 +55,17 @@ describe Post do
       end
     end
   end
+
+  describe ".published" do
+    let!(:published) do
+      Factory.build(:post).tap do |p|
+        p.publish.save
+      end
+    end
+    let!(:unpublished) { Factory.create :post }
+
+    it "returns published posts" do
+      Post.published.should == [published]
+    end
+  end
 end

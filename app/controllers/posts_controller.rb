@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     elsif admin_signed_in?
       @posts = Post.all
     else
-      @posts = Post.select { |p| p.published? }
+      @posts = Post.published
     end
   end
 
@@ -66,7 +66,7 @@ class PostsController < ApplicationController
 
   def feed
     @feed_url = feed_url
-    @posts = Post.select { |p| p.published? }
+    @posts = Post.published
   end
 
   private

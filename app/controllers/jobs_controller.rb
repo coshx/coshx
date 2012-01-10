@@ -5,7 +5,7 @@ class JobsController < ApplicationController
     if admin_signed_in?
       @jobs = Job.all
     else
-      @jobs = Job.select { |p| p.published? }
+      @jobs = Job.published
     end
   end
 
