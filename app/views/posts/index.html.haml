@@ -9,3 +9,5 @@
         .post-admin
           = link_to "Edit", edit_post_path(post)
           = link_to("Publish", publish_post_path(post), :method => :put) unless post.published?
+
+  = paginate @posts

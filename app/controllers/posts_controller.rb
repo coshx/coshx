@@ -4,13 +4,13 @@ class PostsController < ApplicationController
   before_filter :redirect_published_posts, :only => :show
 
   def index
-    if params[:year].present?
-      @posts = Post.where "permalink LIKE '#{Post.build_like_permalink params}'"
-    elsif admin_signed_in?
-      @posts = Post.all
-    else
-      @posts = Post.published
-    end
+    @posts = if params[:year].present?
+               Post.where "permalink LIKE '#{Post.build_like_permalink params}'"
+             elsif admin_signed_in?
+               Post.where({})
+             else
+               Post.published
+             end.page params[:page]
   end
 
   def new
