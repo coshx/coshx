@@ -1,6 +1,6 @@
 %h3
   -if preview
-    =link_to post.title, post
+    =link_to post.title, blog_post_path(post)
   -else
     =post.title
 .post-info-wrapper

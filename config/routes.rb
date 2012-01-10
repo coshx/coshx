@@ -9,7 +9,14 @@ Coshx::Application.routes.draw do
   match 'dashboard' => 'dashboard#index', :as => :admin_root
   match '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
 
-  resources :posts, :path => "/blog" do
+  resources :posts, :path => "/blog", :only => :index do
+    collection do
+      get ':year/:month/:day/:title' => 'posts#show',  :as => :show
+      get ':year(/:month(/:day))'    => 'posts#index', :as => :archive
+    end
+  end
+
+  resources :posts, :except => :index do
     put 'publish', :on => :member
   end
 
