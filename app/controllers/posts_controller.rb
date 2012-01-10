@@ -35,6 +35,7 @@ class PostsController < ApplicationController
 
   def show
     @post ||= Post.where(:permalink => Post.build_permalink(params)).first
+    raise ActiveRecord::RecordNotFound if @post.nil?
   end
 
   def edit

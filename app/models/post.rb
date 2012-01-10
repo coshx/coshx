@@ -42,7 +42,7 @@ class Post < ActiveRecord::Base
   private
 
   def set_permalink
-    if published? && permalink.blank?
+    if published?
       self.permalink = self.class.build_permalink permalink_attributes
     end
   end
