@@ -1,16 +1,19 @@
 source "http://rubygems.org"
 
-gem "rails", "~>3.1"
+gem "rails", "3.1.3"
 
+# database
 gem "pg"
+
+# authenticate & authorization
 gem "devise"
+
+# presentation
 gem "redcarpet"
 gem "pygmentize"
 gem "nokogiri"
-gem "haml", ">= 3.0.0"
-gem "haml-rails"
 gem "jquery-rails"
-gem "forgery"
+gem "haml-rails"
 gem "gravatar-ultimate"
 gem "kaminari"
 
@@ -18,27 +21,23 @@ gem "kaminari"
 # gem "ruby-debug19", :require => "ruby-debug"
 
 group :assets do
-  gem "compass", :git => "git://github.com/chriseppstein/compass.git", :branch => "rails31"
   gem "sass-rails"
   gem "coffee-rails"
   gem "uglifier"
+  gem 'compass', '~> 0.12.alpha'
 end
 
 group :development do
-  gem "heroku_san", :git => 'git://github.com/fastestforward/heroku_san.git'
+  gem "heroku_san"
 end
 
 group :test do
   gem "factory_girl_rails"
-  gem "forgery"
   gem "timecop"
-  gem "spork"
-  gem "database_cleaner"
 end
 
 group :development, :test do
-  gem "cucumber-rails"
-  gem "capybara"
-  gem "rspec-rails", ">= 2.0.1"
+  gem "forgery"
+  gem "rspec-rails"
   gem "therubyracer", :require => 'v8'
 end

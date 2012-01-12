@@ -1,21 +1,3 @@
-GIT
-  remote: git://github.com/chriseppstein/compass.git
-  revision: f23bf58e8db84e17e6fab37cc73e5a539924cca0
-  branch: rails31
-  specs:
-    compass (0.12.0.alpha.0.f23bf58)
-      chunky_png (~> 1.2)
-      fssm (>= 0.2.7)
-      sass (~> 3.1)
-
-GIT
-  remote: git://github.com/fastestforward/heroku_san.git
-  revision: d876cd1c4941fdd9506fe755e2dbe36ead63cf13
-  specs:
-    heroku_san (1.3.0)
-      heroku (>= 2)
-      rails (>= 2)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -51,15 +33,6 @@ GEM
     arel (2.2.1)
     bcrypt-ruby (3.0.1)
     builder (3.0.0)
-    capybara (1.1.2)
-      mime-types (>= 1.16)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      selenium-webdriver (~> 2.0)
-      xpath (~> 0.1.4)
-    childprocess (0.2.3)
-      ffi (~> 1.0.6)
     chunky_png (1.2.5)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
@@ -67,56 +40,47 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.1.2)
-    cucumber (1.1.3)
-      builder (>= 2.1.2)
-      diff-lcs (>= 1.1.2)
-      gherkin (~> 2.6.7)
-      json (>= 1.4.6)
-      term-ansicolor (>= 1.0.6)
-    cucumber-rails (1.2.0)
-      capybara (>= 1.1.1)
-      cucumber (>= 1.1.1)
-      nokogiri (>= 1.5.0)
-    database_cleaner (0.7.0)
-    devise (1.4.7)
+    coffee-script-source (1.2.0)
+    compass (0.12.alpha.4)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    devise (1.5.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
-      warden (~> 1.0.3)
+      warden (~> 1.1)
     diff-lcs (1.1.3)
     erubis (2.7.0)
-    execjs (1.2.8)
+    execjs (1.2.13)
       multi_json (~> 1.0)
-    factory_girl (2.1.2)
+    factory_girl (2.3.2)
       activesupport
-    factory_girl_rails (1.2.0)
-      factory_girl (~> 2.1.0)
+    factory_girl_rails (1.4.0)
+      factory_girl (~> 2.3.0)
       railties (>= 3.0.0)
-    ffi (1.0.11)
     forgery (0.5.0)
-    fssm (0.2.7)
-    gherkin (2.6.8)
-      json (>= 1.4.6)
-    gravatar-ultimate (1.0.2)
-      sc-core-ext (>= 1.2.0)
-    haml (3.1.3)
+    fssm (0.2.8.1)
+    gravatar-ultimate (1.0.3)
+    haml (3.1.4)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
       activesupport (~> 3.0)
       haml (~> 3.0)
       railties (~> 3.0)
-    heroku (2.14.0)
+    heroku (2.18.1)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
       rubyzip
       term-ansicolor (~> 1.0.5)
+    heroku_san (1.3.0)
+      heroku (>= 2)
+      rails (>= 2)
     hike (1.2.1)
     i18n (0.6.0)
-    jquery-rails (1.0.14)
+    jquery-rails (1.0.19)
       railties (~> 3.0)
       thor (~> 0.14)
-    json (1.6.3)
-    json_pure (1.6.3)
+    json (1.6.4)
     kaminari (0.13.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -131,11 +95,11 @@ GEM
     mime-types (1.17.2)
     multi_json (1.0.4)
     nokogiri (1.5.0)
-    orm_adapter (0.0.5)
-    pg (0.11.0)
+    orm_adapter (0.0.6)
+    pg (0.12.2)
     polyglot (0.3.3)
     pygmentize (0.0.3)
-    rack (1.3.5)
+    rack (1.3.6)
     rack-cache (1.1)
       rack (>= 0.4)
     rack-mount (0.8.3)
@@ -160,40 +124,31 @@ GEM
       rdoc (~> 3.4)
       thor (~> 0.14.6)
     rake (0.9.2.2)
-    rdoc (3.11)
+    rdoc (3.12)
       json (~> 1.4)
-    redcarpet (2.0.0b5)
+    redcarpet (2.0.1)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    rspec (2.6.0)
-      rspec-core (~> 2.6.0)
-      rspec-expectations (~> 2.6.0)
-      rspec-mocks (~> 2.6.0)
-    rspec-core (2.6.4)
-    rspec-expectations (2.6.0)
+    rspec (2.8.0)
+      rspec-core (~> 2.8.0)
+      rspec-expectations (~> 2.8.0)
+      rspec-mocks (~> 2.8.0)
+    rspec-core (2.8.0)
+    rspec-expectations (2.8.0)
       diff-lcs (~> 1.1.2)
-    rspec-mocks (2.6.0)
-    rspec-rails (2.6.1)
-      actionpack (~> 3.0)
-      activesupport (~> 3.0)
-      railties (~> 3.0)
-      rspec (~> 2.6.0)
+    rspec-mocks (2.8.0)
+    rspec-rails (2.8.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec (~> 2.8.0)
     rubyzip (0.9.5)
-    sass (3.1.7)
-    sass-rails (3.1.2)
+    sass (3.1.12)
+    sass-rails (3.1.5)
       actionpack (~> 3.1.0)
       railties (~> 3.1.0)
-      sass (>= 3.1.4)
-      sprockets (~> 2.0.0)
+      sass (~> 3.1.10)
       tilt (~> 1.3.2)
-    sc-core-ext (1.2.1)
-      activesupport (>= 2.3.5)
-    selenium-webdriver (2.13.0)
-      childprocess (>= 0.2.1)
-      ffi (~> 1.0.9)
-      json_pure
-      rubyzip
-    spork (0.8.5)
     sprockets (2.0.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -208,40 +163,33 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.31)
-    uglifier (1.0.3)
+    uglifier (1.2.1)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
-    warden (1.0.5)
+    warden (1.1.0)
       rack (>= 1.0)
-    xpath (0.1.4)
-      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara
   coffee-rails
-  compass!
-  cucumber-rails
-  database_cleaner
+  compass (~> 0.12.alpha)
   devise
   factory_girl_rails
   forgery
   gravatar-ultimate
-  haml (>= 3.0.0)
   haml-rails
-  heroku_san!
+  heroku_san
   jquery-rails
   kaminari
   nokogiri
   pg
   pygmentize
-  rails (~> 3.1)
+  rails (= 3.1.3)
   redcarpet
-  rspec-rails (>= 2.0.1)
+  rspec-rails
   sass-rails
-  spork
   therubyracer
   timecop
   uglifier
