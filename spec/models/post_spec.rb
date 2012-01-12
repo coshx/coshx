@@ -3,14 +3,14 @@ require 'spec_helper'
 describe Post do
   context "new post" do
     it "is not published" do
-      post = Factory.create :post
+      post = create :post
       post.published?.should be_false
     end
   end
 
   context "post body" do
     before :each do
-      @post = Factory.create :post
+      @post = create :post
     end
 
     it "renders as html" do
@@ -33,7 +33,7 @@ describe Post do
   context "querying posts" do
     before :each do
       ["2008-01-01", "2009-01-01", "2010-01-01"].each do |date|
-        Factory.create :post, :posted_on => DateTime.parse(date)
+        create :post, :posted_on => DateTime.parse(date)
       end
     end
 
@@ -48,7 +48,7 @@ describe Post do
   context "publish" do
     it "assigns the current date/time to the :posted_on field" do
       Timecop.freeze(DateTime.now) do
-        post = Factory.create :post
+        post = create :post
         post = post.publish
         post.published?.should be_true
         post.posted_on.should == DateTime.now
@@ -58,11 +58,11 @@ describe Post do
 
   describe ".published" do
     let!(:published) do
-      Factory.build(:post).tap do |p|
+      build(:post).tap do |p|
         p.publish.save
       end
     end
-    let!(:unpublished) { Factory.create :post }
+    let!(:unpublished) { create :post }
 
     it "returns published posts" do
       Post.published.should == [published]
