@@ -8,13 +8,10 @@ module Publishable
   end
 
   def publish
-    unless self.published?
-      self.posted_on = DateTime.now
-    end
-    self
+    tap { self.posted_on ||= DateTime.now }
   end
 
   def published?
-    true unless self.posted_on.nil?
+    posted_on.present?
   end
 end

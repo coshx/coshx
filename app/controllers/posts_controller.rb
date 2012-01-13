@@ -1,9 +1,11 @@
 class PostsController < ApplicationController
+
   prepend_before_filter :authenticate_admin!, :except => [:index, :show, :feed]
   before_filter :redirect_old_blog_url, :only => :index
   before_filter :redirect_published_posts, :only => :show
 
   def index
+    @body_class = :split
     @posts = if params[:year].present?
                Post.where "permalink LIKE '#{Post.build_like_permalink params}'"
              elsif admin_signed_in?
@@ -15,21 +17,16 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-    end
   end
 
   def create
-    post = Post.new(:author => current_admin, :title => params[:post][:title], :body => params[:post][:body])
+    @post = Post.new(:author => current_admin, :title => params[:post][:title], :body => params[:post][:body])
 
-    respond_to do |format|
-      if post.save
-        format.html { redirect_to admin_root_path, notice: 'Blog post saved' }
-      else
-        format.html { redirect_to admin_root_path, error: 'Error saving blog post.' }
-      end
+    if @post.save
+      redirect_to admin_root_path, notice: 'Blog post saved.'
+    else
+      flash.now[:alert] = 'Error saving your blog post.'
+      render :new
     end
   end
 
@@ -44,23 +41,20 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    respond_to do |format|
-      if @post.update_attributes(params[:post])
-        format.html { redirect_to @post, :notice => 'Post was successfully updated.' }
-      else
-        format.html { render :action => "edit" }
-      end
+    if @post.update_attributes(params[:post])
+      redirect_to @post, notice: 'Post was successfully updated.'
+    else
+      flash.now[:alert] = 'Error updating blog post.'
+      render :edit
     end
   end
 
   def publish
     @post = Post.find(params[:id])
-    respond_to do |format|
-      if @post.publish && @post.save
-        format.html { redirect_to :action => "index", :notice => 'Post has been published' }
-      else
-        format.html { redirect_to :action => "index" }
-      end
+    if @post.publish && @post.save
+      redirect_to @post, notice: 'Post has been published.'
+    else
+      redirect_to blog_posts_path, alert: %(Could not publish "#{@post.title}".)
     end
   end
 

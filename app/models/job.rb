@@ -4,9 +4,10 @@ class Job < ActiveRecord::Base
 
   attr_markdown :description
 
+  validates_presence_of :title, :description
   validates_uniqueness_of :title, :case_sensitive => false
 
   def to_param
-    self.title.downcase.gsub(' ', '_')
+    title.downcase.gsub ' ', '_'
   end
 end

@@ -1,8 +1,9 @@
 class HomeController < ApplicationController
+
   def index; end
 
   def services
-    @services = Service.all.sort_by{ |s| s.sort_order }
+    @services = Service.order :sort_order
   end
 
   def work; end
@@ -10,7 +11,7 @@ class HomeController < ApplicationController
   def blog; end
 
   def about
-    @coshx_folks = Admin.all.sort_by{|a| a.name}
+    @coshx_folks = Admin.order :name
   end
 
   def portfolio

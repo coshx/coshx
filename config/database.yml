@@ -1,28 +1,16 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-development:
+defaults: &defaults
   adapter: postgresql
-  database: coshx_development
   pool: 5
   timeout: 5000
+  min_messages: WARNING
+
+development:
+  <<: *defaults
+  database: coshx_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test: &test
-  adapter: postgresql
+test:
+  <<: *defaults
   database: coshx_test
-  pool: 5
-  timeout: 5000
-
-production:
-  adapter: postgresql
-  database: coshx_production
-  pool: 5
-  timeout: 5000
-
-cucumber:
-  <<: *test
