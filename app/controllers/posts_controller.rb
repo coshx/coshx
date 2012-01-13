@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   before_filter :redirect_published_posts, :only => :show
 
   def index
+    @body_class = :split
     @posts = if params[:year].present?
                Post.where "permalink LIKE '#{Post.build_like_permalink params}'"
              elsif admin_signed_in?

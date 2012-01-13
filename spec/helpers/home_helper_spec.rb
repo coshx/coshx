@@ -1,15 +1,35 @@
 require 'spec_helper'
 
-# Specs in this file have access to a helper object that includes
-# the HomeHelper. For example:
-#
-# describe HomeHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       helper.concat_strings("this","that").should == "this that"
-#     end
-#   end
-# end
 describe HomeHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  describe "#class_for_service" do
+    context "with a long description" do
+      let(:service) do
+        stub(:description => <<-DESC)
+          Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor
+          sit amet, consectetur adipiscing elit. Nullam id dolor id nibh
+          ultricies vehicula ut id elit. Donec id elit non mi porta gravida
+          at eget metus. Donec ullamcorper nulla non metus auctor fringilla.
+          Maecenas sed diam eget risus varius blandit sit amet non magna.
+          Donec sed odio dui. Donec id elit non mi porta gravida at eget metus.
+          Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+        DESC
+      end
+
+      it { helper.class_for_service(service).should == 'long-stretch-container' }
+    end
+
+    context "with a short description" do
+      let(:service) do
+        stub(:description => <<-DESC)
+          Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor
+          sit amet, consectetur adipiscing elit. Nullam id dolor id nibh
+          ultricies vehicula ut id elit. Donec id elit non mi porta gravida
+        DESC
+      end
+
+      it { helper.class_for_service(service).should == 'short-stretch-container' }
+    end
+  end
+
 end

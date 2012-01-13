@@ -11,5 +11,35 @@ require 'spec_helper'
 #   end
 # end
 describe PostsHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  describe "#blog_post_path" do
+    context "with published post" do
+      let(:attributes) { {:key => 'value'} }
+      let(:post) { mock_model Post, :published? => true, :permalink_attributes => attributes }
+
+      it "should call show_post_path" do
+        helper.should_receive(:show_post_path).with attributes
+        helper.blog_post_path post
+      end
+
+      it "returns the value of show_post_path" do
+        helper.stub(:show_post_path).and_return 'path'
+        helper.blog_post_path(post).should == 'path'
+      end
+    end
+
+    context "with an unpublished post" do
+      let(:post) { mock_model Post, :published? => false }
+
+      it "should call post_path" do
+        helper.should_receive(:post_path).with post
+        helper.blog_post_path post
+      end
+
+      it "returns the value of post_path" do
+        helper.stub(:post_path).and_return 'path'
+        helper.blog_post_path(post).should == 'path'
+      end
+    end
+  end
 end
