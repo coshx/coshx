@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Admin do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  describe "relations" do
+    it { should have_many :posts }
+  end
 end

@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
 
   attr_markdown :preview, :body
 
-  validates_presence_of :title
+  validates_presence_of :title, :body, :author
 
   before_save :set_permalink
 
