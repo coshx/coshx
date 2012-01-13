@@ -14,7 +14,7 @@ Coshx::Application.routes.draw do
     get '(/:year(/:month(/:day)))' => 'posts#index', :as => :blog_posts
   end
 
-  resources :posts, :except => :index do
+  resources :posts, :except => [:index, :destroy] do
     put 'publish', :on => :member
   end
 
