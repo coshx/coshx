@@ -18,7 +18,7 @@ Coshx::Application.routes.draw do
     put 'publish', :on => :member
   end
 
-  resources :jobs, :path => "/careers" do
+  resources :jobs, :path => "/careers", :except => :destroy do
     put 'publish', :on => :member
   end
 
