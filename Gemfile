@@ -34,6 +34,7 @@ end
 group :test do
   gem "factory_girl_rails"
   gem "timecop"
+  gem 'shoulda-matchers'
 end
 
 group :development, :test do

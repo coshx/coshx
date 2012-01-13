@@ -6,8 +6,8 @@ Coshx::Application.routes.draw do
 
   devise_for :admins
 
-  match 'dashboard' => 'dashboard#index', :as => :admin_root
-  match '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
+  get 'dashboard' => 'dashboard#index', :as => :admin_root
+  get '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
 
   scope "/blog" do
     get ':year/:month/:day/:title' => 'posts#show',  :as => :show_post
@@ -22,8 +22,8 @@ Coshx::Application.routes.draw do
     put 'publish', :on => :member
   end
 
-  match '/services' => 'home#services', :as => :services
-  match '/portfolio' => 'home#portfolio', :as => :portfolio
-  match '/about' => 'home#about', :as => :about
+  get '/services' => 'home#services', :as => :services
+  get '/portfolio' => 'home#portfolio', :as => :portfolio
+  get '/about' => 'home#about', :as => :about
   root :to => 'home#index'
 end
