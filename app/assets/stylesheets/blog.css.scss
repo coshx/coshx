@@ -4,6 +4,9 @@
     @include column(2);
 }
 
+body.default section.primary.wall-of-text {
+  width: 750px;
+}
 
 section.primary {
     .post-author-image {
