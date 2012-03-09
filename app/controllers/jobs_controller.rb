@@ -3,15 +3,18 @@ class JobsController < ApplicationController
   before_filter :build_title, :only => [:show, :edit, :update, :publish]
 
   def index
-    @jobs = admin_signed_in? ? Job.all : Job.published
+    @open_jobs = Job.find :all, :conditions => 'filled = false'
+    @filled_jobs = Job.find :all, :conditions => 'filled = true'
   end
+
+
 
   def new
     @job = Job.new
   end
 
   def create
-    @job = Job.new(:title => params[:job][:title], :description => params[:job][:description])
+    @job = Job.new(:title => params[:job][:title], :description => params[:job][:description], :filled => params[:job][:filled])
 
     if @job.save
       redirect_to @job, notice: 'Job posting saved.'

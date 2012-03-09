@@ -5,7 +5,9 @@
       %ul
         - @job.errors.full_messages.each do |msg|
           %li= msg
-
+  = f.label "Click this checkbox if position has been filled: "
+  = f.check_box :filled
   = f.text_field :title, :placeholder => "Job Title"
   = f.text_area :description, :placeholder => "Job Description"
   = f.submit "Save"
+
