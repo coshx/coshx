@@ -7,6 +7,13 @@ class Job < ActiveRecord::Base
   validates_presence_of :title, :description
   validates_uniqueness_of :title, :case_sensitive => false
 
+  scope :filled, lambda {
+      where(:filled => true)
+    }
+  scope :open, lambda {
+        where(:filled => false)
+      }
+
   def to_param
     title.downcase.gsub ' ', '_'
   end

@@ -3,10 +3,9 @@ class JobsController < ApplicationController
   before_filter :build_title, :only => [:show, :edit, :update, :publish]
 
   def index
-    @open_jobs = Job.find :all, :conditions => 'filled = false'
-    @filled_jobs = Job.find :all, :conditions => 'filled = true'
+    @open_jobs = Job.open
+    @filled_jobs = Job.filled
   end
-
 
 
   def new
