@@ -1,3 +1,15 @@
+#addThis_button
+.addthis_toolbox.addthis_default_style.addthis_32x32_style
+  %a.addthis_button_hackernews
+  %a.addthis_button_reddit
+  %a.addthis_button_facebook
+  %a.addthis_button_twitter
+  %a.addthis_button_compact
+  %a.addthis_counter.addthis_bubble_style
+%script{:src => "http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f5ee397644a3b4c", :type => "text/javascript"}
+
+
+
 #disqus_thread
 :javascript
   var disqus_shortname = '#{ENV['DISQUS_SHORTNAME'] || 'coshxlabsstaging'}'; // required: replace example with your forum shortname
@@ -6,6 +18,8 @@
       dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
+
+
 %noscript
   Please enable JavaScript to view the
   =link_to "comments powered by Disqus.", "http://disqus.com/?ref_noscript"
@@ -14,3 +28,5 @@
   blog comments powered by
   %span.logo-disqus
     Disqus
+
+
