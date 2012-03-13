@@ -38,6 +38,8 @@ group :test do
 end
 
 group :development, :test do
+  gem "cucumber-rails"
+  gem "database_cleaner"
   gem "forgery"
   gem "rspec-rails"
   gem "therubyracer", :require => 'v8'
