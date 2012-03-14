@@ -1,15 +1,14 @@
 
-Feature: Admin Dashboard functionality
+Feature: Admin blog post functionality
+  As an Admin user
+  I want to post a new blog
+  So that I can contribute to the rails community
 
  Background:
-   Given required data exists
+   Given testuser_1@coshx.com is a valid admin
 
-     Scenario: Admin signs in and makes a blog post
-      Given go to the sign in page
-      Then I should see "Sign in"
-      When I fill in "admin_email" with "testuser_1@coshx.com"
-      And I fill in "admin_password" with "password_1"
-      When I press "Sign in"
+   Scenario: Admin makes a blog post
+      Given I sign in as "testuser_1@coshx.com" / "password_1"
       Then I should be on the dashboard page
       And I should see "Admin Dashboard"
       When I follow "New Blog Post"
@@ -38,6 +37,4 @@ Feature: Admin Dashboard functionality
       And I should not see "Publish"
       When I follow "Read More"
       Then I should be on the "post title2" published blog page
-
-
 
