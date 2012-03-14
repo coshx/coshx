@@ -9,7 +9,7 @@
         = link_to job.title, job
       - if admin_signed_in?
         .job-admin
-          = render :partial => "publisheditlinks", :locals => {:job => job}
+          = render :partial => "publish_controls", :locals => {:job => job}
       %br
       %br
 
@@ -31,6 +31,6 @@
           =link_to job.blog_url, url_with_protocol(job.blog_url)
       - if admin_signed_in?
         .job-admin
-          = render :partial => "publisheditlinks", :locals => {:job => job}
+          = render :partial => "publish_controls", :locals => {:job => job}
       %br
       %br

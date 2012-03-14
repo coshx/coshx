@@ -28,10 +28,6 @@ class Post < ActiveRecord::Base
     }
   end
 
-  def get_permalink
-    self.permalink
-  end
-
   def self.build_permalink(params)
     "#{params[:year]}/#{params[:month]}/#{params[:day]}/#{params[:title]}"
   end

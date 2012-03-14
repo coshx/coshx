@@ -37,7 +37,7 @@ module NavigationHelpers
        "/posts/#{Post.find_by_title($1).id}/edit"
 
     when /the "(.+)" published blog page/
-        "/blog/#{Post.find_by_title($1).get_permalink}"
+        "/blog/#{Post.find_by_title($1).permalink}"
 
 
 
