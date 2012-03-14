@@ -3,6 +3,7 @@ class JobsController < ApplicationController
   before_filter :build_title, :only => [:show, :edit, :update, :publish]
 
   def index
+    @jobs = Job.all
     @open_jobs = Job.open
     @filled_jobs = Job.filled
   end

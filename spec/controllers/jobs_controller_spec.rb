@@ -5,25 +5,21 @@ describe JobsController do
   let(:job) { create :job }
 
   describe "GET :index" do
-    context "admin signed in" do
-      before(:each) { sign_in create(:admin) }
 
-      it "retrieves all jobs" do
+      it "retrieves open jobs" do
         jobs = [mock_model(Job)]
-        Job.should_receive(:all).and_return jobs
+        Job.should_receive(:open).and_return jobs
         get :index
-        assigns(:jobs).should == jobs
+        assigns(:open_jobs).should == jobs
       end
-    end
 
-    context "guest user" do
-      it "retrieves published jobs" do
+      it "retrieves filled jobs" do
         jobs = [mock_model(Job)]
-        Job.should_receive(:published).and_return jobs
+        Job.should_receive(:filled).and_return jobs
         get :index
-        assigns(:jobs).should == jobs
-      end
-    end
+        assigns(:filled_jobs).should == jobs
+       end
+
   end
 
   describe "GET :show" do
