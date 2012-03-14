@@ -32,13 +32,13 @@ group :development do
 end
 
 group :test do
+  gem "cucumber-rails", "~> 1.0", require: false
   gem "factory_girl_rails"
   gem "timecop"
   gem 'shoulda-matchers'
 end
 
 group :development, :test do
-  gem "cucumber-rails"
   gem "database_cleaner"
   gem "forgery"
   gem "rspec-rails"

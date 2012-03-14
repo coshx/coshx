@@ -206,7 +206,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails
   compass (~> 0.12.alpha)
-  cucumber-rails
+  cucumber-rails (~> 1.0)
   database_cleaner
   devise
   factory_girl_rails
