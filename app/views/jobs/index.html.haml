@@ -21,7 +21,7 @@
   %hr
   %br
   - if !@filled_jobs.empty?
-    %h3 Filled positions
+    %h3 Filled Positions
     - @filled_jobs.each do |job|
       - if admin_signed_in? || job.published?
         = link_to job.title, job
