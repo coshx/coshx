@@ -126,6 +126,7 @@ footer {
 #email { @include column(4) }
 #charlottesville { @include column(6) }
 #boulder { @include column(6, true) }
+#twitter_img { vertical-align: middle; }
 
 #logo {
     text-indent: -9999em;
