@@ -36,6 +36,7 @@ group :test do
   gem "factory_girl_rails"
   gem "timecop"
   gem 'shoulda-matchers'
+  gem 'simplecov', :require => false # code coverage tool
 end
 
 group :development, :test do
@@ -43,4 +44,6 @@ group :development, :test do
   gem "forgery"
   gem "rspec-rails"
   gem "therubyracer", :require => 'v8'
+  gem 'pry'
+  gem 'pry-nav'
 end

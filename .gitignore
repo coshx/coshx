@@ -8,3 +8,4 @@ tmp/
 .vagrant
 vendor/bundle/*
 .DS_Store
+coverage/
