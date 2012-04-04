@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   extend MarkdownAttributes
   include Publishable
+  include Tweeter
 
   belongs_to :author, :class_name => "Admin"
   default_scope :order => "created_at DESC"
@@ -10,6 +11,7 @@ class Post < ActiveRecord::Base
   validates_presence_of :title, :body, :author
 
   before_save :set_permalink
+  after_update :send_tweet
 
   def preview
     lines = self.body.split(/(\n)+/)
@@ -47,5 +49,9 @@ class Post < ActiveRecord::Base
     if published?
       self.permalink = self.class.build_permalink permalink_attributes
     end
+  end
+
+  def send_tweet
+    Tweeter.blog_post_tweet(self.author.name, self.title) if self.posted_on_changed? && self.published?
   end
 end

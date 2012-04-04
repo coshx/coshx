@@ -59,9 +59,28 @@ describe Post do
 
     context "on unpublished post" do
       subject { build :post }
-      it "does nothing" do
+      it "doesn't set the permalink" do
         subject.run_callbacks :save
         subject.permalink.should be_nil
+      end
+    end
+  end
+
+  describe "update_callback" do
+    context "on published post" do
+      subject { build :post}
+      it "creates tweet about the blog post" do
+        Tweeter.should_receive(:blog_post_tweet).with(subject.author.name, subject.title)
+        subject.publish
+        subject.run_callbacks :update
+      end
+    end
+
+    context "on unpublished post" do
+      subject { build :post }
+      it "doesn't create tweet about blog post" do
+        Tweeter.should_not_receive(:blog_post_tweet)
+        subject.run_callbacks :save
       end
     end
   end
@@ -85,6 +104,15 @@ describe Post do
 
     it "adds ... to the end of the preview content" do
       subject.preview.should match /\.\.\.$/
+    end
+  end
+
+  describe "create callback" do
+    context "published post" do
+
+    end
+    context "unpublished blog post" do
+
     end
   end
 
