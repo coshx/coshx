@@ -70,7 +70,7 @@ describe Post do
     context "on published post" do
       subject { build :post}
       it "creates tweet about the blog post" do
-        Tweeter.should_receive(:blog_post_tweet).with(subject.author.name, subject.title)
+        Tweeter.should_receive(:blog_post_tweet).with(subject)
         subject.publish
         subject.run_callbacks :update
       end

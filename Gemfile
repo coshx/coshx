@@ -17,6 +17,9 @@ gem "haml-rails"
 gem "gravatar-ultimate"
 gem "kaminari"
 
+#Social media is cool?
+gem "twitter"
+
 # To use debugger
 # gem "ruby-debug19", :require => "ruby-debug"
 

@@ -157,6 +157,7 @@ describe PostsController do
     context "admin signed in" do
       before(:each) do
         sign_in admin
+        Twitter.should_receive(:update)
         put :publish, :id => create(:post).id
       end
 

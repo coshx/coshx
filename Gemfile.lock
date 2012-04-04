@@ -79,6 +79,10 @@ GEM
     factory_girl_rails (1.4.0)
       factory_girl (~> 2.3.0)
       railties (>= 3.0.0)
+    faraday (0.7.6)
+      addressable (~> 2.2)
+      multipart-post (~> 1.1)
+      rack (~> 1.1)
     ffi (1.0.11)
     forgery (0.5.0)
     fssm (0.2.8.1)
@@ -119,6 +123,7 @@ GEM
     method_source (0.7.1)
     mime-types (1.17.2)
     multi_json (1.0.4)
+    multipart-post (1.1.5)
     nokogiri (1.5.0)
     orm_adapter (0.0.6)
     pg (0.12.2)
@@ -186,6 +191,7 @@ GEM
       multi_json (~> 1.0)
       rubyzip
     shoulda-matchers (1.0.0)
+    simple_oauth (0.1.5)
     simplecov (0.6.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.5.3)
@@ -204,6 +210,11 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
+    twitter (2.2.0)
+      activesupport (>= 2.3.9, < 4)
+      faraday (~> 0.7)
+      multi_json (~> 1.0)
+      simple_oauth (~> 0.1)
     tzinfo (0.3.31)
     uglifier (1.2.1)
       execjs (>= 0.3.0)
@@ -242,4 +253,5 @@ DEPENDENCIES
   simplecov
   therubyracer
   timecop
+  twitter
   uglifier

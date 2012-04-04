@@ -52,6 +52,6 @@ class Post < ActiveRecord::Base
   end
 
   def send_tweet
-    Tweeter.blog_post_tweet(self.author.name, self.title) if self.posted_on_changed? && self.published?
+    Tweeter.blog_post_tweet(self) if self.posted_on_changed? && self.published?
   end
 end
