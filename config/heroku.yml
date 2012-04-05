@@ -6,9 +6,10 @@
 #   config:
 #     - <Heroku config:var name>: <Heroku config:var value>
 #
+config_repo: 'https://github.com/coshx/coshx_configuration'
+
 production:
   app: coshx-web-production
-  config_repo: 'https://github.com/coshx/coshx_configuration'
   config:
     BUNDLE_WITHOUT: "development:test"
     GOOGLE_ANALYTICS: "UA-25757046-1"
