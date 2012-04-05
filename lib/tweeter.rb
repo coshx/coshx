@@ -5,7 +5,7 @@ module Tweeter
   end
 
   def self.trim_tweet(tweet)
-    tweet = tweet[0..140] + "..." if tweet.length > 144
+    tweet = tweet[0..136] + "..." if tweet.length > 140
     tweet
   end
 end

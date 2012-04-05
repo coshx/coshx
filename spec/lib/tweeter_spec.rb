@@ -8,9 +8,9 @@ describe Tweeter do
     end
   end
   describe "trim tweet" do
-    it "trims tweets to 144 chars" do
+    it "trims tweets to 140 chars" do
       tweet =  Tweeter.trim_tweet("Hey dog I heard you like twitter so I put some tweets in a tweeter module so you can tweet after you blog. Hey dog I heard you like twitter so I put some tweets in a tweeter module so you can tweet after you blog.")
-      tweet.length.should == 144
+      tweet.length.should == 140
     end
   end
 end

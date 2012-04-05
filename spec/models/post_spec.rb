@@ -107,13 +107,4 @@ describe Post do
     end
   end
 
-  describe "create callback" do
-    context "published post" do
-
-    end
-    context "unpublished blog post" do
-
-    end
-  end
-
 end
