@@ -2,8 +2,11 @@
   %section#contact
     %h3 Contact Us
     %section#email
-      %h4 Email
+      %h4 Email & Such
       %span#email=link_to "info@coshx.com", "mailto:info@coshx.com"
+      #twitter
+        =image_tag "twitter_bird.png", :id => "twitter_img"
+        %span#twitter_link=link_to "@coshxlabs", "https://twitter.com/#!/coshxlabs"
     %section#charlottesville
       %h4 Charlottesville
       %span#street-1 1110 Market Street East
@@ -13,7 +16,8 @@
       %h4 Boulder
       %span#street-1 3080 Valmont Road
       %span#street-2 Suite 280
-      %span#city-state-zip Boulder, CO 80301
+      %span#city-state-zip Boulder, CO 80301    
+
   %section#careers
     %h3 Careers
     %p
