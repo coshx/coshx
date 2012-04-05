@@ -9,6 +9,7 @@ Feature: Admin blog post functionality
 
    Scenario: Admin makes a blog post
       Given I sign in as "testuser_1@coshx.com" / "password_1"
+      And twitter is configured
       Then I should be on the dashboard page
       And I should see "Admin Dashboard"
       When I follow "New Blog Post"

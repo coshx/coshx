@@ -13,3 +13,10 @@ When /^I sign in as "(.+)" \/ "(.+)"$/ do |email, password|
   step %{I press "Sign in"}
 end
 
+Given /^twitter is configured$/ do
+  module Twitter
+    def self.update(something)
+    end
+  end
+end
+
