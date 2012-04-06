@@ -13,8 +13,8 @@ describe Post do
   end
 
   describe "default_scope" do
-    it "sorts by created_at by default" do
-      described_class.where({}).to_sql.should include('ORDER BY created_at DESC')
+    it "sorts by posted_on by default" do
+      described_class.where({}).to_sql.should include('ORDER BY posted_on DESC')
     end
   end
 

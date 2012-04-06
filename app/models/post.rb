@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   include Tweeter
 
   belongs_to :author, :class_name => "Admin"
-  default_scope :order => "created_at DESC"
+  default_scope :order => "posted_on DESC"
 
   attr_markdown :preview, :body
 
