@@ -13,4 +13,11 @@ describe Tweeter do
       tweet.length.should == 140
     end
   end
+  describe "random tweet" do
+    it "The tweet should contain the author and the title" do
+      tweet = Tweeter.random_tweet("calvin", "Why is twitter always down?")
+      (tweet =~ /calvin/).should_not be_nil
+      (tweet =~ /Why is twitter always down?/).should_not be_nil
+    end
+  end
 end
