@@ -77,6 +77,15 @@ calvin = Admin.find_or_create_by_email("calvin@coshx.com") do |c|
 end
 puts "Created User #{calvin.name}"
 
+sang = Admin.find_or_create_by_email("sang@coshx.com") do |s|
+    s.name = "Sang Won Seo"
+    s.password = "sang_password"
+    s.twitter = "sws4q"
+    s.github = "sws4q"
+    s.bio = "Sang is an intern at Coshx. He is currently studying computer science at University of Virginia. Although he is not as experienced as other developers at Coshx, he is eager to learn more and grow as a developer. Other than programming, Sang enjoys weight training, listening to music, and playing instruments."
+end
+puts "created user #{sang.name}"
+
 # -----------------------------------------------------------------------------
 # clients
 
