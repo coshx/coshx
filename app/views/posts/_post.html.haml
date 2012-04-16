@@ -13,9 +13,9 @@
   .post-info-wrapper
     .post-author-image=image_tag Gravatar.new(post.author.email).image_url(:size => '49'), :class => 'photo'
     .post-info
-      %div{:class =>'fn'}
-        Coshx Labs
       %div{:class =>'org'}
+        Coshx Labs
+      %div{:class =>'fn'}
         = post.author.name
   - if preview
     .post-body=preserve post.preview_html.html_safe
