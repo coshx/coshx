@@ -1,9 +1,14 @@
 %header
-  %h1=link_to "coshx", :root, :id => "logo"
-  %nav#main
-    #social-banner{:style => "float: right;"}
+  .logo-banner
+    %h1=link_to "coshx", :root, :id => "logo"
+
+    #social-banner
       -# TODO: this is the Twitter/FB like thing in the upper-right
       = image_tag "temp_images/social_banner.png"
+
+  .clearfix
+
+  %nav#main
     %ul#nav-list
       -# TODO: fix links depending on how we arrange the site - one big site or multiple small ones 
       %li=link_to "Home", "#"

@@ -1,21 +1,76 @@
 @import "common";
+@import "grid";
+
+body .center {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 body.split {
   section.primary {
-      @include column(20);
+
       header {
-          @include column(20);
-          padding-top: 0px;
-          height: auto;
+
       }
    }
   section.secondary {
-      @include column(4, true);
-      h3 { text-align: center; }
+
+      h3 {
+
+      }
   }
 }
 
 body.default {
   section.primary {
-    @include column(24);
+
   }
+}
+
+header {
+  height: 235px;
+}
+
+#social-banner {
+  @include column(2);
+  float: right;
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+nav#main {
+  @include clearfix();
+  @include column(12);
+
+  margin-top: 25px;
+
+  border-top: 2px $blue solid;
+  border-bottom: 1px $blue solid;
+
+  padding-top: 31px;
+  padding-bottom: 27px;
+
+  ul { list-style-type: none; }
+  li {
+      float: left;
+      &:last-child a { border-right: none; }
+      }
+  a {
+      @include nav-text;
+      display: block;
+      height: 25px;
+      padding: 0 15px;
+      border-right: 2px solid $blue;
+  }
+}
+
+#logo {
+    @include column(4);
+    text-indent: -9999em;
+    display: block;
+    height: 61px;
+    background: image-url('/assets/logo.png') no-repeat;
 }

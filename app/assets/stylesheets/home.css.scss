@@ -6,61 +6,46 @@
 @import "compass/layout/stretching";
 @import "compass/utilities";
 @import "compass/css3";
+@import "grid";
 
+
+#blueprint-image {
+  @include centered;
+  text-align: center;
+  margin-top: 31px;
+}
 
 #main-feature {
-    @include column(24, true);
-    height: $feature-height;
-    background: image-url('/assets/feature-reframeit.jpg');
+
+
     h2 {
-        @include main-feature-text(28px, 4px);
+
     }
     #text-wrapper {
-        width: 50px;
-        background-color: $blue;
+
     }
-    @include border-corner-radius(bottom, left, 12px);
-    @include border-corner-radius(bottom, right, 12px);
-    overflow: hidden;
-    border: 1px solid black;
+
 
     .quote {
-        height: 30px;
-        margin-top: 375px;
-        margin-right: 25px;
-        width: 500px;
-        display: block;
-        float: right;
-        text-align: center;
-        @include quote-text;
+
         .credit {
-            @include credit-text;
-            display: block;
+
         }
     }
 
     a {
-        display: block;
-        float: right;
-        color: $gray;
+
     }
 }
 
 #blog {
-    @include column(24, true);
-    @include last;
-    height: 150px;
 
     .wrapper {
-        border: 1px solid black;
-        @include opacity(0.7);
-        background-color: $gray;
-        @include border-radius(12px);
-        height: 148px;
+
     }
 
     h3 {
-        @include feature-header-text($light-orange);
+
     }
     #subscribe {
         
@@ -71,187 +56,148 @@
 }
 
 #text-wrapper {
-    height: $feature-height;
-    float: right;
-    overflow: hidden;
+
 }
 
 #tagline {
-    @include tagline-text;
-    @include column(24);
-    @include last;
-    margin: 50px 0;
+
 }
 
 #features {
     section {
-        height: 200px;
+
         article {
-            height: 198px;
+
         }
     }
     p {
-        @include feature-text;
+
     }
 
-    #you { @include last; }
+    #you {
+
+    }
 
     #startups article {
         h3 {
-            @include feature-header-text($green);
+
         }
-        @include column(7);
-        @include append(1);
+
     }
     #enterprise article {
-        h3 { @include feature-header-text($blue); }
-        @include column(8);
-        @include append(1);
+        h3 {
+
+        }
+
     }
     #you article {
-        @include column(7, true);
+
         h3 {
-            @include feature-header-text($purple);
+
         }
     }
-    #title { @include opacity(1.0)}
+    #title {
+
+    }
 }
 
 
 section#activity-stream {
-    @include column(24, true);
-    height: 200px;
     @include border-radius(12px);
 }
 
 .team-members {
-  list-style-type: none;
-  padding-left: 0px;
-  margin: 0px;
+
   p {
-   color: white;
+
   }
 }
 
 .team-member {
   .float-left {
-    float: left;
+
   }
 
   .clear {
-    clear: both;
+
   }
 
   .personal-quips {
-    margin-left: 48px;
-    padding-left: 48px;
-  }
 
-  margin-bottom: 25px;
+  }
 }
 
 // Taken from the stretching example on Compass' website - http://compass-style.org/examples/compass/layout/stretching/
 .stretch-container {
-  width: 380px;
-  height: 342px;
-  position: relative;
-  @include inline-block; 
   div {
-    color: $very-pale-blue;
+
   }
 }
   
 .long-stretch-container {
-  @extend .stretch-container;
-  height: 405px;
+
 }
 
 .short-stretch-container {
-  @extend .stretch-container;
-  height: 300px;
+
 }
 
 .stretched {
-  $stretch-color: #7c9bB9; // default 4c6b99
-  border: 3px solid $stretch-color;
-  @include border-radius(8px);
-  display: block;
-  background-color: darken($stretch-color, 30%);
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-  padding: 0.5em;
+
  }
  
 .stretch-full {
-  @extend .stretched;
-  @include stretch; }
+
+}
 
 .stretch-offset {
-  @extend .stretched;
-  @include stretch(1em, 1em, 1em, 1em); }
+
+}
 
 .stretch-small-offset {
-    @extend .stretched;
-    @include stretch(0.5em, 0.5em, 0.5em, 0.5em);
+
 }
 
 .stretch-x {
-  @extend .stretched;
-  @include stretch-x; }
+
+}
 
 .stretch-y {
-  @extend .stretched;
-  @include stretch-y; }
+
+}
 
 .client-info {
-  text-align: left;
-  margin-left: 5px;
-  margin-top: 10px;
-  font-size: 14px;
+
 }
 
 .client-name {
-  @extend .client-info;
-  margin-top: 10px;
-  font-style: italic;
+
 }
 
 .client-url {
-  @extend .client-info;
+
 }
 
 .client-quote, .what-we-did {
-  @extend .client-info;
+
 }
 
 .client-quote-sayer {
-  @extend .client-info;
-  margin-left: 35px;
-  font-style: italic;
+
 }
 
 .client-logo {
-  height: 115px;
+
 }
 
 .client-logo img {
-  background-color: white;
-  @include border-radius(8px);
+
 }
 
 .service-description {
-  text-align: left;
-  margin-left: 5px;
-  margin-top: 10px;
-  font-size: 14px;
-  color: $very-pale-blue;
+
 }
 
 .service-title {
-  @extend .client-info;
-  margin-top: 10px;
-  font-weight: bold;
-  color: white;
-  font-size: large;
+
 }

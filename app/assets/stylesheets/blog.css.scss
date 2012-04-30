@@ -1,50 +1,43 @@
 @import "common";
 
 #gutter {
-    @include column(2);
+
 }
 
 body.default section.primary.wall-of-text {
-  width: 750px;
+
 }
 
 section.primary {
     .post-author-image {
-      display: block;
-      float: left;
-      margin-right: 20px;
+
     }
     .post-info-wrapper, .post-info {
-      display: block;
-      height: 50px;
+
     }
 
     .post-info-wrapper { margin-bottom: 10px; }
 
     .post-info {
-      margin-left: 20px;
-      font-size: 20px;
-      line-height: 1.2;
+
     }
     .post-body {
         p {
-            @include article-text;
-            margin-bottom: 10px;
+
         }
         hr {
-            border: 5px solid $light-gray;
-            border-style: none;
+
         }
         .meta {
-            @include meta-text;
+
         }
 
         em {
-          font-weight: bolder;
+
         }
     }
 
     .pagination {
-      margin-top: 20px;
+
     }
 }
