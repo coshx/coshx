@@ -23,7 +23,23 @@ $gold: #d6c29c;
 //$feature-height: 450px;
 
 @mixin centered {
-    margin: 0 auto;
+  margin: 0 auto;
+}
+
+@mixin pt-sans-bold {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+}
+
+@mixin pt-sans {
+  font-family: 'PT Sans', sans-serif;
+}
+
+@mixin solid-thick-top {
+  border-top: 2px $blue solid;
+}
+
+@mixin solid-thin-bottom {
 
 }
 

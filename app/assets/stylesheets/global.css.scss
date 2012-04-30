@@ -8,8 +8,14 @@
     background-color: $blue;
     color: $dark-blue;
     padding: 5px 10px;
-    font-size: 80%;
+    font-size: 12px;
+    @include pt-sans;
+
   }
+}
+
+.blue-x {
+  color: $blue;
 }
 
 body {

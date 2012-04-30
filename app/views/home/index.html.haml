@@ -2,7 +2,7 @@
   = image_tag "temp_images/rocket.png"
 %section#tagline
   %h1
-    From Idea to Execution
+    FROM IDEA TO EXECUTION
   #tagline-body
     Here at Coshx we take complex problems and turn them into simple solutions. Our highly skilled team of programmers and designers will take your product to the next level. We love sending those rockets to the moon - why not let us launch a rocket of a product for you?
 
@@ -13,32 +13,38 @@
 
 .clearfix
 
+.divider
+
 #features
   %section#startups
     %article
-      %h3 Coshx Labs Company
+      = render :partial => "coshx_blue_x", :locals => {:feature => "COMPANY"}
       %p  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
       .button-link
-        About us
+        %a{:href => "#"}About us
 
-  %section#enterprise
+  %section#enterprise.middle
     %article
-      %h3 Coshx Labs Services
+      = render :partial => "coshx_blue_x", :locals => {:feature => "SERVICES"}
       %p  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
       .button-link
-        Our services
+        %a{:href => "#"}Our services
 
   %section#you
     %article      
-      %h3 Coshx Labs Products
+      = render :partial => "coshx_blue_x", :locals => {:feature => "PRODUCTS"}
       %p  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
       .button-link
-        Our projects
+        %a{:href => "#"}Our projects
 
-%section#contact-us{:style => "text-align:center"}
+.clearfix
+
+.divider
+
+%section#contact-us{:style => "text-align:center; margin-top: 50px;"}
   .envelope
     = image_tag "temp_images/envelope.png"
   .contact-title

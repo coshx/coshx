@@ -18,19 +18,65 @@
 #tagline {
   text-align: center;
 
+  margin-bottom: 30px;
+
   h1 {
-    font-size: 300%;
+    @include pt-sans-bold;
+    font-size: 48px;
   }
 
   #tagline-body {
     color: $gray;
     @include centered;
     width: 700px;
+    font-size: 14px;
   }
 }
 
 #how-we-build {
   margin-top: 20px;
+}
+
+.divider {
+  @include solid-thick-top;
+  margin-top: 45px;
+}
+
+#features {
+  margin-top: 45px;
+
+  h3 {
+    @include pt-sans-bold;
+    font-size: 18px;
+  }
+
+  section {
+    @include centered;
+    text-align: center;
+    width: 320px;
+    float: left;
+  }
+
+  article {
+    margin-top: 50px;
+    width: 210px;
+    padding-left: 55px;
+
+    p {
+      color: $gray;
+      margin-top: 16px;
+    }
+
+    .button-link {
+      margin-top: 30px;
+    }
+  }
+
+  section.middle {
+    width: 318px;
+    border-left: 1px $blue dashed;
+    border-right: 1px $blue dashed;
+  }
 }
 
 #main-feature {

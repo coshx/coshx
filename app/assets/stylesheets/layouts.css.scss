@@ -1,11 +1,24 @@
 @import "common";
 @import "grid";
 
+/* Font Guide
+Two main fonts are PT Sans and Droid Serif
+
+headings are PT Sans Bold
+
+normal text is droid Serif 14pt
+
+button links are PT Sans 12pt
+*/
+
 body {
   background-image: image-url("tile_background.png");
   background-repeat: repeat;
 
   color: white;
+
+  font-family: 'Droid Serif', serif;
+  font-size: 12px;
 }
 
 body .center {
@@ -54,8 +67,8 @@ nav#main {
 
   margin-top: 25px;
 
-  border-top: 2px $blue solid;
-  border-bottom: 1px $blue solid;
+  @include solid-thick-top;
+  @include solid-thin-bottom;
 
   padding-top: 31px;
   padding-bottom: 27px;
