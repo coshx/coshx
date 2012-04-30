@@ -1,6 +1,13 @@
 @import "common";
 @import "grid";
 
+body {
+  background-image: image-url("tile_background.png");
+  background-repeat: repeat;
+
+  color: white;
+}
+
 body .center {
   width: 960px;
   margin: 0 auto;

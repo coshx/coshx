@@ -2,6 +2,16 @@
 @import "common";
 @import "grid";
 
+.button-link {
+  a {
+    @include border-radius(4px);
+    background-color: $blue;
+    color: $dark-blue;
+    padding: 5px 10px;
+    font-size: 80%;
+  }
+}
+
 body {
 
 }
@@ -130,6 +140,7 @@ section.primary, section.secondary {
 }
 
 a {
+    color: white;
     text-decoration: none;
     &:hover {
         text-decoration: underline;

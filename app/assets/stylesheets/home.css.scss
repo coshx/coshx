@@ -15,8 +15,25 @@
   margin-top: 31px;
 }
 
-#main-feature {
+#tagline {
+  text-align: center;
 
+  h1 {
+    font-size: 300%;
+  }
+
+  #tagline-body {
+    color: $gray;
+    @include centered;
+    width: 700px;
+  }
+}
+
+#how-we-build {
+  margin-top: 20px;
+}
+
+#main-feature {
 
     h2 {
 
