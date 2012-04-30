@@ -1,12 +1,20 @@
 %footer
+  #footer-highlight
   %section#contact
-    %h3 Contact Us
+    %h3 Only one thing left to do. Contact us using your preferred method below.
     %section#email
-      %h4 Email & Such
-      %span#email=link_to "info@coshx.com", "mailto:info@coshx.com"
-      #twitter
-        =image_tag "twitter_bird.png", :id => "twitter_img"
-        %span#twitter_link=link_to "@coshxlabs", "https://twitter.com/#!/coshxlabs"
+      #coshx-telephone
+        %strong
+          Tel:
+        123-456-7890
+      #coshx-fax
+        %strong
+          Fax:
+        234-567-8901
+      #coshx-email
+        %strong
+          Email:
+        %span#email=link_to "info@coshx.com", "mailto:info@coshx.com"
     %section#charlottesville
       %h4 Charlottesville
       %span#street-1 1110 Market Street East
@@ -16,14 +24,10 @@
       %h4 Boulder
       %span#street-1 3080 Valmont Road
       %span#street-2 Suite 280
-      %span#city-state-zip Boulder, CO 80301    
-
-  %section#careers
-    %h3 Careers
-    %p
-      Interested in working at Coshx?
-      %br
-      = link_to "View Openings", jobs_path
-      -#Shoot us an email showing us what you're interested in, what you've accomplished, and why you want to join our team.
-      -#%br
-      -#= link_to "jobs@coshx.com", "mailto:jobs@coshx.com"
+      %span#city-state-zip Boulder, CO 80301
+    %section#considering-coshx
+      .considering-text
+        Considering Coshx for your next project?
+      .considering-link
+        .button-link
+          Get a proposal

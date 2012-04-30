@@ -50,17 +50,97 @@
 %section#featured-projects
   .section-title
     Featured Projects
+  .case-studies-link
+    .button-link
+      See more Case Studies
   .section-content
-    COMING SOON!
+    -# repeating series of large rectangular sections with images of projects
+    .featured-project
+      great project 1
+    .featured-project
+      great project 2
+    .featured-project
+      great project 3
+    .featured-project
+      great project 4
 
 %section#our-clients
   .section-title
     Our Clients
+  .portfolio-link
+    .button-link
+      See our portfolio
   .section-content
-    COMING SOON!
+    -# repeating series of small squares with client logos in them
+    .client-logo
+      ABC Corp
+    .client-logo
+      SomethingCo
+    .client-logo
+      Hot Startup
+    .client-logo
+      Cool Startup
+    .client-logo
+      MegaCorpDeluxe
 
 %section#blog-posts
+  #blog-return-arrow
+    ▲
   .section-title
     Latest Blog Posts
   .section-content
-    COMING SOON!
+    -# load the two most recent blog entries and display here
+    %article.blog-post
+      .author
+        .author-image
+          \:)
+        .author-name
+          David Kovsky
+        .author-date
+          April 9, 2012
+      .blog-post-content
+        %header.blog-title
+          Removing Technical Debt
+        .blog-body
+          I had a great time at the Mile High Agile 2012...
+      %footer.blog-footer
+        .read-more
+          %a.read-more{:href => "#"}
+            Read More
+          |
+          %a.comments{:href => "#"}
+            Comments: 1
+
+    %article.blog-post
+      .author
+        .author-image
+          \:)
+        .author-name
+          Ryan Ahearn
+        .author-date
+          April 6, 2012
+      .blog-post-content
+        %header.blog-title
+          Polymorphic Associations and validate_uniqueness_of
+        .blog-body
+          One of my favorite helper libraries when testing is...
+      %footer.blog-footer
+        .read-more
+          %a.read-more{:href => "#"}
+            Read More
+          |
+          %a.comments{:href => "#"}
+            Comments: 2
+
+  #twitter-feed
+    .twitter-bird
+      chirp
+    .angle-flash
+      >
+    #latest-tweet
+      Checkout David Kovsky's blog post on...
+    .follow-us
+      .button-link
+        Follow us
+
+

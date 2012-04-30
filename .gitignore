@@ -9,3 +9,5 @@ tmp/
 vendor/bundle/*
 .DS_Store
 coverage/
+logfile
+

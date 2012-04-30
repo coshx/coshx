@@ -100,7 +100,7 @@ footer {
         margin: 0 0 10px 0;
     }
     #contact {
-        @include column(16);
+        @include column(22);
     }
     #careers {
         @include column(8, true);
