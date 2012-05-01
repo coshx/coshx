@@ -16,7 +16,8 @@
 #blueprint-image {
   @include centered;
   text-align: center;
-  margin-top: 31px;
+  margin-top: 5px;
+  margin-bottom: 30px;
 }
 
 #tagline {
@@ -47,10 +48,11 @@
 }
 
 #features {
-  margin-top: 45px;
+  margin-top: 35px;
 
   h3 {
     @include pt-sans-header;
+    margin-top: 26px;
   }
 
   section {
@@ -58,10 +60,14 @@
     text-align: center;
     width: 320px;
     float: left;
+
+    img {
+      padding-bottom: -20px;
+    }
   }
 
   article {
-    margin-top: 50px;
+    margin-top: 25px;
     width: 210px;
     padding-left: 55px;
 
@@ -101,60 +107,64 @@
   }
 
   #contact-links {
-    @include row(12);
+    text-align: left;
+
     margin-top: 40px;
 
+    div {
+      display: inline;
+    }
+
     .button-link {
-      @include column(2, 12);
-      @include push(4);
+      margin-left: 320px;
     }
 
     .white-button-link {
-      @include column(2,12);
+      margin-left: 65px;
     }
   }
 }
 
 #featured-projects {
-  @include solid-thick-top;
-  margin-top: 50px;
-  padding-top: 18px;
-
-  .header {
-
-    padding-bottom: 18px;
-    border-bottom: 1px $blue dashed;
-    margin-bottom: 55px;
-
-    .section-title {
-      vertical-align: middle;
-      padding-left: 5px;
-    }
-
-    img {
-      vertical-align: middle;
-    }
-
-    .case-studies-link {
-      float: right;
-
-      .button-link {
-        margin-top: 16px;
-      }
-    }
-  }
+  @include projects-clients-header;
 
   .section-content {
     .featured-project {
       @include border-radius(4px);
-      width: 464px;
-      height: 183px;
+      width: 456px;
+      height: 180px;
       background-color: $blue;
+      border: 2px black solid;
+    }
+
+    .project-row {
+      div {
+        float: left;
+      }
+      div:last-child {
+        margin-left: 40px;
+      }
+    }
+
+    .project-row:last-child {
+      margin-top: 34px;
     }
   }
-
-
 }
+
+#our-clients {
+  @include projects-clients-header;
+
+  .header .callout-link {
+    width: 133px;
+  }
+}
+
+//#startups {
+//  img {
+//    padding-top: 26px;
+//  }
+//}
 
 
 #main-feature {

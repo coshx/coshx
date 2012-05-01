@@ -65,25 +65,31 @@ nav#main {
   @include clearfix();
   @include column(12);
 
-  margin-top: 25px;
+  margin-top: 5px;
 
   @include solid-thick-top;
   @include solid-thin-bottom;
 
-  padding-top: 31px;
-  padding-bottom: 27px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 
-  ul { list-style-type: none; }
-  li {
+  ul {
+    list-style-type: none;
+    li:last-child {
+      border-right: none;
+    }
+    li {
       float: left;
-      &:last-child a { border-right: none; }
-      }
+      border-right: 1px dashed $blue;
+      padding: 17px 27px;
+    }
+  }
+
   a {
-      @include nav-text;
-      display: block;
-      height: 25px;
-      padding: 0 15px;
-      border-right: 2px solid $blue;
+    @include pt-sans;
+    font-size: 14px;
+    display: block;
+    padding: 0px 15px;
   }
 }
 
@@ -91,6 +97,6 @@ nav#main {
     @include column(4);
     text-indent: -9999em;
     display: block;
-    height: 61px;
+    height: 100px;
     background: image-url('/assets/logo.png') no-repeat;
 }

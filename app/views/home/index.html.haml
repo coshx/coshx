@@ -1,5 +1,5 @@
 %section#blueprint-image
-  = image_tag "temp_images/rocket.png"
+  = image_tag "blueprint.png"
 %section#tagline
   %h1
     FROM IDEA TO EXECUTION
@@ -9,7 +9,9 @@
   .clearfix
 
   #how-we-build.button-link
-    %a{:href => "#"} Read about how we build for the web
+    %a{:href => "#"}
+      Read about how we build for the web
+      = image_tag "arrow_blue_btn.png"
 
 .clearfix
 
@@ -18,27 +20,36 @@
 #features
   %section#startups
     %article
+      = image_tag "people.png"
       = render :partial => "coshx_blue_x", :locals => {:feature => "COMPANY"}
       %p  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
       .button-link
-        %a{:href => "#"}About us
+        %a{:href => "#"}
+          About us
+          = image_tag "arrow_blue_btn.png"
 
   %section#enterprise.middle
     %article
+      = image_tag "services.png"
       = render :partial => "coshx_blue_x", :locals => {:feature => "SERVICES"}
       %p  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
       .button-link
-        %a{:href => "#"}Our services
+        %a{:href => "#"}
+          Our services
+          = image_tag "arrow_blue_btn.png"
 
   %section#you
     %article      
+      = image_tag "projects.png"
       = render :partial => "coshx_blue_x", :locals => {:feature => "PRODUCTS"}
       %p  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
       .button-link
-        %a{:href => "#"}Our projects
+        %a{:href => "#"}
+          Our projects
+          = image_tag "arrow_blue_btn.png"
 
 .clearfix
 
@@ -46,43 +57,59 @@
 
 %section#contact-us
   #envelope
-    = image_tag "temp_images/envelope.png"
+    = image_tag "mail.png"
   .section-title
     DON'T BE SHY, SAY HELLO
   #contact-body
     Meet the team, find out why we're different - and why you should hire us to work on your next website or web application project.
   #contact-links
     .button-link
-      %a{:href => "#"}Contact us
+      %a{:href => "#"}
+        Contact us
+        = image_tag "arrow_blue_btn.png"
     .white-button-link
-      %a{:href => "#"}Request a FREE Quote
+      %a{:href => "#"}
+        Request a FREE Quote
+        = image_tag "arrow_white_btn.png"
 
 %section#featured-projects
   .header
-    = image_tag "temp_images/star.png"
+    = image_tag "star.png"
     %span.section-title
       FEATURED PROJECTS
-    .case-studies-link
+    .callout-link
       .button-link
-        %a{:href => "#"}See more Case Studies
+        %a{:href => "#"}
+          See more Case Studies
+          = image_tag "arrow_blue_btn.png"
   .section-content
     -# repeating series of large rectangular sections with images of projects
-    .featured-project
-      great project 1
-    .featured-project
-      great project 2
-    .featured-project
-      great project 3
-    .featured-project
-      great project 4
+    .project-row
+      .featured-project
+        great project 1
+      .featured-project
+        great project 2
 
+    .clearfix
+
+    .project-row
+      .featured-project
+        great project 3
+      .featured-project
+        great project 4
+
+.clearfix
 
 %section#our-clients
-  .section-title
-    Our Clients
-  .portfolio-link
-    .button-link
-      See our portfolio
+  .header
+    = image_tag "star.png"
+    %span.section-title
+      OUR CLIENTS
+    .callout-link
+      .button-link
+        %a{:href => "#"}
+          See our portfolio
+          = image_tag "arrow_blue_btn.png"
   .section-content
     -# repeating series of small squares with client logos in them
     .client-logo

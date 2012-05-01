@@ -45,7 +45,39 @@ $gold: #d6c29c;
 }
 
 @mixin solid-thin-bottom {
+  border-bottom: 1px $blue solid;
+}
 
+@mixin projects-clients-header {
+  @include solid-thick-top;
+  margin-top: 50px;
+  padding-top: 18px;
+
+  .header {
+
+    padding-bottom: 18px;
+    border-bottom: 1px $blue dashed;
+    margin-bottom: 55px;
+
+    .section-title {
+      vertical-align: -30%; // feels hacky, if someone knows of a better way, please share
+      padding-left: 5px;
+    }
+
+    img {
+      vertical-align: middle;
+      padding: 10px 0px;
+    }
+
+    .callout-link {
+      float: right;
+      width: 163px;
+
+      .button-link {
+        margin-top: 14px;
+      }
+    }
+  }
 }
 
 @mixin nav-text {
