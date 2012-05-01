@@ -112,16 +112,17 @@
           = image_tag "arrow_blue_btn.png"
   .section-content
     -# repeating series of small squares with client logos in them
-    .client-logo
-      ABC Corp
-    .client-logo
-      SomethingCo
-    .client-logo
-      Hot Startup
-    .client-logo
-      Cool Startup
-    .client-logo
-      MegaCorpDeluxe
+    -# all logos must be 100px in height and <= 150px wide - please see home.css.scss for explanation
+    - 2.times do
+      .client-row
+        - 6.times do |n|
+          .client-logo
+            - if n % 2 == 0
+              = image_tag "temp_images/kovsky_client.png"
+            - else
+              = image_tag "temp_images/ryan_client.png"
+
+      .clearfix
 
 %section#blog-posts
   #blog-return-arrow
