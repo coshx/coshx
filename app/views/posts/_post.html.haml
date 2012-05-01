@@ -16,7 +16,7 @@
       %div{:class =>'org'}
         Coshx Labs
       %div{:class =>'fn'}
-        = post.author.name
+        = 'by '+post.author.name
   - if preview
     .post-body=preserve post.preview_html.html_safe
   - else
