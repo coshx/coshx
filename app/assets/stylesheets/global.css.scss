@@ -2,15 +2,26 @@
 @import "common";
 @import "grid";
 
+@mixin rounded-button {
+  @include border-radius(4px);
+  padding: 5px 10px;
+  font-size: 12px;
+  @include pt-sans;
+}
+
 .button-link {
   a {
-    @include border-radius(4px);
+    @include rounded-button;
     background-color: $blue;
     color: $dark-blue;
-    padding: 5px 10px;
-    font-size: 12px;
-    @include pt-sans;
+  }
+}
 
+.white-button-link {
+  a {
+    @include rounded-button;
+    background-color: white;
+    color: $blue;
   }
 }
 

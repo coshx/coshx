@@ -9,6 +9,10 @@
 @import "grid";
 
 
+.section-title {
+  @include pt-sans-header;
+}
+
 #blueprint-image {
   @include centered;
   text-align: center;
@@ -46,8 +50,7 @@
   margin-top: 45px;
 
   h3 {
-    @include pt-sans-bold;
-    font-size: 18px;
+    @include pt-sans-header;
   }
 
   section {
@@ -78,6 +81,81 @@
     border-right: 1px $blue dashed;
   }
 }
+
+#contact-us {
+
+  margin-top: 50px;
+  text-align: center;
+
+  #envelope {
+    margin-bottom: 22px;
+  }
+
+  #contact-title {
+    @include pt-sans-header;
+  }
+
+  #contact-body {
+    margin-top: 22px;
+    color: $gray;
+  }
+
+  #contact-links {
+    @include row(12);
+    margin-top: 40px;
+
+    .button-link {
+      @include column(2, 12);
+      @include push(4);
+    }
+
+    .white-button-link {
+      @include column(2,12);
+    }
+  }
+}
+
+#featured-projects {
+  @include solid-thick-top;
+  margin-top: 50px;
+  padding-top: 18px;
+
+  .header {
+
+    padding-bottom: 18px;
+    border-bottom: 1px $blue dashed;
+    margin-bottom: 55px;
+
+    .section-title {
+      vertical-align: middle;
+      padding-left: 5px;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    .case-studies-link {
+      float: right;
+
+      .button-link {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  .section-content {
+    .featured-project {
+      @include border-radius(4px);
+      width: 464px;
+      height: 183px;
+      background-color: $blue;
+    }
+  }
+
+
+}
+
 
 #main-feature {
 

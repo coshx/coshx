@@ -44,25 +44,27 @@
 
 .divider
 
-%section#contact-us{:style => "text-align:center; margin-top: 50px;"}
-  .envelope
+%section#contact-us
+  #envelope
     = image_tag "temp_images/envelope.png"
-  .contact-title
-    Don't be shy, say hello
-  .contact-body
-    Meet the team and find out why we're different and so on...
-  .contact-links
+  .section-title
+    DON'T BE SHY, SAY HELLO
+  #contact-body
+    Meet the team, find out why we're different - and why you should hire us to work on your next website or web application project.
+  #contact-links
     .button-link
-      Contact us
+      %a{:href => "#"}Contact us
     .white-button-link
-      Request a FREE quote
+      %a{:href => "#"}Request a FREE Quote
 
 %section#featured-projects
-  .section-title
-    Featured Projects
-  .case-studies-link
-    .button-link
-      See more Case Studies
+  .header
+    = image_tag "temp_images/star.png"
+    %span.section-title
+      FEATURED PROJECTS
+    .case-studies-link
+      .button-link
+        %a{:href => "#"}See more Case Studies
   .section-content
     -# repeating series of large rectangular sections with images of projects
     .featured-project
@@ -73,6 +75,7 @@
       great project 3
     .featured-project
       great project 4
+
 
 %section#our-clients
   .section-title

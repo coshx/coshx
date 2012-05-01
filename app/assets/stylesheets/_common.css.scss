@@ -35,6 +35,11 @@ $gold: #d6c29c;
   font-family: 'PT Sans', sans-serif;
 }
 
+@mixin pt-sans-header {
+  @include pt-sans-bold;
+  font-size: 18px;
+}
+
 @mixin solid-thick-top {
   border-top: 2px $blue solid;
 }
