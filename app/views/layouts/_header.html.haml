@@ -1,4 +1,4 @@
-%header.w960
+%header#top-header
   .logo-banner
     %a#logo{:href => "index.htm"}
 
@@ -6,7 +6,7 @@
       = link_to image_tag("twitter.png"), "#"
       = link_to image_tag("facebook.png"), "#"
 
-  %nav.w960.clearfix#main
+  %nav.clearfix#main
     %ul#nav-list
       -# TODO: fix links depending on how we arrange the site - one big site or multiple small ones 
       %li= link_to "HOME", "#"
