@@ -1,113 +1,114 @@
 %footer
-  %section#blog
-    #blog-return-arrow
-      ▲
-    %span.section-title
-      %h2
-        Latest Blog Posts
-    .section-content
-      -# load the two most recent blog entries and display here
-      %article.blog-post
-        .author
-          .author-image
-            = image_tag "temp_images/kovsky_client.png"
-          .author-name
-            %a{:href => "#"}
-              David Kovsky
-          .author-date
-            April 9, 2012
-        .blog-post-content
-          %header.blog-title
-            %a{:href => "#"}
-              Removing Technical Debt
-          .blog-body
-            I had a great time at the Mile High Agile 2012...
-          %footer.blog-footer
-            .read-more
-              %a.read-more{:href => "#"}
-                Read More
-              |
-              %a.comments{:href => "#"}
-                Comments: 1
+  #blog-return-arrow
+    = link_to image_tag("arrow_footer_home.png"), "#"
+  #blog-container
+    %section#blog
+      %span.section-title
+        %h2
+          Latest Blog Posts
+      .section-content
+        -# load the two most recent blog entries and display here
+        %article.blog-post
+          .author
+            .author-image
+              = image_tag "temp_images/kovsky_client.png"
+            .author-name
+              %a{:href => "#"}
+                David Kovsky
+            .author-date
+              April 9, 2012
+          .blog-post-content
+            %header.blog-title
+              %a{:href => "#"}
+                Removing Technical Debt
+            .blog-body
+              I had a great time at the Mile High Agile 2012...
+            %footer.blog-footer
+              .read-more
+                %a.read-more{:href => "#"}
+                  Read More
+                |
+                %a.comments{:href => "#"}
+                  Comments: 1
 
-      %article.blog-post
-        .author
-          .author-image
-            = image_tag "temp_images/ryan_client.png"
-          .author-name
-            %a{:href => "#"}
-              Ryan Ahearn
-          .author-date
-            April 6, 2012
-        .blog-post-content
-          %header.blog-title
-            %a{:href => "#"}
-              Polymorphic Associations and validate_uniqueness_of
-          .blog-body
-            One of my favorite helper libraries when testing is
-            %a{:href => "https://github.com/thoughtbot/shoulda-matchers"} thoughtbot's shoulda-matchers
-            They do a great job making common situations easy to test in one line, but I recently ran into a gotcha with the validate_uniqueness_of
-            matcher. Validating both uniqueness of a polymorphic association and another validation on the same association can cause some strange error messages regarding undefined classes due to the way scoping and validations are handled.
-          %footer.blog-footer
-            .read-more
-              %a.read-more{:href => "#"}
-                Read More
-              |
-              %a.comments{:href => "#"}
-                Comments: 2
+        %article.blog-post
+          .author
+            .author-image
+              = image_tag "temp_images/ryan_client.png"
+            .author-name
+              %a{:href => "#"}
+                Ryan Ahearn
+            .author-date
+              April 6, 2012
+          .blog-post-content
+            %header.blog-title
+              %a{:href => "#"}
+                Polymorphic Associations and validate_uniqueness_of
+            .blog-body
+              One of my favorite helper libraries when testing is
+              %a{:href => "https://github.com/thoughtbot/shoulda-matchers"} thoughtbot's shoulda-matchers
+              They do a great job making common situations easy to test in one line, but I recently ran into a gotcha with the validate_uniqueness_of
+              matcher. Validating both uniqueness of a polymorphic association and another validation on the same association can cause some strange error messages regarding undefined classes due to the way scoping and validations are handled.
+            %footer.blog-footer
+              .read-more
+                %a.read-more{:href => "#"}
+                  Read More
+                |
+                %a.comments{:href => "#"}
+                  Comments: 2
 
-    #twitter-feed
-      .twitter-bird
-        chirp
-      .angle-flash
-        >
-      #latest-tweet
-        Checkout David Kovsky's blog post on...
-      .follow-us
-        .button-link
-          Follow us
+      #twitter-feed
+        .twitter-bird
+          chirp
+        .angle-flash
+          >
+        #latest-tweet
+          Checkout David Kovsky's blog post on...
+        .follow-us
+          .button-link
+            Follow us
 
-    .client-logo
-      ABC Corp
-    .client-logo
-      SomethingCo
-    .client-logo
-      Hot Startup
-    .client-logo
-      Cool Startup
-    .client-logo
-      MegaCorpDeluxe
+      .client-logo
+        ABC Corp
+      .client-logo
+        SomethingCo
+      .client-logo
+        Hot Startup
+      .client-logo
+        Cool Startup
+      .client-logo
+        MegaCorpDeluxe
 
 
-  #footer-highlight
-  %section#contact
-    %h3 Only one thing left to do. Contact us using your preferred method below.
-    %section#email
-      #coshx-telephone
-        %strong
-          Tel:
-        123-456-7890
-      #coshx-fax
-        %strong
-          Fax:
-        234-567-8901
-      #coshx-email
-        %strong
-          Email:
-        %span#email=link_to "info@coshx.com", "mailto:info@coshx.com"
-    %section#charlottesville
-      %h4 Charlottesville
-      %span#street-1 1110 Market Street East
-      %span#street-2 Suite N7
-      %span#city-state-zip Charlottesville, VA 22903
-    %section#boulder
-      %h4 Boulder
-      %span#street-1 3080 Valmont Road
-      %span#street-2 Suite 280
-      %span#city-state-zip Boulder, CO 80301
-    %section#considering-coshx
-      .considering-text
-        Considering Coshx for your next project?
-      .considering-link
-        .button-link
-          Get a proposal
+    #footer-highlight
+    %section#contact
+      %h3 Only one thing left to do. Contact us using your preferred method below.
+      %section#email
+        #coshx-telephone
+          %strong
+            Tel:
+          123-456-7890
+        #coshx-fax
+          %strong
+            Fax:
+          234-567-8901
+        #coshx-email
+          %strong
+            Email:
+          %span#email=link_to "info@coshx.com", "mailto:info@coshx.com"
+      %section#charlottesville
+        %h4 Charlottesville
+        %span#street-1 1110 Market Street East
+        %span#street-2 Suite N7
+        %span#city-state-zip Charlottesville, VA 22903
+      %section#boulder
+        %h4 Boulder
+        %span#street-1 3080 Valmont Road
+        %span#street-2 Suite 280
+        %span#city-state-zip Boulder, CO 80301
+      %section#considering-coshx
+        .considering-text
+          Considering Coshx for your next project?
+        .considering-link
+          .button-link
+            Get a proposal

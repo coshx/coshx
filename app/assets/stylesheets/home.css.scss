@@ -240,7 +240,7 @@ section#blueprint-image {
 }
 
 footer {
-  background: $blue;
+  //background: $blue;
   padding-bottom: 200px;
   margin-top: 170px;
   position: relative;
@@ -268,22 +268,31 @@ section#footer-content {
   }
 }
 
+#blog-return-arrow{
+    @include centered;
+    @include border-top-radius(250px);
+    width: 140px;
+    height: 60px;
+    text-align: center;
+    font-size: 34px;
+    background-color: $blue;
+
+    img {
+      margin-top: 24px;
+    }
+  }
+
+#blog-container {
+  width: 100%;
+  background-color: $blue;
+}
+
 #blog {
   margin-top: 40px;
+  padding-top: 50px;
   width: 960px;
   margin: 0px auto;
   background-color: $blue;
-
-  #blog-return-arrow{
-    @include centered;
-    height: 150px;
-    -webkit-border-radius: 200px 200px 0 0;
-    width: 140px;
-    height: 70px;
-    text-align: center;
-    font-size: 34px;
-    color: $dark-blue;
-  }
 
   .section-title h2{
     padding-left: 50px;
