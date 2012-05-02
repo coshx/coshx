@@ -217,17 +217,55 @@
 }
 
 #blog {
+  margin-top: 50px;
+  padding-top: 18px;
+  
+  
+  #blog-return-arrow{
+    @include centered;
+    height: 150px;
+    -webkit-border-radius: 200px 200px 0 0;
+    background-color: $blue;
+    width: 140px;
+    height: 70px;
+    text-align: center;
+    font-size: 44px;
+    color: $dark-blue;
+  }
+  
+  .section-title{
+    .blog-icon{
+      background-image: url('blog.png');
+      background-repeat: no-repeat;
+      display: block;
+    }
+    background-color: $blue;
+    padding-top: 50px;
+    display: block;
+    padding-left: 50px;
+    height: 85px;
+    border-bottom: 1px #000000 solid;
+  }
+
+
+  .section-content {
+    background-color: $blue;
+    .blog-post{
+      
+    }
+  }
 
     .wrapper {
 
     }
 
-    h3 {
-
-    }
+  h3 {
+    @include pt-sans-header;
+  }
     #subscribe {
         
     }
+
 }
 
 #main-feature, #blog {
