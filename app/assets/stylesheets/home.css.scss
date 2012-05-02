@@ -344,6 +344,122 @@ section#footer-content {
   }
 }
 
+#blog {
+  margin-top: 40px;
+  width: 960px;
+  margin: 0px auto;
+  background-color: $blue;
+
+  #blog-return-arrow{
+    @include centered;
+    height: 150px;
+    -webkit-border-radius: 200px 200px 0 0;
+    width: 140px;
+    height: 70px;
+    text-align: center;
+    font-size: 34px;
+    color: $dark-blue;
+  }
+
+  .section-title h2{
+    padding-left: 50px;
+    @include pt-sans-header;
+    line-height: 32px;
+    padding-bottom: 20px;
+    color:white;
+    background: url('blog.png') 0px 0px no-repeat;
+    text-transform: uppercase;
+    //margin-top: 40px;
+    border-bottom: 1px $dark-blue solid;
+  }
+
+
+  .section-content {
+    padding-top: 40px;
+    margin-bottom: 40px;
+    .blog-post{
+      width: 480px;
+      float: left;
+      a{
+        text-decoration: none;
+        color: $dark-blue;
+      }
+      a:hover{
+        color: black;
+      }
+      .author{
+        width: 100px;
+        float: left;
+        padding-right: 30px;
+        .author-image{
+          @include centered;
+          text-align: center;
+        }
+        .author-name{
+          @include centered;
+          text-align: center;
+          text-transform: uppercase;
+          padding-bottom: 10px;
+          font-size: 11px;
+        }
+        .author-date{
+          color: $dark-blue;
+          @include centered;
+          text-align: center;
+          font-size: 11px;
+        }
+      }
+      .blog-post-content{
+        width: 315px;
+        padding-left: 164px;
+        .blog-title{
+          @include pt-sans-header;
+          height:auto;
+          padding-bottom: 17px;
+          text-transform: uppercase;
+        }
+        .blog-body{
+          line-height: 30px;
+          color: white;
+        }
+      }
+      .blog-footer{
+        padding-bottom: 0px;
+        margin-top:30px;
+        color: $dark-blue;
+        a.read-more{
+          color: #000000;
+          text-transform: uppercase;
+        }
+        a.read-more:hover{
+          color: $dark-blue;
+        }
+        a.comments{
+          text-transform: uppercase;
+        }
+      }
+    }
+    .blog-post:last-child {
+      border-left: 1px black solid;
+      width: 479px;
+      .author{
+        padding-left: 34px;
+      }
+    }
+  }
+
+    .wrapper {
+
+    }
+
+  h3 {
+    @include pt-sans-header;
+  }
+    #subscribe {
+
+    }
+
+}
 /*
 .section-title {
   @include pt-sans-header;
@@ -553,41 +669,106 @@ section#footer-content {
 }
 
 #blog {
-  margin-top: 50px;
-  padding-top: 18px;
-  
+  margin-top: 40px;
+  width: 960px;
+  margin: 0px auto;
+  background-color: $blue;
   
   #blog-return-arrow{
     @include centered;
     height: 150px;
     -webkit-border-radius: 200px 200px 0 0;
-    background-color: $blue;
     width: 140px;
     height: 70px;
     text-align: center;
-    font-size: 44px;
+    font-size: 34px;
     color: $dark-blue;
   }
   
-  .section-title{
-    .blog-icon{
-      background-image: url('blog.png');
-      background-repeat: no-repeat;
-      display: block;
-    }
-    background-color: $blue;
-    padding-top: 50px;
-    display: block;
+  .section-title h2{
     padding-left: 50px;
-    height: 85px;
-    border-bottom: 1px #000000 solid;
+    @include pt-sans-header;
+    line-height: 32px;
+    padding-bottom: 20px;
+
+    background: url('blog.png') 0px 0px no-repeat;
+    text-transform: uppercase;
+    //margin-top: 40px;
+    border-bottom: 1px $dark-blue solid;
   }
 
 
   .section-content {
-    background-color: $blue;
+    padding-top: 40px;
+    margin-bottom: 40px;
     .blog-post{
-      
+      width: 480px;
+      float: left;
+      a{
+        text-decoration: none;
+        color: $dark-blue;
+      }
+      a:hover{
+        color: black;
+      }
+      .author{
+        width: 100px;
+        float: left;
+        padding-right: 30px;
+        .author-image{
+          @include centered;
+          text-align: center;
+        }
+        .author-name{
+          @include centered;
+          text-align: center;
+          text-transform: uppercase;
+          padding-bottom: 10px;
+          font-size: 11px;
+        }
+        .author-date{
+          color: $dark-blue;
+          @include centered;
+          text-align: center;
+          font-size: 11px;
+        }
+      }
+      .blog-post-content{
+        width: 315px;
+        padding-left: 164px;
+        .blog-title{
+          @include pt-sans-header;
+          height:auto;
+          padding-bottom: 17px;
+          text-transform: uppercase;
+        }
+        .blog-body{
+          line-height: 30px;
+        }
+      }
+      .blog-footer{
+        padding-left: 164px;
+        height: auto;
+        margin-top:30px;
+        color: $dark-blue;
+        a.read-more{
+          color: #000000;
+          text-transform: uppercase;
+        }
+        a.read-more:hover{
+          color: $dark-blue;
+        }
+        a.comments{
+          text-transform: uppercase;
+        }
+      }
+    }
+    .blog-post:last-child {
+      border-left: 1px black solid;
+      width: 479px;
+      .author{
+        padding-left: 34px;
+      }
     }
   }
 

@@ -87,6 +87,11 @@ header {
 }
 
 footer {
+  background-color: $blue;
+  //padding-bottom: 200px;
+  margin-top: 170px;
+  //position: relative;
+  //overflow: hidden;
 
     a {
 
@@ -116,7 +121,7 @@ footer {
 
 }
 
-@include sticky-footer(180px, "#content-canvas", "#content-footer", "footer");
+@include sticky-footer(180px, "#content-canvas", "#content-footer");
 
 #charlottesville, #boulder {
     span {
