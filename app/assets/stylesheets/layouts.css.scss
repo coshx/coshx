@@ -11,95 +11,96 @@ normal text is droid Serif 14pt
 button links are PT Sans 12pt
 */
 
-/*
+html {
+  border-top: 6px solid $black;
+  border-left: 6px solid $black;
+  border-right: 6px solid $black;
+}
+
 body {
-  background-image: image-url("tile_background.png");
-  background-repeat: repeat;
-
-  color: white;
-
-  font-family: 'Droid Serif', serif;
-  font-size: 12px;
+  background: transparent image-url("tile_background.png");
 }
 
-body .center {
-  width: 960px;
-  margin: 0 auto;
-  overflow: hidden;
+.divider {
+  @include clearfix;
 }
 
-body.split {
-  section.primary {
+.clearfix:after, .divider:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
 
-      header {
-
-      }
-   }
-  section.secondary {
-
-      h3 {
-
-      }
+* {
+  html .clearfix, &:first-child+html .clearfix {
+    zoom: 1;
   }
 }
 
-body.default {
-  section.primary {
-
-  }
-}
+/* IE6 */
+/* IE7 */
 
 header {
-  height: 235px;
+  position: relative;
 }
 
-#social-banner {
-  @include column(2);
-  float: right;
-}
-
-.clearfix {
-  @include clearfix();
+header#top-header {
+  @include w960;
 }
 
 nav#main {
-  @include clearfix();
-  @include column(12);
-
-  margin-top: 5px;
-
-  @include solid-thick-top;
-  @include solid-thin-bottom;
-
-  padding-top: 12px;
-  padding-bottom: 12px;
-
-  ul {
-    list-style-type: none;
-    li:last-child {
-      border-right: none;
-    }
-    li {
-      float: left;
-      border-right: 1px dashed $blue;
-      padding: 17px 27px;
-    }
-  }
-
-  a {
-    @include pt-sans;
-    font-size: 14px;
-    display: block;
-    padding: 0px 15px;
-  }
+  @include w960;
 }
 
 #logo {
-    @include column(4);
-    text-indent: -9999em;
-    display: block;
-    height: 100px;
-    background: image-url('/assets/logo.png') no-repeat;
+  width: 169px;
+  height: 100px;
+  background: transparent image-url("logo.png") no-repeat;
+  display: block;
+  margin-top: 20px;
 }
 
-*/
+#ribbon {
+  width: 50px;
+  height: 117px;
+  background: transparent image-url("ribbon.png") no-repeat;
+  position: absolute;
+  display: block;
+  right: 0px;
+  top: -30px;
+  text-align: center;
+  a {
+    display: block;
+    margin-top: 15px;
+  }
+}
+
+nav {
+  border-top: 2px solid $blue;
+  border-bottom: 1px solid $blue;
+  margin: 24px auto 30px !important;
+
+  ul {
+    list-style: none;
+    font: 14px / 24px "PT Sans", sans-serif;
+    li {
+      float: left;
+      padding: 18px 42px;
+      background: transparent image-url("menu-border.png") 100% 9px no-repeat;
+      &:last-child {
+        background: none;
+      }
+      a {
+        color: $white;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover, &.selected {
+          color: $blue;
+        }
+      }
+    }
+  }
+}

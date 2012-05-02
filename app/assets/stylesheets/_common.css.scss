@@ -19,11 +19,6 @@ $gold: #d6c29c;
 $white: #FFF;
 $black: #000;
 
-//
-//$header-height: 175px;
-//
-//$feature-height: 450px;
-
 @mixin w960 {
   width: 960px;
   margin: 0px auto;
@@ -86,76 +81,3 @@ $black: #000;
     }
   }
 }
-
-@mixin nav-text {
-
-}
-
-@mixin footer-header-text {
-
-}
-
-@mixin footer-subheader-text {
-
-}
-
-@mixin footer-text {
-
-}
-
-@mixin footer-link-text {
-
-}
-
-@mixin main-feature-text($size, $spacing) {
-
-}
-
-@mixin tagline-text {
-
-}
-
-@mixin feature-header-text($color) {
-
-}
-
-@mixin feature-text {
-
-}
-
-@mixin blog-header-text {
-
-}
-
-@mixin quote-text {
-
-}
-
-@mixin credit-text {
-
-}
-
-@mixin header-text {
-
-}
-
-@mixin sub-header-text {
-
-}
-
-@mixin lowercase-header-text {
-
-}
-
-@mixin article-text {
-
-}
-
-@mixin meta-text {
-
-}
-
-@mixin code-text {
-
-}
-
