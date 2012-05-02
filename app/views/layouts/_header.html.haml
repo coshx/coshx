@@ -1,19 +1,17 @@
-%header
+%header.w960
   .logo-banner
-    %h1=link_to "coshx", :root, :id => "logo"
+    %a#logo{:href => "index.htm"}
 
-    #social-banner
-      -# TODO: this is the Twitter/FB like thing in the upper-right
-      = image_tag "temp_images/social_banner.png"
+    #ribbon
+      = link_to image_tag("twitter.png"), "#"
+      = link_to image_tag("facebook.png"), "#"
 
-  .clearfix
-
-  %nav#main
+  %nav.w960.clearfix#main
     %ul#nav-list
       -# TODO: fix links depending on how we arrange the site - one big site or multiple small ones 
-      %li=link_to "HOME", "#"
-      %li=link_to "ABOUT US", :about
-      %li=link_to "OUR PROJECTS", "#projects"
-      %li=link_to "OUR SERVICES", :services
-      %li=link_to "OUR BLOG", :blog_posts
-      %li=link_to "CONTACT US", "#contact"
+      %li= link_to "HOME", "#"
+      %li= link_to "ABOUT US", :about
+      %li= link_to "OUR PROJECTS", "#projects"
+      %li= link_to "OUR SERVICES", :services
+      %li= link_to "OUR BLOG", :blog_posts
+      %li= link_to "CONTACT US", "#contact"

@@ -1,125 +1,100 @@
-%section#blueprint-image
-  = image_tag "blueprint.png"
-%section#tagline
+%section#blueprint-image.w960
+  #blueprint-wrapper
+    = link_to "", "#", :class => :point1
+    = link_to "", "#", :class => :point2
+    = link_to "", "#", :class => :point3
+    = link_to "", "#", :class => :point4
+    = image_tag "blueprint.png"
+
   %h1
     FROM IDEA TO EXECUTION
-  #tagline-body
+  %p
     Here at Coshx we take complex problems and turn them into simple solutions. Our highly skilled team of programmers and designers will take your product to the next level. We love sending those rockets to the moon - why not let us launch a rocket of a product for you?
 
   .clearfix
 
-  #how-we-build.button-link
-    %a{:href => "#"}
-      Read about how we build for the web
-      = image_tag "arrow_blue_btn.png"
+  =link_to "Read about how we build for the web", "#", :class => "blue-arrow"
 
 .clearfix
 
 .divider
 
-#features
-  %section#startups
-    %article
+%section#features.w960
+  %ul.clearfix
+    %li
       = image_tag "people.png"
-      = render :partial => "coshx_blue_x", :locals => {:feature => "COMPANY"}
-      %p  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-      .button-link
-        %a{:href => "#"}
-          About us
-          = image_tag "arrow_blue_btn.png"
-
-  %section#enterprise.middle
-    %article
+      %h2
+        COSH
+        %span.blue> X
+        LABS
+        %br>/
+        COMPANY
+      %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
+      = link_to "About Us", "#", :class => "blue-arrow"
+    %li
       = image_tag "services.png"
-      = render :partial => "coshx_blue_x", :locals => {:feature => "SERVICES"}
-      %p  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-      .button-link
-        %a{:href => "#"}
-          Our services
-          = image_tag "arrow_blue_btn.png"
-
-  %section#you
-    %article      
+      %h2
+        COSH
+        %span.blue> X
+        LABS
+        %br>/
+        SERVICES
+      %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
+      = link_to "Our Services", "#", :class => "blue-arrow"
+    %li
       = image_tag "projects.png"
-      = render :partial => "coshx_blue_x", :locals => {:feature => "PRODUCTS"}
-      %p  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-      .button-link
-        %a{:href => "#"}
-          Our projects
-          = image_tag "arrow_blue_btn.png"
+      %h2
+        COSH
+        %span.blue> X
+        LABS
+        %br>/
+        PROJECTS
+      %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
+      = link_to "Our Projects", "#", :class => "blue-arrow"
 
 .clearfix
 
 .divider
 
-%section#contact-us
-  #envelope
-    = image_tag "mail.png"
-  .section-title
-    DON'T BE SHY, SAY HELLO
-  #contact-body
-    Meet the team, find out why we're different - and why you should hire us to work on your next website or web application project.
-  #contact-links
-    .button-link
-      %a{:href => "#"}
-        Contact us
-        = image_tag "arrow_blue_btn.png"
-    .white-button-link
-      %a{:href => "#"}
-        Request a FREE Quote
-        = image_tag "arrow_white_btn.png"
+%section#contact-us.w960
+  = image_tag "mail.png"
+  %h2 DON'T BE SHY, SAY HELLO
 
-%section#featured-projects
-  .header
-    = image_tag "star.png"
-    %span.section-title
-      FEATURED PROJECTS
-    .callout-link
-      .button-link
-        %a{:href => "#"}
-          See more Case Studies
-          = image_tag "arrow_blue_btn.png"
-  .section-content
-    -# repeating series of large rectangular sections with images of projects
-    .project-row
-      .featured-project
-        great project 1
-      .featured-project
-        great project 2
+  %p Meet the team, find out why we're different - and why you should hire us to work on your next website or web application project.
 
-    .clearfix
+  = link_to "Contact Us", "#", :class => ["first", "blue-arrow"]
+  = link_to "Request a FREE Quote", "#", :class => "blue-arrow"
 
-    .project-row
-      .featured-project
-        great project 3
-      .featured-project
-        great project 4
+%section#featured-projects.w960
+  %header.clearfix
+    %h2 Featured Projects
+    = link_to "See More Case Studies", "#", :class => "blue-arrow"
+  %ul.clearfix
+    %li
+      = image_tag "random-project.png"
+    %li
+      = image_tag "random-project.png"
+    %li
+      = image_tag "random-project.png"
+    %li
+      = image_tag "random-project.png"
 
 .clearfix
 
-%section#our-clients
-  .header
-    = image_tag "star.png"
-    %span.section-title
-      OUR CLIENTS
-    .callout-link
-      .button-link
-        %a{:href => "#"}
-          See our portfolio
-          = image_tag "arrow_blue_btn.png"
-  .section-content
+%section#our-clients.w960
+  %header.clearfix
+    %h2 Our Clients
+    = link_to "See Our Portfolio", "#", :class => "blue-arrow"
+
+  %ul.clearfix
     -# repeating series of small squares with client logos in them
     -# all logos must be 100px in height and <= 150px wide - please see home.css.scss for explanation
     - 2.times do
-      .client-row
-        - 6.times do |n|
-          .client-logo
-            - if n % 2 == 0
-              = image_tag "temp_images/kovsky_client.png"
-            - else
-              = image_tag "temp_images/ryan_client.png"
+      - 6.times do |n|
+        %li
+          - if n % 2 == 0
+            = image_tag "temp_images/kovsky_client.png"
+          - else
+            = image_tag "temp_images/ryan_client.png"
 
-      .clearfix
+  .clearfix
