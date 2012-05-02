@@ -11,14 +11,14 @@
   %p
     Here at Coshx we take complex problems and turn them into simple solutions. Our highly skilled team of programmers and designers will take your product to the next level. We love sending those rockets to the moon - why not let us launch a rocket of a product for you?
 
-  .clearfix
+  .divider
 
   =link_to "Read about how we build for the web", "#", :class => "blue-arrow"
 
-.clearfix
+.divider
 
 %section#features
-  %ul.clearfix
+  %ul.divider
     %li
       = image_tag "people.png"
       %h2
@@ -50,7 +50,7 @@
       %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
       = link_to "Our Projects", "#", :class => "blue-arrow"
 
-.clearfix
+.divider
 
 %section#contact-us
   = image_tag "mail.png"
@@ -62,10 +62,10 @@
   = link_to "Request a FREE Quote", "#", :class => "blue-arrow"
 
 %section#featured-projects
-  %header.clearfix
+  %header.divider
     %h2 Featured Projects
     = link_to "See More Case Studies", "#", :class => "blue-arrow"
-  %ul.clearfix
+  %ul.divider
     %li
       = image_tag "random-project.png"
     %li
@@ -75,14 +75,14 @@
     %li
       = image_tag "random-project.png"
 
-.clearfix
+.divider
 
 %section#our-clients
-  %header.clearfix
+  %header.divider
     %h2 Our Clients
     = link_to "See Our Portfolio", "#", :class => "blue-arrow"
 
-  %ul.clearfix
+  %ul.divider
     -# repeating series of small squares with client logos in them
     -# all logos must be 100px in height and <= 150px wide - please see home.css.scss for explanation
     - 2.times do
@@ -93,4 +93,4 @@
           - else
             = image_tag "temp_images/ryan_client.png"
 
-  .clearfix
+  .divider
