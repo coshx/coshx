@@ -18,3 +18,10 @@ $("document").ready ->
   $(".point4").popover
       placement: "right"
       content: "With team members that are experienced at working at every type of business - from spry startups to large enterprises - we are able to adapt to any situation quickly."
+
+  $('#footer-nav').localScroll()
+
+  $('ul.portfolio-thumbs li').hover(
+    -> $(".overlay", this).stop().animate({top:'0px'},{queue:false,duration:300})
+    -> $(".overlay", this).stop().animate({top:'-183px'},{queue:false,duration:300})
+  )
