@@ -104,3 +104,196 @@ nav {
     }
   }
 }
+
+// footer stuff
+footer {
+  background: $blue;
+  padding-bottom: 200px;
+  padding-top: 40px;
+  margin-top: 170px;
+  position: relative;
+}
+
+#footer-nav {
+  position: absolute;
+  left: 50%;
+  margin-left: -69px;
+  top: -56px;
+}
+
+
+
+section#footer-content {
+  @include w960;
+
+  h2 {
+    color: $white;
+    padding-left: 50px;
+    font: bold 18px 'PT Sans', sans-serif;
+    line-height: 32px;
+    background: image-url("blog.png") 0px 0px no-repeat;
+    text-transform: uppercase;
+    border-bottom: 1px solid $dark-blue;
+    padding-bottom: 20px;
+  }
+}
+
+#latest-blogs {
+  padding: 30px 0px;
+  border-bottom: 2px solid $dark-blue;
+  .post {
+    width: 480px;
+    float: left;
+    min-height: 345px;
+    &.david {
+      border-right: 1px solid $dark-blue;
+      width: 479px;
+    }
+    .info {
+      width: 95px;
+      float: left;
+      margin: 0px 20px 0px 14px;
+      img {
+        margin-bottom: 3px;
+      }
+      span {
+        text-transform: uppercase;
+        font: 11px / 18px "PT Sans", sans-serif;
+        color: $dark-blue;
+        text-align: center;
+        margin-top: 3px;
+      }
+    }
+    .content {
+      float: left;
+      width: 350px;
+    }
+    h2 {
+      color: $dark-blue;
+      padding: 0px;
+      background: none;
+      border: none;
+      margin-bottom: 30px;
+    }
+    a {
+      color: $dark-blue;
+      text-decoration: none;
+      &:hover {
+        color: $black;
+      }
+    }
+    .content p {
+      color: $white;
+      font: 12px / 24px "Droid Serif", serif;
+      margin-bottom: 25px;
+    }
+    &.david .content p {
+      width: 300px;
+    }
+    .content .links {
+      font: bold 11px / 24px "PT Sans", sans-serif;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.dark-blue-arrow {
+  @include arrow-button;
+  background: image-url("arrow_btn_white.png") no-repeat scroll 96% 9px $dark-blue;
+  color: $white;
+}
+
+#footer-tweet {
+  padding: 0px 0px 10px 110px;
+  background: image-url("tweet.png") no-repeat;
+  width: 850px;
+  margin: 10px auto 0px;
+  font: 12px / 58px "Droid Serif", serif;
+  color: $white;
+  border-bottom: 1px solid $dark-blue;
+  p {
+    width: 730px;
+    float: left;
+  }
+  a {
+    &:hover {
+      color: $black;
+    }
+    &.dark-blue-arrow {
+      margin-top: 15px;
+      float: right;
+    }
+  }
+}
+
+h2.contact-heading {
+  font: bold 24px / 70px "PT Sans", sans-serif;
+  text-align: center;
+  color: $dark-blue;
+}
+
+#contact-details {
+  margin: 0px auto;
+  width: 885px;
+  background: $dark-blue;
+  padding: 15px 40px;
+
+  a#contact-email {
+    color: white;
+  }
+}
+
+.col1, .col2, .col3, .col4 {
+  float: left;
+  font: 14px / 24px "PT Sans", sans-serif;
+  color: $white;
+}
+
+.col1 {
+  width: 156px;
+  margin-right: 60px;
+}
+
+.col2 {
+  width: 222px;
+  margin-right: 40px;
+}
+
+.col3 {
+  width: 177px;
+  margin-right: 60px;
+}
+
+.col4 {
+  width: 163px;
+  a {
+    color: $white;
+
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+}
+
+.footer-bottom {
+  width: 960px;
+  margin: 10px auto 0px;
+  text-align: center;
+  font: 14px 'PT Sans', sans-serif;
+  span {
+    &.copy {
+      color: $white;
+    }
+    &.links {
+      color: $dark-blue;
+      a {
+        text-decoration: none;
+        color: $dark-blue;
+        &:hover {
+          text-decoration: none;
+          color: $black;
+        }
+      }
+    }
+  }
+}

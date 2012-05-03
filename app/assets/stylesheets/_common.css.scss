@@ -24,6 +24,17 @@ $black: #000;
   margin: 0px auto;
 }
 
+@mixin arrow-button {
+  @include border-radius(5px);
+  display: inline-block;
+  padding: 4px 40px 4px 15px;
+  text-decoration: none;
+  font: 12px 'PT Sans', sans-serif;
+  &:hover {
+    background: image-url("arrow_blue_btn.png") no-repeat scroll 96% 9px white;
+  }
+}
+
 @mixin centered {
   margin: 0 auto;
 }
