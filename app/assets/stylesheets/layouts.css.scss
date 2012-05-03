@@ -145,7 +145,7 @@ section#footer-content {
     width: 480px;
     float: left;
     min-height: 345px;
-    &.david {
+    &.first {
       border-right: 1px solid $dark-blue;
       width: 479px;
     }
@@ -187,7 +187,7 @@ section#footer-content {
       font: 12px / 24px "Droid Serif", serif;
       margin-bottom: 25px;
     }
-    &.david .content p {
+    &.first .content p {
       width: 300px;
     }
     .content .links {

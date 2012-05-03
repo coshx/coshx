@@ -5,41 +5,36 @@
   %section#footer-content.w960.clearfix
     %h2 Latest blog posts
     #latest-blogs.divider
-      .post.david
+      .post.first
         .info
           = image_tag "kovsky.png"
           %span
-            %a{:href => "#"} David Kovsky
-            April 9, 2012
+            = link_to last_two_posts[0].author.name, "#"
+            = last_two_posts[0].posted_on.strftime("%B %e, %Y")
         .content
           %h2
-            %a{:href => "#"} Removing Technical Debt
+            = link_to last_two_posts[0].title, last_two_posts[0]
           %p
-            I had a great time at the Mile High Agile 2012 conference.
-            I thoroughly enjoyed and learned from every talk and heard almost 100% positive reviews of all the talks I missed out on in the other tracks.
-            Many thanks to all who were involved in making it happen. I'll definitely be back next year.
+            = preserve last_two_posts[0].body_html.html_safe
           .links
-            %a.read-more{:href => "#"} Read more
+            = link_to "Read more", last_two_posts[0], :class => "read-more"
             |
-            %a.comments{:href => "#"} Comments 1
-      .post.ryan
+            %a.comments{:href => "#{polymorphic_url(last_two_posts[0])}#disqus_thread"}
+      .post
         .info
           = image_tag "ryan.png"
           %span
-            %a{:href => "#"} Ryan Ahearn
-            April 9, 2012
+            = link_to last_two_posts[1].author.name, "#"
+            = last_two_posts[1].posted_on.strftime("%B %e, %Y")
         .content
           %h2
-            %a{:href => "#"} Polymorphic Associations and validate_uniqueness_of
+            = link_to last_two_posts[1].title, last_two_posts[1]
           %p
-            One of my favorite helper libraries when testing is
-            %a{:href => "#"} thoughtbot's shoulda-matchers
-            \. They do a great job making common situations easy to test in one line, but I recently ran into a gotcha with the validate_uniqueness_of matcher.
-            Validating both uniqueness of a polymorphic association and another validation on the same association can cause some strange error messages regarding undefined classes due to the way scoping and validations are handled.
+            = preserve last_two_posts[1].body_html.html_safe
           .links
-            %a{:href => "#"} Read more
+            = link_to "Read more", last_two_posts[1], :class => "read-more"
             |
-            %a{:href => "#"} Comments 1
+            %a.comments{:href => "#{polymorphic_url(last_two_posts[1])}#disqus_thread"}
   #footer-tweet.divider
     %p
       Check out David Kovsky's blog post on
