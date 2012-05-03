@@ -1,6 +1,6 @@
 %header#top-header
   .logo-banner
-    %a#logo{:href => "index.htm"}
+    %a#logo{:href => root_path}
 
     #ribbon
       = link_to image_tag("banner_twitter.png"), "#"
@@ -8,9 +8,9 @@
 
   %nav.divider#main
     %ul#nav-list
-      %li= link_to "HOME", "#"
-      %li= link_to "ABOUT US", :about
-      %li= link_to "OUR PROJECTS", "#projects"
-      %li= link_to "OUR SERVICES", :services
-      %li= link_to "OUR BLOG", :blog_posts
+      %li= link_to "HOME", root_path
+      %li= link_to "ABOUT US", about_path
+      %li= link_to "OUR PROJECTS", portfolio_path
+      %li= link_to "OUR SERVICES", services_path
+      %li= link_to "OUR BLOG", blog_posts_path
       %li= link_to "CONTACT US", "#contact"
