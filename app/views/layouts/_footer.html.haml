@@ -10,6 +10,7 @@
           = image_tag "kovsky.png"
           %span
             = link_to last_two_posts[0].author.name, "#"
+            %br/
             = last_two_posts[0].posted_on.strftime("%B %e, %Y")
         .content
           %h2
@@ -25,6 +26,7 @@
           = image_tag "ryan.png"
           %span
             = link_to last_two_posts[1].author.name, "#"
+            %br/
             = last_two_posts[1].posted_on.strftime("%B %e, %Y")
         .content
           %h2
