@@ -5,9 +5,4 @@ class ApplicationController < ActionController::Base
   def last_two_posts
     @last_two_posts ||= Post.published.limit(2)
   end
-
-  helper_method :last_tweet
-  def last_tweet
-    Twitter.user_timeline("coshxlabs", :count => 1)[0].text
-  end
 end
