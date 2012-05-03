@@ -5,8 +5,9 @@
 // the compiled file.
 //
 //= require jquery
-//= require jquery-ui
-//= require jquery_ujs
-//= require raphael-min
+// require jquery-ui
+// require jquery_ujs
+//= require minimum_bootstrap
+// require raphael-min
 //= require modernizr-2_0_6
 //= require_tree .
