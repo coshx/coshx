@@ -214,14 +214,16 @@ section#footer-content {
   p {
     width: 730px;
     float: left;
-  }
-  a {
-    &:hover {
-      color: $black;
-    }
-    &.dark-blue-arrow {
-      margin-top: 15px;
-      float: right;
+    a {
+      color: $dark-blue;
+      text-decoration: none;
+      &:hover {
+        color: $black;
+      }
+      &.dark-blue-arrow {
+        margin-top: 15px;
+        float: right;
+      }
     }
   }
 }
