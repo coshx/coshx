@@ -23,18 +23,18 @@
       = image_tag "people.png"
       = render :partial => "coshx_blue_x", :locals => {:feature => "COMPANY"}
       %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
-      = link_to "About Us", "#", :class => "blue-arrow"
+      = link_to "About Us", about_path, :class => "blue-arrow"
     %li
       = image_tag "services.png"
       = render :partial => "coshx_blue_x", :locals => {:feature => "SERVICES"}
       %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
-      = link_to "Our Services", "#", :class => "blue-arrow"
+      = link_to "Our Services", services_path, :class => "blue-arrow"
     %li
       = image_tag "projects.png"
       %h2
         = render :partial => "coshx_blue_x", :locals => {:feature => "PROJECTS"}
       %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
-      = link_to "Our Projects", "#", :class => "blue-arrow"
+      = link_to "Our Projects", portfolio_path, :class => "blue-arrow"
 
 .divider
 
@@ -66,7 +66,7 @@
 %section#our-clients
   %header.divider
     %h2 Our Clients
-    = link_to "See Our Portfolio", "#", :class => "blue-arrow"
+    = link_to "See Our Portfolio", portfolio_path, :class => "blue-arrow"
 
   %ul.divider
     -# repeating series of small squares with client logos in them
