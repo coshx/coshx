@@ -74,7 +74,30 @@ nav#main {
   text-align: center;
   a {
     display: block;
-    margin-top: 15px;
+    margin-top: 16px;
+  }
+  a#twitter {
+    width: 31px;
+    height: 23px;
+    margin-left: 9px;
+    background: image-url("banner_twitter.png") no-repeat;
+    &:hover {
+      background-position: -31px 0;
+    }
+  }
+  a#facebook {
+    width: 24px;
+    height: 21px;
+    margin-left: 13px;
+    background: image-url("facebook.png") no-repeat;
+    margin-top: 18px;
+    &:hover {
+      background-position: -24px 0;
+    }
+  }
+  .displace {
+  	position: absolute;
+  	left: -5000px;
   }
 }
 
@@ -201,6 +224,9 @@ section#footer-content {
   @include arrow-button;
   background: image-url("arrow_btn_white.png") no-repeat scroll 96% 9px $dark-blue;
   color: $white;
+  &:hover {
+    color: $dark-blue;
+  }
 }
 
 #footer-tweet {

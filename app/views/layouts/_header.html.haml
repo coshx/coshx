@@ -3,8 +3,14 @@
     %a#logo{:href => root_path}
 
     #ribbon
-      = link_to image_tag("banner_twitter.png"), "https://www.twitter.com/coshxlabs"
-      = link_to image_tag("facebook.png"), "#"
+      %a#twitter{:href => "https://www.twitter.com/coshxlabs", :title => "Twitter"}
+        %span.displace
+          Twitter
+      %a#facebook{:href => "#", :title => "Facebook"}
+        %span.displace
+          Facebook
+      /= link_to image_tag("banner_twitter.png"), "https://www.twitter.com/coshxlabs", :id => "banner-twitter"
+      /= link_to image_tag("facebook.png"), "#"
 
   %nav.divider#main
     %ul#nav-list

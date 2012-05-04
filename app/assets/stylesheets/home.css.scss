@@ -230,3 +230,10 @@ section#blueprint-image {
     }
   }
 }
+
+.white {
+  background-color: $white;
+  &:hover {
+    background-color: $blue;
+  }
+}
