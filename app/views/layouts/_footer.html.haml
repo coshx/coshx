@@ -16,7 +16,7 @@
           %h2
             = link_to last_two_posts[0].title, last_two_posts[0]
           %p
-            = preserve last_two_posts[0].body_html.html_safe
+            = preserve last_two_posts[0].preview_html.html_safe
           .links
             = link_to "Read more", last_two_posts[0], :class => "read-more"
             |
@@ -32,7 +32,7 @@
           %h2
             = link_to last_two_posts[1].title, last_two_posts[1]
           %p
-            = preserve last_two_posts[1].body_html.html_safe
+            = preserve last_two_posts[1].preview_html.html_safe
           .links
             = link_to "Read more", last_two_posts[1], :class => "read-more"
             |
