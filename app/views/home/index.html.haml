@@ -91,10 +91,6 @@
     -# all logos must be 100px in height and <= 150px wide - please see home.css.scss for explanation
     - 2.times do
       - 6.times do |n|
-        %li
-          - if n % 2 == 0
-            = image_tag "temp_images/kovsky_client.png"
-          - else
-            = image_tag "temp_images/ryan_client.png"
+        %li.tendril
 
   .divider

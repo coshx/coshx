@@ -222,6 +222,12 @@ section#blueprint-image {
         border-bottom: none;
       }
     }
+    li.tendril {
+      background: #1588c3 url(client_logos/tendril.png) no-repeat;
+    }
+    li:hover{
+      background-position: -159px 0px;
+    }
   }
 }
 
