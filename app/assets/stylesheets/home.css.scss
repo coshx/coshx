@@ -56,7 +56,20 @@ section#blueprint-image {
   }
 }
 
-//section {
+#slider-buttons {
+  position: absolute;
+  list-style: none;
+  right: 0px;
+  li {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: url(../img/slider-bullet.png) 0px 0px no-repeat;
+    margin-bottom: 10px;
+  }
+}
+
+
 #features {
   @include w960;
 
@@ -76,19 +89,20 @@ section#blueprint-image {
       }
       img {
         &.people {
-          margin: 25px auto 35px;
+          margin: 25px auto 23px;
         }
         &.gears {
-          margin: 25px auto;
+          margin: 25px auto 13px;
         }
         &.beaker {
-          margin: 15px auto 25px;
+          margin: 15px auto 13px;
         }
       }
       h2 {
         font: bold 18px 'PT Sans', sans-serif;
         color: $white;
         text-transform: uppercase;
+        margin-bottom: 15px;
       }
       span.blue {
         color: $blue;

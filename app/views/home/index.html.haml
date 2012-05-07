@@ -9,7 +9,11 @@
   %h1
     FROM IDEA TO EXECUTION
   %p
-    Here at Coshx we take complex problems and turn them into simple solutions. Our highly skilled team of programmers and designers will take your product to the next level. We love sending those rockets to the moon - why not let us launch a rocket of a product for you?
+    Here at Coshx we take complex problems and turn them into simple solutions.
+    %br/
+    Our highly skilled team of programmers and designers will take your product to the next level.
+    %br/
+    We love sending those rockets to the moon - why not let us launch a rocket of a product for you?
 
   .divider
 
@@ -22,23 +26,22 @@
 %section#features
   %ul.divider
     %li
-      = image_tag "people.png"
+      = image_tag "people.png", :class => :people
       = render :partial => "coshx_blue_x", :locals => {:feature => "COMPANY"}
       %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
       = link_to about_path, :class => "blue-arrow" do
         About Us
         .arrow
     %li
-      = image_tag "services.png"
+      = image_tag "services.png", :class => :gears
       = render :partial => "coshx_blue_x", :locals => {:feature => "SERVICES"}
       %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
       = link_to services_path, :class => "blue-arrow" do
         Our Services
         .arrow
     %li
-      = image_tag "projects.png"
-      %h2
-        = render :partial => "coshx_blue_x", :locals => {:feature => "PROJECTS"}
+      = image_tag "projects.png", :class => :beaker
+      = render :partial => "coshx_blue_x", :locals => {:feature => "PROJECTS"}
       %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
       = link_to portfolio_path, :class => "blue-arrow" do
         Our Projects
