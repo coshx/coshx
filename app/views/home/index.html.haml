@@ -82,15 +82,35 @@
     = link_to "#", :class => "blue-arrow" do
       See More Case Studies
       .arrow
-  %ul.divider
+  %ul.divider.portfolio-thumbs
     %li
-      = image_tag "random-project.png"
+      %img{:alt => "", :src => "/assets/random-project.png"}
+        .overlay
+          .link-wrapper
+            %a.view{:href => "#"}
+            .separator
+            %a.case{:href => "#"}
     %li
-      = image_tag "random-project.png"
+      %img.even{:alt => "", :src => "/assets/random-project.png"}
+        .overlay
+          .link-wrapper
+            %a.view{:href => "#"}
+            .separator
+            %a.case{:href => "#"}
     %li
-      = image_tag "random-project.png"
+      %img{:alt => "", :src => "/assets/random-project.png"}
+        .overlay
+          .link-wrapper
+            %a.view{:href => "#"}
+            .separator
+            %a.case{:href => "#"}
     %li
-      = image_tag "random-project.png"
+      %img.even{:alt => "", :src => "/assets/random-project.png"}
+        .overlay
+          .link-wrapper
+            %a.view{:href => "#"}
+            .separator
+            %a.case{:href => "#"}
 
 .divider
 

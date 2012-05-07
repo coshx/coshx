@@ -205,6 +205,27 @@ section#blueprint-image {
     border-bottom: 2px solid $blue;
     li {
       float: left;
+      div{
+        &.overlay {
+          width: 461px;
+          height: 183px;
+          background: rgba(0, 0, 0, 0.8);
+          -webkit-border-radius: 5px;
+          border-radius: 5px;
+          left: 0px;
+          top: -183px;
+          position: absolute;
+        }
+        &.link-wrapper{
+          margin: 50px auto 0px;
+          width: 190px;
+          &.separator{
+            height: 58px;
+            border-left: 1px solid #FFF;
+            float: left;
+          }
+        }
+      }
       img {
         width: 460px;
         border: 1px solid $black;
@@ -215,6 +236,31 @@ section#blueprint-image {
         margin-bottom: 18px;
         &.even {
           margin-right: 0px;
+        }
+      }
+      a{
+        &.case{
+          display: block;
+          width: 62px;
+          height: 78px;
+          background: url(case-button.png) 0px 0px no-repeat;
+          float: left;
+          margin-left: 25px;
+          &:hover{
+          	background-position: 0px -78px;
+          }
+        }
+        &.view{
+          background: url("view-button.png") no-repeat scroll 0 0 transparent;
+          display: block;
+          float: left;
+          height: 67px;
+          margin-right: 25px;
+          margin-top: 11px;
+          width: 65px;
+          &:hover{
+          	background-position: 0px -67px;
+          }
         }
       }
     }
