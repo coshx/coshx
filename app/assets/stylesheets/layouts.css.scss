@@ -279,6 +279,10 @@ h2.contact-heading {
   }
 }
 
+strong {
+  font-weight: bold;
+}
+
 .col1, .col2, .col3, .col4 {
   float: left;
   font: 14px / 24px "PT Sans", sans-serif;
@@ -319,9 +323,11 @@ h2.contact-heading {
   span {
     &.copy {
       color: $white;
+      font: 12px 'PT Sans', sans-serif;
     }
     &.links {
       color: $dark-blue;
+      font: 12px 'PT Sans', sans-serif;
       a {
         text-decoration: none;
         color: $dark-blue;
