@@ -44,6 +44,7 @@ section#blueprint-image {
 
   text-align: center;
   padding-bottom: 75px;
+  position: relative;
   h1 {
     color: $white;
     font: bold 48px 'PT Sans', sans-serif;
@@ -56,6 +57,11 @@ section#blueprint-image {
   }
 }
 
+#intro-wrapper {
+  width: 100%;
+  position: relative;
+}
+
 #slider-buttons {
   position: absolute;
   list-style: none;
@@ -64,11 +70,32 @@ section#blueprint-image {
     display: block;
     width: 10px;
     height: 10px;
-    background: url(../img/slider-bullet.png) 0px 0px no-repeat;
+    background: image-url("slider-bullet.png") 0px 0px no-repeat;
     margin-bottom: 10px;
   }
 }
 
+#slider-prev {
+  display: block;
+  position: absolute;
+  left: -2px;
+  width: 59px;
+  height: 59px;
+  top: 244px;
+}
+
+#slider-next {
+  display: block;
+  position: absolute;
+  right: -2px;
+  width: 59px;
+  height: 59px;
+  top: 244px;
+}
+
+#slider-buttons li.selected {
+  background-position: 0px -11px;
+}
 
 #features {
   @include w960;

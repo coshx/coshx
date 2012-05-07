@@ -1,25 +1,37 @@
-%section#blueprint-image
-  #blueprint-wrapper
-    = link_to "", "#", :class => :point1
-    = link_to "", "#", :class => :point2
-    = link_to "", "#", :class => :point3
-    = link_to "", "#", :class => :point4
-    = image_tag "blueprint.png"
+#intro-wrapper
+  = link_to "#", :id =>"slider-prev" do
+    = image_tag "arrow-left.png"
+  = link_to "#", :id =>"slider-next" do
+    = image_tag "arrow-right.png"
 
-  %h1
-    FROM IDEA TO EXECUTION
-  %p
-    Here at Coshx we take complex problems and turn them into simple solutions.
-    %br/
-    Our highly skilled team of programmers and designers will take your product to the next level.
-    %br/
-    We love sending those rockets to the moon - why not let us launch a rocket of a product for you?
+  %section#blueprint-image
+    %ul#slider-buttons
+      %li.selected
+      %li
+      %li
+      %li
 
-  .divider
+    #blueprint-wrapper
+      = link_to "", "#", :class => :point1
+      = link_to "", "#", :class => :point2
+      = link_to "", "#", :class => :point3
+      = link_to "", "#", :class => :point4
+      = image_tag "blueprint.png"
 
-  = link_to "#", :class => "blue-arrow" do
-    Read about how we build for the web
-    .arrow
+    %h1
+      FROM IDEA TO EXECUTION
+    %p
+      Here at Coshx we take complex problems and turn them into simple solutions.
+      %br/
+      Our highly skilled team of programmers and designers will take your product to the next level.
+      %br/
+      We love sending those rockets to the moon - why not let us launch a rocket of a product for you?
+
+    .divider
+
+    = link_to "#", :class => "blue-arrow" do
+      Read about how we build for the web
+      .arrow
 
 .divider
 
