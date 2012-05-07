@@ -74,25 +74,24 @@ nav#main {
   text-align: center;
   a {
     display: block;
-    margin-top: 16px;
+    margin-top: 15px;
+    margin-left: 10px;
   }
   a#twitter {
-    width: 31px;
-    height: 23px;
-    margin-left: 9px;
+    width: 32px;
+    height: 24px;
     background: image-url("banner_twitter.png") no-repeat;
     &:hover {
-      background-position: -31px 0;
+      background-position: 0px -25px;
     }
   }
   a#facebook {
     width: 24px;
     height: 21px;
-    margin-left: 13px;
     background: image-url("facebook.png") no-repeat;
     margin-top: 18px;
     &:hover {
-      background-position: -24px 0;
+      background-position: 0px -22px;
     }
   }
   .displace {
@@ -111,7 +110,7 @@ nav {
     font: 14px / 24px "PT Sans", sans-serif;
     li {
       float: left;
-      padding: 18px 42px;
+      padding: 18px 44px 25px;
       background: transparent image-url("menu-border.png") 100% 9px no-repeat;
       &:last-child {
         background: none;
@@ -325,3 +324,79 @@ h2.contact-heading {
     }
   }
 }
+
+.blue-arrow {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 4px 40px 4px 15px;
+  color: #004264;
+  text-decoration: none;
+  font: 12px 'PT Sans', sans-serif;
+  background: #1588C3;
+  position: relative; }
+
+div.arrow {
+  background: image-url("blue-arrow.png") no-repeat scroll 0 0 transparent;
+  float: right;
+  height: 7px;
+  width: 22px;
+  position: absolute;
+  right: 10px;
+  top: 9px; }
+
+.white-arrow {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 4px 40px 4px 15px;
+  color: #1588c3;
+  text-decoration: none;
+  font: 12px 'PT Sans', sans-serif;
+  background: #FFF;
+  position: relative;
+  div.arrow {
+    background: image-url("light-blue-arrow.png") no-repeat scroll 0 0 transparent;
+    float: right;
+    height: 7px;
+    width: 22px;
+    position: absolute;
+    right: 10px;
+    top: 9px; } }
+
+.dark-blue-arrow {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 4px 40px 4px 15px;
+  color: #FFF !important;
+  text-decoration: none;
+  font: 12px 'PT Sans', sans-serif;
+  position: relative;
+  background: #004264; }
+
+.col4 .blue-arrow div.arrow, .dark-blue-arrow div.arrow {
+  background: image-url("white-arrow.png") no-repeat scroll 0 0 transparent;
+  float: right;
+  height: 7px;
+  width: 22px;
+  position: absolute;
+  right: 10px;
+  top: 9px; }
+
+.col4 .blue-arrow:hover, #footer-content .blue-arrow:hover div.arrow {
+  background: #FFF;
+  color: #004264; }
+
+.blue-arrow:hover {
+  color: #FFF; }
+
+.white-arrow:hover {
+  color: #004264; }
+
+.dark-blue-arrow:hover {
+  background: #FFF;
+  color: #004264 !important; }
+
+.blue-arrow:hover div.arrow, .dark-blue-arrow:hover div.arrow, .white-arrow:hover div.arrow {
+  background-position: 0px -8px; }

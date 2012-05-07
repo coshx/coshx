@@ -30,8 +30,11 @@ $black: #000;
   padding: 4px 40px 4px 15px;
   text-decoration: none;
   font: 12px 'PT Sans', sans-serif;
+  background: $blue;
+  position: relative;
   &:hover {
-    background: image-url("arrow_blue_btn.png") no-repeat scroll 96% 9px white;
+    background: image-url("arrow_blue_btn.png") no-repeat scroll 96% 9px $blue;
+    color: $white !important;
   }
 }
 

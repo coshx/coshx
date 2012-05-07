@@ -39,8 +39,10 @@
             %a.comments{:href => "#{polymorphic_url(last_two_posts[1])}#disqus_thread"}
   #footer-tweet.divider
     %p
-      Currently unable to loading Twitter stream...
-    %a.dark-blue-arrow{:href => "https://www.twitter.com/coshxlabs"} Follow us
+      Loading tweets, just a moment...
+    = link_to "https://www.twitter.com/coshxlabs", :class => "dark-blue-arrow" do
+      Follow us
+      .arrow
   %h2.contact-heading ONLY ONE THING LEFT TO DO. CONTACT US USING YOUR PREFERRED METHOD BELOW.
   #contact-details.divider
     .col1
@@ -75,7 +77,9 @@
       CONSIDERING COSHX FOR
       %br/
       YOUR NEXT PROJECT?
-      %a.blue-arrow{:href => "#"} Get a proposal
+      = link_to "#", :class => "blue-arrow" do
+        Get a proposal
+        .arrow
   .footer-bottom
     %span.copy Copyright © 2012 CoshxLabs. All rights reserved
     \•

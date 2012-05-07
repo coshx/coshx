@@ -13,7 +13,9 @@
 
   .divider
 
-  =link_to "Read about how we build for the web", "#", :class => "blue-arrow"
+  = link_to "#", :class => "blue-arrow" do
+    Read about how we build for the web
+    .arrow
 
 .divider
 
@@ -23,18 +25,24 @@
       = image_tag "people.png"
       = render :partial => "coshx_blue_x", :locals => {:feature => "COMPANY"}
       %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
-      = link_to "About Us", about_path, :class => "blue-arrow"
+      = link_to about_path, :class => "blue-arrow" do
+        About Us
+        .arrow
     %li
       = image_tag "services.png"
       = render :partial => "coshx_blue_x", :locals => {:feature => "SERVICES"}
       %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
-      = link_to "Our Services", services_path, :class => "blue-arrow"
+      = link_to services_path, :class => "blue-arrow" do
+        Our Services
+        .arrow
     %li
       = image_tag "projects.png"
       %h2
         = render :partial => "coshx_blue_x", :locals => {:feature => "PROJECTS"}
       %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
-      = link_to "Our Projects", portfolio_path, :class => "blue-arrow"
+      = link_to portfolio_path, :class => "blue-arrow" do
+        Our Projects
+        .arrow
 
 .divider
 
@@ -44,13 +52,21 @@
 
   %p Meet the team, find out why we're different - and why you should hire us to work on your next website or web application project.
 
-  = link_to "Contact Us", "#", :class => ["first", "blue-arrow"]
-  = link_to "Request a FREE Quote", "#", :class => "blue-arrow white"
+  = link_to "#", :class => ["first", "blue-arrow"] do
+    Contact Us
+    .arrow
+
+  = link_to "#", :class => "white-arrow" do
+    Request a FREE Quote
+    .arrow
+
 
 %section#featured-projects
   %header.divider
     %h2 Featured Projects
-    = link_to "See More Case Studies", "#", :class => "blue-arrow"
+    = link_to "#", :class => "blue-arrow" do
+      See More Case Studies
+      .arrow
   %ul.divider
     %li
       = image_tag "random-project.png"
@@ -66,7 +82,9 @@
 %section#our-clients
   %header.divider
     %h2 Our Clients
-    = link_to "See Our Portfolio", portfolio_path, :class => "blue-arrow"
+    = link_to portfolio_path, :class => "blue-arrow" do
+      See Our Portfolio
+      .arrow
 
   %ul.divider
     -# repeating series of small squares with client logos in them

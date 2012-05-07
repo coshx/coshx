@@ -56,11 +56,11 @@ section#blueprint-image {
   }
 }
 
-.blue-arrow {
-  @include arrow-button;
-  background: image-url("arrow_blue_btn.png") no-repeat scroll 96% 9px $blue;
-  color: $dark-blue;
-}
+//.blue-arrow {
+//  @include arrow-button;
+//  background: image-url("arrow_blue_btn.png") no-repeat scroll 96% 9px $blue;
+//  color: $dark-blue;
+//}
 
 //section {
 #features {
