@@ -254,11 +254,11 @@ section#footer-content {
       &:hover {
         color: $black;
       }
-      &.dark-blue-arrow {
-        margin-top: 15px;
-        float: right;
-      }
     }
+  }
+  a.dark-blue-arrow {
+    margin-top: 15px;
+    float: right;
   }
 }
 
