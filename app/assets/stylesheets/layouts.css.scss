@@ -141,6 +141,15 @@ footer {
   left: 50%;
   margin-left: -69px;
   top: -56px;
+  #top-nav {
+    width: 138px;
+    height: 56px;
+    background: image-url("footer_top_nav.png") 0px 0px no-repeat;
+    display: block;
+    &:hover {
+      background-position: 0px -56px;
+    }
+  }
 }
 
 
