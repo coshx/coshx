@@ -30,7 +30,7 @@
     .divider
 
     = link_to "#", :class => "blue-arrow" do
-      Read about how we build for the web
+      Read about how we craft our software
       .arrow
 
 .divider
@@ -40,21 +40,21 @@
     %li
       = image_tag "people.png", :class => :people
       = render :partial => "coshx_blue_x", :locals => {:feature => "COMPANY"}
-      %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
+      %p Meet the team, find out why we're different - and why you should hire us to work your next website or other software project.
       = link_to about_path, :class => "blue-arrow" do
         About Us
         .arrow
     %li
       = image_tag "services.png", :class => :gears
       = render :partial => "coshx_blue_x", :locals => {:feature => "SERVICES"}
-      %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
+      %p Whether you're an established enterprise or a boostrapping startup, we want to work with you. Take a look at the services we offer.
       = link_to services_path, :class => "blue-arrow" do
         Our Services
         .arrow
     %li
       = image_tag "projects.png", :class => :beaker
       = render :partial => "coshx_blue_x", :locals => {:feature => "PROJECTS"}
-      %p Meet the team, find out why we're different - and why you should hire us to work your next website or web application project.
+      %p We've been fortunate enough to work on many great projects. Here's some highlights of the work we've done.
       = link_to portfolio_path, :class => "blue-arrow" do
         Our Projects
         .arrow
@@ -65,7 +65,7 @@
   = image_tag "mail.png"
   %h2 DON'T BE SHY, SAY HELLO
 
-  %p Meet the team, find out why we're different - and why you should hire us to work on your next website or web application project.
+  %p Let's start up a conversation about what your needs are and how we can help. We're just a quick email away!
 
   = link_to "#", :class => ["first", "blue-arrow"] do
     Contact Us
