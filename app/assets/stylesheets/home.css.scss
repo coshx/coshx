@@ -181,9 +181,6 @@ section#blueprint-image {
     background: image-url("projects-border.png") 0px 100% no-repeat;
     overflow: hidden;
   }
-  ul {
-    margin-top: 55px;
-  }
   header {
     h2 {
       font: bold 18px 'PT Sans', sans-serif;
@@ -203,8 +200,11 @@ section#blueprint-image {
   ul {
     list-style: none;
     border-bottom: 2px solid $blue;
+    margin-top: 55px;
     li {
       float: left;
+      position: relative;
+      overflow: hidden;
       div{
         &.overlay {
           width: 461px;
@@ -229,11 +229,10 @@ section#blueprint-image {
       img {
         width: 460px;
         border: 1px solid $black;
-        -webkit-border-radius: 5px;
-        border-radius: 5px;
+        @include border-radius(5);
         float: left;
-        margin-right: 18px;
-        margin-bottom: 18px;
+        margin-right: 35px;
+        margin-bottom: 35px;
         &.even {
           margin-right: 0px;
         }
@@ -299,7 +298,6 @@ section#blueprint-image {
       height: 150px;
       border-right: 1px solid $black;
       border-bottom: 1px solid $black;
-      float: left;
       background: $blue;
       line-height: 200px;
       text-align: center;
