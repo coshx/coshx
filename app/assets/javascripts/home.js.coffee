@@ -5,7 +5,7 @@
 $("document").ready ->
   $(".point1").popover
     placement: "right"
-    content: "We have the technical experise to make your ideas become an amazing reality."
+    content: "We have the technical expertise to make your ideas become an amazing reality."
 
   $(".point2").popover
       placement: "right"
