@@ -219,11 +219,11 @@ section#blueprint-image {
         &.link-wrapper{
           margin: 50px auto 0px;
           width: 190px;
-          &.separator{
-            height: 58px;
-            border-left: 1px solid #FFF;
-            float: left;
-          }
+        }
+        &.separator{
+          height: 58px;
+          border-left: 1px solid #FFF;
+          float: left;
         }
       }
       img {
