@@ -308,6 +308,9 @@ section#blueprint-image {
       &.bottom {
         border-bottom: none;
       }
+      &:hover {
+        cursor: pointer;
+      }
     }
     li.tendril {
       background: #1588c3 url(client_logos/tendril.png) center center no-repeat;
