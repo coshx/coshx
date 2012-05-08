@@ -102,24 +102,46 @@ nav#main {
 
 nav {
   border-top: 2px solid $blue;
-  border-bottom: 1px solid $blue;
-  margin: 24px auto 30px !important;
+  margin: 24px auto 0px !important;
+  padding-bottom: 10px;
+  //border-bottom: 1px solid $blue;
+  //margin: 24px auto 30px !important;
 
   ul {
     list-style: none;
+    list-style-type: none;
     font: 14px / 24px "PT Sans", sans-serif;
+    width: 100%;
+    display: table;
+    margin: 0;
+    padding: 0;
+    width: 960px;
     li {
-      float: left;
-      padding: 18px 44px 25px;
+      //float: left;
+      //padding: 18px 44px 25px;
       background: transparent image-url("menu-border.png") 100% 9px no-repeat;
+      display: table-cell;
+      z-index:10;
       &:last-child {
         background: none;
+      }
+      &.selected {
+        border-bottom: none;
+        a {
+          background: image-url("menu-bg.png") no-repeat scroll 50% 68px transparent !important;
+          color: $blue !important;
+        }
       }
       a {
         color: $white;
         text-transform: uppercase;
         text-decoration: none;
-        &:hover, &.selected {
+        background: image-url("menu-bg.png") no-repeat scroll -2px 68px transparent !important;
+        display: block;
+        height: 68px;
+        line-height: 68px;
+        padding: 0 44px 10px 44px;
+        &:hover {
           color: $blue;
         }
       }
