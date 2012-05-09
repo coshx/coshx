@@ -67,11 +67,12 @@
 
   %p Let's start up a conversation about what your needs are and how we can help. We're just a quick email away!
 
-  = link_to "#", :class => ["first", "blue-arrow"] do
+  -# Normally we'd use mail_to and not link_to for an email link, but this will eventually open a form, not be a mailto
+  = link_to "mailto:info@coshx.com", :class => ["first", "blue-arrow"] do
     Contact Us
     .arrow
 
-  = link_to "#", :class => "white-arrow" do
+  = link_to "mailto:info@coshx.com?subject=Coshx%20Labs%20quote%20request", :class => "white-arrow" do
     Request a FREE Quote
     .arrow
 
