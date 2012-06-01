@@ -75,7 +75,6 @@ ant = Admin.find_or_create_by_email("ant@coshx.com") do |a|
   a.github = "ajburton"
   a.twitter = "anthonyburton"
   a.img = "anthony.png"
-  a.hoverimg = "anthony-hover.png"
 end
 puts "Created User #{ant.name}"
 
@@ -94,7 +93,6 @@ sang = Admin.find_or_create_by_email("sang@coshx.com") do |s|
     s.github = "sws4q"
     s.bio = "Sang is an intern at Coshx. He is currently studying computer science at University of Virginia. Although he is not as experienced as other developers at Coshx, he is eager to learn more and grow as a developer. Other than programming, Sang enjoys weight training, listening to music, and playing instruments."
     s.img = "sang.png"
-    s.hoverimg = "sang-hover.png"
 end
 puts "Created user #{sang.name}"
 
