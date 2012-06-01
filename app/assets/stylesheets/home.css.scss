@@ -535,6 +535,9 @@ section#team ul li a{
 	color: #FFF;
 	text-decoration: none;
 	text-transform: uppercase;
+  .new{
+    margin-top: -207px;
+  }
 	.portrait{
 	  position: relative;
 	  margin-top: -400px;
@@ -543,12 +546,15 @@ section#team ul li a{
 	  width: 180px;
 	  height: 180px;
 	  border-radius: 90px;
-	  border:solid 7px #ffffff;
+	  border:solid 6px #ffffff;
 	}
 }
 
 section#team ul li a:hover{
 	color: #1588c3;
+  .new{
+    margin-top: -207px;
+  }
 	.portrait{
 	  position: relative;
 	  margin-top: -400px;
@@ -557,15 +563,8 @@ section#team ul li a:hover{
 	  width: 180px;
 	  height: 180px;
 	  border-radius: 90px;
-	  border:solid 7px #1588c3;
+	  border:solid 6px #1588c3;
 	}
-}
-
-section#team ul li a.new{
-	  position: relative;
-	  margin-top: -400px;
-	  top: 190px;
-	  left: -2px;
 }
 
 section#testimonials{
