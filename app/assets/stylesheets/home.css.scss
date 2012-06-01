@@ -7,6 +7,34 @@
 @import "compass/utilities";
 @import "compass/css3";
 @import "grid";
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+.w960{
+	width: 960px;
+	margin: 0px auto;
+}
+
+a.html:link {
+  COLOR: #0B0B3B;
+}
+a.html:visited {
+  COLOR: #0B0B3B;
+}
+a.html:hover {
+  COLOR: #000000;
+}
+a.html:active {
+  COLOR: #000000;
+}
 
 #blueprint-wrapper {
   margin: 0px auto 10px;
@@ -327,4 +355,293 @@ section#blueprint-image {
   &:hover {
     background-color: $blue;
   }
+}
+
+section#about-us{
+	margin-top: 50px;
+}
+section#about-us h1.formula{
+	font: bold 48px 'Pt Sans', sans-serif;
+	text-align: left;
+	color: #FFFFFF;
+	background: image-url("clx-formula.png") no-repeat scroll right 5px transparent;
+	text-transform: uppercase;
+}
+
+section#about-us p{
+	font: 14px/24px 'Droid Serif', serif;
+	color: #b2b2b2;
+	margin: 30px 0px;
+}
+
+#about-stats{
+	background: #1588c3;
+	position: relative;
+	
+	a{
+    .techlunch{
+      position: relative;
+      z-index: 5000;
+    }
+	}
+}
+
+#about-us-arrow{
+	width: 221px;
+	height: 88px;
+	position: absolute;	
+	bottom: -50px;
+	left: 370px;
+	background: image-url("about-arrow.png") no-repeat;
+	z-index: -1;
+}
+
+#about-stats ul{
+	list-style: none;
+}
+#about-stats ul.team li:first-child{
+	background: none;
+}
+#about-stats ul.team li{
+	width: 320px;
+	float: left;
+	color: #004264;
+	margin-top: 27px;
+	background: image-url("menu-border.png") left 0px repeat-y;
+}
+
+#about-stats ul.team li.coffee{
+	width: 310px;
+}
+
+#about-stats ul.team li.tracks{
+	width: 333px;
+}
+
+#about-stats ul.team li.food{
+	width: 317px;
+}
+
+
+#about-stats ul.team li h3{
+	font: bold 14px 'Droid Sans', sans-serif;
+	text-transform: uppercase;
+}
+
+#about-stats ul.team li h2{
+	font: bold 48px/46px 'Droid Sans', sans-serif;
+}
+
+#about-stats ul.team li p{
+	font: 12px 'Droid Serif', serif;
+	color: #004264;
+	margin: 0;
+}
+
+#about-stats ul.team li p a{
+	text-decoration: none;
+}
+
+#about-stats ul.team li p a:hover{
+	text-decoration: underline;
+}
+
+#about-stats ul.team li img{
+	float: left;
+	margin: 0px 25px;
+}
+
+#about-stats ul.social li{
+	float: left;
+	color: #004264;
+	margin: 60px 0px 40px;
+	padding: 0px 11px;
+	background: image-url("menu-border.png") left 0px repeat-y;
+}
+
+#about-stats ul.social li.git{
+  position: relative;
+  left: 15px;
+	width: 185px;
+}
+
+#about-stats ul.social li.rails{
+	width: 140px;
+}
+
+#about-stats ul.social li.tweets{
+	width: 100px;
+}
+
+#about-stats ul.social li.blog{
+	width: 104px;
+}
+
+#about-stats ul.social li.lunch{
+	width: 135px;
+}
+
+#about-stats ul.social li.lunch h3 a{
+	float: right;
+}
+#about-stats ul.social li.ideas{
+	width: 140px;
+}
+
+
+#about-stats ul.social li:first-child{
+	background: none;
+}
+#about-stats ul.social li h3{
+	font: bold 12px 'Droid Sans', sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 13px;
+}
+
+#about-stats ul.social li h2{
+	font: bold 30px 'Droid Sans', sans-serif;
+}
+
+section#team{
+	margin-top: 0px;
+	position: relative;
+	top: 100px;
+}
+
+section#team ul{
+	list-style: none;
+}
+
+section#team ul li{
+	float: left;
+	margin-right: 68px;
+	margin-bottom: 60px;
+}
+
+section#team ul li.right{
+  margin-right: 0px;
+}
+
+section#team ul li.last{
+	margin-right: 0px;
+}
+
+section#team ul li a{
+	display: block;
+	padding-top: 209px;
+	text-align: center;
+	width: 189px;
+	font: bold 14px 'PT Sans', sans-serif;
+	color: #FFF;
+	text-decoration: none;
+	text-transform: uppercase;
+	.portrait{
+	  position: relative;
+	  margin-top: -400px;
+	  left: -2px;
+	  top: 190px;
+	  width: 180px;
+	  height: 180px;
+	  border-radius: 90px;
+	  border:solid 7px #ffffff;
+	}
+}
+
+section#team ul li a:hover{
+	color: #1588c3;
+	.portrait{
+	  position: relative;
+	  margin-top: -400px;
+	  top: 190px;
+	  left: -2px;
+	  width: 180px;
+	  height: 180px;
+	  border-radius: 90px;
+	  border:solid 7px #1588c3;
+	}
+}
+
+section#team ul li a.new{
+	  position: relative;
+	  margin-top: -400px;
+	  top: 190px;
+	  left: -2px;
+}
+
+section#testimonials{
+  position: relative;
+  top: 110px;
+	margin: 10px auto 205px;
+}
+
+section#testimonials header{
+	border-top: 2px solid #1588c3;
+	background: image-url("projects-border.png") 0px bottom no-repeat;
+	
+	height: 78px;
+}
+
+section#testimonials header h3{
+	font: bold 18px 'PT Sans', sans-serif;
+	color: #FFF;
+	padding-left: 50px;
+	background: image-url("quote.png") no-repeat scroll 0 26px transparent;
+	text-transform: uppercase;
+	line-height: 78px;
+	float: left;
+}
+
+a.test-nav{
+	display: block;
+	width: 35px;
+	height: 35px;
+	float: right;
+	margin-top: 24px;
+}
+
+a.test-nav.prev{
+	background: image-url("testimonial-prev.png") no-repeat;
+	margin-right: 5px;	
+}
+
+a.test-nav.next{
+	background: image-url("testimonial-next.png") no-repeat;
+}
+
+a.test-nav:hover{
+	background-position: 0px -35px;
+}
+
+#testimonials ul{
+	margin-top: 65px;
+}
+#testimonials ul li{
+	display: none;
+}
+
+#testimonial-content{
+	margin-top: 65px;
+}
+#testimonial-content p{
+	color: #B2B2B2;
+	display: block;
+	font: 18px/36px 'Droid Serif',serif;
+	margin: 0 auto;
+	text-align: center;
+	width: 600px;
+}
+
+#testimonial-content div.author{
+	margin: 0px auto;
+	height: 30px;	
+	font: 13px/30px 'PT Sans', sans-serif;
+	color: #FFF;
+	width: 105px;
+	margin-top: 25px;
+}
+
+#testimonial-content div.author img{
+	display: block;
+	margin-right: 10px;
+	float: left;
 }

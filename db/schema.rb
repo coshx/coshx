@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(:version => 20120313200340) do
     t.text     "bio",                                   :default => "I''m a developer at Coshx and I love it!"
     t.string   "twitter"
     t.string   "github"
+    t.string   "img"
+    t.string   "hoverimg"
   end
 
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true

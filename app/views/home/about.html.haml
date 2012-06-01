@@ -1,24 +1,92 @@
-%section.primary
-  %h2 About Us
-  %h3 We're a distributed team of people passionate about software. Here's a little more about each of us.
+%section#about-us.w960
+  %h1.formula About Us
+  %p We're a distributed team of people passionate about software. Here's a little more about each of us.
 
-  %section#coshx-folks.wall-of-text
-    %ul.team-members
-      - @coshx_folks.each do |person|
-        %li.team-member
-          .float-left
-            %p
-              = image_tag Gravatar.new(person.email).image_url, :size => "80x80"
-          .personal-quips
-            %p
+  #about-stats.w960.clearfix
+    %ul.team
+      %li.coffee
+        %img{:alt => "", :src => "/assets/coffee.png"}
+        %h3 Coffee consumed
+        %h2 1,978
+        %p cups this year
+      %li.tracks
+        %img{:alt => "", :src => "/assets/headphones.png"}
+        %h3 Tracks played
+        %h2 3,645
+        %p
+          %a.html{:href => "http://turntable.fm/salad_labs"} http://turntable.fm/salad_labs
+      %li.food
+        %img{:alt => "", :src => "/assets/food.png"}
+        %h3 Favorite food
+        %h2 39
+        %p Thai-food orders this year
+
+    %ul.social
+      %li.git
+        %h3
+          Github:
+          %br
+          Code committed in KB
+        %h2 8,124,305
+      %li.rails
+        %h3
+          Ruby on rails:
+          %br
+          Experience in days
+        %h2 30,456
+      %li.tweets
+        %h3
+          Twitter:
+          %br
+          Total tweets
+        %h2 542
+      %li.blog
+        %h3
+          Blog:
+          %br
+          Total number
+        %h2 #{Post.all.count}
+      %li.lunch
+        %h3
+          Techlunch:
+          %a.techlunch{:href => "#"}>
+            =image_tag("circle-add.png", :mouseover => "circle-add-white.png")
+          %br
+          Total number
+        %h2 14
+      %li.ideas
+        %h3
+          Ideas & creativity:
+          %br
+          Total number:
+        =image_tag "formula.png"
+    #about-us-arrow
+
+
+  %section#team.w960.clearfix
+    %ul
+      - @coshx_folks.each_with_index do |person, i|
+        - if (i+1)%4 == 0
+          %li.right
+            %a{:href => "#"}
+              .portrait
+              = image_tag("team/#{person.img}")
               = person.name
-            - if person.twitter.present?
-              %p
-                = link_to "@#{person.twitter}", "https://twitter.com/#{person.twitter}"
+        - else
+          %li
+            %a{:href => "#"}
+              .portrait
+              = image_tag("team/#{person.img}")
+              = person.name
+      %li
+        %a.new{:href => "#"} 
+          = image_tag("team/new.png", :mouseover => "team/new-white.png")
+          You?
 
-            - if person.github.present?
-              %p
-                = link_to "github.com/#{person.github}", "https://github.com/#{person.github}"
+  %section#testimonials.w960.clearfix
+    %header
+      %h3 Testimonials
+      %a.test-nav.next{:href => ""}
+      %a.test-nav.prev{:href => "#"}
+    #testimonial-content
 
-          %p.clear
-            = raw(person.bio)

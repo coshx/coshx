@@ -19,6 +19,10 @@ $("document").ready ->
       placement: "right"
       content: "With team members that are experienced at working at every type of business - from spry startups to large enterprises - we are able to adapt to any situation quickly."
 
+  $(".techlunch").popover
+      placement: "top"
+      content: "We have techlunch every week in order to keep up with the latest technlogies."      
+
   $('#footer-nav').localScroll()
 
   $('ul.portfolio-thumbs li').hover(
