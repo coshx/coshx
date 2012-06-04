@@ -17,6 +17,9 @@ Coshx::Application.configure do
   config.assets.initialize_on_precompile = false
   config.assets.compile = false
   config.assets.digest = true
+  config.assets.precompile += %w[*.css *.js *.png]
+
+
 
   # Specifies the header that your server uses for sending files
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
