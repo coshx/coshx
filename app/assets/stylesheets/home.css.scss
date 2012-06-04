@@ -24,12 +24,14 @@
 }
 
 a.html:link {
-  COLOR: #0B0B3B;
+  COLOR: #F60A0A;
 }
 a.html:visited {
+  text-decoration: none;
   COLOR: #0B0B3B;
 }
 a.html:hover {
+  text-decoration: none;
   COLOR: #000000;
 }
 a.html:active {
@@ -90,6 +92,7 @@ section#blueprint-image {
 #intro-wrapper {
   width: 100%;
   position: relative;
+  top: 30px;
 }
 
 #slider-buttons {
@@ -416,6 +419,20 @@ section#about-us p{
 
 #about-stats ul.team li.tracks{
 	width: 333px;
+	a.html:link {
+    COLOR: #0B0B3B;
+  }
+  a.html:visited {
+    text-decoration: none;
+    COLOR: #0B0B3B;
+  }
+  a.html:hover {
+    text-decoration: none;
+    COLOR: #000000;
+  }
+  a.html:active {
+    COLOR: #000000;
+  }
 }
 
 #about-stats ul.team li.food{
@@ -568,15 +585,11 @@ section#team ul li a:hover{
 }
 
 section#testimonials{
-  position: relative;
-  top: 110px;
-	margin: 10px auto 205px;
+	margin: 120px auto 205px;
 }
-
 section#testimonials header{
 	border-top: 2px solid #1588c3;
 	background: image-url("projects-border.png") 0px bottom no-repeat;
-	
 	height: 78px;
 }
 
@@ -611,36 +624,30 @@ a.test-nav:hover{
 	background-position: 0px -35px;
 }
 
-#testimonials ul{
+section#testimonials ul{
 	margin-top: 65px;
-}
-#testimonials ul li{
-	display: none;
-}
-
-#testimonial-content{
-	margin-top: 65px;
-}
-#testimonial-content p{
-	color: #B2B2B2;
-	display: block;
-	font: 18px/36px 'Droid Serif',serif;
-	margin: 0 auto;
-	text-align: center;
-	width: 600px;
-}
-
-#testimonial-content div.author{
-	margin: 0px auto;
-	height: 30px;	
-	font: 13px/30px 'PT Sans', sans-serif;
-	color: #FFF;
-	width: 105px;
-	margin-top: 25px;
-}
-
-#testimonial-content div.author img{
-	display: block;
-	margin-right: 10px;
-	float: left;
+	li{
+	  p{
+	  	color: #B2B2B2;
+	    display: block;
+	    font: 18px/36px 'Droid Serif',serif;
+	    margin: 0 auto;
+	    text-align: center;
+	    width: 600px;
+	  }
+	  
+	  div.author{
+	    margin: 0px auto;
+	    height: 30px;	
+	    font: 13px/30px 'PT Sans', sans-serif;
+	    color: #FFF;
+	    width: 105px;
+	    margin-top: 25px;
+	    img{
+	    	display: block;
+	      margin-right: 10px;
+	      float: left;
+	    }
+    }
+	}
 }

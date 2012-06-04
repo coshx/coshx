@@ -93,6 +93,8 @@ nav#main {
     &:hover {
       background-position: 0px -22px;
     }
+    position: relative;
+    left: 3px;
   }
   .displace {
   	position: absolute;
