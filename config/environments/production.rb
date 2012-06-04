@@ -14,7 +14,7 @@ Coshx::Application.configure do
   # Compress JavaScripts and CSS
   config.assets.compress = true
 
-  config.assets.initialize_on_precompile = true
+  config.assets.initialize_on_precompile = false
   config.assets.compile = false
   config.assets.digest = true
 
