@@ -15,7 +15,7 @@ Coshx::Application.configure do
   config.assets.compress = true
 
   config.assets.initialize_on_precompile = false
-  config.assets.compile = false
+  config.assets.compile = true
   config.assets.digest = true
 
   # Specifies the header that your server uses for sending files
