@@ -51,18 +51,12 @@ module Coshx
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     config.assets.precompile += %w(*.css *.js *.png)
+    config.assets.paths << "#{Rails.root}/assets/images/team"
 
     config.generators do |g|
       g.helper false
       g.helper_specs false
       g.fixture_replacement :factory_girl, :dir => 'spec/factories'
-    end
-    
-    if defined?(Bundler)
-      # If you precompile assets before deploying to production, use this line
-      Bundler.require *Rails.groups(:assets => %w(development test))
-      # If you want your assets lazily compiled in production, use this line
-      Bundler.require(:default, :assets, Rails.env)
     end
   end
 end
