@@ -1,0 +1,23 @@
+%section#about.w960.clearfix
+  %h1.capitalize 
+    = @employee.name
+  %a.quote.ben.the-tooltip{:href => ""}
+    %span 
+      = @employee.quote
+  %img.portrait{:alt => "", :src => @employee.portrait_url}/
+  %p.bio
+    =@employee.bio
+  #likes
+    %h2 Likes
+    %p.capitalize
+      = @employee.likes
+    %h2 Dislikes
+    %p.capitalize
+      =@employee.dislikes
+  %ul#social-media
+    -if @employee.twitter
+      %li.twitter
+        %a{:href => ""} @employee.twitter
+    -if @employee.github
+      %li.github
+        %a{:href => ""} @employee.github

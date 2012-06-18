@@ -6,4 +6,8 @@ class Admin < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name
 
   has_many :posts, :foreign_key => "author_id"
+
+  def portrait_url
+    "images/team/#{name.split(" ").first.downcase}-portrait.png"
+  end
 end

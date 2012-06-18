@@ -4,7 +4,7 @@ module ApplicationHelper
     (@body_class || :default).to_s
   end
 
-  #This does not support blocks like link_to does
+  #This does not support blocks like link_to does(cause who uses that...)
   def tab_to(*args)
     name         = args[0]
     url_options  = args[1] || {}
