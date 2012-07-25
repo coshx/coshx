@@ -19,4 +19,5 @@
         = render "layouts/header"
       %div#content.row
         = yield
-    = render "layouts/footer"
+    %div.container
+      = render "layouts/footer"

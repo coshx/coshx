@@ -180,7 +180,7 @@ div.arrow {
     background: url("footer_top_nav.png") 0px 0px no-repeat;
     display: block;
     &:hover {
-      background-position: 0px -57px;
+      background-position: 0px -56px;
     }
   }
 }

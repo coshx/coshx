@@ -45,7 +45,7 @@
         .arrow
     %h2.contact-heading ONLY ONE THING LEFT TO DO. CONTACT US USING YOUR PREFERRED METHOD BELOW.
     %div.contact-details.row
-      .three.columns
+      .col1
         %strong Tel:
         007-042-1408
         %br/
@@ -55,19 +55,19 @@
         %strong Email:
         = mail_to "info@coshx.com", "info@coshx.com", :id => "contact-email"
         %br/
-      .three.columns
+      .col2
         %strong Charlottesville
         %br/
         1110 Market St East Suite N7
         %br/
         Charlottesville, VA 22903
-      .three.columns
+      .col3
         %strong Boulder
         %br/
         3080 Valmont Rd Suite 280
         %br/
         Boulder, CO 80301
-      .three.columns
+      .col4
         CONSIDERING COSHX FOR
         %br/
         YOUR NEXT PROJECT?

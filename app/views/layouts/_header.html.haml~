@@ -7,7 +7,7 @@
       %a#facebook{:href => "https://www.facebook.com/CoshxLabs", :title => "FaceBook"}
 
 
-  %ul#nav
+  %ul#nav-list
     = tab_to "HOME", root_path
     = tab_to "ABOUT US", about_path
     = tab_to "OUR PROJECTS", portfolio_path
