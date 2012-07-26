@@ -8,6 +8,10 @@ html {
 
 body {
   background: transparent image-url("tile_background.png");
+  overflow-x:hidden;
+}
+.row {
+overflow-x:hidden;
 }
 
 #logo {
@@ -57,10 +61,24 @@ body {
 color:white;
 }
 
+@media screen and (max-width: 450px) {
+  ul#nav li {
+  float:left;
+  width:33% !important;
+    &:nth-child(3) {
+    background: none !important;
+    }
+  }
+  ul#nav {
+  border-bottom:2px solid #1588C3;
+  overflow:hidden;
+  }
+}
+
 ul#nav li {
 float:left;
 width:16.6%;
-background: url(menu-border.png) no-repeat right 5px;
+background: url(menu-border.png) no-repeat right 6px;
 &:last-child {
 background:none;
 }
@@ -73,6 +91,7 @@ height: 68px;
 line-height:68px;
 font: 14px "PT Sans",sans-serif;
 color:white;
+overflow:hidden;
 &:hover {
 color: #1588C3 !important;
 }
@@ -177,6 +196,16 @@ position:relative;
   background-position: 0px -8px; }
   
   
+  
+  @media screen and (max-width: 767px) {
+  .contact-details .three {
+  padding-bottom:20px; padding-top:10px;
+  border-bottom: 1px dashed white;
+  }
+  .contact-details .three:last-child {
+  border-bottom: 0px dashed white;
+  }
+  }
   
   
   footer {

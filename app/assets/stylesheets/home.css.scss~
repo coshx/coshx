@@ -11,7 +11,11 @@
 
 
 
-
+@media screen and (max-width:550px) {
+body div#slider {
+height:800px !important;
+}
+}
 
 #slider {
 text-align:center;
@@ -314,6 +318,18 @@ section#blueprint-image {
     }
 }
 
+@media screen and (max-width:960px) {
+#featured-projects ul {
+max-width:460px !important;
+margin:auto;
+}
+#featured-projects ul li {
+      &:nth-child(odd) {
+        margin-right:0 !important;
+      }
+}
+}
+
 #featured-projects {
   /*@include w960;*/
 
@@ -340,7 +356,6 @@ section#blueprint-image {
 
   ul {
     list-style: none;
-    border-bottom: 2px solid $blue;
     margin-top: 55px;
     li {
       max-width:460px;
@@ -414,6 +429,7 @@ section#blueprint-image {
 
 #our-clients {
   /*@include w960;*/
+    border-top: 2px solid $blue;
 
   ul {
     margin-top:50px;
@@ -488,7 +504,8 @@ section#about-us p{
 	height: 88px;
 	position: absolute;	
 	bottom: -50px;
-	left: 370px;
+	left: -111px;
+	margin-left:50%;
 	background: image-url("about-arrow.png") no-repeat;
 	z-index: -1;
 }
@@ -617,15 +634,34 @@ section#team{
 	margin-top: 0px;
 	position: relative;
 	top: 100px;
+	overflow:hidden;
 }
 
 section#team ul{
 	list-style: none;
 }
 
+@media screen and (max-width: 500px) {
+  #team ul li {
+  width:100%;
+  /* margin-left:auto !important;
+  margin-right:auto !important; */
+  text-align:center;
+  margin:0px !important;
+  }
+  #team ul li a {
+ 	width: 189px;
+  height:271px !important;
+  margin:auto !important;
+  overflow:hidden !important;
+  display:inline-block !important;
+  }
+}
+
 section#team ul li{
 	float: left;
-	margin-right: 68px;
+	margin-left: 30px;
+	margin-right: 30px;
 	margin-bottom: 60px;
 }
 
@@ -637,6 +673,42 @@ section#team ul li.last{
 	margin-right: 0px;
 }
 
+
+#team ul li a {
+	width: 189px;
+  height:189px;
+	font: bold 14px 'PT Sans', sans-serif;
+	text-align: center;
+	color: #FFF;
+	position:relative;
+		.portrait{
+	  position: absolute;
+	  /*left: 0px;
+	  top: 0px;*/
+	  width: 180px;
+	  height: 180px;
+	  border-radius: 90px;
+	  border:solid 6px #ffffff;
+	}
+	&:hover {
+		p {
+		color: #1588c3;		
+		}
+		.portrait {
+		border:solid 6px #1588c3;
+		}
+	}
+	p {
+  text-decoration: none;
+	text-transform: uppercase;
+	font: bold 14px 'PT Sans', sans-serif;
+	text-align: center;
+	color: #FFF;
+	}
+	
+	
+}
+/*
 section#team ul li a{
 	display: block;
 	padding-top: 209px;
@@ -661,6 +733,7 @@ section#team ul li a{
 	}
 }
 
+
 section#team ul li a:hover{
 	color: #1588c3;
   .new{
@@ -678,12 +751,14 @@ section#team ul li a:hover{
 	}
 }
 
+*/
+
 section#testimonials{
 	margin: 120px auto 205px;
 }
 section#testimonials header{
 	border-top: 2px solid #1588c3;
-	background: image-url("projects-border.png") 0px bottom no-repeat;
+	background: image-url("projects-border.png") 0px bottom repeat-x;
 	height: 78px;
 }
 
@@ -727,7 +802,7 @@ section#testimonials ul{
 	    font: 18px/36px 'Droid Serif',serif;
 	    margin: 0 auto;
 	    text-align: center;
-	    width: 600px;
+	    max-width: 600px;
 	  }
 	  
 	  div.author{

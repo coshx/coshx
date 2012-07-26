@@ -1,8 +1,8 @@
-%section#about-us.w960
+%section#about-us
   %h1.formula About Us
   %p We're a distributed team of people passionate about software. Here's a little more about each of us.
 
-  #about-stats.w960.clearfix
+  #about-stats.row
     %ul.team
       %li.coffee
         %img{:alt => "", :src => "/assets/coffee.png"}
@@ -66,28 +66,22 @@
   %section#team
     %ul
       - @coshx_folks.each_with_index do |person, i|
-        - if (i+1)%4 == 0
-          %li.right
-            %a{:href => "#"}
-              .portrait
-              %div(style="width:180px;height:180px;background:url(#{Gravatar.new(person.email).image_url(:size => 180)});border-radius:100px;")
+        %li
+          %a{:href => "#"}
+            .portrait
 
-              = person.name
-        - else
-          %li
-            %a{:href => "#"}
-              .portrait
-
-              %div(style="width:180px;height:180px;background:url(#{Gravatar.new(person.email).image_url(:size => 180)});border-radius:100px;")
-              
+            %div(style="width:180px;height:180px;background:url(#{Gravatar.new(person.email).image_url(:size => 180)});border-radius:100px;")
+            
+            %p
               = person.name
       %li.last
         %a{:href => "#"} 
           .new
           = image_tag("team/new.png", :mouseover => "team/new-white.png")
-          You?
+          %p
+            You?
     
-  %section#testimonials.w960.clearfix
+  %section#testimonials.row
     %header
       %h3 Testimonials
       %a.test-nav.next{:href => ""}
