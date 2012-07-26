@@ -107,8 +107,8 @@ position:relative;
   background: #1588C3;
   position: relative; }
 
-div.arrow {
-  background: image-url("blue-arrow.png") no-repeat scroll 0 0 transparent;
+.arrow {
+  background: url("blue-arrow.png") no-repeat scroll 0 0 transparent;
   float: right;
   height: 7px;
   width: 22px;
@@ -126,8 +126,8 @@ div.arrow {
   font: 12px 'PT Sans', sans-serif;
   background: #FFF;
   position: relative;
-  div.arrow {
-    background: image-url("light-blue-arrow.png") no-repeat scroll 0 0 transparent;
+  .arrow {
+    background: url("light-blue-arrow.png") no-repeat scroll 0 0 transparent;
     float: right;
     height: 7px;
     width: 22px;
@@ -146,17 +146,42 @@ div.arrow {
   position: relative;
   background: #004264; }
   
-  
+  .blue-arrow .arrow, .dark-blue-arrow .arrow {
+  background: image-url("white-arrow.png") no-repeat scroll 0 0 transparent;
+  float: right;
+  height: 7px;
+  width: 22px;
+  position: absolute;
+  right: 10px;
+  top: 9px; }
+
+.blue-arrow:hover, footer .blue-arrow:hover .arrow {
+  background: #FFF;
+  color: #004264; }
+
+.blue-arrow:hover {
+  color: #FFF; }
+
+.white-arrow:hover {
+  color: #004264; }
+
+.dark-blue-arrow:hover {
+  background: #FFF;
+  color: #004264 !important; }
+
+.blue-arrow:hover .arrow, .dark-blue-arrow:hover .arrow, .white-arrow:hover .arrow {
+  background-position: 0px -8px; }
   
   
   
   
   footer {
-  
+  margin-top:200px;
   background: #1588C3;
   position:relative;
   
   .footer-content {
+    padding-top:30px;
     color:white;
     padding-bottom:200px;
   }
@@ -164,6 +189,7 @@ div.arrow {
     background: #004264;
     box-sizing:border-box;
     padding:20px 30px;
+    font: 14px/24px "PT Sans",sans-serif;
   }
   
   
@@ -184,6 +210,92 @@ div.arrow {
     }
   }
 }
+ 
+ 
+  .blogpost {
+  color: white;
+  padding-left: 50px;
+  font: bold 18px 'PT Sans', sans-serif;
+  line-height: 32px;
+  background: url(blog.png) 0px 0px no-repeat;
+  text-transform: uppercase;
+  border-bottom: 1px solid #004264;
+  padding-bottom: 20px;
+  }
+
+
+
+.footer-tweet {
+overflow:hidden;
+  padding: 0px 0px 10px 110px;
+  background: url("tweet.png") no-repeat;
+  display:block;
+  margin: 10px auto 0px;
+  font: 12px / 58px "Droid Serif", serif;
+  color: white;
+  border-bottom: 1px solid #004264;
+  p {
+    float: left;
+    a {
+      color: #004264;
+      text-decoration: none;
+      &:hover {
+        color: black;
+      }
+    }
+  }
+  a.dark-blue-arrow {
+    margin-top: 15px;
+    float: right;
+  }
+  
+  
+
   
   
   }
+
+
+  h2.contact-heading {
+  font: bold 24px/70px "PT Sans",sans-serif;
+  text-align: center;
+  color: #004264;
+  }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  .footer-bottom {
+  display:block;
+  margin: 10px auto 0px;
+  text-align: center;
+  font: 14px 'PT Sans', sans-serif;
+    span {
+      &.copy {
+        color: white;
+        font: 12px 'PT Sans', sans-serif;
+      }
+      &.links {
+        color: #004264;
+        font: 12px 'PT Sans', sans-serif;
+          a {
+          text-decoration: none;
+          color: #004264;
+            &:hover {
+              text-decoration: none;
+              color: black;
+            }
+          }
+      }
+    }
+    
+  }  
+    
+  
+  
+}

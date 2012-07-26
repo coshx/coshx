@@ -415,32 +415,12 @@ section#blueprint-image {
 #our-clients {
   /*@include w960;*/
 
-  header {
-    background: image-url("projects-border.png") 0px 100% no-repeat;
-  }
   ul {
-    margin-top: 55px;
-  }
-  header {
-    h2 {
-      font: bold 18px 'PT Sans', sans-serif;
-      color: $white;
-      text-transform: uppercase;
-      margin: 25px 0px;
-      float: left;
-      padding: 5px 0px 5px 48px;
-      background: image-url("star.png") 0px 0px no-repeat;
-    }
-    a {
-      float: right;
-      margin-top: 30px;
-    }
-  }
-  ul {
+    margin-top:50px;
     list-style: none;
     li {
       float: left;
-      /* width: 159px; */
+      width: 164px; 
       height: 150px;
       border-right: 1px solid $black;
       border-bottom: 1px solid $black;
@@ -645,7 +625,8 @@ section#team ul{
 
 section#team ul li{
 	float: left;
-	margin-right: 68px;
+	margin-left: 30px;
+	margin-right: 30px;
 	margin-bottom: 60px;
 }
 
@@ -764,4 +745,40 @@ section#testimonials ul{
 	    }
     }
 	}
+}
+
+
+
+
+
+
+#our-clients {
+  /*@include w960;*/
+
+  header {
+    background: image-url("projects-border.png") 0px 100% repeat-x;
+    overflow: hidden;
+  }
+  
+  header {
+    h2 {
+      font: bold 18px 'PT Sans', sans-serif;
+      color: $white;
+      text-transform: uppercase;
+      margin: 25px 0px;
+      float: left;
+      padding: 5px 0px 5px 48px;
+      background: image-url("star.png") 0px 0px no-repeat;
+    }
+    a {
+      float: right;
+      margin-top: 30px;
+    }
+  }
+  
+}
+
+
+.portfolio-thumbs {
+overflow:hidden;
 }

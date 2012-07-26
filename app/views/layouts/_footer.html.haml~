@@ -2,7 +2,7 @@
   %div.row.footer-content
     #footer-nav
       %a{:id => "top-nav", :href => "#top"}
-    %h2 Latest blog posts
+    %h2.blogpost Latest blog posts
     -unless last_two_posts[0].nil?
       #latest-blogs.divider
         .post.first
@@ -37,7 +37,7 @@
             = link_to "Read more", last_two_posts[1], :class => "read-more"
             |
             %a.comments{:href => "#{polymorphic_url(last_two_posts[1])}#disqus_thread"}
-    #footer-tweet.divider
+    #footer-tweet
       %p
         Loading tweets, just a moment...
       = link_to "https://www.twitter.com/coshxlabs", :class => "dark-blue-arrow" do
@@ -45,7 +45,7 @@
         .arrow
     %h2.contact-heading ONLY ONE THING LEFT TO DO. CONTACT US USING YOUR PREFERRED METHOD BELOW.
     %div.contact-details.row
-      .col1
+      .three.columns
         %strong Tel:
         007-042-1408
         %br/
@@ -55,19 +55,19 @@
         %strong Email:
         = mail_to "info@coshx.com", "info@coshx.com", :id => "contact-email"
         %br/
-      .col2
+      .three.columns
         %strong Charlottesville
         %br/
         1110 Market St East Suite N7
         %br/
         Charlottesville, VA 22903
-      .col3
+      .three.columns
         %strong Boulder
         %br/
         3080 Valmont Rd Suite 280
         %br/
         Boulder, CO 80301
-      .col4
+      .three.columns
         CONSIDERING COSHX FOR
         %br/
         YOUR NEXT PROJECT?

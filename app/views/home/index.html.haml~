@@ -125,6 +125,7 @@
             %a.view{:href => "#"}
             .separator
             %a.case{:href => "#"}
+  
 
 .divider
 

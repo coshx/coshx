@@ -78,8 +78,7 @@
             %a{:href => "#"}
               .portrait
 
-              %div(style="width:180px;height:180px;background:url(#{Gravatar.new(person.email).image_url(:size => 180)});border-radius:100px;")
-              
+              %div(style="width:180px;height:180px;background:url(#{Gravatar.new(person.email).image_url(:size => 180)});border-              
               = person.name
       %li.last
         %a{:href => "#"} 
