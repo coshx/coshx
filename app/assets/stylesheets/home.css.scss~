@@ -17,6 +17,12 @@ height:800px !important;
 }
 }
 
+@media screen and (max-width:300px) {
+body div#slider {
+height:900px !important;
+}
+}
+
 #slider {
 text-align:center;
 width:100%;
@@ -473,7 +479,7 @@ margin:auto;
 section#about-us{
 	margin-top: 50px;
 }
-section#about-us h1.formula{
+h1.formula{
 	font: bold 48px 'Pt Sans', sans-serif;
 	text-align: left;
 	color: #FFFFFF;

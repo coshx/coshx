@@ -6,12 +6,17 @@ html {
   overflow-x:hidden;
 }
 
+h2 {
+font-size:36px;
+}
+#content {
+margin-top:50px;
+}
+
 body {
   background: transparent image-url("tile_background.png");
   overflow-x:hidden;
-}
-.row {
-overflow-x:hidden;
+  color:white;
 }
 
 #logo {

@@ -6,7 +6,7 @@
     - @services.each do |service|
       %li{:class => class_for_service(service)}
         .stretch-small-offset
-          %h2
+          h2
             = service.title
           .service-description
             = service.description.html_safe

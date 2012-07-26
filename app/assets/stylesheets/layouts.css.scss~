@@ -6,12 +6,17 @@ html {
   overflow-x:hidden;
 }
 
+h2 {
+font-size:36px;
+}
+#content {
+margin-top:30px;
+}
+
 body {
   background: transparent image-url("tile_background.png");
   overflow-x:hidden;
-}
-.row {
-overflow-x:hidden;
+  color:white;
 }
 
 #logo {
@@ -197,7 +202,7 @@ position:relative;
   
   
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 767px) {
   .contact-details .three {
   padding-bottom:20px; padding-top:10px;
   border-bottom: 1px dashed white;
