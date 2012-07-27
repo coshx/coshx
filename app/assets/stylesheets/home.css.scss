@@ -127,11 +127,11 @@ padding: 30px 0px;
 
 
 
-@import "common";
+/*@import "common";
 @import "compass/layout/stretching";
 @import "compass/utilities";
 @import "compass/css3";
-@import "grid";
+@import "grid";*/
 .clearfix:after {
 	visibility: hidden;
 	display: block;
@@ -203,12 +203,12 @@ section#blueprint-image {
   padding-bottom: 75px;
   position: relative;
   h1 {
-    color: $white;
+    color: white;
     font: bold 48px 'PT Sans', sans-serif;
     text-transform: uppercase;
   }
   p {
-    color: $gray;
+    color: gray;
     font: 14px / 24px "Droid Serif", serif;
     margin: 22px 0px;
   }
@@ -278,18 +278,18 @@ section#blueprint-image {
     }
     h2 {
       font: bold 18px 'PT Sans', sans-serif;
-      color: $white;
+      color: white;
       text-transform: uppercase;
       margin-bottom: 15px;
     }
     span.blue {
-      color: $blue;
+      color: blue;
     }
     a {
       margin-bottom: 5px;
     }
     p {
-      color: $gray;
+      color: gray;
       font: 12px 'Droid Serif', serif;
       margin-bottom: 30px;
       line-height: 150%;
@@ -307,15 +307,15 @@ section#blueprint-image {
 
     text-align: center;
     padding: 53px 0px;
-    border-bottom: 2px solid $blue;
+    border-bottom: 2px solid blue;
     h2 {
       font: bold 18px 'PT Sans', sans-serif;
-      color: $white;
+      color: white;
       text-transform: uppercase;
       margin: 25px 0px;
     }
     p {
-      color: $gray;
+      color: gray;
       font: 12px 'Droid Serif', serif;
       margin-bottom: 30px;
     }
@@ -347,7 +347,7 @@ margin:auto;
   header {
     h2 {
       font: bold 18px 'PT Sans', sans-serif;
-      color: $white;
+      color: white;
       text-transform: uppercase;
       margin: 25px 0px;
       float: left;
@@ -378,6 +378,7 @@ margin:auto;
           height: 183px;
           background: rgba(0, 0, 0, 0.8);
           -webkit-border-radius: 5px;
+          
           border-radius: 5px;
           left: 0px;
           top: -183px;
@@ -395,8 +396,8 @@ margin:auto;
       }
       img {
         width: 460px;
-        border: 1px solid $black;
-        @include border-radius(5);
+        border: 1px solid black;
+        border-radius:5px;
         float: left;
         margin-right: 35px;
         margin-bottom: 35px;
@@ -435,7 +436,7 @@ margin:auto;
 
 #our-clients {
   /*@include w960;*/
-    border-top: 2px solid $blue;
+    border-top: 2px solid blue;
 
   ul {
     margin-top:50px;
@@ -444,9 +445,9 @@ margin:auto;
       float: left;
       width: 164px; 
       height: 150px;
-      border-right: 1px solid $black;
-      border-bottom: 1px solid $black;
-      background: $blue;
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      background: blue;
       line-height: 200px;
       text-align: center;
       img {}
@@ -470,9 +471,9 @@ margin:auto;
 }
 
 .white {
-  background-color: $white;
+  background-color: white;
   &:hover {
-    background-color: $blue;
+    background-color: blue;
   }
 }
 
@@ -840,7 +841,7 @@ section#testimonials ul{
   header {
     h2 {
       font: bold 18px 'PT Sans', sans-serif;
-      color: $white;
+      color: white;
       text-transform: uppercase;
       margin: 25px 0px;
       float: left;
