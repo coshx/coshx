@@ -28,9 +28,8 @@ gem "twitter"
 # gem "ruby-debug19", :require => "ruby-debug"
 
 group :assets do
-  gem "sass"
-  gem "sass-rails"
-  gem "coffee-rails"
+  gem "sass-rails",   '~> 3.2.3'
+  gem "coffee-rails", '~> 3.2.1'
   gem "uglifier"
 #  gem 'compass', '~> 0.12.alpha'
 #	gem 'compass-rails', '~> 1.0.3'
