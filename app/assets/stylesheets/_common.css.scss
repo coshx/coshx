@@ -1,5 +1,3 @@
-@import "compass/css3";
-@import "compass/layout";
 
 $gray: #B2B2B2;
 $light-gray: #97979b;
@@ -65,7 +63,6 @@ $black: #000;
 }
 
 @mixin projects-clients-header {
-  @include solid-thick-top;
   margin-top: 50px;
   padding-top: 18px;
 
