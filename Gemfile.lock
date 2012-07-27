@@ -119,7 +119,7 @@ GEM
       activesupport (>= 3.0.0)
       railties (>= 3.0.0)
     launchy (2.0.3)
-    libv8 (3.3.10.4)
+    libv8 (3.11.8.3)
     libwebsocket (0.1.4)
       addressable
     mail (2.3.3)
@@ -171,6 +171,7 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     redcarpet (2.1.1)
+    ref (1.0.0)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rspec (2.11.0)
@@ -210,8 +211,8 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    therubyracer (0.10.1)
-      libv8 (~> 3.3.10)
+    therubyracer (0.11.0beta5)
+      ref
     thor (0.14.6)
     tilt (1.3.3)
     timecop (0.3.5)
@@ -252,6 +253,7 @@ DEPENDENCIES
   heroku_san
   jquery-rails
   kaminari
+  libv8 (~> 3.11.8)
   nokogiri
   pg
   pry
@@ -264,7 +266,7 @@ DEPENDENCIES
   sass-rails
   shoulda-matchers
   simplecov
-  therubyracer
+  therubyracer (= 0.11.0beta5)
   timecop
   twitter
   uglifier

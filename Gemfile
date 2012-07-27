@@ -6,8 +6,6 @@ gem "rails", "3.1.3"
 gem "pg"
 
 
-gem 'therubyracer'
-gem 'execjs'
 gem 'rb-readline'
 
 # authenticate & authorization
@@ -32,9 +30,11 @@ group :assets do
   gem "coffee-rails"
   gem "uglifier"
 #  gem 'compass', '~> 0.12.alpha'
-	gem 'compass-rails', '~> 1.0.3'
-	gem 'zurb-foundation', '~> 3.0.1'
-  
+  gem 'compass-rails', '~> 1.0.3'
+  gem 'zurb-foundation', '~> 3.0.1'
+  gem 'therubyracer', '0.11.0beta5'
+  gem 'libv8', '~> 3.11.8'
+  gem 'execjs'
 end
 
 group :development do
@@ -53,7 +53,6 @@ group :development, :test do
   gem "database_cleaner"
   gem "forgery"
   gem "rspec-rails"
-  gem "therubyracer", :require => 'v8'
   gem 'pry'
   gem 'pry-nav'
 end
