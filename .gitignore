@@ -5,6 +5,7 @@ tmp/
 .sass-cache/
 .idea/
 *.sw?
+*~
 .vagrant
 vendor/bundle/*
 .DS_Store
