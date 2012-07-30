@@ -26,6 +26,7 @@
     = image_tag "blueprint.png"
 
 %script(type="text/javascript")
+  $(document).ready ( function () {
   $('#slider').orbit({
   animation: 'horizontal-push',                  // fade, horizontal-slide, vertical-slide, horizontal-push
   animationSpeed: 800,                // how fast animtions are
@@ -43,7 +44,7 @@
   bulletThumbs: false,		 // thumbnails for the bullets
   bulletThumbLocation: '',		 // location from this file where thumbs will be
   afterSlideChange: function(){}, 	 // empty function    fluid: true       // or set a aspect ratio for content slides (ex: '4x3') 
-  });
+  });});
 
 
 
