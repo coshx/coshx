@@ -29,3 +29,7 @@ $("document").ready ->
     -> $(".overlay", this).stop().animate({top:'0px'},{queue:false,duration:300})
     -> $(".overlay", this).stop().animate({top:'-183px'},{queue:false,duration:300})
   )
+  $('.featured_projects .four').hover(
+    -> $(".overlay", this).stop().animate({top:'0px'},{queue:false,duration:300})
+    -> $(".overlay", this).stop().animate({top:'-340px'},{queue:false,duration:300})
+  )

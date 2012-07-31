@@ -21,6 +21,11 @@ gem "gravatar-ultimate"
 gem "kaminari"
 gem "railties"
 
+# pictures
+gem 'carrierwave'
+gem 'rmagick'
+gem 'fog'
+
 #Social media is cool?
 gem "twitter"
 # To use debugger

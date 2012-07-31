@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
 
-  def index; end
+  def index
+    @featured_projects = FeaturedProject.find(:all, :limit => 3, :order=> 'created_at desc')
+  end
 
   def services
     @services = Service.order :sort_order

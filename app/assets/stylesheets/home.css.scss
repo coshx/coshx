@@ -860,3 +860,69 @@ section#testimonials ul{
 .portfolio-thumbs {
 overflow:hidden;
 }
+
+
+.featured_projects {
+padding:50px 0px;
+}
+
+.featured_projects .no1 {
+margin:auto;
+}
+.featured_projects .no2 {
+float:right;
+}
+
+.featured_projects .fp_img {
+        max-width:280px;
+        max-height:340px;
+        overflow:hidden;
+        position:relative;
+        border: 5px solid black;
+        .overlay {
+          width: 100%; /*461px; */
+          height: 340px;
+          background: rgba(0, 0, 0, 0.8);
+          -webkit-border-radius: 0px;
+          
+          border-radius: 0px;
+          left: 0px;
+          top: -340px;
+          position: absolute;
+        }
+        .link-wrapper{
+          margin: 120px auto 0px;
+          width: 190px;
+          overflow:hidden;
+        }
+        .separator{
+          height: 58px;
+          border-left: 1px solid #FFF;
+          float: left;
+        }
+  a {
+        &.case{
+          display: block;
+          width: 62px;
+          height: 78px;
+          background: url(case-button.png) 0px 0px no-repeat;
+          float: left;
+          margin-left: 25px;
+          &:hover{
+          	background-position: 0px -79px;
+          }
+        }
+        &.view{
+          background: url("view-button.png") no-repeat scroll 0 0 transparent;
+          display: block;
+          float: left;
+          height: 67px;
+          margin-right: 25px;
+          margin-top: 11px;
+          width: 65px;
+          &:hover{
+          	background-position: 0px -68px;
+          }
+        }
+  }
+}

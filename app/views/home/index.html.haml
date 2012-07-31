@@ -91,41 +91,7 @@
     .arrow
 
 
-%section#featured-projects
-  %header.divider
-    %h2 Featured Projects
-    = link_to "#", :class => "blue-arrow" do
-      See More Case Studies
-      .arrow
-  %ul.divider.portfolio-thumbs
-    %li
-      %img{:alt => "", :src => "/assets/random-project.png"}
-        .overlay
-          .link-wrapper
-            %a.view{:href => "#"}
-            .separator
-            %a.case{:href => "#"}
-    %li
-      %img.even{:alt => "", :src => "/assets/random-project.png"}
-        .overlay
-          .link-wrapper
-            %a.view{:href => "#"}
-            .separator
-            %a.case{:href => "#"}
-    %li
-      %img{:alt => "", :src => "/assets/random-project.png"}
-        .overlay
-          .link-wrapper
-            %a.view{:href => "#"}
-            .separator
-            %a.case{:href => "#"}
-    %li
-      %img.even{:alt => "", :src => "/assets/random-project.png"}
-        .overlay
-          .link-wrapper
-            %a.view{:href => "#"}
-            .separator
-            %a.case{:href => "#"}
+= render :partial => "featured_projects/list", :locals => {:featured_projects => @featured_projects}
   
 
 .divider

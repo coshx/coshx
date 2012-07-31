@@ -1,0 +1,18 @@
+%section#featured-projects
+  %header.divider
+    %h2 Featured Projects
+    = link_to "#", :class => "blue-arrow" do
+      See More Case Studies
+      .arrow
+
+%div.featured_projects.row
+  - featured_projects.each_with_index do |fp, i|
+    %div.four.columns
+      .fp_img{:class => "no#{i}"}
+        =image_tag fp.picture_url if fp.picture?
+        .overlay
+          .link-wrapper
+            %a.view{:href => "#"}
+            .separator
+            %a.case{:href => "#"}
+  
