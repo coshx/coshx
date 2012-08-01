@@ -1,6 +1,9 @@
 Coshx::Application.routes.draw do
 
-  resources :featured_projects
+  resources :quotes
+
+  resources :projects
+
 
   # eg www.coshx.com redirects to coshx.com
   #   http://stackoverflow.com/a/7352878/283398
