@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Text:
+  = @quote.text
+%p
+  %b Author:
+  = @quote.author
+%p
+  %b Project:
+  = @quote.project_id
+
+= link_to 'Edit', edit_quote_path(@quote)
+\|
+= link_to 'Back', quotes_path
