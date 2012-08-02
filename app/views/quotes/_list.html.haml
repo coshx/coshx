@@ -6,11 +6,14 @@
       %p=q.project.title
 
   - if admin_signed_in?
-    .panel
-      = form_for project.quotes.build, :remote => true do |qf|
-        More forms for #{project.title}
-        = qf.hidden_field :project_id, :value => "#{project.id}"
-        = qf.text_field :text
-        = qf.text_field :author
-        = qf.submit 'Save'
+    - if project.id 
+      .panel
+        = form_for project.quotes.build, :remote => true do |qf|
+          More forms for #{project.title}
+          = qf.hidden_field :project_id, :value => "#{project.id}"
+          = qf.text_field :text
+          = qf.text_field :author
+          = qf.submit 'Save'
+    - else
+      Save First!
 

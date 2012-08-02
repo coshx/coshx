@@ -339,12 +339,11 @@ margin:auto;
 #featured-projects {
   /*@include w960;*/
 
+  
   header {
     background: image-url("projects-border.png") 0px 100% repeat-x;
     overflow: hidden;
-  }
-  
-  header {
+
     h2 {
       font: bold 18px 'PT Sans', sans-serif;
       color: white;
@@ -759,6 +758,16 @@ section#team ul li a:hover{
 
 section#testimonials{
 	margin: 120px auto 205px;
+	    h2 {
+      font: bold 18px 'PT Sans', sans-serif;
+      color: white;
+      text-transform: uppercase;
+      margin: 25px 0px;
+      float: left;
+      padding: 5px 0px 5px 48px;
+      background: image-url("quote.png") 0px 0px no-repeat;
+    }
+
 }
 section#testimonials header{
 	border-top: 2px solid #1588c3;
@@ -865,15 +874,24 @@ overflow:hidden;
 .featured_projects {
 padding:50px 0px;
 }
+@media only screen and (max-width: 768px) {
+.featured_projects div {
+margin-left:auto !important;
+margin-right:auto !important;
+}
+
+}
 
 .featured_projects .no1 {
-margin:auto;
+margin-left:auto;
+margin-right:auto;
 }
 .featured_projects .no2 {
 float:right;
 }
 
 .featured_projects .fp_img {
+        margin-bottom:50px;
         max-width:280px;
         max-height:340px;
         overflow:hidden;

@@ -1,0 +1,5 @@
+$(".random_quote").fadeOut(500, function () {
+$(".random_quote").replaceWith("<%= escape_javascript(render :partial => "quotes/random_quote", :locals => {:random_quote => random_quote}) %>");
+});
+$(".random_quote").fadeIn(100);
+

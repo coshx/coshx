@@ -4,6 +4,7 @@ Coshx::Application.routes.draw do
 
   resources :projects
 
+  get 'get_random_quote' => 'quotes#get_random_quote'
 
   # eg www.coshx.com redirects to coshx.com
   #   http://stackoverflow.com/a/7352878/283398

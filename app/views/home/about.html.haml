@@ -82,16 +82,10 @@
             You?
     
   %section#testimonials.row
-    %header
-      %h3 Testimonials
-      %a.test-nav.next{:href => ""}
-      %a.test-nav.prev{:href => ""}
-
-    %ul
-      %li.selected
-        %p "But if you look at history the great men and women of the world have always been defined by their enemies."
-        .author
-          %img{:alt => "", :src => "/assets/lex.png"}/
-          Lex Luthor
+    %header.divider
+      %h2 Testimonials
+      = link_to " ", "/get_random_quote", :remote => true, :class => "test-nav next"
+      = link_to " ", "/get_random_quote", :remote => true, :class => "test-nav prev"
+    = render :partial => "quotes/random_quote", :locals => {:random_quote => random_quote}
 
 
