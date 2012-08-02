@@ -1,5 +1,7 @@
 Coshx::Application.routes.draw do
 
+  resources :clients
+
   resources :quotes
 
   resources :projects

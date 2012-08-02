@@ -96,18 +96,7 @@
 
 .divider
 
-%section#our-clients
-  %header.divider
-    %h2 Our Clients
-    = link_to portfolio_path, :class => "blue-arrow" do
-      See Our Portfolio
-      .arrow
+= render :partial => "clients/list", :locals => {:clients => @clients}
 
-  %ul.divider
-    -# repeating series of small squares with client logos in them
-    -# all logos must be 100px in height and <= 150px wide - please see home.css.scss for explanation
-    - 2.times do
-      - 6.times do |n|
-        %li.tendril
 
-  .divider
+.divider

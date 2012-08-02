@@ -1,0 +1,20 @@
+// Place all the styles related to the Clients controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.client-list {
+padding-top:50px;
+}
+
+.client-list div {
+
+width:164px;
+height:150px;
+float:left;
+margin-left:1px;
+margin-bottom:1px;
+}
+
+.client-list div:last-child:after {
+clear:both;
+}

@@ -1,0 +1,11 @@
+%section#our-clients
+  %header.divider
+    %h2 Our Clients
+    = link_to portfolio_path, :class => "blue-arrow" do
+      See Our Portfolio
+      .arrow
+
+  .client-list
+    - @clients.each do |c|
+      %div{:style => "background: url(assets/client_logos/#{c.company_logo}) no-repeat,  #1588C3;"}
+        =c.name
