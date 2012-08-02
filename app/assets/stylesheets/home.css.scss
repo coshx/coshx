@@ -86,7 +86,7 @@ padding: 30px 0px;
       margin-bottom: 15px;
     }
     span.blue {
-      color: blue;
+      color: #1588C3;
     }
     a {
       margin-bottom: 5px;
@@ -283,7 +283,7 @@ section#blueprint-image {
       margin-bottom: 15px;
     }
     span.blue {
-      color: blue;
+      color: #1588C3;
     }
     a {
       margin-bottom: 5px;
@@ -307,7 +307,7 @@ section#blueprint-image {
 
     text-align: center;
     padding: 53px 0px;
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid #1588C3;
     h2 {
       font: bold 18px 'PT Sans', sans-serif;
       color: white;
@@ -435,7 +435,7 @@ margin:auto;
 
 #our-clients {
   /*@include w960;*/
-    border-top: 2px solid blue;
+    border-top: 2px solid #1588C3;
 
   ul {
     margin-top:50px;
@@ -446,7 +446,7 @@ margin:auto;
       height: 150px;
       border-right: 1px solid black;
       border-bottom: 1px solid black;
-      background: blue;
+      background: #1588C3;
       line-height: 200px;
       text-align: center;
       img {}
@@ -472,7 +472,7 @@ margin:auto;
 .white {
   background-color: white;
   &:hover {
-    background-color: blue;
+    background-color: #1588C3;
   }
 }
 

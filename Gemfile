@@ -46,6 +46,8 @@ end
 
 group :development do
   gem "heroku_san"
+  gem "pry"
+  gem "pry-nav"
 end
 
 group :test do

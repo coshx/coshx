@@ -17,7 +17,7 @@ class Post < ActiveRecord::Base
     lines = self.body.split(/(\n)+/)
     preview_text = lines.reject do |line|
       line =~ /^$\n/
-    end.take(4).join(' ')
+    end.take(2).join(' ')
     "#{preview_text.chomp}..."
   end
 

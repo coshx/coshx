@@ -6,6 +6,8 @@ Coshx::Application.routes.draw do
 
   resources :projects
 
+  resources :posts
+  
   get 'get_random_quote' => 'quotes#get_random_quote'
 
   # eg www.coshx.com redirects to coshx.com

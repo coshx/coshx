@@ -153,7 +153,15 @@ position:relative;
   text-decoration: none;
   font: 12px 'PT Sans', sans-serif;
   position: relative;
-  background: #004264; }
+  background: #004264;
+    .arrow {
+   background-position: 0px -8px;
+   &:hover {
+   background-position: 0px 0px !important;
+   }
+  }
+  
+   }
   
 
 
@@ -342,4 +350,58 @@ overflow:hidden;
 
 .reveal-modal {
 color: #666;
+}
+
+
+.post p {
+font: 14px/24px "Droid Serif", serif;
+font-size:12px;
+}
+.post .post_pic {
+margin-top:30px;
+margin-left:auto;
+margin-right:auto;
+}
+
+
+.post h2 a {
+font: bold 18px 'PT Sans', sans-serif;
+color:#004264;
+text-transform:uppercase;
+line-height:10px;
+}
+.post-info {
+padding-top:15px;
+display:block;
+}
+
+.post-info, .post-info a {
+font: bold 12px 'PT Sans', sans-serif;
+text-transform:uppercase;
+text-align:center;
+color: #004264;
+}
+
+#latest-blogs .post:last-child {
+border-left: 1px solid #004264;
+}
+
+#latest-blogs {
+padding-bottom:20px;
+border-bottom: 1px solid #004264;
+}
+
+.post .links, .post .links a {
+font: bold 12px 'PT Sans', sans-serif;
+text-transform:uppercase;
+color: #004264;
+
+}
+
+ .post .links a:hover {
+  color: #333333;
+ }
+ 
+.post .links {
+margin-top:10px;
 }
