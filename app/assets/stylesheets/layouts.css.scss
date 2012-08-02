@@ -111,6 +111,7 @@ color: #1588C3 !important;
 #nav {
 margin-top:20px;
 border-top: 2px solid #1588C3;
+list-style-type:none;
 }
 
 header {
@@ -123,26 +124,6 @@ position:relative;
 
 
 
-.blue-arrow {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  display: inline-block;
-  margin:auto;
-  padding: 4px 40px 4px 15px;
-  color: #004264;
-  text-decoration: none;
-  font: 12px 'PT Sans', sans-serif;
-  background: #1588C3;
-  position: relative; }
-
-.arrow {
-  background: url("blue-arrow.png") no-repeat scroll 0 0 transparent;
-  float: right;
-  height: 7px;
-  width: 22px;
-  position: absolute;
-  right: 10px;
-  top: 9px; }
 
 .white-arrow {
   -webkit-border-radius: 5px;
@@ -174,21 +155,8 @@ position:relative;
   position: relative;
   background: #004264; }
   
-  .blue-arrow .arrow, .dark-blue-arrow .arrow {
-  background: image-url("white-arrow.png") no-repeat scroll 0 0 transparent;
-  float: right;
-  height: 7px;
-  width: 22px;
-  position: absolute;
-  right: 10px;
-  top: 9px; }
 
-.blue-arrow:hover, footer .blue-arrow:hover .arrow {
-  background: #FFF;
-  color: #004264; }
 
-.blue-arrow:hover {
-  color: #FFF; }
 
 .white-arrow:hover {
   color: #004264; }
@@ -197,8 +165,6 @@ position:relative;
   background: #FFF;
   color: #004264 !important; }
 
-.blue-arrow:hover .arrow, .dark-blue-arrow:hover .arrow, .white-arrow:hover .arrow {
-  background-position: 0px -8px; }
   
   
   
@@ -337,4 +303,39 @@ overflow:hidden;
     
   
   
+}
+
+
+
+.blue-arrow:hover .arrow, .dark-blue-arrow:hover .arrow, .white-arrow:hover .arrow {
+  background-position: 0px -8px; }
+
+
+.blue-arrow {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  margin:auto;
+  padding: 4px 40px 4px 15px;
+  color: #004264;
+  text-decoration: none;
+  font: 12px 'PT Sans', sans-serif;
+  background: #1588C3;
+  position: relative; 
+  .arrow {
+    background-position: 0px -8px;
+  }
+  }
+
+.arrow {
+  background: url("blue-arrow.png") no-repeat scroll 0 -8px transparent;
+  float: right;
+  height: 7px;
+  width: 22px;
+  position: absolute;
+  right: 10px;
+  top: 9px; }
+
+.reveal-modal {
+color: #666;
 }

@@ -12,7 +12,12 @@
         =image_tag fp.picture_url if fp.picture?
         .overlay
           .link-wrapper
-            %a.view{:href => "#"}
+            %a.view{:href => "#", "data-reveal-id" => "modal#{i}"}
             .separator
-            %a.case{:href => "#"}
-  
+            =link_to " ", fp, :class => "case"
+    
+    %div{:id => "modal#{i}", :class => "reveal-modal"}
+      %h2=fp.title
+      %p=fp.description
+      %a.close-reveal-modal &#215
+
