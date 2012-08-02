@@ -308,7 +308,8 @@ overflow:hidden;
 
 
 .blue-arrow:hover .arrow, .dark-blue-arrow:hover .arrow, .white-arrow:hover .arrow {
-  background-position: 0px -8px; }
+  background-position: 0px -8px; 
+  }
 
 
 .blue-arrow {
@@ -323,12 +324,15 @@ overflow:hidden;
   background: #1588C3;
   position: relative; 
   .arrow {
-    background-position: 0px -8px;
+    background-position: 0px 0px;
+  }
+  &:hover {
+  color:white !important;
   }
   }
 
 .arrow {
-  background: url("blue-arrow.png") no-repeat scroll 0 -8px transparent;
+  background: url("blue-arrow.png") no-repeat scroll 0 8px transparent;
   float: right;
   height: 7px;
   width: 22px;
