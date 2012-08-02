@@ -9,3 +9,20 @@
     - @clients.each do |c|
       %div{:style => "background: url(assets/client_logos/#{c.company_logo}) no-repeat,  #1588C3;"}
         =c.name
+        
+        
+%script(type="text/javascript")
+  function CenterClients() {
+  w = $(".row").width();
+  $(".client-list").width( Math.floor(w/165)*165 );
+  }
+  
+  $(document).ready( function () {
+ 
+  CenterClients();
+  $(window).resize(function() {
+  CenterClients();
+  });
+  
+  
+  });
