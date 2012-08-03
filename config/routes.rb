@@ -6,7 +6,7 @@ Coshx::Application.routes.draw do
 
   resources :projects
 
-  resources :posts
+  #resources :posts
   
   get 'get_random_quote' => 'quotes#get_random_quote'
 
