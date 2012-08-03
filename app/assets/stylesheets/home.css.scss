@@ -380,7 +380,8 @@ margin:auto;
           
           border-radius: 5px;
           left: 0px;
-          top: -183px;
+          top: 0;
+          display:none;
           position: absolute;
         }
         &.link-wrapper{
@@ -905,7 +906,8 @@ float:right;
           
           border-radius: 0px;
           left: 0px;
-          top: -340px;
+          top: 0px;
+          display:none;
           position: absolute;
         }
         .link-wrapper{
