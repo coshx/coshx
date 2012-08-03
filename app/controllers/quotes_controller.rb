@@ -1,5 +1,5 @@
 class QuotesController < ApplicationController
-  before_filter :authenticate_admin!, :except => [:index, :show]
+  before_filter :authenticate_admin!, :except => [:index, :show, :get_random_quote]
 
   # GET /quotes
   # GET /quotes.json
