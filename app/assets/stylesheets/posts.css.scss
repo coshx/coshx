@@ -21,3 +21,45 @@ margin: 0;
 background:white;
 }
 
+.post-comments {
+background:white;
+border:10px solid #1588C3;
+padding:50px 50px 20px 50px;
+margin-top:50px;
+color:#666666;
+h3 {
+font-size:16px;
+}
+}
+.post-content {
+font: 14px/24px "Droid Serif", serif;
+color:white;
+margin-top:20px;
+p {
+max-width: 800px;
+}
+}
+
+
+.post-show .post-description {
+font: bold 12px 'PT Sans', sans-serif;
+text-transform: uppercase;
+text-align: center;
+color: #CCCCCC;
+margin-bottom:20px;
+display:block;
+}
+.post-show .post-description span a {
+font: bold 12px 'PT Sans', sans-serif;
+text-transform: uppercase;
+text-align: center;
+color: #004264;
+}
+
+.post-show {
+padding: 0px 10px;
+}
+
+.share-buttons {
+overflow:hidden;
+}
