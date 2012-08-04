@@ -1,25 +1,25 @@
-= javascript_include_tag "pinterestize"
+.all-posts
+  - y = 0
+  .row
+    .four.columns
+    .eight.columns
+      - @posts.each do |p|
+        - if y != p.created_at.strftime("%Y")
+          ="</div></div>".html_safe
+          ="<div class='row'>".html_safe
+          ="<div class='four columns'>".html_safe
+          .year=@posts.first.created_at.strftime("%Y")
+          ="</div><div class='eight columns'>".html_safe
+        - y = p.created_at.strftime("%Y")
+        - link_text = p.title + " / " 
+        =link_to link_text.html_safe, p
+        
+    
+    
 
-%section.primary
-  %h1.formula Blog  
-  %ul.all_posts
-    - @posts.each do |post|
-      = render :partial => "post_box", :locals => {:post => post, :preview => true }
-      
+
   = paginate @posts
   
   
   
-  
-%script(type="text/javascript")
-  $(document).ready(function () {
-  var options = {
-  autoResize: true, // This will auto-update the layout when the browser window is resized.
-  container: $('.primary'), // Optional, used for some extra CSS styling
-  offset: 10, // Optional, the distance between grid items
-  //itemWidth: 240 // Optional, the width of a grid item
-  };
-  var handler = $('.all_posts li');
-  handler.wookmark(options);
-  //$('.all_posts li').wookmark({offset: 2});
-  });
+ 

@@ -63,3 +63,26 @@ padding: 0px 10px;
 .share-buttons {
 overflow:hidden;
 }
+.all-posts .year {
+padding-top:44px;
+text-align:center;
+height:120px;
+width:120px;
+border-radius:100px;
+font-size:32px;
+color:white;
+background: #1588C3;
+font-weight:bold;
+}
+.all-posts a {
+border-bottom: 1px solid #999999;
+display:block;
+padding-bottom:7px;
+margin-bottom:7px;
+color:#999999;
+font-size:18px;
+&:hover {
+color:#EEEEEE;
+}
+}
+
