@@ -9,6 +9,7 @@ Coshx::Application.routes.draw do
   #resources :posts
   
   get 'get_random_quote' => 'quotes#get_random_quote'
+  get 'generate_slugs' => 'admins#generate_slugs'
 
   # eg www.coshx.com redirects to coshx.com
   #   http://stackoverflow.com/a/7352878/283398
@@ -16,6 +17,7 @@ Coshx::Application.routes.draw do
 
   devise_for :admins
 
+  get 'profile/:slug' => "home#profile"
   get 'dashboard' => 'dashboard#index', :as => :admin_root
   get '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
 

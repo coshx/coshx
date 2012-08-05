@@ -20,4 +20,10 @@ class HomeController < ApplicationController
   def portfolio
     @clients = Client.all.shuffle # randomizing for fun
   end
+  
+  def profile
+    @folk = Admin.find_by_slug(params[:slug])
+    @other_folks = Admin.where("slug != #{params[:slug]}")
+  end
+  
 end
