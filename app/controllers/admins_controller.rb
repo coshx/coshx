@@ -12,4 +12,20 @@ class AdminsController < ApplicationController
     render :text => slugs.html_safe + '<br>Slugs were generated'.html_safe
   end
   
+  
+   def update
+    @folk = current_admin
+
+    respond_to do |format|
+      if @folk.update_attributes(params[:folk])
+        format.html { redirect_to @folk, notice: 'Client was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @folk.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+  
+  
 end
