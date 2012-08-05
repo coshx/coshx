@@ -200,6 +200,7 @@ position:relative;
   position:relative;
   
   .footer-content {
+    position:relative;
     padding-top:30px;
     color:white;
     padding-bottom:200px;
@@ -421,3 +422,17 @@ width:30px;
 height:1px;
 background:#004264;
 }
+
+.footer-gotop-ribbon {
+content:' ';
+width:50px;
+height:76px;
+position:absolute;
+top:0px;
+right:0px;
+background: image-url("footer_tag.png");
+  &:hover {
+  background-position: -50px 0;
+  }
+}
+

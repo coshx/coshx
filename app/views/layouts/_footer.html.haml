@@ -1,7 +1,6 @@
 %footer.container
   %div.row.footer-content
-    #footer-nav
-      %a{:id => "top-nav", :href => "#top"}
+    %a.footer-gotop-ribbon{:href => '#top', :id => "top-nav"}
     %h2.blogpost Latest blog posts
     -unless last_two_posts[0].nil? && last_two_posts[1].nil?
       #latest-blogs.row
