@@ -1,4 +1,4 @@
-%div#slider
+%div#folk-slider
   -if @folk
     %div.slide.first-slide
       =render :partial => "folk", :locals => {:folk => @folk}
@@ -11,7 +11,7 @@
 
 %script(type="text/javascript")
   $(document).ready ( function () {
-  $('#slider').orbit({
+  $('#folk-slider').orbit({
   animation: 'horizontal-push',                  // fade, horizontal-slide, vertical-slide, horizontal-push
   animationSpeed: 800,                // how fast animtions are
   timer: false, 			 // true or false to have the timer

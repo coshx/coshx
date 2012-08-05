@@ -1,0 +1,30 @@
+%h3 My personal profile
+
+=form_tag("/profile_update", :method => "post") do |f|
+  %ul
+    %li
+      %h4.title Bio
+      .content
+        =text_area_tag(:bio, current_admin.bio)
+    %li
+      %h4.title Accounts
+      .content
+        Twitter
+        =text_field_tag(:twitter, current_admin.twitter)
+        Github
+        =text_field_tag(:github, current_admin.github)
+    %li
+      %h4.title Likes and Dislikes
+      .content
+        Likes
+        =text_field_tag(:likes, current_admin.likes)
+        Dislikes
+        =text_field_tag(:dislikes, current_admin.dislikes)
+    %li
+      %h4.title Other
+      .content
+        =text_field_tag(:quote, current_admin.quote)
+      
+    
+
+  =submit_tag("Save my data!", :class => 'large button')

@@ -17,6 +17,10 @@ Coshx::Application.routes.draw do
 
   devise_for :admins
 
+  #admins urls
+  get 'edit_my_profile' => 'admins#edit'
+  match 'profile_update' => 'admins#update'
+  
   get 'profile/:slug' => "home#profile"
   get 'dashboard' => 'dashboard#index', :as => :admin_root
   get '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }

@@ -1,9 +1,20 @@
 
-=image_tag("team/#{folk.slug}.png")
-%h1.folk_name=folk.name
-%p=folk.bio.html_safe
-%p=folk.likes
-%p=folk.dislikes
-%p=folk.github
-%p=folk.twitter
+-if Coshx::Application.assets.find_asset("team/#{folk.slug}.png").nil?
+  =image_tag("team/gabe_kopley.png")
+-else
+  =image_tag("team/#{folk.slug}.png")
+
+
+
+.content
+  %h1.folk_name=folk.name
+  %p.folk_bio=folk.bio.html_safe
+  .folk_header LIKES
+  %span=folk.likes
+  .folk_header DISLIKES
+  %span=folk.dislikes
+  .folk_header GITHUB
+  %span=folk.github
+  .folk_header TWITTER
+  %span=folk.twitter
 
