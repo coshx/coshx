@@ -12,6 +12,7 @@ Coshx::Application.routes.draw do
   
   get 'get_random_quote' => 'quotes#get_random_quote'
   get 'generate_slugs' => 'admins#generate_slugs'
+  get 'thank_you' => 'messages#thank_you'
   
   get 'contact' => 'home#contact_us'
 

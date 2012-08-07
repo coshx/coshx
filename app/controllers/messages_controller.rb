@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_filter :authenticate_admin!, :except => [:create]
+  before_filter :authenticate_admin!, :except => [:create, :thank_you]
 
   # GET /messages
   # GET /messages.json
@@ -46,10 +46,11 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        format.html { redirect_to "/", notice: 'Your message was sent' }
+        format.html { redirect_to "/thank_you", notice: 'Your message was sent' }
         format.json { render json: @message, status: :created, location: @message }
       else
-        format.html { render action: "new" }
+        format.html { redirect_to "/thank_you" }
+        #format.html { render action: "new" }
         format.json { render json: @message.errors, status: :unprocessable_entity }
       end
     end
@@ -82,4 +83,9 @@ class MessagesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def thank_you
+  end
+  
+  
 end
