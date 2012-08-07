@@ -2,7 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+.popover-content p {
+font-size:12px;
+}
 
 
 .short-white-line {
@@ -640,7 +642,7 @@ section#about-us p{
 }
 
 #about-stats ul.social li.blog{
-	width: 104px;
+	width: 154px;
 }
 
 #about-stats ul.social li.lunch{
