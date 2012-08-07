@@ -1,0 +1,74 @@
+= form_for @message, :html => { :id => 'quote-form'} do |f|
+  -if @message.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@message.errors.count, "error")} prohibited this message from being saved:"
+      %ul
+        - @message.errors.full_messages.each do |msg|
+          %li= msg
+
+= form_for @message do |f|
+  -if @message.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@message.errors.count, "error")} prohibited this message from being saved:"
+      %ul
+        - @message.errors.full_messages.each do |msg|
+          %li= msg
+
+  .quote-slide.slide1.active
+    .field
+      = f.label :name
+      = f.text_field :name
+    .field
+      = f.label :company_name
+      = f.text_field :company_name
+    .field
+      = f.label :country
+      = f.text_field :country
+    .field
+      = f.label :phone
+      = f.text_field :phone
+    .field
+      = f.label :email
+      = f.text_field :email
+    .link
+      %a.dark-blue-arrow.next-link{:href => '#', "data-slide" => '2'}
+        ='Continue to The Next Step <div class="arrow"></div>'.html_safe
+      
+  .quote-slide.slide2
+    .field  
+      = f.label :project_description
+      = f.text_area :project_description
+    .field
+      = f.label :deadline
+      = f.text_field :deadline
+    .link
+      %a.dark-blue-arrow.next-link{:href => '#', "data-slide" => '1'}
+        ='← Back'.html_safe
+      %a.dark-blue-arrow.next-link{:href => '#', "data-slide" => '3'}
+        ='Continue to The Next Step <div class="arrow"></div>'.html_safe
+    
+  .quote-slide.slide3  
+    .field
+      = f.label :budget
+      = f.text_field :budget
+    .field
+      = f.label :comment
+      = f.text_area :comment
+    .link
+      %a.dark-blue-arrow.next-link{:href => '#', "data-slide" => '2'}
+        ='← Back'.html_safe
+      %a.dark-blue-arrow.quote-submit-link{:href => '#'}
+        ='Save <div class="arrow"></div>'.html_safe
+
+%script(type="text/javascript")
+  $(document).ready(function () {
+  $(".next-link").click(function (e) {
+  e.preventDefault();
+  $(".quote-slide").hide();
+  $(".slide" + $(this).attr("data-slide")).show();  
+  });
+  $(".quote-submit-link").click(function (e) {
+  e.preventDefault();
+  $("#quote-form").submit();
+  });
+  });

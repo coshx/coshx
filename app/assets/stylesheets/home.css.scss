@@ -7,6 +7,15 @@
 
 
 
+.with_maps {
+div h5 {
+margin-top:50px;
+margin-bottom:0px;
+}
+div .graytext {
+margin-bottom:5px;
+}
+}
 
 
 
@@ -22,6 +31,12 @@ body div#slider {
 height:900px !important;
 }
 }
+.centre {
+margin-left:auto;
+margin-right:auto;
+text-align:center;
+}
+
 
 #slider {
 text-align:center;
@@ -50,11 +65,21 @@ height:700px !important;
     text-align:center;
     color: gray;
     font: 14px / 24px "Droid Serif", serif;
-    margin: 22px 0px;
+
   }
+  
+  h5 {
+    margin-bottom:0px;
+    }
 
 }
 
+  .graytext {
+    display:block;
+    //text-align:center;
+    color: gray;
+    font: 14px / 24px "Droid Serif", serif;
+  }
 
 #features {
  /* @include w960;*/

@@ -1,0 +1,85 @@
+// Place all the styles related to the Messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.bluu {
+background: #1588C3;
+margin-top:0px;
+padding-top:30px;
+padding-bottom:30px;
+overflow:hidden;
+
+
+
+.quote-slide {
+display:none;
+
+}
+.active {
+display:block;
+}
+
+
+label {
+font: bold 11px 'PT Sans', sans-serif;
+color: #004264;
+text-transform: uppercase;
+}
+input, textarea {
+border:1px solid #004264;
+max-width:450px;
+}
+}
+
+.long-field textarea {
+max-width:1440px !important;
+}
+
+body .container .row .message-tabs {
+border:0;
+max-width: 500px;
+margin-left:auto;
+margin-right:auto;
+  dd {
+  border:0px;
+  width:48%;
+  border:none;
+  margin-top:0;
+  }
+  a {
+  padding:5px;
+  border:0px;
+  width:100%;
+  height:65px;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  cursor:pointer;
+  background: #004264;
+  color:#1588C3;
+  text-align:center;
+  display:block;
+  h5 {
+  margin-bottom:5px;
+  }
+  p {
+  font: 11px "Droid Serif", serif;
+  }
+  }
+
+  //margin-top:-100px;
+  .active a {
+  background: #1588C3 !important;
+  color:white !important;
+  }
+
+  .left-tab {
+  float:left;
+  }
+  .right-tab {
+  float:right;
+  }
+
+}
+
+

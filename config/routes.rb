@@ -1,5 +1,7 @@
 Coshx::Application.routes.draw do
 
+  resources :messages
+
   resources :clients
 
   resources :quotes
@@ -10,6 +12,8 @@ Coshx::Application.routes.draw do
   
   get 'get_random_quote' => 'quotes#get_random_quote'
   get 'generate_slugs' => 'admins#generate_slugs'
+  
+  get 'contact' => 'home#contact_us'
 
   # eg www.coshx.com redirects to coshx.com
   #   http://stackoverflow.com/a/7352878/283398

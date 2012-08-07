@@ -26,4 +26,8 @@ class HomeController < ApplicationController
     @other_folks = Admin.where("slug != '#{params[:slug]}'")
   end
   
+  def contact_us
+    @message = Message.new
+  end
+  
 end

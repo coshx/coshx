@@ -1,0 +1,28 @@
+= form_for @message, :html => { :id => 'contact-form'} do |f|
+  -if @message.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@message.errors.count, "error")} prohibited this message from being saved:"
+      %ul
+        - @message.errors.full_messages.each do |msg|
+          %li= msg
+
+  .text-field
+    = f.label :name
+    = f.text_field :name
+  .text-field
+    = f.label :email
+    = f.text_field :email
+  .long-field
+    = f.label :text
+    = f.text_area :text
+  .link
+    %a.dark-blue-arrow.submit-link{:href => '#'}
+      ='Save <div class="arrow"></div>'.html_safe
+
+%script(type="text/javascript")
+  $(document).ready(function () {
+  $(".submit-link").click(function (e) {
+  e.preventDefault();
+  $("#contact-form").submit();
+  });
+  });
