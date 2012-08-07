@@ -6,33 +6,40 @@
         - @message.errors.full_messages.each do |msg|
           %li= msg
 
-= form_for @message do |f|
-  -if @message.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@message.errors.count, "error")} prohibited this message from being saved:"
-      %ul
-        - @message.errors.full_messages.each do |msg|
-          %li= msg
-
   .quote-slide.slide1.active
-    .field
-      = f.label :name
-      = f.text_field :name
-    .field
-      = f.label :company_name
-      = f.text_field :company_name
-    .field
-      = f.label :country
-      = f.text_field :country
-    .field
-      = f.label :phone
-      = f.text_field :phone
-    .field
-      = f.label :email
-      = f.text_field :email
-    .link
-      %a.dark-blue-arrow.next-link{:href => '#', "data-slide" => '2'}
-        ='Continue to The Next Step <div class="arrow"></div>'.html_safe
+    .row.name
+      .six.columns
+        .text-field
+          = f.label :name
+          = f.text_field :name
+      .six.columns
+        .field-comment.hidden
+          .arrow-left
+          .text Tell me your name, sir
+    .row.email
+      .six.columns
+        .text-field
+          = f.label :email
+          = f.email_field :email
+      .six.columns
+        .field-comment.hidden
+          .arrow-left
+          .text We cant go without your email
+        
+    .row
+      .twelve.columns
+        .field
+          = f.label :company_name
+          = f.text_field :company_name
+        .field
+          = f.label :country
+          = f.text_field :country
+        .field
+          = f.label :phone
+          = f.text_field :phone
+        .link
+          %a.dark-blue-arrow.next-link{:href => '#', "data-slide" => '2'}
+            ='Continue to The Next Step <div class="arrow"></div>'.html_safe
       
   .quote-slide.slide2
     .field  
@@ -61,6 +68,30 @@
         ='Save <div class="arrow"></div>'.html_safe
 
 %script(type="text/javascript")
+  function validate_quote() {
+  name = $("#quote-form #message_name").val();
+  email = $("#quote-form #message_email").val();
+  var result = 1;
+  if (name == "") {
+  $("#quote-form .name .field-comment").fadeIn(500);
+  $("#quote-form .name .field-comment").effect("shake", { times:3 }, 150);
+  result = 5;
+  } else {
+  $("#quote-form .name .field-comment").fadeOut(500);
+  } 
+  if (!validateEmail(email)) {
+  $("#quote-form .email .field-comment").fadeIn(500);
+  $("#quote-form .email .field-comment").effect("shake", { times:3 }, 150);
+  result = 5;
+  } else {
+  $("#quote-form .email .field-comment").fadeOut(500);
+  }
+  if (result == 5) {
+  $(".quote-slide").hide();
+  $(".slide1").show();
+  }
+  return result;  
+  }
   $(document).ready(function () {
   $(".next-link").click(function (e) {
   e.preventDefault();
@@ -69,6 +100,6 @@
   });
   $(".quote-submit-link").click(function (e) {
   e.preventDefault();
-  $("#quote-form").submit();
+  if (validate_quote() ==1) $("#quote-form").submit();
   });
   });

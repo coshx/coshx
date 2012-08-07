@@ -5,24 +5,63 @@
       %ul
         - @message.errors.full_messages.each do |msg|
           %li= msg
-
-  .text-field
-    = f.label :name
-    = f.text_field :name
-  .text-field
-    = f.label :email
-    = f.text_field :email
-  .long-field
-    = f.label :text
-    = f.text_area :text
-  .link
-    %a.dark-blue-arrow.submit-link{:href => '#'}
-      ='Save <div class="arrow"></div>'.html_safe
+  .row.name
+    .six.columns
+      .text-field
+        = f.label :name
+        = f.text_field :name
+    .six.columns
+      .field-comment.hidden
+        .arrow-left
+        .text Tell me your name, sir
+        
+  .row.email
+    .six.columns
+      .text-field
+        = f.label :email
+        = f.email_field :email
+    .six.columns
+      .field-comment.hidden
+        .arrow-left
+        .text We cant go without your email
+  .row
+    .twelve.columns      
+      .long-field
+        = f.label :text
+        = f.text_area :text
+      .link
+        %a.dark-blue-arrow.submit-link{:href => '#'}
+          ='Save <div class="arrow"></div>'.html_safe
 
 %script(type="text/javascript")
+  function validateEmail(email) { 
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;  
+  return re.test(email);
+  } 
+  
+  function validate_contact() {
+  name = $("#contact-form #message_name").val();
+  email = $("#contact-form #message_email").val();
+  var result = 1;
+  if (name == "") {
+  $("#contact-form .name .field-comment").fadeIn(500);
+  $("#contact-form .name .field-comment").effect("shake", { times:3 }, 150);
+  result = 5;
+  } else {
+  $("#contact-form .name .field-comment").fadeOut(500);
+  } 
+  if (!validateEmail(email)) {
+  $("#contact-form .email .field-comment").fadeIn(500);
+  $("#contact-form .email .field-comment").effect("shake", { times:3 }, 150);
+  result = 5;
+  } else {
+  $("#contact-form .email .field-comment").fadeOut(500);
+  }
+  return result;  
+  }
   $(document).ready(function () {
   $(".submit-link").click(function (e) {
   e.preventDefault();
-  $("#contact-form").submit();
+  if (validate_contact()==1) $("#contact-form").submit();
   });
   });
