@@ -5,7 +5,13 @@
 
 
 
-
+.short-white-line {
+width:40px;
+height:6px;
+background:white;
+content:' ';
+margin:50px auto;
+}
 
 .with_maps {
 div h5 {
@@ -14,6 +20,9 @@ margin-bottom:0px;
 }
 div .graytext {
 margin-bottom:5px;
+}
+div img {
+border:6px solid white;
 }
 }
 
