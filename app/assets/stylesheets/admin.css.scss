@@ -1,9 +1,17 @@
 .folk_bio {
 padding-bottom:10px;
 maring-bottom:10px;
-border-bottom:2px solid #1588C3;
+
 
 }
+.folk_wrap {
+content:' ';
+border-top:2px solid #1588C3;
+padding-top:15px;
+margin-top:15px;
+text-align:left;
+}
+
 .folk_header {
 color:#1588C3;
 font: bold 18px 'PT Sans', sans-serif;
@@ -67,12 +75,12 @@ height:900px !important;
       font: bold 48px 'PT Sans', sans-serif;
       text-transform: uppercase;
       display:block;
-      text-align:center;
+      text-align:left;
     }  
 
   p {
     display:block;
-    text-align:center;
+    text-align:left;
     color: gray;
     font: 14px / 24px "Droid Serif", serif;
     margin: 22px 0px;
