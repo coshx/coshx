@@ -1,50 +1,13 @@
 %h1 PORTFOLIO
 
 %div.featured_projects
-  = "<div class=row>".html_safe
-  - @projects.each_with_index do |p, i|
-    ="</div>".html_safe if i % 3 == 0
-    ="<div class=row>".html_safe if i % 3 == 0
-    %div.four.columns
-      .fp_img{:class => "no#{i}"}
-        =image_tag p.picture_url if p.picture?
-        .overlay
-          .link-wrapper
-            %a.view{:href => "#"}
-            .separator
-            %a.case{:href => "#"}
-      - if admin_signed_in?
-        .admin_bar
-          %ul.link-list
-            %li= link_to 'Show', p
-            %li= link_to 'Edit', edit_project_path(p)
-            %li.divider
-            %li= link_to 'Destroy', p, :confirm => 'Are you sure?', :method => :delete, :style => "color:red;"
+  - rowify(@projects, 3).each_with_index do |projects, row_num|    
+    .row
+      - projects.each_with_index do |p, i|
+        %div.four.columns
+          =render :partial => "project", :locals => {:row=> row_num, :p => p, :i => i} if (row_num*3+i) < (@projects.count-1)
+          =render :partial => "your_project" if (row_num*3+i) == (@projects.count-1)
 
-  ="</div>".html_safe if @projects.length % 3 == 0
-  ="<div class=row>".html_safe if @projects.length % 3 == 0
-  %div.four.columns
-    .your_project
-      %a{:href => '/contact#quote'}
-        .cross
-          .cross1
-          .cross2
-        <span>Considering coshx for your next project?</span>
-      .overlay
-        .link-wrapper
-          %a.view{:href => "#"}
-          .separator
-          %a.case{:href => "#"}
-    - if admin_signed_in?
-      .admin_bar
-        %ul.link-list
-          %li= link_to 'Show', p
-          %li= link_to 'Edit', edit_project_path(p)
-          %li.divider
-          %li= link_to 'Destroy', p, :confirm => 'Are you sure?', :method => :delete, :style => "color:red;"
-
-
-  = "</div>".html_safe
 
 - if admin_signed_in?
   = link_to 'New Project', new_project_path, :class => "large blue button"

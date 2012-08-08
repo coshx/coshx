@@ -1,0 +1,14 @@
+.fp_img{:class => "no#{row*3 + i}"}
+  =image_tag p.picture_url if p.picture?
+  .overlay
+    .link-wrapper
+      %a.view{:href => "#"}
+      .separator
+      %a.case{:href => "#"}
+- if admin_signed_in?
+  .admin_bar
+    %ul.link-list
+      %li= link_to 'Show', p
+      %li= link_to 'Edit', edit_project_path(p)
+      %li.divider
+      %li= link_to 'Destroy', p, :confirm => 'Are you sure?', :method => :delete, :style => "color:red;"

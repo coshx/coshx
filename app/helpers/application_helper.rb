@@ -19,5 +19,17 @@ module ApplicationHelper
       raw "<li>" + link + "</li>"
     end
   end
+  
+  def rowify(things, row_length)
+    array_of_rows_of_things = []
+    ((things.count) / row_length.to_f).ceil.times do |row_num|
+      n = things.count - (row_num * row_length + row_length - 1)
+      n = [n, row_length - 1].max
+      n = [n, 0].max
+      row_of_things = things.slice((row_num * row_length)..((row_num * row_length) + n))
+      array_of_rows_of_things << row_of_things
+    end
+    array_of_rows_of_things
+  end
 
 end
