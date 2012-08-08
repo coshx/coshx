@@ -6,3 +6,61 @@
 text-align:center;
 padding:10px;
 }
+
+
+.featured_projects .your_project {
+        max-width:280px;
+        max-height:340px;
+        border:6px solid white;
+        background:#2BA6CB;
+        content:' ';
+        height:1280px;
+        a {
+        color:white;
+        text-transform:uppercase;
+                  span {
+          padding:0 30px 0 30px;
+          font-size:14px;
+          font-weight:bold;
+          text-align:center;
+          display:block;
+          line-height:140%;
+          }
+          .cross {
+          margin-top:120px;
+          margin-bottom:50px;
+          content:' ';
+          margin-left:auto;
+          margin-right:auto;
+          width:36px;
+          height:36px;
+          position:relative;
+
+            .cross1 {
+              top:14px;
+              height:8px;
+              width:100%;
+              position:absolute;
+              background:white;
+            }
+            .cross2 {
+              left:14px;
+              width:8px;
+              height:36px;
+              position:absolute;
+              background:white;
+            }
+
+          }
+        }
+        &:hover {
+          border:6px solid #2BA6CB;
+          background: white;
+          a {
+          color:#2BA6CB;
+          .cross div {
+          background:#2BA6CB !important;
+          }
+          }
+        }
+}

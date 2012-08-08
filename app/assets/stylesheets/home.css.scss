@@ -915,7 +915,7 @@ padding:50px 0px 0px 0px;
 .featured_projects div {
 margin-left:auto !important;
 margin-right:auto !important;
-float:none;
+position:static;
 }
 
 }
@@ -926,6 +926,10 @@ margin-right:auto;
 }
 .featured_projects .no2 {
 float:right;
+}
+.featured_projects .your_project {
+        max-width:280px;
+        max-height:340px;
 }
 
 .featured_projects .fp_img {
