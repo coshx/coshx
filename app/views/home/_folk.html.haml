@@ -2,13 +2,13 @@
 
 
 .row
-  .five.columns.push-seven
+  .five.columns.push-six
     -if Coshx::Application.assets.find_asset("team/#{folk.slug}.png").nil?
       =image_tag("team/gabe_kopley.png")
     -else
       =image_tag("team/#{folk.slug}.png")
 
-  .seven.columns.pull-five
+  .six.columns.pull-six
     .content
       .folk_header Nickname here
       %h1=folk.name
