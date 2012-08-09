@@ -6,9 +6,9 @@
       = link_to "", "#", :class => :point3
       = link_to "", "#", :class => :point4
       = image_tag "blueprint.png"
-    %h1
+    %h1{"data-action" => whereami, "data-index" => "1", "data-content" => "e"}
       FROM IDEA TO EXECUTION
-    %p
+    %p{"data-action" => whereami, "data-index" => "2", "data-content" => "e"}
       Here at Coshx we take complex problems and turn them into simple solutions.
       %br/
       Our highly skilled team of programmers and designers will take your product to the next level.
@@ -16,9 +16,8 @@
       We love sending those rockets to the moon - why not let us launch a rocket of a product for you?
       .divider
 
-      = link_to "#", :class => "blue-arrow" do
+      = link_to "#", :class => "the-button" do
         Read About How We Craft Software
-        .arrow
 
   %div.slide	
     = image_tag "blueprint.png"

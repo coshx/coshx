@@ -7,41 +7,41 @@
   %div.feature.four.columns
     = image_tag "people.png", :class => :people
     = render :partial => "coshx_blue_x", :locals => {:feature => "COMPANY"}
-    %p Meet the team, find out why we're different - and why you should hire us to work your next website or other software project.
-    = link_to about_path, :class => "blue-arrow" do
+    %p{"data-action" => whereami, "data-index" => "10", "data-content" => "e"}
+      Meet the team, find out why we're different - and why you should hire us to work your next website or other software project.
+    = link_to about_path, :class => "a-button" do
       About Us
-      .arrow
   %div.feature.four.columns
     = image_tag "services.png", :class => :gears
     = render :partial => "coshx_blue_x", :locals => {:feature => "SERVICES"}
-    %p Whether you're an established enterprise or a boostrapping startup, we want to work with you. Take a look at the services we offer.
-    = link_to services_path, :class => "blue-arrow" do
+    %p{"data-action" => whereami, "data-index" => "11", "data-content" => "e"}
+      Whether you're an established enterprise or a boostrapping startup, we want to work with you. Take a look at the services we offer.
+    = link_to services_path, :class => "a-button" do
       Our Services
-      .arrow
   %div.feature.four.columns
     = image_tag "projects.png", :class => :beaker
     = render :partial => "coshx_blue_x", :locals => {:feature => "PROJECTS"}
-    %p We've been fortunate enough to work on many great projects. Here's some highlights of the work we've done.
-    = link_to projects_path, :class => "blue-arrow" do
+    %p{"data-action" => whereami, "data-index" => "12", "data-content" => "e"}
+      We've been fortunate enough to work on many great projects. Here's some highlights of the work we've done.
+    = link_to projects_path, :class => "a-button" do
       Our Projects
-      .arrow
 
 .divider
 
 %section#contact-us
   = image_tag "mail.png"
-  %h2 DON'T BE SHY, SAY HELLO
+  %h2{"data-action" => whereami, "data-index" => "20", "data-content" => "e"}
+    DON'T BE SHY, SAY HELLO
 
-  %p Let's start up a conversation about what your needs are and how we can help. We're just a quick email away!
+  %p{"data-action" => whereami, "data-index" => "21", "data-content" => "e"}
+    Let's start up a conversation about what your needs are and how we can help. We're just a quick email away!
 
   -# Normally we'd use mail_to and not link_to for an email link, but this will eventually open a form, not be a mailto
-  = link_to "mailto:info@coshx.com", :class => ["first", "blue-arrow"] do
+  = link_to "mailto:info@coshx.com", :class => ["first", "a-button"] do
     Contact Us
-    .arrow
 
-  = link_to "mailto:info@coshx.com?subject=Coshx%20Labs%20quote%20request", :class => "white-arrow" do
+  = link_to "mailto:info@coshx.com?subject=Coshx%20Labs%20quote%20request", :class => "a-button white" do
     Request a FREE Quote
-    .arrow
 
 
 = render :partial => "projects/list", :locals => {:featured_projects => @featured_projects}
@@ -49,7 +49,7 @@
 
 .divider
 
-= render :partial => "clients/list", :locals => {:clients => @clients}
+=# render :partial => "clients/list", :locals => {:clients => @clients}
 
 
 .divider
