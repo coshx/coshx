@@ -1,3 +1,8 @@
+@media only screen and (min-width:960px) {
+services_box {
+height:642px;
+}
+}
 .services_box {
 max-width:640px;
 margin-left:auto;
@@ -36,11 +41,17 @@ bottom:21.5%;
 background: url(services/middle.png);
 left:50%;
 top:50%;
+padding-top:30px;
 position:absolute;
 width:141px;
 height:163px;
 margin-left:-67px;
 margin-top:-81px;
+ &:hover {
+  .icon {
+  background-position-x:-70px;
+  }
+  }
 }
 
 
@@ -66,6 +77,9 @@ display:block;
   &:hover {
   border: 5px solid #004264;
   background: #1588C3;
+  .icon {
+  background-position-x:-70px;
+  }
   }
 
 }
@@ -93,4 +107,39 @@ background: url(star.png) no-repeat 0px 20px;
 }
 
 
+.icon {
+margin-top:15px;
+width:70px;
+height:70px;
+margin-left:auto;
+margin-right:auto;
+background:url(services/icons.png);
+background-poosition-x:0px;
+content:' ';
+&:hover {
+
+}
+}
+
+.idea-icon {
+background-position-y:-210px;
+}
+.books-icon {
+background-position-y:-420px;
+}
+.design-icon {
+background-position-y:-70px;
+}
+.design-icon {
+background-position-y:-70px;
+}
+.develop-icon {
+background-position-y:-140px;
+}
+.produce-icon {
+background-position-y:-350px;
+}
+.process-icon {
+background-position-y:-280px;
+}
 
