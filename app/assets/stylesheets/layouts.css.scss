@@ -253,8 +253,8 @@ position:relative;
 
 .footer-tweet {
 overflow:hidden;
-  padding: 0px 0px 10px 110px;
-  background: url("tweet.png") no-repeat;
+  padding: 15px 0px 15px 110px;
+  background: url("tweet.png") 0px 10px no-repeat;
   display:block;
   margin: 10px auto 0px;
   font: 12px / 58px "Droid Serif", serif;
@@ -406,7 +406,7 @@ border-left: 1px solid #004264;
 
 #latest-blogs {
 padding-bottom:20px;
-border-bottom: 1px solid #004264;
+border-bottom: 2px solid #004264;
 }
 
 .post .links, .post .links a {
