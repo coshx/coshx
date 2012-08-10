@@ -103,6 +103,12 @@ line-height:68px;
 font: 14px "PT Sans",sans-serif;
 color:white;
 overflow:hidden;
+
+-webkit-transition: all 0.3s ease-out;  /* Safari 3.2+, Chrome */
+     -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.5–12.00 */
+          transition: all 0.3s ease-out;  /* Firefox 16+, Opera 12.50+ */
+          
 &:hover {
 color: #1588C3 !important;
 }
@@ -362,8 +368,10 @@ color: #666;
 
 
 .post p {
-font: 14px/24px "Droid Serif", serif;
-font-size:12px;
+font-family: "Droid Serif", serif;
+font-size:13px;
+line-height:24px;
+display:inline-block;
 }
 .post .post_pic {
 margin-top:30px;
@@ -373,10 +381,12 @@ margin-right:auto;
 
 
 .post h2 a {
-font: bold 18px 'PT Sans', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-size:18px;
 color:#004264;
 text-transform:uppercase;
-line-height:10px;
+line-height:125%;
+display:inline-block;
 }
 .post-info {
 padding-top:15px;

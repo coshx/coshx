@@ -9,6 +9,12 @@ padding:10px;
 
 
 .featured_projects .your_project {
+
+-webkit-transition: all 0.9s ease-out;  /* Safari 3.2+, Chrome */
+     -moz-transition: all 0.9s ease-out;  /* Firefox 4-15 */
+       -o-transition: all 0.9s ease-out;  /* Opera 10.5–12.00 */
+          transition: all 0.9s ease-out;  /* Firefox 16+, Opera 12.50+ */
+
         max-width:280px;
         max-height:340px;
         border:6px solid white;

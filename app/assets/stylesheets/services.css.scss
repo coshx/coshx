@@ -1,3 +1,10 @@
+.services p {
+display: block;
+color: gray;
+font-family: "Droid Serif", serif;
+font-size:13px;
+}
+
 @media only screen and (min-width:960px) {
 services_box {
 height:642px;
@@ -85,7 +92,7 @@ display:block;
 }
 
 .star-header {
-margin-top:30px;
+margin-top:80px;
 border-top:2px solid #1588C3;
 border-bottom:1px dashed #1588C3;
 font: bold 18px 'PT Sans', sans-serif;
@@ -143,3 +150,25 @@ background-position-y:-350px;
 background-position-y:-280px;
 }
 
+
+.get-a-proposal {
+text-align:center;
+
+.graytext {
+font-size:18px;
+text-align:center;
+line-height:120%;
+display:block;
+margin:auto;
+}
+
+a {
+margin-top:30px;
+display:inline-block;
+}
+
+margin-top:30px;
+border-top:2px solid #1588C3;
+padding-top:40px;
+
+}

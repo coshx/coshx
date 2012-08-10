@@ -1,6 +1,9 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body p {
+line-height:140%;
+}
 
 .popover-content p {
 font-size:12px;
@@ -16,6 +19,9 @@ margin:50px auto;
 }
 
 .with_maps {
+.graytext {
+font-size:14px;
+}
 div h5 {
 margin-top:50px;
 margin-bottom:0px;
@@ -24,8 +30,16 @@ div .graytext {
 margin-bottom:5px;
 }
 div img {
+-webkit-transition: all 0.3s ease-out;  /* Safari 3.2+, Chrome */
+     -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.5–12.00 */
+          transition: all 0.3s ease-out;  /* Firefox 16+, Opera 12.50+ */
 border:6px solid white;
+&:hover {
+border:6px solid #1588C3;;
 }
+}
+
 }
 
 
@@ -75,7 +89,9 @@ height:700px !important;
     display:block;
     text-align:center;
     color: gray;
-    font: 14px / 24px "Droid Serif", serif;
+    font-family: "Droid Serif", serif;
+    font-size: 18px;
+    margin-bottom:30px;
 
   }
   
@@ -89,7 +105,9 @@ height:700px !important;
     display:block;
     //text-align:center;
     color: gray;
-    font: 14px / 24px "Droid Serif", serif;
+    font-family: "Droid Serif", serif;
+    font-size:18px;
+    max-width:600px;
   }
 
 #features {
@@ -129,7 +147,7 @@ padding: 30px 0px;
     }
     p {
       color: gray;
-      font: 12px 'Droid Serif', serif;
+      font: 13px 'Droid Serif', serif;
       margin-bottom: 30px;
       line-height: 150%;
     }
@@ -326,7 +344,7 @@ section#blueprint-image {
     }
     p {
       color: gray;
-      font: 12px 'Droid Serif', serif;
+      font: 13px 'Droid Serif', serif;
       margin-bottom: 30px;
       line-height: 150%;
     }
@@ -352,7 +370,7 @@ section#blueprint-image {
     }
     p {
       color: gray;
-      font: 12px 'Droid Serif', serif;
+      font: 13px 'Droid Serif', serif;
       margin-bottom: 30px;
     }
     a.first {
@@ -522,7 +540,7 @@ h1.formula{
 }
 
 section#about-us p{
-	font: 14px/24px 'Droid Serif', serif;
+	font: 18px 'Droid Serif', serif;
 	color: #b2b2b2;
 	margin: 30px 0px;
 }
@@ -729,6 +747,12 @@ section#team ul li.last{
 	  height: 180px;
 	  border-radius: 90px;
 	  border:solid 6px #ffffff;
+
+	  -webkit-transition: all 0.3s ease-out;  /* Safari 3.2+, Chrome */
+     -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.5–12.00 */
+          transition: all 0.3s ease-out;  /* Firefox 16+, Opera 12.50+ */
+
 	}
 	&:hover {
 		p {
@@ -744,6 +768,10 @@ section#team ul li.last{
 	font: bold 14px 'PT Sans', sans-serif;
 	text-align: center;
 	color: #FFF;
+	-webkit-transition: all 0.3s ease-out;  /* Safari 3.2+, Chrome */
+     -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.5–12.00 */
+          transition: all 0.3s ease-out;  /* Firefox 16+, Opera 12.50+ */
 	}
 	
 	
@@ -794,7 +822,7 @@ section#team ul li a:hover{
 */
 
 section#testimonials{
-	margin: 120px auto 205px;
+	margin: 120px auto 0px;
 	    h2 {
       font: bold 18px 'PT Sans', sans-serif;
       color: white;
@@ -915,7 +943,10 @@ padding:50px 0px 0px 0px;
 .featured_projects div {
 margin-left:auto !important;
 margin-right:auto !important;
-position:static;
+position:static !important;
+}
+.featured_projects .fp_img {
+float:none !important;
 }
 
 }
