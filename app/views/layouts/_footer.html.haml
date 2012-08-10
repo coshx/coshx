@@ -23,7 +23,7 @@
                   = link_to "Read more", post, :class => "read-more"
                   |
                   %a.comments{:href => "#{polymorphic_url(post)}#disqus_thread"}
-    .footer-tweet
+    .footer-tweet.row
       %p
         Loading tweets, just a moment...
       = link_to "https://www.twitter.com/coshxlabs", :class => "a-button darkblue" do
