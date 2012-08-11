@@ -82,11 +82,56 @@ display:block;
 
 
   &:hover {
-  border: 5px solid #004264;
+  border: 5px solid white;
   background: #1588C3;
   .icon {
-  background-position-x:-70px;
+  background-position:-70px 0;
   }
+  //background-position:-70 0px;
+.idea-icon {
+background-position:-70px  -210px;
+}
+.books-icon {
+background-position:-70px  -420px;
+}
+.design-icon {
+background-position:-70px  -70px;
+}
+.design-icon {
+background-position:-70px  -70px;
+}
+.develop-icon {
+background-position:-70px  -140px;
+}
+.produce-icon {
+background-position:-70px  -350px;
+}
+.process-icon {
+background-position:-70px  -280px;
+}
+.agile-icon {
+background-position:-70px  -490px;
+}
+.ruby-icon {
+background-position:-70px  -560px;
+}
+.test-driven-icon {
+background-position:-70px  -630px;
+}
+.design-small-icon {
+background-position:-70px  -770px;
+}
+.global-icon {
+background-position:-70px  -840px;
+}
+.access-icon {
+background-position:-70px  -910px;
+}
+
+
+
+  
+  
   }
 
 }
@@ -121,52 +166,101 @@ height:70px;
 margin-left:auto;
 margin-right:auto;
 background:url(services/icons.png);
-background-poosition-x:0px;
+background-position:0 0px;
 content:' ';
+z-index:20px;
 &:hover {
-
 }
 }
 
 .idea-icon {
-background-position-y:-210px;
+background-position:0 -210px;
+&:hover {
+background-position:-70px -210px;
+}
 }
 .books-icon {
-background-position-y:-420px;
+background-position:0 -420px;
+&:hover {
+background-position:-70px  -420px;
+}
 }
 .design-icon {
-background-position-y:-70px;
+background-position:0 -70px;
+&:hover {
+background-position:-70px  -70px;
+}
+
 }
 .design-icon {
-background-position-y:-70px;
+background-position:0 -70px;
+&:hover {
+background-position:-70px  -70px;
+}
+
 }
 .develop-icon {
-background-position-y:-140px;
+background-position:0 -140px;
+&:hover {
+background-position:-70px  -140px;
+}
+
 }
 .produce-icon {
-background-position-y:-350px;
+background-position:0 -350px;
+&:hover {
+background-position:-70px  -350px;
+}
+
 }
 .process-icon {
-background-position-y:-280px;
+background-position:0 -280px;
+&:hover {
+background-position:-70px  -280px;
+}
+
 }
 .agile-icon {
-background-position-y:-490px;
+background-position:0 -490px;
+&:hover {
+background-position:-70px  -490px;
+}
 }
 .ruby-icon {
-background-position-y:-560px;
+background-position:0 -560px;
+
+&:hover {
+background-position:-70px  -560px;
+}
 }
 .test-driven-icon {
-background-position-y:-630px;
+background-position:0 -630px;
+&:hover {
+background-position:-70px  -630px;
+}
+
 }
 .design-small-icon {
-background-position-y:-770px;
+background-position:0 -770px;
+&:hover {
+background-position:-70px  -770px;
+}
+
 }
 
 .global-icon {
-background-position-y:-770px;
+background-position:0 -840px;
+&:hover {
+background-position:-70px  -840px;
+}
+
 }
 .access-icon {
-background-position-y:-840px;
+background-position:0 -910px;
+&:hover {
+background-position:-70px  -910px;
+}
+
 }
 
 
