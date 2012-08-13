@@ -110,7 +110,7 @@ class ContentsController < ApplicationController
       end
     
     end
-
+    expire_page :controller => :home, :action => :services
     
     respond_to do |format|
       format.html { redirect_to contents_url }
