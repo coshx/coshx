@@ -12,6 +12,8 @@
     = auto_discovery_link_tag :atom, "/feed"
     = favicon_link_tag
   %body
+    .save_button
+      Save!
     %div.container
       %div#header.row
         - if admin_signed_in?
@@ -20,3 +22,6 @@
       %div#content.row
         = yield
     = render "layouts/footer"
+
+    
+

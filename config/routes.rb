@@ -1,5 +1,7 @@
 Coshx::Application.routes.draw do
 
+  resources :contents
+
   resources :messages
 
   resources :clients
@@ -9,6 +11,7 @@ Coshx::Application.routes.draw do
   resources :projects
 
   #resources :posts
+  match 'content_update' => 'contents#content_update'
   
   get 'get_random_quote' => 'quotes#get_random_quote'
   get 'generate_slugs' => 'admins#generate_slugs'

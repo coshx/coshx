@@ -1,8 +1,11 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  helper_method :last_two_posts, :random_quote, :whereami
+  helper_method :last_two_posts, :random_quote, :whereami, :contents
   
+  def contents
+    Content.all
+  end
   
   def last_two_posts
     @last_two_posts ||= Post.published.limit(2)

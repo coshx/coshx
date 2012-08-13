@@ -31,5 +31,27 @@ module ApplicationHelper
     end
     array_of_rows_of_things
   end
+  
+  def editable(index)
+    
+    result = {}
+    
+    result = {:contenteditable => 'true',
+              'data-tag' => whereami + "/" + index.to_s,
+              :class => "editable"} if admin_signed_in?
+
+    result
+  
+  end
+
+  def content(index)
+    wmi = {}
+    wmi = whereami + "/" + index.to_s
+              
+    c = Content.find_by_action(wmi)
+    c.value if c.present?
+    
+  end
+  
 
 end
