@@ -33,7 +33,9 @@ $("document").ready ->
           if $this.data('before') isnt $this.html()
               $this.data 'before', $this.html()
               $this.trigger('change')
-              $(".save_button").fadeIn(1000);
+              $(".save_button").fadeIn(1000)
+      .live 'blur', ->
+          $(".save_button").effect("shake", { times:5 }, 150)
           return $this
           
   $('.save_button').click ->
