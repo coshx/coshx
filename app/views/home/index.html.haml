@@ -8,21 +8,21 @@
     = image_tag "people.png", :class => :people
     = render :partial => "coshx_blue_x", :locals => {:feature => "COMPANY"}
     %p{editable("company_overview")}
-      Meet the team, find out why we're different - and why you should hire us to work your next website or other software project.
+      =content("company_overview")
     = link_to about_path, :class => "a-button" do
       About Us
   %div.feature.four.columns
     = image_tag "services.png", :class => :gears
     = render :partial => "coshx_blue_x", :locals => {:feature => "SERVICES"}
     %p{editable("services_overview")}
-      Whether you're an established enterprise or a boostrapping startup, we want to work with you. Take a look at the services we offer.
+      =content("services_overview")
     = link_to services_path, :class => "a-button" do
       Our Services
   %div.feature.four.columns
     = image_tag "projects.png", :class => :beaker
     = render :partial => "coshx_blue_x", :locals => {:feature => "PROJECTS"}
     %p{editable("projects_overview")}
-      We've been fortunate enough to work on many great projects. Here's some highlights of the work we've done.
+      =content("projects_overview")
     = link_to projects_path, :class => "a-button" do
       Our Projects
 
@@ -31,10 +31,10 @@
 %section#contact-us
   = image_tag "mail.png"
   %h2{editable("frontpage_contact_header")}
-    DON'T BE SHY, SAY HELLO
+    =content("frontpage_contact_header")
 
   %p{editable("frontpage_contact_text")}
-    Let's start up a conversation about what your needs are and how we can help. We're just a quick email away!
+    =content("frontpage_contact_text")
 
   -# Normally we'd use mail_to and not link_to for an email link, but this will eventually open a form, not be a mailto
   = link_to "mailto:info@coshx.com", :class => ["first", "a-button"] do

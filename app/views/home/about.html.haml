@@ -1,6 +1,8 @@
 %section#about-us
-  %h1.formula{editable("about page title")} About Us
-  %p{editable("about page text")} We're a distributed team of people passionate about software. Here's a little more about each of us.
+  %h1.formula{editable("about page title")}
+    =content("about page title")
+  %p{editable("about page text")}
+    =content("about page text")
 
   #about-stats.row
     %ul.team

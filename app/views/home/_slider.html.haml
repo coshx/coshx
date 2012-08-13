@@ -7,13 +7,10 @@
       = link_to "", "#", :class => :point4
       = image_tag "blueprint.png"
     %h1{editable("slide1 title")}
-      FROM IDEA TO EXECUTION
+      =content("slide1 title")
     %p{editable("slide1 description")}
-      Here at Coshx we take complex problems and turn them into simple solutions.
-      %br/
-      Our highly skilled team of programmers and designers will take your product to the next level.
-      %br/
-      We love sending those rockets to the moon - why not let us launch a rocket of a product for you?
+      =content("slide1 description")
+      
       .divider
 
       = link_to "#", :class => "the-button" do
