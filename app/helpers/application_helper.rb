@@ -49,7 +49,7 @@ module ApplicationHelper
     wmi = whereami + "/" + index.to_s
               
     c = Content.find_by_action(wmi)
-    c.value if c.present?
+    c.value.html_safe if c.present?
     
   end
   
