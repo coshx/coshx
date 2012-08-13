@@ -7,21 +7,21 @@
   %div.feature.four.columns
     = image_tag "people.png", :class => :people
     = render :partial => "coshx_blue_x", :locals => {:feature => "COMPANY"}
-    %p{"data-action" => whereami, "data-index" => "10", "data-content" => "e"}
+    %p{editable("company_overview")}
       Meet the team, find out why we're different - and why you should hire us to work your next website or other software project.
     = link_to about_path, :class => "a-button" do
       About Us
   %div.feature.four.columns
     = image_tag "services.png", :class => :gears
     = render :partial => "coshx_blue_x", :locals => {:feature => "SERVICES"}
-    %p{"data-action" => whereami, "data-index" => "11", "data-content" => "e"}
+    %p{editable("services_overview")}
       Whether you're an established enterprise or a boostrapping startup, we want to work with you. Take a look at the services we offer.
     = link_to services_path, :class => "a-button" do
       Our Services
   %div.feature.four.columns
     = image_tag "projects.png", :class => :beaker
     = render :partial => "coshx_blue_x", :locals => {:feature => "PROJECTS"}
-    %p{"data-action" => whereami, "data-index" => "12", "data-content" => "e"}
+    %p{editable("projects_overview")}
       We've been fortunate enough to work on many great projects. Here's some highlights of the work we've done.
     = link_to projects_path, :class => "a-button" do
       Our Projects
@@ -30,10 +30,10 @@
 
 %section#contact-us
   = image_tag "mail.png"
-  %h2{"data-action" => whereami, "data-index" => "20", "data-content" => "e"}
+  %h2{editable("frontpage_contact_header")}
     DON'T BE SHY, SAY HELLO
 
-  %p{"data-action" => whereami, "data-index" => "21", "data-content" => "e"}
+  %p{editable("frontpage_contact_text")}
     Let's start up a conversation about what your needs are and how we can help. We're just a quick email away!
 
   -# Normally we'd use mail_to and not link_to for an email link, but this will eventually open a form, not be a mailto

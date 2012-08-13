@@ -70,10 +70,10 @@ background:white;
 
 .white {
 background: #1588C3;
-color: #004264;
+color: #1588C3;
 &:hover {
-color:white;
-}
+background:white !important;
+color:#004264;}
 }
 
 
