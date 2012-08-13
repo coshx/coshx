@@ -16,10 +16,18 @@
       = link_to "#", :class => "the-button" do
         Read About How We Craft Software
 
-  %div.slide	
-    = image_tag "blueprint.png"
-  %div.slide
-    = image_tag "blueprint.png"
+  %div.slide.second-slide
+    .displays
+      = image_tag "slider_two.png"
+    %h1{editable("slide2 title")}
+      =content("slide2 title")
+    %p{editable("slide2 description")}
+      =content("slide2 description")
+      
+      .divider
+
+      = link_to "#", :class => "the-button" do
+        Read About How We Craft Software
 
 %script(type="text/javascript")
   $(document).ready ( function () {
