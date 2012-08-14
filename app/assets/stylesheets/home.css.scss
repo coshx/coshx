@@ -361,8 +361,7 @@ section#blueprint-image {
     /*@include w960;*/
 
     text-align: center;
-    padding: 53px 0px;
-    border-bottom: 2px solid #1588C3;
+    padding: 53px 0px 0px 0px;
     h2 {
       font: bold 18px 'PT Sans', sans-serif;
       color: white;
@@ -1030,4 +1029,22 @@ top:0px;
 .displays img {
 margin-top:50px;
 margin-bottom:70px;
+}
+
+
+
+@media only screen and (max-width:500px) {
+#logo {
+margin:auto;
+margin-top:150px !important;
+margin-bottom:100px !important;
+display:block;
+}
+.jobs {
+left:10px !important;
+}
+#ribbon {
+right:10px !important;
+}
+
 }
