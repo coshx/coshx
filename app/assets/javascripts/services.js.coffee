@@ -33,16 +33,13 @@ $("document").ready ->
           if $this.data('before') isnt $this.html()
               $this.data 'before', $this.html()
               $this.trigger('change')
-              $(".save_button").fadeIn(1000)
-      .live 'blur', ->
-          $(".save_button").effect("shake", { times:5 }, 150)
-          return $this
+              $(".save_button").fadeIn(1000)     
           
   $('.save_button').click ->
        c = $("[contenteditable]")
        data1 = {}
        c.each ->
-          data1[$(this).attr('data-tag')] = $(this).html()
+          data1[$(this).attr('data-tag')] = $(this).text()
         
        
        $.post(

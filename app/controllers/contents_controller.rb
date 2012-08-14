@@ -99,13 +99,13 @@ class ContentsController < ApplicationController
   def content_update
     
     params[:data].each do |p|
-    
+      html_value = p[1]
       c = Content.find_by_action(p[0])
       if c.blank? 
-        Content.new(:action => p[0], :value => p[1]).save!
+        Content.new(:action => p[0], :value => html_value).save!
         message = "created!"
       else
-        c.update_attributes(:value => p[1])
+        c.update_attributes(:value => html_value)
         message = "Updated!"
       end
     
