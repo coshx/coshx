@@ -101,7 +101,7 @@ width:17%;
 height:25px;
 content:' ';
 display:block;
-background: url(triangle.png) no-repeat center 2px;
+background: url(triangle.png) no-repeat center 1px;
 position:absolute;
 }
 }
@@ -216,7 +216,7 @@ position:relative;
       height:25px;
       content:' ';
       display:block;
-      background: url(triangle.png) no-repeat center 2px;
+      background: url(triangle.png) no-repeat center 1px;
       position:absolute;
       }
     }
@@ -404,7 +404,7 @@ color: #666;
 .post p {
 font-family: "Droid Serif", serif;
 font-size:13px;
-line-height:24px;
+line-height:23px;
 display:inline-block;
 }
 .post .post_pic {

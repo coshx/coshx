@@ -78,10 +78,7 @@
   %ul
     - @coshx_folks.each_with_index do |person, i|
       %li
-        %a{:href => person.url}
-          .portrait
-
-          %div(style="width:180px;height:180px;background:url(#{Gravatar.new(person.email).image_url(:size => 180)});border-radius:100px;")
+        %a{:href => person.url, :class => 'about-us-avatar'}(style="background:url(#{Gravatar.new(person.email).image_url(:size => 180)});")
           
           %p
             = person.name
@@ -92,11 +89,6 @@
         %p
           You?
   
-  %section#testimonials.row
-    %header.divider
-      %h2 Testimonials
-      = link_to " ", "/get_random_quote", :remote => true, :class => "test-nav next"
-      = link_to " ", "/get_random_quote", :remote => true, :class => "test-nav prev"
-    = render :partial => "quotes/random_quote", :locals => {:random_quote => random_quote}
+= render :partial => 'home/testimonials'
 
 
