@@ -1,8 +1,8 @@
 %section#featured-projects
-  %header.divider
-    %h2 Featured Projects
-    = link_to "#", :class => "a-button show-on-desktops" do
-      See More Case Studies
+  %h2.star-header
+    Featured Projects
+    = link_to 'See More Case Studies', "#", :class => "a-button"
+          
 
 %div.featured_projects.row
   - featured_projects.each_with_index do |fp, i|
