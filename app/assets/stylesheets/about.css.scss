@@ -2,34 +2,32 @@
 background:#1588C3;
 position:relative;
 padding-bottom:50px;
-
-&:after {
+  &:after {
   content:' ';
-	width: 221px;
-	height: 88px;
-	position: absolute;	
-	bottom: -50px;
-	left: -111px;
-	margin-left:50%;
-	background: image-url("about-arrow.png") no-repeat;
-	z-index: -1;
-	}
-	
+  width: 221px;
+  height: 88px;
+  position: absolute;	
+  bottom: -50px;
+  left: -111px;
+  margin-left:50%;
+  background: image-url("about-arrow.png") no-repeat;
+  z-index: -1;
+  }	
 	p {
 	font: 12px 'Droid Serif', serif;
   color: #004264;
 	}
 	h3 {
-	    font-family: 'Droid Sans', sans-serif;
-      font-size: 14px;
-      font-style: normal;
-      font-variant: normal;
-      font-weight: bold;
-      color:#004264;
-      text-align: -webkit-auto;
-      text-rendering: optimizelegibility;
-      text-transform: uppercase;
-    }
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  color:#004264;
+  text-align: -webkit-auto;
+  text-rendering: optimizelegibility;
+  text-transform: uppercase;
+  }
   h2 {
   font: bold 48px/46px "Droid Sans", sans-serif;
   color: #004264; 
@@ -42,27 +40,25 @@ padding-bottom:50px;
   padding:0 20px;
   }
   .small-icons {
-  .columns div {
-  margin:10px;
-  padding:0px 10px;
-  width:140px;
-  float:left;
-  height:100px;
-  }
-  &:after {
-  clear:both;
-  }
-  .about-stats-icons {
-  overflow:hidden;
-  }
-  
-  
-  h3 {
-  font-size: 12px !important;
-  }
-  h2 {
-  font-size:30px !important;
-  }
+    .columns div {
+    margin:10px;
+    padding:0px 10px;
+    width:140px;
+    float:left;
+    height:100px;
+    }
+    &:after {
+    clear:both;
+    }
+    .about-stats-icons {
+    overflow:hidden;
+    }  
+    h3 {
+    font-size: 12px !important;
+    }
+    h2 {
+    font-size:30px !important;
+    }
   }
   .big-icons {
     img {
@@ -77,11 +73,9 @@ padding-bottom:50px;
 
 
 #team {
-
-ul {
-overflow:hidden;
-}
-
+  ul {
+  overflow:hidden;
+  }
 }
 
 

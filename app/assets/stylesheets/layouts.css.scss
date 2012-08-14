@@ -90,6 +90,20 @@ ul#nav li {
 float:left;
 width:16.6%;
 background: url(menu-border.png) no-repeat right 6px;
+border-bottom:1px solid #1588C3;
+
+&.selected {
+a:after {
+text-align:center !important;
+margin-top:20px;
+padding-left:80px;
+content:'\\/';
+display:block;
+background: url() no-repeat center top;
+position:absolute;
+}
+}
+
 &:last-child {
 background:none;
 }
@@ -98,7 +112,7 @@ a {
 padding-top:20px;
 text-align: center;
 display:block;
-height: 68px;
+height: 60px;
 line-height:68px;
 font: 14px "PT Sans",sans-serif;
 color:white;
