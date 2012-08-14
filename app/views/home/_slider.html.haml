@@ -29,6 +29,21 @@
       = link_to "#", :class => "the-button" do
         Read About How We Craft Software
 
+
+  %div.slide.third-slide
+    .displays
+      = image_tag "slider_three.png"
+    %h1{editable("slide3 title")}
+      =content("slide3 title")
+    %p{editable("slide3 description")}
+      =content("slide3 description")
+      
+      .divider
+
+      = link_to "#", :class => "the-button" do
+        Read About How We Craft Software
+
+
 %script(type="text/javascript")
   $(document).ready ( function () {
   $('#slider').orbit({
