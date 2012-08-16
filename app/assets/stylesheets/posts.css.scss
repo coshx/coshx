@@ -16,6 +16,8 @@ box-sizing:         border-box;
 list-style-type: none;
 position: relative; 
 margin: 0;
+
+
 }
 .all_posts li:first-child {
 background:white;
@@ -74,15 +76,26 @@ color:white;
 background: #1588C3;
 font-weight:bold;
 }
-.all-posts a {
-border-bottom: 1px solid #999999;
-display:block;
-padding-bottom:7px;
-margin-bottom:7px;
-color:#999999;
-font-size:18px;
-&:hover {
-color:#EEEEEE;
-}
-}
 
+.all-posts {
+
+  a {
+  border-bottom: 1px solid #999999;
+  display:block;
+  padding-bottom:7px;
+  margin-bottom:7px;
+  color:#999999;
+  font-size:18px;
+    &:hover {
+    color:#EEEEEE;
+    }
+  }
+
+
+  .row {
+  padding-top:20px;
+  padding-bottom:20px;
+  }
+
+
+}
