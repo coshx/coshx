@@ -1,16 +1,18 @@
 .all-posts
   - y = 0
+  
   .row
     .four.columns
     .eight.columns
       - @posts.each do |p|
-        - if y != p.posted_on.strftime("%Y")
+        - year = (p.posted_on.strftime("%Y").present? ? p.posted_on.strftime("%Y") : p.created_at.strftime("%Y"))
+        - if y != year
           ="</div></div>".html_safe
           ="<div class='row'>".html_safe
           ="<div class='four columns'>".html_safe
-          .year=p.posted_on.strftime("%Y")
+          .year=year
           ="</div><div class='eight columns'>".html_safe
-        - y = p.posted_on.strftime("%Y")
+        - y = year
         - link_text = p.title + " / " 
         =link_to link_text.html_safe, p
         
