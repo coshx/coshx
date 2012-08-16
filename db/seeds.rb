@@ -199,10 +199,16 @@ end
 puts "Created Service #{service.title}"
 
 
-
+puts "Creating POSTS..."
 #BLOG
 
-Post.create(:title => 'Startup Weekend: Charlottesville', :author_id => '4', :created_at => '2012-03-25 04:14:32 UTC', :updated_at => '2012-03-25 04:14:32 UTC', :body => <<EOF
+post = Post.find_or_create_by_title('Startup Weekend: Charlottesville') do |post|
+  post.title = 'Startup Weekend: Charlottesville'
+  post.author_id = '4'
+  post.created_at = '2012-03-25 04:14:32 UTC'
+  post.posted_on = ''
+  post.updated_at = '2012-03-25 04:14:32 UTC'
+  post.body = <<EOF
 How much can you accomplish in 54 hours? Odds are you can get a lot done - especially when you're collaborating with a group eager to crank out a full prototype in just a couple days. It's a blast and I encourage you to check out [their site](http://startupweekend.org/) and think about going.
 
 So what's fun about it? Why would you give up a weekend to do something like this? First off, the community. It's a chance to schmooze and network, sure, but it's also a chance to band together with some like-minded folks and hammer out a project. You don't have time to do everything. You have to make compromises. But in the end you'll come out having learned a lot about something (what that something is will vary widely, and that's part of the fun) and you might even have something awesome to show for it.
@@ -211,8 +217,14 @@ So what did I do? I halfheartedly proposed something (and actually got some inte
 
 Is it The Next Big Thing? Not yet. Did anyone make that mythical unicorn-like capital magnet of a viral product that all startups yearn to spin into the unsuspecting market? It's too soon to say - overnight success never really happens overnight. 
 EOF
-)
-Post.create(:title => 'Adding Gem Functionality: browser platform detection', :author_id => '9', :created_at => '2012-08-08 00:12:37 UTC', :updated_at => '2012-08-08 01:07:32 UTC', :body => <<EOF
+end
+post = Post.find_or_create_by_title('Adding Gem Functionality: browser platform detection') do |post|
+  post.title = 'Adding Gem Functionality: browser platform detection'
+  post.author_id = '9'
+  post.created_at = '2012-08-08 00:12:37 UTC'
+  post.posted_on = ''
+  post.updated_at = '2012-08-08 01:07:32 UTC'
+  post.body = <<EOF
 The problem I am going to tackle in this post is detecting browser info from a rails app, however concepts can be applied to other ruby projects, such as something built on Sinatra or even something not built on ruby.
 
 <h4>Background</h4> 
@@ -269,8 +281,14 @@ What if we want this on multiple objects and/or controller actions such as updat
 
 Getting the object name for the hash like i did is very hacky, what I did assumes request.request_uri is something like "/comments", "/posts", etc... I just couldn't find a better way from a quick brain and google search. If you think you have a good solution for this part let me know.
 EOF
-)
-Post.create(:title => 'The Cucumber Unicorn', :author_id => '4', :created_at => '2012-03-25 04:33:08 UTC', :updated_at => '2012-03-25 04:33:08 UTC', :body => <<EOF
+end
+post = Post.find_or_create_by_title('The Cucumber Unicorn') do |post|
+  post.title = 'The Cucumber Unicorn'
+  post.author_id = '4'
+  post.created_at = '2012-03-25 04:33:08 UTC'
+  post.posted_on = ''
+  post.updated_at = '2012-03-25 04:33:08 UTC'
+  post.body = <<EOF
 [Cucumber](http://cukes.info/) is a curious creature. It purports to bring together engineers and businesspeople; it mixes the oil and the water of the office.
 
 
@@ -283,8 +301,14 @@ in the code! Planners planning in the thick of the mental fortress that coders b
 
 If you ever come upon the Cucumber Unicorn, the chance to actually get the non-technical team members to take a stake and give a shake to adopting use of cucumber, don't pass it up. Don't let your cynicism over a few abandoned zucchinis make you lose faith. Not every team will adopt cucumber, as tasty and crunchy (and pleasant on a salad with a citrus dressing) as it may be. But when you have a tool that can bring your team together on a conceptual plateau more often, you should take advantage of it. You won't regret it.
 EOF
-)
-Post.create(:title => 'Removing Technical Debt', :author_id => '3', :created_at => '2012-04-09 19:00:28 UTC', :updated_at => '2012-04-09 19:02:53 UTC', :body => <<EOF
+end
+post = Post.find_or_create_by_title('Removing Technical Debt') do |post|
+  post.title = 'Removing Technical Debt'
+  post.author_id = '3'
+  post.created_at = '2012-04-09 19:00:28 UTC'
+  post.posted_on = '2012-04-09 19:02:53 UTC'
+  post.updated_at = '2012-04-09 19:02:53 UTC'
+  post.body = <<EOF
 I had a great time at the Mile High Agile 2012 conference. I thoroughly enjoyed and learned from every talk and heard almost 100% positive reviews of all the talks I missed out on in the other tracks. Many thanks to all who were involved in making it happen. I’ll definitely be back next year.
 
 I want to write about one experience that really fired me up and kept me thinking for several hours afterwards. During one of the talks, the speaker gave us 3 minutes to talk amongst ourselves about how we might try to get rid of technical debt within the confines of an organization that doesn’t think it has time for any development work that doesn’t either add a visible feature or eliminate a visible defect.
@@ -312,8 +336,14 @@ In my opinion the decision of when to tackle technical debt should always be mad
 *In the context of our discussion, “management” seemed to refer to one or more non-technical persons “above” the developers in their organization who determine what visible features developers work on and when. I’ll use the term in the same way here.
 
 EOF
-)
-Post.create(:title => 'Introducing sinatra_bootstrap', :author_id => '5', :created_at => '2012-03-26 03:43:55 UTC', :updated_at => '2012-04-09 16:48:03 UTC', :body => <<EOF
+end
+post = Post.find_or_create_by_title('Introducing sinatra_bootstrap') do |post|
+  post.title = 'Introducing sinatra_bootstrap'
+  post.author_id = '5'
+  post.created_at = '2012-03-26 03:43:55 UTC'
+  post.posted_on = '2012-04-09 16:48:03 UTC'
+  post.updated_at = '2012-04-09 16:48:03 UTC'
+  post.body = <<EOF
 [Sinatra](http://www.sinatrarb.com/) is a great way to quickly prototype
 an idea or build one-off projects with minimum fuss. The only problem
 I've ever encountered is remembering the exact format needed for your
@@ -358,8 +388,14 @@ of being a beautifully simple and clean framework for getting things
 done. There are other frameworks out there that do a great job of
 setting up enough libraries to turn sinatra into a rails deployment.
 EOF
-)
-Post.create(:title => 'Polymorphic Associations and validate_uniqueness_of', :author_id => '5', :created_at => '2012-03-23 22:24:12 UTC', :updated_at => '2012-04-06 17:12:03 UTC', :body => <<EOF
+end
+post = Post.find_or_create_by_title('Polymorphic Associations and validate_uniqueness_of') do |post|
+  post.title = 'Polymorphic Associations and validate_uniqueness_of'
+  post.author_id = '5'
+  post.created_at = '2012-03-23 22:24:12 UTC'
+  post.posted_on = '2012-04-06 16:08:10 UTC'
+  post.updated_at = '2012-04-06 17:12:03 UTC'
+  post.body = <<EOF
 One of my favorite helper libraries when testing is [thoughtbot's shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers). They do a great job making common situations easy to test in one line, but I recently ran into a gotcha with the `validate_uniqueness_of` matcher. Validating both uniqueness of a polymorphic association and another validation on the same association can cause some strange error messages regarding undefined classes due to the way scoping and validations are handled.
 
 The Problem
@@ -468,8 +504,14 @@ This allows the presence validation to continue without raising an error. And fi
     1 example, 0 failures
 
 EOF
-)
-Post.create(:title => 'The ubiquity of NoSQL as presented by MongoDB', :author_id => '4', :created_at => '2012-03-25 03:50:30 UTC', :updated_at => '2012-03-25 04:16:04 UTC', :body => <<EOF
+end
+post = Post.find_or_create_by_title('The ubiquity of NoSQL as presented by MongoDB') do |post|
+  post.title = 'The ubiquity of NoSQL as presented by MongoDB'
+  post.author_id = '4'
+  post.created_at = '2012-03-25 03:50:30 UTC'
+  post.posted_on = '2012-03-25 03:51:29 UTC'
+  post.updated_at = '2012-03-25 04:16:04 UTC'
+  post.body = <<EOF
 Not so long ago I went to MongoDB Boulder, a one-day conference put on by 10gen, the company behind MongoDB. Aside from one panel I didn't get much out of, it was great. While I do have some experience using MongoDB, I not yet an expert with it (and I certainly have some team members here at Coshx Labs that know it better than I do), so I was looking forward to a chance to improve my skills.
 
 
@@ -490,8 +532,14 @@ It's great to see so many highly-visible open source projects make their way int
 
 And if it's not, there's no shortage of other open-source data stores available for them to consider. NoSQL isn't always the right tool for the job, but it's often worth a look, and I'm really excited to see the adoption of it expand in enterprises large and small.
 EOF
-)
-Post.create(:title => 'Increasing Performance using Ajax', :author_id => '9', :created_at => '2012-03-01 20:38:10 UTC', :updated_at => '2012-03-01 21:33:46 UTC', :body => <<EOF
+end
+post = Post.find_or_create_by_title('Increasing Performance using Ajax') do |post|
+  post.title = 'Increasing Performance using Ajax'
+  post.author_id = '9'
+  post.created_at = '2012-03-01 20:38:10 UTC'
+  post.posted_on = '2012-03-01 21:11:33 UTC'
+  post.updated_at = '2012-03-01 21:33:46 UTC'
+  post.body = <<EOF
 In this post I’m going to show how to use Ajax to get JSON to decrease page load times and make your site scale better. This example assumes you're using Rails, but the idea applies elsewhere as well.
 
 <h4>Scenario</h4> You have an expensive call in your controller - it's slow and/or database intensive. Also, the data you get from this call is not actually needed when the page loads because it's displayed after the user interacts with the site.
@@ -591,8 +639,14 @@ loadBiDaily ->
   addDataToChart(chart, biDailyData, "biDaily")
 ```
 EOF
-)
-Post.create(:title => '`rake cucumber` loads development environment', :author_id => '1', :created_at => '2012-02-24 19:24:29 UTC', :updated_at => '2012-02-24 19:58:18 UTC', :body => <<EOF
+end
+post = Post.find_or_create_by_title('`rake cucumber` loads development environment') do |post|
+  post.title = '`rake cucumber` loads development environment'
+  post.author_id = '1'
+  post.created_at = '2012-02-24 19:24:29 UTC'
+  post.posted_on = '2012-02-24 19:32:20 UTC'
+  post.updated_at = '2012-02-24 19:58:18 UTC'
+  post.body = <<EOF
 This is one of those gotchas that can throw a developer for a bit of a loop (at least it just threw me for a loop for the past half hour).
 
 If you run cucumber tests from the command line:
@@ -633,8 +687,14 @@ namespace :cucumber do
  - I've tested with both rails 3.1 and 3.2.1 and seen the same behavior.
  - Thanks to [rails-env-vs-rails-env on stackoverflow](http://stackoverflow.com/questions/2715035/rails-env-vs-rails-env) for the tip on `Rails.env`
 EOF
-)
-Post.create(:title => 'Installing tsung with homebrew on osx', :author_id => '1', :created_at => '2012-01-31 18:25:07 UTC', :updated_at => '2012-01-31 18:27:04 UTC', :body => <<EOF
+end
+post = Post.find_or_create_by_title('Installing tsung with homebrew on osx') do |post|
+  post.title = 'Installing tsung with homebrew on osx'
+  post.author_id = '1'
+  post.created_at = '2012-01-31 18:25:07 UTC'
+  post.posted_on = '2012-01-31 18:27:04 UTC'
+  post.updated_at = '2012-01-31 18:27:04 UTC'
+  post.body = <<EOF
 ### Problem
 
 I recently tried installing [tsung](http://tsung.erlang-projects.org) via homebrew on OSX Lion, but got the following error:
@@ -697,8 +757,14 @@ File already downloaded in /Users/btaitelb/Library/Caches/Homebrew
 ```
 
 EOF
-)
-Post.create(:title => 'The $50,000 Blog Post', :author_id => '6', :created_at => '2012-01-21 05:36:40 UTC', :updated_at => '2012-01-23 02:09:31 UTC', :body => <<EOF
+end
+post = Post.find_or_create_by_title('The $50,000 Blog Post') do |post|
+  post.title = 'The $50,000 Blog Post'
+  post.author_id = '6'
+  post.created_at = '2012-01-21 05:36:40 UTC'
+  post.posted_on = '2012-01-21 07:23:43 UTC'
+  post.updated_at = '2012-01-23 02:09:31 UTC'
+  post.body = <<EOF
 Talented engineers are necessary but not sufficient for the success of a technology company, and no amount of technical brilliance will save an organization laden with process debt.  Here are some process fixes that could save your company tens of thousands of dollars or more.
 
 
@@ -725,8 +791,14 @@ Don't depend on your engineers to distinguish between defects and enhancements. 
 
 Be realistic.  A company with 100 employees can't behave like the cozy start-up it was last year.  Foster an environment that promotes cross-team interaction without requiring company-wide meetings that stop the world.
 EOF
-)
-Post.create(:title => 'Upgrading a Rails 3.1.3 project to Ruby 1.9.3', :author_id => '4', :created_at => '2012-01-06 19:42:56 UTC', :updated_at => '2012-01-10 19:55:29 UTC', :body => <<EOF
+end
+post = Post.find_or_create_by_title('Upgrading a Rails 3.1.3 project to Ruby 1.9.3') do |post|
+  post.title = 'Upgrading a Rails 3.1.3 project to Ruby 1.9.3'
+  post.author_id = '4'
+  post.created_at = '2012-01-06 19:42:56 UTC'
+  post.posted_on = '2012-01-06 20:10:40 UTC'
+  post.updated_at = '2012-01-10 19:55:29 UTC'
+  post.body = <<EOF
 Ruby 1.9.3 came out at the tail end of October 2011. In addition to the library updates (see [here](http://www.ruby-lang.org/en/news/2011/10/31/ruby-1-9-3-p0-is-released/)),
 it brings some nice performance enhancements as well. One of these enhancements is a fix to the way requiring things is handled, which can speed up the start time of
 Rails (server/console/etc) quite significantly. Since we have a growing suite of tests that we wanted to run more quickly (don't we all?) and we wanted to spend less time
@@ -816,8 +888,14 @@ That's All For Now
  
 I hope this helps out if the holdup for you to move over to Ruby 1.9.3 was ruby-debug. We've very happy with the performance improvements in 1.9.3 and I'd definitely recommend it to others.
 EOF
-)
-Post.create(:title => 'Our First Birthday Party', :author_id => '3', :created_at => '2012-01-05 00:41:05 UTC', :updated_at => '2012-01-10 19:55:29 UTC', :body => <<EOF
+end
+post = Post.find_or_create_by_title('Our First Birthday Party') do |post|
+  post.title = 'Our First Birthday Party'
+  post.author_id = '3'
+  post.created_at = '2012-01-05 00:41:05 UTC'
+  post.posted_on = '2012-01-05 00:41:31 UTC'
+  post.updated_at = '2012-01-10 19:55:29 UTC'
+  post.body = <<EOF
 Last week we did something a little different for our tech lunch. We celebrated our first birthday as a company with a recap and, of course, a retrospective. This was a very exciting milestone so I wanted to share some of my thoughts about it here as well.
 
 TL;DR: It’s been a great, amazing year that exceeded my dreams.
@@ -835,8 +913,14 @@ Most of the year we had to explain that we were so busy working for our clients 
 If you’ve read this far then perhaps you’re interested in learning more about our services, working with us, attending our tech lunches, or something else? If so, please contact us. We’d love to hear from you.
 
 EOF
-)
-Post.create(:title => 'Parallel Testing for Rails Applications', :author_id => '2', :created_at => '2011-12-29 01:35:21 UTC', :updated_at => '2012-01-10 19:55:29 UTC', :body => <<EOF
+end
+post = Post.find_or_create_by_title('Parallel Testing for Rails Applications') do |post|
+  post.title = 'Parallel Testing for Rails Applications'
+  post.author_id = '2'
+  post.created_at = '2011-12-29 01:35:21 UTC'
+  post.posted_on = '2011-12-29 01:36:52 UTC'
+  post.updated_at = '2012-01-10 19:55:29 UTC'
+  post.body = <<EOF
 Speed your RSpec, or Cucumber tests up by spreading them across multiple cores.
 
 
@@ -932,8 +1016,14 @@ This variable will return a number string that is unique to each sandboxed test 
 
 Another item worth mentioning concerns the ordering of tests.  When running in parallel (particularly if the aforementioned runtime logging / optimization is enabled), your tests may run in an order that is completely different from the default.  This may lead to some unexpected failures if your tests are carrying any type of state around.  If you experience unanticipated failures after the initial setup of parallel_tests, be aware that your tests are likely being run out of their typical (default) order, and don't immediately assume that concurrency is at fault.
 EOF
-)
-Post.create(:title => 'How to Train Your Startup CTO', :author_id => '1', :created_at => '2011-12-06 21:54:57 UTC', :updated_at => '2012-01-10 19:55:29 UTC', :body => <<EOF
+end
+post = Post.find_or_create_by_title('How to Train Your Startup CTO') do |post|
+  post.title = 'How to Train Your Startup CTO'
+  post.author_id = '1'
+  post.created_at = '2011-12-06 21:54:57 UTC'
+  post.posted_on = '2011-12-06 21:55:16 UTC'
+  post.updated_at = '2012-01-10 19:55:29 UTC'
+  post.body = <<EOF
 Congratulations, you're now the CEO of your own startup. You have a great idea and are experiencing the entrepreneurial drive. You don't know exactly how big it's going to get, but in the back of your mind you're picturing some tropical resort with soft pink sand, where you'll be enjoying drinks with fresh fruit and tiny umbrellas.
 
 You've done the market analysis, put together a business plan, incorporated, found some startup funds, and you've even found a kick-ass programmer who believes in your vision and wants to build out your idea. You've been using computers your whole life, so you have a good idea of how the app should work (it should be simple, of course), and even have some ideas about how it should look ([it should be edgy, and pop](http://theoatmeal.com/comics/design_hell)).
@@ -996,12 +1086,21 @@ Here's a simple recipe that I try to follow. It's by no means complete, but serv
     * If you don't sense respect, open up dialog and try to get to the root of it. If that fails, well, you're the boss, you know what to do.
 
 EOF
-)
+end
+
+puts "And now we need to publish posts that we have created"
 
 posts = Post.all
 posts.each do |p|
   puts "Publishing post '#{p.title}'"
+  post_date = p.posted_on
   p.publish
+  p.posted_on = post_date
   p.save!
 end
+
+
+
+
+
 
