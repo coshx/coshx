@@ -18,7 +18,7 @@
       %td= quote.project_id
       %td= link_to 'Show', quote
       %td= link_to 'Edit', edit_quote_path(quote)
-      %td= link_to 'Destroy', quote, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to 'Destroy', quote, :data => {:confirm => 'Are you sure?'}, :method => :delete
 
 %br
 
