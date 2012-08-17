@@ -1,10 +1,9 @@
 source "http://rubygems.org"
 
-gem "rails", "3.2.6"
+gem "rails", "3.2.8"
 
 # database
 gem "pg"
-
 
 gem 'rb-readline'
 gem 'activesupport'
