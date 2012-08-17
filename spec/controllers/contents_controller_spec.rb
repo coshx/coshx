@@ -24,7 +24,7 @@ describe ContentsController do
   # Content. As you add validations to Content, be sure to
   # update the return value of this method accordingly.
   let(:admin)     { create :admin }
-    
+
   def valid_attributes
     {:action => 'hi!'}
   end
@@ -46,7 +46,6 @@ describe ContentsController do
     it "assigns all contents as @contents" do
       sign_in admin
       content = Content.create! valid_attributes
-      puts "we created the content1: '#{content.action}'"
       get :index
       assigns(:contents).should eq([content])
     end
