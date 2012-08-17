@@ -156,6 +156,13 @@ top:20px;
 
 }
 
+@media only screen and (max-width: 960px) {
+.star-header {
+padding:25px 0px 25px 90px;
+background: url(star.png) no-repeat 30px 20px;
+}
+}
+
 @media only screen and (max-width: 767px) {
 .star-header {
 padding:25px 0px 25px 90px;

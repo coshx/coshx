@@ -23,11 +23,13 @@
                   = link_to "Read more", post, :class => "read-more"
                   |
                   %a.comments{:href => "#{polymorphic_url(post)}#disqus_thread"}
-    .footer-tweet.row
-      %p
-        Loading tweets, just a moment...
-      = link_to "https://www.twitter.com/coshxlabs", :class => "a-button darkblue" do
-        Follow Us
+       
+    .row
+      %h2.star-header
+        %p Last tweets
+        = link_to "https://www.twitter.com/coshxlabs", :class => "a-button darkblue" do
+          Follow Us
+    
     %h2.contact-heading{editable("contact heading")}
       =content("contact heading")
     %div.contact-details.row
@@ -56,8 +58,8 @@
       .three.columns
         CONSIDERING COSHX FOR
         %br/
-        YOUR NEXT PROJECT?
-        = link_to "mailto:info@coshx.com?subject=Coshx%20Labs%20quote%20request", :class => "a-button" do
+        YOUR NEXT PROJECT?<br>
+        = link_to "mailto:info@coshx.com?subject=Coshx%20Labs%20quote%20request", :class => "the-button" do
           Get a Proposal
     .footer-bottom
       %span.copy Copyright © 2012 Coshx Labs. All rights reserved
