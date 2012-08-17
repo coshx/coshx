@@ -5,7 +5,7 @@
     %span(style="width:30px;height:30px;background:url(#{Gravatar.new(post.author.email).image_url(:size => 30)});border-radius:100px;border:2px solid white;display:inline-block;margin-bottom:-10px;")
     =link_to post.author.name, post.author.url
     on
-    =post.posted_on.strftime("%B %e, %Y")
+    =(post.posted_on.present? ? post.posted_on.strftime("%B %e, %Y") : post.created_at.strftime("%B %e, %Y"))
   .post-content
     =post.body_html.html_safe
   = render :partial => "share_buttons"

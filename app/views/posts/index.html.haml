@@ -5,7 +5,7 @@
     .four.columns
     .eight.columns
       - @posts.each do |p|
-        - year = (p.posted_on.strftime("%Y").present? ? p.posted_on.strftime("%Y") : p.created_at.strftime("%Y"))
+        - year = (p.posted_on.present? ? p.posted_on.strftime("%Y") : p.created_at.strftime("%Y"))
         - if y != year
           ="</div></div>".html_safe
           ="<div class='row'>".html_safe
@@ -14,7 +14,13 @@
           ="</div><div class='eight columns'>".html_safe
         - y = year
         - link_text = p.title + " / " 
-        =link_to link_text.html_safe, p
+        
+
+        =link_to link_text.html_safe, p, :title => "Read More"
+        -if admin_signed_in?
+          .edit-link
+            = link_to 'Edit', edit_post_path(p)
+            = link_to("Publish", publish_post_path(p), :method => :put) unless p.published?
         
     
     
