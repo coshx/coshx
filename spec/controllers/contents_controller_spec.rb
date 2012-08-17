@@ -23,44 +23,57 @@ describe ContentsController do
   # This should return the minimal set of attributes required to create a valid
   # Content. As you add validations to Content, be sure to
   # update the return value of this method accordingly.
+  let(:admin)     { create :admin }
+    
   def valid_attributes
-    {}
+    {:action => 'hi!'}
   end
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # ContentsController. Be sure to keep this updated too.
-  def valid_session
-    {}
+
+  describe "GET index" do
+    it "shouldnt show anythink if admin is not signed in" do
+      content = Content.create! valid_attributes
+      get :index
+      assigns(:contents).should_not eq([content])
+    end
   end
+
 
   describe "GET index" do
     it "assigns all contents as @contents" do
+      sign_in admin
       content = Content.create! valid_attributes
-      get :index, {}, valid_session
+      puts "we created the content1: '#{content.action}'"
+      get :index
       assigns(:contents).should eq([content])
     end
   end
 
   describe "GET show" do
     it "assigns the requested content as @content" do
+      sign_in admin
       content = Content.create! valid_attributes
-      get :show, {:id => content.to_param}, valid_session
+      get :show, {:id => content.to_param}
       assigns(:content).should eq(content)
     end
   end
 
   describe "GET new" do
     it "assigns a new content as @content" do
-      get :new, {}, valid_session
+      sign_in admin
+      get :new
       assigns(:content).should be_a_new(Content)
     end
   end
 
   describe "GET edit" do
     it "assigns the requested content as @content" do
+      sign_in admin
       content = Content.create! valid_attributes
-      get :edit, {:id => content.to_param}, valid_session
+      get :edit, {:id => content.to_param}
       assigns(:content).should eq(content)
     end
   end
@@ -68,19 +81,22 @@ describe ContentsController do
   describe "POST create" do
     describe "with valid params" do
       it "creates a new Content" do
+        sign_in admin
         expect {
-          post :create, {:content => valid_attributes}, valid_session
+          post :create, {:content => valid_attributes}
         }.to change(Content, :count).by(1)
       end
 
       it "assigns a newly created content as @content" do
-        post :create, {:content => valid_attributes}, valid_session
+        sign_in admin
+        post :create, {:content => valid_attributes}
         assigns(:content).should be_a(Content)
         assigns(:content).should be_persisted
       end
 
       it "redirects to the created content" do
-        post :create, {:content => valid_attributes}, valid_session
+        sign_in admin
+        post :create, {:content => valid_attributes}
         response.should redirect_to(Content.last)
       end
     end
@@ -88,16 +104,10 @@ describe ContentsController do
     describe "with invalid params" do
       it "assigns a newly created but unsaved content as @content" do
         # Trigger the behavior that occurs when invalid params are submitted
+        sign_in admin
         Content.any_instance.stub(:save).and_return(false)
-        post :create, {:content => {}}, valid_session
+        post :create, {:content => {}}
         assigns(:content).should be_a_new(Content)
-      end
-
-      it "re-renders the 'new' template" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        Content.any_instance.stub(:save).and_return(false)
-        post :create, {:content => {}}, valid_session
-        response.should render_template("new")
       end
     end
   end
@@ -105,42 +115,47 @@ describe ContentsController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested content" do
+        sign_in admin
         content = Content.create! valid_attributes
         # Assuming there are no other contents in the database, this
         # specifies that the Content created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
         Content.any_instance.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, {:id => content.to_param, :content => {'these' => 'params'}}, valid_session
+        put :update, {:id => content.to_param, :content => {'these' => 'params'}}
       end
 
       it "assigns the requested content as @content" do
+        sign_in admin
         content = Content.create! valid_attributes
-        put :update, {:id => content.to_param, :content => valid_attributes}, valid_session
+        put :update, {:id => content.to_param, :content => valid_attributes}
         assigns(:content).should eq(content)
       end
 
       it "redirects to the content" do
+        sign_in admin
         content = Content.create! valid_attributes
-        put :update, {:id => content.to_param, :content => valid_attributes}, valid_session
+        put :update, {:id => content.to_param, :content => valid_attributes}
         response.should redirect_to(content)
       end
     end
 
     describe "with invalid params" do
       it "assigns the content as @content" do
+        sign_in admin
         content = Content.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Content.any_instance.stub(:save).and_return(false)
-        put :update, {:id => content.to_param, :content => {}}, valid_session
+        put :update, {:id => content.to_param, :content => {}}
         assigns(:content).should eq(content)
       end
 
       it "re-renders the 'edit' template" do
+        sign_in admin
         content = Content.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Content.any_instance.stub(:save).and_return(false)
-        put :update, {:id => content.to_param, :content => {}}, valid_session
+        put :update, {:id => content.to_param, :content => {}}
         response.should render_template("edit")
       end
     end
@@ -148,15 +163,17 @@ describe ContentsController do
 
   describe "DELETE destroy" do
     it "destroys the requested content" do
+      sign_in admin
       content = Content.create! valid_attributes
       expect {
-        delete :destroy, {:id => content.to_param}, valid_session
+        delete :destroy, {:id => content.to_param}
       }.to change(Content, :count).by(-1)
     end
 
     it "redirects to the contents list" do
+      sign_in admin
       content = Content.create! valid_attributes
-      delete :destroy, {:id => content.to_param}, valid_session
+      delete :destroy, {:id => content.to_param}
       response.should redirect_to(contents_url)
     end
   end

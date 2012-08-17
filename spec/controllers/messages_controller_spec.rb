@@ -23,6 +23,9 @@ describe MessagesController do
   # This should return the minimal set of attributes required to create a valid
   # Message. As you add validations to Message, be sure to
   # update the return value of this method accordingly.
+
+  let(:admin)     { create :admin }
+
   def valid_attributes
     {}
   end
@@ -30,37 +33,39 @@ describe MessagesController do
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # MessagesController. Be sure to keep this updated too.
-  def valid_session
-    {}
-  end
+
 
   describe "GET index" do
     it "assigns all messages as @messages" do
+      sign_in admin
       message = Message.create! valid_attributes
-      get :index, {}, valid_session
+      get :index
       assigns(:messages).should eq([message])
     end
   end
 
   describe "GET show" do
     it "assigns the requested message as @message" do
+      sign_in admin
       message = Message.create! valid_attributes
-      get :show, {:id => message.to_param}, valid_session
+      get :show, {:id => message.to_param}
       assigns(:message).should eq(message)
     end
   end
 
   describe "GET new" do
     it "assigns a new message as @message" do
-      get :new, {}, valid_session
+      sign_in admin
+      get :new
       assigns(:message).should be_a_new(Message)
     end
   end
 
   describe "GET edit" do
     it "assigns the requested message as @message" do
+      sign_in admin
       message = Message.create! valid_attributes
-      get :edit, {:id => message.to_param}, valid_session
+      get :edit, {:id => message.to_param}
       assigns(:message).should eq(message)
     end
   end
@@ -69,19 +74,19 @@ describe MessagesController do
     describe "with valid params" do
       it "creates a new Message" do
         expect {
-          post :create, {:message => valid_attributes}, valid_session
+          post :create, {:message => valid_attributes}
         }.to change(Message, :count).by(1)
       end
 
       it "assigns a newly created message as @message" do
-        post :create, {:message => valid_attributes}, valid_session
+        post :create, {:message => valid_attributes}
         assigns(:message).should be_a(Message)
         assigns(:message).should be_persisted
       end
 
       it "redirects to the created message" do
-        post :create, {:message => valid_attributes}, valid_session
-        response.should redirect_to(Message.last)
+        post :create, {:message => valid_attributes}
+        response.should_not redirect_to(Message.last)
       end
     end
 
@@ -89,15 +94,15 @@ describe MessagesController do
       it "assigns a newly created but unsaved message as @message" do
         # Trigger the behavior that occurs when invalid params are submitted
         Message.any_instance.stub(:save).and_return(false)
-        post :create, {:message => {}}, valid_session
+        post :create, {:message => {}}
         assigns(:message).should be_a_new(Message)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Message.any_instance.stub(:save).and_return(false)
-        post :create, {:message => {}}, valid_session
-        response.should render_template("new")
+        post :create, {:message => {}}
+        response.should_not render_template("new")
       end
     end
   end
@@ -105,42 +110,47 @@ describe MessagesController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested message" do
+        sign_in admin
         message = Message.create! valid_attributes
         # Assuming there are no other messages in the database, this
         # specifies that the Message created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
         Message.any_instance.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, {:id => message.to_param, :message => {'these' => 'params'}}, valid_session
+        put :update, {:id => message.to_param, :message => {'these' => 'params'}}
       end
 
       it "assigns the requested message as @message" do
+        sign_in admin
         message = Message.create! valid_attributes
-        put :update, {:id => message.to_param, :message => valid_attributes}, valid_session
+        put :update, {:id => message.to_param, :message => valid_attributes}
         assigns(:message).should eq(message)
       end
 
       it "redirects to the message" do
+        sign_in admin
         message = Message.create! valid_attributes
-        put :update, {:id => message.to_param, :message => valid_attributes}, valid_session
+        put :update, {:id => message.to_param, :message => valid_attributes}
         response.should redirect_to(message)
       end
     end
 
     describe "with invalid params" do
       it "assigns the message as @message" do
+        sign_in admin
         message = Message.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Message.any_instance.stub(:save).and_return(false)
-        put :update, {:id => message.to_param, :message => {}}, valid_session
+        put :update, {:id => message.to_param, :message => {}}
         assigns(:message).should eq(message)
       end
 
       it "re-renders the 'edit' template" do
+        sign_in admin
         message = Message.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Message.any_instance.stub(:save).and_return(false)
-        put :update, {:id => message.to_param, :message => {}}, valid_session
+        put :update, {:id => message.to_param, :message => {}}
         response.should render_template("edit")
       end
     end
@@ -148,15 +158,17 @@ describe MessagesController do
 
   describe "DELETE destroy" do
     it "destroys the requested message" do
+      sign_in admin
       message = Message.create! valid_attributes
       expect {
-        delete :destroy, {:id => message.to_param}, valid_session
+        delete :destroy, {:id => message.to_param}
       }.to change(Message, :count).by(-1)
     end
 
     it "redirects to the messages list" do
+      sign_in admin
       message = Message.create! valid_attributes
-      delete :destroy, {:id => message.to_param}, valid_session
+      delete :destroy, {:id => message.to_param}
       response.should redirect_to(messages_url)
     end
   end

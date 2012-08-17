@@ -1,4 +1,3 @@
-
 Feature: Admin blog post functionality
   As an Admin user
   I want to post a new blog

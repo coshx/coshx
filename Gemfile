@@ -7,6 +7,7 @@ gem "pg"
 
 
 gem 'rb-readline'
+gem 'activesupport'
 
 # authenticate & authorization
 gem "devise"
@@ -50,15 +51,12 @@ group :development do
   gem "pry-nav"
 end
 
-group :test do
+group :development, :test do
   gem "cucumber-rails", "~> 1.0", require: false
   gem "factory_girl_rails"
   gem "timecop"
   gem 'shoulda-matchers'
   gem 'simplecov', :require => false # code coverage tool
-end
-
-group :development, :test do
   gem "database_cleaner"
   gem "forgery"
   gem "rspec-rails"

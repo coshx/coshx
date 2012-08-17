@@ -12,7 +12,7 @@ describe Publishable do
   describe "#publish" do
     it "sets posted_on to the current date/time" do
       Timecop.freeze(DateTime.now) do
-        subject.publish.posted_on.should == Time.now
+        subject.publish.posted_on.strftime("%D%T").should == Time.now.strftime("%D%T")
       end
     end
 

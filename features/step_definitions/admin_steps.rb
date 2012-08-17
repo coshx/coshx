@@ -1,5 +1,5 @@
 Given /testuser_1@coshx.com is a valid admin$/ do
-  Factory(:admin,:email =>"testuser_1@coshx.com", :password=> "password_1")
+  FactoryGirl.create(:admin,:email =>"testuser_1@coshx.com", :password=> "password_1")
 end
 
 Given /there are no jobs/   do
