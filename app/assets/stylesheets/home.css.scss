@@ -218,9 +218,10 @@ a.html:active {
   COLOR: #000000;
 }
 
+
 #blueprint-wrapper {
   margin: 0px auto 10px;
-  width: 387px;
+  max-width: 387px;
   height: 438px;
   position: relative;
   left: 20px;
@@ -940,14 +941,14 @@ overflow:hidden;
 padding:50px 0px 0px 0px;
 }
 @media only screen and (max-width: 768px) {
-.featured_projects div {
-margin-left:auto !important;
-margin-right:auto !important;
-position:static !important;
-}
-.featured_projects .fp_img {
-float:none !important;
-}
+  .featured_projects div {
+  margin-left:auto !important;
+  margin-right:auto !important;
+  position:static !important;
+  }
+  .featured_projects .fp_img {
+  float:none !important;
+  }
 
 }
 
@@ -1034,17 +1035,29 @@ margin-bottom:70px;
 
 
 @media only screen and (max-width:500px) {
-#logo {
-margin:auto;
-margin-top:150px !important;
-margin-bottom:100px !important;
-display:block;
-}
-.jobs {
-left:10px !important;
-}
-#ribbon {
-right:10px !important;
+
+  #logo {
+  margin:auto;
+  margin-top:150px !important;
+  margin-bottom:100px !important;
+  display:block;
+  }
+  .jobs {
+  left:10px !important;
+  }
+  #ribbon {
+  right:10px !important;
+  }
+
+
+
+
 }
 
+
+@media only screen and (max-width:350px) {
+
+  #blueprint-wrapper {
+  height: 338px;
+  }
 }
