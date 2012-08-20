@@ -169,6 +169,14 @@ position:relative;
 
 @media only screen and (max-width: 767px) {
 
+  .services {
+  
+    h5, p {
+    text-align:center;
+    }
+    
+  }
+
   .star-header {
   padding:25px 0px 25px 90px;
   background: url(star.png) no-repeat 30px 20px;
