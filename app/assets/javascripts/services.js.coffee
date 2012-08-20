@@ -38,15 +38,10 @@ $("document").ready ->
   $('.save_button').click ->
        c = $("[contenteditable]")
        data1 = {}
-       c.each ->
-          data1[$(this).attr('data-tag')] = $(this).text()
-        
-       
+       c.each -> data1[$(this).attr('data-tag')] = $(this).text()
        $.post(
           "/content_update"
           {title: 'Save_data', data: data1}
-          'json'
           -> $(".save_button").fadeOut(1500)      
        )
-       $(".save_button").fadeOut(1500)      
        0
