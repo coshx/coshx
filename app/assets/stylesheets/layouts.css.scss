@@ -18,10 +18,6 @@ body {
   background: transparent image-url("tile_background.png");
   overflow-x:hidden;
   color:white;
-  
-
-  border-left: 6px solid black;
-  border-right: 6px solid black;
 }
 
 #logo {
@@ -142,8 +138,11 @@ border-top: 2px solid #1588C3;
 list-style-type:none;
 }
 
-#header {
+.main-container {
 border-top: 6px solid black;
+}
+
+#header {
 position:relative;
 }
 
