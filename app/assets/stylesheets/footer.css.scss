@@ -32,6 +32,7 @@ padding-left:50px;
 margin-bottom:0px;
 }
 
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -45,4 +46,19 @@ padding-left:0px;
 
 }
 
+
+#latest-blogs h2 a {
+  &:hover {
+  color:black !important;
+  }
+}
+.post-info a {
+  &:hover {
+  color:black;
+  }
+}
+
+.contact-details .the-button {
+color:white;
+}
 
