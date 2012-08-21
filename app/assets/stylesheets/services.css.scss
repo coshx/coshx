@@ -1,8 +1,10 @@
+$gray: #a6a6a6;
+
 .services {
   
   p {
   display: block;
-  color: gray;
+  color: $gray;
   font-family: "Droid Serif", serif;
   font-size:13px;
   }

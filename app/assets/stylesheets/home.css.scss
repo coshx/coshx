@@ -1,6 +1,8 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$gray: #a6a6a6;
+
 body p {
 line-height:140%;
 }
@@ -88,7 +90,7 @@ height:700px !important;
   p {
     display:block;
     text-align:center;
-    color: gray;
+    color: $gray;
     font-family: "Droid Serif", serif;
     font-size: 18px;
     margin-bottom:30px;
@@ -104,7 +106,7 @@ height:700px !important;
   .graytext {
     display:block;
     //text-align:center;
-    color: gray;
+    color: $gray;
     font-family: "Droid Serif", serif;
     font-size:18px;
     max-width:600px;
@@ -147,7 +149,7 @@ padding: 30px 0px;
       margin-bottom: 5px;
     }
     p {
-      color: gray;
+      color: $gray;
       font: 13px 'Droid Serif', serif;
       margin-bottom: 30px;
       line-height: 150%;
@@ -264,7 +266,7 @@ section#blueprint-image {
     text-transform: uppercase;
   }
   p {
-    color: gray;
+    color: $gray;
     font: 14px / 24px "Droid Serif", serif;
     margin: 22px 0px;
   }
@@ -345,7 +347,7 @@ section#blueprint-image {
       margin-bottom: 5px;
     }
     p {
-      color: gray;
+      color: $gray;
       font: 13px 'Droid Serif', serif;
       margin-bottom: 30px;
       line-height: 150%;
@@ -370,7 +372,7 @@ section#blueprint-image {
       margin: 25px 0px;
     }
     p {
-      color: gray;
+      color: $gray;
       font: 13px 'Droid Serif', serif;
       margin-bottom: 30px;
     }

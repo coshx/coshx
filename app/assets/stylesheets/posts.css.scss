@@ -1,3 +1,5 @@
+$gray: #a6a6a6;
+
 .post-box {
 width:230px;
 /* float:left;*/
@@ -80,11 +82,11 @@ font-weight:bold;
 .all-posts {
 
   a {
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid $gray;
   display:block;
   padding-bottom:7px;
   margin-bottom:7px;
-  color:#999999;
+  color:$gray;
   font-size:18px;
     &:hover {
     color:#EEEEEE;
