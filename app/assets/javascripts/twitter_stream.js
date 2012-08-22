@@ -18,7 +18,7 @@ function processTweet(jsonData){
     var shtml = '';
     var results = jsonData[0];
     if(results){
-        shtml += "<p>" + replaceURLWithHTMLLinks(results.text) + "</p><a class = 'dark-blue-arrow' href = 'https://www.twitter.com/coshxlabs'>Follow Us<div class=\"arrow\"></div></a>";
+        shtml += "<p>" + replaceURLWithHTMLLinks(results.text) + "</p><a class = 'a-button darkblue' href = 'https://www.twitter.com/coshxlabs'>Follow Us</a>";
         $("#footer-tweet").html( shtml );
     }
 }

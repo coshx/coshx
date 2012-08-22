@@ -183,8 +183,20 @@ $gray: #a6a6a6;
     position: absolute;
     right: 5px;
     top: 17px;
+    color: #ffffff;
   }
 
+  a {
+    color: #004264;
+
+    &:hover {
+      color: #333333;
+    }
+  }
+
+  p {
+    font-family: "Droid Serif",serif;
+  }
 }
 
 @media only screen and (min-width: 960px) {
