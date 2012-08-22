@@ -1,64 +1,57 @@
 @media only screen and (max-width: 960px) {
   footer {
-  padding-left:15px;
-  padding-right:15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 footer .the-button {
-display:block;
-margin:auto;
-margin-top:10px;
-text-align:center;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
 }
-
-
-
-
-
-
 
 footer .star-header {
-margin-top:0px;
-border-top:2px solid #1588C3;
-border-bottom:1px solid #004264;
-font: bold 18px 'PT Sans', sans-serif;
-color: white;
-background: url(twitter_footer.png) no-repeat 0px 3px;
-text-transform:none;
-position:relative;
-p {
-padding-left:50px;
-margin-bottom:0px;
-}
-
+  margin-top: 0px;
+  border-top: 2px solid #1588C3;
+  border-bottom: 1px solid #004264;
+  font: bold 18px 'PT Sans', sans-serif;
+  color: white;
+  background: url(twitter_footer.png) no-repeat 0px 3px;
+  text-transform: none;
+  position: relative;
+  p {
+    padding-left: 50px;
+    margin-bottom: 0px;
+  }
 
 }
 
 @media only screen and (max-width: 500px) {
-footer .star-header {
-background-position: center 0px !important;
-p {
-padding-left:0px;
-}
+  footer .star-header {
+    background-position: center 0px !important;
+    p {
+      padding-left: 0px;
+    }
+
+  }
 
 }
-
-}
-
 
 #latest-blogs h2 a {
   &:hover {
-  color:black !important;
+    color: black !important;
   }
 }
+
 .post-info a {
   &:hover {
-  color:black;
+    color: black;
   }
 }
 
 .contact-details .the-button {
-color:white;
+  color: white;
 }
 

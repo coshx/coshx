@@ -1,182 +1,173 @@
 $gray: #a6a6a6;
 
 .services {
-  
+
   p {
-  display: block;
-  color: $gray;
-  font-family: "Droid Serif", serif;
-  font-size:13px;
+    display: block;
+    color: $gray;
+    font-family: "Droid Serif", serif;
+    font-size: 13px;
   }
 
   h5 {
-  text-transform:uppercase;
-  font:bold 18px 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    font: bold 18px 'PT Sans', sans-serif;
   }
-  
+
 }
 
 @media only screen and (min-width:960px) {
   services_box {
-  height:642px;
+    height: 642px;
   }
 }
 
-
-
 .services_box {
-max-width:640px;
-margin-left:auto;
-margin-right:auto;
-padding:70px;
-position:relative;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 70px;
+  position: relative;
 
   .circle0 {
-  left:50%;
-  top:4%;
-  margin-left:-55px;
+    left: 50%;
+    top: 4%;
+    margin-left: -55px;
   }
   .circle1 {
-  left:9%;
-  top:21.5%;
+    left: 9%;
+    top: 21.5%;
   }
   .circle2 {
-  left:9%;
-  bottom:21.5%;
+    left: 9%;
+    bottom: 21.5%;
   }
   .circle3 {
-  left:50%;
-  bottom:4%;
-  margin-left:-55px;
+    left: 50%;
+    bottom: 4%;
+    margin-left: -55px;
   }
   .circle4 {
-  right:9%;
-  top:21.5%;
+    right: 9%;
+    top: 21.5%;
   }
   .circle5 {
-  right:9%;
-  bottom:21.5%;
+    right: 9%;
+    bottom: 21.5%;
   }
 
   .middle {
-  background: url(services/middle.png);
-  left:50%;
-  top:50%;
-  padding-top:30px;
-  position:absolute;
-  width:141px;
-  height:163px;
-  margin-left:-67px;
-  margin-top:-81px;
-   &:hover {
-   background-position: -141px 0;
-     .icon {
-     background-position-x:-70px;
-     }
+    background: url(services/middle.png);
+    left: 50%;
+    top: 50%;
+    padding-top: 30px;
+    position: absolute;
+    width: 141px;
+    height: 163px;
+    margin-left: -67px;
+    margin-top: -81px;
+    &:hover {
+      background-position: -141px 0;
+      .icon {
+        background-position-x: -70px;
+      }
     }
-}
-
+  }
 
 }
 
 .circle {
-border: 5px solid #1588C3;
-background: #004264;
-border-radius:100px;
-width:110px;
-height:110px;
-content:' ';
-position:absolute;
-display:block;
+  border: 5px solid #1588C3;
+  background: #004264;
+  border-radius: 100px;
+  width: 110px;
+  height: 110px;
+  content: ' ';
+  position: absolute;
+  display: block;
 
--webkit-transition: all 0.3s ease-out;  /* Safari 3.2+, Chrome */
--moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
--o-transition: all 0.3s ease-out;  /* Opera 10.5–12.00 */
-transition: all 0.3s ease-out;  /* Firefox 16+, Opera 12.50+ */
-
-
+  -webkit-transition: all 0.3s ease-out; /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-out; /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-out; /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-out; /* Firefox 16+, Opera 12.50+ */
 
   &:hover {
-  border: 5px solid white;
-  background: #1588C3;
+    border: 5px solid white;
+    background: #1588C3;
 
-  .icon {
-  background-position:-70px 0;
-  }
-  //background-position:-70 0px;
-  .idea-icon {
-  background-position:-70px  -210px;
-  }
-  .books-icon {
-  background-position:-70px  -420px;
-  }
-  .design-icon {
-  background-position:-70px  -70px;
-  }
-  .design-icon {
-  background-position:-70px  -70px;
-  }
-  .develop-icon {
-  background-position:-70px  -140px;
-  }
-  .produce-icon {
-  background-position:-70px  -350px;
-  }
-  .process-icon {
-  background-position:-70px  -280px;
-  }
-  .agile-icon {
-  background-position:-70px  -490px;
-  }
-  .ruby-icon {
-  background-position:-70px  -560px;
-  }
-  .test-driven-icon {
-  background-position:-70px  -630px;
-  }
-  .design-small-icon {
-  background-position:-70px  -770px;
-  }
-  .global-icon {
-  background-position:-70px  -840px;
-  }
-  .access-icon {
-  background-position:-70px  -910px;
-  }
+    .icon {
+      background-position: -70px 0;
+    }
+    //background-position:-70 0px;
+    .idea-icon {
+      background-position: -70px  -210px;
+    }
+    .books-icon {
+      background-position: -70px  -420px;
+    }
+    .design-icon {
+      background-position: -70px  -70px;
+    }
+    .design-icon {
+      background-position: -70px  -70px;
+    }
+    .develop-icon {
+      background-position: -70px  -140px;
+    }
+    .produce-icon {
+      background-position: -70px  -350px;
+    }
+    .process-icon {
+      background-position: -70px  -280px;
+    }
+    .agile-icon {
+      background-position: -70px  -490px;
+    }
+    .ruby-icon {
+      background-position: -70px  -560px;
+    }
+    .test-driven-icon {
+      background-position: -70px  -630px;
+    }
+    .design-small-icon {
+      background-position: -70px  -770px;
+    }
+    .global-icon {
+      background-position: -70px  -840px;
+    }
+    .access-icon {
+      background-position: -70px  -910px;
+    }
 
-
-
-  
-  
   }
 
 }
 
 .star-header {
-margin-top:80px;
-border-top:2px solid #1588C3;
-border-bottom:1px dashed #1588C3;
-font: bold 18px 'PT Sans', sans-serif;
-color: white;
-text-transform: uppercase;
-padding:25px 0px 25px 50px;
-background: url(star.png) no-repeat 0px 20px;
-position:relative;
+  margin-top: 80px;
+  border-top: 2px solid #1588C3;
+  border-bottom: 1px dashed #1588C3;
+  font: bold 18px 'PT Sans', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  padding: 25px 0px 25px 50px;
+  background: url(star.png) no-repeat 0px 20px;
+  position: relative;
 
   .a-button {
-  position:absolute;
-  right:5px;
-  top:20px;
+    position: absolute;
+    right: 5px;
+    top: 20px;
   }
 
 }
 
 @media only screen and (min-width: 960px) {
-  
+
   .star-header {
     .a-button {
-    right:0px !important;
-    margin-right:0px;
+      right: 0px !important;
+      margin-right: 0px;
     }
   }
 
@@ -184,48 +175,45 @@ position:relative;
 
 @media only screen and (max-width: 960px) {
   .star-header {
-  padding:25px 0px 25px 90px;
-  background: url(star.png) no-repeat 30px 20px;
+    padding: 25px 0px 25px 90px;
+    background: url(star.png) no-repeat 30px 20px;
   }
 }
 
 @media only screen and (max-width: 767px) {
 
   .services {
-  
+
     h5, p {
-    text-align:center;
+      text-align: center;
     }
-    
+
   }
 
   .star-header {
-  padding:25px 0px 25px 90px;
-  background: url(star.png) no-repeat 30px 20px;
+    padding: 25px 0px 25px 90px;
+    background: url(star.png) no-repeat 30px 20px;
 
     .a-button {
-    width:auto !important;
+      width: auto !important;
     }
-
 
   }
 
 }
 
-
 @media only screen and (max-width: 500px) {
 
   .star-header {
-  padding:70px 0px 25px 0px;
-  background: url(star.png) no-repeat center 20px;
-  text-align:center;
+    padding: 70px 0px 25px 0px;
+    background: url(star.png) no-repeat center 20px;
+    text-align: center;
 
-
-  .a-button {
-  position:static;
-  width:90% !important;
-  margin-top:20px;
-  }
+    .a-button {
+      position: static;
+      width: 90% !important;
+      margin-top: 20px;
+    }
 
   }
 
@@ -233,161 +221,161 @@ position:relative;
 
 .services {
   .row {
-  padding-top:20px;
-  padding-bottom:20px;    
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .circle {
-  margin:auto;
-  position:static;
+    margin: auto;
+    position: static;
   }
 }
 
-
 .icon {
-margin-top:15px;
-width:70px;
-height:70px;
-margin-left:auto;
-margin-right:auto;
-background:url(services/icons.png);
-background-position:0 0px;
-content:' ';
-z-index:20px;
+  margin-top: 15px;
+  width: 70px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  background: url(services/icons.png);
+  background-position: 0 0px;
+  content: ' ';
+  z-index: 20px;
 }
 
 .idea-icon {
 
-background-position:0 -210px;
+  background-position: 0 -210px;
   &:hover {
-  background-position:-70px -210px;
+    background-position: -70px -210px;
   }
-  
+
 }
 
 .books-icon {
-background-position:0 -420px;
+  background-position: 0 -420px;
   &:hover {
-  background-position:-70px  -420px;
+    background-position: -70px  -420px;
   }
 }
 
 .design-icon {
 
-background-position:0 -70px;
+  background-position: 0 -70px;
 
   &:hover {
-  background-position:-70px  -70px;
+    background-position: -70px  -70px;
   }
 
 }
 
 .design-icon {
-background-position:0 -70px;
+  background-position: 0 -70px;
   &:hover {
-  background-position:-70px  -70px;
+    background-position: -70px  -70px;
   }
 
 }
 
 .develop-icon {
-background-position:0 -140px;
+  background-position: 0 -140px;
   &:hover {
-  background-position:-70px  -140px;
+    background-position: -70px  -140px;
   }
 }
+
 .produce-icon {
-background-position:0 -350px;
+  background-position: 0 -350px;
   &:hover {
-  background-position:-70px  -350px;
+    background-position: -70px  -350px;
   }
 }
 
 .process-icon {
-background-position:0 -280px;
+  background-position: 0 -280px;
   &:hover {
-  background-position:-70px  -280px;
+    background-position: -70px  -280px;
   }
 
 }
 
 .agile-icon {
-background-position:0 -490px;
+  background-position: 0 -490px;
   &:hover {
-  background-position:-70px  -490px;
+    background-position: -70px  -490px;
   }
 }
 
 .ruby-icon {
-background-position:0 -560px;
+  background-position: 0 -560px;
 
   &:hover {
-  background-position:-70px  -560px;
+    background-position: -70px  -560px;
   }
 }
 
 .test-driven-icon {
-background-position:0 -630px;
+  background-position: 0 -630px;
   &:hover {
-  background-position:-70px  -630px;
+    background-position: -70px  -630px;
   }
 
 }
+
 .design-small-icon {
-background-position:0 -770px;
+  background-position: 0 -770px;
   &:hover {
-  background-position:-70px  -770px;
+    background-position: -70px  -770px;
   }
 
 }
 
 .global-icon {
 
-background-position:0 -840px;
+  background-position: 0 -840px;
 
   &:hover {
-  background-position:-70px  -840px;
+    background-position: -70px  -840px;
   }
 
 }
+
 .access-icon {
-background-position:0 -910px;
+  background-position: 0 -910px;
   &:hover {
-  background-position:-70px  -910px;
+    background-position: -70px  -910px;
   }
 
 }
-
 
 .get-a-proposal {
-text-align:center;
+  text-align: center;
 
   .graytext {
-  font-size:33px;
-  text-align:center;
-  line-height:120%;
-  display:block;
-  margin:auto;
+    font-size: 33px;
+    text-align: center;
+    line-height: 120%;
+    display: block;
+    margin: auto;
   }
 
   a {
-  margin-top:30px;
-  display:inline-block;
+    margin-top: 30px;
+    display: inline-block;
   }
 
-margin-top:30px;
-border-top:2px solid #1588C3;
-padding-top:40px;
+  margin-top: 30px;
+  border-top: 2px solid #1588C3;
+  padding-top: 40px;
 
 }
 
-
 .save_button {
-position:fixed;
-top:0px;
-right:0px;
-background:green;
-font-size:20px;
-width:70px;
-height:70px;
-display:none;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background: green;
+  font-size: 20px;
+  width: 70px;
+  height: 70px;
+  display: none;
 }

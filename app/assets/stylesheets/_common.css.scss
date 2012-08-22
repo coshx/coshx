@@ -1,4 +1,3 @@
-
 $gray: #B2B2B2;
 $light-gray: #97979b;
 $medium-gray: #525357;
@@ -73,7 +72,8 @@ $black: #000;
     margin-bottom: 55px;
 
     .section-title {
-      vertical-align: -30%; // feels hacky, if someone knows of a better way, please share
+      vertical-align: -30%;
+      // feels hacky, if someone knows of a better way, please share
       padding-left: 5px;
     }
 

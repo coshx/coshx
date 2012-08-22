@@ -1,86 +1,84 @@
 .folk_bio {
-padding-bottom:10px;
-maring-bottom:10px;
-
+  padding-bottom: 10px;
+  maring-bottom: 10px;
 
 }
+
 .folk_wrap {
-content:' ';
-border-top:2px solid #1588C3;
-padding-top:15px;
-margin-top:15px;
-text-align:left;
+  content: ' ';
+  border-top: 2px solid #1588C3;
+  padding-top: 15px;
+  margin-top: 15px;
+  text-align: left;
 }
 
 .folk_header {
-color:#1588C3;
-font: bold 18px 'PT Sans', sans-serif;
+  color: #1588C3;
+  font: bold 18px 'PT Sans', sans-serif;
 }
-
 
 #admin-menu {
 
-    span, em, div, ul, li {
+  span, em, div, ul, li {
 
-    }
+  }
+  a {
+
+  }
+  .status {
+    margin-left: 40px;
+    font: 12px 'PT Sans', sans-serif;
+    color: white;
+    align: right;
     a {
-
-    }
-    .status {
-          margin-left:40px;
-          font: 12px 'PT Sans', sans-serif;
-          color: white;
-          align:right;
-            a {
-            font: bold 12px 'PT Sans', sans-serif;
-            color: white;
-            }
-    }
-    ul li {
-      float:left;
-      a {
       font: bold 12px 'PT Sans', sans-serif;
       color: white;
-      margin-left:20px;
-      }
     }
-    ul { }
-    li { }
+  }
+  ul li {
+    float: left;
+    a {
+      font: bold 12px 'PT Sans', sans-serif;
+      color: white;
+      margin-left: 20px;
+    }
+  }
+  ul {
+  }
+  li {
+  }
 }
 
-
-
-
 #folk-slider {
-text-align:center;
-width:100%;
-height:900px !important;
+  text-align: center;
+  width: 100%;
+  height: 900px !important;
   span {
-  color:white;
+    color: white;
   }
   .content {
-    text-align:left;
+    text-align: left;
   }
   .slide {
-  width:100%;
-  left:-1000px;
+    width: 100%;
+    left: -1000px;
   }
 
   .first-slide {
-    left:0px;
+    left: 0px;
   }
 
   h1 {
-      color: white;
-      font: bold 48px 'PT Sans', sans-serif;
-      text-transform: uppercase;
-      display:block;
-      text-align:left;
-    }  
+    color: white;
+    font: bold 48px 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    display: block;
+    text-align: left;
+  }
 
   p {
-    display:block;
-    text-align:left;
+    display: block;
+    text-align: left;
     color: gray;
     font: 14px / 24px "Droid Serif", serif;
     margin: 22px 0px;

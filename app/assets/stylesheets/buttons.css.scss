@@ -1,84 +1,80 @@
-
-
 @media only screen and (max-width: 767px) {
-body .the-button, .a-button {
-width:90% !important;
-dispaly:block !important;
-margin-left:auto !important;
-margin-right:auto !important;
-}
+  body .the-button, .a-button {
+    width: 90% !important;
+    dispaly: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
 
 .the-button {
--webkit-transition: all 0.2s ease-out;  /* Safari 3.2+, Chrome */
-     -moz-transition: all 0.2s ease-out;  /* Firefox 4-15 */
-       -o-transition: all 0.2s ease-out;  /* Opera 10.5–12.00 */
-          transition: all 0.2s ease-out;  /* Firefox 16+, Opera 12.50+ */
-          
-display:inline-block;
-height:33px;
-color: #004264;
-text-decoration: none;
-font: 14px 'PT Sans', sans-serif;
-background: #1588C3;
-padding:7px 20px;
-border-radius:5px;
-text-transform:uppercase;
-font-weight:bold !important;
+  -webkit-transition: all 0.2s ease-out; /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.2s ease-out; /* Firefox 4-15 */
+  -o-transition: all 0.2s ease-out; /* Opera 10.5–12.00 */
+  transition: all 0.2s ease-out; /* Firefox 16+, Opera 12.50+ */
 
-&:hover {
-color:white;
-}
+  display: inline-block;
+  height: 33px;
+  color: #004264;
+  text-decoration: none;
+  font: 14px 'PT Sans', sans-serif;
+  background: #1588C3;
+  padding: 7px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold !important;
+
+  &:hover {
+    color: white;
+  }
 }
 
 .a-button {
-margin-top:5px;
-margin-bottom:5px;
-margin-left:10px;
-margin-right:10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 
--webkit-transition: all 0.2s ease-out;  /* Safari 3.2+, Chrome */
-     -moz-transition: all 0.2s ease-out;  /* Firefox 4-15 */
-       -o-transition: all 0.2s ease-out;  /* Opera 10.5–12.00 */
-          transition: all 0.2s ease-out;  /* Firefox 16+, Opera 12.50+ */
-          
-display:inline-block;
-font-weight:bold !important;
-text-transform:uppercase;
-height:25px;
-text-decoration: none;
-font: 12px 'PT Sans', sans-serif;
-padding:5px 20px;
-border-radius:5px;
+  -webkit-transition: all 0.2s ease-out; /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.2s ease-out; /* Firefox 4-15 */
+  -o-transition: all 0.2s ease-out; /* Opera 10.5–12.00 */
+  transition: all 0.2s ease-out; /* Firefox 16+, Opera 12.50+ */
 
-color: #004264;
-background: #1588C3;
-&:hover {
-color:white;
-}
+  display: inline-block;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  height: 25px;
+  text-decoration: none;
+  font: 12px 'PT Sans', sans-serif;
+  padding: 5px 20px;
+  border-radius: 5px;
+
+  color: #004264;
+  background: #1588C3;
+  &:hover {
+    color: white;
+  }
 }
 
 body .darkblue {
-color: white;
-background: #004264;
-&:hover {
-color: #1588C3;
-background:white;
+  color: white;
+  background: #004264;
+  &:hover {
+    color: #1588C3;
+    background: white;
+  }
 }
-}
-
 
 .white {
-background: #1588C3;
-color: #1588C3;
-&:hover {
-background:white !important;
-color:#004264;}
+  background: #1588C3;
+  color: #1588C3;
+  &:hover {
+    background: white !important;
+    color: #004264;
+  }
 }
 
-
-
 .footer-tweet .a-button {
-margin-top:15px;
-float:right;
+  margin-top: 15px;
+  float: right;
 }

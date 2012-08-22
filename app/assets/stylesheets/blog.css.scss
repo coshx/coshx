@@ -1,11 +1,5 @@
 @import "common";
 
-
-
-
-
-
-
 #gutter {
 
 }
@@ -15,45 +9,47 @@ body.default section.primary.wall-of-text {
 }
 
 section.primary {
-    .post-author-image {
+  .post-author-image {
+
+  }
+  .post-info-wrapper, .post-info {
+
+  }
+
+  .post-info-wrapper {
+    margin-bottom: 10px;
+  }
+
+  .post-info {
+
+  }
+  .post-body {
+    p {
 
     }
-    .post-info-wrapper, .post-info {
+    hr {
+
+    }
+    .meta {
 
     }
 
-    .post-info-wrapper { margin-bottom: 10px; }
-
-    .post-info {
+    em {
 
     }
-    .post-body {
-        p {
+  }
 
-        }
-        hr {
+  .pagination {
 
-        }
-        .meta {
-
-        }
-
-        em {
-
-        }
-    }
-
-    .pagination {
-
-    }
+  }
 }
 
 .edit-link a {
-display:block !important;
-border:none !important;
-padding-bottom: 150px;
-content: ' ';
-font-size:11px !important;
+  display: block !important;
+  border: none !important;
+  padding-bottom: 150px;
+  content: ' ';
+  font-size: 11px !important;
 }
 
 
