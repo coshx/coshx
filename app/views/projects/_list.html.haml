@@ -11,7 +11,7 @@
         =image_tag fp.picture_url if fp.picture?
         .overlay
           .link-wrapper
-            %a.link-to-the-project{:href => "#", "data-reveal-id" => "modal#{i}"}
+            %a.link-to-the-project{:href => fp.url}
     
     %div{:id => "modal#{i}", :class => "reveal-modal"}
       %h2=fp.title
