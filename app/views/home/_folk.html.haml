@@ -15,15 +15,18 @@
       %p.folk_bio=folk.bio.html_safe
       
 .folk_wrap
-  .folk_header LIKES
-  %span=folk.likes
-  .folk_header DISLIKES
-  %span=folk.dislikes
-  
-  .folk_header GITHUB
-  %span=folk.github
-  .folk_header TWITTER
-  %span=folk.twitter
+  -if folk.likes
+    .folk_header LIKES
+    %span=folk.likes
+  -if folk.dislikes    
+    .folk_header DISLIKES
+    %span=folk.dislikes  
+  -if folk.github
+    .folk_header GITHUB
+    %span=folk.github
+  -if folk.twitter
+    .folk_header TWITTER
+    %span=folk.twitter
   
 
 
