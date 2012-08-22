@@ -14,7 +14,7 @@ class Admin < ActiveRecord::Base
   end
   
   def generate_slug
-      self.slug = self.name
+      self.slug = "#{self.name}"
       self.slug.gsub! /['`]/,""
       self.slug.gsub! /\s*@\s*/, " at "      
       self.slug.gsub! /\s*&\s*/, " and "
