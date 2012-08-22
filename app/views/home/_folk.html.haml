@@ -4,13 +4,13 @@
 .row
   .five.columns.push-six
     -if Coshx::Application.assets.find_asset("team/#{folk.slug}.png").nil?
-      =image_tag("team/gabe_kopley.png")
+      =image_tag("team/no_pic.png")
     -else
       =image_tag("team/#{folk.slug}.png")
 
   .six.columns.pull-six
     .content
-      .folk_header Nickname here
+      .folk_header
       %h1=folk.name
       %p.folk_bio=folk.bio.html_safe
       
