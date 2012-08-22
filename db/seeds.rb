@@ -205,6 +205,8 @@ puts "Created Service #{service.title}"
 puts "Creating POSTS..."
 #BLOG
 
+
+
 post = Post.find_or_create_by_title('Startup Weekend: Charlottesville') do |post|
   post.title = 'Startup Weekend: Charlottesville'
   post.author_id = '4'
@@ -1091,9 +1093,45 @@ Here's a simple recipe that I try to follow. It's by no means complete, but serv
 EOF
 end
 
+
+
+post = Post.find_or_create_by_title('San Francisco Office Now Open') do |post|
+  puts "creating San Francisco"
+  post.title = 'San Francisco Office Now Open'
+  post.author_id = '6'
+  post.created_at = '2012-08-16 20:51:27 UTC'
+  post.posted_on = ''
+  post.updated_at = '2012-08-16 20:54:54 UTC'
+  post.body = <<EOF
+
+I'm happy to announce our new permanent office in San Francisco, as well as our first San Francisco hire, Michael Makarov.
+   
+
+San Francisco is the third Coshx office after Boulder and Charlottesville.  And Michael's joining brings our headcount to 12, including our staff members in Austin, Baltimore, and Belgrade.
+   
+
+In addition to Michael and myself, we're pleased to share our space with Stewie the Dog.
+   
+
+As well as working together at Coshx Labs, Michael and I organize and teach the weekly [Rails class](https://www.noisebridge.net/wiki/Backend_web_dev_in_Ruby_on_Rails) at the neighborhood hackerspace, [Noisebridge](https://www.noisebridge.net).
+   
+
+We look forward to much productive collaboration with more brilliant hires and clients in San Francisco.  To get started, visit us in SoMa at [1211 Folsom St. (at 8th)](http://goo.gl/maps/eiNlT), on the 3rd  floor, or reach me at [gabe@coshx.com](gabe@coshx.com).
+   
+
+![Stewie at work](https://s3.amazonaws.com/uploads.hipchat.com/9996/25967/m07gxvfyu6px3gh/c9de9f3ae7d511e18393123138100c1d_7.jpg)
+###### Stewie enjoys a brief rest while his tests run
+EOF
+end
+
+
+
 puts "And now we need to publish posts that we have created"
 
 posts = Post.all
+
+puts posts.size
+
 posts.each do |p|
   puts "Publishing post '#{p.title}'"
   post_date = p.posted_on
