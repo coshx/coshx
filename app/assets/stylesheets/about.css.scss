@@ -89,9 +89,14 @@
   -o-transition: all 0.3s ease-out; /* Opera 10.5–12.00 */
   transition: all 0.3s ease-out; /* Firefox 16+, Opera 12.50+ */
 
+  filter: url(/filters.svg#grayscale); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+
   &:hover {
     border: 6px solid #1588c3;
-
+    filter: none;
+    -webkit-filter: grayscale(0);
   }
 
   p {
