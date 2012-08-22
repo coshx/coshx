@@ -99,6 +99,31 @@ $gray: #a6a6a6;
       background-position: -70px 0;
     }
     //background-position:-70 0px;
+    
+    
+    
+.one-icon {
+    background-position: -70px -0px !important;
+}
+.two-icon {
+    background-position: -70px -70px !important;
+}
+.three-icon {
+    background-position: -70px -140px !important;
+}
+.four-icon {
+    background-position: -70px -210px !important;
+}
+.five-icon {
+    background-position: -70px -280px !important;
+}
+.six-icon {
+    background-position: -70px -350px !important;
+}
+    
+    
+    
+    
     .idea-icon {
       background-position: -70px  -210px;
     }
@@ -241,6 +266,79 @@ $gray: #a6a6a6;
   content: ' ';
   z-index: 20px;
 }
+
+
+.one-icon {
+
+  background: url(numbers.png) !important;
+  background-position: 0 0px !important;
+  &:hover {
+    background-position: -70px -0px !important;
+  }
+
+}
+.two-icon {
+
+  background: url(numbers.png) !important;
+  background-position: 0 -70px !important;
+  &:hover {
+    background-position: -70px -70px !important;
+  }
+
+}
+.three-icon {
+
+  background: url(numbers.png) !important;
+  background-position: 0 -140px !important;
+  &:hover {
+    background-position: -70px -140px !important;
+  }
+
+}
+.four-icon {
+
+  background: url(numbers.png) !important;
+  background-position: 0 -210px !important;
+  &:hover {
+    background-position: -70px -210px !important;
+  }
+
+}
+.five-icon {
+
+  background: url(numbers.png) !important;
+  background-position: 0 -280px !important;
+  &:hover {
+    background-position: -70px -280px !important;
+  }
+
+}
+.six-icon {
+
+  background: url(numbers.png) !important;
+  background-position: 0 -350px !important;
+  &:hover {
+    background-position: -70px -350px !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .idea-icon {
 
