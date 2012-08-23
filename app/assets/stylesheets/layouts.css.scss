@@ -16,7 +16,7 @@ h2 {
 }
 
 body {
-  background: transparent image-url("tile_background.png");
+  background: transparent image-url("tile_background.png") repeat -20px 0px scroll;
   overflow-x: hidden;
   color: white;
 }
@@ -87,7 +87,7 @@ body {
 
 ul#nav li {
   float: left;
-  width: 16.6%;
+  width: 16.667%;
   background: url(menu-border.png) no-repeat right 6px;
   border-bottom: 1px solid #1588C3;
 
