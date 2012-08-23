@@ -2,6 +2,9 @@ source "http://rubygems.org"
 
 gem "rails", "3.2.8"
 
+# web server
+gem 'thin'
+
 # database
 gem "pg"
 
