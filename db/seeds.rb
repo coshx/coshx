@@ -1019,7 +1019,7 @@ post = Post.find_or_create_by_title('San Francisco Office Now Open') do |post|
   post.title = 'San Francisco Office Now Open'
   post.author_id = Admin.find_by_email("gabe@coshx.com").id
   post.created_at = '2012-08-16 20:51:27 UTC'
-  post.posted_on = ''
+  post.posted_on = '2012-08-16 20:51:27 UTC'
   post.updated_at = '2012-08-16 20:54:54 UTC'
   post.body = <<EOF
 
