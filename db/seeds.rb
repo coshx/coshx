@@ -2077,3 +2077,26 @@ quote = Quote.find_or_create_by_text(" I think the software is working superbly.
 EOF
 end
 
+
+
+# PROJECTS
+
+project = Project.find_or_create_by_url('https://network.unwasteny.org/') do |project|
+  project.title = 'Go drink vodka'
+  project.picture = 'https://coshx-website.s3.amazonaws.com/uploads/project/picture/2/unwasteny.png'
+  project.url = 'https://network.unwasteny.org/'
+  project.featured = ''
+end
+project = Project.find_or_create_by_url('http://www.gigdog.fm/') do |project|
+  project.title = 'Play poker'
+  project.picture = 'https://coshx-website.s3.amazonaws.com/uploads/project/picture/3/gigdog.png'
+  project.url = 'http://www.gigdog.fm/'
+  project.featured = ''
+end
+project = Project.find_or_create_by_url('http://www.tendrilinc.com/energy-providers/application/energize/') do |project|
+  project.title = 'Building a bar'
+  project.picture = 'https://coshx-website.s3.amazonaws.com/uploads/project/picture/1/energize.png'
+  project.url = 'http://www.tendrilinc.com/energy-providers/application/energize/'
+  project.featured = ''
+end
+
