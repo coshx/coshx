@@ -223,93 +223,10 @@ So what did I do? I halfheartedly proposed something (and actually got some inte
 Is it The Next Big Thing? Not yet. Did anyone make that mythical unicorn-like capital magnet of a viral product that all startups yearn to spin into the unsuspecting market? It's too soon to say - overnight success never really happens overnight. 
 EOF
 end
-post = Post.find_or_create_by_title('Adding Gem Functionality: browser platform detection') do |post|
-  post.title = 'Adding Gem Functionality: browser platform detection'
-  post.author_id = '9'
-  post.created_at = '2012-08-08 00:12:37 UTC'
-  post.posted_on = ''
-  post.updated_at = '2012-08-08 01:07:32 UTC'
-  post.body = <<EOF
-The problem I am going to tackle in this post is detecting browser info from a rails app, however concepts can be applied to other ruby projects, such as something built on Sinatra or even something not built on ruby.
 
-<h4>Background</h4> 
-
-The app supports iphone, ipad, android and browsers- these are our platforms. Our api is built on rails. We want to detect which platform a object is created from- lets say a comment.
-
-<h4>Story</h4> 
-
-As a market analyst, I want to see statistics on what platform a comment was created on, so I can analysis our comment activity across platforms... or something like that
-
-<h4>Thought Process</h4>
-
-After I made my migration, the first thought that popped into my mind was "hidden fields on each view with some text that says the platform". This will work, but finding and updating views in each project is a pain, hard to maintain, etc. I was given a hint and felt dumb right away for not thinking to use the request data- request.env["HTTP_USER_AGENT"] in rails. This will yield something like "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.57 Safari/537.1" which we could then use regular expressions to match iphone, ipad, etc. 
-
-I like regular expressions but I knew I'd be reinventing the wheel, so I went searching for a gem and found the <a href="https://github.com/fnando/browser" target="_blank">browser gem</a>. The gem does what I just described and it even has rails integration. Winning.
-
-<h4>Adding to the browser gem</h4>
-
-Install the gem in your Gemfile and a nice helper method is added to rails controllers- "browser" which gives us a browser object from the gem. We can call methods like browser.iphone? in our controller, but we don't want this logic in the controller so lets write a method on the gem's Browser class to give us exactly what we want. To add a method to a class like String, Array, or Browser we can either define the method on the class in a file in config/initializers. Or do the same it in /lib and then require that file from a file that's in config/initializers. For example inside /config/initializers/extensions.rb I could have "require 'browser_gem_extensions' " if i have the file /lib/browser_gem_extensions.rb. I generally like requiring from lib because I have tests covering /lib and I feel the organization is better. I defined platform on the Browser class like so:
-
-```ruby
-class Browser
-
-  def platform
-    return "iphone" if iphone?
-    return "ipad" if ipad?
-    return "android" if android?
-    return "web"
-  end
-
-end
-```
-
-The platform method returns which of the supported platforms was used as described in our background section above. All that is left to do is update the controller. We can now add something like this to our params on the create method.
-
-```ruby
-  params[:comment][:created_on_platform] = browser.platform
-```
-All that is left is some type of view to display comment platform analytics now which I am not going to cover.
-
-<h4>1 last hint</h4>
-
-What if we want this on multiple objects and/or controller actions such as update and create? I'd create a before filter something like this
-
-```ruby
-  before_filter :store_platform
-
-  def store_platform
-    object_name = request.request_uri.slice(0)
-    object_name.chop!
-    params[object_name][:created_on_platform] = browser.platform
-  end
-```
-
-Getting the object name for the hash like i did is very hacky, what I did assumes request.request_uri is something like "/comments", "/posts", etc... I just couldn't find a better way from a quick brain and google search. If you think you have a good solution for this part let me know.
-EOF
-end
-post = Post.find_or_create_by_title('The Cucumber Unicorn') do |post|
-  post.title = 'The Cucumber Unicorn'
-  post.author_id = '4'
-  post.created_at = '2012-03-25 04:33:08 UTC'
-  post.posted_on = ''
-  post.updated_at = '2012-03-25 04:33:08 UTC'
-  post.body = <<EOF
-[Cucumber](http://cukes.info/) is a curious creature. It purports to bring together engineers and businesspeople; it mixes the oil and the water of the office.
-
-
-Well, that's the theory at least. The bridge between the described and the code is still large even when you have a [gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin) bridge crossing the descriptive and code chasm. I've used Cucumber on several projects but try as I might, the interest of the non-engineers in dipping their hands into the cuke has been less forthcoming than I hoped.
-
-
-But recently! Oho! I was fortuitous enough to convince a team that using Cucumber to bridge the conceptual and technical realms was worth the unfamiliarity. 'Twas a wondrous experience; QA writing tests not in some clunky web tool, but right 
-in the code! Planners planning in the thick of the mental fortress that coders build around their repositories.
-
-
-If you ever come upon the Cucumber Unicorn, the chance to actually get the non-technical team members to take a stake and give a shake to adopting use of cucumber, don't pass it up. Don't let your cynicism over a few abandoned zucchinis make you lose faith. Not every team will adopt cucumber, as tasty and crunchy (and pleasant on a salad with a citrus dressing) as it may be. But when you have a tool that can bring your team together on a conceptual plateau more often, you should take advantage of it. You won't regret it.
-EOF
-end
 post = Post.find_or_create_by_title('Removing Technical Debt') do |post|
   post.title = 'Removing Technical Debt'
-  post.author_id = '3'
+  post.author_id = Admin.find_by_email("david@coshx.com").id
   post.created_at = '2012-04-09 19:00:28 UTC'
   post.posted_on = '2012-04-09 19:02:53 UTC'
   post.updated_at = '2012-04-09 19:02:53 UTC'
@@ -344,7 +261,7 @@ EOF
 end
 post = Post.find_or_create_by_title('Introducing sinatra_bootstrap') do |post|
   post.title = 'Introducing sinatra_bootstrap'
-  post.author_id = '5'
+  post.author_id = Admin.find_by_email("ryan@coshx.com").id
   post.created_at = '2012-03-26 03:43:55 UTC'
   post.posted_on = '2012-04-09 16:48:03 UTC'
   post.updated_at = '2012-04-09 16:48:03 UTC'
@@ -396,7 +313,7 @@ EOF
 end
 post = Post.find_or_create_by_title('Polymorphic Associations and validate_uniqueness_of') do |post|
   post.title = 'Polymorphic Associations and validate_uniqueness_of'
-  post.author_id = '5'
+  post.author_id = Admin.find_by_email("ryan@coshx.com").id
   post.created_at = '2012-03-23 22:24:12 UTC'
   post.posted_on = '2012-04-06 16:08:10 UTC'
   post.updated_at = '2012-04-06 17:12:03 UTC'
@@ -512,7 +429,8 @@ EOF
 end
 post = Post.find_or_create_by_title('The ubiquity of NoSQL as presented by MongoDB') do |post|
   post.title = 'The ubiquity of NoSQL as presented by MongoDB'
-  post.author_id = '4'
+  post.author_id = Admin.find_by_email("davidkapp@coshx.com").id
+
   post.created_at = '2012-03-25 03:50:30 UTC'
   post.posted_on = '2012-03-25 03:51:29 UTC'
   post.updated_at = '2012-03-25 04:16:04 UTC'
@@ -540,7 +458,7 @@ EOF
 end
 post = Post.find_or_create_by_title('Increasing Performance using Ajax') do |post|
   post.title = 'Increasing Performance using Ajax'
-  post.author_id = '9'
+  post.author_id = Admin.find_by_email("calvin@coshx.com").id
   post.created_at = '2012-03-01 20:38:10 UTC'
   post.posted_on = '2012-03-01 21:11:33 UTC'
   post.updated_at = '2012-03-01 21:33:46 UTC'
@@ -647,7 +565,7 @@ EOF
 end
 post = Post.find_or_create_by_title('`rake cucumber` loads development environment') do |post|
   post.title = '`rake cucumber` loads development environment'
-  post.author_id = '1'
+  post.author_id = Admin.find_by_email("ben@coshx.com").id
   post.created_at = '2012-02-24 19:24:29 UTC'
   post.posted_on = '2012-02-24 19:32:20 UTC'
   post.updated_at = '2012-02-24 19:58:18 UTC'
@@ -695,7 +613,8 @@ EOF
 end
 post = Post.find_or_create_by_title('Installing tsung with homebrew on osx') do |post|
   post.title = 'Installing tsung with homebrew on osx'
-  post.author_id = '1'
+  post.author_id = Admin.find_by_email("ben@coshx.com").id
+
   post.created_at = '2012-01-31 18:25:07 UTC'
   post.posted_on = '2012-01-31 18:27:04 UTC'
   post.updated_at = '2012-01-31 18:27:04 UTC'
@@ -765,7 +684,7 @@ EOF
 end
 post = Post.find_or_create_by_title('The $50,000 Blog Post') do |post|
   post.title = 'The $50,000 Blog Post'
-  post.author_id = '6'
+  post.author_id = Admin.find_by_email("gabe@coshx.com").id
   post.created_at = '2012-01-21 05:36:40 UTC'
   post.posted_on = '2012-01-21 07:23:43 UTC'
   post.updated_at = '2012-01-23 02:09:31 UTC'
@@ -799,7 +718,7 @@ EOF
 end
 post = Post.find_or_create_by_title('Upgrading a Rails 3.1.3 project to Ruby 1.9.3') do |post|
   post.title = 'Upgrading a Rails 3.1.3 project to Ruby 1.9.3'
-  post.author_id = '4'
+  post.author_id = Admin.find_by_email("davidkapp@coshx.com").id
   post.created_at = '2012-01-06 19:42:56 UTC'
   post.posted_on = '2012-01-06 20:10:40 UTC'
   post.updated_at = '2012-01-10 19:55:29 UTC'
@@ -896,7 +815,7 @@ EOF
 end
 post = Post.find_or_create_by_title('Our First Birthday Party') do |post|
   post.title = 'Our First Birthday Party'
-  post.author_id = '3'
+  post.author_id = Admin.find_by_email("david@coshx.com").id
   post.created_at = '2012-01-05 00:41:05 UTC'
   post.posted_on = '2012-01-05 00:41:31 UTC'
   post.updated_at = '2012-01-10 19:55:29 UTC'
@@ -921,7 +840,7 @@ EOF
 end
 post = Post.find_or_create_by_title('Parallel Testing for Rails Applications') do |post|
   post.title = 'Parallel Testing for Rails Applications'
-  post.author_id = '2'
+  post.author_id = Admin.find_by_email("mike@coshx.com").id
   post.created_at = '2011-12-29 01:35:21 UTC'
   post.posted_on = '2011-12-29 01:36:52 UTC'
   post.updated_at = '2012-01-10 19:55:29 UTC'
@@ -1024,7 +943,7 @@ EOF
 end
 post = Post.find_or_create_by_title('How to Train Your Startup CTO') do |post|
   post.title = 'How to Train Your Startup CTO'
-  post.author_id = '1'
+  post.author_id = Admin.find_by_email("ben@coshx.com").id
   post.created_at = '2011-12-06 21:54:57 UTC'
   post.posted_on = '2011-12-06 21:55:16 UTC'
   post.updated_at = '2012-01-10 19:55:29 UTC'
@@ -1098,7 +1017,7 @@ end
 post = Post.find_or_create_by_title('San Francisco Office Now Open') do |post|
   puts "creating San Francisco"
   post.title = 'San Francisco Office Now Open'
-  post.author_id = '6'
+  post.author_id = Admin.find_by_email("gabe@coshx.com").id
   post.created_at = '2012-08-16 20:51:27 UTC'
   post.posted_on = ''
   post.updated_at = '2012-08-16 20:54:54 UTC'
@@ -2087,12 +2006,14 @@ project = Project.find_or_create_by_url('https://network.unwasteny.org/') do |pr
   project.url = 'https://network.unwasteny.org/'
   project.featured = ''
 end
+
 project = Project.find_or_create_by_url('http://www.gigdog.fm/') do |project|
   project.title = 'Play poker'
   project.picture = 'https://coshx-website.s3.amazonaws.com/uploads/project/picture/3/gigdog.png'
   project.url = 'http://www.gigdog.fm/'
   project.featured = ''
 end
+binding.pry
 project = Project.find_or_create_by_url('http://www.tendrilinc.com/energy-providers/application/energize/') do |project|
   project.title = 'Building a bar'
   project.picture = 'https://coshx-website.s3.amazonaws.com/uploads/project/picture/1/energize.png'
