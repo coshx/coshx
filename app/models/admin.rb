@@ -14,16 +14,14 @@ class Admin < ActiveRecord::Base
   end
   
   def generate_slug
-      self.slug = "#{self.name}"
-      self.slug.gsub! /['`]/,""
-      self.slug.gsub! /\s*@\s*/, " at "      
-      self.slug.gsub! /\s*&\s*/, " and "
-      self.slug.gsub! /\s*[^A-Za-z0-9\.\-]\s*/, '_'  
-      self.slug.gsub! /_+/,"_"
-      self.slug.gsub! /\A[_\.]+|[_\.]+\z/,""
-      self.slug.downcase!
-      #self.save!
-  
+    self.slug = "#{self.name}"
+    self.slug.gsub! /['`]/,""
+    self.slug.gsub! /\s*@\s*/, " at "      
+    self.slug.gsub! /\s*&\s*/, " and "
+    self.slug.gsub! /\s*[^A-Za-z0-9\.\-]\s*/, '_'  
+    self.slug.gsub! /_+/,"_"
+    self.slug.gsub! /\A[_\.]+|[_\.]+\z/,""
+    self.slug.downcase!
   end
   
   def url
