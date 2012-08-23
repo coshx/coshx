@@ -2013,7 +2013,7 @@ project = Project.find_or_create_by_url('http://www.gigdog.fm/') do |project|
   project.url = 'http://www.gigdog.fm/'
   project.featured = ''
 end
-binding.pry
+
 project = Project.find_or_create_by_url('http://www.tendrilinc.com/energy-providers/application/energize/') do |project|
   project.title = 'Building a bar'
   project.picture = 'https://coshx-website.s3.amazonaws.com/uploads/project/picture/1/energize.png'
