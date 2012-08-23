@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @client.name
+%p
+  %b Company logo:
+  = @client.company_logo
+
+= link_to 'Edit', edit_client_path(@client)
+\|
+= link_to 'Back', clients_path

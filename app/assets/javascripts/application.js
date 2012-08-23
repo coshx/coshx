@@ -7,5 +7,8 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
-//= require raphael-min
-//= require_tree .
+//= require vendor
+//= require_tree
+//= require foundation
+//= require foundation/app
+

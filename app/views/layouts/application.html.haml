@@ -6,19 +6,23 @@
     = render "layouts/fonts"
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
+    %meta(content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" name="viewport")/
     = csrf_meta_tags
     = render "layouts/google_analytics"
     = render "layouts/disqus_dev_mode" if Rails.env.development? || Rails.env.test?
     = auto_discovery_link_tag :atom, "/feed"
     = favicon_link_tag
-  %body{:class => body_class}
-    %section#content-canvas
-      #header-wrapper
+  %body
+    .save_button
+      Save!
+    %div.container.main-container
+      %div#header.row
         - if admin_signed_in?
           = render "layouts/admin_menu"
         = render "layouts/header"
-      #content-wrapper
-        %section#content
-          = yield
-        #content-footer
+      %div#content.row
+        = yield
     = render "layouts/footer"
+
+    
+

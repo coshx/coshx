@@ -1,0 +1,36 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @message.name
+%p
+  %b Email:
+  = @message.email
+%p
+  %b Text:
+  = @message.text
+%p
+  %b Company name:
+  = @message.company_name
+%p
+  %b Country:
+  = @message.country
+%p
+  %b Phone:
+  = @message.phone
+%p
+  %b Project description:
+  = @message.project_description
+%p
+  %b Deadline:
+  = @message.deadline
+%p
+  %b Budget:
+  = @message.budget
+%p
+  %b Comment:
+  = @message.comment
+
+= link_to 'Edit', edit_message_path(@message)
+\|
+= link_to 'Back', messages_path

@@ -1,15 +1,9 @@
-@import "compass/css3";
-@import "compass/layout";
-$blueprint-grid-columns: 24;
-$blueprint-grid-width: 30px;
-$blueprint-grid-margin: 10px;
-@import "blueprint/grid";
-
-$gray: #38383A;
+$gray: #B2B2B2;
 $light-gray: #97979b;
 $medium-gray: #525357;
 
-$blue: #659dff;
+$blue: #1588c3;
+$dark-blue: #004264;
 $very-pale-blue: #E3E3FF;
 $green: #afcf45;
 $purple: #c64791;
@@ -19,143 +13,82 @@ $dark-orange: #f05325;
 
 $silver: #c1c5c9;
 $gold: #d6c29c;
+$white: #FFF;
+$black: #000;
 
-$header-height: 101px;
+@mixin w960 {
+  width: 960px;
+  margin: 0px auto;
+}
 
-$feature-height: 450px;
+@mixin arrow-button {
+  @include border-radius(5px);
+  display: inline-block;
+  padding: 4px 40px 4px 15px;
+  text-decoration: none;
+  font: 12px 'PT Sans', sans-serif;
+  background: $blue;
+  position: relative;
+  &:hover {
+    background: image-url("arrow_blue_btn.png") no-repeat scroll 96% 9px $blue;
+    color: $white !important;
+  }
+}
 
 @mixin centered {
-    margin: 0 auto;
-    @include container;
-    @include column-rule(1px, solid, #c00)
+  margin: 0 auto;
 }
 
-@mixin nav-text {
-    font-family: Arimo;
-    font-size: 22px;
-    color: $light-orange;
+@mixin pt-sans-bold {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
 }
 
-@mixin footer-header-text {
-    font-family: Arimo;
-    text-transform: uppercase;
-    font-size: 24px;
-    color: $gold;
-    border-bottom: 5px solid $medium-gray;
-    padding-bottom: 10px;
+@mixin pt-sans {
+  font-family: 'PT Sans', sans-serif;
 }
 
-@mixin footer-subheader-text {
-    font-family: Arimo;
-    text-transform: lowercase;
-    font-size: 18px;
-    color: $silver;
+@mixin pt-sans-header {
+  @include pt-sans-bold;
+  font-size: 18px;
 }
 
-@mixin footer-text {
-    font-family: Arimo;
-    font-size: 14px;
-    color: $light-gray;
+@mixin solid-thick-top {
+  border-top: 2px $blue solid;
 }
 
-@mixin footer-link-text {
-    @include footer-text;
-    font-weight: bold;
+@mixin solid-thin-bottom {
+  border-bottom: 1px $blue solid;
 }
 
-@mixin main-feature-text($size, $spacing) {
-    font-family: Arimo;
-    font-size: $size;
-    letter-spacing: $spacing;
-    text-transform: uppercase;
-    color: white;
-    text-indent: 20px;
-    @include rotate(90deg);
-    white-space:nowrap;
-    text-indent: 60px;
-}
+@mixin projects-clients-header {
+  margin-top: 50px;
+  padding-top: 18px;
 
-@mixin tagline-text {
-    color: $light-orange;
-    font-family: Arimo;
-    font-size: 30px;
-    text-align: center;
-}
+  .header {
 
-@mixin feature-header-text($color) {
-    color: $color;
-    font-family: Syncopate;
-    font-size: 24px;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 10px 0;
-}
+    padding-bottom: 18px;
+    border-bottom: 1px $blue dashed;
+    margin-bottom: 55px;
 
-@mixin feature-text {
-    font-family: Arimo;
-    font-size: 16px;
-    color: white;
-    line-height: 1.5em;
-    text-align: center;
-}
+    .section-title {
+      vertical-align: -30%;
+      // feels hacky, if someone knows of a better way, please share
+      padding-left: 5px;
+    }
 
-@mixin blog-header-text {
-    font-family: Arimo;
-}
+    img {
+      vertical-align: middle;
+      padding: 10px 0px;
+    }
 
-@mixin quote-text {
-    font-style: italic;
-    font-size: 14px;
-    color: $medium-gray;
-    line-height: 1.5em;
-}
+    .callout-link {
+      float: right;
+      width: 163px;
 
-@mixin credit-text {
-    @include quote-text;
-    font-size: 14px;
-    font-style: normal;
-}
-
-@mixin header-text {
-    color: $light-orange;
-    font-family: Arimo;
-    font-size: 40px;
-    text-align: left;
-    margin: 10px 0;
-}
-
-@mixin sub-header-text {
-    color: $blue;
-    font-family: Arimo;
-    font-size: 24px;
-    text-align: left;
-    letter-spacing: 2px;
-    line-height: 1.2em;
-}
-
-@mixin lowercase-header-text {
-    font-family: Arimo;
-    color: $green;
-    text-transform: lowercase;
-    font-size: 22px;
-    margin: 10px 0;
-}
-
-@mixin article-text {
-    font-family: Arimo;
-    font-size: 16px;
-    color: white;
-    line-height: 1.5em;
-    font-weight: normal;
-}
-
-@mixin meta-text {
-    font-family: Arimo;
-    text-align: left;
-    color: $gold;
-}
-
-@mixin code-text {
-    font-family: Droid Sans Mono;
-    line-height: 1.2em;
+      .button-link {
+        margin-top: 14px;
+      }
+    }
+  }
 }

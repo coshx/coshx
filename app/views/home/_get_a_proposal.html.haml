@@ -1,0 +1,5 @@
+.get-a-proposal
+  %p.graytext{editable("proposal_text")}
+    =content("proposal_text")
+  
+  =link_to "Get a proposal", contact_path(:anchor => "quote"), :class => 'the-button'

@@ -1,24 +1,94 @@
-%section.primary
-  %h2 About Us
-  %h3 We're a distributed team of people passionate about software. Here's a little more about each of us.
+%section#about-us
+  %h1.formula{editable("about page title")}
+    =content("about page title")
+  %p{editable("about page text")}
+    =content("about page text")
 
-  %section#coshx-folks.wall-of-text
-    %ul.team-members
-      - @coshx_folks.each do |person|
-        %li.team-member
-          .float-left
-            %p
-              = image_tag Gravatar.new(person.email).image_url, :size => "80x80"
-          .personal-quips
-            %p
-              = person.name
-            - if person.twitter.present?
-              %p
-                = link_to "@#{person.twitter}", "https://twitter.com/#{person.twitter}"
+  .about-stats.hide-for-small
+    .row.big-icons
+      .four.columns
+        .coffee
+          %img{:alt => "", :src => "/assets/coffee.png"}
+          %h3 Coffee consumed
+          %h2 1,978
+          %p cups this year
+      .four.columns
+        .tracks.b
+          %img{:alt => "", :src => "/assets/headphones.png"}
+          %h3 Tracks played
+          %h2 3,645
+          %p
+            %a{:href => "http://turntable.fm/salad_labs"} http://turntable.fm/salad_labs
+      .four.columns
+        .food.b
+          %img{:alt => "", :src => "/assets/food.png"}
+          %h3 Favorite food
+          %h2 39
+          %p Thai-food orders this year
 
-            - if person.github.present?
-              %p
-                = link_to "github.com/#{person.github}", "https://github.com/#{person.github}"
 
-          %p.clear
-            = raw(person.bio)
+
+
+    .row.small-icons
+      .twelve.columns
+        .git
+          %h3
+            Github:
+            %br
+            Code committed in KB
+          %h2 8,124,305
+        .rails.b
+          %h3
+            Ruby on rails:
+            %br
+            Experience in days
+          %h2 30,456
+        .tweets.b
+          %h3
+            Twitter:
+            %br
+            Total tweets
+          %h2 542
+        .blog.b
+          %h3
+            Blog:
+            %br
+            Total number
+          %h2 #{Post.all.count}
+        .lunch.b
+          %h3
+            Techlunch:
+            %a.techlunch{:href => "#"}>
+              =image_tag("circle-add.png", :mouseover => "circle-add-white.png")
+            %br
+            Total number
+          %h2 14
+        .ideas.b
+          %h3
+            Ideas & creativity:
+            %br
+            Total number:
+          =image_tag "formula.png"
+
+                    
+
+
+
+%section#team
+  %ul
+    - @coshx_folks.each_with_index do |person, i|
+      %li
+        %a{:href => person.url, :class => 'about-us-avatar'}(style="background:url(#{Gravatar.new(person.email).image_url(:size => 180)});")
+          
+          %p
+            = person.name
+    %li.last
+      %a{:href => '#', 'data-reveal-id' => 'jobs'}
+        .new
+        = image_tag("team/new.png", :mouseover => "team/new-white.png")
+        %p
+          You?
+  
+= render :partial => 'home/testimonials'
+
+

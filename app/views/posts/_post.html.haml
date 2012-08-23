@@ -1,22 +1,22 @@
-%div{:class => 'vcard'}
+%div
   %h3
     -if preview
       =link_to post.title, blog_post_path(post)
     -else
       =post.title
-  %div{:class => 'title'}
+  %div
     - if post.published?
       %em=post.posted_on.strftime("%B %e, %Y")
     - else
       %em="Draft"
   %br
   .post-info-wrapper
-    .post-author-image=image_tag Gravatar.new(post.author.email).image_url(:size => '49'), :class => 'photo'
+    %div(style="width:120px;height:120px;background:url(#{Gravatar.new(post.author.email).image_url(:size => 120)});border-radius:100px;")
     .post-info
-      %div{:class =>'fn'}
+      %div
         Coshx Labs
-      %div{:class =>'org'}
-        = post.author.name
+      %div
+        = 'by '+post.author.name
   - if preview
     .post-body=preserve post.preview_html.html_safe
   - else

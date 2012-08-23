@@ -1,0 +1,5 @@
+element = $("[data-content='editing_now']");
+element.html("<%= escape_javascript(@content.value.html_safe) %>");
+element.attr("data-content", "e");
+
+

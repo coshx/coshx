@@ -1,0 +1,36 @@
+
+%h1.centre{editable("contact page title")}
+  =content("contact page title")
+%p.graytext.centre{editable("contact page text")}
+  =content("contact page text")
+
+.short-white-line
+
+%dl.tabs.message-tabs
+  %dd.active.left-tab
+    %a{:href => "#contact"} 
+      %h5 CONTACT US
+      %p I would just like to say "Hi!"
+  %dd.right-tab
+    %a{:href => "#quote"} 
+      %h5 REQUEST A QUOTE
+      %p I would just like to say "Hi!"
+    
+="</div></div>".html_safe
+.container.bluu
+  .row
+    %ul.tabs-content
+      %li.active#contactTab
+        =render :partial => "messages/contact"
+      %li#quoteTab
+        =render :partial => "messages/quote"
+
+="<div class='container'><div class='row with_maps'>".html_safe
+
+
+=render "maps"
+
+
+
+  
+

@@ -1,33 +1,58 @@
-%section#main-feature
-  #text-wrapper
-    %h2 Featured Client
-  %article.quote
-    Well done. The new version is everything I had hoped it would be.
-    %span.credit -- Jim Fishkin, Stanford Center for Deliberative Democracy
-    =link_to "Reframe It", "http://www.reframeit.com"
-%section#tagline
-  %article
-    We build
-    %em
-      amazing
-    web apps for:
-#features
-  %section#startups
-    %article
-      %h3 Startups
-      %p Coshx Labs builds top-notch web applications quickly and will crank out new features as fast as you can dream them up.
+= render :partial => "home/slider"
 
-  %section#enterprise
-    %article
-      %h3 Enterprise
-      %p As former enterprise employees, we know how difficult it can be to overcome institutional inertia and drive technical change.  Let us show your colleagues how nicely Rails can fit into your organization.
 
-  %section#you
-    %article
-      #title
-        %h3 You
-        %p Our clients love us, and you will too.  Let’s pair up and get that backlog under control.
+.divider.homepage
 
--#%section#activity-stream
--#  %h4 Activity Stream
--#
+%div#features.row
+  %div.feature.four.columns
+    = image_tag "people.png", :class => :people
+    = render :partial => "coshx_blue_x", :locals => {:feature => "COMPANY"}
+    %p{editable("company_overview")}
+      =content("company_overview")
+    = link_to about_path, :class => "a-button" do
+      About Us
+  %div.feature.four.columns
+    = image_tag "services.png", :class => :gears
+    = render :partial => "coshx_blue_x", :locals => {:feature => "SERVICES"}
+    %p{editable("services_overview")}
+      =content("services_overview")
+    = link_to services_path, :class => "a-button" do
+      Our Services
+  %div.feature.four.columns
+    = image_tag "projects.png", :class => :beaker
+    = render :partial => "coshx_blue_x", :locals => {:feature => "PROJECTS"}
+    %p{editable("projects_overview")}
+      =content("projects_overview")
+    = link_to projects_path, :class => "a-button" do
+      Our Projects
+
+.divider
+
+%section#contact-us
+  = image_tag "mail.png"
+  %h2{editable("frontpage_contact_header")}
+    =content("frontpage_contact_header")
+
+  %p{editable("frontpage_contact_text")}
+    =content("frontpage_contact_text")
+
+  = link_to contact_path, :class => ["first", "a-button"] do
+    Contact Us
+
+  = link_to contact_path(:anchor => "quote"), :class => "a-button white" do
+    Request a FREE Quote
+
+
+= render :partial => "projects/list", :locals => {:featured_projects => @featured_projects}
+  
+
+.divider
+
+=# render :partial => "clients/list", :locals => {:clients => @clients}
+= render 'get_a_proposal'
+
+.divider
+
+
+
+

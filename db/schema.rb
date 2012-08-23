@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120313200340) do
+ActiveRecord::Schema.define(:version => 20120822222232) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "",                                         :null => false
@@ -30,6 +30,11 @@ ActiveRecord::Schema.define(:version => 20120313200340) do
     t.text     "bio",                                   :default => "I''m a developer at Coshx and I love it!"
     t.string   "twitter"
     t.string   "github"
+    t.string   "img"
+    t.string   "quote"
+    t.string   "likes"
+    t.string   "dislikes"
+    t.string   "slug"
   end
 
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
@@ -46,6 +51,16 @@ ActiveRecord::Schema.define(:version => 20120313200340) do
     t.datetime "updated_at"
   end
 
+  create_table "contents", :force => true do |t|
+    t.string   "action"
+    t.integer  "index"
+    t.text     "value"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+
+
   create_table "jobs", :force => true do |t|
     t.string   "title",       :null => false
     t.text     "description", :null => false
@@ -54,6 +69,21 @@ ActiveRecord::Schema.define(:version => 20120313200340) do
     t.datetime "updated_at"
     t.boolean  "filled"
     t.string   "blog_url"
+  end
+
+  create_table "messages", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "text"
+    t.string   "company_name"
+    t.string   "country"
+    t.string   "phone"
+    t.text     "project_description"
+    t.string   "deadline"
+    t.string   "budget"
+    t.text     "comment"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
   create_table "posts", :force => true do |t|
@@ -67,6 +97,24 @@ ActiveRecord::Schema.define(:version => 20120313200340) do
   end
 
   add_index "posts", ["permalink"], :name => "index_posts_on_permalink", :unique => true
+
+  create_table "projects", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "picture"
+    t.boolean  "featured"
+    t.string   "url"
+  end
+
+  create_table "quotes", :force => true do |t|
+    t.string   "text"
+    t.string   "author"
+    t.integer  "project_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "services", :force => true do |t|
     t.string   "title"

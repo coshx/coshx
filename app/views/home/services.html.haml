@@ -1,13 +1,91 @@
-%section.primary
-  %h2 Services
-  %h3 We love working on both new startup ideas as well as existing large application codebases. While we all enjoy experimenting with new technologies and ideas, our core services here reflect our <strong>core expertise</strong>.
 
-  %ul
-    - @services.each do |service|
-      %li{:class => class_for_service(service)}
-        .stretch-small-offset
-          .service-title          
-            = service.title
-          .service-description
-            = service.description.html_safe
+%h1.centre WE ARE ALL ABOUT THE WEB
+%p.graytext.centre Let's start up a conversation about what you need and how we can help. We're just a quick email away!
+
+.short-white-line
+
+.row
+  .services_box
+    =image_tag("services/circles.png")
+    %a.circle.circle0
+      .icon.idea-icon
+    %a.circle.circle1
+      .icon.books-icon
+    %a.circle.circle2
+      .icon.design-icon
+    %a.circle.circle3
+      .icon      
+    %a.circle.circle4
+      .icon.develop-icon
+    %a.circle.circle5
+      .icon.produce-icon
+    %a.middle
+      .icon.process-icon
+    
+.row
+  %h2.star-header
+    Web Development
+
+.services
+  .row
+    .two.columns
+      %a.circle
+        .icon.one-icon
+
+    .ten.columns
+      %h5{editable("services 11")}
+        =content("services 11")
+      %p{editable("services 12")}
+        =content("services 12")
+  .row
+    .two.columns
+      %a.circle
+        .icon.two-icon
+    .ten.columns
+      %h5{editable("services 13")}
+        =content("services 13")
+      %p{editable("services 14")}
+        =content("services 14")
+  .row
+    .two.columns
+      %a.circle
+        .icon.three-icon
+    .ten.columns
+      %h5{editable("services 15")}
+        =content("services 15")
+      %p{editable("services 16")}
+        =content("services 16")
+    
+  .row
+    .two.columns
+      %a.circle
+        .icon.four-icon
+    .ten.columns
+      %h5{editable("services 21")}
+        =content("services 21")      
+      %p{editable("services 22")}
+        =content("services 22")
+  .row
+    .two.columns
+      %a.circle
+        .icon.five-icon
+    .ten.columns
+      %h5{editable("services 23")}
+        =content("services 23")      
+      %p{editable("services 24")}
+        =content("services 24")
+  .row
+    .two.columns
+      %a.circle
+        .icon.six-icon
+    .ten.columns
+      %h5{editable("services 25")}
+        =content("services 25")
+      %p{editable("services 26")}
+        =content("services 26")
+
+
+= render 'get_a_proposal'
+
+
 

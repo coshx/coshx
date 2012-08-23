@@ -1,0 +1,87 @@
+%div#slider
+  %div.slide.first-slide
+    #blueprint-wrapper
+      = link_to "", "#", :class => :point1
+      = link_to "", "#", :class => :point2
+      = link_to "", "#", :class => :point3
+      = link_to "", "#", :class => :point4
+      = image_tag "blueprint.png"
+    %h1{editable("slide1 title")}
+      =content("slide1 title")
+    %p{editable("slide1 description")}
+      =content("slide1 description")
+      
+      .divider
+
+      = link_to "#", :class => "the-button" do
+        Read About How We Craft Software
+
+  %div.slide.second-slide
+    .displays
+      = image_tag "slider_two.png"
+    %h1{editable("slide2 title")}
+      =content("slide2 title")
+    %p{editable("slide2 description")}
+      =content("slide2 description")
+      
+      .divider
+
+      = link_to "#", :class => "the-button" do
+        Read About How We Craft Software
+
+
+  %div.slide.third-slide
+    .displays
+      = image_tag "slider_three.png"
+    %h1{editable("slide3 title")}
+      =content("slide3 title")
+    %p{editable("slide3 description")}
+      =content("slide3 description")
+      
+      .divider
+
+      = link_to "#", :class => "the-button" do
+        Read About How We Craft Software
+
+
+%script(type="text/javascript")
+  $(document).ready ( function () {
+  $('#slider').orbit({
+  animation: 'horizontal-push',                  // fade, horizontal-slide, vertical-slide, horizontal-push
+  animationSpeed: 800,                // how fast animtions are
+  timer: false, 			 // true or false to have the timer
+  resetTimerOnClick: false,           // true resets the timer instead of pausing slideshow progress
+  advanceSpeed: 4000, 		 // if timer is enabled, time between transitions 
+  pauseOnHover: false, 		 // if you hover pauses the slider
+  startClockOnMouseOut: false, 	 // if clock should start on MouseOut
+  startClockOnMouseOutAfter: 1000, 	 // how long after MouseOut should the timer start again
+  directionalNav: true, 		 // manual advancing directional navs
+  captions: true, 			 // do you want captions?
+  captionAnimation: 'fade', 		 // fade, slideOpen, none
+  captionAnimationSpeed: 800, 	 // if so how quickly should they animate in
+  bullets: false,			 // true or false to activate the bullet navigation
+  bulletThumbs: false,		 // thumbnails for the bullets
+  bulletThumbLocation: '',		 // location from this file where thumbs will be
+  afterSlideChange: function(){}, 	 // empty function    fluid: true       // or set a aspect ratio for content slides (ex: '4x3') 
+  });});
+  
+  
+  
+%script(type="text/javascript")
+  function sliderNav() {
+  w = $("body .row:first-child").width();
+  b = $("body").width();
+  $(".slider-nav .left").stop().animate({left: -1 * Math.floor((b-w)/2)}, 1500);
+  $(".slider-nav .right").stop().animate({right: -1 * Math.floor((b-w)/2)}, 1500);
+  }
+  
+  $(document).ready( function () {
+ 
+  sliderNav();
+  $(window).resize(function() {
+  sliderNav();
+  });
+  
+  
+  });
+

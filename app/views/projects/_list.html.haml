@@ -1,0 +1,20 @@
+%section#featured-projects
+  %h2.star-header
+    Featured Projects
+    = link_to 'See More Case Studies', "projects/", :class => "a-button"
+          
+
+%div.featured_projects.row
+  - featured_projects.each_with_index do |fp, i|
+    %div.four.columns
+      .fp_img{:class => "no#{i}"}
+        =image_tag fp.picture_url if fp.picture?
+        .overlay
+          .link-wrapper
+            %a.link-to-the-project{:href => fp.url}
+    
+    %div{:id => "modal#{i}", :class => "reveal-modal"}
+      %h2=fp.title
+      %p=fp.description
+      %a.close-reveal-modal &#215
+

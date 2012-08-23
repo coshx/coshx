@@ -59,6 +59,7 @@ class PostsController < ApplicationController
   end
 
   def feed
+    @title = "Coshx Labs Blog"
     @feed_url = feed_url
     @posts = Post.published
   end

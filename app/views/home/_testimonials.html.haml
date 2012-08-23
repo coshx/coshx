@@ -1,0 +1,6 @@
+%section#testimonials.row
+  %header.divider
+    %h2 Testimonials
+    = link_to " ", "/get_random_quote", :remote => true, :class => "test-nav next"
+    = link_to " ", "/get_random_quote", :remote => true, :class => "test-nav prev"
+  = render :partial => "quotes/random_quote", :locals => {:random_quote => random_quote}

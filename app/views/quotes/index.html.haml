@@ -1,0 +1,25 @@
+%h1 Listing quotes
+
+
+%table
+  %tr
+    %th Text
+    %th Author
+    %th Project
+    %th
+    %th
+    %th
+
+  - @quotes.each do |quote|
+    %a= link_to 'This hould be ajaxed', quote, :format => :js, :remote => true
+    %tr
+      %td= quote.text
+      %td= quote.author
+      %td= quote.project_id
+      %td= link_to 'Show', quote
+      %td= link_to 'Edit', edit_quote_path(quote)
+      %td= link_to 'Destroy', quote, :data => {:confirm => 'Are you sure?'}, :method => :delete
+
+%br
+
+= link_to 'New Quote', new_quote_path
