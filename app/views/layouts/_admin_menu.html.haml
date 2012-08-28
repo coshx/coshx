@@ -1,11 +1,13 @@
 .row#admin-menu
-  .nine.columns
+  .five.columns
     %ul.link-list
       %li=link_to "Dashboard", admin_root_path
       %li=link_to "New Blog Post", new_post_path
       %li=link_to "New Job Posting", new_job_path
-  .three.columns
+  .four.columns
     %span.status
       Signed in as
-      = current_admin.name
+      =current_admin.name
       = link_to('Sign Out', destroy_admin_session_path, :method => :delete)
+  .three.columns
+    
