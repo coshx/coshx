@@ -10,7 +10,8 @@
 
   .six.columns.pull-six
     .content
-      .folk_header=folk.nickname
+      .folk_header{editable("nickname of " + folk.name)}
+        =content("nickname of " + folk.name)
       %h1=folk.name
       %p.folk_bio=folk.bio.html_safe
       
