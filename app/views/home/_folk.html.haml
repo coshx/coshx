@@ -16,18 +16,17 @@
       %p.folk_bio=folk.bio.html_safe
       
 .folk_wrap
-  -if folk.github
-    %a.github{:href => "http://github.com/#{folk.github}"}=folk.github
+  .twitter_and_github
+    -if folk.github
+      %a.github{:href => "http://github.com/#{folk.github}"}=folk.github
+    -if folk.twitter
+      %a.twitter_link{:href => "http://twitter.com/#{folk.twitter}"}=folk.twitter
   -if folk.likes
     .folk_header LIKES
     %span=folk.likes
   -if folk.dislikes    
     .folk_header DISLIKES
     %span=folk.dislikes  
-  -if folk.twitter
-    .folk_header TWITTER
-    %span=folk.twitter
-  
 
 
 

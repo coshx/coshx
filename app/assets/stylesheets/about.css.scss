@@ -139,13 +139,21 @@
 position:relative;
 }
 
+.twitter_and_github {
+position:absolute;
+right:0px;
+  a {
+    float:right;
+  }
+}
 .github {
+margin-left:20px;
 padding-left:30px;
 height:26px;
 padding-top:5px;
 color:#1588C3 !important;
 background:url(github-small.png) no-repeat;
-position:absolute;
+//position:absolute;
 right:0;
 display:block;
 &:hover {
@@ -153,5 +161,22 @@ background-position:0px -26px;
 color:white !important;
 
 }
+
+}
+.twitter_link {
+padding-left:33px;
+height:26px;
+padding-top:5px;
+color:#1588C3 !important;
+background:url(banner_twitter.png) no-repeat;
+//position:absolute;
+right:0;
+display:block;
+&:hover {
+background-position:0px -25px;
+color:white !important;
+
+}
+
 }
 
