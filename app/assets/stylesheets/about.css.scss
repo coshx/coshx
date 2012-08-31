@@ -133,3 +133,25 @@
     margin-top: -2px;
   }
 }
+
+
+.folk_wrap {
+position:relative;
+}
+
+.github {
+padding-left:30px;
+height:26px;
+padding-top:5px;
+color:#1588C3 !important;
+background:url(github-small.png) no-repeat;
+position:absolute;
+right:0;
+display:block;
+&:hover {
+background-position:0px -26px;
+color:white !important;
+
+}
+}
+

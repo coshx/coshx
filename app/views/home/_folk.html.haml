@@ -2,7 +2,7 @@
 
 
 .row
-  .five.columns.push-six
+  .six.columns.push-six
     -if Coshx::Application.assets.find_asset("team/#{folk.slug}.png").nil?
       =image_tag("team/no_pic.png")
     -else
@@ -16,15 +16,14 @@
       %p.folk_bio=folk.bio.html_safe
       
 .folk_wrap
+  -if folk.github
+    %a.github{:href => "http://github.com/#{folk.github}"}=folk.github
   -if folk.likes
     .folk_header LIKES
     %span=folk.likes
   -if folk.dislikes    
     .folk_header DISLIKES
     %span=folk.dislikes  
-  -if folk.github
-    .folk_header GITHUB
-    %span=folk.github
   -if folk.twitter
     .folk_header TWITTER
     %span=folk.twitter
