@@ -1,6 +1,3 @@
-
-
-
 .row
   .six.columns.push-six
     -if Coshx::Application.assets.find_asset("team/#{folk.slug}.png").nil?
@@ -10,11 +7,10 @@
 
   .six.columns.pull-six
     .content
-      .folk_header{editable("nickname of " + folk.name)}
-        =content("nickname of " + folk.name)
+      = ceditable "nickname of " + folk.name, "div", :class => "folk_header"
       %h1=folk.name
       %p.folk_bio=folk.bio.html_safe
-      
+
 .folk_wrap
   .twitter_and_github
     -if folk.github
@@ -24,9 +20,9 @@
   -if folk.likes
     .folk_header LIKES
     %span=folk.likes
-  -if folk.dislikes    
+  -if folk.dislikes
     .folk_header DISLIKES
-    %span=folk.dislikes  
+    %span=folk.dislikes
 
 
 

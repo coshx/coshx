@@ -1,5 +1,4 @@
 .get-a-proposal
-  %p.graytext{editable("proposal_text")}
-    =content("proposal_text")
-  
+  = ceditable "proposal_text", "p", :class => "graytext"
+
   =link_to "Get a proposal", contact_path(:anchor => "quote"), :class => 'the-button'

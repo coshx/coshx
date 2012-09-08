@@ -1,8 +1,6 @@
 %section#about-us
-  %h1.formula{editable("about page title")}
-    =content("about page title")
-  %p{editable("about page text")}
-    =content("about page text")
+  = ceditable "about page title", "h1", :class => "formula"
+  = ceditable "about page text", "p"
 
   .about-stats.hide-for-small
     .row.big-icons

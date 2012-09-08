@@ -11,7 +11,6 @@ Coshx::Application.routes.draw do
   resources :projects
 
   #resources :posts
-  match 'content_update' => 'contents#content_update'
   
   get 'get_random_quote' => 'quotes#get_random_quote'
   get 'generate_slugs' => 'admins#generate_slugs'
@@ -49,5 +48,8 @@ Coshx::Application.routes.draw do
   get '/services' => 'home#services', :as => :services
   get '/portfolio' => 'home#portfolio', :as => :portfolio
   get '/about' => 'home#about', :as => :about
+
+  mount Contenteditable::Engine => "/contenteditable"
+
   root :to => 'home#index'
 end

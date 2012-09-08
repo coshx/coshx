@@ -19,7 +19,7 @@ module ApplicationHelper
       raw "<li>" + link + "</li>"
     end
   end
-  
+
   def rowify(things, row_length)
     array_of_rows_of_things = []
     ((things.count) / row_length.to_f).ceil.times do |row_num|
@@ -30,49 +30,6 @@ module ApplicationHelper
       array_of_rows_of_things << row_of_things
     end
     array_of_rows_of_things
-  end
-  
-  def editable_here(index)
-    
-    result = {}
-    
-    result = {:contenteditable => 'true',
-              'data-tag' => whereami + "/" + index.to_s,
-              :class => "editable"} if admin_signed_in?
-
-    result
-  
-  end
-
-  def content_here(index)
-    wmi = {}
-    wmi = whereami + "/" + index.to_s
-              
-    c = Content.find_by_action(wmi)
-    c.value.html_safe if c.present?
-    
-  end
-  
-
- def editable(index)
-    
-    result = {}
-    
-    result = {:contenteditable => 'true',
-              'data-tag' => index,
-              :class => "editable"} if admin_signed_in?
-
-    result
-  
-  end
-
-  def content(index)
-    wmi = {}
-    wmi = whereami + "/" + index.to_s
-              
-    c = Content.find_by_action(index)
-    c.value if c.present?
-    
   end
 
 end

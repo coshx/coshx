@@ -1,28 +1,24 @@
 = render :partial => "home/slider"
 
-
 .divider.homepage
 
 %div#features.row
   %div.feature.four.columns
     = image_tag "people.png", :class => :people
     = render :partial => "coshx_blue_x", :locals => {:feature => "COMPANY"}
-    %p{editable("company_overview")}
-      =content("company_overview")
+    = ceditable "company_overview", "p"
     = link_to about_path, :class => "a-button" do
       About Us
   %div.feature.four.columns
     = image_tag "services.png", :class => :gears
     = render :partial => "coshx_blue_x", :locals => {:feature => "SERVICES"}
-    %p{editable("services_overview")}
-      =content("services_overview")
+    = ceditable "services_overview", "p"
     = link_to services_path, :class => "a-button" do
       Our Services
   %div.feature.four.columns
     = image_tag "projects.png", :class => :beaker
     = render :partial => "coshx_blue_x", :locals => {:feature => "PROJECTS"}
-    %p{editable("projects_overview")}
-      =content("projects_overview")
+    = ceditable "projects_overview", "p"
     = link_to projects_path, :class => "a-button" do
       Our Projects
 
@@ -30,11 +26,9 @@
 
 %section#contact-us
   = image_tag "mail.png"
-  %h2{editable("frontpage_contact_header")}
-    =content("frontpage_contact_header")
+  = ceditable "frontpage_contact_header", "h2"
 
-  %p{editable("frontpage_contact_text")}
-    =content("frontpage_contact_text")
+  = ceditable "frontpage_contact_text", "p"
 
   = link_to contact_path, :class => ["first", "a-button"] do
     Contact Us
@@ -44,7 +38,6 @@
 
 
 = render :partial => "projects/list", :locals => {:featured_projects => @featured_projects}
-  
 
 .divider
 

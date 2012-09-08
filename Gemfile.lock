@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/micmmakarov/contenteditable_lite.git
+  revision: 0238dcbc93d00a7588c7fdc1285971e285d9718f
+  branch: master
+  specs:
+    contenteditable (0.0.1)
+      rails (~> 3.2.8)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -31,7 +39,7 @@ GEM
     addressable (2.3.2)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
-    builder (3.0.0)
+    builder (3.0.2)
     capybara (1.1.2)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -125,7 +133,7 @@ GEM
       heroku-api (>= 0.1.2)
       rake
     hike (1.2.1)
-    i18n (0.6.0)
+    i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (2.1.0)
       railties (>= 3.1.0, < 5.0)
@@ -274,6 +282,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 3.2.1)
   compass-rails (~> 1.0.3)
+  contenteditable!
   cucumber-rails (~> 1.0)
   database_cleaner
   devise

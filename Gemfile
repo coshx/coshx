@@ -34,6 +34,8 @@ gem "twitter"
 # To use debugger
 # gem "ruby-debug19", :require => "ruby-debug"
 
+gem 'contenteditable', :github => 'micmmakarov/contenteditable_lite', :branch => 'master'
+
 group :assets do
   #gem 'sass'
   gem "sass-rails",   '~> 3.2.3'

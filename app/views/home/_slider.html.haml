@@ -6,42 +6,35 @@
       = link_to "", "#", :class => :point3
       = link_to "", "#", :class => :point4
       = image_tag "blueprint.png"
-    %h1{editable("slide1 title")}
-      =content("slide1 title")
-    %p{editable("slide1 description")}
-      =content("slide1 description")
-      
-      .divider
+    = ceditable "slide1 title", "h1"
+    = ceditable "slide1 description", "p"
 
-      = link_to "/services", :class => "the-button" do
-        Read About How We Craft Software
+    .divider
+
+    = link_to "/services", :class => "the-button" do
+      Read About How We Craft Software
 
   %div.slide.second-slide
     .displays
       = image_tag "slider_two.png"
-    %h1{editable("slide2 title")}
-      =content("slide2 title")
-    %p{editable("slide2 description")}
-      =content("slide2 description")
-      
-      .divider
+    = ceditable "slide2 title", "h1"
+    = ceditable "slide2 description", "p"
 
-      = link_to "/services", :class => "the-button" do
-        Read About How We Craft Software
+    .divider
 
+    = link_to "/services", :class => "the-button" do
+      Read About How We Craft Software
 
   %div.slide.third-slide
     .displays
       = image_tag "slider_three.png"
-    %h1{editable("slide3 title")}
-      =content("slide3 title")
-    %p{editable("slide3 description")}
-      =content("slide3 description")
-      
-      .divider
+    = ceditable "slide3 title", "h1"
+    = ceditable "slide3 description", "p"
 
-      = link_to "/services", :class => "the-button" do
-        Read About How We Craft Software
+    .divider
+
+    = link_to "/services", :class => "the-button" do
+      Read About How We Craft Software
 
 %script(type="text/javascript")
   = render :partial => "home/slider.js", :locals => {:slider_id => "slider"}
