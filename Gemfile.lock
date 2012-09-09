@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/micmmakarov/contenteditable_lite.git
-  revision: 0238dcbc93d00a7588c7fdc1285971e285d9718f
+  revision: acb8d8adf1d2ecdd0f917deff38cd5368a3158f6
   branch: master
   specs:
     contenteditable (0.0.1)

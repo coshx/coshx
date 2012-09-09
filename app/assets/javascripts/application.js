@@ -11,4 +11,5 @@
 //= require_tree
 //= require foundation
 //= require foundation/app
+//= require contenteditable/contenteditable
 
