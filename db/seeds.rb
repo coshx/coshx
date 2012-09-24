@@ -1,5 +1,18 @@
 # -*- coding: utf-8 -*-
 
+
+walt = Admin.find_or_create_by_email("walt@coshx.com") do |w|
+    w.name = 'Walt House'
+    w.password = 'password'
+    w.twitter = 'coshx'
+    w.github = 'WaltMetro'
+    w.bio = 'New to programming, Walt is diving in without a lifevest. Walt is an avid outdoorsman(kayaking, ice climbing, cayoonering, and snow shoeing), foodie, musician, sci-fi junkie, and brewer. Walt graduated from The Ohio State University with a double-major in Political Science and National Security Policies. He served in U.S. Navy as an Intel Officer in San Diego. He did one tour in the gulf in 1999. After his discharge from the navy, he became a graphic designer.s'
+    w.img = "walt.png"
+end
+walt.save!
+puts "Created User #{walt.name}"
+
+
 ben = Admin.find_or_create_by_email("ben@coshx.com") do |b|
   b.name = 'Ben Taitelbaum'
   b.password = 'password'
