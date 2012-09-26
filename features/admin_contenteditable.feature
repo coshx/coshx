@@ -9,7 +9,6 @@ Feature: Using contenteditable gem to edit content
 
   @javascript
   Scenario: Edit and saving contenteditable
-    Given I am not authenticated
     And I sign in as "testuser_1@coshx.com" / "password_1"
     When I go to the home page
     And I should see contenteditable "slide1 title"
