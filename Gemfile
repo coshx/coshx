@@ -34,7 +34,7 @@ gem "twitter"
 # To use debugger
 # gem "ruby-debug19", :require => "ruby-debug"
 
-gem 'contenteditable', :github => 'micmmakarov/contenteditable_lite', :branch => 'master'
+gem 'contenteditable', :github => 'micmmakarov/contenteditable', :branch => 'master'
 
 group :assets do
   #gem 'sass'
@@ -56,7 +56,9 @@ group :development do
 end
 
 group :development, :test do
-  gem "cucumber-rails", "~> 1.0", require: false
+  gem "capybara-webkit"
+  gem "cucumber"
+  gem "cucumber-rails", :require => false
   gem "factory_girl_rails"
   gem "timecop"
   gem 'shoulda-matchers'
