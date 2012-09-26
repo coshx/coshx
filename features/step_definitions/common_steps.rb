@@ -1,6 +1,7 @@
 
 When /^(?:|I )should be on the dashboard page$/ do visit ('/dashboard') end
 When /^(?:|I )should be on the new blog post page$/ do visit ('/posts/new') end
+When /^(?:|I )go to the home page$/ do visit ('/') end
 When /^(?:|I )go to the dashboard page$/ do visit ('/posts/new') end
 When /^(?:|I )go to the blogs page$/ do visit ('/blog') end
 When /^(?:|I )go to the sign in page$/ do visit ('/admins/sign_in') end
@@ -16,7 +17,7 @@ When /^(?:|I )should be on the careers page$/ do visit ('/careers') end
 
 
 Given /^I am not authenticated$/ do
-  page.driver.post('/admins/sign_out')
+  visit('/admins/sign_out')
 end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|

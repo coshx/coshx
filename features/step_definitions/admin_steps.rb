@@ -20,3 +20,32 @@ Given /^twitter is configured$/ do
   end
 end
 
+Then /^(?:|I )should see "([^"]*)"$/ do |text|
+  if page.respond_to? :should
+    page.should have_content(text)
+  else
+    assert page.has_content?(text)
+  end
+end
+
+
+#contenteditable tests
+
+And /^I should see contenteditable "([^"]*)"$/ do |element|
+  a = find("[data-tag='#{element}']")
+  a["contenteditable"].should == "true"
+end
+
+And /^I change the content of "([^"]*)" to "([^"]*)"$/ do |element, text|
+  page.execute_script("$(\"[data-tag='#{element}']\").text('#{text}')")
+end
+
+And /^I save the contenteditable changes$/ do
+  page.execute_script("$('.contenteditable_save_button').show();")
+  find(".contenteditable_save_button").click
+end
+
+And /^contenteditable "([^"]*)" should be "([^"]*)"$/ do  |element, text|
+  e = find("[data-tag='#{element}']")
+  e.text.should == text.upcase
+end
