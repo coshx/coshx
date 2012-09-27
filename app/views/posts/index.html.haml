@@ -16,7 +16,10 @@
         - link_text = p.title + " / " 
         
 
-        =link_to link_text.html_safe, p, :title => "Read More"
+        - if p.published?
+          = link_to link_text.html_safe, show_post_path(p.permalink_attributes), :title => "Read More"
+        - else
+          = link_to link_text.html_safe, p, :title => 'Not Yet Published'
         -if admin_signed_in?
           .edit-link
             = link_to 'Edit', edit_post_path(p)
