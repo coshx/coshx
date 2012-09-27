@@ -5,22 +5,22 @@
 
 %dl.tabs.message-tabs
   %dd.active.left-tab
-    %a{:href => "#contact"}
-      %h5 CONTACT US
-      %p I would just like to say "Hi!"
-  %dd.right-tab
     %a{:href => "#quote"}
       %h5 REQUEST A QUOTE
-      %p I would just like to say "Hi!"
+      %p I need help building something awesome
+  %dd.right-tab
+    %a{:href => "#contact"}
+      %h5 CONTACT US
+      %p Just saying "Hi!"
 
 ="</div></div>".html_safe
 .container.bluu
   .row
     %ul.tabs-content
-      %li.active#contactTab
-        =render :partial => "messages/contact"
-      %li#quoteTab
+      %li.active#quoteTab
         =render :partial => "messages/quote"
+      %li#contactTab
+        =render :partial => "messages/contact"
 
 ="<div class='container'><div class='row with_maps'>".html_safe
 
