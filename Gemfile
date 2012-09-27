@@ -56,7 +56,6 @@ group :development do
 end
 
 group :development, :test do
-  gem "capybara-webkit"
   gem "cucumber"
   gem "cucumber-rails", :require => false
   gem "factory_girl_rails"
