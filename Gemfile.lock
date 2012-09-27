@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/micmmakarov/contenteditable.git
-  revision: 70e3d53836a399ccd652cdad634aa735b133451c
+  revision: 5a456f604ba58d85e78824169bdeb2da61527a5d
   branch: master
   specs:
     contenteditable (0.0.1)
@@ -286,7 +286,6 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass-rails (~> 1.0.3)
   contenteditable!
-  cucumber
   cucumber-rails
   database_cleaner
   devise
