@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :last_two_posts, :random_quote, :whereami, :contents
 
+
   def contents
     Content.all
   end
@@ -21,5 +22,6 @@ class ApplicationController < ActionController::Base
      params[:controller].to_s + "/" + params[:action]
      #     controller.controller_name.to_s + "/" + controller.action_name
   end
+
 
 end
