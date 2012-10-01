@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   helper_method :last_two_posts, :random_quote, :whereami, :contents
 
+  unless ApplicationController::Base.consider_all_requests_local
+    rescue_from Exception, :with => :render_404
+  end
+
   def contents
     Content.all
   end
@@ -20,6 +24,12 @@ class ApplicationController < ActionController::Base
   def whereami
      params[:controller].to_s + "/" + params[:action]
      #     controller.controller_name.to_s + "/" + controller.action_name
+  end
+
+  private
+
+  def render_404
+    render :template => 'error_pages/404', :layout => false, :status => :not_found
   end
 
 end
