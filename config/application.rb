@@ -64,3 +64,12 @@ module Coshx
     end
   end
 end
+
+module HamlPrecompile
+  class Railtie < Rails::Railtie
+    initializer "haml_precompile.initialize_rails", :group => :assets do |app|
+      Rails.application.assets.register_mime_type 'text/html', '.html'
+      Rails.application.assets.register_engine '.haml', Tilt::HamlTemplate
+    end
+  end
+end
