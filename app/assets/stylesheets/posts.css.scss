@@ -27,11 +27,8 @@ $gray: #a6a6a6;
 }
 
 .post-comments {
-  background: white;
-  border: 10px solid #1588C3;
-  padding: 50px 50px 20px 50px;
-  margin-top: 50px;
-  color: #666666;
+  padding: 30px 50px 0px 50px;
+  color: #f7f7f7;
   h3 {
     font-size: 16px;
   }
@@ -41,9 +38,28 @@ $gray: #a6a6a6;
   font: 14px/24px "Droid Serif", serif;
   color: white;
   margin-top: 20px;
-  p {
-    max-width: 800px;
+  max-width: 800px;
+  p, ul {
+    max-width: 550px;
+    margin-bottom: 30px;
+    font-size: 16px;
   }
+  code {
+    background: transparent;
+  }
+
+  ul {
+    margin-left: 16px;
+    color: #f7f7f7;
+    list-style-type: circle;
+
+    li {
+      font: 14px/24px "Droid Serif", serif;
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+
 }
 
 .post-show .post-description {
@@ -73,7 +89,7 @@ $gray: #a6a6a6;
   }
   p {
     font: 18px normal "Droid Serif", serif;
-    line-height: 150%;
+    line-height: 180%;
   }
   .gray {
     color: $gray;
@@ -87,6 +103,7 @@ $gray: #a6a6a6;
 }
 
 .share-buttons {
+  margin-top: 30px;
   overflow: hidden;
 }
 
