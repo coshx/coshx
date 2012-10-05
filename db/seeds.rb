@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+require 'contenteditable'
 
 walt = Admin.find_or_create_by_email("walt@coshx.com") do |w|
     w.name = 'Walt House'
@@ -1093,10 +1093,10 @@ end
 
 
 # Content
+ puts "Creating content"
 
-
-content = Content.find_or_create_by_action('home/services/12') do |content|
-  content.action = 'home/services/12'
+content = Contenteditable::Translation.find_or_create_by_key('home/services/12') do |content|
+  content.key = 'home/services/12'
   content.value = <<EOF
 
 
@@ -1110,15 +1110,17 @@ We focus on lean startup tactics, helping you get to your Minimum Viable Product
 
 
 EOF
+  puts "Creating content: " + content.key
 end
-content = Content.find_or_create_by_action('services 25') do |content|
-  content.action = 'services 25'
+content = Contenteditable::Translation.find_or_create_by_key('services 25') do |content|
+  content.key = 'services 25'
   content.value = <<EOF
 And so on...
 EOF
+  puts "Creating content: " + content.key
 end
-content = Content.find_or_create_by_action('home/services/1') do |content|
-  content.action = 'home/services/1'
+content = Contenteditable::Translation.find_or_create_by_key('home/services/1') do |content|
+  content.key = 'home/services/1'
   content.value = <<EOF
 
 
@@ -1130,9 +1132,10 @@ Ruby on RAILS!!
 
 
 EOF
+  puts "Creating content: " + content.key
 end
-content = Content.find_or_create_by_action('home/services/2') do |content|
-  content.action = 'home/services/2'
+content = Contenteditable::Translation.find_or_create_by_key('home/services/2') do |content|
+  content.key = 'home/services/2'
   content.value = <<EOF
 
 
@@ -1146,9 +1149,10 @@ We focus on lean startup tactics, helping you get to your Minimum Viable Product
 
 
 EOF
+  puts "Creating content: " + content.key
 end
-content = Content.find_or_create_by_action('home/services/3') do |content|
-  content.action = 'home/services/3'
+content = Contenteditable::Translation.find_or_create_by_key('home/services/3') do |content|
+  content.key = 'home/services/3'
   content.value = <<EOF
 
 
@@ -1160,9 +1164,10 @@ This content
 
 
 EOF
+  puts "Creating content: " + content.key
 end
-content = Content.find_or_create_by_action('home/services/4') do |content|
-  content.action = 'home/services/4'
+content = Contenteditable::Translation.find_or_create_by_key('home/services/4') do |content|
+  content.key = 'home/services/4'
   content.value = <<EOF
 
 
@@ -1174,9 +1179,10 @@ is editable, if ADMIN_SIGNED_IN
 
 
 EOF
+  puts "Creating content: " + content.key
 end
-content = Content.find_or_create_by_action('home/services/5') do |content|
-  content.action = 'home/services/5'
+content = Contenteditable::Translation.find_or_create_by_key('home/services/5') do |content|
+  content.key = 'home/services/5'
   content.value = <<EOF
 
 
@@ -1186,9 +1192,10 @@ RUBY ON RAILS
 
 
 EOF
+  puts "Creating content: " + content.key
 end
-content = Content.find_or_create_by_action('home/services/6') do |content|
-  content.action = 'home/services/6'
+content = Contenteditable::Translation.find_or_create_by_key('home/services/6') do |content|
+  content.key = 'home/services/6'
   content.value = <<EOF
 
 
@@ -1202,9 +1209,10 @@ We focus on lean startup tactics, helping you get to your Minimum Viable Product
 
 
 EOF
+  puts "Creating content: " + content.key
 end
-content = Content.find_or_create_by_action('home/services/7') do |content|
-  content.action = 'home/services/7'
+content = Contenteditable::Translation.find_or_create_by_key('home/services/7') do |content|
+  content.key = 'home/services/7'
   content.value = <<EOF
 
 
@@ -1212,9 +1220,10 @@ Rails!
 
 
 EOF
+  puts "Creating content: " + content.key
 end
-content = Content.find_or_create_by_action('home/services/8') do |content|
-  content.action = 'home/services/8'
+content = Contenteditable::Translation.find_or_create_by_key('home/services/8') do |content|
+  content.key = 'home/services/8'
   content.value = <<EOF
 
 
@@ -1228,9 +1237,10 @@ We focus on lean startup tactics, helping you get to your Minimum Viable Product
 
 
 EOF
+  puts "Creating content: " + content.key
 end
-content = Content.find_or_create_by_action('home/services/9') do |content|
-  content.action = 'home/services/9'
+content = Contenteditable::Translation.find_or_create_by_key('home/services/9') do |content|
+  content.key = 'home/services/9'
   content.value = <<EOF
 
 
@@ -1239,8 +1249,8 @@ RAils2!!!
 
 EOF
 end
-content = Content.find_or_create_by_action('home/services/10') do |content|
-  content.action = 'home/services/10'
+content = Contenteditable::Translation.find_or_create_by_key('home/services/10') do |content|
+  content.key = 'home/services/10'
   content.value = <<EOF
 
 
@@ -1255,8 +1265,8 @@ We focus on lean startup tactics, helping you get to your Minimum Viable Product
 
 EOF
 end
-content = Content.find_or_create_by_action('home/services/11') do |content|
-  content.action = 'home/services/11'
+content = Contenteditable::Translation.find_or_create_by_key('home/services/11') do |content|
+  content.key = 'home/services/11'
   content.value = <<EOF
 
 
@@ -1265,8 +1275,8 @@ rails333!!!
 
 EOF
 end
-content = Content.find_or_create_by_action('frontpage_contact_text') do |content|
-  content.action = 'frontpage_contact_text'
+content = Contenteditable::Translation.find_or_create_by_key('frontpage_contact_text') do |content|
+  content.key = 'frontpage_contact_text'
   content.value = <<EOF
 
 
@@ -1325,38 +1335,38 @@ Let's start up a conversation about what your needs are and how we can help. We'
 
 EOF
 end
-content = Content.find_or_create_by_action('contact page title') do |content|
-  content.action = 'contact page title'
+content = Contenteditable::Translation.find_or_create_by_key('contact page title') do |content|
+  content.key = 'contact page title'
   content.value = <<EOF
 DONT BE SHY, SAY HELLO
 EOF
 end
-content = Content.find_or_create_by_action('contact page text') do |content|
-  content.action = 'contact page text'
+content = Contenteditable::Translation.find_or_create_by_key('contact page text') do |content|
+  content.key = 'contact page text'
   content.value = <<EOF
 Let's start up a conversation about what you need and how we can help. We're just a quick email away!
 EOF
 end
-content = Content.find_or_create_by_action('about page title') do |content|
-  content.action = 'about page title'
+content = Contenteditable::Translation.find_or_create_by_key('about page title') do |content|
+  content.key = 'about page title'
   content.value = <<EOF
 About Us
 EOF
 end
-content = Content.find_or_create_by_action('about page text') do |content|
-  content.action = 'about page text'
+content = Contenteditable::Translation.find_or_create_by_key('about page text') do |content|
+  content.key = 'about page text'
   content.value = <<EOF
 We're a distributed team of people passionate about software. Here's a little more about each of us.
 EOF
 end
-content = Content.find_or_create_by_action('contact heading') do |content|
-  content.action = 'contact heading'
+content = Contenteditable::Translation.find_or_create_by_key('contact heading') do |content|
+  content.key = 'contact heading'
   content.value = <<EOF
 LET'S GRAB A BEER
 EOF
 end
-content = Content.find_or_create_by_action('slide2 title') do |content|
-  content.action = 'slide2 title'
+content = Contenteditable::Translation.find_or_create_by_key('slide2 title') do |content|
+  content.key = 'slide2 title'
   content.value = <<EOF
 
 
@@ -1409,8 +1419,8 @@ ALL DEVICES!
 
 EOF
 end
-content = Content.find_or_create_by_action('slide2 description') do |content|
-  content.action = 'slide2 description'
+content = Contenteditable::Translation.find_or_create_by_key('slide2 description') do |content|
+  content.key = 'slide2 description'
   content.value = <<EOF
 
 
@@ -1458,8 +1468,8 @@ We develop software for all types of devices (except for old black-white Nokias)
 
 EOF
 end
-content = Content.find_or_create_by_action('proposal_text') do |content|
-  content.action = 'proposal_text'
+content = Contenteditable::Translation.find_or_create_by_key('proposal_text') do |content|
+  content.key = 'proposal_text'
   content.value = <<EOF
 Let's get started!
 
@@ -1478,8 +1488,8 @@ Let's get started!
 
 EOF
 end
-content = Content.find_or_create_by_action('frontpage_contact_header') do |content|
-  content.action = 'frontpage_contact_header'
+content = Contenteditable::Translation.find_or_create_by_key('frontpage_contact_header') do |content|
+  content.key = 'frontpage_contact_header'
   content.value = <<EOF
 
 
@@ -1538,16 +1548,16 @@ DON'T BE SHY, SAY HELLO
 
 EOF
 end
-content = Content.find_or_create_by_action('conact heading') do |content|
-  content.action = 'conact heading'
+content = Contenteditable::Translation.find_or_create_by_key('conact heading') do |content|
+  content.key = 'conact heading'
   content.value = <<EOF
 
 
 
 EOF
 end
-content = Content.find_or_create_by_action('slide1 title') do |content|
-  content.action = 'slide1 title'
+content = Contenteditable::Translation.find_or_create_by_key('slide1 title') do |content|
+  content.key = 'slide1 title'
   content.value = <<EOF
 
 
@@ -1606,8 +1616,8 @@ FROM IDEA TO EXECUTION
 
 EOF
 end
-content = Content.find_or_create_by_action('company_overview') do |content|
-  content.action = 'company_overview'
+content = Contenteditable::Translation.find_or_create_by_key('company_overview') do |content|
+  content.key = 'company_overview'
   content.value = <<EOF
 
 
@@ -1666,8 +1676,8 @@ Meet the team, find out why we're different - and why you should hire us to work
 
 EOF
 end
-content = Content.find_or_create_by_action('services_overview') do |content|
-  content.action = 'services_overview'
+content = Contenteditable::Translation.find_or_create_by_key('services_overview') do |content|
+  content.key = 'services_overview'
   content.value = <<EOF
 
 
@@ -1726,8 +1736,8 @@ Whether you're an established enterprise or a boostrapping startup, we want to w
 
 EOF
 end
-content = Content.find_or_create_by_action('projects_overview') do |content|
-  content.action = 'projects_overview'
+content = Contenteditable::Translation.find_or_create_by_key('projects_overview') do |content|
+  content.key = 'projects_overview'
   content.value = <<EOF
 
 
@@ -1786,8 +1796,8 @@ We've been fortunate enough to work on many great projects. Here's some highligh
 
 EOF
 end
-content = Content.find_or_create_by_action('services 14') do |content|
-  content.action = 'services 14'
+content = Contenteditable::Translation.find_or_create_by_key('services 14') do |content|
+  content.key = 'services 14'
   content.value = <<EOF
 
 
@@ -1796,8 +1806,8 @@ We swear by PaaS solutions like Heroku and EngineYard for most of our deployment
 
 EOF
 end
-content = Content.find_or_create_by_action('services 15') do |content|
-  content.action = 'services 15'
+content = Contenteditable::Translation.find_or_create_by_key('services 15') do |content|
+  content.key = 'services 15'
   content.value = <<EOF
 
 
@@ -1806,30 +1816,30 @@ Scalability
 
 EOF
 end
-content = Content.find_or_create_by_action('services 23') do |content|
-  content.action = 'services 23'
+content = Contenteditable::Translation.find_or_create_by_key('services 23') do |content|
+  content.key = 'services 23'
   content.value = <<EOF
 Mobile
 EOF
 end
-content = Content.find_or_create_by_action('services 21') do |content|
-  content.action = 'services 21'
+content = Contenteditable::Translation.find_or_create_by_key('services 21') do |content|
+  content.key = 'services 21'
   content.value = <<EOF
 
 Better Living Through Testing
 
 EOF
 end
-content = Content.find_or_create_by_action('services 22') do |content|
-  content.action = 'services 22'
+content = Contenteditable::Translation.find_or_create_by_key('services 22') do |content|
+  content.key = 'services 22'
   content.value = <<EOF
 
 What's that, you need tests? While no one wants to admit it, sometimes teams forget to maintain their testing infrastructure, or project deadlines force more emphasis on features than the reliability of those features. In these cases, we come in and get tests passing, setup continuous integration testing, speed up tests, add tests where needed, coach team on TDD and BDD best-practices
 
 EOF
 end
-content = Content.find_or_create_by_action('services 11') do |content|
-  content.action = 'services 11'
+content = Contenteditable::Translation.find_or_create_by_key('services 11') do |content|
+  content.key = 'services 11'
   content.value = <<EOF
 
 
@@ -1839,8 +1849,8 @@ STARTUPS
 
 EOF
 end
-content = Content.find_or_create_by_action('services 12') do |content|
-  content.action = 'services 12'
+content = Contenteditable::Translation.find_or_create_by_key('services 12') do |content|
+  content.key = 'services 12'
   content.value = <<EOF
 
 
@@ -1851,8 +1861,8 @@ We focus on lean startup tactics, helping you get to your Minimum Viable Product
 
 EOF
 end
-content = Content.find_or_create_by_action('services 13') do |content|
-  content.action = 'services 13'
+content = Contenteditable::Translation.find_or_create_by_key('services 13') do |content|
+  content.key = 'services 13'
   content.value = <<EOF
 
 
@@ -1865,14 +1875,14 @@ DevOps
 
 EOF
 end
-content = Content.find_or_create_by_action('services 24') do |content|
-  content.action = 'services 24'
+content = Contenteditable::Translation.find_or_create_by_key('services 24') do |content|
+  content.key = 'services 24'
   content.value = <<EOF
 Odds are pretty good that you own a smartphone. But even if you don't, odds are your customers do. Being able to engage with your users anywhere, anytime is an amazing opportunity - let us help you with crafting the right mobile solution, be it a mobile version of a website or a dedicated app.
 EOF
 end
-content = Content.find_or_create_by_action('slide1 description') do |content|
-  content.action = 'slide1 description'
+content = Contenteditable::Translation.find_or_create_by_key('slide1 description') do |content|
+  content.key = 'slide1 description'
   content.value = <<EOF
 
 
@@ -1931,8 +1941,8 @@ Here at Coshx we take complex problems and turn them into simple solutions. Our 
 
 EOF
 end
-content = Content.find_or_create_by_action('slide3 title') do |content|
-  content.action = 'slide3 title'
+content = Contenteditable::Translation.find_or_create_by_key('slide3 title') do |content|
+  content.key = 'slide3 title'
   content.value = <<EOF
 
 
@@ -1964,16 +1974,16 @@ COMPLICATED PROBLEMS SOLVED EASILY
 
 EOF
 end
-content = Content.find_or_create_by_action('slide3 description') do |content|
-  content.action = 'slide3 description'
+content = Contenteditable::Translation.find_or_create_by_key('slide3 description') do |content|
+  content.key = 'slide3 description'
   content.value = <<EOF
 
 This ranking algorithm will be a good start.
 
 EOF
 end
-content = Content.find_or_create_by_action('services 16') do |content|
-  content.action = 'services 16'
+content = Contenteditable::Translation.find_or_create_by_key('services 16') do |content|
+  content.key = 'services 16'
   content.value = <<EOF
 
 
@@ -1982,8 +1992,8 @@ Having a site that's so popular you have to worry about scalability is a great p
 
 EOF
 end
-content = Content.find_or_create_by_action('services 26') do |content|
-  content.action = 'services 26'
+content = Contenteditable::Translation.find_or_create_by_key('services 26') do |content|
+  content.key = 'services 26'
   content.value = <<EOF
 Think you need something else? Maybe some training for your team? Some refinement for your business plan? Perhaps a pet sitter? We might not be able to offer much on the last one there, but we'd be happy to hear any special requests you have. Just drop us a line at info@coshx.com and we'll get back to you right away.
 EOF
