@@ -17,7 +17,7 @@
               .content.nine.columns.mobile-three
                 %h2
                   = link_to post.title, post
-                %p
+                %div
                   = preserve post.preview_html.html_safe
                 .links
                   = link_to "Read more", post, :class => "read-more"
@@ -25,7 +25,7 @@
                   %a.comments{:href => "#{polymorphic_url(post)}#disqus_thread"}
 
     .row
-      %h2.star-header#footer-tweet
+      .star-header#footer-tweet
         %p Last tweets
         = link_to "https://www.twitter.com/coshxlabs", :class => "a-button darkblue" do
           Follow Us
