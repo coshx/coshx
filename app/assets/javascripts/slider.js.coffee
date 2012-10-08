@@ -48,3 +48,4 @@ $(document).ready ->
       $(".slider-nav .right").click()
     swipeRight: (event, direction, distance, duration, fingerCount) ->
       $(".slider-nav .left").click()
+    fallbackToMouseEvents: false
