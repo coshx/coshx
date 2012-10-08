@@ -23,8 +23,6 @@ $("document").ready ->
       placement: "top"
       content: "We have techlunch every week in order to keep up with the latest technlogies."      
 
-  $('#footer-nav').localScroll()
-
   $('ul.portfolio-thumbs li').hover(
     -> $(".overlay", this).stop().animate({top:'0px'},{queue:false,duration:300})
     -> $(".overlay", this).stop().animate({top:'-183px'},{queue:false,duration:300})
