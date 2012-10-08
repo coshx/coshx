@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :last_two_posts, :random_quote, :whereami, :contents
 
+  around_filter :catch_exceptions
+
   def contents
     Content.all
   end
@@ -21,5 +23,32 @@ class ApplicationController < ActionController::Base
      params[:controller].to_s + "/" + params[:action]
      #     controller.controller_name.to_s + "/" + controller.action_name
   end
+
+  protected
+
+    def render_page_not_found
+      render template: 'errors/not_found'
+    end
+
+    def render_error
+      render template: 'errors/505'
+    end
+
+
+    def catch_exceptions
+      if Rails.env.production?
+        begin
+          yield 
+        rescue Exception => exception
+          if exception.is_a?(ActiveRecord::RecordNotFound)
+            render_page_not_found
+          else
+            render_error
+          end
+        end
+      else
+        yield
+      end
+    end
 
 end

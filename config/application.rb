@@ -56,6 +56,7 @@ module Coshx
     config.assets.version = '1.0'
     
     config.assets.paths << Rails.root.join("app", "assets", "images", "team")
+    config.exceptions_app = self.routes
 
     config.generators do |g|
       g.helper false

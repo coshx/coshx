@@ -23,7 +23,7 @@ class HomeController < ApplicationController
   end
   
   def profile
-    @folk = Admin.find_by_slug(params[:slug])
+    @folk = Admin.find_by_slug(params[:slug]) || NullAdmin.instance
     @other_folks = Admin.where("slug != '#{params[:slug]}'")
   end
   

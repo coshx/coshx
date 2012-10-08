@@ -52,4 +52,6 @@ Coshx::Application.routes.draw do
   mount Contenteditable::Engine => "/contenteditable"
 
   root :to => 'home#index'
+
+  match '/404', :to => 'errors#not_found'
 end
