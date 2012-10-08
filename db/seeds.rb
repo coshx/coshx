@@ -12,7 +12,6 @@ end
 walt.save!
 puts "Created User #{walt.name}"
 
-
 ben = Admin.find_or_create_by_email("ben@coshx.com") do |b|
   b.name = 'Ben Taitelbaum'
   b.password = 'password'
@@ -71,7 +70,7 @@ puts "Created User #{ryan.name}"
 gabe = Admin.find_or_create_by_email("gabe@coshx.com") do |g|
   g.name = "Gabe Kopley"
   g.password = "gabes_password"
-  #g.twitter = "kopley" # commented out per Gabe's request
+  g.twitter = "kopley"
   g.bio = "Powered by Groove Salad and other nutritious snacks, Gabe loves solving puzzles and building great web applications. Hackathons are his favorite, and he's a big fan of test-driven development, but prefers not to do both at the same time. Gabe's non-technical interests include outdoor recreation, live music, and alternative energy and building techniques."
   g.github = "gkop"
   g.img = "gabe.png"
@@ -1069,8 +1068,6 @@ We look forward to much productive collaboration with more brilliant hires and c
 EOF
 end
 
-
-
 puts "And now we need to publish posts that we have created"
 
 posts = Post.all
@@ -1085,33 +1082,17 @@ posts.each do |p|
   p.save!
 end
 
-
-
-
-
-
-
-
-# Content
- puts "Creating content"
+# Translations
+ puts "Creating translations"
 
 content = Contenteditable::Translation.find_or_create_by_key('home/services/12') do |content|
   content.key = 'home/services/12'
   content.value = <<EOF
-
-
-
 We focus on lean startup tactics, helping you get to your Minimum Viable Product (MVP) in a timely, cost-effective manner. We understand that as your business develops, requirements can change drastically, so we develop in a transparent, agile manner to ensure that you always have a good grasp of the project timelines and budgets.
-
-
-
-
-
-
-
 EOF
   puts "Creating content: " + content.key
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('services 25') do |content|
   content.key = 'services 25'
   content.value = <<EOF
@@ -1119,886 +1100,293 @@ And so on...
 EOF
   puts "Creating content: " + content.key
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('home/services/1') do |content|
   content.key = 'home/services/1'
   content.value = <<EOF
-
-
-
-
 Ruby on RAILS!!
-
-
-
-
 EOF
   puts "Creating content: " + content.key
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('home/services/2') do |content|
   content.key = 'home/services/2'
   content.value = <<EOF
-
-
-
-
 We focus on lean startup tactics, helping you get to your Minimum Viable Product (MVP) in a timely, cost-effective manner. We understand that as your business develops, requirements can change drastically, so we develop in a transparent, agile manner to ensure that you always have a good grasp of the project timelines and budgets.
-
-
-
-
-
-
 EOF
   puts "Creating content: " + content.key
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('home/services/3') do |content|
   content.key = 'home/services/3'
   content.value = <<EOF
-
-
-
-
 This content
-
-
-
-
 EOF
   puts "Creating content: " + content.key
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('home/services/4') do |content|
   content.key = 'home/services/4'
   content.value = <<EOF
-
-
-
-
 is editable, if ADMIN_SIGNED_IN
-
-
-
-
 EOF
   puts "Creating content: " + content.key
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('home/services/5') do |content|
   content.key = 'home/services/5'
   content.value = <<EOF
-
-
-
 RUBY ON RAILS
-
-
-
 EOF
   puts "Creating content: " + content.key
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('home/services/6') do |content|
   content.key = 'home/services/6'
   content.value = <<EOF
-
-
-
 We focus on lean startup tactics, helping you get to your Minimum Viable Product (MVP) in a timely, cost-effective manner. We understand that as your business develops, requirements can change drastically, so we develop in a transparent, agile manner to ensure that you always have a good grasp of the project timelines and budgets.
-
-
-
-
-
-
-
 EOF
   puts "Creating content: " + content.key
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('home/services/7') do |content|
   content.key = 'home/services/7'
   content.value = <<EOF
-
-
 Rails!
-
-
 EOF
   puts "Creating content: " + content.key
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('home/services/8') do |content|
   content.key = 'home/services/8'
   content.value = <<EOF
-
-
-
 We focus on lean startup tactics, helping you get to your Minimum Viable Product (MVP) in a timely, cost-effective manner. We understand that as your business develops, requirements can change drastically, so we develop in a transparent, agile manner to ensure that you always have a good grasp of the project timelines and budgets.
-
-
-
-
-
-
-
 EOF
   puts "Creating content: " + content.key
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('home/services/9') do |content|
   content.key = 'home/services/9'
   content.value = <<EOF
-
-
-
 RAils2!!!
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('home/services/10') do |content|
   content.key = 'home/services/10'
   content.value = <<EOF
-
-
-
 We focus on lean startup tactics, helping you get to your Minimum Viable Product (MVP) in a timely, cost-effective manner. We understand that as your business develops, requirements can change drastically, so we develop in a transparent, agile manner to ensure that you always have a good grasp of the project timelines and budgets.
-
-
-
-
-
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('home/services/11') do |content|
   content.key = 'home/services/11'
   content.value = <<EOF
-
-
-
 rails333!!!
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('frontpage_contact_text') do |content|
   content.key = 'frontpage_contact_text'
   content.value = <<EOF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Let's start up a conversation about what your needs are and how we can help. We're just a quick email away!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('contact page title') do |content|
   content.key = 'contact page title'
   content.value = <<EOF
 DONT BE SHY, SAY HELLO
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('contact page text') do |content|
   content.key = 'contact page text'
   content.value = <<EOF
 Let's start up a conversation about what you need and how we can help. We're just a quick email away!
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('about page title') do |content|
   content.key = 'about page title'
   content.value = <<EOF
 About Us
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('about page text') do |content|
   content.key = 'about page text'
   content.value = <<EOF
 We're a distributed team of people passionate about software. Here's a little more about each of us.
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('contact heading') do |content|
   content.key = 'contact heading'
   content.value = <<EOF
 LET'S GRAB A BEER
 EOF
+
 end
 content = Contenteditable::Translation.find_or_create_by_key('slide2 title') do |content|
   content.key = 'slide2 title'
   content.value = <<EOF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ALL DEVICES!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('slide2 description') do |content|
   content.key = 'slide2 description'
   content.value = <<EOF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 We develop software for all types of devices (except for old black-white Nokias)!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('proposal_text') do |content|
   content.key = 'proposal_text'
   content.value = <<EOF
 Let's get started!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('frontpage_contact_header') do |content|
   content.key = 'frontpage_contact_header'
   content.value = <<EOF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 DON'T BE SHY, SAY HELLO
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('conact heading') do |content|
-  content.key = 'conact heading'
+  content.key = 'contact heading'
   content.value = <<EOF
-
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('slide1 title') do |content|
   content.key = 'slide1 title'
   content.value = <<EOF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 FROM IDEA TO EXECUTION
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('company_overview') do |content|
   content.key = 'company_overview'
   content.value = <<EOF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Meet the team, find out why we're different - and why you should hire us to work your next website or other software project.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('services_overview') do |content|
   content.key = 'services_overview'
   content.value = <<EOF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Whether you're an established enterprise or a boostrapping startup, we want to work with you. Take a look at the services we offer.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('projects_overview') do |content|
   content.key = 'projects_overview'
   content.value = <<EOF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 We've been fortunate enough to work on many great projects. Here's some highlights of the work we've done.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('services 14') do |content|
   content.key = 'services 14'
   content.value = <<EOF
-
-
 We swear by PaaS solutions like Heroku and EngineYard for most of our deployments, but sometimes they're not appropriate. For these times, we can deploy and manage large clusters on EC2 or in specific datacenters. We have experience maintaining production systems using both chef and puppet, and are happy to discuss with you which solution is best for your needs.
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('services 15') do |content|
   content.key = 'services 15'
   content.value = <<EOF
-
-
 Scalability
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('services 23') do |content|
   content.key = 'services 23'
   content.value = <<EOF
 Mobile
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('services 21') do |content|
   content.key = 'services 21'
   content.value = <<EOF
-
 Better Living Through Testing
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('services 22') do |content|
   content.key = 'services 22'
   content.value = <<EOF
-
 What's that, you need tests? While no one wants to admit it, sometimes teams forget to maintain their testing infrastructure, or project deadlines force more emphasis on features than the reliability of those features. In these cases, we come in and get tests passing, setup continuous integration testing, speed up tests, add tests where needed, coach team on TDD and BDD best-practices
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('services 11') do |content|
   content.key = 'services 11'
   content.value = <<EOF
-
-
-
 STARTUPS
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('services 12') do |content|
   content.key = 'services 12'
   content.value = <<EOF
-
-
-
 We focus on lean startup tactics, helping you get to your Minimum Viable Product (MVP) in a timely, cost-effective manner. We understand that as your business develops, requirements can change drastically, so we develop in a transparent, agile manner to ensure that you always have a good grasp of the project timelines and budgets.
-
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('services 13') do |content|
   content.key = 'services 13'
   content.value = <<EOF
-
-
-
-
-
-
 DevOps
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('services 24') do |content|
   content.key = 'services 24'
   content.value = <<EOF
 Odds are pretty good that you own a smartphone. But even if you don't, odds are your customers do. Being able to engage with your users anywhere, anytime is an amazing opportunity - let us help you with crafting the right mobile solution, be it a mobile version of a website or a dedicated app.
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('slide1 description') do |content|
   content.key = 'slide1 description'
   content.value = <<EOF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Here at Coshx we take complex problems and turn them into simple solutions. Our highly skilled team of programmers and designers will take your product to the next level. We love sending those rockets to the moon - why not let us launch a rocket of a product for you?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('slide3 title') do |content|
   content.key = 'slide3 title'
   content.value = <<EOF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 COMPLICATED PROBLEMS SOLVED EASILY
-
-
-
-
-
-
-
-
-
-
-
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('slide3 description') do |content|
   content.key = 'slide3 description'
   content.value = <<EOF
-
 This ranking algorithm will be a good start.
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('services 16') do |content|
   content.key = 'services 16'
   content.value = <<EOF
-
-
 Having a site that's so popular you have to worry about scalability is a great problem to have... until your users start leaving. Or maybe you anticipate a large load and want to understand how your application will behave. We can help. We've managed systems that handle millions of requests a day, and get a kick out of load testing systems and services to push them to the limit. Scalability tests (database), load tests (concurrency, throughput), database optimizations, architecture reivew and optimizations, profiling and bottleneck identification
-
-
 EOF
 end
+
 content = Contenteditable::Translation.find_or_create_by_key('services 26') do |content|
   content.key = 'services 26'
   content.value = <<EOF
 Think you need something else? Maybe some training for your team? Some refinement for your business plan? Perhaps a pet sitter? We might not be able to offer much on the last one there, but we'd be happy to hear any special requests you have. Just drop us a line at info@coshx.com and we'll get back to you right away.
 EOF
 end
-
 
 
 # Quotes
@@ -2010,6 +1398,7 @@ quote = Quote.find_or_create_by_text("We engaged Coshx for a substantial, highly
 We engaged Coshx for a substantial, highly complex project having an incredibly tight deadline, and they came through for us wonderfully. Throughout they were thoughtful, flexible, highly responsive team players.
 EOF
 end
+
 quote = Quote.find_or_create_by_text("I couldn't have gotten any of this off the ground without you guys. The company is in good shape because of the headstart Coshx provided.") do |quote|
   quote.author = 'Mike Bukhin, Tendril Software Czar'
   quote.project_id = ''
@@ -2017,6 +1406,7 @@ quote = Quote.find_or_create_by_text("I couldn't have gotten any of this off the
 I couldn't have gotten any of this off the ground without you guys. The company is in good shape because of the headstart Coshx provided.
 EOF
 end
+
 quote = Quote.find_or_create_by_text("While we were impressed with their technological knowhow, even more impressive was their willingness to spend countless hours helping to create, revise and get their hands dirty in the development of our plan.") do |quote|
   quote.author = 'Darah Bonham, Founder'
   quote.project_id = ''
@@ -2024,6 +1414,7 @@ quote = Quote.find_or_create_by_text("While we were impressed with their technol
 While we were impressed with their technological knowhow, even more impressive was their willingness to spend countless hours helping to create, revise and get their hands dirty in the development of our plan.
 EOF
 end
+
 quote = Quote.find_or_create_by_text(" I think the software is working superbly... I think we have a great chance of spreading its application. Well done. The new version is everything I had hoped it would be.") do |quote|
   quote.author = 'Jim Fishkin, Reframe It Board Member'
   quote.project_id = ''
@@ -2031,7 +1422,6 @@ quote = Quote.find_or_create_by_text(" I think the software is working superbly.
  I think the software is working superbly... I think we have a great chance of spreading its application. Well done. The new version is everything I had hoped it would be.
 EOF
 end
-
 
 
 # PROJECTS
@@ -2056,4 +1446,3 @@ project = Project.find_or_create_by_url('http://www.tendrilinc.com/energy-provid
   project.url = 'http://www.tendrilinc.com/energy-providers/application/energize/'
   project.featured = ''
 end
-
