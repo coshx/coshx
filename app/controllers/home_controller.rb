@@ -18,17 +18,13 @@ class HomeController < ApplicationController
     @coshx_folks = Admin.order :name
   end
 
-  def portfolio
-    @clients = Client.all.shuffle # randomizing for fun
-  end
-  
   def profile
     @folk = Admin.find_by_slug(params[:slug]) || NullAdmin.instance
     @other_folks = Admin.where("slug != '#{params[:slug]}'")
   end
-  
+
   def contact_us
     @message = Message.new
   end
-  
+
 end

@@ -10,12 +10,10 @@ Coshx::Application.routes.draw do
 
   resources :projects
 
-  #resources :posts
-  
   get 'get_random_quote' => 'quotes#get_random_quote'
   get 'generate_slugs' => 'admins#generate_slugs'
   get 'thank_you' => 'messages#thank_you'
-  
+
   get 'contact' => 'home#contact_us'
 
   # eg www.coshx.com redirects to coshx.com
@@ -27,7 +25,7 @@ Coshx::Application.routes.draw do
   #admins urls
   get 'edit_my_profile' => 'admins#edit'
   match 'profile_update' => 'admins#update'
-  
+
   get 'profile/:slug' => "home#profile"
   get 'dashboard' => 'dashboard#index', :as => :admin_root
   get '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
@@ -46,7 +44,6 @@ Coshx::Application.routes.draw do
   end
 
   get '/services' => 'home#services', :as => :services
-  get '/portfolio' => 'home#portfolio', :as => :portfolio
   get '/about' => 'home#about', :as => :about
 
   mount Contenteditable::Engine => "/contenteditable"

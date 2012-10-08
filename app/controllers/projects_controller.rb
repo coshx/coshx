@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
     @projects << Project.new(:description => "your_project_here")
-    
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @projects }

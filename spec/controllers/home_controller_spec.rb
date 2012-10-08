@@ -18,16 +18,4 @@ describe HomeController do
     end
   end
 
-  describe "GET :portfolio" do
-    let(:all) { [mock_model(Client), mock_model(Client)] }
-
-    it "retrieves all clients, shuffled" do
-      Client.should_receive(:all).and_return all
-      all.should_receive(:shuffle).and_return all
-
-      get :portfolio
-      assigns(:clients).should == all
-    end
-  end
-
 end
