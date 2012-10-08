@@ -1,7 +1,6 @@
 %div#folk-slider.orbit{"data-change-url" => "true"}
-  -if @folk
-    %div.slide.first-slide{:id => @folk.slug}
-      =render :partial => "folk", :locals => {:folk => @folk}
+  %div.slide.first-slide{:id => @folk.slug}
+    =render :partial => "folk", :locals => {:folk => @folk}
   - @other_folks.each do |of|
     %div.slide{:id => of.slug}
       =render :partial => "folk", :locals => {:folk => of}
