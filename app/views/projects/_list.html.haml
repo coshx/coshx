@@ -2,7 +2,6 @@
   %h2.star-header
     Featured Projects
     = link_to 'See More Case Studies', "projects/", :class => "a-button"
-          
 
 %div.featured_projects.row
   - featured_projects.each_with_index do |fp, i|
@@ -12,9 +11,9 @@
         .overlay
           .link-wrapper
             %a.link-to-the-project{:href => fp.url}
-    
-    %div{:id => "modal#{i}", :class => "reveal-modal"}
+
+    %div.reveal-modal{:id => "modal#{i}"}
       %h2=fp.title
       %p=fp.description
-      %a.close-reveal-modal &#215
+      %a.close-reveal-modal &#215;
 
