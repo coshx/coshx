@@ -1,10 +1,7 @@
-%div#folk-slider
+%div#folk-slider.orbit{"data-change-url" => "true"}
   -if @folk
     %div.slide.first-slide{:id => @folk.slug}
       =render :partial => "folk", :locals => {:folk => @folk}
   - @other_folks.each do |of|
     %div.slide{:id => of.slug}
       =render :partial => "folk", :locals => {:folk => of}
-
-%script(type="text/javascript")
-  = render :partial => "home/slider.js", :locals => { :slider_id => "folk-slider", :afterSlideChange => '$(".slide").each(function() { if ($(this).css("zIndex") == 3) { history.pushState(null, "123", "" + $(this).attr("id")); }});'}

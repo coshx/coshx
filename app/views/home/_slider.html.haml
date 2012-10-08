@@ -1,4 +1,4 @@
-%div#slider
+%div#slider.orbit
   %div.slide.first-slide
     #blueprint-wrapper
       = link_to "", "#", :class => :point1
@@ -35,6 +35,3 @@
 
     = link_to "/services", :class => "the-button" do
       Read About How We Craft Software
-
-%script(type="text/javascript")
-  = render :partial => "home/slider.js", :locals => {:slider_id => "slider"}
