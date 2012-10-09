@@ -1,4 +1,4 @@
-$gray: #a6a6a6;
+@import "common";
 
 .services {
 
@@ -6,7 +6,7 @@ $gray: #a6a6a6;
     display: block;
     color: $gray;
     font-family: "Droid Serif", serif;
-    font-size: 13px;
+    font-size: 14px;
   }
 
   h5 {
@@ -73,12 +73,11 @@ $gray: #a6a6a6;
       }
     }
   }
-
 }
 
 .circle {
-  border: 5px solid #1588C3;
-  background: #004264;
+  border: 5px solid $blue;
+  background: $dark-blue;
   border-radius: 100px;
   width: 110px;
   height: 110px;
@@ -93,37 +92,29 @@ $gray: #a6a6a6;
 
   &:hover {
     border: 5px solid white;
-    background: #1588C3;
+    background: $blue;
 
     .icon {
       background-position: -70px 0;
     }
-    //background-position:-70 0px;
-    
-    
-    
-.one-icon {
-    background-position: -70px -0px !important;
-}
-.two-icon {
-    background-position: -70px -70px !important;
-}
-.three-icon {
-    background-position: -70px -140px !important;
-}
-.four-icon {
-    background-position: -70px -210px !important;
-}
-.five-icon {
-    background-position: -70px -280px !important;
-}
-.six-icon {
-    background-position: -70px -350px !important;
-}
-    
-    
-    
-    
+    .one-icon {
+        background-position: -70px -0px !important;
+    }
+    .two-icon {
+        background-position: -70px -70px !important;
+    }
+    .three-icon {
+        background-position: -70px -140px !important;
+    }
+    .four-icon {
+        background-position: -70px -210px !important;
+    }
+    .five-icon {
+        background-position: -70px -280px !important;
+    }
+    .six-icon {
+        background-position: -70px -350px !important;
+    }
     .idea-icon {
       background-position: -70px  -210px;
     }
@@ -163,15 +154,13 @@ $gray: #a6a6a6;
     .access-icon {
       background-position: -70px  -910px;
     }
-
   }
-
 }
 
 .star-header {
   margin-top: 80px;
-  border-top: 2px solid #1588C3;
-  border-bottom: 1px dashed #1588C3;
+  border-top: 2px solid $blue;
+  border-bottom: 1px dashed $blue;
   font: bold 18px 'PT Sans', sans-serif;
   color: white;
   text-transform: uppercase;
@@ -187,10 +176,10 @@ $gray: #a6a6a6;
   }
 
   a {
-    color: #004264;
+    color: $dark-blue;
 
     &:hover {
-      color: #333333;
+      color: $dark-gray;
     }
   }
 
@@ -332,25 +321,7 @@ $gray: #a6a6a6;
   &:hover {
     background-position: -70px -350px !important;
   }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .idea-icon {
 
@@ -358,7 +329,6 @@ $gray: #a6a6a6;
   &:hover {
     background-position: -70px -210px;
   }
-
 }
 
 .books-icon {
@@ -375,7 +345,6 @@ $gray: #a6a6a6;
   &:hover {
     background-position: -70px  -70px;
   }
-
 }
 
 .design-icon {
@@ -383,7 +352,6 @@ $gray: #a6a6a6;
   &:hover {
     background-position: -70px  -70px;
   }
-
 }
 
 .develop-icon {
@@ -474,7 +442,6 @@ $gray: #a6a6a6;
   }
 
   margin-top: 30px;
-  border-top: 2px solid #1588C3;
+  border-top: 2px solid $blue;
   padding-top: 40px;
-
 }

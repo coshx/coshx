@@ -1,10 +1,16 @@
-$gray: #B2B2B2;
+$off-white: #eeeeee;
+
+$gray: #b2b2b2;
 $light-gray: #97979b;
 $medium-gray: #525357;
+$dark-gray: #333333;
 
 $blue: #1588c3;
+$bright-blue: #2ba6cb;
 $dark-blue: #004264;
-$very-pale-blue: #E3E3FF;
+
+// i think these are all for code highlighting,
+// in which case we should TODO move them out of common
 $green: #afcf45;
 $purple: #c64791;
 

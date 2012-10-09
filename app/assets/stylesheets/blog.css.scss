@@ -1,47 +1,7 @@
 @import "common";
 
-#gutter {
-
-}
-
-body.default section.primary.wall-of-text {
-
-}
-
-section.primary {
-  .post-author-image {
-
-  }
-  .post-info-wrapper, .post-info {
-
-  }
-
-  .post-info-wrapper {
-    margin-bottom: 10px;
-  }
-
-  .post-info {
-
-  }
-  .post-body {
-    p {
-
-    }
-    hr {
-
-    }
-    .meta {
-
-    }
-
-    em {
-
-    }
-  }
-
-  .pagination {
-
-  }
+section.primary .post-info-wrapper {
+  margin-bottom: 10px;
 }
 
 .edit-link a {
@@ -52,7 +12,6 @@ section.primary {
   font-size: 11px !important;
 }
 
-
 blockquote p {
-color: #A9A9A9 !important;
+  color: $gray !important;
 }

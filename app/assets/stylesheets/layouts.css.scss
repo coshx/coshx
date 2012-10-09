@@ -1,3 +1,5 @@
+@import "common";
+
 ul {
   list-style-type: none;
 }
@@ -70,37 +72,35 @@ body {
 }
 
 div.dialog {
-        width: 25em;
-        padding: 0 4em;
-        margin: 4em auto 0 auto;
-        border: 2px solid #1688C3;
-        border-right-color: #1688C3;
-        border-bottom-color: #1688C3;
-        background-color: #fff; 
-        color: #666; 
-        text-align: center; 
-        font-family: arial, sans-serif;
-      }
+  width: 25em;
+  padding: 0 4em;
+  margin: 4em auto 0 auto;
+  border: 2px solid #1688C3;
+  border-right-color: #1688C3;
+  border-bottom-color: #1688C3;
+  background-color: #fff;
+  color: #666;
+  text-align: center;
+  font-family: arial, sans-serif;
 
-div.dialog h1 {
-        font-size: 18px;
-        }
-
-
+  h1 {
+    font-size: 18px;
+  }
+}
 
 @media screen and (max-width: 450px) {
 
-  ul#nav li {
-    float: left;
-    width: 33% !important;
-    &:nth-child(3) {
-      background: none !important;
-    }
-  }
-
   ul#nav {
-    border-bottom: 2px solid #1588C3;
+    border-bottom: 2px solid $blue;
     overflow: hidden;
+
+    li {
+      float: left;
+      width: 33% !important;
+      &:nth-child(3) {
+        background: none !important;
+      }
+    }
   }
 }
 
@@ -108,7 +108,7 @@ ul#nav li {
   float: left;
   width: 16.667%;
   background: url(menu-border.png) no-repeat right 6px;
-  border-bottom: 1px solid #1588C3;
+  border-bottom: 1px solid $blue;
 
   &.selected {
     a:after {
@@ -143,19 +143,18 @@ ul#nav li {
     transition: all 0.3s ease-out; /* Firefox 16+, Opera 12.50+ */
 
     &:hover {
-      color: #1588C3 !important;
+      color: $blue !important;
     }
 
   }
   &.selected a {
-    color: #1588C3 !important;
+    color: $blue !important;
   }
-
 }
 
 #nav {
   margin-top: 20px;
-  border-top: 2px solid #1588C3;
+  border-top: 2px solid $blue;
   list-style-type: none;
 }
 
@@ -172,7 +171,7 @@ ul#nav li {
   border-radius: 5px;
   display: inline-block;
   padding: 4px 40px 4px 15px;
-  color: #1588c3;
+  color: $blue;
   text-decoration: none;
   font: 12px 'PT Sans', sans-serif;
   background: #FFF;
@@ -186,6 +185,10 @@ ul#nav li {
     right: 10px;
     top: 9px;
   }
+
+  &:hover {
+    color: $dark-blue;
+  }
 }
 
 .dark-blue-arrow {
@@ -197,7 +200,7 @@ ul#nav li {
   text-decoration: none;
   font: 12px 'PT Sans', sans-serif;
   position: relative;
-  background: #004264;
+  background: $dark-blue;
   .arrow {
     background-position: 0px -8px;
     &:hover {
@@ -205,15 +208,10 @@ ul#nav li {
     }
   }
 
-}
-
-.white-arrow:hover {
-  color: #004264;
-}
-
-.dark-blue-arrow:hover {
-  background: #FFF;
-  color: #004264 !important;
+  &:hover {
+    background: #FFF;
+    color: $dark-blue !important;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -246,7 +244,7 @@ ul#nav li {
 
 footer {
   margin-top: 100px;
-  background: #1588C3;
+  background: $blue;
   position: relative;
 
   .footer-content {
@@ -256,7 +254,7 @@ footer {
     padding-bottom: 15px;
   }
   .contact-details {
-    background: #004264;
+    background: $dark-blue;
     box-sizing: border-box;
     padding: 20px 30px;
     font: 14px/24px "PT Sans", sans-serif;
@@ -269,7 +267,7 @@ footer {
     line-height: 32px;
     background: url(blog.png) 0px 0px no-repeat;
     text-transform: uppercase;
-    border-bottom: 1px solid #004264;
+    border-bottom: 1px solid $dark-blue;
     padding-bottom: 20px;
   }
 
@@ -281,12 +279,12 @@ footer {
     margin: 10px auto 0px;
     font: 12px / 58px "Droid Serif", serif;
     color: white;
-    border-bottom: 1px solid #004264;
+    border-bottom: 1px solid $dark-blue;
     p {
       margin-top: 15px;
       float: left;
       a {
-        color: #004264;
+        color: $dark-blue;
         text-decoration: none;
         &:hover {
           color: black;
@@ -304,7 +302,7 @@ footer {
     font: bold 24px/70px "PT Sans",sans-serif;
     text-align: center;
     text-transform: uppercase;
-    color: #004264;
+    color: $dark-blue;
     a {
       color: #ffffff;
       &:hover {
@@ -324,11 +322,11 @@ footer {
         font: 12px 'PT Sans', sans-serif;
       }
       &.links {
-        color: #004264;
+        color: $dark-blue;
         font: 12px 'PT Sans', sans-serif;
         a {
           text-decoration: none;
-          color: #004264;
+          color: $dark-blue;
           &:hover {
             text-decoration: none;
             color: black;
@@ -336,9 +334,7 @@ footer {
         }
       }
     }
-
   }
-
 }
 
 .blue-arrow:hover .arrow, .dark-blue-arrow:hover .arrow, .white-arrow:hover .arrow {
@@ -351,10 +347,10 @@ footer {
   display: inline-block;
   margin: auto;
   padding: 4px 40px 4px 15px;
-  color: #004264;
+  color: $dark-blue;
   text-decoration: none;
   font: 12px 'PT Sans', sans-serif;
-  background: #1588C3;
+  background: $blue;
   position: relative;
   .arrow {
     background-position: 0px 0px;
@@ -378,26 +374,28 @@ footer {
   color: #666;
 }
 
-.post p {
-  font-family: "Droid Serif", serif;
-  font-size: 13px;
-  line-height: 23px;
-  display: inline-block;
-}
+.post {
+  p {
+    font-family: "Droid Serif", serif;
+    font-size: 13px;
+    line-height: 23px;
+    display: inline-block;
+  }
 
-.post .post_pic {
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .post_pic {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.post h2 a {
-  font-family: 'PT Sans', sans-serif;
-  font-size: 18px;
-  color: #004264;
-  text-transform: uppercase;
-  line-height: 125%;
-  display: inline-block;
+  h2 a {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    color: $dark-blue;
+    text-transform: uppercase;
+    line-height: 125%;
+    display: inline-block;
+  }
 }
 
 .post-info {
@@ -409,27 +407,26 @@ footer {
   font: bold 12px 'PT Sans', sans-serif;
   text-transform: uppercase;
   text-align: center;
-  color: #004264;
+  color: $dark-blue;
 }
 
 #latest-blogs .post:last-child {
-  border-left: 1px solid #004264;
+  border-left: 1px solid $dark-blue;
 }
 
 #latest-blogs {
   padding-bottom: 20px;
-  border-bottom: 2px solid #004264;
+  border-bottom: 2px solid $dark-blue;
 }
 
 .post .links, .post .links a {
   font: bold 12px 'PT Sans', sans-serif;
   text-transform: uppercase;
-  color: #004264;
-
+  color: $dark-blue;
 }
 
 .post .links a:hover {
-  color: #333333;
+  color: $dark-gray;
 }
 
 .post .links {
@@ -441,7 +438,7 @@ footer .small-line {
   coontent: ' ';
   width: 30px;
   height: 1px;
-  background: #004264;
+  background: $dark-blue;
 }
 
 .footer-gotop-ribbon {

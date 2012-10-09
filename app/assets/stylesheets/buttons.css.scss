@@ -1,3 +1,5 @@
+@import "common";
+
 @media only screen and (max-width: 767px) {
   body .the-button, .a-button {
     width: 90% !important;
@@ -15,10 +17,10 @@
 
   display: inline-block;
   height: 33px;
-  color: #004264;
+  color: $dark-blue;
   text-decoration: none;
   font: 14px 'PT Sans', sans-serif;
-  background: #1588C3;
+  background: $blue;
   padding: 7px 20px;
   border-radius: 5px;
   text-transform: uppercase;
@@ -49,8 +51,8 @@
   padding: 5px 20px;
   border-radius: 5px;
 
-  color: #004264;
-  background: #1588C3;
+  color: $dark-blue;
+  background: $blue;
   &:hover {
     color: white;
   }
@@ -58,19 +60,19 @@
 
 body .darkblue {
   color: white;
-  background: #004264;
+  background: $dark-blue;
   &:hover {
-    color: #1588C3;
+    color: $blue;
     background: white;
   }
 }
 
 .white {
-  background: #1588C3;
-  color: #1588C3;
+  background: $blue;
+  color: $blue;
   &:hover {
     background: white !important;
-    color: #004264;
+    color: $dark-blue;
   }
 }
 

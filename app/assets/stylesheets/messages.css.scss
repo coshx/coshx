@@ -1,9 +1,7 @@
-// Place all the styles related to the Messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "common";
 
 .bluu {
-  background: #1588C3;
+  background: $blue;
   margin-top: 0px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -21,11 +19,11 @@
 
   label {
     font: bold 11px 'PT Sans', sans-serif;
-    color: #004264;
+    color: $dark-blue;
     text-transform: uppercase;
   }
   input, textarea {
-    border: 1px solid #004264;
+    border: 1px solid $dark-blue;
     max-width: 450px;
   }
 }
@@ -53,8 +51,8 @@ body .container .row .message-tabs {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     cursor: pointer;
-    background: #004264;
-    color: #1588C3;
+    background: $dark-blue;
+    color: $blue;
     text-align: center;
     display: block;
     h5 {
@@ -65,9 +63,8 @@ body .container .row .message-tabs {
     }
   }
 
-  //margin-top:-100px;
   .active a {
-    background: #1588C3 !important;
+    background: $blue !important;
     color: white !important;
   }
 
@@ -93,7 +90,7 @@ body .container .row .message-tabs {
     height: 0;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-right: 15px solid #004264;
+    border-right: 15px solid $dark-blue;
     float: left;
   }
 
@@ -103,12 +100,11 @@ body .container .row .message-tabs {
     width: 80%;
     padding: 17px 30px;
     float: left;
-    background: #004264;
+    background: $dark-blue;
     min-height: 50px;
     margin-bottom: 20px;
   }
   &:after {
     clear: both;
   }
-
 }

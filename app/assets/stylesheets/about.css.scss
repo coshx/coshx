@@ -1,5 +1,7 @@
+@import "common";
+
 .about-stats {
-  background: #1588C3;
+  background: $blue;
   position: relative;
   padding-bottom: 50px;
   &:after {
@@ -15,7 +17,7 @@
   }
   p {
     font: 12px 'Droid Serif', serif;
-    color: #004264;
+    color: $dark-blue;
   }
   h3 {
     font-family: 'Droid Sans', sans-serif;
@@ -23,17 +25,17 @@
     font-style: normal;
     font-variant: normal;
     font-weight: bold;
-    color: #004264;
+    color: $dark-blue;
     text-align: -webkit-auto;
     text-rendering: optimizelegibility;
     text-transform: uppercase;
   }
   h2 {
     font: bold 48px/46px "Droid Sans", sans-serif;
-    color: #004264;
+    color: $dark-blue;
   }
   .b {
-    border-left: 1px dotted #004264;
+    border-left: 1px dotted $dark-blue;
   }
   .columns div {
     margin: 20px;
@@ -94,7 +96,7 @@
   -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
 
   &:hover {
-    border: 6px solid #1588c3;
+    border: 6px solid $blue;
     filter: none;
     -webkit-filter: grayscale(0);
   }
@@ -125,7 +127,7 @@
 }
 
 .about-stats a {
-  color: #004264;
+  color: $dark-blue;
 }
 
 #folk-slider {
@@ -143,43 +145,38 @@ position:relative;
 }
 
 .twitter_and_github {
-position:absolute;
-right:0px;
+  position: absolute;
+  right: 0px;
   a {
     float:right;
   }
 }
+
 .github {
-margin-left:20px;
-padding-left:30px;
-height:26px;
-padding-top:5px;
-color:#1588C3 !important;
-background:url(github-small.png) no-repeat;
-//position:absolute;
-right:0;
-display:block;
-&:hover {
-background-position:0px -26px;
-color:white !important;
-
+  margin-left: 20px;
+  padding-left: 30px;
+  height: 26px;
+  padding-top: 5px;
+  color: $blue !important;
+  background: url(github-small.png) no-repeat;
+  right: 0;
+  display: block;
+  &:hover {
+    background-position: 0px -26px;
+    color: white !important;
+  }
 }
 
-}
 .twitter_link {
-padding-left:33px;
-height:26px;
-padding-top:5px;
-color:#1588C3 !important;
-background:url(banner_twitter.png) no-repeat;
-//position:absolute;
-right:0;
-display:block;
-&:hover {
-background-position:0px -25px;
-color:white !important;
-
+  padding-left: 33px;
+  height: 26px;
+  padding-top: 5px;
+  color: $blue !important;
+  background: url(banner_twitter.png) no-repeat;
+  right: 0;
+  display: block;
+  &:hover {
+    background-position: 0px -25px;
+    color: white !important;
+  }
 }
-
-}
-

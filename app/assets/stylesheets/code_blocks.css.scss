@@ -5,13 +5,8 @@
     padding: 10px 20px;
     margin: 10px 0;
     overflow-x: auto;
-   /* @include border-radius(5px);
-    @include box-shadow(black 1px 1px 6px inset);*/
 }
 
-.post-body pre {
-
-}
 
 .hll { background-color: yellow }
 .c { color: desaturate($blue, 20%); font-style: italic } /* Comment */

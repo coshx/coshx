@@ -1,6 +1,4 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "common";
 
 .admin_bar {
   text-align: center;
@@ -17,7 +15,7 @@
   max-width: 280px;
   max-height: 340px;
   border: 6px solid white;
-  background: #2BA6CB;
+  background: $bright-blue;
   content: ' ';
   height: 1280px;
   a {
@@ -59,12 +57,12 @@
     }
   }
   &:hover {
-    border: 6px solid #2BA6CB;
+    border: 6px solid $bright-blue;
     background: white;
     a {
-      color: #2BA6CB;
+      color: $bright-blue;
       .cross div {
-        background: #2BA6CB !important;
+        background: $bright-blue !important;
       }
     }
   }
@@ -82,5 +80,4 @@
   &:hover {
     background-position: -78px 0px;
   }
-
 }

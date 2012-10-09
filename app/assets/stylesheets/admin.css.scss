@@ -1,30 +1,24 @@
+@import "common";
+
 .folk_bio {
   padding-bottom: 10px;
-  maring-bottom: 10px;
-
 }
 
 .folk_wrap {
   content: ' ';
-  border-top: 2px solid #1588C3;
+  border-top: 2px solid $blue;
   padding-top: 15px;
   margin-top: 15px;
   text-align: left;
 }
 
 .folk_header {
-  color: #1588C3;
+  color: $blue;
   font: bold 18px 'PT Sans', sans-serif;
 }
 
 #admin-menu {
 
-  span, em, div, ul, li {
-
-  }
-  a {
-
-  }
   .status {
     margin-left: 40px;
     font: 12px 'PT Sans', sans-serif;
@@ -42,10 +36,6 @@
       color: white;
       margin-left: 20px;
     }
-  }
-  ul {
-  }
-  li {
   }
 }
 
@@ -79,9 +69,8 @@
   p {
     display: block;
     text-align: left;
-    color: gray;
-    font: 14px / 24px "Droid Serif", serif;
+    color: $gray;
+    font: 16px / 24px "Droid Serif", serif;
     margin: 22px 0px;
   }
-
 }
