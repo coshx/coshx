@@ -31,10 +31,12 @@ gem 'fog'
 
 #Social media is cool?
 gem "twitter"
-# To use debugger
-# gem "ruby-debug19", :require => "ruby-debug"
 
+# lightweight I18n frontend
 gem 'contenteditable', :github => 'micmmakarov/contenteditable', :branch => 'master'
+
+# sass mixin library
+gem 'bourbon'
 
 group :assets do
   #gem 'sass'

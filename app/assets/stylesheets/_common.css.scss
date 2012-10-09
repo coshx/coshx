@@ -1,3 +1,7 @@
+@import "bourbon";
+
+// Colors!
+
 $off-white: #eeeeee;
 
 $gray: #b2b2b2;
@@ -9,92 +13,9 @@ $blue: #1588c3;
 $bright-blue: #2ba6cb;
 $dark-blue: #004264;
 
-// i think these are all for code highlighting,
-// in which case we should TODO move them out of common
-$green: #afcf45;
-$purple: #c64791;
-
-$light-orange: #f47123;
-$dark-orange: #f05325;
-
-$silver: #c1c5c9;
-$gold: #d6c29c;
 $white: #FFF;
 $black: #000;
 
-@mixin w960 {
-  width: 960px;
-  margin: 0px auto;
-}
-
-@mixin arrow-button {
-  @include border-radius(5px);
-  display: inline-block;
-  padding: 4px 40px 4px 15px;
-  text-decoration: none;
-  font: 12px 'PT Sans', sans-serif;
-  background: $blue;
-  position: relative;
-  &:hover {
-    background: image-url("arrow_blue_btn.png") no-repeat scroll 96% 9px $blue;
-    color: $white !important;
-  }
-}
-
-@mixin centered {
-  margin: 0 auto;
-}
-
-@mixin pt-sans-bold {
-  font-family: 'PT Sans', sans-serif;
-  font-weight: bold;
-}
-
 @mixin pt-sans {
   font-family: 'PT Sans', sans-serif;
-}
-
-@mixin pt-sans-header {
-  @include pt-sans-bold;
-  font-size: 18px;
-}
-
-@mixin solid-thick-top {
-  border-top: 2px $blue solid;
-}
-
-@mixin solid-thin-bottom {
-  border-bottom: 1px $blue solid;
-}
-
-@mixin projects-clients-header {
-  margin-top: 50px;
-  padding-top: 18px;
-
-  .header {
-
-    padding-bottom: 18px;
-    border-bottom: 1px $blue dashed;
-    margin-bottom: 55px;
-
-    .section-title {
-      vertical-align: -30%;
-      // feels hacky, if someone knows of a better way, please share
-      padding-left: 5px;
-    }
-
-    img {
-      vertical-align: middle;
-      padding: 10px 0px;
-    }
-
-    .callout-link {
-      float: right;
-      width: 163px;
-
-      .button-link {
-        margin-top: 14px;
-      }
-    }
-  }
 }
