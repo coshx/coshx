@@ -2,7 +2,7 @@
   .row
     .three.columns
       %span.post-description
-        .an_image(style="width:120px;height:120px;background:url(#{Gravatar.new(post.author.email).image_url(:size => 120)});border-radius:100px;border:2px solid white;display:block;margin:auto;margin-bottom:20px;")
+        .an_image(style="width:120px;height:120px;background:url(#{Gravatar.new(post.author.email).image_url(:size => 120)});border-radius:100px;border:4px solid white;display:block;margin:auto;margin-bottom:20px;")
         By
         =link_to post.author.name, post.author.url
         %br
