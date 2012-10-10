@@ -1,6 +1,6 @@
 =provide(:title, " | "+@post.title.mb_chars.capitalize.to_s)
 %section.primary.wall-of-text
   = render :partial => "one_post", :locals => {:post => @post, :preview => false }
-  
+
   %section#comments
     = render :partial => "comments"

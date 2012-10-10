@@ -33,9 +33,7 @@
   font: 14px/24px "Droid Serif", serif;
   color: white;
   margin-top: 20px;
-  max-width: 800px;
-  p, ul {
-    max-width: 550px;
+    p, ul {
     margin-bottom: 30px;
     font-size: 16px;
   }
@@ -63,6 +61,8 @@
   color: $gray;
   margin-bottom: 20px;
   display: block;
+  border-right: 1px solid #555555;
+  min-height:300px;
 }
 
 .post-show .post-description span a {
