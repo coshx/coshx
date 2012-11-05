@@ -78,3 +78,10 @@ $gold: #d6c29c;
 .vg { color: darken($blue, 10%) } /* Name.Variable.Global */
 .vi { color: darken($blue, 10%) } /* Name.Variable.Instance */
 .il { color: $silver } /* Literal.Number.Integer.Long */
+
+body {
+  pre, code {
+    font-size: 16px;
+    font-family: 'monospace';
+  }
+}
