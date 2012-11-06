@@ -11,15 +11,15 @@ module Tweeter
   end
 
   def self.build_tweet(post)
+    url = build_url(post)
     text = random_tweet post
-    text = short_tweet post if text.length > MAXIMUM_LENGTH
+    text = short_tweet post if tweet_length(text, url) > MAXIMUM_LENGTH
     text
   end
 
-  def self.random_tweet(post)
+  def self.random_tweet(post, url)
     name  = post.author.name
     title = post.title
-    url = build_url(post)
     [
       "Check out #{name}'s blog post on #{url} about \"#{title}\"",
       "#{name} wrote about \"#{title}\" on our blog. #{url}",
@@ -27,12 +27,11 @@ module Tweeter
     ].shuffle.first
   end
 
-  def self.short_tweet(post)
+  def self.short_tweet(post, url)
     title = post.title
-    url = build_url(post)
 
     text = "Check out our newest blog post at #{url} about \"#{title}\""
-    text = "#{text[0...(MAXIMUM_LENGTH - 3)]}..." if text.length > MAXIMUM_LENGTH
+    text = "#{text[0...(MAXIMUM_LENGTH - 3)]}..." if tweet_length(text, url) > MAXIMUM_LENGTH
     text
   end
 
@@ -40,5 +39,14 @@ module Tweeter
   def self.build_url(post)
     options = post.permalink_attributes.merge(:host => ENV['COSHX_HOST'])
     Rails.application.routes.url_helpers.show_post_url(options)
+  end
+
+  def self.tweet_length(text, url)
+    # Url's only count for 20 chars at most
+    if url.length > 20
+      text.length - url_length + 20
+    else
+      text.length
+    end
   end
 end
