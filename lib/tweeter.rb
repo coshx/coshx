@@ -12,12 +12,12 @@ module Tweeter
 
   def self.build_tweet(post)
     url = build_url(post)
-    text = random_tweet post
-    text = short_tweet post if tweet_length(text, url) > MAXIMUM_LENGTH
+    text = random_tweet(post, url)
+    text = short_tweet(post, url) if tweet_length(text, url) > MAXIMUM_LENGTH
     text
   end
 
-  def self.random_tweet(post, url)
+  def self.random_tweet(post, url=build_url(post))
     name  = post.author.name
     title = post.title
     [
@@ -27,7 +27,7 @@ module Tweeter
     ].shuffle.first
   end
 
-  def self.short_tweet(post, url)
+  def self.short_tweet(post, url=build_url(post))
     title = post.title
 
     text = "Check out our newest blog post at #{url} about \"#{title}\""
@@ -44,7 +44,7 @@ module Tweeter
   def self.tweet_length(text, url)
     # Url's only count for 20 chars at most
     if url.length > 20
-      text.length - url_length + 20
+      text.length - url.length + 20
     else
       text.length
     end

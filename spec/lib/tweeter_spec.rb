@@ -1,6 +1,14 @@
 require 'spec_helper'
 
 describe Tweeter do
+  let(:post) { mock_model(Post) }
+  let(:permalink_attrs) { {:year => '2012', :month => '1', :day => '1',
+                           :title => 'Title!'} }
+
+  before do
+    ENV['COSHX_HOST'] = 'example.com'
+  end
+
   describe "blog post tweet" do
     it "sends twitter a tweet about the blog post" do
       Twitter.should_receive(:update)
@@ -14,7 +22,8 @@ describe Tweeter do
 
       it "returns the random tweet" do
         described_class.should_not_receive :short_tweet
-        described_class.build_tweet(mock_model(Post)).should == 'hello'
+        post.should_receive(:permalink_attributes).and_return(permalink_attrs)
+        described_class.build_tweet(post).should == 'hello'
       end
     end
 
@@ -25,14 +34,15 @@ describe Tweeter do
       end
 
       it "returns a short tweet" do
-        described_class.build_tweet(mock_model(Post)).should == 'hello'
+        post.should_receive(:permalink_attributes).and_return(permalink_attrs)
+        described_class.build_tweet(post).should == 'hello'
       end
     end
   end
 
   describe "short tweet" do
     let(:title) { "Hey dog I heard you like twitter so I put some tweets in a tweeter module so you can tweet after you blog. Hey dog I heard you like twitter so I put some tweets in a tweeter module so you can tweet after you blog." }
-    let(:post) { build_stubbed :post, title: title }
+    let(:post) { build_stubbed :post, title: title, posted_on: Date.parse("5/5/12")}
 
     it "trims tweets to 140 chars" do
       described_class.short_tweet(post).length.should == 140
@@ -42,8 +52,11 @@ describe Tweeter do
   describe "random tweet should contain the" do
     let(:author) { 'Calvin' }
     let(:title)  { 'Why is Twitter always down?' }
-    let(:url)    { Rails.application.routes.url_helpers.post_url post }
-    let(:post)   { build_stubbed :post, author: build_stubbed(:admin, :name => author), title: title }
+    let(:url)    do
+      Rails.application.routes.url_helpers.show_post_url(
+                  post.permalink_attributes.merge(:host => ENV['COSHX_HOST']))
+    end
+    let(:post)   { build_stubbed :post, author: build_stubbed(:admin, :name => author), title: title, posted_on: Date.parse("5/5/12")}
     subject      { Tweeter.random_tweet post }
 
     it "author" do
