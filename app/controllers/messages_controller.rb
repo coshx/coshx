@@ -46,6 +46,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
+        MessageMailer.send_message(@message).deliver
         format.html { redirect_to "/thank_you", notice: 'Your message was sent' }
         format.json { render json: @message, status: :created, location: @message }
       else
