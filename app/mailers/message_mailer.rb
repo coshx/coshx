@@ -1,14 +1,10 @@
 class MessageMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default to: "info@coshx.com"
+  default subject: "Here's a new message from the website..."
 
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.message_mailer.send_message.subject
-  #
-  def send_message
-    @greeting = "Hi"
+  def send_message(message)
+    @message = message
 
-    mail to: "to@example.org"
+    mail from: message.email
   end
 end
