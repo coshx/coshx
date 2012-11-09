@@ -272,33 +272,6 @@ footer {
     padding-bottom: 20px;
   }
 
-  .footer-tweet {
-    overflow: hidden;
-    padding: 15px 0px 15px 110px;
-    background: url("tweet.png") 0px 10px no-repeat;
-    display: block;
-    margin: 10px auto 0px;
-    font: 12px / 58px "Droid Serif", serif;
-    color: white;
-    border-bottom: 1px solid $dark-blue;
-    p {
-      margin-top: 15px;
-      float: left;
-      a {
-        color: $dark-blue;
-        text-decoration: none;
-        &:hover {
-          color: black;
-        }
-      }
-    }
-    a.dark-blue-arrow {
-      margin-top: 15px;
-      float: right;
-    }
-
-  }
-
   h2.contact-heading {
     font: bold 24px/70px "PT Sans",sans-serif;
     text-align: center;
