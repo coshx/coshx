@@ -1,3 +1,31 @@
-MessageMailer#send_message
+There's a message from  #{@message.name} who can be reached at #{@message.email} or #{@message.phone}.
+:plain
 
-= @greeting + ", find me in app/views/message_mailer/send_message.text.haml"
+
+Name: #{@message.name}
+Email: #{@message.email}
+Company: #{@message.company_name}
+Country: #{@message.country}
+Phone: #{@message.phone}
+:plain
+
+Project Description:
+#{@message.project_description}
+:plain
+
+
+Deadline: #{@message.deadline}
+Budget: #{@message.budget}
+:plain
+
+Comments:
+#{@message.comment}
+:plain
+
+
+Text:
+#{@message.text}
+:plain
+
+
+<fin />
