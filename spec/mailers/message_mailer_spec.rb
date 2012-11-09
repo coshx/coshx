@@ -2,16 +2,15 @@ require "spec_helper"
 
 describe MessageMailer do
   describe "send_message" do
-    let(:mail) { MessageMailer.send_message }
+    let(:mail) { MessageMailer.send_message(FactoryGirl.create(:message)) }
 
     it "renders the headers" do
-      mail.subject.should eq("Send message")
-      mail.to.should eq(["to@example.org"])
-      mail.from.should eq(["from@example.com"])
-    end
+      mail.subject.should eq("Here's a new message from the website...")
+      mail.to.should eq(["info@coshx.com"])
+   end
 
     it "renders the body" do
-      mail.body.encoded.should match("Hi")
+      mail.body.encoded.should match("There's a message from")
     end
   end
 
