@@ -16,13 +16,13 @@
                 %div.small-line
               .content.nine.columns.mobile-three
                 %h2
-                  = link_to post.title, post
+                  = link_to post.title, show_post_path(post.permalink_attributes)
                 %div
                   = preserve post.preview_html.html_safe
                 .links
-                  = link_to "Read more", post, :class => "read-more"
+                  = link_to "Read more", show_post_path(post.permalink_attributes), :class => "read-more"
                   |
-                  %a.comments{:href => "#{polymorphic_url(post)}#disqus_thread"}
+                  %a.comments{:href => show_post_path(post.permalink_attributes.merge(:anchor => 'disqus_thread'))}
 
     .row
       .star-header#footer-tweet
