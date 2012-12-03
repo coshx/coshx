@@ -14,7 +14,7 @@ production:
     BUNDLE_WITHOUT: "development:test"
     GOOGLE_ANALYTICS: "UA-25757046-1"
     DISQUS_SHORTNAME: "coshxlabs"
-    COSHX_HOST: "coshx.com"
+    COSHX_HOST: "www.coshx.com"
 
 staging:
   config_repo: 'https://github.com/coshx/coshx_configuration'
