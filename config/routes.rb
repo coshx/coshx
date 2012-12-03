@@ -16,9 +16,10 @@ Coshx::Application.routes.draw do
 
   get 'contact' => 'home#contact_us'
 
-  # eg www.coshx.com redirects to coshx.com
-  #   http://stackoverflow.com/a/7352878/283398
-  match '(*any)' => redirect { |p, req| req.url.sub('www.', '') }, :constraints => { :host => /^www\./ }
+  # coshx.com redirects to www.coshx.com
+  match '(*any)' => redirect { |p, req|
+    req.url.sub(req.host, 'www.coshx.com') },
+    :constraints => { :host => /^coshx\.com$/ }
 
   devise_for :admins
 
