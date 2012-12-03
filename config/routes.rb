@@ -1,25 +1,20 @@
 Coshx::Application.routes.draw do
 
+  # coshx.com#{x} redirects to www.coshx.com#{x}
+  match '(*any)' => redirect { |p, req|
+    req.url.sub(req.host, 'www.coshx.com') },
+    :constraints => { :host => /^coshx\.com$/ }
+
   resources :contents
-
   resources :messages
-
   resources :clients
-
   resources :quotes
-
   resources :projects
 
   get 'get_random_quote' => 'quotes#get_random_quote'
   get 'generate_slugs' => 'admins#generate_slugs'
   get 'thank_you' => 'messages#thank_you'
-
   get 'contact' => 'home#contact_us'
-
-  # coshx.com redirects to www.coshx.com
-  match '(*any)' => redirect { |p, req|
-    req.url.sub(req.host, 'www.coshx.com') },
-    :constraints => { :host => /^coshx\.com$/ }
 
   devise_for :admins
 
