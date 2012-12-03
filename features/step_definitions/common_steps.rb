@@ -17,7 +17,7 @@ When /^(?:|I )should be on the careers page$/ do visit ('/careers') end
 
 
 Given /^I am not authenticated$/ do
-  page.driver.post('/admins/sign_out')
+  page.driver.delete('/admins/sign_out')
 end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
