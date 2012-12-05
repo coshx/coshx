@@ -12,4 +12,4 @@
 //= require foundation
 //= require foundation/app
 //= require contenteditable/contenteditable
-
+//= require turbolinks

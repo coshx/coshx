@@ -1,0 +1,2 @@
+$ ->
+  $(document).trigger "page:load"

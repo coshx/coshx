@@ -8,7 +8,7 @@ sliderNav = ->
     right: -1 * Math.floor((b - w) / 2)
   , 1500
 
-$(document).ready ->
+$(document).on "page:load", ->
   $orbit = $("div.orbit")
   if $orbit.attr("data-change-url")
     slideChangeCallback = ->

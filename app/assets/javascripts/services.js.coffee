@@ -1,4 +1,4 @@
-$(document).ready ->
+$(document).on "page:load", ->
   $(".circle0").popover
     placement: "right"
     content: "We turn good ideas into brilliant products."

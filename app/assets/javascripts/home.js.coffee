@@ -1,8 +1,4 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
-
-$("document").ready ->
+$(document).on "page:load", ->
   $(".point1").popover
     placement: "right"
     content: "We have the technical expertise to make your ideas become an amazing reality."
@@ -21,7 +17,7 @@ $("document").ready ->
 
   $(".techlunch").popover
       placement: "top"
-      content: "We have techlunch every week in order to keep up with the latest technlogies."      
+      content: "We have techlunch every week in order to keep up with the latest technlogies."
 
   $('ul.portfolio-thumbs li').hover(
     -> $(".overlay", this).stop().animate({top:'0px'},{queue:false,duration:300})

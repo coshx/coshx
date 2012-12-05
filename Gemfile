@@ -32,6 +32,9 @@ gem 'fog'
 #Social media is cool?
 gem "twitter"
 
+# Turbolinks!
+gem "turbolinks"
+
 gem 'i18n-active_record',
     :git => 'git://github.com/svenfuchs/i18n-active_record.git',
     :branch => 'rails-3.2',
