@@ -11,4 +11,4 @@ vendor/bundle/*
 .DS_Store
 coverage/
 logfile
-
+public/uploads
