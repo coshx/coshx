@@ -5,15 +5,3 @@
 require File.expand_path('../config/application', __FILE__)
 
 Coshx::Application.load_tasks
-
- require 'heroku_san'
-
-class AssetSyncStrategy < HerokuSan::Deploy::Base
-  def deploy
-    Rake::Task['assets:precompile'].invoke
-    Rake::Task['assets:clean'].invoke
-    super
-  end
-end
-
-HerokuSan.project = HerokuSan::Project.new(Rails.root.join("config","heroku.yml"), :deploy => AssetSyncStrategy)
