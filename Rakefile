@@ -11,6 +11,7 @@ Coshx::Application.load_tasks
 class AssetSyncStrategy < HerokuSan::Deploy::Base
   def deploy
     Rake::Task['assets:precompile'].invoke
+    Rake::Task['assets:clean'].invoke
     super
   end
 end
