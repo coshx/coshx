@@ -46,6 +46,8 @@ gem 'contenteditable', :github => 'micmmakarov/contenteditable', :branch => 'mas
 # sass mixin library
 gem 'bourbon'
 
+gem "asset_sync"
+
 group :assets do
   #gem 'sass'
   gem "sass-rails",   '~> 3.2.3'
