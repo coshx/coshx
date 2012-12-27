@@ -1,5 +1,7 @@
 source "http://rubygems.org"
 
+ruby "1.9.3"
+
 gem "rails", "~> 3.2.9"
 
 # web server
@@ -8,10 +10,7 @@ gem 'thin'
 # database
 gem "pg"
 
-gem 'rb-readline'
-gem 'activesupport'
-
-# authenticate & authorization
+# authentication
 gem "devise"
 
 # presentation
@@ -22,7 +21,6 @@ gem "jquery-rails"
 gem "haml-rails"
 gem "gravatar-ultimate"
 gem "kaminari"
-gem "railties"
 
 # pictures
 gem 'carrierwave'
@@ -46,17 +44,15 @@ gem 'contenteditable', :github => 'micmmakarov/contenteditable', :branch => 'mas
 # sass mixin library
 gem 'bourbon'
 
+# upload assets to s3 before deploying to heroku
 gem "asset_sync"
 
 group :assets do
-  #gem 'sass'
   gem "sass-rails",   '~> 3.2.3'
   gem "coffee-rails", '~> 3.2.1'
   gem "uglifier"
-#  gem 'compass', '~> 0.12.alpha'
   gem 'compass-rails', '~> 1.0.3'
   gem 'zurb-foundation', '~> 3.0.1'
-  gem 'therubyracer', '0.11.0beta5'
   gem 'libv8', '~> 3.11.8'
   gem 'execjs'
 end
