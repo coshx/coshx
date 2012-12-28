@@ -44,10 +44,10 @@ gem 'contenteditable', :github => 'micmmakarov/contenteditable', :branch => 'mas
 # sass mixin library
 gem 'bourbon'
 
-# upload assets to s3 before deploying to heroku
-gem "asset_sync"
-
 group :assets do
+  # upload assets to s3 before deploying to heroku
+  gem "asset_sync"
+
   gem "sass-rails",   '~> 3.2.3'
   gem "coffee-rails", '~> 3.2.1'
   gem "uglifier"
