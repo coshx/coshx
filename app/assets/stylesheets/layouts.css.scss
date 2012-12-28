@@ -167,54 +167,6 @@ ul#nav li {
   position: relative;
 }
 
-.white-arrow {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  display: inline-block;
-  padding: 4px 40px 4px 15px;
-  color: $blue;
-  text-decoration: none;
-  font: 12px 'PT Sans', sans-serif;
-  background: #FFF;
-  position: relative;
-  .arrow {
-    background: url("light-blue-arrow.png") no-repeat scroll 0 0 transparent;
-    float: right;
-    height: 7px;
-    width: 22px;
-    position: absolute;
-    right: 10px;
-    top: 9px;
-  }
-
-  &:hover {
-    color: $dark-blue;
-  }
-}
-
-.dark-blue-arrow {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  display: inline-block;
-  padding: 4px 40px 4px 15px;
-  color: #FFF !important;
-  text-decoration: none;
-  font: 12px 'PT Sans', sans-serif;
-  position: relative;
-  background: $dark-blue;
-  .arrow {
-    background-position: 0px -8px;
-    &:hover {
-      background-position: 0px 0px !important;
-    }
-  }
-
-  &:hover {
-    background: #FFF;
-    color: $dark-blue !important;
-  }
-}
-
 @media screen and (max-width: 767px) {
 
   ul#nav li {
@@ -310,30 +262,6 @@ footer {
     }
   }
 }
-
-.blue-arrow:hover .arrow, .dark-blue-arrow:hover .arrow, .white-arrow:hover .arrow {
-  background-position: 0px -8px;
-}
-
-.blue-arrow {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  display: inline-block;
-  margin: auto;
-  padding: 4px 40px 4px 15px;
-  color: $dark-blue;
-  text-decoration: none;
-  font: 12px 'PT Sans', sans-serif;
-  background: $blue;
-  position: relative;
-  .arrow {
-    background-position: 0px 0px;
-  }
-  &:hover {
-    color: white !important;
-  }
-}
-
 .arrow {
   background: url("blue-arrow.png") no-repeat scroll 0 8px transparent;
   float: right;
