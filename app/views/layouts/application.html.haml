@@ -12,7 +12,7 @@
     = render "layouts/google_analytics"
     = render "layouts/disqus_dev_mode" if Rails.env.development? || Rails.env.test?
     = auto_discovery_link_tag :atom, "/feed"
-    = favicon_link_tag
+    = favicon_link_tag("/assets/favicon.ico")
   %body
     = save_button
     %div.container.main-container
