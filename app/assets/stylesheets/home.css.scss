@@ -443,42 +443,6 @@ section#blueprint-image {
   }
 }
 
-#our-clients {
-  border-top: 2px solid $blue;
-
-  ul {
-    margin-top: 50px;
-    list-style: none;
-    li {
-      float: left;
-      width: 164px;
-      height: 150px;
-      border-right: 1px solid black;
-      border-bottom: 1px solid black;
-      background: $blue;
-      line-height: 200px;
-      text-align: center;
-      img {
-      }
-      &.last {
-        border-right: none;
-      }
-      &.bottom {
-        border-bottom: none;
-      }
-      &:hover {
-        cursor: pointer;
-      }
-    }
-    li.tendril {
-      background: $blue url(client_logos/tendril.png) center center no-repeat;
-      &:hover {
-        background: $blue url(client_logos/tendril_hover.png) center center no-repeat;
-      }
-    }
-  }
-}
-
 .white {
   background-color: white;
   &:hover {
@@ -792,28 +756,6 @@ a.test-nav.next {
   background: image-url("testimonial-next.png") no-repeat;
 }
 
-#our-clients {
-
-  header {
-    background: image-url("projects-border.png") 0px 100% repeat-x;
-    overflow: hidden;
-
-    h2 {
-      font: bold 18px 'PT Sans', sans-serif;
-      color: white;
-      text-transform: uppercase;
-      margin: 25px 0px;
-      float: left;
-      padding: 5px 0px 5px 48px;
-      background: image-url("star.png") 0px 0px no-repeat;
-    }
-    a {
-      float: right;
-      margin-top: 30px;
-    }
-  }
-}
-
 .portfolio-thumbs {
   overflow: hidden;
 }
@@ -899,12 +841,6 @@ a.test-nav.next {
       }
     }
   }
-}
-
-.folk_name {
-  position: absolute;
-  right: 0px;
-  top: 0px;
 }
 
 .displays img {
