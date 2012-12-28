@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121008214451) do
+ActiveRecord::Schema.define(:version => 20121228004851) do
 
   create_table "admins", :force => true do |t|
-    t.string   "email",                                 :default => "",                                               :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "",                                               :null => false
+    t.string   "email",                                 :default => "",                                         :null => false
+    t.string   "encrypted_password",     :limit => 128, :default => "",                                         :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20121008214451) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.text     "bio",                                   :default => "I''''''''m a developer at Coshx and I love it!"
+    t.text     "bio",                                   :default => "I''m a developer at Coshx and I love it!"
     t.string   "twitter"
     t.string   "github"
     t.string   "img"
@@ -40,17 +40,6 @@ ActiveRecord::Schema.define(:version => 20121008214451) do
 
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
-
-  create_table "clients", :force => true do |t|
-    t.string   "name",          :null => false
-    t.string   "site_url",      :null => false
-    t.text     "quote"
-    t.string   "quoted_person"
-    t.text     "what_we_did"
-    t.string   "company_logo",  :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "contents", :force => true do |t|
     t.string   "action"
