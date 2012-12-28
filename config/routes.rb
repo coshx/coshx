@@ -7,7 +7,6 @@ Coshx::Application.routes.draw do
 
   resources :contents
   resources :messages
-  resources :clients
   resources :quotes
   resources :projects
 

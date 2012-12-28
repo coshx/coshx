@@ -3,7 +3,6 @@ class HomeController < ApplicationController
 
   def index
     @featured_projects = Project.find(:all, :limit => 3, :order=> 'created_at desc')
-    @clients = Client.all
   end
 
   def services
