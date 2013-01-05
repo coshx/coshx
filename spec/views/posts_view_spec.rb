@@ -3,7 +3,7 @@ describe "posts/feed.atom.builder" do
 
   before :each do
     assign(:title, "Some Title")
-    @posts = [build_stubbed(:post, :posted_on => DateTime.new(2012, 1, 1)), build_stubbed(:post)]
+    @posts = [build_stubbed(:post, :posted_on => DateTime.new(2013, 1, 1)), build_stubbed(:post)]
     assign(:posts, @posts)
     assign(:feed_url, 'http://www.coshx.com/feed')
     render
@@ -16,7 +16,7 @@ describe "posts/feed.atom.builder" do
     end
 
     it "is updated at the post date of the most recent blog post" do
-      @feed_doc.at_css('updated').content.should match /2012/
+      @feed_doc.at_css('updated').content.should match /2013/
     end
   end
 
