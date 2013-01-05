@@ -4,15 +4,17 @@
     %title= "Coshx Labs #{yield(:title)}"
     %meta{:name => "google-site-verification", :content => "GG9HzTQhQZszRRYo-W_el_Dh1LQs-3SQOuCzZS88FvI"}
     %meta{:charset => "UTF-8"}
-    = render "layouts/fonts"
+    = render "shared/fonts"
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
     %meta(content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" name="viewport")/
     = csrf_meta_tags
-    = render "layouts/google_analytics"
+    = render "shared/google_analytics"
     = render "layouts/disqus_dev_mode" if Rails.env.development? || Rails.env.test?
     = auto_discovery_link_tag :atom, "/feed"
     = favicon_link_tag("/assets/favicon.ico")
+    = render "shared/facebook_meta", :image => yield(:image), :description => yield(:description), :title => yield(:title)
+
   %body
     = save_button
     %div.container.main-container

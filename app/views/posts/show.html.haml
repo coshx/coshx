@@ -1,4 +1,6 @@
 =provide(:title, " | #{@post.title.mb_chars.capitalize.to_s}".html_safe)
+=provide(:description, @post.body.mb_chars.to_s.html_safe)
+
 %section.primary.wall-of-text
   = render :partial => "one_post", :locals => {:post => @post, :preview => false }
 

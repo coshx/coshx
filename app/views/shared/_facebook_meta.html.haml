@@ -1,0 +1,10 @@
+-image = "www.coshx.com/white_logo.png" if image.blank?
+-title = "Coshx Labs" if title.blank?
+-description = "Here at Coshx we take complex problems and turn them into simple solutions. Our highly skilled team of programmers and designers will take your product to the next level. We love sending those rockets to the moon - why not let us launch a rocket of a product for you?" if description.blank?
+%meta{:content => title, :property => "og:title"}/
+%meta{:content => "website", :property => "og:type"}/
+%meta{:content => request.url, :property => "og:url"}/
+%meta{:content => image, :property => "og:image"}/
+%meta{:content => "http://www.coshx.com", :property => "og:site_name"}/
+%meta{:content => "100001436239662", :property => "fb:admins"}/
+%meta{:content => description, :property => "og:description"}/
