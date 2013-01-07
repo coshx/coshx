@@ -1,4 +1,4 @@
 rvm_gemset_create_on_use_flag=1
-rvm 1.9.3
-rvm --create use ruby-1.9.3@coshx
+rvm 1.9.3-p327
+rvm --create use ruby-1.9.3-p327@coshx
 
