@@ -1,7 +1,5 @@
 source "http://rubygems.org"
 
-# The following line is for Circle CI.  It doesn't affect bundler or heroku.
-#ruby=1.9.3-p194
 ruby "1.9.3"
 
 gem "rails", "~> 3.2.9"
