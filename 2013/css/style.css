@@ -111,7 +111,6 @@ section p a{
 	text-align: center;
 	margin-bottom: 15px !important;
 	letter-spacing: -1px;
-	display: -moz-inline-stack;
 }
 
 .btn:hover{
