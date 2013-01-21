@@ -1,56 +1,277 @@
-<!DOCTYPE html>
-<!--[if lt IE 9]><html class="ie"><![endif]-->
-<!--[if gte IE 9]><!--><html><!--<![endif]-->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>coshx labs</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/style.css">
 
-<!--
-	The comment jumble above is handy for targeting old IE with CSS.
-	http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
--->
-
-	<head>
-		<meta charset="utf-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-		<title>coshxlabs</title>
-
-		<!-- Please don't add "maximum-scale=1" here. It's bad for accessibility. -->
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-		<!-- Feel free to split the CSS into separate files, if you like. -->
-		<link rel="stylesheet" href="css/reset.css"/> 
-		<link rel="stylesheet" href="css/home.css" type="text/css">
-
-		<!-- Here's Golden Gridlet, the grid overlay script. -->
-		<script src="js/home.js"></script>
-
-		<!-- 
-			This script enables structural HTML5 elements in old IE.
-			http://code.google.com/p/html5shim/
-		-->
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-	</head>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <body>
-	<header class="wrapper" id="home">
-		
-		<section class="header">
-			<a href="index.html" id="logo"><img src="img/logo.png" alt="" /></a>
-			<ul class="header-nav">
-			<li><a href="#">About us</a></li>
-			<li><a href="#">Our projects</a></li>
-			<li><a href="#">Our services</a></li>
-			<li><a href="#">Blog</a></li>
-			<li><a href="#">Contact us</a></li>
-			<li><a href="#">Careers</a></li>
-			</ul>
-		</section> <!-- top -->		
-		
-		<section class="bottom">
-			<h1>FROM IDEA TO EXECUTION</h1>
-			<h2>Here at Coshx we take complex problems and turn them into simple solutions. Our highly skilled team of programmers and designers will take your product to the next level. We love sending those rockets to the moon - why not let us launch a rocket of a product for you?</h2>
-			<a href="#">CONTACT US</a>
-		</section> <!-- bottom -->	
-	</header> <!-- header -->
+	<header>
+		<div class="row">
+				<h1 id="logo"></h1>
+			<nav>
+				<ul>
+					<li><a href="#about" class="selected">About us</a></li>
+					<li><a href="#projects">Our projects</a></li>
+					<li><a href="#services">Our services</a></li>
+					<li><a href="#blog">Blog</a></li>
+					<li><a href="#contact">Contact us</a></li>
+					<li><a href="#careers">Careers</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
+	<article id="home">	
+		<section class="row">
+			<h1>From Idea to execution</h1>
+			<div class="dots"></div>
+			<p class="seven column centered text-center">Here at Coshx we take complex problems and turn them into simple solutions. Our highly skilled team of programmers and designers will take your product to the next level. We love sending those rockets to the moon - why not let us launch a rocket of a product for you?</p>
+			<a href="" class="btn orange center top-margin">Contact Us</a>
+			<a href="" class="arrow-down"></a>
+			<img src="img/clouds.png" alt="" class="clouds">
+			<img src="img/trucks.png" alt="" class="trucks">
+			<img src="img/rocket.png" alt="" class="rocket">
+		</section>
+	</article> <!-- #home -->
+
+
+	<article id="team">
+		<section class="row">
+			<h1>The team</h1>
+			<div class="dots"></div>
+			<p class="eight column centered text-center">We're a distributed team of people passionate about software. Here's a little more about each of us.</p>
+			<div class="the-team twelve column centered">
+				<div class="column six two-team-mates">
+					<div class="team-mate">
+						<img src="img/circle.png" alt="">
+						<div class="overlay"></div>
+					</div>
+					<div class="team-mate">
+						<img src="img/circle.png" alt="">
+						<div class="overlay"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="column eight three-team-mates">
+					<div class="team-mate">
+						<img src="img/circle.png" alt="">
+						<div class="overlay"></div>
+					</div>
+					<div class="team-mate">
+						<img src="img/circle.png" alt="">
+						<div class="overlay"></div>
+					</div>
+					<div class="team-mate">
+						<img src="img/circle.png" alt="">
+						<div class="overlay"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="column eleven four-team-mates">
+					<div class="team-mate">
+						<img src="img/circle.png" alt="">
+						<div class="overlay"></div>
+					</div>
+					<div class="team-mate">
+						<img src="img/circle.png" al t="">
+						<div class="overlay"></div>
+					</div>
+					<div class="team-mate">
+						<img src="img/circle.png" alt="">
+						<div class="overlay"></div>
+					</div>
+					<div class="team-mate">
+						<img src="img/circle.png" alt="">
+						<div class="overlay"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="column eight three-team-mates"><div class="team-mate">
+						<img src="img/circle.png" alt="">
+						<div class="overlay"></div>
+					</div>     
+					<div class="team-mate">
+						<img src="img/circle.png" alt="">
+						<div class="overlay"></div>
+					</div>
+					<div class="team-mate">
+						<img src="img/you.png" alt="">
+						<div class="overlay"></div>
+					</div> 
+				</div>
+				<div class="clear"></div>				
+			</div>
+			<a href="" class="arrow-down"></a>
+		</section>
+	</article> <!-- #team -->
+
+	<article id="projects">
+		<section class="row">
+			<h1>Our Projects</h1>
+			<div class="dots"></div>
+			<p class="seven column centered text-center">Here’s a selection of some of the projects we’ve lovingly crafted over for our loving clients.</p>
+			<div class="our-projects row">
+				<div class="project-top-column row">
+					<div class="project">
+						<img src="img/project.png" alt="">
+						<div class="overlay"></div>
+					</div>
+					<div class="project">
+						<img src="img/project.png" alt="">
+						<div class="overlay"></div>
+					</div>
+					<div class="project">
+						<img src="img/project.png" alt="">
+						<div class="overlay"></div>
+					</div>
+					<div class="project">
+						<img src="img/project.png" alt="">
+						<div class="overlay"></div>
+					</div>
+					<div class="project last">
+						<img src="img/project.png" alt="">
+						<div class="overlay"></div>
+					</div>
+				</div>
+
+				<div class="project-bottom-column">
+					<div class="project">
+						<img src="img/project.png" alt="">
+						<div class="overlay"></div>
+					</div>
+					<div class="project">
+						<img src="img/project.png" alt="">
+						<div class="overlay"></div>
+					</div>
+					<div class="project">
+						<img src="img/project.png" alt="">
+						<div class="overlay"></div>
+					</div>
+					<div class="project">
+						<img src="img/project.png" alt="">
+						<div class="overlay"></div>
+					</div>
+				</div>
+			</div>
+			<a href="" class="arrow-down"></a> 
+		</section>
+	</article> <!-- #projects -->
+
+	<article id="development">
+		<section class="row">
+			<h1>We are all about the web</h1>
+			<div class="dots"></div>
+			<p class="eight column centered text-center">Let's start up a conversation about what you need and how we can help. We're just a quick email away!</p>
+			<div class="row rings">
+				<div class="ring center"><img src="img/gear.png" alt=""></div>
+				<div class="ring center"><img src="img/bulb.png" alt=""></div>
+				<div class="ring center"><img src="img/book.png" alt=""></div>
+				<div class="ring center"><img src="img/beaker.png" alt=""></div>
+				<div class="ring center"><img src="img/quil.png" alt=""></div>
+				<div class="ring center"><img src="img/stopwatch.png" alt=""></div>
+				<div class="ring center last"><img src="img/star.png" alt=""></div>
+			</div>
+			<div class="well row">We’re utterly dedicated to curing your technical ailments with poignant code and pragmatic advice.</div>
+
+			<h1>We do web development</h1>
+			<div class="dots"></div>
+			<div class="row web-development">
+				<div class="column three">
+					<h3>Startups</h3>				
+					<p><span class="drop-cap orange">W</span>e focus on lean startup tactics, helping you get to your Minimum Viable Product (MVP) in a timely, cost-effective manner. We understand that as your business develops, requirements can change drastically, so we develop in a transparent, agile manner to ensure that you always have a good grasp of the project timelines and budgets.</p>
+					<h3>Devops</h3>
+					<p><span class="drop-cap">W</span>e swear by PaaS solutions like Heroku and EngineYard for most of our deployments, but sometimes they're not appropriate. For these times, we can deploy and manage large clusters on EC2 or in specific datacenters. We have experience maintaining production systems using both chef and puppet, and are happy to discuss with you which solution is best for your needs.</p>
+				</div>
+				<div class="column three">
+					<h3>Scalability</h3>
+					<p><span class="drop-cap">H</span>aving a site that's so popular you have to worry about scalability is a great problem to have... until your users start leaving. Or maybe you anticipate a large load and want to understand how your application will behave. We can help. We've managed systems that handle millions of requests a day, and get a kick out of load testing systems and services to push them to the limit. Scalability tests (database), load tests (concurrency, throughput), database optimizations, architecture reivew and optimizations, profiling and bottleneck identification.</p>
+					<h3>Better living through testing</h3>
+					<p><span class="drop-cap">W</span>hat's that, you need tests? While no one wants to admit it, sometimes teams forget to maintain their testing infrastructure, or project deadlines force</p>
+				</div>
+				<div class="column three">
+					<p>more emphasis on features than the reliability of those features. In these cases, we come in and get tests passing, setup continuous integration testing, speed up tests, add tests where needed, coach team on TDD and BDD best-practices.</p>
+					<h3>Mobile</h3>
+					<p><span class="drop-cap">O</span>dds are pretty good that you own a smartphone. But even if you don't, odds are your customers do. Being able to engage with your users anywhere, anytime is an amazing opportunity - let us help you with crafting the right mobile solution, be it a mobile version of a website or a dedicated app.</p>
+					<h3>And so on...</h3>
+					<p><span class="drop-cap">T</span>hink you need something else? Maybe some training for your team? Some refinement for your business plan?</p>
+				</div>
+				<div class="column three">
+					<p>Perhaps a pet sitter? We might not be able to offer much on the last one there, but we'd be happy to hear any special requests you have. Just drop us a line at <a href="mailto:info@coshx.com">info@coshx.com</a> and we'll get back to you right away.</p>
+					<a href="" class="btn orange center">Contact Us</a>
+					<a href="" class="btn dark-blue center">Like our page</a>
+					<a href="http://www.twitter/coshxlabs" class="btn blue center">@coshxlabs</a>
+				</div>
+			</div>
+			<a href="" class="arrow-down"></a>
+		</section>
+	</article> <!-- #development -->
+
+	<article id="quote">
+		<section class="row">
+			<h1>Need a quote?</h1>
+			<div class="dots"></div>
+			<p class="eleven column centered text-center">Considering us for your next project, then simply use our project planner below. The more details you fill in, the more accurate the estimate will be...</p>
+			<a href="" class="btn orange center top-margin-small">project planner</a>			
+		</section>
+	</article> <!-- #quote -->
+
+	<article id="blog">
+		<section class="row">
+			<div class="column three"><h3>Latest Blog Posts</h3></div>
+			<div class="column three"><a href="#" class="blog-link">Case study in Validated Learning: GigDog's 1st Experiment</a><div class="date">December 16, 2012</div></div>
+			<div class="column three"><a href="#" class="blog-link">Case study in Validated Learning: GigDog's 1st Experiment</a><div class="date">December 16, 2012</div></div>
+			<div class="column three"><a href="#" class="blog-link">Case study in Validated Learning: GigDog's 1st Experiment</a><div class="date">December 16, 2012</div></div>
+		</section>
+	</article> <!-- #quote -->
+
+	<footer>
+		<div class="row">
+			<div class="column three">
+				<h4>Locations</h4>
+				<strong>Boluder</strong>
+				<p>3080 Valmont Rd<br>Suite 280<br>CO 80301</p>
+				<strong>Charlottesville</strong>
+				<p>1110 Market St <br>East Suite N7 <br>VA 22902</p>
+				<strong>San Francisco</strong>
+				<p>972 Mission Street <br>5th Floor <br>CA 94103 </p>
+			</div>
+			<div class="column three">
+				<h4>Navigation</h4>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Our projects</a></li>
+					<li><a href="#">Our services</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Contact us</a></li>
+					<li><a href="#">Careers</a></li>
+				</ul>
+			</div>
+			<div class="column three">
+				<h4>Social</h4>
+				<ul>					
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">ribbble</a></li>
+				</ul>
+			</div>
+			<div class="column three">
+				<h4>Shoot us an email</h4>
+				<ul>
+					<li><a href="mailto:info@coshx.com">info@coshx.com</a></li>				
+				</ul>
+				<h4>Need a quote?</h4>
+				<ul>
+					<li><a href="#">Project Planner</a></li>
+				</ul>
+				<h1 id="logo-dark"></h1>
+			</div>
+		</div>
+	</footer>
+</body>
 </html>
