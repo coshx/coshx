@@ -105,6 +105,7 @@ section p a{
 
 .btn:hover{
 	color: #FFFFFF;	
+
 }
 
 .btn.center{
@@ -122,12 +123,27 @@ section p a{
 	background-color: #fbaf3f;
 }
 
+.btn.orange:hover{
+	color: #fff;
+	background-color: #545454;
+}
+
 .btn.dark-blue{
 	background-color: #3b5997;
 }
 
+.btn.dark-blue:hover{
+	color: #fff;
+	background-color: #545454;
+}
+
 .btn.blue{
 	background-color: #00abed;
+}
+
+.btn.blue:hover{
+	color: #fff;
+	background-color: #545454;
 }
 
 .arrow-down{
