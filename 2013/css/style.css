@@ -188,6 +188,10 @@ nav ul li a{
 
 
 nav ul li a.selected, nav ul li a:hover{
+	webkit-transition: all 275ms;
+  	-moz-transition: all 275ms;
+  	-o-transition: all 275ms;
+  	transition: all 275ms;
 	color: #fcb040;		
 }
 
