@@ -7,10 +7,11 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/foundation.css">
 	<link rel="stylesheet" href="css/style.css">	
-	<script src="js/jquery.js"></script>
+	<script src="js/jquery.js"></script>	
+	<script src="js/modernizr.foundation.js"></script>	
+	<script src="js/jquery.foundation.reveal.js"></script>
 	<script src="js/jquery.localscroll.js"></script>
-	<script src="js/jquery.scrollTo.js"></script>
-	<script src="js/jquery.foundation.magellan.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>	
 	<script src="js/custom.js"></script>
 </head>
 <body>
@@ -19,9 +20,9 @@
 				<h1 id="logo"><a href="index.htm#home"></a></h1>
 			<nav>
 				<ul id="main-nav" data-magellan-expedition>
-					<li data-magellan-arrival="about"><a href="#about">About us</a></li>
-					<li><a href="#projects">Our projects</a></li>
-					<li><a href="#services">Our services</a></li>
+					<li><a href="#about" rel="about">About us</a></li>
+					<li><a href="#projects" rel="projects">Our projects</a></li>
+					<li><a href="#services" rel="services">Our services</a></li>
 					<li><a href="blog.htm">Blog</a></li>
 					<li><a href="#contact">Contact us</a></li>
 					<li><a href="#careers">Careers</a></li>
@@ -52,7 +53,7 @@
 			<div class="the-team twelve column centered">
 				<div class="column six two-team-mates">
 					<div class="team-mate">
-						<a href="#"><img src="img/circle.png" alt="">
+						<a href="#" rel="myModal"><img src="img/circle.png" alt="">
 						<div class="overlay"></div></a>
 					</div>
 					<div class="team-mate">
@@ -63,7 +64,7 @@
 				<div class="clear"></div>
 				<div class="column eight three-team-mates">
 					<div class="team-mate">
-						<a href="#"><img src="img/circle.png" alt="">
+						<a href="#" rel="myModal"><img src="img/circle.png" alt="">
 						<div class="overlay"></div></a>
 					</div>
 					<div class="team-mate">
@@ -115,7 +116,7 @@
 		</section>
 	</article> <!-- #team -->
 
-	<article id="projects">
+	<article id="projects" data-magellan-destination="projects">
 		<section class="row">
 			<h1>Our Projects</h1>
 			<div class="dots"></div>
@@ -167,7 +168,7 @@
 		</section>
 	</article> <!-- #projects -->
 
-	<article id="services">
+	<article id="services" data-magellan-destination="services">
 		<section class="row">
 			<h1>We are all about the web</h1>
 			<div class="dots"></div>
@@ -278,5 +279,13 @@
 			</div>
 		</div>
 	</footer>
+
+<div id="myModal" class="reveal-modal small">
+  <h2>Awesome. I have it.</h2>
+  <p class="lead">Your couch.  It is mine.</p>
+  <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
 </body>
 </html>

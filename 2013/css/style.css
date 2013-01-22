@@ -172,7 +172,7 @@ section p a{
 }
 
 a{
-	color: 
+	color: #fcb040;
 }
 /* Menu classes */
 nav ul{	
@@ -192,6 +192,9 @@ nav ul li a{
 	font-weight: bold;
 }
 
+nav ul a.active{
+	color: #fcb040;		
+}
 
 nav ul li a.selected, nav ul li a:hover{
 	webkit-transition: all 275ms;
@@ -447,10 +450,11 @@ footer ul li a:hover{
 	color: #fcb040;
 }
 .header-gray{
-	height: 149px;
 	background-color: #f7f7f7;
 	border-bottom: 1px solid #e9e9e9;
 	margin-bottom: 60px;
+	padding-top: 149px;
+	overflow: hidden;
 }
 .header-gray h1{
 	line-height: 149px;
