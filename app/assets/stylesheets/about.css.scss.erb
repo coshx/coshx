@@ -91,7 +91,11 @@
   -o-transition: all 0.3s ease-out; /* Opera 10.5–12.00 */
   transition: all 0.3s ease-out; /* Firefox 16+, Opera 12.50+ */
 
-  filter: url(/filters.svg#grayscale); /* Firefox 3.5+ */
+  /* there is a bug in Firefox 18 that prohibits the request for the svg file
+     from any host but the app server.
+     CRUFT, remove when fixed, and put filters.svg in app/assets/images/
+     cf. https://bugzilla.mozilla.org/show_bug.cgi?id=833522  */
+  filter: url(http://<%= ENV['COSHX_HOST'] || "localhost:3000"%>/filters.svg#grayscale); /* Firefox 3.5+ */
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
 
