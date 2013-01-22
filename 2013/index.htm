@@ -3,22 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>coshx labs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/foundation.css">
-	<link rel="stylesheet" href="css/style.css">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">	
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.localscroll.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/jquery.foundation.magellan.js"></script>
+	<script src="js/custom.js"></script>
 </head>
 <body>
 	<header>
 		<div class="row">
-				<h1 id="logo"></h1>
+				<h1 id="logo"><a href="#home"></a></h1>
 			<nav>
-				<ul>
-					<li><a href="#about" class="selected">About us</a></li>
+				<ul id="main-nav" data-magellan-expedition>
+					<li data-magellan-arrival="about"><a href="#about">About us</a></li>
 					<li><a href="#projects">Our projects</a></li>
 					<li><a href="#services">Our services</a></li>
-					<li><a href="#blog">Blog</a></li>
+					<li><a href="blog.htm">Blog</a></li>
 					<li><a href="#contact">Contact us</a></li>
 					<li><a href="#careers">Careers</a></li>
 				</ul>
@@ -40,7 +44,7 @@
 	</article> <!-- #home -->
 
 
-	<article id="team">
+	<article id="about" data-magellan-destination="about">
 		<section class="row">
 			<h1>The team</h1>
 			<div class="dots"></div>
@@ -48,56 +52,57 @@
 			<div class="the-team twelve column centered">
 				<div class="column six two-team-mates">
 					<div class="team-mate">
-						<img src="img/circle.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/circle.png" alt="">
+						<div class="overlay"></div></a>
 					</div>
 					<div class="team-mate">
-						<img src="img/circle.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/circle.png" alt="">
+						<div class="overlay"></div></a>
 					</div>
 				</div>
 				<div class="clear"></div>
 				<div class="column eight three-team-mates">
 					<div class="team-mate">
-						<img src="img/circle.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/circle.png" alt="">
+						<div class="overlay"></div></a>
 					</div>
 					<div class="team-mate">
-						<img src="img/circle.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/circle.png" alt="">
+						<div class="overlay"></div></a>
 					</div>
 					<div class="team-mate">
-						<img src="img/circle.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/circle.png" alt="">
+						<div class="overlay"></div></a>
 					</div>
 				</div>
 				<div class="clear"></div>
 				<div class="column eleven four-team-mates">
 					<div class="team-mate">
-						<img src="img/circle.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/circle.png" alt="">
+						<div class="overlay"></div></a>
 					</div>
 					<div class="team-mate">
-						<img src="img/circle.png" al t="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/circle.png" alt="">
+							<div class="overlay"></div></a>
 					</div>
 					<div class="team-mate">
-						<img src="img/circle.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/circle.png" alt="">
+						<div class="overlay"></div></a>
 					</div>
 					<div class="team-mate">
-						<img src="img/circle.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/circle.png" alt="">
+						<div class="overlay"></div></a>
 					</div>
 				</div>
 				<div class="clear"></div>
-				<div class="column eight three-team-mates"><div class="team-mate">
-						<img src="img/circle.png" alt="">
-						<div class="overlay"></div>
+				<div class="column eight three-team-mates">
+					<div class="team-mate">
+						<a href="#"><img src="img/circle.png" alt="">
+						<div class="overlay"></div></a>
 					</div>     
 					<div class="team-mate">
-						<img src="img/circle.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/circle.png" alt="">
+						<div class="overlay"></div></a>
 					</div>
 					<div class="team-mate">
 						<img src="img/you.png" alt="">
@@ -118,42 +123,42 @@
 			<div class="our-projects row">
 				<div class="project-top-column row">
 					<div class="project">
-						<img src="img/project.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/projects/project1.png" alt="">
+							<div class="overlay"></div></a>
 					</div>
 					<div class="project">
-						<img src="img/project.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/projects/project2.png" alt="">
+							<div class="overlay"></div></a>
 					</div>
 					<div class="project">
-						<img src="img/project.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/projects/project3.png" alt="">
+							<div class="overlay"></div></a>
 					</div>
 					<div class="project">
-						<img src="img/project.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/projects/project4.png" alt="">
+							<div class="overlay"></div></a>
 					</div>
 					<div class="project last">
-						<img src="img/project.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/projects/project5.png" alt="">
+							<div class="overlay"></div></a>
 					</div>
 				</div>
 
 				<div class="project-bottom-column">
 					<div class="project">
-						<img src="img/project.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/projects/project6.png" alt="">
+							<div class="overlay"></div></a>
 					</div>
 					<div class="project">
-						<img src="img/project.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/projects/project7.png" alt="">
+							<div class="overlay"></div></a>
 					</div>
 					<div class="project">
-						<img src="img/project.png" alt="">
-						<div class="overlay"></div>
+						<a href="#"><img src="img/projects/project8.png" alt="">
+							<div class="overlay"></div></a>
 					</div>
 					<div class="project">
-						<img src="img/project.png" alt="">
+						<img src="img/project-contact.png" alt="">
 						<div class="overlay"></div>
 					</div>
 				</div>
@@ -162,7 +167,7 @@
 		</section>
 	</article> <!-- #projects -->
 
-	<article id="development">
+	<article id="services">
 		<section class="row">
 			<h1>We are all about the web</h1>
 			<div class="dots"></div>
@@ -233,7 +238,7 @@
 		<div class="row">
 			<div class="column three">
 				<h4>Locations</h4>
-				<strong>Boluder</strong>
+				<strong>Boulder</strong>
 				<p>3080 Valmont Rd<br>Suite 280<br>CO 80301</p>
 				<strong>Charlottesville</strong>
 				<p>1110 Market St <br>East Suite N7 <br>VA 22902</p>
@@ -257,7 +262,7 @@
 				<ul>					
 					<li><a href="#">Twitter</a></li>
 					<li><a href="#">Facebook</a></li>
-					<li><a href="#">ribbble</a></li>
+					<li><a href="#">Dribbble</a></li>
 				</ul>
 			</div>
 			<div class="column three">
@@ -269,7 +274,7 @@
 				<ul>
 					<li><a href="#">Project Planner</a></li>
 				</ul>
-				<h1 id="logo-dark"></h1>
+				<h1 id="logo-light"><a href="#home"></a></h1>
 			</div>
 		</div>
 	</footer>

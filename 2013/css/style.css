@@ -25,8 +25,10 @@ h1{
 	height: 8px;
 	background: url(../img/ellipsis.png) no-repeat;
 }
-
 h1#logo{
+	margin-top: 0;
+}
+h1#logo a{
 	background: url(../img/logo.png) no-repeat;
 	width: 202px;
 	height: 55px;
@@ -34,7 +36,7 @@ h1#logo{
 	margin-top: 50px;
 }
 
-h1#logo-dark{
+h1#logo-light a{
 	background: url(../img/logo-light.png) no-repeat;
 	width: 202px;
 	height: 55px;
@@ -70,7 +72,7 @@ section p a{
 	position: relative;
 }
 
-#team, #projects, #quote{
+#about, #projects, #quote{
 	background: #f6f6f6;
 }
 
@@ -215,7 +217,7 @@ nav ul li a.selected, nav ul li a:hover{
 
 .the-team{
 	position: relative;
-	margin-top: 70px !important;	
+	margin-top: 70px !important;
 }
 
 .the-team .column{
@@ -243,6 +245,26 @@ nav ul li a.selected, nav ul li a:hover{
 	padding-right: 100px;
 	width: 242px;	
 	margin-top: -20px;
+	position: relative;
+}
+.team-mate a{
+	height: 142px;
+	width: 142px;	
+	float: left;
+}
+
+.team-mate .overlay{
+	height: 142px;
+	width: 142px;
+	-webkit-webborder-radius: 71px;
+	-moz-webborder-radius: 71px;
+	-ms-webborder-radius: 71px;
+	-o-webborder-radius: 71px;	
+	border-radius: 71px;
+	background: #fcb040;
+	position: absolute;
+	top: 0;
+	display: none;
 }
 
 .drop-cap{
@@ -273,6 +295,18 @@ nav ul li a.selected, nav ul li a:hover{
 	width: 78.94%;
 	margin-left:10.52%;	
 	margin-right:10.52%;
+}
+
+.project{
+	position: relative;
+}
+.project a .overlay{
+	height:226px;
+	width: 196px;		
+	position: absolute;
+	top: 0;	
+	display: none;
+	background: url(../img/project-overlay.png) no-repeat;
 }
 
 .project.last{
@@ -351,6 +385,10 @@ a.blog-link{
 }
 
 a.blog-link:hover{
+	webkit-transition: all 275ms;
+  	-moz-transition: all 275ms;
+  	-o-transition: all 275ms;
+  	transition: all 275ms;
 	color: #fcb040;	
 }
 
@@ -379,5 +417,9 @@ footer ul{
 }
 
 footer ul li a:hover{
+	webkit-transition: all 275ms;
+  	-moz-transition: all 275ms;
+  	-o-transition: all 275ms;
+  	transition: all 275ms;
 	color: #fcb040;
 }
