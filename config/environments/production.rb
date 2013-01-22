@@ -35,7 +35,9 @@ Coshx::Application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  if ENV['CLOUDFRONT_HOST']
+  if ENV['ASSET_SYNC_ENABLED'] == 'false'
+     # noop
+  elsif ENV['CLOUDFRONT_HOST']
     config.action_controller.asset_host = ENV['CLOUDFRONT_HOST']
   elsif ENV['FOG_DIRECTORY']
     config.action_controller.asset_host = "http://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
