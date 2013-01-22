@@ -35,7 +35,7 @@ h1#logo{
 }
 
 h1#logo-dark{
-	background: url(../img/logo-dark.png) no-repeat;
+	background: url(../img/logo-light.png) no-repeat;
 	width: 202px;
 	height: 55px;
 	float: left;	
