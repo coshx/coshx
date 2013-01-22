@@ -171,9 +171,10 @@ section p a{
 	margin-top: 90px;
 }
 
-a{
+/*a{
 	color: #fcb040;
-}
+}*/
+
 /* Menu classes */
 nav ul{	
 	float:right;
@@ -415,6 +416,13 @@ ul.widget a{
 	color: #fcb040;
 }
 
+ul.widget a:hover{
+	webkit-transition: all 275ms;
+  	-moz-transition: all 275ms;
+  	-o-transition: all 275ms;
+  	transition: all 275ms;
+	color: #545454;
+}
 .date{
 	color: #818181;
 	font-size: 13px;
@@ -475,9 +483,21 @@ footer ul li a:hover{
 	overflow: hidden;
 }
 
-.blog h2{
+.blog .blog-title a{
 	font-size: 30px;
 	line-height: 36px;
+	color:#545454;
+	font-weight:600;
+
+}
+
+.blog .blog-title a:hover{
+	webkit-transition: all 275ms;
+  	-moz-transition: all 275ms;
+  	-o-transition: all 275ms;
+  	transition: all 275ms;
+	color: #fcb040;
+
 }
 
 .blog h3{
@@ -503,10 +523,18 @@ footer ul li a:hover{
 }
 
 .blog .read-more{
+	webkit-transition: all 275ms;
+  	-moz-transition: all 275ms;
+  	-o-transition: all 275ms;
+  	transition: all 275ms;
 	font-size: 18px;
 	font-weight: bold;
 	display: inline-block;
 	color: #545454;
+}
+
+.blog .read-more:hover{
+	color:#fcb040;
 }
 
 .blog img{
