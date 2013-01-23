@@ -3,7 +3,7 @@ jQuery(function(){
 	$('nav #main-nav').localScroll({
 		offset: {top:-140},
 		duration: 900,
-		onBefore: function(e, obj){		
+		onBefore: function(e, obj){
 			var id = $(obj).attr('ID');
 			$('nav ul li a').removeClass('active');
 			$('a[rel='+ id + ']').addClass('active');
@@ -25,6 +25,13 @@ jQuery(function(){
 	});
 
 	$('.team-mate a').on({
+		click: function (e) {
+			e.preventDefault();
+			var id = $(this).attr('rel');
+			$('#' + id).reveal();
+		}
+	});
+	$('.contact-link').on({
 		click: function (e) {
 			e.preventDefault();
 			var id = $(this).attr('rel');

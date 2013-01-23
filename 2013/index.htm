@@ -24,7 +24,7 @@
 					<li><a href="#projects" rel="projects">Our projects</a></li>
 					<li><a href="#services" rel="services">Our services</a></li>
 					<li><a href="blog.htm">Blog</a></li>
-					<li><a href="#contact">Contact us</a></li>
+					<li><a href="#contact" rel="modalContact" class="contact-link">Contact us</a></li>
 					<li><a href="#careers">Careers</a></li>
 				</ul>
 			</nav>
@@ -53,26 +53,26 @@
 			<div class="the-team twelve column centered">
 				<div class="column six two-team-mates">
 					<div class="team-mate">
-						<a href="#" rel="myModal"><img src="img/circle.png" alt="">
+						<a href="#" rel="modalDaveKapp"><img src="img/circle.png" alt="">
 						<div class="overlay"></div></a>
 					</div>
 					<div class="team-mate">
-						<a href="#"><img src="img/circle.png" alt="">
+						<a href="#" rel="modalGabeKopley"><img src="img/circle.png" alt="">
 						<div class="overlay"></div></a>
 					</div>
 				</div>
 				<div class="clear"></div>
 				<div class="column eight three-team-mates">
 					<div class="team-mate">
-						<a href="#" rel="myModal"><img src="img/circle.png" alt="">
+						<a href="#" rel="modalCalvinDelamere"><img src="img/circle.png" alt="">
 						<div class="overlay"></div></a>
 					</div>
 					<div class="team-mate">
-						<a href="#"><img src="img/circle.png" alt="">
+						<a href="#" rel="modalDavidKovsky"><img src="img/circle.png" alt="">
 						<div class="overlay"></div></a>
 					</div>
 					<div class="team-mate">
-						<a href="#"><img src="img/circle.png" alt="">
+						<a href="#" rel="modalBenTaitelbaum"><img src="img/circle.png" alt="">
 						<div class="overlay"></div></a>
 					</div>
 				</div>
@@ -280,12 +280,125 @@
 		</div>
 	</footer>
 
-<div id="myModal" class="reveal-modal small">
-  <h2>Awesome. I have it.</h2>
-  <p class="lead">Your couch.  It is mine.</p>
-  <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
-
+<div class="row"><div id="modalDaveKapp" class="reveal-modal medium">
+		<div class="row">
+			<div class="info">
+				<div class="avatar">
+					<img src="img/employees/davekapp-avatar.png" alt="">
+				</div>
+				<div class="social-media">
+					<a href="#" class="twitter"></a>
+					<a href="#" class="google"></a>
+				</div>
+			</div>
+			<div class="bio">
+				<h2>Dave Kapp</h2>
+				<h3>Software Engineer</h3>
+				<p><span class="drop-cap">I</span>n a former life, Dave had a degree in Asian Studies and taught English in Japan. He was later reborn as a software developer and did C++ and Java for a few years before finding the awesomeness of Ruby and other dynamic languages. He lives Littleton, CO with his fiance, Madeline, and two wonderful kitties. His spare time is eaten up by studying Japanese, videogames, manga, anime, and learning about new programming languages and techniques.</p>
+			</div>
+			<img src="img/employees/davekapp-graph.png" alt="" class="graph">
+		</div>
+	  <a class="close-reveal-modal"></a>
+	</div> <!-- Modal: Dave -->
+	
+	<div id="modalGabeKopley" class="reveal-modal team">
+		<div class="row">
+			<div class="info">
+				<div class="avatar">
+					<img src="img/employees/gabekopley-avatar.png" alt="">
+				</div>
+				<div class="social-media">
+					<a href="#" class="twitter"></a>
+					<a href="#" class="google"></a>
+				</div>
+			</div>
+			<div class="bio">
+				<h2>Gabe Kopely</h2>
+				<h3>Developer</h3>
+				<p><span class="drop-cap">P</span>owered by Groove Salad and other nutritious snacks, Gabe loves solving puzzles and building great web applications. Hackathons are his favorite, and he's a big fan of test-driven development, but prefers not to do both at the same time. Gabe's non-technical interests include outdoor recreation, live music, and alternative energy and building techniques.</p>
+			</div>
+			<img src="img/employees/gabekopley-graph.png" alt="" class="graph">
+		</div>
+	  <a class="close-reveal-modal"></a>
+	</div> <!-- Modal: Gabe -->
+	
+	<div id="modalCalvinDelamere" class="reveal-modal team">
+		<div class="row">
+			<div class="info">
+				<div class="avatar">
+					<img src="img/employees/calvindelamere-avatar.png" alt="">
+				</div>
+				<div class="social-media">
+					<a href="#" class="twitter"></a>
+					<a href="#" class="google"></a>
+				</div>
+			</div>
+			<div class="bio">
+				<h2>Calvin Delamere</h2>
+				<h3>Software Engineer</h3>
+				<p><span class="drop-cap">C</span>alvin started programming as a freshman in high school in 2002 and build and deployed his first website in 2003. He has programmed in more languages than he has fingers but in the last few years he has focused his computer science and applied math background on web app development. In his free time, Calvin enjoys spending time in the mountains with friends. Calvin also enjoys crushing the competition at foosball on the company table.</p>
+			</div>
+			<img src="img/employees/calvindelamere-graph.png" alt="" class="graph">
+		</div>
+	  <a class="close-reveal-modal"></a>
+	</div> <!-- Modal: Calvin -->
+	
+	<div id="modalDavidKovsky" class="reveal-modal team">
+		<div class="row">
+			<div class="info">
+				<div class="avatar">
+					<img src="img/employees/davidkovsky-avatar.png" alt="">
+				</div>
+				<div class="social-media">
+					<a href="#" class="twitter"></a>
+					<a href="#" class="google"></a>
+				</div>
+			</div>
+			<div class="bio">
+				<h2>David Kovsky</h2>
+				<h3>Lead Engineer</h3>
+				<p><span class="drop-cap">D</span>avid loves watching online startups rapidly transform life as we know it for the better. An old C++ programmer, he shifted to Ruby several years ago so he could join the party. He loves the flow of writing clean code using TDD, pairing, and advocating agility internally and for established clients. Outside of work David enjoys climbing, cycling, kayaking, and spending time with his wife.</p>
+			</div>
+			<img src="img/employees/davidkovsky-graph.png" alt="" class="graph">
+		</div>
+	  <a class="close-reveal-modal"></a>
+	</div> <!-- Modal: David -->
+	
+	<div id="modalBenTaitelbaum" class="reveal-modal team">
+		<div class="row">
+			<div class="info">
+				<div class="avatar">
+					<img src="img/employees/bentaitelbaum-avatar.png" alt="">
+				</div>
+				<div class="social-media">
+					<a href="#" class="twitter"></a>
+					<a href="#" class="google"></a>
+				</div>
+			</div>
+			<div class="bio">
+				<h2>Ben Taitelbaum</h2>
+				<h3>code monkey, agile evangelist, puzzle solver</h3>
+				<p><span class="drop-cap">A</span>lmost two decades ago, twelve-year-old Ben reproduced the classic computer game Nibbles, providing hours of riveting entertainment. Since then, he has never strayed from manipulating technology for the benefit of its users. Having spent the last three years as the founder of a start-up company and then forming Coshx Labs, Ben is always on the lookout for meaningful, game-changing ideas! When he is not busy attempting to change the world, he may be found scaling the ascents of the Blue Ridge Mountains or serenading to the tunes of musicians from Josh Ritter to Johannes Brahms on his trusty violin.</p>
+			</div>
+			<img src="img/employees/bentaitelbaum-graph.png" alt="" class="graph">
+		</div>
+	  <a class="close-reveal-modal"></a>
+	</div> <!-- Modal: Ben -->
+	
+	<div id="modalContact" class="reveal-modal large">
+		<div class="row">
+			<div class="column four"><img src="img/contact-pen.png" alt="">
+				<h2>Want to work with us?</h2>
+					<h2 class="dots"></h2>
+					<p>Considering us for your next project, then simply use our project planner below. The more details you fill in, the more accurate the estimate will be...</p>
+			</div>
+			<div class="column four"><img src="img/contact-stamp.png" alt="">
+					<h2>Want to get in touch with us?</h2>
+					<h2 class="dots"></h2>
+					<p>We're just a quick email away!</p>
+			</div>
+		</div>
+	  <a class="close-reveal-modal"></a>
+	</div> <!-- Modal: Ben --></div>
 </body>
 </html>
