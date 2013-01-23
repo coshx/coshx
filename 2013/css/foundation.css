@@ -11,9 +11,9 @@ a img { border: none; }
 
 a { color: #9f9f9f; text-decoration: none; line-height: inherit; }
 
-a:hover { color: #929292; }
+a:hover { color: #545454; }
 
-a:focus { color: #929292; }
+a:focus { color: #545454; }
 
 p a, p a:visited { line-height: inherit; }
 

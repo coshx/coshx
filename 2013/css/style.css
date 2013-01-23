@@ -171,10 +171,6 @@ section p a{
 	margin-top: 90px;
 }
 
-/*a{
-	color: #fcb040;
-}*/
-
 /* Menu classes */
 nav ul{	
 	float:right;
@@ -243,7 +239,6 @@ nav ul li a.selected, nav ul li a:hover{
 .the-team .four-team-mates{
 	margin-left: 11.75%;
 }
-
 
 .team-mate{	
 	margin: 0 auto;
@@ -321,7 +316,7 @@ nav ul li a.selected, nav ul li a:hover{
 	margin-right: 0;
 }
 
-.ring{
+/*.ring{
 	width: 113px;
 	height: 113px;
 	background: url(../img/ring.png) center center no-repeat;	
@@ -329,6 +324,37 @@ nav ul li a.selected, nav ul li a:hover{
 	line-height: 113px;
 	margin-right: 63px;
 	float: left;
+}*/
+
+.ring{
+	width: 113px;
+	height: 113px;	
+	text-align: center;
+	line-height: 113px;
+	margin-right: 63px;
+	float: left;
+    border: 4px double #c0c0c0;
+    overflow: hidden;;
+    background: #fff;
+    border-radius: 113px;
+    transition: all 400ms linear;
+    -webkit-transition: all 400ms linear;
+	-moz-transition: all 400ms linear;
+	-ms-transition: all 400ms linear;
+	-o-transition: all 400ms linear;	
+}
+
+.ring:hover{
+	background: #fcb040;
+    border: 4px double #fff;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+.ring:hover .ring-sub{
+    opacity: 0.8;
 }
 
 .rings{
@@ -342,6 +368,7 @@ nav ul li a.selected, nav ul li a:hover{
 .ring img{
 	vertical-align: middle;
 }
+
 .well{	
 	height: 68px;
 	background-color: #f5f5f5;
