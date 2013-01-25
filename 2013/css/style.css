@@ -254,15 +254,22 @@ nav ul li a.selected, nav ul li a:hover{
 	height: 142px;
 	width: 142px;	
 	float: left;
+	-moz-border-radius: 71px;
+	-webkit-border-radius: 71px;
+  	-ms-border-radius: 71px;
+  	-o-border-radius: 71px;	
+	border-radius: 71px;
+	background: #a4a4a4;
 }
 
 .team-mate .overlay{
 	height: 142px;
 	width: 142px;
-	-webkit-webborder-radius: 71px;
-	-moz-webborder-radius: 71px;
-	-ms-webborder-radius: 71px;
-	-o-webborder-radius: 71px;	
+	opacity: 0.8;
+	-moz-border-radius: 71px;
+	-webkit-border-radius: 71px;
+  	-ms-border-radius: 71px;
+  	-o-border-radius: 71px;	
 	border-radius: 71px;
 	background: #fcb040;
 	position: absolute;
@@ -547,6 +554,7 @@ footer ul li a:hover{
 .blog ul{
 	color: #919191;
 	list-style-position: inside;
+	font-style:italic;
 }
 
 .blog a{
