@@ -38,4 +38,43 @@ jQuery(function(){
 			$('#' + id).reveal();
 		}
 	});
+
+	$('.window').on({
+		mouseenter: function () {
+			$('.expand', this).animate({
+				'bottom': 0
+			}, 200);
+		},
+		mouseleave: function () {
+		$('.expand', this).animate({
+				'bottom': -55
+			}, 200);
+		}
+	});
+	
+	$('.expand').on({
+		click: function (e) {
+			e.preventDefault();
+			imgHeight = $('#case-study-image').height();
+			imgHeight += 290; // add in the padding at the top of the div
+			imgHolder = $(this).parent();
+			if($(imgHolder).hasClass('expanded')){
+				$(window).scrollTo(0, {duration: 1500});
+				$(imgHolder).animate({
+					'height': 655
+				}, 1500, function(){
+					$('.expand', this).html('Expand to full view');
+					$(this).removeClass('expanded');
+				});
+			}
+			else{
+				$(imgHolder).animate({
+					'height': imgHeight
+				}, 1500, function(){
+					$('.expand', this).html('close');
+					$(this).addClass('expanded');
+				});
+			}
+		}
+	});
 });

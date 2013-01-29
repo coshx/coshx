@@ -36,7 +36,7 @@ h1#logo a{
 	width: 202px;
 	height: 55px;
 	float: left;	
-	margin-top: 50px;
+	margin-top: 45px;
 }
 
 h1#logo-light a{
@@ -174,7 +174,7 @@ section p a{
 /* Menu classes */
 nav ul{	
 	float:right;
-	margin-top: 53px;
+	margin-top: 48px;
 }
 
 nav ul li{
@@ -201,22 +201,50 @@ nav ul li a.selected, nav ul li a:hover{
 	color: #fcb040;		
 }
 
-.clouds, .trucks, .rocket{
+.clouds, .trucks, .rocket, .launch-pad, .cloud1, .cloud2, .cloud3, .moon{
 	position: absolute;
 }
 
 .clouds{
-	top: 24px;
+	top: 5px;
 	right: 0;
 }
+
+.cloud1{
+	top: 5px;
+	right: 10px;	
+}
+
+.cloud2{
+	top: 34px;
+	right: 96px;	
+}
+
+.cloud3{
+	top: 62px;
+	right: 0;	
+}
+
+.moon{
+	top: 16px;
+	right: 59px;	
+	z-index: -1;
+}
+
 
 .trucks{
 	bottom: 0;
 	left: 0;
 }
-.rocket{
+
+.launch-pad{
 	bottom: -10px;
 	right: 0;
+}
+
+.rocket{
+	bottom: 12px;
+	right: 20px;
 }
 
 .the-team{
@@ -254,22 +282,15 @@ nav ul li a.selected, nav ul li a:hover{
 	height: 142px;
 	width: 142px;	
 	float: left;
-	-moz-border-radius: 71px;
-	-webkit-border-radius: 71px;
-  	-ms-border-radius: 71px;
-  	-o-border-radius: 71px;	
-	border-radius: 71px;
-	background: #a4a4a4;
 }
 
 .team-mate .overlay{
 	height: 142px;
 	width: 142px;
-	opacity: 0.8;
-	-moz-border-radius: 71px;
-	-webkit-border-radius: 71px;
-  	-ms-border-radius: 71px;
-  	-o-border-radius: 71px;	
+	-webkit-webborder-radius: 71px;
+	-moz-webborder-radius: 71px;
+	-ms-webborder-radius: 71px;
+	-o-webborder-radius: 71px;	
 	border-radius: 71px;
 	background: #fcb040;
 	position: absolute;
@@ -706,4 +727,326 @@ em{
 	position: absolute;
 	top: 0!important;
 	right: 0!important;
+}
+
+.window-wrapper{
+	border-bottom: 1px solid #e9e9e9;
+
+}
+
+.window{
+	padding-top: 290px;
+	text-align: center;	
+	position: relative;
+	overflow: hidden;
+	height: 655px;
+}
+
+.navigation{	
+	margin-top: 100px;
+	position: absolute;
+	top: 60px;
+	right: 0px;
+}
+
+.prev-case{
+	float: left;	
+	background: url(../img/previous-case.png) no-repeat;
+	line-height: 32px;
+	color: #c0c0c0;	
+	width: 32px;
+	height: 32px;	
+	margin-right: 20px;
+}
+
+.prev-case:hover, .next-case:hover{
+	background-position: 0 -32px;	
+}
+
+.next-case{
+	float: right;
+	padding-left: 20px;
+	background: url(../img/next-case.png) no-repeat;
+	line-height: 32px;
+	color: #c0c0c0;	
+	width: 32px;
+	height: 32px;
+}
+
+
+.window img{
+	vertical-align: bottom;
+}
+
+.window a.expand{
+	width: 900px;
+	height: 55px;
+	background-color: #fbaf3f;
+	text-align: center;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -450px;
+	line-height: 55px;	
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	bottom: -55px;
+}
+
+.case-study-wrapper{
+	border-bottom: 1px solid #e9e9e9;
+}
+
+.case-study{
+	padding-top: 45px;
+	padding-bottom:45px;
+}
+.case-study h2{
+	text-align: center;
+	color: #535353;
+}
+
+.case-study p{
+	text-align: center;
+	color: #919191;
+	font-size: 14px;
+}
+
+.related-work{
+	padding-top: 120px;
+	padding-bottom: 60px;
+	overflow: hidden;
+	position: relative;
+}
+
+.related-work:before{
+	top: 0%;
+	position: absolute;
+	width: 244px;
+	height: 84px;
+	background: url(../img/related-projects.png) no-repeat;
+	left: 50%;
+	margin-left: -122px;
+	content: 'Related \A Work';
+	text-align: center;
+	color: #9f9f9f;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	padding-top: 10px;	   
+    white-space: pre-wrap;
+}
+
+.related-work ul li{
+	list-style-type: none;
+	float: left;
+	margin-right: 30px;
+}
+
+.related-work ul li:last-child{
+	margin-right: 0;
+}
+
+.trucks{
+	-webkit-animation: movetrucks 4s ease-out;	
+	-moz-animation: movetrucks 4s ease-out;
+	-o-animation: movetrucks 4s ease-out;
+	animation: movetrucks 4s ease-out;
+
+
+    -webkit-animation-iteration-count: 1;
+	-moz-animation-iteration-count: 1;
+	-o-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+
+@-webkit-keyframes movetrucks {
+	0% {left: 0;}
+	100% {left: 800px;}
+}
+
+@-moz-keyframes movetrucks {
+	0% {left: 0;}
+	100% {left: 800px;}
+}
+
+@-o-keyframes movetrucks {
+	0% {left: 0;}
+	100% {left: 800px;}			
+}
+
+@keyframes movetrucks {
+	0% {left: 0;}
+	100% {left: 800px;}
+}
+
+
+.rocket{
+	-webkit-animation: liftoff 5s linear;	
+	-moz-animation: liftoff 5s linear;
+	-o-animation: liftoff 5s linear;
+	animation: liftoff 5s linear;
+
+
+    -webkit-animation-iteration-count: 1;
+	-moz-animation-iteration-count: 1;
+	-o-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+
+	-webkit-animation-delay: 4s;
+	-moz-animation-delay: 4s;
+	-o-animation-delay: 4s;
+	animation-delay: 4s;
+}
+
+@-webkit-keyframes liftoff {
+	0% {bottom: 12px;}
+	100% {bottom: 700px; transform:rotateX(30deg);}
+}
+
+@-moz-keyframes liftoff {
+	0% {bottom: 12px;}
+	100% {bottom: 700px;transform:rotateX(30deg);}
+}
+
+@-o-keyframes liftoff {
+	0% {bottom: 12px;}
+	100% {bottom: 700px;transform:rotateX(30deg);}			
+}
+
+@keyframes liftoff {
+	0% {bottom: 12px;}
+	100% {bottom: 700px;transform:rotateX(30deg);}
+}
+
+.cloud1{
+	-webkit-animation: cloud-animation1 20s linear;	
+	-moz-animation: cloud-animation1 20s linear;
+	-o-animation: cloud-animation1 20s linear;
+	animation: cloud-animation1 20s linear;
+	
+	-webkit-animation-direction: alternate;
+	-moz-animation-direction: alternate;
+	-o-animation-direction: alternate;
+	animation-direction: alternate;	
+
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+@-moz-keyframes cloud-animation1 {
+	0% {right: 10px;}
+	100% {right: 40px;}
+}
+
+@-webkit-keyframes cloud-animation1 {
+	0% {right: 10px;}
+	100% {right: 40px;}
+}
+
+@-o-keyframes cloud-animation1 {
+	0% {right: 10px;}
+	100% {right: 40px;}
+}
+
+
+@eyframes cloud-animation1 {
+	0% {right: 10px;}
+	100% {right: 40px;}
+}
+
+
+.cloud2{
+	-webkit-animation: cloud-animation2 25s linear;	
+	-moz-animation: cloud-animation2 25s linear;
+	-o-animation: cloud-animation2 25s linear;
+	animation: cloud-animation2 25s linear;
+	
+	-webkit-animation-direction: alternate;
+	-moz-animation-direction: alternate;
+	-o-animation-direction: alternate;
+	animation-direction: alternate;	
+
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+@-moz-keyframes cloud-animation2 {
+	0% {right: 96px;}
+	100% {right: 0px;}
+}
+
+@-webkit-keyframes cloud-animation2 {
+	0% {right: 96px;}
+	100% {right: 0px;}
+}
+
+@-o-keyframes cloud-animation2 {
+	0% {right: 96px;}
+	100% {right: 0px;}
+}
+
+
+@eyframes cloud-animation2 {
+	0% {right: 96px;}
+	100% {right: 0px;}
+}
+
+
+.cloud3{
+	-webkit-animation: cloud-animation3 25s linear;	
+	-moz-animation: cloud-animation3 25s linear;
+	-o-animation: cloud-animation3 25s linear;
+	animation: cloud-animation3 25s linear;
+	
+	-webkit-animation-direction: alternate;
+	-moz-animation-direction: alternate;
+	-o-animation-direction: alternate;
+	animation-direction: alternate;	
+
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+@-moz-keyframes cloud-animation3 {
+	0% {right: 0px;}
+	100% {right: 30px;}
+}
+
+@-webkit-keyframes cloud-animation3 {
+	0% {right: 0px;}
+	100% {right: 30px;}
+}
+
+@-o-keyframes cloud-animation3 {
+	0% {right: 0px;}
+	100% {right: 30px;}
+}
+
+
+@eyframes cloud-animation3 {
+	0% {right: 0px;}
+	100% {right: 30px;}
 }
