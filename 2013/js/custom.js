@@ -1,4 +1,15 @@
 
+function shuffle(v){
+    for(var j, x, i = v.length; i; j = parseInt(Math.random() * i), x = v[--i], v[i] = v[j], v[j] = x);
+    return v;
+}
+
+function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+        $('<img/>')[0].src = this;
+    });
+}
+
 jQuery(function(){
 	$('nav #main-nav').localScroll({
 		offset: {top:-140},
@@ -15,22 +26,23 @@ jQuery(function(){
 			$('nav ul li a').removeClass('active');
 		}});
 	$('section').localScroll({offset: {top:-140}, duration: 900});
-	$('.team-mate a, .project a').on({
+
+	$('#content-wrapper').on({
 		mouseenter: function () {
 			$('.overlay', this).fadeIn();
 		},
 		mouseleave: function () {
 			$('.overlay', this).fadeOut();
 		}
-	});
+	}, '.team-mate a, .project a');
 
-	$('.team-mate a').on({
-		click: function (e) {
-			e.preventDefault();
-			var id = $(this).attr('rel');
-			$('#' + id).reveal();
-		}
-	});
+	// $('.team-mate a').on({
+	// 	click: function (e) {
+	// 		e.preventDefault();
+	// 		var id = $(this).attr('rel');
+	// 		$('#' + id).reveal();
+	// 	}
+	// });
 	$('.contact-link').on({
 		click: function (e) {
 			e.preventDefault();
@@ -39,8 +51,8 @@ jQuery(function(){
 		}
 	});
 
-	$('.window').on({
-		mouseenter: function () {
+	$("#content-wrapper").on({
+		mouseenter: function () {			
 			$('.expand', this).animate({
 				'bottom': 0
 			}, 200);
@@ -50,9 +62,9 @@ jQuery(function(){
 				'bottom': -55
 			}, 200);
 		}
-	});
+	}, ".window");
 	
-	$('.expand').on({
+	$('#content-wrapper').on({
 		click: function (e) {
 			e.preventDefault();
 			imgHeight = $('#case-study-image').height();
@@ -76,5 +88,100 @@ jQuery(function(){
 				});
 			}
 		}
+	}, '.expand');
+
+	var shownAboutSection = false;
+	var shownTeamSection = false;
+	function displayImages() {
+		var teamMates = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+		teamMates = shuffle(teamMates);
+		var t = $('.team-mate');
+		i = 0;
+		t.eq(teamMates[i++]).fadeIn(200, displayImages);
+	}
+
+	$('#content-wrapper').on({
+		inview: function(event, visible) {
+					if (visible && !shownAboutSection) 
+					{
+						var teamMates = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+						teamMates = shuffle(teamMates);
+						var t = $('.team-mate');
+						i = 0;
+						shownAboutSection = true;
+						(function displayImages() {
+							$('.team-mate:eq(' + teamMates[i++] + ')')
+							.css('visibility','visible')
+							.hide()
+							.fadeIn(100, displayImages);
+						})();
+					}
+				}
+			}
+		, '#team-grid');
+
+	$('#content-wrapper').on({
+		inview: function(event, visible) {
+			if (visible && !shownTeamSection) 
+			{
+				var projects = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+				projects = shuffle(projects);
+				x = 0;
+				shownTeamSection = true;
+				(function displayImages() {
+					$('.project:eq(' + projects[x++] + ')')
+					.css('visibility','visible')
+					.hide()
+					.fadeIn(100, displayImages);
+				})();
+			}
+		} 
+	}, '#projects-grid');
+
+	$('.team-mate a').on('click', function(e){
+		//e.preventDefault();
 	});
+
+    //$('body').on('animationend MSAnimationend oanimationend webkitAnimationEnd', '#content-wrapper.fadeOutUp', phase2animation);
+
+	$(window).on("hashchange", function(e){
+		if ( window.location.hash == "#home" && (!url || url == "#")) return false;
+		url = window.location.hash || "#home";
+		url=url.replace('#','');		
+		$('#content-wrapper').removeClass('fadeOutUp').removeClass('fadeInDown');
+		$.ajax({
+			  url: 'loadpage.php',
+			  type: 'POST',
+			  dataType: 'html',
+			  data: {url: url},
+			  success: function(data, textStatus, xhr) {	
+			  	if(url === 'home')
+			  	{
+			  		shownTeamSection = false;
+			  		shownAboutSection = false;			  		
+			  	}
+				setTimeout(function() {
+				  $.scrollTo(0);				  
+				  $('#content-wrapper').removeClass('fadeOutUp');
+				  $('#content-wrapper').html(data);
+				  $('#content-wrapper').addClass('fadeInDown');
+				}, 1200);
+			   	
+			   	$('#content-wrapper').addClass('fadeOutUp');
+			   	
+			  }
+			});	
+	});
+	
+	preload([
+	    'img/employees/davekapp-avatar.png',
+	    'img/employees/bentaitelbaum-avatar.png',
+	    'img/employees/calvindelamere-avatar.png',	    
+	    'img/employees/davidkovsky-avatar.png',	    
+	    'img/employees/gabekopley-avatar.png',	    
+	    'img/employees/test-graph.png',	    
+	    'img/folio-test.png'
+	]);
+
+	window.location.hash == "" || window.location.hash == "#" || window.location.hash == "#home" || $(window).trigger("hashchange");
 });
