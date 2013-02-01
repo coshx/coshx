@@ -36,13 +36,6 @@ jQuery(function(){
 		}
 	}, '.team-mate a, .project a');
 
-	// $('.team-mate a').on({
-	// 	click: function (e) {
-	// 		e.preventDefault();
-	// 		var id = $(this).attr('rel');
-	// 		$('#' + id).reveal();
-	// 	}
-	// });
 	$('.contact-link').on({
 		click: function (e) {
 			e.preventDefault();
@@ -162,7 +155,7 @@ jQuery(function(){
 			  	}
 				setTimeout(function() {
 				  $.scrollTo(0);				  
-				  $('#content-wrapper').removeClass('fadeOutUp');
+				  //$('#content-wrapper').removeClass('fadeOutUp');
 				  $('#content-wrapper').html(data);
 				  $('#content-wrapper').addClass('fadeInDown');
 				}, 1200);
@@ -184,4 +177,14 @@ jQuery(function(){
 	]);
 
 	window.location.hash == "" || window.location.hash == "#" || window.location.hash == "#home" || $(window).trigger("hashchange");
+
+	function waitForIt(el, callback){
+		el.on("mozAnimationEnd webkitAnimationEnd msAnimationEnd oAnimationEnd animationend mozAnimationEnd", callback);
+	} 
+	
+	waitForIt($("#site-loader"), function(){
+	// When loaded, then animate everything
+	$("body").removeClass("paused")
+	}) 
+
 });
