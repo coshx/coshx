@@ -591,7 +591,7 @@ nav ul li a.selected, nav ul li a:hover{
 	box-shadow:
 		0 0 0 4px white,
 	  	0 0 0 5px #c0c0c0;
-	webkit-transition: all 275ms;
+	-webkit-transition: all 275ms;
   	-moz-transition: all 275ms;
   	-o-transition: all 275ms;
   	transition: all 275ms;
@@ -657,6 +657,38 @@ nav ul li a.selected, nav ul li a:hover{
 	border-width: 10px; 
 	left: 60px; 
 	margin-left: -18px;
+	-webkit-transition: all 0.5s;
+  	-moz-transition: all 0.5s;
+  	-o-transition: all 0.5s;
+  	transition: all 0.5s;
+}
+
+.well.first:after{
+	left: 60px;
+}
+
+.well.second:after{
+	left: 238px;
+}
+
+.well.third:after{
+	left: 416px;
+}
+
+.well.fourth:after{
+	left: 590px;
+}
+
+.well.fifth:after{
+	left: 765px;
+}
+
+.well.sixth:after{
+	left: 943px;
+}
+
+.well.seventh:after{
+	left: 1120px;
 }
 
 .web-development{
@@ -981,4 +1013,8 @@ em{
 
 .related-work ul li:last-child{
 	margin-right: 0;
+}
+
+.services-text{
+	display: none;
 }

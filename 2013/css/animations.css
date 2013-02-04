@@ -1,24 +1,34 @@
 /* Animations for the trucks on the home page */
 
+.paused .truck1, .paused .truck2, .paused .truck3, .paused .truck-star,
+.paused .truck-bulb, .paused .truck-heart, .paused .launch-pad, .paused .rocket,
+.paused .cloud1, .paused .cloud2, .paused .cloud3, .paused .moon, #content-wrapper.paused{
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	animation-play-state: paused;	
+}
+
+
 .truck1{	
 	-webkit-animation-name: movetruck-one, movetruck-one-back;
-	-webkit-animation-delay: 0.5s, 6s;
+	-webkit-animation-delay: 1s, 7s;
 	-webkit-animation-duration:4s, 25s;
 	-webkit-animation-timing-function: ease-out, ease-out;
 
 
 	-moz-animation-name: movetruck-one, movetruck-one-back;
-	-moz-animation-delay: 0.5s, 6s;
+	-moz-animation-delay: 1s, 7s;
 	-moz-animation-duration:4s, 25s;
 	-moz-animation-timing-function: ease-out, ease-out;
 
 	-o-animation-name: movetruck-one, movetruck-one-back;
-	-o-animation-delay: 0.5s, 6s;
+	-o-animation-delay: 1s, 7s;
 	-o-animation-duration:4s, 25s;
 	-o-animation-timing-function: ease-out, ease-out;
 
 	animation-name: movetruck-one, movetruck-one-back;
-	animation-delay: 0.5s, 6s;
+	animation-delay: 1s, 7s;
 	animation-duration:4s, 25s;
 	animation-timing-function: ease-out, ease-out;
 
@@ -35,23 +45,23 @@
 
 .truck2{	
 	-webkit-animation-name: movetruck-two, movetruck-two-back;
-	-webkit-animation-delay: 0.5s, 6s;
+	-webkit-animation-delay: 1s, 7s;
 	-webkit-animation-duration:4s, 25s;
 	-webkit-animation-timing-function: ease-out, ease-out;
 
 
 	-moz-animation-name: movetruck-two, movetruck-two-back;
-	-moz-animation-delay: 0.5s, 6s;
+	-moz-animation-delay: 1s, 7s;
 	-moz-animation-duration:4s, 25s;
 	-moz-animation-timing-function: ease-out, ease-out;
 
 	-o-animation-name: movetruck-two, movetruck-two-back;
-	-o-animation-delay: 0.5s, 6s;
+	-o-animation-delay: 1s, 7s;
 	-o-animation-duration:4s, 25s;
 	-o-animation-timing-function: ease-out, ease-out;
 
 	animation-name: movetruck-two, movetruck-two-back;
-	animation-delay: 0.5s, 6s;
+	animation-delay: 1s, 7s;
 	animation-duration:4s, 25s;
 	animation-timing-function: ease-out, ease-out;
 
@@ -68,23 +78,23 @@
 
 .truck3{	
 	-webkit-animation-name: movetruck-three, movetruck-three-back;
-	-webkit-animation-delay: 0.5s, 6s;
+	-webkit-animation-delay: 1s, 7s;
 	-webkit-animation-duration:4s, 25s;
 	-webkit-animation-timing-function: ease-out, ease-out;
 
 
 	-moz-animation-name: movetruck-three, movetruck-three-back;
-	-moz-animation-delay: 0.5s, 6s;
+	-moz-animation-delay: 1s, 7s;
 	-moz-animation-duration:4s, 25s;
 	-moz-animation-timing-function: ease-out, ease-out;
 
 	-o-animation-name: movetruck-three, movetruck-three-back;
-	-o-animation-delay: 0.5s, 6s;
+	-o-animation-delay: 1s, 7s;
 	-o-animation-duration:4s, 25s;
 	-o-animation-timing-function: ease-out, ease-out;
 
 	animation-name: movetruck-three, movetruck-three-back;
-	animation-delay: 0.5s, 6s;
+	animation-delay: 1s, 7s;
 	animation-duration:4s, 25s;
 	animation-timing-function: ease-out, ease-out;
 
@@ -231,23 +241,23 @@
 
 .truck-heart{	
 	-webkit-animation-name: movetruck-heart, movetruck-heart-throw;
-	-webkit-animation-delay: 0.5s, 5s;
+	-webkit-animation-delay: 1s, 6s;
 	-webkit-animation-duration:4s, 1s;
 	-webkit-animation-timing-function: ease-out, linear;
 
 
 	-moz-animation-name: movetruck-heart, movetruck-heart-throw;
-	-moz-animation-delay: 0.5s, 5s;
+	-moz-animation-delay: 1s, 6s;
 	-moz-animation-duration:4s, 1s;
 	-moz-animation-timing-function: ease-out, ease-out;
 
 	-o-animation-name: movetruck-heart, movetruck-heart-throw;
-	-o-animation-delay: 0.5s, 5s;
+	-o-animation-delay: 1s, 6s;
 	-o-animation-duration:4s, 1s;
 	-o-animation-timing-function: ease-out, ease-out;
 
 	animation-name: movetruck-heart, movetruck-heart-throw;
-	animation-delay: 0.5s, 5s;
+	animation-delay: 1s, 6s;
 	animation-duration:4s, 1s;
 	animation-timing-function: ease-out, ease-out;
 
@@ -264,23 +274,23 @@
 
 .truck-bulb{	
 	-webkit-animation-name: movetruck-bulb, movetruck-bulb-throw;
-	-webkit-animation-delay: 0.5s, 5s;
+	-webkit-animation-delay: 1s, 6s;
 	-webkit-animation-duration:4s, 1s;
 	-webkit-animation-timing-function: ease-out, linear;
 
 
 	-moz-animation-name: movetruck-bulb, movetruck-bulb-throw;
-	-moz-animation-delay: 0.5s, 5s;
+	-moz-animation-delay: 1s, 6s;
 	-moz-animation-duration:4s, 1s;
 	-moz-animation-timing-function: ease-out, linear;
 
 	-o-animation-name: movetruck-bulb, movetruck-bulb-throw;
-	-o-animation-delay: 0.5s, 5s;
+	-o-animation-delay: 1s, 6s;
 	-o-animation-duration:4s, 1s;
 	-o-animation-timing-function: ease-out, linear;
 
 	animation-name: movetruck-bulb, movetruck-bulb-throw;
-	animation-delay: 0.5s, 5s;
+	animation-delay: 1s, 6s;
 	animation-duration:4s, 1s;
 	animation-timing-function: ease-out, linear;
 
@@ -297,23 +307,23 @@
 
 .truck-star{	
 	-webkit-animation-name: movetruck-star, movetruck-star-throw;
-	-webkit-animation-delay: 0.5s, 5s;
+	-webkit-animation-delay: 1s, 6s;
 	-webkit-animation-duration:4s, 1s;
 	-webkit-animation-timing-function: ease-out, linear;
 
 
 	-moz-animation-name: movetruck-star, movetruck-star-throw;
-	-moz-animation-delay: 0.5s, 5s;
+	-moz-animation-delay: 1s, 6s;
 	-moz-animation-duration:4s, 1s;
 	-moz-animation-timing-function: ease-out, linear;
 
 	-o-animation-name: movetruck-star, movetruck-star-throw;
-	-o-animation-delay: 0.5s, 5s;
+	-o-animation-delay: 1s, 6s;
 	-o-animation-duration:4s, 1s;
 	-o-animation-timing-function: ease-out, linear;
 
 	animation-name: movetruck-star, movetruck-star-throw;
-	animation-delay: 0.5s, 5s;
+	animation-delay: 1s, 6s;
 	animation-duration:4s, 1s;
 	animation-timing-function: ease-out, linear;
 
@@ -679,6 +689,18 @@
 	animation-name: fadeOutUp;
 }
 
+@-webkit-keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
 @-moz-keyframes fadeInDown {
 	0% {
 		opacity: 0;
@@ -737,7 +759,6 @@
 	-moz-animation-timing-function: linear;
 	-o-animation-timing-function: linear;
 	animation-timing-function: linear;
-
 }
 
 .paused img{
@@ -893,3 +914,25 @@
   100% {
     width: 100%;
     top: 0; } }
+
+
+#content-wrapper{
+
+	-webkit-animation-name: fadeInDown;
+	-webkit-animation-duration:1s;
+	-webkit-animation-timing-function: linear;
+
+
+	-moz-animation-name: fadeInDown;
+	-moz-animation-duration:1s;
+	-moz-animation-timing-function: linear;
+
+	-o-animation-name: fadeInDown;
+	-o-animation-duration:1s;
+	-o-animation-timing-function: linear;
+
+	animation-name: fadeInDown;
+	animation-duration:1s;
+	animation-timing-function: linear;
+
+}

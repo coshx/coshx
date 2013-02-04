@@ -16,9 +16,9 @@
 	<script src="js/jquery.inview.min.js"></script>	
 	<script src="js/custom.js"></script>
 </head>
-<body class="paused">
+<body>
 	<header>
-		<div class="loader" id="site-loader" style="width: 100%; height: 5px; background-color: #fcb040;"></div>
+		<div class="loader" id="site-loader" style="width: 100%; height: 3px; background-color: #fcb040;"></div>
 		<div class="row">
 				<h1 id="logo"><a href="index.htm#home"></a></h1>
 			<nav>
@@ -34,7 +34,7 @@
 		</div>
 	</header>
 
-	<div id="content-wrapper">		
+	<div id="content-wrapper" class="paused">		
 		<article id="home">	
 			<section class="row">
 				<h1>From Idea to execution</h1>
@@ -202,16 +202,27 @@
 				<div class="dots"></div>
 				<p class="eight column centered text-center">Let's start up a conversation about what you need and how we can help. We're just a quick email away!</p>
 				<div class="row rings">
-					<div class="ring center"><img src="img/gear.png" alt=""></div>
-					<div class="ring center"><img src="img/bulb.png" alt=""></div>
-					<div class="ring center"><img src="img/book.png" alt=""></div>
-					<div class="ring center"><img src="img/beaker.png" alt=""></div>
-					<div class="ring center"><img src="img/quil.png" alt=""></div>
-					<div class="ring center"><img src="img/stopwatch.png" alt=""></div>
-					<div class="ring center last"><img src="img/star.png" alt=""></div>
+					<div class="ring center" rel="first"><img src="img/gear.png" alt=""></div>
+					<div class="ring center" rel="second"><img src="img/bulb.png" alt=""></div>
+					<div class="ring center" rel="third"><img src="img/book.png" alt=""></div>
+					<div class="ring center" rel="fourth"><img src="img/beaker.png" alt=""></div>
+					<div class="ring center" rel="fifth"><img src="img/quil.png" alt=""></div>
+					<div class="ring center" rel="sixth"><img src="img/stopwatch.png" alt=""></div>
+					<div class="ring center last" rel="seventh"><img src="img/star.png" alt=""></div>
 				</div>
-				<div class="well row">We’re utterly dedicated to curing your technical ailments with poignant code and pragmatic advice.</div>
-		
+				<div class="well row first" id="services-message">
+					We’re utterly dedicated to curing your technical ailments with poignant code and pragmatic advice.
+
+				</div>
+				<ul class="services-text">
+					<li rel="first">We’re utterly dedicated to curing your technical ailments with poignant code and pragmatic advice.</li>
+					<li rel="second">This is the second item</li>
+					<li rel="third">This is the third item</li>
+					<li rel="fourth">This is the fourth item</li>
+					<li rel="fifth">This is the fifth item</li>
+					<li rel="sixth">This is the sixth item</li>
+					<li rel="seventh">This is the seventh item</li>
+				</ul>
 				<h1>We do web development</h1>
 				<div class="dots"></div>
 				<div class="row web-development">
@@ -236,7 +247,7 @@
 					</div>
 					<div class="column three">
 						<p>Perhaps a pet sitter? We might not be able to offer much on the last one there, but we'd be happy to hear any special requests you have. Just drop us a line at <a href="mailto:info@coshx.com">info@coshx.com</a> and we'll get back to you right away.</p>
-						<a href="" class="btn orange center">Contact Us</a>
+						<a href="" class="btn orange center" rel="">Contact Us</a>
 						<a href="" class="btn dark-blue center">Like our page</a>
 						<a href="http://www.twitter/coshxlabs" class="btn blue center">@coshxlabs</a>
 					</div>

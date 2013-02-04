@@ -155,7 +155,7 @@ jQuery(function(){
 			  	}
 				setTimeout(function() {
 				  $.scrollTo(0);				  
-				  //$('#content-wrapper').removeClass('fadeOutUp');
+				  $('#content-wrapper').removeClass('fadeOutUp');
 				  $('#content-wrapper').html(data);
 				  $('#content-wrapper').addClass('fadeInDown');
 				}, 1200);
@@ -182,9 +182,18 @@ jQuery(function(){
 		el.on("mozAnimationEnd webkitAnimationEnd msAnimationEnd oAnimationEnd animationend mozAnimationEnd", callback);
 	} 
 	
-	waitForIt($("#site-loader"), function(){
-	// When loaded, then animate everything
-	$("body").removeClass("paused")
-	}) 
+	waitForIt($("#site-loader"), function(){		
+		$("#content-wrapper").removeClass("paused");
+	});
+
+	$('.rings > .ring').on({
+		mouseenter: function(){
+			rel = $(this).attr('rel');			
+			var newClasses = 'well row ' + rel;
+			$('.well').attr('class', newClasses);
+			servicesText = $(".services-text > li[rel='" + rel +  "']").html();			
+			$('#services-message').html(servicesText);
+		}
+	});
 
 });
