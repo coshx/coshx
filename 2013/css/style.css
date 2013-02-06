@@ -18,6 +18,10 @@ header{
 	position: fixed;
 }
 
+#header-content{
+	position: relative;
+}
+
 h1{
 	color: #535353;	
 	font-size: 48px;
@@ -35,7 +39,15 @@ h1{
 }
 
 h1#logo{
-	margin-top: 0;
+	margin-top: 0;	
+	left: 0;
+}
+
+#header-content h1#logo{
+	
+	position: absolute;
+	left: 50%;
+	margin-left: -101px;
 }
 
 h1#logo a{
@@ -179,9 +191,18 @@ section p a{
 }
 
 /* Menu classes */
+nav{
+	margin-top: 12px;
+}
+
+#header-content nav{
+	opacity: 0;
+	margin-top: 12px;
+}
+	
 nav ul{	
 	float:right;
-	margin-top: 48px;
+	margin-top: 48px;	
 }
 
 nav ul li{
@@ -370,12 +391,15 @@ nav ul li a.selected, nav ul li a:hover{
 .team-mate-bio{
 	padding-top: 185px;
 	position: relative;
+	height: 681px;
+	overflow: hidden;
 }
 
 
 .graph-wrapper{
 	position: relative;	
 	float: left;
+	bottom: -221px;
 }
 
 .graph-wrapper .interests {
@@ -429,7 +453,7 @@ nav ul li a.selected, nav ul li a:hover{
 	-ms-moz-border-radius: 4px;
 	-o-moz-border-radius: 4px;
 	border-radius: 4px;	
-	float: left;
+	float: left;	
 }
 
 .team-mate-bio .info .avatar{ 
@@ -469,6 +493,7 @@ nav ul li a.selected, nav ul li a:hover{
 	float: left;
 	width: 82%;	
 	padding-left: 18px;
+	position: relative;
 }
 
 .team-mate-bio .bio h2{
@@ -1017,4 +1042,72 @@ em{
 
 .services-text{
 	display: none;
+}
+
+.services-icon{	
+	background: url("../img/services-icons.png") no-repeat scroll 0 0 transparent;
+	height: 34px;
+	left: 50%;
+	margin-left: -16px;
+	margin-top: -17px;
+	position: absolute;
+	top: 50%;
+	width: 32px;
+}
+
+
+.services-icon.settings{
+	background-position: 0 0;
+}
+
+.ring:hover .services-icon.settings{
+	background-position: 0 -34px;
+}
+
+.services-icon.bulb{
+	background-position: -38px 0;
+}
+
+.ring:hover .services-icon.bulb{
+	background-position: -38px -34px;
+}
+
+.services-icon.book{
+	background-position: -79px 0;
+}
+
+.ring:hover .services-icon.book{
+	background-position: -79px -34px;
+}
+
+.services-icon.beaker{
+	background-position: -118px 0;
+}
+
+.ring:hover .services-icon.beaker{
+	background-position: -118px -34px;
+}
+
+.services-icon.feather{
+	background-position: -157px 0;
+}
+
+.ring:hover .services-icon.feather{
+	background-position: -157px -34px;
+}
+
+.services-icon.stopwatch{
+	background-position: -198px 0;
+}
+
+.ring:hover .services-icon.stopwatch{
+	background-position: -198px -34px;
+}
+
+.services-icon.star{
+	background-position: -235px 0;
+}
+
+.ring:hover .services-icon.star{
+	background-position: -235px -34px;
 }

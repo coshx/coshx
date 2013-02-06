@@ -2,7 +2,8 @@
 
 .paused .truck1, .paused .truck2, .paused .truck3, .paused .truck-star,
 .paused .truck-bulb, .paused .truck-heart, .paused .launch-pad, .paused .rocket,
-.paused .cloud1, .paused .cloud2, .paused .cloud3, .paused .moon, #content-wrapper.paused{
+.paused .cloud1, .paused .cloud2, .paused .cloud3, .paused .moon, #content-wrapper.paused, 
+#logo.paused, nav.paused{
 	-webkit-animation-play-state: paused;
 	-moz-animation-play-state: paused;
 	-o-animation-play-state: paused;
@@ -683,10 +684,24 @@
 }
 
 .fadeOutUp {
-	-webkit-animation-name: fadeOutUp;
-	-moz-animation-name: fadeOutUp;
-	-o-animation-name: fadeOutUp;
-	animation-name: fadeOutUp;
+	-webkit-animation-name: fadeOutUp !important;
+	-moz-animation-name: fadeOutUp !important;
+	-o-animation-name: fadeOutUp !important;
+	animation-name: fadeOutUp !important;
+	
+	-webkit-animation-duration:500ms;
+	-webkit-animation-timing-function: linear;
+
+	
+	-moz-animation-duration:500ms;
+	-moz-animation-timing-function: linear;
+	
+	-o-animation-duration:500ms;
+	-o-animation-timing-function: linear;
+	
+	animation-duration:500ms;
+	animation-timing-function: linear;
+
 }
 
 @-webkit-keyframes fadeInDown {
@@ -742,6 +757,7 @@
 	-moz-animation-name: fadeInDown;
 	-o-animation-name: fadeInDown;
 	animation-name: fadeInDown;
+
 }
 
 #content-wrapper{	
@@ -913,26 +929,310 @@
 
   100% {
     width: 100%;
-    top: 0; } }
+    top: 0; } 
+}
 
 
 #content-wrapper{
 
 	-webkit-animation-name: fadeInDown;
-	-webkit-animation-duration:1s;
+	-webkit-animation-duration:300ms;
 	-webkit-animation-timing-function: linear;
 
 
 	-moz-animation-name: fadeInDown;
-	-moz-animation-duration:1s;
+	-moz-animation-duration:300ms;
 	-moz-animation-timing-function: linear;
 
 	-o-animation-name: fadeInDown;
-	-o-animation-duration:1s;
+	-o-animation-duration:300ms;
 	-o-animation-timing-function: linear;
 
 	animation-name: fadeInDown;
+	animation-duration:300ms;
+	animation-timing-function: linear;
+}
+
+/*#content-wrapper .team-mate-bio.animate{
+	animation-name: fadeOutUp, fadeInDown;
+	animation-delay: 0s 4s;
+	animation-duration:4s, 4s;
+	animation-timing-function: linear;
+}
+
+.no-animation{
+	animation: none;
+}*/
+
+
+#content-wrapper .team-mate-bio .graph-wrapper{
+	-webkit-animation-name: animateGraph;
+	-webkit-animation-delay: 600ms;
+	-webkit-animation-duration:250ms;	
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;	
+
+	-moz-animation-name: animateGraph;
+	-moz-animation-delay: 600ms;
+	-moz-animation-duration:250ms;	
+	-moz-animation-timing-function: linear;
+	-moz-animation-fill-mode: forwards;	
+
+	-o-animation-name: animateGraph;
+	-o-animation-delay: 600ms;
+	-o-animation-duration:250ms;	
+	-o-animation-timing-function: linear;
+	-o-animation-fill-mode: forwards;	
+
+	animation-name: animateGraph;
+	animation-delay: 600ms;
+	animation-duration:250ms;	
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;	
+}
+
+@-webkit-keyframes animateGraph{
+	0%{
+		bottom: -221px;	
+	}
+	100%{
+		bottom: 0px;
+	}
+}
+
+@-moz-keyframes animateGraph{
+	0%{
+		bottom: -221px;	
+	}
+	100%{
+		bottom: 0px;
+	}
+}
+
+@-o-keyframes animateGraph{
+	0%{
+		bottom: -221px;	
+	}
+	100%{
+		bottom: 0px;
+	}
+}
+
+@keyframes animateGraph{
+	0%{
+		bottom: -221px;	
+	}
+	100%{
+		bottom: 0px;
+	}
+}
+
+#content-wrapper .team-mate-bio .info{
+	-webkit-animation-name: animateInfo;
+	-webkit-animation-duration:500ms;	
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;	
+
+	-moz-animation-name: animateInfo;
+	-moz-animation-duration:500ms;	
+	-moz-animation-timing-function: linear;
+	-moz-animation-fill-mode: forwards;	
+
+	-0-animation-name: animateInfo;
+	-0-animation-duration:500ms;	
+	-0-animation-timing-function: linear;
+	-0-animation-fill-mode: forwards;	
+
+	animation-name: animateInfo;
+	animation-duration:500ms;	
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;		
+}
+
+#content-wrapper .team-mate-bio .bio{
+
+	-webkit-animation-name: animateInfo;
+	-webkit-animation-duration:500ms;	
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;	
+
+	-moz-animation-name: animateInfo;
+	-moz-animation-duration:500ms;	
+	-moz-animation-timing-function: linear;
+	-moz-animation-fill-mode: forwards;	
+
+	-0-animation-name: animateInfo;
+	-0-animation-duration:500ms;	
+	-0-animation-timing-function: linear;
+	-0-animation-fill-mode: forwards;	
+
+	animation-name: animateInfo;
+	animation-duration:500ms;	
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;	
+
+}
+
+@-webkit-keyframes animateInfo{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes animateInfo{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@-o-keyframes animateInfo{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@keyframes animateInfo{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+#header-content #logo{	
+	
+	-webkit-animation-name: logoAnimate;
+	-webkit-animation-duration:1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+
+	-moz-animation-name: logoAnimate;
+	-moz-animation-duration:1s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-fill-mode: forwards;
+
+	-oanimation-name: logoAnimate;
+	-oanimation-duration:1s;
+	-oanimation-timing-function: linear;
+	-oanimation-fill-mode: forwards;
+
+	animation-name: logoAnimate;
 	animation-duration:1s;
 	animation-timing-function: linear;
+	animation-fill-mode: forwards;
 
+}
+
+#header-content nav{	
+
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration:1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+
+	-moz-animation-name: fadeIn;
+	-moz-animation-duration:1s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-fill-mode: forwards;
+
+	-o-animation-name: fadeIn;
+	-o-animation-duration:1s;
+	-o-animation-timing-function: linear;
+	-o-animation-fill-mode: forwards;
+
+	animation-name: fadeIn;
+	animation-duration:1s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+
+}
+
+@-webkit-keyframes logoAnimate{
+	0%{
+		left: 50%;
+		margin-left: -101px;		
+	}
+	100%{
+		left: 0%;		
+		margin-left: 0;		
+	}
+}
+
+@-moz-keyframes logoAnimate{
+	0%{
+		left: 50%;
+		margin-left: -101px;		
+	}
+	100%{
+		left: 0%;		
+		margin-left: 0;		
+	}
+}
+
+@-o-keyframes logoAnimate{
+	0%{
+		left: 50%;
+		margin-left: -101px;		
+	}
+	100%{
+		left: 0%;		
+		margin-left: 0;		
+	}
+}
+
+
+@keyframes logoAnimate{
+	0%{
+		left: 50%;
+		margin-left: -101px;		
+	}
+	100%{
+		left: 0%;		
+		margin-left: 0;		
+	}
+}
+
+
+@-webkit-keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
 }

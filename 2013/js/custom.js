@@ -134,36 +134,36 @@ jQuery(function(){
 	$('.team-mate a').on('click', function(e){
 		//e.preventDefault();
 	});
-
-    //$('body').on('animationend MSAnimationend oanimationend webkitAnimationEnd', '#content-wrapper.fadeOutUp', phase2animation);
-
+    
 	$(window).on("hashchange", function(e){
 		if ( window.location.hash == "#home" && (!url || url == "#")) return false;
 		url = window.location.hash || "#home";
-		url=url.replace('#','');		
+		url=url.replace('#','');
 		$('#content-wrapper').removeClass('fadeOutUp').removeClass('fadeInDown');
 		$.ajax({
-			  url: 'loadpage.php',
-			  type: 'POST',
-			  dataType: 'html',
-			  data: {url: url},
-			  success: function(data, textStatus, xhr) {	
-			  	if(url === 'home')
-			  	{
-			  		shownTeamSection = false;
-			  		shownAboutSection = false;			  		
-			  	}
-				setTimeout(function() {
-				  $.scrollTo(0);				  
-				  $('#content-wrapper').removeClass('fadeOutUp');
-				  $('#content-wrapper').html(data);
-				  $('#content-wrapper').addClass('fadeInDown');
-				}, 1200);
-			   	
-			   	$('#content-wrapper').addClass('fadeOutUp');
-			   	
-			  }
-			});	
+			url: 'loadpage.php',
+			type: 'POST',
+			dataType: 'html',
+			data: {url: url},
+			success: function(data, textStatus, xhr) {
+				if(url === 'home')
+				{
+					shownTeamSection = false;
+					shownAboutSection = false;
+				}
+				$.scrollTo(0);
+				$('#content-wrapper').html(data);
+				// setTimeout(function() {
+				// 	$.scrollTo(0);
+				// 	//$('#content-wrapper').removeClass('fadeOutUp');
+				// 	$('#content-wrapper').html(data);
+				// 	//$('#content-wrapper').addClass('fadeInDown');
+				// }, 1200);
+				
+				// $('#content-wrapper').addClass('no-animation').removeClass('no-animation').addClass('loadadmin');
+
+			}
+		});
 	});
 	
 	preload([
@@ -183,6 +183,12 @@ jQuery(function(){
 	} 
 	
 	waitForIt($("#site-loader"), function(){		
+		$("#logo").removeClass("paused");
+	});
+
+	waitForIt($("#logo"), function(){	
+
+		$("nav").removeClass("paused");
 		$("#content-wrapper").removeClass("paused");
 	});
 
