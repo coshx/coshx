@@ -52,18 +52,27 @@ h1#logo{
 
 h1#logo a{
 	background: url(../img/logo.png) no-repeat;
-	width: 202px;
+	width: 261px;
 	height: 55px;
 	float: left;	
 	margin-top: 45px;
 }
 
+h1#logo:hover a{
+	background-position: 0px -55px;
+}
+
 h1#logo-light a{
 	background: url(../img/logo-light.png) no-repeat;
-	width: 202px;
+	width: 261px;
 	height: 55px;
 	float: left;	
 	margin-top: 140px;
+}
+
+
+h1#logo-light:hover a{
+	background-position: 0px -55px;
 }
 
 h3{

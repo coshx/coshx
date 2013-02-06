@@ -151,8 +151,15 @@ jQuery(function(){
 					shownTeamSection = false;
 					shownAboutSection = false;
 				}
-				$.scrollTo(0);
-				$('#content-wrapper').html(data);
+				
+				$('#content-wrapper').addClass('fadeOutUp');				
+
+				setTimeout(function(){
+					$.scrollTo(0);
+					$('#content-wrapper').removeClass('fadeOutUp');
+					$('#content-wrapper').html(data);
+				}, 100)
+				
 				// setTimeout(function() {
 				// 	$.scrollTo(0);
 				// 	//$('#content-wrapper').removeClass('fadeOutUp');
