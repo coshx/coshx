@@ -56,6 +56,16 @@ jQuery(function(){
 			}, 200);
 		}
 	}, ".window");
+
+	$('#content-wrapper').on({
+		mouseenter: function(){
+			rel = $(this).attr('rel');			
+			var newClasses = 'well row ' + rel;
+			$('.well').attr('class', newClasses);
+			servicesText = $(".services-text > li[rel='" + rel +  "']").html();			
+			$('#services-message').html(servicesText);			
+		}
+	}, '.ring');
 	
 	$('#content-wrapper').on({
 		click: function (e) {
@@ -138,8 +148,18 @@ jQuery(function(){
 	$(window).on("hashchange", function(e){
 		if ( window.location.hash == "#home" && (!url || url == "#")) return false;
 		url = window.location.hash || "#home";
+		var homeSections = ['about', 'projects'];
 		url=url.replace('#','');
-		$('#content-wrapper').removeClass('fadeOutUp').removeClass('fadeInDown');
+		scroll = '';
+		if(homeSections.indexOf(url) != -1)
+		{
+			scroll = url;
+			url = 'home';
+			console.log('Scrolling to ' + scroll);
+		}
+		
+		$('#content-wrapper').removeClass('fadeOut').removeClass('fadeIn');
+
 		$.ajax({
 			url: 'loadpage.php',
 			type: 'POST',
@@ -152,22 +172,18 @@ jQuery(function(){
 					shownAboutSection = false;
 				}
 				
-				$('#content-wrapper').addClass('fadeOutUp');				
+				$('#content-wrapper').addClass('fadeOut');
 
 				setTimeout(function(){
 					$.scrollTo(0);
-					$('#content-wrapper').removeClass('fadeOutUp');
+					$('#content-wrapper').toggleClass('fadeOut').toggleClass('fadeIn');
 					$('#content-wrapper').html(data);
-				}, 100)
-				
-				// setTimeout(function() {
-				// 	$.scrollTo(0);
-				// 	//$('#content-wrapper').removeClass('fadeOutUp');
-				// 	$('#content-wrapper').html(data);
-				// 	//$('#content-wrapper').addClass('fadeInDown');
-				// }, 1200);
-				
-				// $('#content-wrapper').addClass('no-animation').removeClass('no-animation').addClass('loadadmin');
+					if(scroll !== ''){
+						$('nav ul li a').removeClass('active');
+						$('a[rel='+ scroll + ']').addClass('active');
+						$(window).scrollTo('#' + scroll, {offset: {top:-140},});
+					}
+				}, 600);
 
 			}
 		});
@@ -197,16 +213,6 @@ jQuery(function(){
 
 		$("nav").removeClass("paused");
 		$("#content-wrapper").removeClass("paused");
-	});
-
-	$('.rings > .ring').on({
-		mouseenter: function(){
-			rel = $(this).attr('rel');			
-			var newClasses = 'well row ' + rel;
-			$('.well').attr('class', newClasses);
-			servicesText = $(".services-text > li[rel='" + rel +  "']").html();			
-			$('#services-message').html(servicesText);
-		}
 	});
 
 });

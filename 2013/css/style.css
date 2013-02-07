@@ -946,6 +946,16 @@ em{
 	right: 0px;
 }
 
+.portfolio-home{
+	float: left;	
+	background: url(../img/portfolio-home.png) no-repeat;
+	line-height: 32px;
+	color: #c0c0c0;	
+	width: 32px;
+	height: 32px;	
+	margin-right: 20px;
+}
+
 .prev-case{
 	float: left;	
 	background: url(../img/previous-case.png) no-repeat;
@@ -956,7 +966,7 @@ em{
 	margin-right: 20px;
 }
 
-.prev-case:hover, .next-case:hover{
+.prev-case:hover, .next-case:hover, .portfolio-home{
 	background-position: 0 -32px;	
 }
 
