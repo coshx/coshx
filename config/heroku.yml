@@ -7,8 +7,9 @@
 #     - <Heroku config:var name>: <Heroku config:var value>
 #
 
+config_repo: 'https://github.com/coshx/coshx_configuration'
+
 production:
-  config_repo: 'https://github.com/coshx/coshx_configuration'
   app: coshx-web-production
   config:
     BUNDLE_WITHOUT: "development:test"
@@ -17,7 +18,6 @@ production:
     COSHX_HOST: "www.coshx.com"
 
 staging:
-  config_repo: 'https://github.com/coshx/coshx_configuration'
   app: coshx-web-staging
   config: &default
     BUNDLE_WITHOUT: "development:test"

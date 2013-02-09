@@ -135,17 +135,9 @@ GEM
       activesupport (~> 3.0)
       haml (~> 3.0)
       railties (~> 3.0)
-    heroku (2.30.3)
-      heroku-api (~> 0.3.4)
-      launchy (>= 0.3.2)
-      netrc (~> 0.7.7)
-      rest-client (~> 1.6.1)
-      rubyzip
-    heroku-api (0.3.4)
-      excon (~> 0.16.1)
-    heroku_san (3.0.4)
-      activesupport
-      heroku (>= 2)
+    heroku-api (0.3.7)
+      excon (~> 0.16.10)
+    heroku_san (4.2.2)
       heroku-api (>= 0.1.2)
       rake
     hike (1.2.1)
@@ -159,8 +151,6 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
       railties (>= 3.0.0)
-    launchy (2.1.2)
-      addressable (~> 2.3)
     libv8 (3.11.8.3)
     libwebsocket (0.1.5)
       addressable
@@ -178,7 +168,6 @@ GEM
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.6.3)
-    netrc (0.7.7)
     nokogiri (1.5.6)
     orm_adapter (0.4.0)
     pg (0.14.0)
@@ -216,9 +205,7 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     redcarpet (2.1.1)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
-    rmagick (2.13.1)
+    rmagick (2.13.2)
     rspec (2.11.0)
       rspec-core (~> 2.11.0)
       rspec-expectations (~> 2.11.0)
@@ -309,7 +296,7 @@ DEPENDENCIES
   forgery
   gravatar-ultimate
   haml-rails
-  heroku_san
+  heroku_san (~> 4.2.2)
   i18n-active_record!
   jquery-rails
   kaminari
@@ -321,7 +308,7 @@ DEPENDENCIES
   pygmentize
   rails (~> 3.2.9)
   redcarpet
-  rmagick
+  rmagick (~> 2.13.2)
   rspec-rails
   sass-rails (~> 3.2.3)
   shoulda-matchers

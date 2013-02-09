@@ -24,7 +24,7 @@ gem "kaminari"
 
 # pictures
 gem 'carrierwave'
-gem 'rmagick'
+gem 'rmagick', '~> 2.13.2'
 gem 'fog'
 
 #Social media is cool?
@@ -58,7 +58,7 @@ group :assets do
 end
 
 group :development do
-  gem "heroku_san"
+  gem "heroku_san", '~> 4.2.2'
   gem "pry"
   gem "pry-nav"
 end
