@@ -1150,21 +1150,25 @@
 	-webkit-animation-duration:1s;
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 500ms;
 
 	-moz-animation-name: logoAnimate;
 	-moz-animation-duration:1s;
 	-moz-animation-timing-function: linear;
-	-moz-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;	
+	-moz-animation-delay: 500ms;
 
-	-oanimation-name: logoAnimate;
-	-oanimation-duration:1s;
-	-oanimation-timing-function: linear;
-	-oanimation-fill-mode: forwards;
+	-o-animation-name: logoAnimate;
+	-o-animation-duration:1s;
+	-o-animation-timing-function: linear;
+	-o-animation-fill-mode: forwards;
+	-o-animation-delay: 500ms;
 
 	animation-name: logoAnimate;
 	animation-duration:1s;
 	animation-timing-function: linear;
 	animation-fill-mode: forwards;
+	animation-delay: 500ms;
 
 }
 
@@ -1194,46 +1198,38 @@
 
 @-webkit-keyframes logoAnimate{
 	0%{
-		left: 50%;
-		margin-left: -101px;		
+		opacity: 0;		
 	}
 	100%{
-		left: 0%;		
-		margin-left: 0;		
+		opacity: 1;
 	}
 }
 
 @-moz-keyframes logoAnimate{
 	0%{
-		left: 50%;
-		margin-left: -101px;		
+		opacity: 0;		
 	}
 	100%{
-		left: 0%;		
-		margin-left: 0;		
+		opacity: 1;
 	}
 }
 
 @-o-keyframes logoAnimate{
 	0%{
-		left: 50%;
-		margin-left: -101px;		
+		opacity: 0;		
 	}
 	100%{
-		left: 0%;		
-		margin-left: 0;		
+		opacity: 1;
 	}
 }
 
 
 @keyframes logoAnimate{
 	0%{
-		left: 50%;
-		margin-left: -101px;		
+		opacity: 0;		
 	}
 	100%{
-		left: 0%;		
-		margin-left: 0;		
+		opacity: 1;
 	}
 }
 

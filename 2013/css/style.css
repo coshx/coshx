@@ -41,13 +41,14 @@ h1{
 h1#logo{
 	margin-top: 0;	
 	left: 0;
+	opacity: 0;
 }
 
 #header-content h1#logo{
 	
-	position: absolute;
-	left: 50%;
-	margin-left: -101px;
+	position: absolute;	
+	/*left: 50%;
+	margin-left: -101px;*/
 }
 
 h1#logo a{
@@ -948,7 +949,7 @@ em{
 
 .portfolio-home{
 	float: left;	
-	background: url(../img/portfolio-home.png) no-repeat;
+	background: url(../img/portfolio-home.png) 0 0 no-repeat;
 	line-height: 32px;
 	color: #c0c0c0;	
 	width: 32px;
@@ -958,7 +959,7 @@ em{
 
 .prev-case{
 	float: left;	
-	background: url(../img/previous-case.png) no-repeat;
+	background: url(../img/previous-case.png) 0 -32px no-repeat;
 	line-height: 32px;
 	color: #c0c0c0;	
 	width: 32px;
@@ -966,14 +967,18 @@ em{
 	margin-right: 20px;
 }
 
-.prev-case:hover, .next-case:hover, .portfolio-home{
-	background-position: 0 -32px;	
+.prev-case:hover, .next-case:hover{
+	background-position: 0 0;	
+}
+
+.portfolio-home:hover{
+	background-position: 0 -32px;
 }
 
 .next-case{
 	float: right;
 	padding-left: 20px;
-	background: url(../img/next-case.png) no-repeat;
+	background: url(../img/next-case.png) 0 -32px no-repeat;
 	line-height: 32px;
 	color: #c0c0c0;	
 	width: 32px;
@@ -1005,7 +1010,7 @@ em{
 }
 
 .case-study-wrapper{
-	border-bottom: 1px solid #e9e9e9;
+	border-bottom: 1px solid #e9e9e9;	
 }
 
 .case-study{
@@ -1017,6 +1022,19 @@ em{
 	color: #535353;
 }
 
+#case-study-gigdog{
+	margin-top: -70px;
+	width: 351px;
+	height: 351px;
+	display: inline-block;
+	background: url(../img/projects/gigdog.png) no-repeat;
+}
+
+#case-study-gigdog:hover{
+	background-position: 0px -351px;
+
+}
+
 .case-study p{
 	text-align: center;
 	color: #919191;
@@ -1024,7 +1042,7 @@ em{
 }
 
 .related-work{
-	padding-top: 120px;
+	padding-top: 150px;
 	padding-bottom: 60px;
 	overflow: hidden;
 	position: relative;
@@ -1049,14 +1067,13 @@ em{
     white-space: pre-wrap;
 }
 
-.related-work ul li{
-	list-style-type: none;
-	float: left;
-	margin-right: 30px;
+.related-work .project{
+	margin-right: 3.5%;
+	visibility: visible;
 }
 
-.related-work ul li:last-child{
-	margin-right: 0;
+.related-work .project:last-child{
+	margin-right: 0 !important;
 }
 
 .services-text{
