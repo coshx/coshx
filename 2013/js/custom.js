@@ -1,4 +1,10 @@
 
+var locations = Array();
+var map; 
+locations['boulder'] = {'lat': 40.02909, 'lng': -105.25248 };
+locations['charlottesville'] = {'lat': 38.02745, 'lng': -78.47101 };
+locations['sanfrancisco'] = {'lat': 37.78182, 'lng': -122.40833 };
+
 function shuffle(v){
     for(var j, x, i = v.length; i; j = parseInt(Math.random() * i), x = v[--i], v[i] = v[j], v[j] = x);
     return v;
@@ -10,7 +16,68 @@ function preload(arrayOfImages) {
     });
 }
 
+function initialize()
+{			
+	var latlng = new google.maps.LatLng(39.9, -101.5);	
+	var myOptions = {
+		zoom: 5,
+		center: latlng,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		disableDefaultUI: true,
+		draggable: false,
+		scrollwheel: false
+	};
+	map = new google.maps.Map(document.getElementById("map-canvas"),
+		myOptions);
+
+	var pos_boulder  = new google.maps.LatLng(locations['boulder'].lat, locations['boulder'].lng);
+	var pos_charlottesville  = new google.maps.LatLng(locations['charlottesville'].lat, locations['charlottesville'].lng);
+	var pos_sanfrancisco  = new google.maps.LatLng(locations['sanfrancisco'].lat, locations['sanfrancisco'].lng);
+	
+	var marker_boluder = new google.maps.Marker({
+		position: pos_boulder,            
+		map: map,
+		icon: "img/map_marker.png"
+	});
+	var marker_charlottesville = new google.maps.Marker({
+		position: pos_charlottesville,            
+		map: map,
+		icon: "img/map_marker.png"
+	});
+	var marker_sanfrancisco = new google.maps.Marker({
+		position: pos_sanfrancisco,            
+		map: map,
+		icon: "img/map_marker.png"
+	});
+}
+
+function toggleLabel() {
+	var input = $(this);
+	setTimeout(function() {
+		var def = input.attr('title');
+		if (!input.val() || (input.val() == def)) {
+			input.prev('span').css('visibility', '');
+			if (def) {
+				var dummy = $('<label></label>').text(def).css('visibility','hidden').appendTo('body');
+				input.prev('span').css('margin-left', dummy.width() + 3 + 'px');
+				dummy.remove();
+			}
+		} else {
+			input.prev('span').css('visibility', 'hidden');
+		}
+	}, 0);
+};
+
+function resetField() {
+	var def = $(this).attr('title');
+	if (!$(this).val() || ($(this).val() == def)) {
+		$(this).val(def);
+		$(this).prev('span').css('visibility', '');
+	}
+};
+
 jQuery(function(){
+
 	$('nav #main-nav').localScroll({
 		offset: {top:-140},
 		duration: 900,
@@ -66,7 +133,11 @@ jQuery(function(){
 			$('#services-message').html(servicesText);			
 		}
 	}, '.ring');
-	
+
+	$('input, textarea').on('keydown', toggleLabel);
+    $('input, textarea').on('paste', toggleLabel);
+    $('select').on('change', toggleLabel);
+
 	$('#content-wrapper').on({
 		click: function (e) {
 			e.preventDefault();
@@ -145,6 +216,14 @@ jQuery(function(){
 		//e.preventDefault();
 	});
     
+    $('.addresses li a').on('click', function(e){
+    	e.preventDefault();
+    	var l = $(this).attr('rel');
+    	var latlng = new google.maps.LatLng(locations[l].lat, locations[l].lng);
+    	map.panTo(latlng);
+    	map.setZoom(16);
+    });
+
 	$(window).on("hashchange", function(e){
 		if ( window.location.hash == "#home" && (!url || url == "#")) return false;
 		url = window.location.hash || "#home";
@@ -154,8 +233,7 @@ jQuery(function(){
 		if(homeSections.indexOf(url) != -1)
 		{
 			scroll = url;
-			url = 'home';
-			console.log('Scrolling to ' + scroll);
+			url = 'home';			
 		}
 		
 		$('#content-wrapper').removeClass('fadeOut').removeClass('fadeIn');
