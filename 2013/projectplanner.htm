@@ -12,9 +12,8 @@
 	<script src="js/jquery.scrollTo.js"></script>
 	<script src="js/jquery.foundation.magellan.js"></script>
 	<script src="js/custom.js"></script>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 </head>
-<body onload="initialize();">
+<body>
 	<div class="loader" id="site-loader" style="width: 100%; height: 3px; background-color: #fcb040;"></div>
 	<div class="row" id="header-content">
 		<h1 id="logo" class="paused">
@@ -35,7 +34,7 @@
 					<a href="blog.htm">Blog</a>
 				</li>
 				<li>
-					<a href="contact.htm" class="active">Contact us</a>
+					<a href="contact.htm">Contact us</a>
 				</li>
 				<li>
 					<a href="#careers">Careers</a>
@@ -44,63 +43,64 @@
 		</nav>
 	</div>
 
-	<div id="content-wrapper" class="contact fadeIn paused">
-		<div class="contact-heading">
-			<h1>Don't be shy, say hello</h1>
+	<div id="content-wrapper" class="fadeIn paused">
+		<div class="header-gray-planner">
+			<div class="row"><h1>Project Planner</h1></div>
 		</div>
-		<div id="map-canvas">			
-		</div>
-
-		<div class="row contact-info fadeIn paused">
-		<div class="column three">
-			<ul class="addresses">
-				<li>
-					<a href="#" rel="boulder">Boulder</a>
-					<p>3080 Valmont Rd Suite<br>280 Boulder, CO 80301</p>
-				</li>
-				<li>
-					<a href="#" rel="charlottesville">Charlottesville</a>
-					<p>1110 Market St East Suite N7<br>Charlottesville, VA 22902</p>
-				</li>
-				<li>
-					<a href="#" rel="sanfrancisco">San Francisco</a>
-					<p>972 Mission Street, 5th Floor<br>San Francisco, CA 94103</p>
-				</li>
-			</ul>
-		</div>
-		<div class="column three bordered">
-			<img src="img/lets_talk.png" alt="" class="lets-talk">
-		</div>
-		<div class="column six">
-			<h3>Want to get in touch with us?</h3>
-			<h3 class="dots"></h3>
-			<p>We're just a quick mail away!</p>
-			<form action="" class="contact-form">
-				<label>
-					<span>Name <span class="orange-required">*</span></span>
-					<input type="text">
-				</label>
-				<label>
-					<span>Email <span class="orange-required">*</span></span>
-					<input type="text" class="last">
-				</label>
-				<label>
-					<span>Message <span class="orange-required">*</span></span>
-					<textarea name="" id="" cols="30" rows="10"></textarea></label>
-				<p class="required"><span class="orange-required">*</span> Required</p>
-				<button type="submit">Send</button>
-			</form>
-		</div>
-	</div>	
-	</div>	
-	<article id="quote">
-		<section class="row">
-			<h1>Need a quote?</h1>
-			<div class="dots"></div>
-			<p class="eleven column centered text-center">Considering us for your next project, then simply use our project planner below. The more details you fill in, the more accurate the estimate will be...</p>
-			<a href="projectplanner.htm" class="btn orange center top-margin-small">project planner</a>			
-		</section>
-	</article> <!-- #quote -->
+		
+		<div class="row">
+			<div class="column six centered planner">
+				<h3>Want to work with us?</h3>
+				<h3 class="dots"></h3>
+				<p>
+					Considering us for your next project, then simply use our project<br>
+					planner below. The more details you fill in, the more accurate<br>
+					the estimate will be...<br>
+				</p>
+		
+				<form action="" class="contact-form">
+					<label>
+						<span>
+							Name
+							<span class="orange-required">*</span>
+						</span>
+						<input type="text">
+					</label>
+					
+					<label>
+						<span>
+							Email
+							<span class="orange-required">*</span>
+						</span>
+						<input type="text">
+					</label>
+		
+					<label>
+						<span>
+							Describe your project, concept or idea <span class="orange-required">*</span>
+						</span>
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+					</label>
+					
+					<label>
+						<span>
+							Enter a budget for this project
+							<span class="orange-required">*</span>
+						</span>
+						<input type="text" class="long">
+					</label>
+					
+					<label>
+						<span>
+							Please add any other information that might be helpful <span class="orange-required">*</span>
+						</span>
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+					</label>
+					<p class="required"><span class="orange-required">*</span> Required</p>
+					<button type="submit">Send</button>
+				</form>
+			</div>
+		</div>	</div>
 
 	<article id="blog">
 		<section class="row">
@@ -139,7 +139,7 @@
 				<ul>					
 					<li><a href="#">Twitter</a></li>
 					<li><a href="#">Facebook</a></li>
-					<li><a href="#">ribbble</a></li>
+					<li><a href="#">Dribbble</a></li>
 				</ul>
 			</div>
 			<div class="column three">
@@ -149,7 +149,7 @@
 				</ul>
 				<h4>Need a quote?</h4>
 				<ul>
-					<li><a href="#">Project Planner</a></li>
+					<li><a href="projectplanner.htm">Project Planner</a></li>
 				</ul>
 				<h1 id="logo-light"><a href="#home"></a></h1>
 			</div>

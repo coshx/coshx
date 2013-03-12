@@ -44,6 +44,10 @@ h1#logo{
 	opacity: 0;
 }
 
+h1#logo.no-animation{
+	opacity: 1;
+}
+
 #header-content h1#logo{
 	
 	position: absolute;	
@@ -401,7 +405,7 @@ nav ul li a.selected, nav ul li a:hover{
 .team-mate-bio{
 	padding-top: 185px;
 	position: relative;
-	height: 681px;
+	height: 505px;
 	overflow: hidden;
 }
 
@@ -480,23 +484,30 @@ nav ul li a.selected, nav ul li a:hover{
 .team-mate-bio .info .social-media{
 	width: 100%;
 	text-align: center;
-	padding: 13px 0 10px;
+	/*padding: 13px 0 10px;*/
+	line-height:1px;
 	background: #ffffff;
 }
 
 .team-mate-bio .info .social-media .twitter{
 	width: 21px;
-	height: 15px;
-	background: url(../img/employee-twitter.png) no-repeat;
-	display: inline-block;
-	margin-left: 3px;
+	height: 40px;
+	background: url(../img/employee-twitter.png) center center no-repeat;
+	display: inline-block;	
+	border-left: 1px solid #ebebeb;
+	border-right: 1px solid #ebebeb;
+	padding: 0 25px;
+
 }
 
 .team-mate-bio .info .social-media .google{
 	width: 9px;
-	height: 15px;
-	background: url(../img/employee-google.png) no-repeat;	
-	display: inline-block;
+	height: 40px;
+	background: url(../img/employee-google.png) center center no-repeat;	
+	display: inline-block;	
+	border-right: 1px solid #ebebeb;
+	padding: 0 25px;
+
 }
 
 .team-mate-bio .bio{
@@ -823,6 +834,19 @@ footer ul li a:hover{
 .header-gray h1{
 	line-height: 149px;
 	margin: 0;
+}
+
+.header-gray-planner{
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #e9e9e9;
+	border-top: 1px solid #e9e9e9;
+	margin-top: 50px;
+	overflow: hidden;
+}
+.header-gray-planner h1{
+	line-height: 144px;
+	margin: 0;
+	font-size: 36px;
 }
 
 .blogs{
@@ -1217,6 +1241,15 @@ em{
 	top: 4px;
 	right: -30px;
 }
+
+.addresses li a.selected{
+	color: #fbaf3f;
+}
+
+.addresses li a.selected:after{
+	background-position: 0 -16px;
+}
+
 .addresses li a:hover{
 	color: #fbaf3f;
 }
@@ -1243,7 +1276,7 @@ img.lets-talk{
 }
 
 .contact-info .dots{
-	margin: 0 auto 10px;
+	margin: 10px auto 10px;
 }
 
 .contact-form{
@@ -1367,4 +1400,41 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
 	height: 427px;
 	border-left: 1px solid #f6f6f6;
 	border-right: 1px solid #f6f6f6;
+}
+
+.planner{
+	margin-top: 25px !important;
+	margin-bottom: 60px !important;
+	overflow: hidden;
+}
+.planner h3{
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.planner .dots{
+	margin: 10px auto;
+}
+
+.planner input.long{
+	width: 498px;
+}
+
+.planner p{
+	text-align: center;
+	color: #9f9f9f;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.planner .required{
+	float: left;
+	line-height: 42px;
+}
+.planner .contact-form{
+	width: 518px;
+}
+
+.planner button{
+	margin-right: 20px;
 }
