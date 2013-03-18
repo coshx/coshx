@@ -1438,3 +1438,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
 .planner button{
 	margin-right: 20px;
 }
+
+select{
+	width: 498px;
+}

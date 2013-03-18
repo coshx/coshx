@@ -1,50 +1,6 @@
-
-function getCookie(c_name)
-{
-var i,x,y,ARRcookies=document.cookie.split(";");
-for (i=0;i<ARRcookies.length;i++)
-  {
-  x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
-  y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-  x=x.replace(/^\s+|\s+$/g,"");
-  if (x==c_name)
-    {
-    return unescape(y);
-    }
-  }
-}
-
-function setCookie(c_name,value,exdays)
-{
-var exdate=new Date();
-exdate.setDate(exdate.getDate() + exdays);
-var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
-document.cookie=c_name + "=" + c_value;
-}
-
-function checkCookie()
-{
-	setCookie("username","Steve", 0);	
-	
-// var username=getCookie("username");
-// if (username!=null && username!="")
-//   {
-//   alert("Welcome again " + username);
-//   }
-// else
-//   {
-//   username=prompt("Please enter your name:","");
-//   if (username!=null && username!="")
-//     {
-//     setCookie("username",username);
-//     }
-//   }
-}
-
-checkCookie();
-
 var locations = Array();
 var map; 
+
 locations['boulder'] = {'lat': 40.02909, 'lng': -105.25248 };
 locations['charlottesville'] = {'lat': 38.02745, 'lng': -78.47101 };
 locations['sanfrancisco'] = {'lat': 37.78182, 'lng': -122.40833 };
@@ -121,7 +77,24 @@ function resetField() {
 };
 
 jQuery(function(){
+	if(jQuery.isFunction($.fn.dropkick)){
+		$('#project-budget').dropkick();	
+	}
+	
+	// if( $.cookie('').length === 0){
+	// 	alert('need to create cookie');
+	// }
 
+	/*x = $.cookie('visited_coshx');
+	console.log($.cookie());	
+	if('undefined' === typeof(x))
+	{
+		$.cookie('visited_coshx', 'yes', {'path': '/'});
+	}
+	else{
+		//alert('all is well chaps');
+	}*/
+	
 	$('nav #main-nav').localScroll({
 		offset: {top:-140},
 		duration: 900,
