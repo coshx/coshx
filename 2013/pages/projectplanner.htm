@@ -1,0 +1,67 @@
+		<link rel="stylesheet" href="css/dropkick.css" />
+		<script src="js/jquery.dropkick.js"></script>
+		<script>
+		jQuery(function(){
+			if(jQuery.isFunction($.fn.dropkick)){
+				$('#project-budget').dropkick();	
+			}
+			
+		});
+		</script>
+		<div class="header-gray-planner">
+			<div class="row"><h1>Project Planner</h1></div>
+		</div>
+		
+		<div class="row">
+			<div class="column six centered planner">
+				<h3>Want to work with us?</h3>
+				<h3 class="dots"></h3>
+				<p>
+					Considering us for your next project, then simply use our project<br>
+					planner below. The more details you fill in, the more accurate<br>
+					the estimate will be...<br>
+				</p>
+		
+				<form action="" class="contact-form">
+					<label>
+						<span>
+							Name
+							<span class="orange-required">*</span>
+						</span>
+						<input type="text">
+					</label>
+					
+					<label>
+						<span>
+							Email
+							<span class="orange-required">*</span>
+						</span>
+						<input type="text">
+					</label>
+		
+					<label>
+						<span>
+							Describe your project, concept or idea <span class="orange-required">*</span>
+						</span>
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+					</label>
+					
+					<select name="" id="project-budget">
+						<option value="-1" data-html-text="Select the budget for this project &lt;span &gt;*&lt;/span&gt;">Select the budget for this project</option>
+						<option value="Under 25k">&lt;25k</option>
+						<option value="Between 25 and 50k">25-50k</option>
+						<option value="Between 50 and 250k">50-250k</option>
+						<option value="Between 250 and 500k">250k-500k</option>
+						<option value="Over 500k">500k+</option>
+					</select>										
+					<label>
+						<span>
+							Please add any other information that might be helpful <span class="orange-required">*</span>
+						</span>
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+					</label>
+					<p class="required"><span class="orange-required">*</span> Required</p>
+					<button type="submit">Send</button>
+				</form>
+			</div>
+		</div>	

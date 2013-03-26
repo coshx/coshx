@@ -233,8 +233,9 @@ jQuery(function(){
 		//e.preventDefault();
 	});
     
-    $('.addresses li a').on('click', function(e){    	
+    /*$('.addresses li a').on('click', function(e){    	
     	e.preventDefault();
+    	alert('Hi!');
     	var l = $(this).attr('rel');
     	$('.addresses li a').removeClass('selected');
     	$(this).addClass('selected');
@@ -242,12 +243,24 @@ jQuery(function(){
     	map.panTo(latlng);
     	map.setZoom(16);
 
-    });
+    });*/
+
+	$('#content-wrapper').on({		
+		click:function(e){    	
+				e.preventDefault();				
+				var l = $(this).attr('rel');
+				$('.addresses li a').removeClass('selected');
+				$(this).addClass('selected');
+				var latlng = new google.maps.LatLng(locations[l].lat, locations[l].lng);
+				map.panTo(latlng);
+				map.setZoom(16);
+			}
+		}, 'a.location');
 
 	$(window).on("hashchange", function(e){
 		if ( window.location.hash == "#home" && (!url || url == "#")) return false;
 		url = window.location.hash || "#home";
-		var homeSections = ['about', 'projects'];
+		var homeSections = ['about', 'projects', 'services'];
 		url=url.replace('#','');
 		scroll = '';
 		if(homeSections.indexOf(url) != -1)
@@ -255,7 +268,10 @@ jQuery(function(){
 			scroll = url;
 			url = 'home';			
 		}
-		
+		else{
+			scroll = url;
+		}
+	
 		$('#content-wrapper').removeClass('fadeOut').removeClass('fadeIn');
 
 		$.ajax({
