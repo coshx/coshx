@@ -115,7 +115,7 @@ section p a{
 	background: #f6f6f6;
 }
 
-#blog{
+#blog-section{
 	background: #545454
 }
 
@@ -744,13 +744,13 @@ nav ul li a.selected, nav ul li a:hover{
 	margin-top: 60px !important;
 }
 
-#blog h3{
+#blog-section h3{
 	color: #FFF;
 	margin: 0;
 	font-size: 24px;	
 }
 
-#blog section{
+#blog-section section{
 	padding: 75px 0;
 }
 
