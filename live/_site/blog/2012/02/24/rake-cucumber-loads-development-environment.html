@@ -1,0 +1,51 @@
+<p>This is one of those gotchas that can throw a developer for a bit of a loop (at least it just threw me for a loop for the past half hour).</p>
+
+<p>If you run cucumber tests from the command line:</p>
+
+<p><code>bash
+% cucumber features
+</code>
+then <code>Rails.env.test?</code> will be set as expected and <code>config/environments/test.rb</code> will be loaded.</p>
+
+<p>However, if you run:</p>
+
+<p><code>bash
+% rake cucumber
+</code>
+then <code>Rails.env.test?</code> will be false, and <code>config/environments/development.rb</code> will be loaded.</p>
+
+<h3>Workarounds</h3>
+
+<p>Currently, there are a couple simple workarounds if you want both to behave similarly:</p>
+
+<h4>1) be explicit</h4>
+
+<ul>
+<li><code>RAILS_ENV=test rake cucumber</code></li>
+<li>annoying to have to remember, but hey, that's what aliases are for, right?</li>
+</ul>
+
+
+<h4>2) <strike>Update the cucumber rake task</strike></h4>
+
+<p>  <em>EDIT: while this correctly sets <code>Rails.env</code>, rails still loads development.rb afterwards</em><br/>
+  - add the following to the <code>cucumber:ok</code> task in <code>lib/tasks/cucumber.rake</code>:</p>
+
+<p>```ruby
+namespace :cucumber do
+  Cucumber::Rake::Task.new({:ok => 'db:test:prepare'}, 'Run features that should pass') do |t|</p>
+
+<pre><code>ENV['RAILS_ENV'] ||= 'test'
+Rails.env = ActiveSupport::StringInquirer.new(ENV['RAILS_ENV'])
+</code></pre>
+
+<p>```</p>
+
+<h3>Notes</h3>
+
+<ul>
+<li>This doesn't occur with rspec, so somehow that gem has gotten the load order correctly. If you know what rspec-rails is doing that cucumber-rails isn't, please point me in the right direction in the comments.</li>
+<li>I've tested with both rails 3.1 and 3.2.1 and seen the same behavior.</li>
+<li>Thanks to <a href="http://stackoverflow.com/questions/2715035/rails-env-vs-rails-env">rails-env-vs-rails-env on stackoverflow</a> for the tip on <code>Rails.env</code></li>
+</ul>
+

@@ -14,8 +14,13 @@
 	<script src="js/jquery.foundation.reveal.js"></script>
 	<script src="js/jquery.localscroll.js"></script>
 	<script src="js/jquery.scrollTo.js"></script>
-	<script src="js/jquery.inview.min.js"></script>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script src="js/jquery.inview.min.js"></script>	
+	<script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+	<script src="js/wax.leaf.min.js"></script>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+<![endif]-->
 	<script src="js/custom.js"></script>
 </head>
 <body>
@@ -37,7 +42,7 @@
 						<a href="#services" rel="services">Our services</a>
 					</li>
 					<li>
-						<a href="blog.htm">Blog</a>
+						<a href="#blog">Blog</a>
 					</li>
 					<li>
 						<a href="#contact" rel="contact">Contact us</a>
@@ -79,113 +84,113 @@
 		</article>
 		<!-- #home -->
 
-				<article id="about">
-					<section class="row">
-						<h1>The team</h1>
-						<div class="dots"></div>
-						<p class="eight column centered text-center">
-							We're a distributed team of people passionate about software. Here's a little more about each of us.
-						</p>
-						<div class="the-team twelve column centered" id="team-grid">
-							<div class="column six two-team-mates">
-								<div class="team-mate">
-									<a href="#bentaitelbaum">
-										<img src="img/employees/ben.png" alt="">
-										<div class="team-mate-mask"></div>
-										<div class="overlay"></div>
-									</a>
-								</div>
-								<div class="team-mate">
-									<a href="#gabekopley" >
-										<img src="img/employees/gabe.png" alt="">
-										<div class="team-mate-mask"></div>
-										<div class="overlay"></div>
-									</a>
-								</div>
-							</div>
-							<div class="clear"></div>
-							<div class="column eight three-team-mates">
-								<div class="team-mate">
-									<a href="#calvindelamere" >
-										<img src="img/employees/calvin.png" alt="">
-										<div class="team-mate-mask"></div>
-										<div class="overlay"></div>
-									</a>
-								</div>
-								<div class="team-mate">
-									<a href="#davidkovsky" >
-										<img src="img/employees/david.png" alt="">
-										<div class="team-mate-mask"></div>
-										<div class="overlay"></div>
-									</a>
-								</div>
-								<div class="team-mate">
-									<a href="#davekapp" >
-										<img src="img/employees/dave.png" alt="">
-										<div class="team-mate-mask"></div>
-										<div class="overlay"></div>
-									</a>
-								</div>
-							</div>
-							<div class="clear"></div>
-							<div class="column eleven four-team-mates">
-								<div class="team-mate">
-									<a href="#michaelmakarov">
-										<img src="img/employees/michael.png" alt="">
-										<div class="team-mate-mask"></div>
-										<div class="overlay"></div>
-									</a>
-								</div>
-								<div class="team-mate">
-									<a href="#ryanahearn">
-										<img src="img/employees/ryan.png" alt="">
-										<div class="team-mate-mask"></div>
-										<div class="overlay"></div>
-									</a>
-								</div>
-								<div class="team-mate">
-									<a href="#chielozimmerman">
-										<img src="img/employees/chielo.png" alt="">
-										<div class="team-mate-mask"></div>
-										<div class="overlay"></div>
-									</a>
-								</div>
-								<div class="team-mate">
-									<a href="#edigil">
-										<img src="img/employees/gil.png" alt="">
-										<div class="team-mate-mask"></div>
-										<div class="overlay"></div>
-									</a>
-								</div>
-							</div>
-							<div class="clear"></div>
-							<div class="column eight three-team-mates">
-								<div class="team-mate">
-									<a href="#sangwonseo">
-										<img src="img/employees/sang.png" alt="">
-										<div class="team-mate-mask"></div>
-										<div class="overlay"></div>
-									</a>
-								</div>
-								<div class="team-mate">
-									<a href="#">
-										<img src="img/employees/team-mate.png" alt="">
-										<div class="team-mate-mask"></div>
-										<div class="overlay"></div>
-									</a>
-								</div>
-								<div class="team-mate">
-									<img src="img/you.png" alt="">
-									<div class="overlay"></div>
-								</div>
-							</div>
-							<div class="clear"></div>
+		<article id="about">
+			<section class="row">
+				<h1>The team</h1>
+				<div class="dots"></div>
+				<p class="eight column centered text-center">
+					We're a distributed team of people passionate about software. Here's a little more about each of us.
+				</p>
+				<div class="the-team twelve column centered" id="team-grid">
+					<div class="column six two-team-mates">
+						<div class="team-mate">
+							<a href="#bentaitelbaum">
+								<img src="img/employees/team-mate.png" alt="">
+								<div class="team-mate-mask"></div>
+								<div class="overlay"></div>
+							</a>
 						</div>
-						<a href="#projects" class="arrow-down"></a>
-					</section>
-				</article>
-				<!-- #team -->
-		
+						<div class="team-mate">
+							<a href="#gabekopley" >
+								<img src="img/employees/team-mate.png" alt="">
+								<div class="team-mate-mask"></div>
+								<div class="overlay"></div>
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="column eight three-team-mates">
+						<div class="team-mate">
+							<a href="#calvindelamere" >
+								<img src="img/employees/team-mate.png" alt="">
+								<div class="team-mate-mask"></div>
+								<div class="overlay"></div>
+							</a>
+						</div>
+						<div class="team-mate">
+							<a href="#davidkovsky" >
+								<img src="img/employees/team-mate.png" alt="">
+								<div class="team-mate-mask"></div>
+								<div class="overlay"></div>
+							</a>
+						</div>
+						<div class="team-mate">
+							<a href="#davekapp" >
+								<img src="img/employees/team-mate.png" alt="">
+								<div class="team-mate-mask"></div>
+								<div class="overlay"></div>
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="column eleven four-team-mates">
+						<div class="team-mate">
+							<a href="#michaelmakarov">
+								<img src="img/employees/team-mate.png" alt="">
+								<div class="team-mate-mask"></div>
+								<div class="overlay"></div>
+							</a>
+						</div>
+						<div class="team-mate">
+							<a href="#ryanahearn">
+								<img src="img/employees/team-mate.png" alt="">
+								<div class="team-mate-mask"></div>
+								<div class="overlay"></div>
+							</a>
+						</div>
+						<div class="team-mate">
+							<a href="#sangwonseo">
+								<img src="img/employees/team-mate.png" alt="">
+								<div class="team-mate-mask"></div>
+								<div class="overlay"></div>
+							</a>
+						</div>
+						<div class="team-mate">
+							<a href="#chielozimmerman">
+								<img src="img/employees/team-mate.png" alt="">
+								<div class="team-mate-mask"></div>
+								<div class="overlay"></div>
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="column eight three-team-mates">
+						<div class="team-mate">
+							<a href="#">
+								<img src="img/employees/team-mate.png" alt="">
+								<div class="team-mate-mask"></div>
+								<div class="overlay"></div>
+							</a>
+						</div>
+						<div class="team-mate">
+							<a href="#">
+								<img src="img/employees/team-mate.png" alt="">
+								<div class="team-mate-mask"></div>
+								<div class="overlay"></div>
+							</a>
+						</div>
+						<div class="team-mate">
+							<img src="img/you.png" alt="">
+							<div class="overlay"></div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<a href="#projects" class="arrow-down"></a>
+			</section>
+		</article>
+		<!-- #team -->
+
 		<article id="projects">
 			<section class="row">
 				<h1>Our Projects</h1>
@@ -364,7 +369,7 @@
 		</section>
 	</article>
 	<!-- #quote -->
-	<article id="blog">
+	<article id="blog-section">
 		<section class="row">
 			<div class="column three">
 				<h3>Latest Blog Posts</h3>

@@ -1,0 +1,113 @@
+<p>One of my favorite helper libraries when testing is <a href="https://github.com/thoughtbot/shoulda-matchers">thoughtbot's shoulda-matchers</a>. They do a great job making common situations easy to test in one line, but I recently ran into a gotcha with the <code>validate_uniqueness_of</code> matcher. Validating both uniqueness of a polymorphic association and another validation on the same association can cause some strange error messages regarding undefined classes due to the way scoping and validations are handled.</p>
+
+<h2>The Problem</h2>
+
+<p>For an example application, we have some classes that are related to each other with a polymorphic association. In this case, college students and courses. The uniqueness restriction comes in because we want to ensure that each student is only registered for the course once, but we want to make sure that an <code>UndergradStudent</code> and a <code>GraduateStudent</code> can both take the course at the same time even if they have the same <code>id</code>.</p>
+
+<p>```ruby</p>
+
+<h1>test</h1>
+
+<p>describe Enrollment do
+  # valudate_uniqueness_of requires a previously created model
+  before(:each) { Factory.create :enrollment }</p>
+
+<p>  it { should validate_uniqueness_of(:course_id).scoped_to :enrollee_type, :enrollee_id }
+end</p>
+
+<h1>implementation</h1>
+
+<p>class Enrollment
+  belongs_to :enrollee, :polymorphic => true
+  belongs_to :course</p>
+
+<p>  validates_uniqueness_of :course_id, :scope => [:enrollee_type, :enrollee_id]
+  validates_presence_of :course
+  validates_presence_of :enrollee
+end</p>
+
+<p>class UndergradStudent
+  has_many :courses, :as => :enrollee
+end</p>
+
+<p>class GraduateStudent
+  has_many :courses, :as => :enrollee
+end</p>
+
+<p>class Course
+  has_many :enrollments
+end
+```</p>
+
+<p>Perfect. Now we go ahead and run our uniqueness test and have a beer after a long day...</p>
+
+<pre><code>Failures:
+
+  1) Enrollment
+     Failure/Error: it { should validate_uniqueness_of(:course_id).scoped_to :enrollee_type, :enrollee_id }
+     NameError:
+       uninitialized constant UndergradStudenu
+</code></pre>
+
+<p>Or not. UndergradStudenu? Where in the world did that come from?</p>
+
+<h2>The Source</h2>
+
+<p>The source of this error is a combination of three things.</p>
+
+<ul>
+<li>How <code>ValidateUniquenessOfMatcher</code> changes the uniqueness scope.</li>
+<li>The fact that <code>AllowValueMatcher</code> calls <code>#valid?</code> on our model to see if the error message matches what is expected.</li>
+<li>The existence of <code>validates_presence_of :enrollee</code> in our code.</li>
+</ul>
+
+
+<p><code>ValidateUniquenessOfMatcher</code> generates a scope value that should not trigger a uniqueness error by using <code>#next</code>.</p>
+
+<p><code>ruby
+next_value = if previous_value.respond_to?(:next)
+  previous_value.next
+else
+  previous_value.to_s.next
+end
+</code></p>
+
+<p><code>AllowValueMatcher</code> calls <code>#valid?</code> on our model.</p>
+
+<p><code>ruby
+def errors_match?
+  @instance.valid?
+  @errors = errors_for_attribute(@instance, @attribute)
+  @errors = [@errors] unless @errors.is_a?(Array)
+  @expected_message ? (errors_match_regexp? || errors_match_string?) : (@errors.compact.any?)
+end
+</code></p>
+
+<p>The last piece of the puzzle is our <code>validates_presence_of :enrollee</code>. <code>@instance</code> from above is</p>
+
+<p>```ruby</p>
+
+<h1><Enrollment id: nil, enrollee_id: 1, enrollee_type: "UndergradStudenu", course_id: 1></h1>
+
+<p>```</p>
+
+<p>Without the presence validation, we would never load the <code>enrollee</code> object and our test would pass. Without the full validation caused by calling <code>@instance.valid?</code> we would similarly never load the <code>enrollee</code> object and our test would pass. The combination means that the presence validator attempts to load the full enrollee object and cannot, because its type does not represent a real class.</p>
+
+<h2>The Workaround</h2>
+
+<p>Pleasing the matcher can be done by simply declaring <code>UndergradStudenu</code> as a class in the test file that inherits from one of the possible types of <code>enrollee</code>.</p>
+
+<p>```ruby
+describe Enrollment do
+  # two lines to make the matcher happy
+  class UndergradStudenu &lt; GraduateStudent; end
+  before(:each) { Factory.create :enrollment }</p>
+
+<p>  it { should validate_uniqueness_of(:course_id).scoped_to :enrollee_type, :enrollee_id }
+end
+```</p>
+
+<p>This allows the presence validation to continue without raising an error. And finally:</p>
+
+<pre><code>1 example, 0 failures
+</code></pre>

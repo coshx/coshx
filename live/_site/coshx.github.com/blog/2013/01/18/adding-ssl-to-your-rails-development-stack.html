@@ -1,0 +1,25 @@
+<p>The biggest difference between the development and production stacks for most applications I've worked on has been the inclusion of</p>
+
+<p><code>ruby
+config.force_ssl = true
+</code></p>
+
+<p>only in <code>config/environments/production.rb</code>. This seemingly small difference can be the source of many tough to catch redirect bugs. Up until now, enabling SSL in your development environment has been difficult to setup and required manually installing and configuring <a href="http://nginx.com">nginx</a> or something similar to act as an SSL endpoint and reverse proxy.</p>
+
+<p>I've been using 37Signals' excellent <a href="http://pow.cx">Pow</a> server for development work for some time now. It's a simple solution for running all of your applications, and has been made even better with version 0.4's <a href="http://xip.io">xip.io</a> integration. Xip.io makes it easy for any device on your local network to access your development server, perfect for testing mobile sites, Windows browsers, or giving demos.</p>
+
+<p>The only problem with Pow - for me - has been the aforementioned difficulty setting up SSL. Until today, that is. Today I stumbled upon the wonderfully simple <a href="https://github.com/jugyo/tunnels">tunnels</a> project. One command in a <a href="http://www.gnu.org/software/screen/">screen</a> session is all you need to enable SSL for all of your Pow applications.</p>
+
+<p>Out of the box, tunnels works perfectly for <code>*.dev</code> addresses, but does not properly respond when using xip.io. This is because tunnels binds to <code>127.0.0.1</code> by default, and the xip.io DNS directs your browser to your public IP address. The fix for that is quite easy. Simply start tunnels with:</p>
+
+<p><code>bash
+$ sudo tunnels 0.0.0.0:443 80
+</code></p>
+
+<p>Or, if you use <a href="http://rvm.io">rvm</a>:</p>
+
+<p><code>bash
+$ rvmsudo tunnels 0.0.0.0:443 80
+</code></p>
+
+<p>Now we're one step closer to running an identical stack in development and production and catching SSL bugs before your users do.</p>

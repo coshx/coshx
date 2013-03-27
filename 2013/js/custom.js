@@ -1,9 +1,9 @@
 var locations = Array();
-var map; 
+var map, markers = Array();
 
-locations['boulder'] = {'lat': 40.02909, 'lng': -105.25248 };
-locations['charlottesville'] = {'lat': 38.02745, 'lng': -78.47101 };
-locations['sanfrancisco'] = {'lat': 37.78182, 'lng': -122.40833 };
+locations['boulder'] = [40.02909, -105.25248];
+locations['charlottesville'] = [38.02745, -78.47101];
+locations['sanfrancisco'] = [37.78182, -122.40833];
 
 function shuffle(v){
     for(var j, x, i = v.length; i; j = parseInt(Math.random() * i), x = v[--i], v[i] = v[j], v[j] = x);
@@ -48,6 +48,35 @@ function initialize()
 		position: pos_sanfrancisco,            
 		map: map,
 		icon: "img/map_marker.png"
+	});
+}
+
+function initialize_leaf(){
+
+	var coshxIcon = L.icon({
+		iconUrl: 'img/map_marker.png',	
+		iconSize: [30, 49],
+		iconAnchor: [14, 49],
+		popupAnchor:  [0, -49]
+	});
+
+	wax.tilejson('http://api.tiles.mapbox.com/v2/examples.map-vyofok3q.jsonp',
+	function(tilejson) {
+		map = new L.Map('map-canvas', { scrollWheelZoom: false})
+		.addLayer(new wax.leaf.connector(tilejson))
+		.setView(new L.LatLng(39.9, -101.5), 5);
+
+		markers['boulder'] = L.marker(locations['boulder'], {icon: coshxIcon})
+				.bindPopup('Boulder<br>3080 Valmont Rd Suite<br>280 Boulder, CO 80301')
+				.addTo(map);
+
+		markers['charlottesville'] = L.marker(locations['charlottesville'], {icon: coshxIcon})
+				.bindPopup('Charlottesville<br>1110 Market St East Suite N7<br>Charlottesville, VA 22902')
+				.addTo(map);
+
+		markers['sanfrancisco'] = L.marker(locations['sanfrancisco'], {icon: coshxIcon})
+				.bindPopup('San Francisco<br>972 Mission Street, 5th Floor<br>San Francisco, CA 94103')
+				.addTo(map);
 	});
 }
 
@@ -250,10 +279,9 @@ jQuery(function(){
 				e.preventDefault();				
 				var l = $(this).attr('rel');
 				$('.addresses li a').removeClass('selected');
-				$(this).addClass('selected');
-				var latlng = new google.maps.LatLng(locations[l].lat, locations[l].lng);
-				map.panTo(latlng);
-				map.setZoom(16);
+				$(this).addClass('selected');			
+				map.setView(new L.LatLng(locations[l][0], locations[l][1]), 16);				
+				markers[l].openPopup();
 			}
 		}, 'a.location');
 

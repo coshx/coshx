@@ -1,0 +1,2778 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"paddin",
+				"padding"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"border",
+				"bordered"
+			],
+			[
+				"s",
+				"static"
+			],
+			[
+				"ba",
+				"background-size"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"margin-",
+				"margin-left"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"header-",
+				"header-gray-planner"
+			],
+			[
+				"in",
+				"inherit"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"print",
+				"println"
+			],
+			[
+				"o",
+				"StdOut"
+			],
+			[
+				"c",
+				"cl	class"
+			],
+			[
+				"trans",
+				"transaction_type"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"text",
+				"textStatus"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"al",
+				"alert"
+			],
+			[
+				"fls",
+				"false"
+			],
+			[
+				"iso",
+				"isoActive"
+			],
+			[
+				"aget",
+				"agenttwitter"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"wp_qu",
+				"wp_query"
+			],
+			[
+				"conta",
+				"container"
+			],
+			[
+				"margin-t",
+				"margin-top"
+			],
+			[
+				"remo",
+				"removeClass"
+			],
+			[
+				"fon",
+				"font"
+			],
+			[
+				"tex",
+				"textarea"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"loc",
+				"location"
+			],
+			[
+				"lo",
+				"locations"
+			],
+			[
+				"backgrou",
+				"background-position"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"media",
+				"media smartphone	smartphone"
+			],
+			[
+				"me",
+				"media smartphone	smartphone"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"medi",
+				"media query ipad	ipad"
+			],
+			[
+				"pos",
+				"pos-r	position: relative;"
+			],
+			[
+				"meda",
+				"media smartphone	smartphone"
+			],
+			[
+				"popup_image",
+				"popup_image_html"
+			],
+			[
+				"vespe",
+				"vesperblack"
+			],
+			[
+				"if",
+				"if	<?php if (…) ?> … <?php endif ?>"
+			],
+			[
+				"bord",
+				"border-top"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"col",
+				"column"
+			],
+			[
+				"pa",
+				"parentTable"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"CPU",
+				"CPU_BOARD"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"comm",
+				"commands"
+			],
+			[
+				"border-bott",
+				"border-bottom-color"
+			],
+			[
+				"vesper",
+				"vesper_rocks"
+			],
+			[
+				"form",
+				"form_template"
+			],
+			[
+				"pop",
+				"popup_template"
+			],
+			[
+				"pret",
+				"preventDefault"
+			],
+			[
+				"border-le",
+				"border-bottom-left-radius"
+			],
+			[
+				"border-top",
+				"border-top-left-radius"
+			],
+			[
+				"glo",
+				"global"
+			],
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"f",
+				"faker"
+			],
+			[
+				"arr",
+				"array	$… = array (…)"
+			],
+			[
+				"home",
+				"homeSections"
+			],
+			[
+				"fde",
+				"fadeOut"
+			],
+			[
+				"fade",
+				"fadeInDown"
+			],
+			[
+				"bac",
+				"background-position"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"services",
+				"servicesText"
+			],
+			[
+				"mose",
+				"mouseenter"
+			],
+			[
+				"move",
+				"movetruck-heart-throw"
+			],
+			[
+				"truc",
+				"truck3"
+			],
+			[
+				"tru",
+				"truck2"
+			],
+			[
+				"li",
+				"linear"
+			],
+			[
+				"fa",
+				"fadeIn"
+			],
+			[
+				"fadeou",
+				"fadeOutUp"
+			],
+			[
+				"graph",
+				"graph-wrapper"
+			],
+			[
+				"team",
+				"team-mate"
+			],
+			[
+				"projec",
+				"project"
+			],
+			[
+				"par",
+				"parent"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"ta",
+				"tax_query"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"pr",
+				"product"
+			],
+			[
+				"inser",
+				"insert_data"
+			],
+			[
+				"INSERT",
+				"insert_data"
+			],
+			[
+				"PRINT",
+				"print_r"
+			],
+			[
+				"new",
+				"new_user"
+			],
+			[
+				"padding-",
+				"padding-bottom"
+			],
+			[
+				"bo",
+				"border-bottom"
+			],
+			[
+				"lis",
+				"lisp-i	list-style-position: inside;"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"backgr",
+				"background"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"url",
+				"urlencode"
+			],
+			[
+				"sea",
+				"search_query"
+			],
+			[
+				"sear",
+				"search_categories"
+			],
+			[
+				"locatio",
+				"location_terms"
+			],
+			[
+				"order",
+				"orderby"
+			],
+			[
+				"va",
+				"var_dump"
+			],
+			[
+				"wp",
+				"wp_query"
+			],
+			[
+				"phpn",
+				"phpinfo"
+			],
+			[
+				"thi",
+				"thumb_height"
+			],
+			[
+				"th",
+				"thumb_height"
+			],
+			[
+				"thum",
+				"thumb_height"
+			],
+			[
+				"URI",
+				"URI	Laravel: URI::segment()"
+			],
+			[
+				"In",
+				"Input	Laravel: Input::get()"
+			],
+			[
+				"Redire",
+				"Redirect	Laravel: Redirect::to_action()"
+			],
+			[
+				"Redirect",
+				"Redirect	Laravel: Redirect::to()"
+			],
+			[
+				"View",
+				"View	Laravel: View::make()"
+			],
+			[
+				"Rou",
+				"Route	Laravel: Route::controller()"
+			],
+			[
+				"Route",
+				"Route	Laravel: Route::secure_controller()"
+			],
+			[
+				"pro",
+				"product"
+			],
+			[
+				"prod",
+				"products"
+			],
+			[
+				"paddig",
+				"padding-top"
+			],
+			[
+				"save_",
+				"save_agent_owner"
+			],
+			[
+				"age",
+				"agent-owner"
+			],
+			[
+				"MARGIN",
+				"margin-top"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"sele",
+				"selected_tab"
+			],
+			[
+				"vi",
+				"video"
+			],
+			[
+				"test",
+				"testimonials-page"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/E/Projects/php_dev/www/coshx/single.htm",
+			"settings":
+			{
+				"buffer_size": 10233,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/Projects/php_dev/www/coshx/blog.htm",
+			"settings":
+			{
+				"buffer_size": 9838,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "contact.htm",
+			"settings":
+			{
+				"buffer_size": 1546,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/Projects/php_dev/www/coshx/js/custom.js",
+			"settings":
+			{
+				"buffer_size": 8711,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/Projects/php_dev/www/coshx/css/style.css",
+			"settings":
+			{
+				"buffer_size": 22588,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/Projects/php_dev/www/coshx/css/responsive.css",
+			"settings":
+			{
+				"buffer_size": 5830,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/Projects/php_dev/www/coshx/css/animations.css",
+			"settings":
+			{
+				"buffer_size": 27024,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 242.0,
+		"selected_items":
+		[
+			[
+				"java",
+				"Set Syntax: Java"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"html	",
+				"Set Syntax: HTML"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"tasks new",
+				"Tasks: New document"
+			],
+			[
+				"git hi",
+				"Git: Commit history"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git st",
+				"Git: Show Tags"
+			],
+			[
+				"tasks",
+				"Tasks: Cancel"
+			],
+			[
+				"new",
+				"Tasks: New"
+			],
+			[
+				"task",
+				"Tasks: New document"
+			],
+			[
+				"taks",
+				"Tasks: New"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"emmet remove",
+				"Emmet: Remove Tag"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"emm",
+				"View: Toggle Minimap"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git sta",
+				"Git: Status"
+			],
+			[
+				"git checkout",
+				"Git: Checkout Current File"
+			],
+			[
+				"git diff",
+				"Git: Diff Current File"
+			],
+			[
+				"git re",
+				"Git: Checkout Current File"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"git dif",
+				"Git: Diff Tool Current File"
+			],
+			[
+				"browe",
+				"Preferences: Browse Packages"
+			],
+			[
+				"php	",
+				"Set Syntax: PHP"
+			],
+			[
+				"asp",
+				"Set Syntax: ASP"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git co",
+				"Git: Amend Commit"
+			],
+			[
+				"sta",
+				"Git: Status"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git add ",
+				"Git: Add Current File"
+			],
+			[
+				"git comm",
+				"Git: Amend Commit"
+			],
+			[
+				"br",
+				"Git: Change Branch"
+			],
+			[
+				"git bran",
+				"Git: New Branch"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git add . ",
+				"Git: Add..."
+			],
+			[
+				"git ini",
+				"Git: Init"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"synt xml",
+				"Set Syntax: XML"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"set javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sett htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"emmet as",
+				"Emmet: Evaluate Math Expression"
+			],
+			[
+				"sst html",
+				"Set Syntax: HTML"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal p",
+				"Package Control: Install Package"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"commen",
+				"Toggle Comment"
+			],
+			[
+				"instl ",
+				"Package Control: Install Package"
+			],
+			[
+				"syn php",
+				"Set Syntax: PHP"
+			],
+			[
+				"instak",
+				"Package Control: Install Package"
+			],
+			[
+				"emmet",
+				"Set Syntax: Emmet"
+			],
+			[
+				"togg side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"gi",
+				"Git: Status"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"plain ",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"syn jac",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"codex",
+				"WordPress Codex: Search Selection"
+			],
+			[
+				"syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"instal ",
+				"Package Control: Install Package"
+			],
+			[
+				"toggl",
+				"View: Toggle Side Bar"
+			],
+			[
+				"synta html",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn hm",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"PHP Code Sniffer: ",
+				"PHP Code Sniffer: Sniff this file"
+			],
+			[
+				"syn",
+				"Set Syntax: HTML"
+			],
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"synta css",
+				"Set Syntax: CSS"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"install pack",
+				"Package Control: Install Package"
+			],
+			[
+				"synta php",
+				"Set Syntax: PHP"
+			],
+			[
+				"syntax c",
+				"Set Syntax: C#"
+			],
+			[
+				"wordpre",
+				"WordPress Codex: Search Selection"
+			],
+			[
+				"wp",
+				"Snippet: wp_list_pages"
+			],
+			[
+				"wo",
+				"Snippet: WP Config (complete)"
+			],
+			[
+				"install page",
+				"Package Control: Install Package"
+			],
+			[
+				"INST",
+				"Package Control: Install Package"
+			],
+			[
+				"instaLL",
+				"Package Control: Install Package"
+			],
+			[
+				"git log",
+				"Git: Log Current File"
+			],
+			[
+				"synt php",
+				"Set Syntax: PHP"
+			],
+			[
+				"git comme",
+				"Set Syntax: Git Commit Message"
+			],
+			[
+				"wr",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"git add .",
+				"Git: Add..."
+			],
+			[
+				"snipper",
+				"Snippet: Prototype"
+			],
+			[
+				"synja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"snippet",
+				"Snippet: <?php if (…) ?> … <?php endif ?>"
+			],
+			[
+				"snippt",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"syntax php",
+				"Set Syntax: PHP"
+			],
+			[
+				"Snippet: ",
+				"Snippet: html"
+			],
+			[
+				"synt html",
+				"Set Syntax: HTML"
+			],
+			[
+				"syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"git",
+				"Git: Push"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"toggle",
+				"View: Toggle Side Bar"
+			],
+			[
+				"closel",
+				"File: Close All"
+			],
+			[
+				"file",
+				"File: Close All"
+			],
+			[
+				"sideba",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"syntax:non",
+				"Set Syntax: Regular Expressions (Python)"
+			],
+			[
+				"synt",
+				"Set Syntax: SQL"
+			],
+			[
+				"set synta",
+				"Set Syntax: HTML"
+			],
+			[
+				"set syntax p",
+				"Set Syntax: PHP"
+			],
+			[
+				"",
+				"About"
+			]
+		],
+		"width": 424.0
+	},
+	"console":
+	{
+		"height": 436.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": true,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/Dev/Java/QuickFindUF.java",
+		"/C/Users/STEVE/AppData/Roaming/Sublime Text 2/Packages/Java/JavaC.sublime-build",
+		"/C/Users/STEVE/algs4/java/bin/runJava.bat",
+		"/E/Dev/Rails/expenses/Gemfile.lock",
+		"/E/Dev/Rails/expenses/app/assets/stylesheets/font-awesome.min.css",
+		"/C/Users/STEVE/AppData/Roaming/Sublime Text 2/Packages/Terminal/PS.bat",
+		"/E/Dev/Rails/expenses/config/environments/test.rb",
+		"/E/Dev/Rails/expenses/config/environments/development.rb",
+		"/C/Downloads/FortAwesome-Font-Awesome-v3.0.2-0-g13d5dd3/FortAwesome-Font-Awesome-13d5dd3/css/font-awesome.css",
+		"/E/Dev/Rails/expenses/app/views/accounts/new.html.erb",
+		"/E/Games Images/KSP_0.19/KSP_0.19/settings.cfg",
+		"/E/Games Images/KSP_0.19/KSP_0.19/2013-03-21_101352/error.log",
+		"/E/Dev/Rails/expenses/app/models/transaction.rb",
+		"/C/Users/STEVE/Desktop/Income Expense.txt",
+		"/E/Dev/Rails/expenses/app/views/accounts/index.html.erb",
+		"/E/Dev/Rails/expenses/config/routes.rb",
+		"/E/Dev/Rails/expenses/app/assets/stylesheets/application.css",
+		"/C/Users/STEVE/Desktop/tv testing.htm",
+		"/C/Users/STEVE/Desktop/tv testing.ht.aspx",
+		"/E/Dev/Rails/expenses/app/controllers/dashboard_controller.rb",
+		"/E/Dev/Rails/expenses/app/models/accounts.rb",
+		"/E/Dev/Rails/expenses/app/views/dashboard/index.html.erb",
+		"/E/Dev/Rails/expenses/app/controllers/accounts_controller.rb",
+		"/E/Dev/Rails/expenses/app/assets/stylesheets/bootstrap.css",
+		"/E/Dev/Rails/expenses/app/assets/stylesheets/dashboard.css.scss",
+		"/E/Dev/Rails/expenses/db/migrate/20130319164738_create_accounts.rb",
+		"/E/Dev/Rails/expenses/db/migrate/20130319102711_create_transactions.rb",
+		"/E/Dev/Rails/expenses/db/migrate/20130319164646_accounts.rb",
+		"/E/Dev/Rails/expenses/Gemfile",
+		"/E/Dev/Rails/battleships/app/controllers/api_controller.rb",
+		"/E/Dev/Rails/battleships/app/views/api/index.html.erb",
+		"/E/Dev/Rails/battleships/config/routes.rb",
+		"/E/Dev/javascript/Chart.js/component.json",
+		"/C/Users/STEVE/AppData/Roaming/Sublime Text 2/Packages/Tag/Tag Package.sublime-settings",
+		"/C/Downloads/Flat-UI-master/Flat-UI-master/css/bootstrap.css",
+		"/C/Downloads/Flat-UI-master/Flat-UI-master/css/flat-ui.css",
+		"/E/Dev/Rails/expenses/app/controllers/application_controller.rb",
+		"/E/Dev/Rails/expenses/config.ru",
+		"/E/Projects/php_dev/www/coshx/pages/contact",
+		"/C/Users/STEVE/Desktop/Projects/Gil - Editdrop/HTML/signup.htm",
+		"/E/Projects/php_dev/www/coshx/css/style.css",
+		"/E/Projects/php_dev/www/coshx/css/dropkick.css",
+		"/C/Users/STEVE/Desktop/Projects/Gil - Editdrop/HTML/js/jquery.dropkick-1.0.0.js",
+		"/C/Users/STEVE/Desktop/Projects/Gil - Editdrop/HTML/js/custom.js",
+		"/E/Projects/php_dev/www/coshx/js/jquery.dropkick.js",
+		"/C/Users/STEVE/Downloads/vandelay/JamieLottering-DropKick-v1.0.0-2-g5b230fb/JamieLottering-DropKick-5b230fb/readme.md",
+		"/C/Users/STEVE/Desktop/Projects/Gil - Editdrop/HTML/js/custom-signup.js",
+		"/C/Users/STEVE/Downloads/vandelay/JamieLottering-DropKick-v1.0.0-2-g5b230fb/JamieLottering-DropKick-5b230fb/jquery.dropkick-1.0.0.js",
+		"/E/Projects/php_dev/www/aphotofolio/wp-content/themes/aphotofolio/dropkick.css",
+		"/C/Users/STEVE/Desktop/Projects/templates/design 2/css/style.css",
+		"/C/Users/STEVE/AppData/Roaming/Sublime Text 2/Packages/Web Inspector/swi.sublime-settings",
+		"/C/Users/STEVE/Desktop/Projects/templates/design 2/js/custom.js",
+		"/C/Users/STEVE/Desktop/Projects/templates/design 2/index.htm",
+		"/C/Users/STEVE/AppData/Roaming/Sublime Text 2/Packages/Web Inspector/Default (Windows).sublime-keymap",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-2/avia.js",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-2/index.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-2/functions 2.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-2/function-set-avia-frontend.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-2/loop-index.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-2/template-portfolio.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-2/loop-portfolio.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-2/template-dynamic.php",
+		"/E/Projects/php_dev/www/theagentlist/wp-content/themes/theagentlist/functions.php",
+		"/E/Projects/php_dev/www/theagentlist/wp-content/themes/theagentlist/add_listing.php",
+		"/E/Projects/php_dev/www/theagentlist/wp-content/themes/theagentlist/edit_listing.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-2/functions.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-2/add_listing.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-2/edit_listing.php",
+		"/C/Downloads/prettyPhoto_uncompressed_3.1.5/js/jquery.prettyPhoto.js",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/prettyPhoto.css",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/search.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/taxonomy.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/functions.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/footer.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/avia.js",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/index.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/jquery.prettyPhoto.js",
+		"/C/Downloads/prettyPhoto_compressed_3.1.5/js/jquery.prettyPhoto.js",
+		"/E/Projects/php_dev/www/theagentlist/wp-content/themes/theagentlist/agent_profile.php",
+		"/E/Projects/php_dev/www/theagentlist/wp-content/themes/theagentlist/agent_register.php",
+		"/C/Ruby193/lib/ruby/gems/1.9.1/gems/kgio-2.8.0/ext/kgio/mkmf.log",
+		"/E/Projects/php_dev/www/theagentlist/wp-content/themes/theagentlist/index.php",
+		"/E/Projects/php_dev/www/tinyrss/README.md",
+		"/E/Projects/php_dev/www/tinyrss/config.php",
+		"/C/Users/STEVE/Downloads/vandelay/lazyboyinjozi@gmail.com-takeout/lazyboyinjozi@gmail.com-takeout/Reader/subscriptions.xml",
+		"/E/Projects/php_dev/www/tinyrss/schema/ttrss_schema_mysql.sql",
+		"/C/Users/STEVE/Downloads/vandelay/lazyboyinjozi@gmail.com-takeout/lazyboyinjozi@gmail.com-takeout/Reader/liked.json",
+		"/C/Users/STEVE/Downloads/vandelay/lazyboyinjozi@gmail.com-takeout/lazyboyinjozi@gmail.com-takeout/Reader/starred.json",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/wp-config.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/header.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/jquery.infinitescroll.min.js",
+		"/E/Projects/php_dev/www/theagentlist/wp-content/themes/theagentlist/js/jquery.infinitescroll.min.js",
+		"/E/Projects/php_dev/www/theagentlist/wp-content/themes/theagentlist/footer.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/footer 2.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/index 2.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/functions 2.php",
+		"/E/Projects/php_dev/www/coshx/contact.htm",
+		"/E/Projects/php_dev/www/coshx/js/custom.js",
+		"/E/Projects/php_dev/www/theagentlist/wp-content/themes/theagentlist/header.php",
+		"/E/Projects/php_dev/www/theagentlist/wp-content/themes/theagentlist/js/custom.js",
+		"/E/Projects/php_dev/www/coshx/pages/davidkovsky.htm",
+		"/E/Projects/php_dev/www/coshx/pages/davekapp.htm",
+		"/E/Projects/php_dev/www/coshx/pages/michaelmakarov.htm",
+		"/E/Projects/php_dev/www/coshx/pages/ryanahearn.htm",
+		"/E/Projects/php_dev/www/coshx/pages/gabekopley.htm",
+		"/E/Projects/php_dev/www/coshx/pages/chielozimmerman.htm",
+		"/E/Projects/php_dev/www/coshx/pages/sangwonseo.htm",
+		"/E/Projects/php_dev/www/coshx/index.htm",
+		"/E/Projects/php_dev/www/coshx/pages/home.htm",
+		"/E/Projects/php_dev/www/coshx/pages/bentaitelbaum.htm",
+		"/E/Projects/php_dev/www/coshx/folio.htm",
+		"/E/Projects/php_dev/www/coshx/blog.htm",
+		"/E/Projects/php_dev/www/coshx/projectplanner.htm",
+		"/E/Projects/php_dev/www/coshx/single.htm",
+		"/E/Projects/php_dev/www/coshx/pages/calvindelamere.htm",
+		"/C/Users/STEVE/AppData/Roaming/Sublime Text 2/Packages/PlainTasks/messages/Tutorial.todo",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/add_listing.php",
+		"/E/Games Images/outzip/Blood.Bowl.Legendary.Edition.RELOADED/reloaded.nfo",
+		"/C/Users/STEVE/AppData/Roaming/Sublime Text 2/Packages/PlainTasks/PlainTasks (Windows).sublime-settings",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/style.css",
+		"/E/Projects/php_dev/www/aphotofolio/wp-content/themes/aphotofolio/style.css",
+		"/C/Users/STEVE/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/STEVE/AppData/Roaming/Sublime Text 2/Packages/User/PlainTasks.sublime-settings",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/agent_profile.php",
+		"/C/Users/STEVE/AppData/Local/Temp/fz3temp-1/agent_register.php",
+		"/E/Projects/php_dev/www/coshx/css/foundation.css",
+		"/C/Users/STEVE/Desktop/Projects/templates/design 4/css/style.css",
+		"/C/Users/STEVE/Desktop/Projects/templates/design 4/index.htm"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"E:\\Projects\\php_dev\\www\\theagentlist\\wp-content\\themes\\theagentlist",
+			"E:\\Projects\\php_dev\\www\\coshx",
+			"E:\\Projects\\php_dev\\www\\coshx\\pages",
+			"E:\\Projects\\php_dev\\www\\vesperblack\\wp-content\\themes\\vesperblack",
+			"C:\\Users\\STEVE\\Desktop\\Projects\\gil - architect photography list\\theagentlist",
+			"<project>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"700px",
+			".",
+			"java",
+			"hava",
+			"icon-arrow",
+			"fonts",
+			"../assets",
+			"font/",
+			"../",
+			"'",
+			"btn",
+			"<th>",
+			"Expenses",
+			"push1",
+			"pull",
+			"offset",
+			"span4",
+			"R",
+			"palette-firm",
+			"palette-info",
+			"<div class=\"palette palette-info\">Hi there!</div>",
+			"span3",
+			"pallete",
+			"class=\"span3\"",
+			"Hi there",
+			"palette palette-info",
+			"href",
+			"<a",
+			"<a ",
+			"href",
+			"#",
+			"orange",
+			"dropki",
+			"radius",
+			"selec",
+			"value=\"",
+			"\\",
+			"front",
+			"200",
+			"_fitToViewport",
+			"resize",
+			"prettyPhoto",
+			" \\",
+			"pretty",
+			"\\",
+			"pagin",
+			"agents..",
+			"agent",
+			"temp",
+			"agentlist_pagination",
+			"agentlist",
+			"agentlist_pagination",
+			"perma",
+			"peram",
+			"infinte",
+			"project pla",
+			"proje planner",
+			"proje pall",
+			"000",
+			"for=\"\"",
+			"for",
+			"<textarea",
+			"<input type=\"text\">",
+			"<br>",
+			"artis",
+			"img/",
+			"<img src",
+			"font_options",
+			"data-magellan-arrival",
+			"contact",
+			"content-wr",
+			"theagentlist",
+			"<span class=\"orange-required\">*</span>",
+			";",
+			"*",
+			"for=\"\"",
+			"<input",
+			";",
+			"<<<<<<< ",
+			"webkit",
+			";",
+			"map: map",
+			"<span class=\"orange\">*</span>",
+			"*",
+			"text\"",
+			"href",
+			"= latlng",
+			"content-wrapper",
+			"slide",
+			"<p>",
+			"<span>",
+			"span>",
+			"<h3>",
+			"src",
+			"<img src=\"",
+			"agent",
+			"new_user",
+			"chow",
+			"init",
+			"comme",
+			"custom_feed_rewrite",
+			"action",
+			"emai",
+			"2s",
+			"500ms",
+			"twitter",
+			"rub",
+			"11421.a.hostable.me",
+			"vesper_visited",
+			"agent",
+			"cta",
+			"grid_12",
+			"container",
+			"af-form-1113522538",
+			"selec",
+			"select",
+			"selecte",
+			"template",
+			"pop up template",
+			"template",
+			"delay",
+			"logo",
+			"2s",
+			"logoAni",
+			"-o",
+			"logo",
+			"delay",
+			"delayt"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"	list-style: none;\n	color: #535353;\n	font-family: \"Open Sans\", sans-serif;\n	font-size: 14px;\n	font-weight: bold;\n",
+			"#gigdog",
+			"architectphotographers.com",
+			"architectphotographers.com/",
+			"",
+			"loading.gif",
+			"src",
+			"",
+			"data-original",
+			"1220",
+			"1240",
+			"1221",
+			"1230",
+			"1220",
+			"280",
+			"1220",
+			"'PT Serif'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/E/Projects/php_dev/www/coshx/single.htm",
+					"settings":
+					{
+						"buffer_size": 10233,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1128,
+								1128
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"is_xml": false,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 14.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/E/Projects/php_dev/www/coshx/blog.htm",
+					"settings":
+					{
+						"buffer_size": 9838,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1086,
+								1069
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"is_xml": false,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "contact.htm",
+					"settings":
+					{
+						"buffer_size": 1546,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1124,
+								1124
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"is_xml": false,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/E/Projects/php_dev/www/coshx/js/custom.js",
+					"settings":
+					{
+						"buffer_size": 8711,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								737,
+								737
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "/E/Projects/php_dev/www/coshx/css/style.css",
+					"settings":
+					{
+						"buffer_size": 22588,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								300,
+								300
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2634.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/E/Projects/php_dev/www/coshx/css/responsive.css",
+					"settings":
+					{
+						"buffer_size": 5830,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1725,
+								1725
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1301.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/E/Projects/php_dev/www/coshx/css/animations.css",
+					"settings":
+					{
+						"buffer_size": 27024,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13819,
+								13820
+							],
+							[
+								13917,
+								13918
+							],
+							[
+								14012,
+								14013
+							],
+							[
+								14107,
+								14108
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6579.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 226.0
+	},
+	"output.git":
+	{
+		"height": 25.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"anima",
+				"css/animations.css"
+			],
+			[
+				"cust",
+				"js/custom.js"
+			],
+			[
+				"contact",
+				"pages/contact.htm"
+			],
+			[
+				"reois",
+				"css/responsive.css"
+			],
+			[
+				"blog",
+				"blog.htm"
+			],
+			[
+				"single",
+				"single.htm"
+			],
+			[
+				"style",
+				"css/style.css"
+			],
+			[
+				"transacinde",
+				"app/views/transactions/index.html.erb"
+			],
+			[
+				"accounts",
+				"app/views/accounts/index.html.erb"
+			],
+			[
+				"accou",
+				"app/views/accounts/new.html.erb"
+			],
+			[
+				"applerb",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"viewsacco",
+				"app/views/accounts/index.html.erb"
+			],
+			[
+				"edit",
+				"app/views/accounts/edit.html.erb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"controlleraccounts",
+				"app/controllers/accounts_controller.rb"
+			],
+			[
+				"viewaccount",
+				"app/views/accounts/index.html.erb"
+			],
+			[
+				"migtre",
+				"db/migrate/20130321075308_create_clients.rb"
+			],
+			[
+				"viewsindex",
+				"app/views/transactions/index.html.erb"
+			],
+			[
+				"viewtransaction",
+				"app/views/transactions/new.html.erb"
+			],
+			[
+				"viewaccounts",
+				"app/views/accounts/new.html.erb"
+			],
+			[
+				"view",
+				"app/views/accounts/index.html.erb"
+			],
+			[
+				"viewsaccoutn",
+				"app/views/accounts/new.html.erb"
+			],
+			[
+				"model",
+				"app/models/accounts.rb"
+			],
+			[
+				"controller",
+				"app/controllers/accounts_controller.rb"
+			],
+			[
+				"applacss",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"index",
+				"app/views/accounts/index.html.erb"
+			],
+			[
+				"new",
+				"app/views/accounts/new.html.erb"
+			],
+			[
+				"accounthtm",
+				"app/views/accounts/index.html.erb"
+			],
+			[
+				"dashboarhtm",
+				"app/views/dashboard/index.html.erb"
+			],
+			[
+				"views",
+				"app/views/accounts/index.html.erb"
+			],
+			[
+				"index.",
+				"app/views/dashboard/index.html.erb"
+			],
+			[
+				"models",
+				"app/models/accounts.rb"
+			],
+			[
+				"mig",
+				"db/migrate/20130319102711_create_transactions.rb"
+			],
+			[
+				"bootstr",
+				"app/assets/stylesheets/bootstrap.css"
+			],
+			[
+				"scss",
+				"app/assets/stylesheets/dashboard.css.scss"
+			],
+			[
+				"controll",
+				"app/controllers/dashboard_controller.rb"
+			],
+			[
+				"coshxinde",
+				"coshx/index.htm"
+			],
+			[
+				"coshxcontac",
+				"coshx/contact.htm"
+			],
+			[
+				"custom",
+				"coshx/js/custom.js"
+			],
+			[
+				"dropkick",
+				"coshx/css/dropkick.css"
+			],
+			[
+				"dropkic",
+				"aphotofolio/dropkick.css"
+			],
+			[
+				"thefunt",
+				"theagentlist/functions.php"
+			],
+			[
+				"theadd_",
+				"theagentlist/add_listing.php"
+			],
+			[
+				"theagentedit",
+				"theagentlist/edit_listing.php"
+			],
+			[
+				"theagent",
+				"theagentlist/agent_profile.php"
+			],
+			[
+				"theagentlist",
+				"theagentlist/agent_register.php"
+			],
+			[
+				"theagentlistfunction",
+				"theagentlist/functions.php"
+			],
+			[
+				"theagetinde",
+				"theagentlist/index.php"
+			],
+			[
+				"agentfunti",
+				"theagentlist/functions.php"
+			],
+			[
+				"agentfooter",
+				"theagentlist/footer.php"
+			],
+			[
+				"infin",
+				"theagentlist/js/jquery.infinitescroll.min.js"
+			],
+			[
+				"custo",
+				"coshx/js/custom.js"
+			],
+			[
+				"coshblo",
+				"coshx/blog.htm"
+			],
+			[
+				"coshxconta",
+				"coshx/contact.htm"
+			],
+			[
+				"",
+				"coshx/contact.htm"
+			],
+			[
+				"conta",
+				"coshx/contact.htm"
+			],
+			[
+				"cosxstyle",
+				"coshx/css/style.css"
+			],
+			[
+				"foundation",
+				"coshx/css/foundation.css"
+			],
+			[
+				"coshx.js",
+				"coshx/js/custom.js"
+			],
+			[
+				"design2.js",
+				"design 2/js/custom.js"
+			],
+			[
+				"coshxstyle",
+				"coshx/css/style.css"
+			],
+			[
+				"design2",
+				"design 2/css/responsive.css"
+			],
+			[
+				"battleshcon",
+				"battleships/app/controllers/api_controller.rb"
+			],
+			[
+				"designindex",
+				"design 2/index.htm"
+			],
+			[
+				"function",
+				"aphotofolio/functions.php"
+			],
+			[
+				"aphofunctio",
+				"aphotofolio/functions.php"
+			],
+			[
+				"inde",
+				"coshx/index.htm"
+			],
+			[
+				".css",
+				"vesperblack/all.css"
+			],
+			[
+				"s",
+				"coshx/css/style.css"
+			],
+			[
+				"vesperemplate",
+				"vesperblack/template-home.php"
+			],
+			[
+				"funtion",
+				"vesperblack/functions.php"
+			],
+			[
+				"page",
+				"aphotofolio/page.php"
+			],
+			[
+				"aphototemplate",
+				"aphotofolio/template-about.php"
+			],
+			[
+				"vespertempla",
+				"vesperblack/template-home.php"
+			],
+			[
+				"vesper",
+				"vesperblack/functions.php"
+			],
+			[
+				"views/",
+				"battleships/app/views/api/index.html.erb"
+			],
+			[
+				"battle",
+				"battleships/helper.php"
+			],
+			[
+				"coshxgig",
+				"coshx/pages/gigdog.htm"
+			],
+			[
+				"vesperfunc",
+				"vesperblack/functions.php"
+			],
+			[
+				"templatefeate",
+				"aphotofolio/template-features.php"
+			],
+			[
+				"aphotofoifun",
+				"aphotofolio/functions.php"
+			],
+			[
+				"batle",
+				"battleships/app/views/layouts/application.html.erb"
+			],
+			[
+				"header",
+				"aphotofolio/header.php"
+			],
+			[
+				"styl",
+				"aphotofolio/style.css"
+			],
+			[
+				"batt",
+				"battleships/battleships.htm"
+			],
+			[
+				"functio",
+				"vesperblack/functions.php"
+			],
+			[
+				"functions.php",
+				"vesperblack/functions.php"
+			],
+			[
+				"functions/",
+				"vesperblack/functions/admin.php"
+			],
+			[
+				"vesperfunction",
+				"vesperblack/functions.php"
+			],
+			[
+				"footer",
+				"vesperblack/footer.php"
+			],
+			[
+				"foote",
+				"aphotofolio/footer.php"
+			],
+			[
+				"funco",
+				"aphotofolio/functions.php"
+			],
+			[
+				"vespfunctio",
+				"vesperblack/functions.php"
+			],
+			[
+				"apstl",
+				"aphotofolio/editor-style.css"
+			],
+			[
+				"templahome",
+				"aphotofolio/template-home.php"
+			],
+			[
+				"dfb",
+				"coshx/pages/dfb.htm"
+			],
+			[
+				".js",
+				"coshx/js/custom.js"
+			],
+			[
+				"folio",
+				"coshx/folio.htm"
+			],
+			[
+				"dfb2",
+				"coshx/pages/dfb2.htm"
+			],
+			[
+				"anim",
+				"coshx/css/animations.css"
+			],
+			[
+				"/pags",
+				"coshx/pages/home.htm"
+			],
+			[
+				"pages/",
+				"coshx/pages/dfb.htm"
+			],
+			[
+				"syl",
+				"coshx/css/style.css"
+			],
+			[
+				"custm",
+				"coshx/js/custom.js"
+			],
+			[
+				"st",
+				"coshx/css/style.css"
+			],
+			[
+				"cu.js",
+				"coshx/js/custom.js"
+			],
+			[
+				"ingt",
+				"coshx/single.htm"
+			],
+			[
+				"sst",
+				"codeplaystudios/stylesheets/style.css"
+			],
+			[
+				"stle",
+				"coshx/css/style.css"
+			],
+			[
+				"codefound",
+				"codeplaystudios/stylesheets/foundation.css"
+			],
+			[
+				"style.ss",
+				"coshx/css/style.css"
+			],
+			[
+				"eloquent",
+				"mixtape2/laravel/database/eloquent/model.php"
+			],
+			[
+				"eloq",
+				"appshop/laravel/documentation/database/eloquent.md"
+			],
+			[
+				"html",
+				"mixtape2/laravel/html.php"
+			],
+			[
+				"input",
+				"mixtape2/laravel/input.php"
+			],
+			[
+				"appl",
+				"flightbud/application/config/application.php"
+			],
+			[
+				"helper",
+				"mixtape2/laravel/helpers.php"
+			],
+			[
+				"helps",
+				"mixtape2/laravel/helpers.php"
+			],
+			[
+				"link",
+				"theagentlist/functions.php.bak"
+			],
+			[
+				"form",
+				"quicksell/laravel/form.php"
+			],
+			[
+				"asset",
+				"quicksell/laravel/asset.php"
+			],
+			[
+				"sign",
+				"quicksell/application/controllers/signup.php"
+			],
+			[
+				"signup",
+				"quicksell/application/controllers/signup.php"
+			],
+			[
+				"index.bla",
+				"dealbox/application/views/home/index.blade.php"
+			],
+			[
+				"custom.s",
+				"aphotofolio/js/custom.js"
+			],
+			[
+				"main.js",
+				"js/jquery.ezmark.min.js"
+			],
+			[
+				"helper.",
+				"laravel/laravel/vendor/Symfony/Component/Console/Helper/Helper.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 210.0,
+	"status_bar_visible": true
+}

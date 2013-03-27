@@ -1,0 +1,86 @@
+<p>Speed your RSpec, or Cucumber tests up by spreading them across multiple cores.</p>
+
+<h4>Initial Setup</h4>
+
+<p><em>1. Add dependency to Gemfile:</em></p>
+
+<p>in Gemfile:</p>
+
+<p><code>ruby
+group :development, :test do
+  gem 'parallel_tests'
+end
+</code></p>
+
+<p>Simply running "bundle install" should take care of all necessary dependencies.</p>
+
+<p><em>2. Configure your test environment to use multiple databases when running in parallel:</em></p>
+
+<p>in config/database.yml:</p>
+
+<p><code>yaml
+test:
+  database: your_test_db_name&lt;%= ENV['TEST_ENV_NUMBER'] %&gt;
+</code></p>
+
+<p><em>3. Create additional databases (one per processor core):</em></p>
+
+<p><code>bash
+rake parallel:create
+</code></p>
+
+<p><em>4. Copy your current schema to the additional databases:</em></p>
+
+<p><code>bash
+rake parallel:prepare
+</code>
+This command applies your current schema to all of the databases in your test environment.  This must be run whenever your schema is updated in order to ensure that the additional databases created by parallel_tests are current.</p>
+
+<p><em>5. Run a separate capybara server for each process (Capybara Only)</em></p>
+
+<p>in env.rb:</p>
+
+<p><code>ruby
+Capybara.server_port = 8888 + ENV['TEST_ENV_NUMBER'].to_i
+</code></p>
+
+<h4>Run your tests!</h4>
+
+<p>RSpec</p>
+
+<p><code>bash
+rake parallel:spec
+</code></p>
+
+<p>Cucumber</p>
+
+<p><code>bash
+rake parallel:features
+</code></p>
+
+<h4>Even Process Runtimes</h4>
+
+<p>The parallel_tests gem has the ability to intelligently partition your tests among your system's available processors.  If enabled, this feature will record the runtime of each test and attempt to minimize the total runtime of your test suite. To enable partitioning, add this to your rspec configuration options file:</p>
+
+<p>in spec/parallel_spec.opts or spec/spec.opts:</p>
+
+<p><code>yaml
+  --format progress
+  --format ParallelSpecs::SpecRuntimeLogger --out tmp/parallel_profile.log
+</code></p>
+
+<h4>Gotchas</h4>
+
+<p>If you have a large and complex test suite, it's likely that you will see some additional failures when you run your tests in parallel for the first time.   Shared resources are a likely culprit for these unexpected failures.  The parallel_tests gem does an excellent job of sandboxing your Rails app and its underlying database, but it has no way of knowing about shared state that exists elsewhere in the application (such as the file system).</p>
+
+<p>I ran into this issue recently after installing parallel_tests in a Rails 3 application for one of our clients.  After the initial setup, I was getting anywhere from 3-10 test failures while running the suite in parallel.  As it turns out, file generation was the issue.  Some of the tests were outputting generated files to a temp directory (and subsequently clearing that directory).  Occasionally one process would create a file and and attempt to verify its contents.  Before that could complete, a second process would go in and clear said directory, leaving the first process without the file it was expecting (FAIL!).</p>
+
+<p>Fortunately, the parallel_tests gem exposes a handy environment variable that helps to solve these types of issues:</p>
+
+<p><code>ruby
+ENV['TEST_ENV_NUMBER']
+</code></p>
+
+<p>This variable will return a number string that is unique to each sandboxed test environment (one per processor / core).  Appending the environment variable to the temp directory fixed the issue mentioned above by creating a sandboxed directory for each test process.</p>
+
+<p>Another item worth mentioning concerns the ordering of tests.  When running in parallel (particularly if the aforementioned runtime logging / optimization is enabled), your tests may run in an order that is completely different from the default.  This may lead to some unexpected failures if your tests are carrying any type of state around.  If you experience unanticipated failures after the initial setup of parallel_tests, be aware that your tests are likely being run out of their typical (default) order, and don't immediately assume that concurrency is at fault.</p>

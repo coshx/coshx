@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>coshx labs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/style.css">	
+	<link rel="stylesheet" href="css/responsive.css">	
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.localscroll.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/jquery.foundation.magellan.js"></script>
+	<script src="js/custom.js"></script>
+</head>
+<body>
+	<header class="blog-header">
+		<div class="row">
+				<h1 id="logo" class="no-animation"><a href="index.html#home"></a></h1>
+			<nav>
+				<ul id="main-nav" data-magellan-expedition>
+					<li><a href="index.html#about">About us</a></li>
+					<li><a href="index.html#projects">Our projects</a></li>
+					<li><a href="index.html#services">Our services</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="index.html#contact">Contact us</a></li>
+					<li><a href="index.html#careers">Careers</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header> <!-- header -->
+
+	<div class="header-gray">
+		<div class="row"><h1 class="left">Our Blog</h1></div>
+	</div>
+
+	<div class="row">		
+			<section class="column nine blogs">
+				<div class="blog-wrapper">
+					<div class="column four"><img src="img/avatar.png" alt="" class="avatar"></div>
+					<section class="column eight blog end">
+						<div class="date">16 December 2012</div>
+						<h2>Case Study in Validated Learning: GigDog's 1st Experiment</h2>
+						<h3>Background</h3>				
+						<p>The idea of <a href="#">GigDog</a> is simple: we want to get more people going to local concerts by making it easy to learn the songs of bands that have upcoming shows. Implicit in this idea, however, are a few assumptions that deserve to be tested:</p>
+
+						<ul>
+							<li>When people know the bands and music, they're more likely to go to a show.</li>
+							<li>People will learn music and get to know bands by listening to their songs</li>
+							<li>People are willing to listen to the songs from upcoming gigs.</li>
+						</ul>
+
+						<p>The first hypothesis seems straightforward, that the more popular a band is, the more people they can attract to shows. Still, it will be worth testing how well popularity on GigDog can influence ticket sales once the site itself is more popular. Similarly, the second point is almost tautological, since we learn music by listening to it. It's worth stating this assumption, however, because it may be important to measure how well our platform allows listeners to learn the music.</p>
+
+						<p>While we intend to test the first two points as the site gains in popularity, we've decided to focus primarily on the third point, our Value Hypothesis. In order to test this scientifically, we've developed two core metrics...</p>	
+						<h3>Core Metrics</h3>					
+						<ul>
+							<li>How many new users are clicking play?</li>
+							<li>How long are new users listening?</li>
+						</ul>
+						<p>By focusing on cohorts of unique new users to the site, we aim to avoid the <a href="">dangers of vanity metrics</a>, so we can more accurately test how specific changes we make to the site affect the value that users get out of it.</p>
+
+						<p>In order to maximize the validity of these tests, we started gathering base metrics the first week that the site was live in beta (this is why there is no data for the first cohort about clicking play). Each cohort represents all the new users coming to the site within a week, where the median cohort size is 27 users.</p>
+						<h3>First Experiment - Click play, please!</h3>
+						
+						<img src="img/post-placeholder1.png" alt="">
+
+						<p>For our first experiment, we added a tutorial to the site for first-time users. The first step of the tutorial points out the play button, and asks users to click on it. We thought this would both increase the number of new users clicking play as well as decrease the time it takes users to click play (we have metrics for this, as well as some cool distribution graphs of how long it takes users to click play, but these are showing too much variance within the base metrics to draw any significant conclusions).</p>
+						<p>What we've found so far ends up being counterintuitive. The graph below shows our metric, with cohort 6 being the first cohort shown the tutorial.</p>
+						<em>The percentage of users clicking play is actually going down! Our assumption was wrong.</em>
+						<img src="img/post-placeholder2.png" alt="">
+
+						<p>Now, there could be several reasons for this decline, such as how the users were drawn to the site, local vs. non-local users (since the site makes much more sense to residents of the pilot city), or other unknown issues (like if we have a bug in certain browsers). Unfortunately, good qualitative feedback to answer the question why is harder to come by than good quantitative feedback. Still, this is good early evidence that a tutorial may not be the way to go.</p>
+						
+						<h3>Next Steps</h3>
+
+						<p>In addition to collecting qualitative feedback (you know you have an opinion, and the comments section below is a great place to voice it, nudge nudge, wink wink), our next step is to try a different approach. With one foot planted solidly in the ground, we're going to pivot with the other foot, and try a split test between users getting the tutorial and users having another type of engagement (a simple welcome prompt where they choose a genre, causing that genre's playlist to start playing).</p>
+
+						<h3>Thoughts</h3>
+						<p>I won't lie, these kinds of negative results are disheartening. We implemented what we thought was a good plan, and were expecting positive results along with a round of self congratulations. When you pour your heart into something, and work day and night on it, it's never easy to deal with these kinds of minor setbacks. But I'm also really happy to see these negative results, because it means we're saving an inordinate amount of time and money by realizing this so quickly. Imagine if we were in stealth mode, trying to perfect a tutorial over the next month, to roll it out along with other features a month after that? We'd be caught in a much worse position, with no idea what feature to blame. There's a good chance we'd continue to believe the tutorial was a worthwhile feature, sinking time and effort into perfecting it and coming up with alternate explanations of why we weren't getting more users clicking play. Ultimately, I'm glad we failed fast, and would like to take my obligatory <a href="">failure bow</a>. In the larger picture, this is validation of our lean approach, and I hope all our future failures will be just as swift.</p>
+					</section>
+					
+				</div>				
+				<a href="" class="prev-post">Previous Post</a>
+				<a href="" class="next-post">Next Post</a>
+			</section>
+			<section class="column three end">
+				<h3>Most popular</h3>
+				<ul class="widget">
+					<li>
+						<a href="#">Case Study in Validated Learning: GigDog's 1st Experiment</a>
+						<div class="date">16 December 2012</div>
+					</li>
+					<li>
+						<a href="">Model of Quicken Mac Essentials Sqlite database</a>
+						<div class="date">December 4 2012</div>
+					</li>
+					<li>
+						<a href="">Casperjs automation</a>
+						<div class="date">November 30 2012</div>
+					</li>
+					<li>
+						<a href="">Ruby's "and" and "or" operators explained</a>
+						<div class="date">October 31 2012</div>
+					</li>
+				</ul>
+				<a href="" class="btn orange center">Contact Us</a>
+				<a href="" class="btn dark-blue center">Like our page</a>
+				<a href="http://www.twitter/coshxlabs" class="btn blue center">@coshxlabs</a>
+			</section>			
+	</div>
+	<article id="quote">
+		<section class="row">
+			<h1>Need a quote?</h1>
+			<div class="dots"></div>
+			<p class="eleven column centered text-center">Considering us for your next project, then simply use our project planner below. The more details you fill in, the more accurate the estimate will be...</p>
+			<a href="index.html#projectplanner" class="btn orange center top-margin-small">project planner</a>			
+		</section>
+	</article> <!-- #quote -->
+
+	<article id="blog">
+		<section class="row">
+			<div class="column three"><h3>Latest Blog Posts</h3></div>
+			<div class="column three"><a href="#" class="blog-link">Case study in Validated Learning: GigDog's 1st Experiment</a><div class="date">December 16, 2012</div></div>
+			<div class="column three"><a href="#" class="blog-link">Case study in Validated Learning: GigDog's 1st Experiment</a><div class="date">December 16, 2012</div></div>
+			<div class="column three"><a href="#" class="blog-link">Case study in Validated Learning: GigDog's 1st Experiment</a><div class="date">December 16, 2012</div></div>
+		</section>
+	</article> <!-- #quote -->
+
+	<footer>
+		<div class="row">
+			<div class="column three">
+				<h4>Locations</h4>
+				<strong>Boulder</strong>
+				<p>3080 Valmont Rd<br>Suite 280<br>CO 80301</p>
+				<strong>Charlottesville</strong>
+				<p>1110 Market St <br>East Suite N7 <br>VA 22902</p>
+				<strong>San Francisco</strong>
+				<p>972 Mission Street <br>5th Floor <br>CA 94103 </p>
+			</div>
+			<div class="column three">
+				<h4>Navigation</h4>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Our projects</a></li>
+					<li><a href="#">Our services</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Contact us</a></li>
+					<li><a href="#">Careers</a></li>
+				</ul>
+			</div>
+			<div class="column three">
+				<h4>Social</h4>
+				<ul>					
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">ribbble</a></li>
+				</ul>
+			</div>
+			<div class="column three">
+				<h4>Shoot us an email</h4>
+				<ul>
+					<li><a href="mailto:info@coshx.com">info@coshx.com</a></li>				
+				</ul>
+				<h4>Need a quote?</h4>
+				<ul>
+					<li><a href="#">Project Planner</a></li>
+				</ul>
+				<h1 id="logo-light"><a href="#home"></a></h1>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
