@@ -1,0 +1,5 @@
+rvm_gemset_create_on_use_flag=1
+rvm 1.9.3-p327
+rvm --create use ruby-1.9.3-p327@coshx
+# TODO: unlock the patchlevel once the latest stable ruby is in fact stable
+# cf. https://bugs.ruby-lang.org/issues/7629#change-35122
