@@ -81,7 +81,7 @@
           %p
             = person.name
     %li.last
-      %a{:href => jobs_path}
+      %a{:href => link_to('#',jobs_path) }
         .new
         = image_tag("team/new.png", :mouseover => "team/new-white.png")
         %p
