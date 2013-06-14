@@ -11,7 +11,7 @@ gem 'thin'
 gem "pg"
 
 # authentication
-gem "devise"
+gem "devise", '2.1.2'
 
 # presentation
 gem "redcarpet"
