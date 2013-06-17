@@ -63,5 +63,9 @@ module Coshx
       g.helper_specs false
       g.fixture_replacement :factory_girl, :dir => 'spec/factories'
     end
+
+    #overrides
+    self.paths['config/database'] = 'config/database.overrides.yml'
+
   end
 end
