@@ -1,6 +1,6 @@
 == Coshx Website
 
-TODO: Add better description.
+The Coshx web site. www.coshx.com
 
-This is a pretty standard rails app that you can feel free to use as a template.
-
+Dev note:
+You can override database.yml with database.overrides.yml in /config which is not tracked.
