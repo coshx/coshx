@@ -286,7 +286,7 @@ DEPENDENCIES
   contenteditable!
   cucumber-rails
   database_cleaner
-  devise
+  devise (= 2.1.2)
   execjs
   factory_girl_rails
   faker
