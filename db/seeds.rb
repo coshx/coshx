@@ -23,16 +23,17 @@ end
 ben.save!
 puts "Created User #{ben.name}"
 
-mike = Admin.find_or_create_by_email("mike@coshx.com") do |m|
-  m.name = 'Mike Hickman'
-  m.password = 'password'
-  m.twitter = "mhickman84"
-  m.github = "mhickman84"
-  m.bio = "Prior to joining Coshx Labs, Mike developed web applications in subject areas as diverse as event registration and biofuel trading. As a front and back-end developer, he enjoys distilling complex problems into elegant and obvious interfaces that even your mother-in-law could use. Outside of work, Mike enjoys fly-fishing, mountain biking and playing fetch with Walker, his labrador retriever."
-  m.img = "mike.png"
-end
-mike.save!
-puts "Created User #{mike.name}"
+##
+#mike = Admin.find_or_create_by_email("mike@coshx.com") do |m|
+#  m.name = 'Mike Hickman'
+#  m.password = 'password'
+#  m.twitter = "mhickman84"
+#  m.github = "mhickman84"
+#  m.bio = "Prior to joining Coshx Labs, Mike developed web applications in subject areas as diverse as event registration and biofuel trading. As a front and back-end developer, he enjoys distilling complex problems into elegant and obvious interfaces that even your mother-in-law could use. Outside of work, Mike enjoys fly-fishing, mountain biking and playing fetch with Walker, his labrador retriever."
+#  m.img = "mike.png"
+#end
+#mike.save!
+#puts "Created User #{mike.name}"
 
 david = Admin.find_or_create_by_email("david@coshx.com") do |d|
   d.name = 'David Kovsky'
@@ -87,16 +88,17 @@ end
 chielo.save!
 puts "Created User #{chielo.name}"
 
-ant = Admin.find_or_create_by_email("ant@coshx.com") do |a|
-  a.name = "Anthony Burton"
-  a.password = "anthonys_password"
-  a.bio = "Anthony Burton is a DevOps <strike>ninja</strike> <strike>rockstar</strike> guy  who solves tough configuration problems in his sleep and eats lesser Linux distributions for breakfast. When not dishing out revenge on uncooperative servers, he spends time with his daughter and on a boat."
-  a.github = "ajburton"
-  a.twitter = "anthonyburton"
-  a.img = "anthony.png"
-end
-ant.save!
-puts "Created User #{ant.name}"
+##
+#ant = Admin.find_or_create_by_email("ant@coshx.com") do |a|
+#  a.name = "Anthony Burton"
+#  a.password = "anthonys_password"
+#  a.bio = "Anthony Burton is a DevOps <strike>ninja</strike> <strike>rockstar</strike> guy  who solves tough configuration problems in his sleep and eats lesser Linux distributions for breakfast. When not dishing out revenge on uncooperative servers, he spends time with his daughter and on a boat."
+#  a.github = "ajburton"
+#  a.twitter = "anthonyburton"
+#  a.img = "anthony.png"
+#end
+#ant.save!
+#puts "Created User #{ant.name}"
 
 calvin = Admin.find_or_create_by_email("calvin@coshx.com") do |c|
   c.name = "Calvin Delamere"
@@ -145,45 +147,7 @@ puts "Created user #{gil.name}"
 # -----------------------------------------------------------------------------
 # clients
 
-reframeit = Client.find_or_create_by_name("Reframe It") do |r|
-  r.site_url = "http://reframeit.com"
-  r.quote = "I think the software is working superbly... I think we have a great chance of spreading its application. Well done. The new version is everything I had hoped it would be."
-  r.quoted_person = "Jim Fishkin, Reframe It Board Member"
-  r.company_logo = "reframeit_logo.png"
-end
-puts "Created Client #{reframeit.name}"
-
-aar = Client.find_or_create_by_name("American Academy of Religion") do |c|
-  c.site_url = "http://www.aarweb.org"
-  c.quote = "We engaged Coshx for a substantial, highly complex project having an incredibly tight deadline, and they came through for us wonderfully. Throughout they were thoughtful, flexible, highly responsive team players."
-  c.quoted_person = "Steve Herrick, CIO"
-  c.company_logo = "aar_logo.png"
-end
-puts "Created Client #{aar.name}"
-
-tendril = Client.find_or_create_by_name("Tendril") do |c|
-  c.site_url = "http://www.tendrilinc.com"
-  c.quote = "I couldn't have gotten any of this off the ground without you guys. The company is in good shape because of the headstart Coshx provided."
-  c.quoted_person = "Mike Bukhin, Tendril Software Czar"
-  c.company_logo = "tendril_logo.png"
-end
-puts "Created Client #{tendril.name}"
-
-abolish_cancer = Client.find_or_create_by_name("Abolish Cancer") do |c|
-  c.site_url = "http://www.abolishcancer.com"
-  c.quote = "While we were impressed with their technological knowhow, even more impressive was their willingness to spend countless hours helping to create, revise and get their hands dirty in the development of our plan."
-  c.quoted_person = "Darah Bonham, Founder"
-  c.company_logo = "abolish_cancer_logo.png"
-end
-puts "Created Client #{abolish_cancer.name}"
-
-bypass_lane = Client.find_or_create_by_name("Bypass Lane") do |c|
-  c.site_url = "http://bypasslane.com"
-  c.what_we_did = "We teamed with Bypass Lane to create an API gateway that allowed them to expand their interaction with their clients."
-  c.company_logo = "bypass_logo.png"
-end
-puts "Created Client #{bypass_lane.name}"
-
+#that wasn't working
 
 # -----------------------------------------------------------------------------
 # services
@@ -191,7 +155,7 @@ puts "Created Client #{bypass_lane.name}"
 # using a sort order that is specified here is the simplest way to insure they show up in a consistently nice way.
 
 service = Service.find_or_create_by_title("Startups") do |s|
-  s.description = "We focus on lean startup tactics, helping you get to your Minimum Viable Product (MVP) in a timely, cost-effective manner. We understand that as your business develops, requirements can change drastically, so we develop in a transparent, agile manner to ensure that you always have a good grasp of the project timelines and budgets."
+  s.description = "We focus on lean startup tactics, helping you get to your Minimum Viable Product (MVP) in a timely, cost-effective manner. We understand that as your business develops, requirements can change drastically, so we develop in a transparent, agile manner to ensure that you always have a good grasp of the Project timelines and budgets."
   s.sort_order = 1
 end
 puts "Created Service #{service.title}"
@@ -1392,7 +1356,7 @@ end
 # Quotes
 
 quote = Quote.find_or_create_by_text("We engaged Coshx for a substantial, highly complex project having an incredibly tight deadline, and they came through for us wonderfully. Throughout they were thoughtful, flexible, highly responsive team players.") do |quote|
-  quote.author = 'Steve Herrick, CIO'
+  quote.author = 'Steve Herrick, CIO, American Academy of Religion'
   quote.project_id = ''
   quote.text = <<EOF
 We engaged Coshx for a substantial, highly complex project having an incredibly tight deadline, and they came through for us wonderfully. Throughout they were thoughtful, flexible, highly responsive team players.
@@ -1408,7 +1372,7 @@ EOF
 end
 
 quote = Quote.find_or_create_by_text("While we were impressed with their technological knowhow, even more impressive was their willingness to spend countless hours helping to create, revise and get their hands dirty in the development of our plan.") do |quote|
-  quote.author = 'Darah Bonham, Founder'
+  quote.author = 'Darah Bonham, Founder, Abolish Cancer'
   quote.project_id = ''
   quote.text = <<EOF
 While we were impressed with their technological knowhow, even more impressive was their willingness to spend countless hours helping to create, revise and get their hands dirty in the development of our plan.
