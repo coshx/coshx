@@ -65,7 +65,8 @@ module Coshx
     end
 
     #overrides
-    self.paths['config/database'] = 'config/database.overrides.yml'
+    db_overrides_file = 'config/database.overrides.yml'
+    self.paths['config/database'] = db_overrides_file if File.exist?(db_overrides_file)
 
   end
 end
