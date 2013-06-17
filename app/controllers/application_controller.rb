@@ -27,11 +27,11 @@ class ApplicationController < ActionController::Base
   protected
 
     def render_page_not_found
-      render template: 'errors/not_found'
+      render :template => 'errors/not_found', :status => :not_found
     end
 
     def render_error
-      render template: 'errors/505'
+      render :template => 'errors/505'
     end
 
 
@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
         begin
           yield 
         rescue Exception => exception
-          if exception.is_a?(ActiveRecord::RecordNotFound) || exception.is_a?(ActionController::RoutingError) || exception.is_a?(ActionController::UnknownAction)
+          if exception.is_a?(ActiveRecord::RecordNotFound)
             render_page_not_found
           else
             render_error
