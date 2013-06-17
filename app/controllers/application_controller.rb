@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
         begin
           yield 
         rescue Exception => exception
-          if exception.is_a?(ActiveRecord::RecordNotFound) || exception.is_a?(ActiveRecord::RoutingError) || exception.is_a?(ActiveRecord::UnknownAction)
+          if exception.is_a?(ActiveRecord::RecordNotFound) || exception.is_a?(ActionController::RoutingError) || exception.is_a?(ActionController::UnknownAction)
             render_page_not_found
           else
             render_error
