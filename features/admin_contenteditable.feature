@@ -1,4 +1,3 @@
-
 Feature: Using contenteditable gem to edit content
   As an Admin user
   I want to change content and
