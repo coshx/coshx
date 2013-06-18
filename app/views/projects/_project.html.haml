@@ -1,4 +1,6 @@
 .fp_img{:class => "no#{row*3 + i}"}
+  %h3= p.title
+  %aside= p.description
   =image_tag p.picture_url if p.picture?
   .overlay
     .link-wrapper

@@ -48,6 +48,14 @@ describe ApplicationHelper do
       end
 
     end
+
+    context "mixture of empty relation and object" do
+      it "returns a single row when the relation is empty" do
+        projects = Project.where(featured: true)
+        projects << Project.new(description: "yours")
+        helper.rowify(projects, 3).length.should == 1
+      end
+    end
   end
 
 end

@@ -3,8 +3,8 @@
     .row
       - projects.each_with_index do |p, i|
         %div.four.columns
-          =render :partial => "project", :locals => {:row=> row_num, :p => p, :i => i} if (row_num*3+i) < (@projects.count-1)
-          =render :partial => "your_project" if (row_num*3+i) == (@projects.count-1)
+          =render :partial => "project", :locals => {:row=> row_num, :p => p, :i => i} if (row_num*3+i) < (@projects.length-1)
+          =render :partial => "your_project" if (row_num*3+i) == (@projects.length-1)
 
 
 - if admin_signed_in?

@@ -14,3 +14,4 @@ logfile
 public/assets
 .project
 *.overrides*
+public/uploads

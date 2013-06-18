@@ -22,8 +22,8 @@ module ApplicationHelper
 
   def rowify(things, row_length)
     array_of_rows_of_things = []
-    ((things.count) / row_length.to_f).ceil.times do |row_num|
-      n = things.count - (row_num * row_length + row_length - 1)
+    ((things.length) / row_length.to_f).ceil.times do |row_num|
+      n = things.length - (row_num * row_length + row_length - 1)
       n = [n, row_length - 1].max
       n = [n, 0].max
       row_of_things = things.slice((row_num * row_length)..((row_num * row_length) + n))

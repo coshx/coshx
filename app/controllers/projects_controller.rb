@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = admin_signed_in? ? Project.all : Project.where(featured: true)
     @projects << Project.new(:description => "your_project_here")
 
     respond_to do |format|
