@@ -81,3 +81,31 @@
     background-position: -78px 0px;
   }
 }
+
+blockquote {
+  &:before { 
+    content: '“';
+    font-size: 48px;
+    float: left;
+  }
+  &:after { 
+    content: '”';
+    font-size: 48px;
+  }
+
+  p {
+    padding-top: 24px;
+    margin-left: 24px;
+  }
+
+  footer {
+    margin-top: 0;
+    margin-left: 40px;
+    background: none;
+
+    &:before {
+      content: "--";
+    }
+  }
+
+}

@@ -1,19 +1,19 @@
 .project_quotes
   - project.quotes.each do |q|
-    .panel
-      %h5=q.text
-      %p=q.author
-      %p=q.project.title
+    %blockquote
+      %p=q.text
+      %footer
+        =q.author
 
   - if admin_signed_in?
     - if project.id 
-      .panel
+      .panel.callout
+        %h2 Client Quotes
         = form_for project.quotes.build, :remote => true do |qf|
-          More forms for #{project.title}
           = qf.hidden_field :project_id, :value => "#{project.id}"
-          = qf.text_field :text
-          = qf.text_field :author
-          = qf.submit 'Save'
+          = qf.text_field :text, placeholder: 'Quote'
+          = qf.text_field :author, placeholder: 'Author'
+          = qf.submit 'Add'
     - else
       Save First!
 
