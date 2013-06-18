@@ -27,6 +27,4 @@ class Admin < ActiveRecord::Base
   def url
     "/profile/" + self.slug.to_s
   end
-  
-  
 end
