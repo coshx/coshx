@@ -7,7 +7,7 @@
         - last_two_posts.each do |post|
           .six.column.post
             .row
-              .three.columns.mobile-one
+              .three.columns.fourfoot.mobile-one
                 %div.post_pic(style="width:74px;height:74px;background:url(#{Gravatar.new(post.author.email).image_url(:size => 74)});border-radius:100px;border: 4px solid white;")
                 %span.post-info
                   = link_to post.author.name, post.author.url
@@ -34,27 +34,33 @@
       Shoot us an email at
       = link_to "info@coshx.com", "mailto:info@coshx.com"
     %div.contact-details.row
-      .three.columns
+      .three.columns.fourfoot
         %strong Boulder
         %br/
         3080 Valmont Rd Suite 280
         %br/
         Boulder, CO 80301
-      .three.columns
+      .three.columns.fourfoot
         %strong Charlottesville
         %br/
         1110 Market St East Suite N7
         %br/
         Charlottesville, VA 22902
-      .three.columns
+      .three.columns.fourfoot
         %strong San Francisco
         %br/
         972 Mission Street, 5th Floor
         %br/
         San Francisco, CA 94103
         %br/
+      .three.columns.fourfoot
+        %strong Austin
+        %br/
+        701 Brazos St, Suite 1601
+        %br/
+        Austin, TX 78701
 
-      .three.columns
+      .three.columns.fourfoot
         CONSIDERING COSHX FOR
         %br/
         YOUR NEXT PROJECT?<br>
