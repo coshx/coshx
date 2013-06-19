@@ -1,5 +1,11 @@
+if ENV['RAILS_ENV'] == 'production'
+  raise "Seeds should not be run in production because they are out of date"
+end
+
 # -*- coding: utf-8 -*-
 require 'contenteditable'
+
+#ADMINS
 
 walt = Admin.find_or_create_by_email("walt@coshx.com") do |w|
     w.name = 'Walt House'
@@ -22,18 +28,6 @@ ben = Admin.find_or_create_by_email("ben@coshx.com") do |b|
 end
 ben.save!
 puts "Created User #{ben.name}"
-
-##
-#mike = Admin.find_or_create_by_email("mike@coshx.com") do |m|
-#  m.name = 'Mike Hickman'
-#  m.password = 'password'
-#  m.twitter = "mhickman84"
-#  m.github = "mhickman84"
-#  m.bio = "Prior to joining Coshx Labs, Mike developed web applications in subject areas as diverse as event registration and biofuel trading. As a front and back-end developer, he enjoys distilling complex problems into elegant and obvious interfaces that even your mother-in-law could use. Outside of work, Mike enjoys fly-fishing, mountain biking and playing fetch with Walker, his labrador retriever."
-#  m.img = "mike.png"
-#end
-#mike.save!
-#puts "Created User #{mike.name}"
 
 david = Admin.find_or_create_by_email("david@coshx.com") do |d|
   d.name = 'David Kovsky'
@@ -88,18 +82,6 @@ end
 chielo.save!
 puts "Created User #{chielo.name}"
 
-##
-#ant = Admin.find_or_create_by_email("ant@coshx.com") do |a|
-#  a.name = "Anthony Burton"
-#  a.password = "anthonys_password"
-#  a.bio = "Anthony Burton is a DevOps <strike>ninja</strike> <strike>rockstar</strike> guy  who solves tough configuration problems in his sleep and eats lesser Linux distributions for breakfast. When not dishing out revenge on uncooperative servers, he spends time with his daughter and on a boat."
-#  a.github = "ajburton"
-#  a.twitter = "anthonyburton"
-#  a.img = "anthony.png"
-#end
-#ant.save!
-#puts "Created User #{ant.name}"
-
 calvin = Admin.find_or_create_by_email("calvin@coshx.com") do |c|
   c.name = "Calvin Delamere"
   c.password = "calvins_password"
@@ -131,7 +113,6 @@ end
 mm.save!
 puts "Created user #{mm.name}"
 
-
 gil = Admin.find_or_create_by_email("gil@coshx.com") do |g|
   g.name = "Edi Gil"
   g.bio = "Web design and web development are his first love. Because you never know when inspiration hits you he always keeps a pencil and paper in his pocket. He adores tough UI/UX problems and is also a huge fan of HTML5 and CSS3. He loves learning new things and is always trying to be on top of his game."
@@ -144,15 +125,7 @@ end
 gil.save!
 puts "Created user #{gil.name}"
 
-# -----------------------------------------------------------------------------
-# clients
-
-#that wasn't working
-
-# -----------------------------------------------------------------------------
-# services
-# the current way we show services necessitates them having a sorting order. We need the longer ones to be consecutive, otherwise the layout looks awful.
-# using a sort order that is specified here is the simplest way to insure they show up in a consistently nice way.
+# SERVICES
 
 service = Service.find_or_create_by_title("Startups") do |s|
   s.description = "We focus on lean startup tactics, helping you get to your Minimum Viable Product (MVP) in a timely, cost-effective manner. We understand that as your business develops, requirements can change drastically, so we develop in a transparent, agile manner to ensure that you always have a good grasp of the Project timelines and budgets."
@@ -190,11 +163,8 @@ service = Service.find_or_create_by_title("And so on...") do |s|
 end
 puts "Created Service #{service.title}"
 
-
+#BLOG POSTS
 puts "Creating POSTS..."
-#BLOG
-
-
 
 post = Post.find_or_create_by_title('Startup Weekend: Charlottesville') do |post|
   post.title = 'Startup Weekend: Charlottesville'
@@ -209,7 +179,7 @@ So what's fun about it? Why would you give up a weekend to do something like thi
 
 So what did I do? I halfheartedly proposed something (and actually got some interest), but I ended up working with a group of nearly a dozen people on a mobile Facebook app that tries to turn social interactions and interests into a market simulation game. Sounds terribly startupy, right? That's the point! Try something quirky and run with it. We pivoted a little (WELL HELLO THAR BUZZWORD) but came away generally satisfied that we had an interesting idea.
 
-Is it The Next Big Thing? Not yet. Did anyone make that mythical unicorn-like capital magnet of a viral product that all startups yearn to spin into the unsuspecting market? It's too soon to say - overnight success never really happens overnight. 
+Is it The Next Big Thing? Not yet. Did anyone make that mythical unicorn-like capital magnet of a viral product that all startups yearn to spin into the unsuspecting market? It's too soon to say - overnight success never really happens overnight.
 EOF
 end
 
@@ -219,35 +189,9 @@ post = Post.find_or_create_by_title('Removing Technical Debt') do |post|
   post.created_at = '2012-04-09 19:00:28 UTC'
   post.posted_on = '2012-04-09 19:02:53 UTC'
   post.updated_at = '2012-04-09 19:02:53 UTC'
-  post.body = <<EOF
-I had a great time at the Mile High Agile 2012 conference. I thoroughly enjoyed and learned from every talk and heard almost 100% positive reviews of all the talks I missed out on in the other tracks. Many thanks to all who were involved in making it happen. I’ll definitely be back next year.
-
-I want to write about one experience that really fired me up and kept me thinking for several hours afterwards. During one of the talks, the speaker gave us 3 minutes to talk amongst ourselves about how we might try to get rid of technical debt within the confines of an organization that doesn’t think it has time for any development work that doesn’t either add a visible feature or eliminate a visible defect.
-
-At our table of about 8 people, 2 people seemed to think they each had a new way to magically sell management* on the importance and urgency of removing technical debt. They spent most of the 3 minutes talking about these magical methods.
-
-I couldn’t help noticing several implications:
-
-* Management doesn’t understand technical debt (but we can explain it to them if we talk very slowly and explain it just right).
-* Developers aren’t allowed to remove technical debt (read: do their job) without permission from management (the people who still don’t understand technical debt).
-* Any blame for the technical debt lies with management, not the developers who created it and are too scared to fix it.
-* This situation will somehow improve someday if developers just keep what they’re doing.
-* Nobody is sticking up for development in these organizations in the way I would expect a Scrummaster or a lead developer to.
-
-With about 20 seconds left I finally vented through my mouth just enough to keep my head from exploding. The words that came out expressed that I wouldn’t waste my time asking for permission and would instead just do it, and maybe tout it after the fact as a good thing for the company, or not. I was swiftly shot down with “that’s really dangerous” from multiple people at the table and then time was up. Each table got one spokesperson to express the gist of their discussion and it wasn’t me. What a letdown!
-
-This interaction stuck with me the rest of the day. I know my projects would have a ton of technical debt if I had to beg for permission to fix it or, worse, waste mental energy trying to think of clever new ways to beg for that permission because all previous attempts had failed.
-
-I couldn’t help wondering what life would be like if I had to ask for permission to do other essential parts of my job. What if I had to ask management if I could use source control? Install a new editor? Test first? And should I expect management to pat me on the back if I do?
-
-To be fair, getting rid of technical debt is always a judgment call. There are plenty of situations where it makes sense to leave it in. Many developers are overzealous in this department, just as non-technical management is traditionally underzealous.
-
-In my opinion the decision of when to tackle technical debt should always be made on the development side. The extra upfront cost of doing so should already be reflected in the team’s velocity. This helps the team’s velocity stay fairly constant instead of dropping off exponentially due to excessive technical debt.
-
-*In the context of our discussion, “management” seemed to refer to one or more non-technical persons “above” the developers in their organization who determine what visible features developers work on and when. I’ll use the term in the same way here.
-
-EOF
+  post.body = "body of blog post"
 end
+
 post = Post.find_or_create_by_title('Introducing sinatra_bootstrap') do |post|
   post.title = 'Introducing sinatra_bootstrap'
   post.author_id = Admin.find_by_email("ryan@coshx.com").id
@@ -300,6 +244,7 @@ done. There are other frameworks out there that do a great job of
 setting up enough libraries to turn sinatra into a rails deployment.
 EOF
 end
+
 post = Post.find_or_create_by_title('Polymorphic Associations and validate_uniqueness_of') do |post|
   post.title = 'Polymorphic Associations and validate_uniqueness_of'
   post.author_id = Admin.find_by_email("ryan@coshx.com").id
@@ -416,6 +361,7 @@ This allows the presence validation to continue without raising an error. And fi
 
 EOF
 end
+
 post = Post.find_or_create_by_title('The ubiquity of NoSQL as presented by MongoDB') do |post|
   post.title = 'The ubiquity of NoSQL as presented by MongoDB'
   post.author_id = Admin.find_by_email("davidkapp@coshx.com").id
@@ -426,25 +372,20 @@ post = Post.find_or_create_by_title('The ubiquity of NoSQL as presented by Mongo
   post.body = <<EOF
 Not so long ago I went to MongoDB Boulder, a one-day conference put on by 10gen, the company behind MongoDB. Aside from one panel I didn't get much out of, it was great. While I do have some experience using MongoDB, I not yet an expert with it (and I certainly have some team members here at Coshx Labs that know it better than I do), so I was looking forward to a chance to improve my skills.
 
-
 The tech talks I went to were quite ideal for someone with my relative level of experience and I got a lot out of it. What I want to share with the internet at large, however, is more my surprise at who was attending the conference rather than what was said.
-
 
 I was expecting the majority of the attendees to be developers or devops from smaller companies, startups, consulting companies, and the like. Those are the sorts of people I primarily think of when I imagine MongoDB users. I was wrong though. Very, very wrong - and I'm happy I was.
 
-
 While there were people from the companies I just described, the majority of the attendees were from much larger companies, and there were several from places that have many thousands of employees. (I want to name some of them, but I know that many companies don't like having their tech stack discussed, so in the interest of kindness I'll refrain from naming specifics.) A higher-up at 10gen also discussed how MongoDB is starting to be used in government work as well, and he had a meeting coming up with a representative from the UK. That's far, far from what I would have imagined.
-
 
 During the happy hour following the conference, I spoke with many attendees about what brought them there. Why MongoDB? Are you here out of curiosity or do you actually use MongoDB at the office? Some were there because they were considering MongoDB, some were already using it. The vast majority of them were there because the office wanted them to go, to at least get more information about whether MongoDB would be a good fit for them or not. Those who hadn't decided to use it or not yet were evaluating it against several of the other NoSQL databases you've probably heard of: Riak, CouchDB, Cassandra, HBase, and so on.
 
-
 It's great to see so many highly-visible open source projects make their way into "The Enterprise." And to small companies as well of course - but smaller companies have been leaning heavily on tech like this to give them an edge in a fiercely competitive marketplace. Is MongoDB the right choice for them? It very well might be (if you haven't used MongoDB in a while, take a look at it again, it has had a lot of very impressive growth in the last year).
-
 
 And if it's not, there's no shortage of other open-source data stores available for them to consider. NoSQL isn't always the right tool for the job, but it's often worth a look, and I'm really excited to see the adoption of it expand in enterprises large and small.
 EOF
 end
+
 post = Post.find_or_create_by_title('Increasing Performance using Ajax') do |post|
   post.title = 'Increasing Performance using Ajax'
   post.author_id = Admin.find_by_email("calvin@coshx.com").id
@@ -452,106 +393,10 @@ post = Post.find_or_create_by_title('Increasing Performance using Ajax') do |pos
   post.posted_on = '2012-03-01 21:11:33 UTC'
   post.updated_at = '2012-03-01 21:33:46 UTC'
   post.body = <<EOF
-In this post I’m going to show how to use Ajax to get JSON to decrease page load times and make your site scale better. This example assumes you're using Rails, but the idea applies elsewhere as well.
-
-<h4>Scenario</h4> You have an expensive call in your controller - it's slow and/or database intensive. Also, the data you get from this call is not actually needed when the page loads because it's displayed after the user interacts with the site.
-
-<h4>Example</h4> You have a chart that has multiple views and a large data set. You need the initial view when the page loads but don’t need the data for the other views until the user changes views. This is a good time to use Ajax to get the data that the chart needs on demand.
-(Notice I said "on demand." You could get the data when the page is done loading if you think the user will often do whatever is needed to make it appear. However, always making the expensive data call when the page is done does not scale as well - why get the data if you don't need it?)
-<br><br><br>
-<h3>Code sample</h3>
-Here is some sample code I hacked up to get the idea across (note there is some hand waving in the javascript for the charts- let me know if you have improvements/code fixes for the example)
-
-<h4>Data</h4> (This is just a simple example for demonstration purposes, pretend these are expensive database calls)
-
-```ruby
-class Chart
-  def self.get_daily_data
-    [5, 4, 7, 6, 5, 4]
-  end
-
-  def self.get_bi_daily_data
-    [12, 10, 6, 7, 8, 5, 4, 7, 6, 5, 4]
-  end
-end
-```
-<h4>Controller</h4>
-from:
-
-```ruby
-def show
-  @daily = Chart.get_daily_data
-  @bi_daily = Chart.get_daily_data
-end
-```
-
-to:
-
-```ruby
-def show
-  @daily = Chart.get_daily_data
-end
-def bi_daily
-  render :json => Chart.get_daily_data
-end
-```
-
-<h4>View (using haml)</h4>
-from:
-
-```haml
-#daily_data{:style => "display:none;"}
-  = @daily_data
-#bi_daily_data{:style => "display:none;"}
-  = @bi_daily_data
-```
-to:
-
-```haml
-#daily_data{:style => "display:none;"}
-  = @daily_data
-#url{:style => "display:none;"}
-  = request.url
-```
-<h4>Javascript (using jquery/coffee script)</h4>
-from:
-
-```javascript
-dailyData = $.trim($("#daily_data").html())
-biDailyData = $.trim($("#bi_data").html())
-chart = createChart(dailyData, "daily")
-addDataToChart(chart, biDailyData, "biDaily")
-
-$("#show_daily").click ->
-  chart.hide("biDaily")
-  chart.show("daily")
-$("#show_bi_daily").click ->
-  chart.hide("daily")
-  chart.show("biDaily")
-```
-to:
-
-```javascript
-dailyData = $.trim($("#daily_data").html())
-chart = createChart(dailyData, "daily")
-
-$("#show_daily").click ->
-  chart.hide("biDaily")
-  chart.show("daily")
-
-$("#show_bi_daily").click ->
-  loadBiDaily() if chart.doesntHaveDataSeries("biDaily)
-  chart.hide("daily")
-  chart.show("biDaily")
-
-loadBiDaily ->
-  url = $.trim($("#url").html())
-  #if the following is really slow you could use a loading wheel from http://ajaxload.info/
-  biDailyAjax = $.getJSON( url + "/bi_daily", (biDailyData) ->
-  addDataToChart(chart, biDailyData, "biDaily")
-```
+Blog post text
 EOF
 end
+
 post = Post.find_or_create_by_title('`rake cucumber` loads development environment') do |post|
   post.title = '`rake cucumber` loads development environment'
   post.author_id = Admin.find_by_email("ben@coshx.com").id
@@ -580,11 +425,11 @@ then `Rails.env.test?` will be false, and `config/environments/development.rb` w
 Currently, there are a couple simple workarounds if you want both to behave similarly:
 
 #### 1) be explicit
-  - `RAILS_ENV=test rake cucumber` 
+  - `RAILS_ENV=test rake cucumber`
   - annoying to have to remember, but hey, that's what aliases are for, right?
 
 #### 2) <strike>Update the cucumber rake task</strike>
-  *EDIT: while this correctly sets `Rails.env`, rails still loads development.rb afterwards*  
+  *EDIT: while this correctly sets `Rails.env`, rails still loads development.rb afterwards*
   - add the following to the `cucumber:ok` task in `lib/tasks/cucumber.rake`:
 
 ```ruby
@@ -600,6 +445,7 @@ namespace :cucumber do
  - Thanks to [rails-env-vs-rails-env on stackoverflow](http://stackoverflow.com/questions/2715035/rails-env-vs-rails-env) for the tip on `Rails.env`
 EOF
 end
+
 post = Post.find_or_create_by_title('Installing tsung with homebrew on osx') do |post|
   post.title = 'Installing tsung with homebrew on osx'
   post.author_id = Admin.find_by_email("ben@coshx.com").id
@@ -621,14 +467,14 @@ File already downloaded in /Users/btaitelb/Library/Caches/Homebrew
 ==> make install
 make -C doc
 make[1]: Nothing to be done for `all'.
--n build main app boot script ... 
+-n build main app boot script ...
 make: *** [priv/tsung.boot] Error 1
 ==> Exit Status: 2
 http://github.com/mxcl/homebrew/blob/master/Library/Formula/tsung.rb#L15
 ==> Environment
 [edit: environment ommitted]
 
-Error: Failed executing: make install 
+Error: Failed executing: make install
 If `brew doctor' does not help diagnose the issue, please report the bug:
     https://github.com/mxcl/homebrew/wiki/checklist-before-filing-a-new-issue
 ```
@@ -671,6 +517,7 @@ File already downloaded in /Users/btaitelb/Library/Caches/Homebrew
 
 EOF
 end
+
 post = Post.find_or_create_by_title('The $50,000 Blog Post') do |post|
   post.title = 'The $50,000 Blog Post'
   post.author_id = Admin.find_by_email("gabe@coshx.com").id
@@ -679,10 +526,6 @@ post = Post.find_or_create_by_title('The $50,000 Blog Post') do |post|
   post.updated_at = '2012-01-23 02:09:31 UTC'
   post.body = <<EOF
 Talented engineers are necessary but not sufficient for the success of a technology company, and no amount of technical brilliance will save an organization laden with process debt.  Here are some process fixes that could save your company tens of thousands of dollars or more.
-
-
-
-
 
 #### 1.  Choose your project management software carefully
 
@@ -705,6 +548,7 @@ Don't depend on your engineers to distinguish between defects and enhancements. 
 Be realistic.  A company with 100 employees can't behave like the cozy start-up it was last year.  Foster an environment that promotes cross-team interaction without requiring company-wide meetings that stop the world.
 EOF
 end
+
 post = Post.find_or_create_by_title('Upgrading a Rails 3.1.3 project to Ruby 1.9.3') do |post|
   post.title = 'Upgrading a Rails 3.1.3 project to Ruby 1.9.3'
   post.author_id = Admin.find_by_email("davidkapp@coshx.com").id
@@ -719,7 +563,7 @@ at the terminal waiting for things to start (again, don't we all?) we wanted to 
 
 When I tried out Ruby 1.9.3 as soon as it was released, I had some problems getting [ruby-debug](http://bashdb.sourceforge.net/ruby-debug.html) to work. It seems that the way
 some symbols are handled inside the Ruby source has changed, so ruby-debug doesn't quite work with 1.9.3 yet. Well, not quite. The versions of some libraries ruby-debug uses,
-linecache19 and ruby-debug-base19, have been updated already but those versions simply aren't on Rubygems.org yet. (I'm assuming they're still being tested.) This leaves you with 
+linecache19 and ruby-debug-base19, have been updated already but those versions simply aren't on Rubygems.org yet. (I'm assuming they're still being tested.) This leaves you with
 a few options if you want to be able to use a debugger with Rails 3.1 but you want to use Ruby 1.9.3:
 
 1. use the built-in Ruby debugger instead of a library
@@ -775,14 +619,14 @@ wait for the latest versions of these gems to show up on Rubygems). The most obv
 Debugging using Pry and Rails 3.1 with Ruby 1.9.3
 =================================================
 
-If you haven't tried out Pry yet, take a look. It's an interesting project that uses a directory metaphor to allow you to explore the Ruby object space. It's more of a 
+If you haven't tried out Pry yet, take a look. It's an interesting project that uses a directory metaphor to allow you to explore the Ruby object space. It's more of a
 substitute for IRB than it is a debugger, but you can add debugger like features using other gems. The two most prominent choices I found were [pry-debug](https://github.com/Mon-Ouie/pry_debug) and [pry-nav](https://github.com/nixme/pry-nav). The latter was simpler and offered everything I needed, so I elected to use it.
 
 The good news about Pry and pry-debug is they build just fine with Ruby 1.9.3 right away - no Bundler tricks needed. Just add them to your Gemfile:
 
     gem "pry", "~> 0.9.7"
     gem "pry-nav", "~> 0.0.4"
-    
+
 Then do a bundle install and you're set. Note that you start Pry with <some object>.pry - generally binding.pry - but we normally use "debugger" in our code. To help ease the transition I added a debugger command that we'll use for the time being. This starts you inside a method rather than right where you had your debugger command, but it's 'good enough':
 
     unless Rails.env == "production"
@@ -792,16 +636,17 @@ Then do a bundle install and you're set. Note that you start Pry with <some obje
         end
       end
     end
-    
+
 We just started using Pry, so I can't say how I feel about it quite yet (initial impressions are very positive though), but it did succeed at giving us debugging capabilities
 without manual intervention for now.
 
 That's All For Now
 ==================
- 
+
 I hope this helps out if the holdup for you to move over to Ruby 1.9.3 was ruby-debug. We've very happy with the performance improvements in 1.9.3 and I'd definitely recommend it to others.
 EOF
 end
+
 post = Post.find_or_create_by_title('Our First Birthday Party') do |post|
   post.title = 'Our First Birthday Party'
   post.author_id = Admin.find_by_email("david@coshx.com").id
@@ -811,19 +656,13 @@ post = Post.find_or_create_by_title('Our First Birthday Party') do |post|
   post.body = <<EOF
 Last week we did something a little different for our tech lunch. We celebrated our first birthday as a company with a recap and, of course, a retrospective. This was a very exciting milestone so I wanted to share some of my thoughts about it here as well.
 
-TL;DR: It’s been a great, amazing year that exceeded my dreams.
-
 We grew from 5 to 10 people and worked with many others throughout the year, including 3 summer interns. We did work for at least 10 different clients. Our work included Agile coaching and planning, Android development, DevOps, and of course lots of Ruby on Rails. Collectively, we participated in countless conferences, community events, training days, and more. We did a tech lunch nearly every week. We held 2 2-day hackathons.
 
 At 10 people, Coshx continues to feel to me like a small company where anyone who cares is empowered to take initiative and free to make a difference. We currently have 3 full-timers in Boulder, 3 in Charlottesville, and remote workers in Baltimore and Taos.
 
-Our goals for 2012 include opening our tech lunches to a wider audience, doubling our hackathons, blogging a lot more, diversifying our technologies used, and speaking at events more often. In about a year we’ll grade ourselves on these goals and issue ourselves a report card here.
-
 Through our work for our clients, we are helping people save energy in their homes, fight cancer, organize a huge conference on religion, use their smart phones to avoid waiting in line at coffee shops, and much more.
 
 Most of the year we had to explain that we were so busy working for our clients that our own website was just a placeholder. Towards the end of the year we finally launched a real website as well.
-
-If you’ve read this far then perhaps you’re interested in learning more about our services, working with us, attending our tech lunches, or something else? If so, please contact us. We’d love to hear from you.
 
 EOF
 end
@@ -899,8 +738,6 @@ Here's a simple recipe that I try to follow. It's by no means complete, but serv
 EOF
 end
 
-
-
 post = Post.find_or_create_by_title('San Francisco Office Now Open') do |post|
   puts "creating San Francisco"
   post.title = 'San Francisco Office Now Open'
@@ -911,19 +748,14 @@ post = Post.find_or_create_by_title('San Francisco Office Now Open') do |post|
   post.body = <<EOF
 
 I'm happy to announce our new permanent office in San Francisco, as well as our first San Francisco hire, Michael Makarov.
-   
 
 San Francisco is the third Coshx office after Boulder and Charlottesville.  And Michael's joining brings our headcount to 12, including our staff members in Austin, Baltimore, and Belgrade.
-   
 
 In addition to Michael and myself, we're pleased to share our space with Stewie the Dog.
-   
 
 As well as working together at Coshx Labs, Michael and I organize and teach the weekly [Rails class](https://www.noisebridge.net/wiki/Backend_web_dev_in_Ruby_on_Rails) at the neighborhood hackerspace, [Noisebridge](https://www.noisebridge.net).
-   
 
 We look forward to much productive collaboration with more brilliant hires and clients in San Francisco.  To get started, visit us in SoMa at [1211 Folsom St. (at 8th)](http://goo.gl/maps/eiNlT), on the 3rd  floor, or reach me at [gabe@coshx.com](gabe@coshx.com).
-   
 
 ![Stewie at work](https://s3.amazonaws.com/uploads.hipchat.com/9996/25967/m07gxvfyu6px3gh/c9de9f3ae7d511e18393123138100c1d_7.jpg)
 ###### Stewie enjoys a brief rest while his tests run
@@ -944,7 +776,7 @@ posts.each do |p|
   p.save!
 end
 
-# Translations
+# TRANSLATIONS
  puts "Creating translations"
 
 content = Contenteditable::Translation.find_or_create_by_key('home/services/12') do |content|
@@ -1183,7 +1015,7 @@ end
 content = Contenteditable::Translation.find_or_create_by_key('services 22') do |content|
   content.key = 'services 22'
   content.value = <<EOF
-What's that, you need tests? While no one wants to admit it, sometimes teams forget to maintain their testing infrastructure, or project deadlines force more emphasis on features than the reliability of those features. In these cases, we come in and get tests passing, setup continuous integration testing, speed up tests, add tests where needed, coach team on TDD and BDD best-practices
+test test test
 EOF
 end
 
@@ -1246,12 +1078,11 @@ end
 content = Contenteditable::Translation.find_or_create_by_key('services 26') do |content|
   content.key = 'services 26'
   content.value = <<EOF
-Think you need something else? Maybe some training for your team? Some refinement for your business plan? Perhaps a pet sitter? We might not be able to offer much on the last one there, but we'd be happy to hear any special requests you have. Just drop us a line at info@coshx.com and we'll get back to you right away.
+Think you need something else
 EOF
 end
 
-
-# Quotes
+# QUOTES
 
 quote = Quote.find_or_create_by_text("We engaged Coshx for a substantial, highly complex project having an incredibly tight deadline, and they came through for us wonderfully. Throughout they were thoughtful, flexible, highly responsive team players.") do |quote|
   quote.author = 'Steve Herrick, CIO, American Academy of Religion'

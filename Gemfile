@@ -53,7 +53,7 @@ group :assets do
   gem "uglifier"
   gem 'compass-rails', '~> 1.0.3'
   gem 'zurb-foundation', '~> 3.0.1'
-  gem 'libv8', '~> 3.11.8'
+  gem 'libv8', '3.16.14.0'
   gem 'execjs'
 end
 
