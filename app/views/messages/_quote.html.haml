@@ -15,7 +15,7 @@
       .six.columns
         .field-comment.hidden
           .arrow-left
-          .text Tell me your name, sir
+          .text Tell me your name, sir!
     .row.email
       .six.columns
         .text-field
@@ -24,7 +24,7 @@
       .six.columns
         .field-comment.hidden
           .arrow-left
-          .text We cant go without your email
+          .text We can't go without your email!
         
     .row
       .twelve.columns
@@ -39,7 +39,7 @@
           = f.text_field :phone
         .link
           %a.a-button.darkblue.next-link{:href => '#', "data-slide" => '2'}
-            ='Continue to The Next Step'.html_safe
+            ='Next →'.html_safe
       
   .quote-slide.slide2
     .field  
@@ -52,7 +52,7 @@
       %a.a-button.darkblue.next-link{:href => '#', "data-slide" => '1'}
         ='← Back'.html_safe
       %a.a-button.darkblue.next-link{:href => '#', "data-slide" => '3'}
-        ='Continue to The Next Step <div class="arrow"></div>'.html_safe
+        ='Next → <div class="arrow"></div>'.html_safe
     
   .quote-slide.slide3  
     .field
@@ -92,15 +92,40 @@
   }
   return result;  
   }
-  
+
   $(document).ready(function () {
   $(".next-link").click(function (e) {
   e.preventDefault();
-  $(".quote-slide").hide();
-  $(".slide" + $(this).attr("data-slide")).show();  
+  var currentSlide = extractSlideNum($('.quote-slide.active').attr('class'));
+  var nextSlide = parseInt($(this).attr("data-slide"),10);
+  findSlideWithNumber(currentSlide).fadeOut(function() {
+  //$(".quote-slide").hide();
+  $('.quote-slide.active').removeClass('active');
+  findSlideWithNumber(nextSlide).fadeIn(function() {
+  $(".slide" + nextSlide).addClass('active');
+  currentSlide = nextSlide;
+  });
+  });
+  
   });
   $(".quote-submit-link").click(function (e) {
   e.preventDefault();
   if (validate_quote() == 1) $("#quote-form").submit();
   });
+
+  $('label').next().focus(function(e) {
+  $(this).prev().css("color","#FFFFFF");
   });
+  $('label').next().blur(function(e) {
+  $(this).prev().css("color","#004264");
+  })
+  });
+
+  function findSlideWithNumber(num) {
+  return $('.slide'+num);
+  }
+
+  function extractSlideNum(slideClasses) {
+  var slidePos = slideClasses.search(/ slide/gi) + 6;
+  return parseInt(slideClasses.slice(slidePos,slidePos+1));
+  }
