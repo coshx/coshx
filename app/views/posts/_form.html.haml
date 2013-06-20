@@ -8,4 +8,51 @@
 
   = f.text_field :title, :placeholder => "Post Title"
   = f.text_area :body, :placeholder => "Post Content"
+  %p.graytext{:style => "font-size:15px"} Drag an image from your desktop into the text area to upload it to Imgur. 
   = f.submit "Save"
+%script(type="text/javascript")
+  $(document).ready(function(e) {
+
+  var area = document.getElementById('post_body');
+
+  function readFiles(files) {
+  var fr = new FileReader();
+  fr.onload = function(event) {
+  var bsfData = event.target.result.slice(event.target.result.search(/\,/)+1,event.target.result.length);
+  var dat = {
+  image:bsfData,
+  type:'base64'
+  };
+  $.ajax({
+  type:"POST",
+  data:dat,
+  url:'https://api.imgur.com/3/image',
+  headers: {
+  Authorization: "Client-ID 6e0f35eb9a323aa"
+  },
+  dataType: "json",
+  success:function(msg) {
+  area.value += "<img src='"+msg.data.link+"'>";
+  },
+  error:function(errormsg) {
+  console.log(errormsg);
+  alert("Sorry, there was an error uploading the image." + errormsg.responseText);
+  }});
+  }
+  fr.readAsDataURL(files[0]);
+  }
+
+  area.ondragover = function(e) {
+  e.preventDefault();
+  $(this).addClass('hover');
+  }
+  area.ondragend = function(e) {
+  e.preventDefault();
+  $(this).removeClass('hover');
+  }
+  area.ondrop = function(e) {
+  if ($(this).hasClass('hover')) $(this).removeClass('hover')
+  e.preventDefault();
+  readFiles(e.dataTransfer.files);
+  }
+  });
