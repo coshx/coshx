@@ -18,9 +18,12 @@
   }
 
   label {
-    font: bold 11px 'PT Sans', sans-serif;
+    font: bold 12px 'PT Sans', sans-serif;
     color: $dark-blue;
     text-transform: uppercase;
+  }
+  input {
+    height:38px !important;
   }
   input, textarea {
     border: 1px solid $dark-blue;
