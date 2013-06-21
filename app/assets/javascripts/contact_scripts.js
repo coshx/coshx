@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	if ($('#message-name').length > 0) enhanceSlides();
+	if ($('.bluu').length > 0) enhanceSlides();
 });
 function enhanceSlides() {
 	$('#message_name').focus().prev().css("color","#FFF");
