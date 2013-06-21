@@ -29,6 +29,12 @@
     border: 1px solid $dark-blue;
     max-width: 450px;
   }
+  input:focus, textarea:focus {
+    -moz-box-shadow: inset 0 0 10px #000;
+    -webkit-box-shadow: inset 0 0 10px #000;
+    box-shadow: inner 0 0 10px #000;
+    border:1px solid #000000;
+  }
 }
 
 .long-field textarea {
