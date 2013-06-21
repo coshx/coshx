@@ -16,6 +16,7 @@
         .field-comment.hidden
           .arrow-left
           .text Tell me your name, sir!
+
     .row.email
       .six.columns
         .text-field
@@ -38,7 +39,7 @@
           = f.label :phone
           = f.text_field :phone
         .link
-          %a.a-button.darkblue.next-link{:href => '#', "data-slide" => '2'}
+          %a.a-button.darkblue.next-link.next{:href => '#', "data-slide" => '2'}
             ='Next →'.html_safe
       
   .quote-slide.slide2
@@ -51,7 +52,7 @@
     .link
       %a.a-button.darkblue.next-link{:href => '#', "data-slide" => '1'}
         ='← Back'.html_safe
-      %a.a-button.darkblue.next-link{:href => '#', "data-slide" => '3'}
+      %a.a-button.darkblue.next-link.next{:href => '#', "data-slide" => '3'}
         ='Next → <div class="arrow"></div>'.html_safe
     
   .quote-slide.slide3  
@@ -65,4 +66,4 @@
       %a.a-button.darkblue.next-link{:href => '#', "data-slide" => '2'}
         ='← Back'.html_safe
       %a.a-button.darkblue.quote-submit-link{:href => '#'}
-        ='Save <div class="arrow"></div>'.html_safe
+        ='Submit <div class="arrow"></div>'.html_safe
