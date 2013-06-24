@@ -73,10 +73,9 @@ $(document).ready(function() {
       e.preventDefault();
       if (validate_quote() == 1) $("#quote-form").submit();
     });
-    $('#message_name').focus().prev().css("color","#FFF");
+    $('#message_name').focus().prev().addClass('whiteText');
     
     $(".next-link").click(function (e) {
-      console.log("next-link fired!");
       e.preventDefault();
       var currentSlide = extractSlideNum($('.quote-slide.active').attr('class'));
       var nextSlide = parseInt($(this).attr("data-slide"),10);
@@ -91,10 +90,15 @@ $(document).ready(function() {
     });
 
     $('label').next().focus(function(e) {
-      $(this).prev().css("color","#FFFFFF");
+      $(this).prev().addClass('whiteText');
     });
     $('label').next().blur(function(e) {
-      $(this).prev().css("color","#004264");
+      if ($(this).prev().hasClass('whiteText')) {
+        $(this).prev().removeClass('whiteText');
+        return;
+      } else {
+        $(this).prev().css("color","#004264");
+      }
     });
 
     function findSlideWithNumber(num) {

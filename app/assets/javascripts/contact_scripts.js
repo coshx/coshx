@@ -1,39 +1,8 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 	if ($('.bluu').length > 0) {
-		$('#message_name').focus().prev().css("color","#FFF");
-    
-		$(".next-link").click(function (e) {
-			console.log("next-link fired!");
-			e.preventDefault();
-			var currentSlide = extractSlideNum($('.quote-slide.active').attr('class'));
-			var nextSlide = parseInt($(this).attr("data-slide"),10);
-			findSlideWithNumber(currentSlide).fadeOut(function() {
-				//$(".quote-slide").hide();
-				$('.quote-slide.active').removeClass('active');
-				findSlideWithNumber(nextSlide).fadeIn(function() {
-					$(".slide" + nextSlide).addClass('active');
-					currentSlide = nextSlide;
-				});
-			});
-		});
-
-		$('label').next().focus(function(e) {
-		  $(this).prev().css("color","#FFFFFF");
-		});
-		$('label').next().blur(function(e) {
-		  $(this).prev().css("color","#004264");
-		});
-
-		function findSlideWithNumber(num) {
-			return $('.slide'+num);
-		}
-
-		function extractSlideNum(slideClasses) {
-		var slidePos = slideClasses.search(/ slide/gi) + 6;
-		return parseInt(slideClasses.slice(slidePos,slidePos+1));
-		}
+		
 	}
-});
+});*/
 function validateEmail(email) { 
 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;  
 	return re.test(email);
