@@ -22,8 +22,15 @@ h2 {
 
 body {
   background: black;
-  color: white;
   -webkit-backface-visibility: hidden;
+}
+
+.dots {
+  line-height: 30px;  
+  margin: 20px auto;
+  width: 28px;
+  height: 8px;
+  background: image-url("ellipsis.png") no-repeat;
 }
 
 h1#logo {
@@ -64,6 +71,27 @@ h1#logo-light a {
 
 h1#logo-light:hover a {
   background-position: 0px -55px;
+}
+
+section {
+  padding: 90px 0 80px;
+}
+
+section p {
+  color: #838383;
+  font-size: 14px;
+}
+
+section p a {
+  color: #fcb040;
+}
+
+#about, #projects, #quote {
+  background: #f6f6f6;
+}
+
+#blog-section {
+ background: #545454
 }
 
 .content {
@@ -181,73 +209,6 @@ nav ul li a.selected, nav ul li a:hover {
   padding: 0 10px;
 }
 
-footer {
-  margin-top: 100px;
-  background: $blue;
-  position: relative;
-
-  .footer-content {
-    position: relative;
-    padding-top: 30px;
-    color: white;
-    padding-bottom: 15px;
-  }
-  .contact-details {
-    @include box-sizing(border-box);
-    background: $dark-blue;
-    padding: 20px 30px;
-    font: 14px/24px "PT Sans", sans-serif;
-  }
-
-  .blogpost {
-    color: white;
-    padding-left: 50px;
-    font: bold 18px 'PT Sans', sans-serif;
-    line-height: 32px;
-    background: url(blog.png) 0px 0px no-repeat;
-    text-transform: uppercase;
-    border-bottom: 1px solid $dark-blue;
-    padding-bottom: 20px;
-  }
-
-  h2.contact-heading {
-    font: bold 24px/70px "PT Sans",sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    color: $dark-blue;
-    a {
-      color: white;
-      &:hover {
-        color: black;
-      }
-    }
-  }
-
-  .footer-bottom {
-    display: block;
-    margin: 10px auto 0px;
-    text-align: center;
-    font: 14px 'PT Sans', sans-serif;
-    span {
-      &.copy {
-        color: white;
-        font: 12px 'PT Sans', sans-serif;
-      }
-      &.links {
-        color: $dark-blue;
-        font: 12px 'PT Sans', sans-serif;
-        a {
-          text-decoration: none;
-          color: $dark-blue;
-          &:hover {
-            text-decoration: none;
-            color: black;
-          }
-        }
-      }
-    }
-  }
-}
 .arrow {
   background: url("blue-arrow.png") no-repeat scroll 0 8px transparent;
   float: right;
@@ -373,4 +334,135 @@ code {
 
 .capsLock {
   text-transform:uppercase;
+}
+
+
+/* button classes */
+.btn {
+  width: 201px;
+  height: 51px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+     -ms-border-radius: 5px;
+     -o-border-radius: 5px;
+     border-radius: 5px;
+     -webkit-transition-property: all;
+     -moz-transition-property: all;
+     -o-transition-property: all;
+     transition-property: all;
+     -webkit-transition-duration: 275ms;
+     -moz-transition-duration: 275ms;
+     -o-transition-duration: 275ms;
+     transition-duration: 275ms;;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; 
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 20px;
+  display: block;
+  line-height: 51px;
+  text-align: center;
+  margin-bottom: 15px !important;
+  letter-spacing: -1px;
+}
+
+.btn:hover {
+  color: #FFFFFF; 
+}
+
+.btn.center {
+  margin: 0px auto auto;
+}
+.btn.top-margin {
+  margin-top: 50px;
+}
+
+.btn.top-margin-small {
+  margin-top: 20px;
+}
+
+.btn.orange {  
+  background-color: #fbaf3f;
+}
+
+.btn.orange:hover {
+  color: #fff;
+  background-color: #545454;
+}
+
+.btn.dark-blue {
+  background-color: #3b5997;
+}
+
+.btn.dark-blue:hover {
+  color: #fff;
+  background-color: #545454;
+}
+
+.btn.blue {
+  background-color: #00abed;
+}
+
+.btn.blue:hover {
+  color: #fff;
+  background-color: #545454;
+}
+
+.arrow-down {
+  height: 32px;
+  width: 32px;
+  background: url(../img/arrow-down.png) no-repeat;
+  display: block;
+  margin: 0 auto;
+  margin-top: 90px;
+}
+
+/* Blog */
+#blog-section h3 {
+  color: #FFF;
+  margin: 0;
+  font-size: 24px;  
+}
+
+#blog-section section {
+  padding: 75px 0;
+}
+
+a.blog-link {
+  font-size: 16px;
+  line-height: 30px;  
+  color: #d4d3d3;
+  margin-bottom: 35px;
+  display: inline-block;
+}
+
+a.blog-link:hover {
+  webkit-transition: all 275ms;
+  -moz-transition: all 275ms;
+  -o-transition: all 275ms;
+  transition: all 275ms;
+  color: #fcb040; 
+}
+
+.date {
+  color: #818181;
+  font-size: 13px;
+  font-style: italic;
+}
+
+footer {
+  background: #2f2f2f;
+  padding: 30px 0px 90px;
+  color: #818181;
+}
+
+footer h4 {
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 25px;
 }

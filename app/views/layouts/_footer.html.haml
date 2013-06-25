@@ -1,90 +1,83 @@
+%article#quote
+  %section.row
+    %h1 Need a quote?
+    .dots
+    %p.eleven.column.centered.text-center
+      Considering us for your next project, then simply use our project planner below. The more details you fill in, the more accurate the estimate will be...
+    %a.btn.orange.center.top-margin-small{:href => "planner.html"} project planner
+
+%article#blog-section
+  -unless last_three_posts[0].nil? && last_three_posts[1].nil? && last_three_posts[2].nil?
+    %section.row
+      .column.three
+        %h3 Latest Blog Posts
+      - last_three_posts.each do |post|
+        .column.three
+          = link_to post.title, show_post_path(post.permalink_attributes), :class => "blog-link"
+          .date
+            = post.posted_on.strftime("%B %e, %Y")
+
 %footer.container
-  %div.row.footer-content
-    %a.footer-gotop-ribbon{:href => '#top', :id => "top-nav"}
-    %h2.blogpost Latest blog posts
-    -unless last_two_posts[0].nil? && last_two_posts[1].nil?
-      #latest-blogs.row
-        - last_two_posts.each do |post|
-          .six.column.post
-            .row
-              .three.columns.fourfoot.mobile-one
-                %div.post_pic(style="width:74px;height:74px;background:url(#{Gravatar.new(post.author.email).image_url(:size => 74)});border-radius:100px;border: 4px solid white;")
-                %span.post-info
-                  = (post.author.deleted_at.nil?) ? link_to(post.author.name, post.author.url) : post.author.name
-                  %br/
-                  = post.posted_on.strftime("%B %e, %Y")
-                %div.small-line
-              .content.nine.columns.mobile-three
-                %h2
-                  = link_to post.title, show_post_path(post.permalink_attributes)
-                %div
-                  = preserve post.preview_html.html_safe
-                .links
-                  = link_to "Read more", show_post_path(post.permalink_attributes), :class => "read-more"
-                  |
-                  %a.comments{:href => show_post_path(post.permalink_attributes.merge(:anchor => 'disqus_thread'))}
+  .row
+    .column.three
+      %h4 Locations
+      %strong Boulder
+      %p
+        3080 Valmont Rd 
+        %br/
+        Suite 280
+        %br/
+        CO 80301
+      %strong Charlottesville
+      %p
+        1110 East Market St
+        %br/
+        Suite N7
+        %br/
+        VA 22902
+      %strong San Francisco
+      %p
+        972 Mission Street
+        %br/
+        5th Floor
+        %br/
+        CA 94103
+      %strong Austin
+      %p
+        701 Brazos St
+        %br/
+        Suite 1601
+        %br/
+        TX 78701
+    .column.three
+      %h4 Navigation
+      %ul
+        = tab_to "Home", root_path
+        = tab_to "About us", about_path
+        = tab_to "Our projects", projects_path
+        = tab_to "Our services", services_path
+        = tab_to "Blog", blog_posts_path
+        = tab_to "Contact us", contact_path
+        = tab_to "Careers", jobs_path
 
-    - cache("tweets", :expires_in => 5.minutes) do
-      .row
-        .star-header#footer-tweet
-          %h2 Last tweet
-          %p#tweet-box
-            %span #{formatted_tweet.html_safe}
-            %br/
-            %br/
-            .days
-              -unless latest_tweet.user.screen_name == "system_error"
-                = link_to relative_tweet_date, tweet_url, :target => "_blank"
-          = link_to "https://www.twitter.com/coshxlabs", :class => "a-button darkblue" do
-            Follow Us
-    
+    .column.three
+      %h4 Social
+      %ul
+        %li
+          %a{:href => "http://www.twitter.com/coshxlabs"} Twitter
+        %li
+          %a{:href => "http://www.facebook.com/coshxlabs"} Facebook
+        %li
+          %a{:href => "http://www.dribbble.com/coshxlabs"} Dribbble
 
-    %h2.contact-heading
-      Shoot us an email at
-      = link_to "info@coshx.com", "mailto:info@coshx.com"
-    %div.contact-details.row
-      .three.columns.fourfoot
-        %strong Boulder
-        %br/
-        3080 Valmont Rd Suite 280
-        %br/
-        Boulder, CO 80301
-      .three.columns.fourfoot
-        %strong Charlottesville
-        %br/
-        1110 Market St East Suite N7
-        %br/
-        Charlottesville, VA 22902
-      .three.columns.fourfoot
-        %strong San Francisco
-        %br/
-        972 Mission Street, 5th Floor
-        %br/
-        San Francisco, CA 94103
-        %br/
-      .three.columns.fourfoot
-        %strong Austin
-        %br/
-        701 Brazos St, Suite 1601
-        %br/
-        Austin, TX 78701
-
-      .three.columns.fourfoot
-        CONSIDERING COSHX FOR
-        %br/
-        YOUR NEXT PROJECT?<br>
-        = link_to contact_path(:anchor => "quote"), :class => "the-button" do
-          Get a Proposal
-    .footer-bottom
-      %span.copy Copyright © 2012 Coshx Labs. All rights reserved
-      \•
-      %span.links
-        %a{:href => root_path} Home
-        |
-        %a{:href => about_path} About
-        |
-        %a{:href => projects_path} Projects
-        |
-        %a{:href => services_path} Services
-        |
-        = link_to "Contact", contact_path
+    .column.three
+      %h4 Shoot us an email
+      %ul
+        %li
+          %a{:href => "mailto:info@coshx.com"} info@coshx.com
+      %h4 Need a quote?
+      %ul
+        %li
+          %a{:href => "planner.html"} Project Planner
+      %h1#logo-light
+        %a{:href => root_path}
