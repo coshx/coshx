@@ -10,7 +10,7 @@
               .three.columns.fourfoot.mobile-one
                 %div.post_pic(style="width:74px;height:74px;background:url(#{Gravatar.new(post.author.email).image_url(:size => 74)});border-radius:100px;border: 4px solid white;")
                 %span.post-info
-                  = link_to post.author.name, post.author.url
+                  = (post.author.deleted_at.nil?) ? link_to(post.author.name, post.author.url) : post.author.name
                   %br/
                   = post.posted_on.strftime("%B %e, %Y")
                 %div.small-line
