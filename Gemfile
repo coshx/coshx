@@ -17,7 +17,7 @@ gem "devise", '2.1.2'
 gem "redcarpet"
 gem "pygmentize"
 gem "nokogiri"
-gem "jquery-rails"
+gem 'jquery-rails', '~> 2.3.0'
 gem "haml-rails"
 gem "gravatar-ultimate"
 gem "kaminari"

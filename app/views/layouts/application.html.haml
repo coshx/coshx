@@ -18,7 +18,7 @@
   %body
     = save_button
     %div.container.main-container
-      %div#header.row
+      %div#header
         - if admin_signed_in?
           = render "layouts/admin_menu"
         = render "layouts/header"
