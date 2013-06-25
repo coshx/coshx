@@ -167,6 +167,8 @@ GEM
     net-ssh (2.6.3)
     nokogiri (1.5.6)
     orm_adapter (0.4.0)
+    paranoia (1.2.0)
+      activerecord (>= 3.0.0)
     pg (0.14.0)
     polyglot (0.3.3)
     pry (0.9.10)
@@ -300,6 +302,7 @@ DEPENDENCIES
   kaminari
   libv8 (= 3.16.14.0)
   nokogiri
+  paranoia
   pg
   pry
   pry-nav

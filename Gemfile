@@ -9,6 +9,7 @@ gem 'thin'
 
 # database
 gem "pg"
+gem "paranoia"
 
 # authentication
 gem "devise", '2.1.2'
