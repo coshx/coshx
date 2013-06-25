@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   contenteditable_filter "admin_signed_in?"
 
-  helper_method :last_two_posts, :random_quote, :whereami, :contents
+  helper_method :last_three_posts, :random_quote, :whereami, :contents
 
   around_filter :catch_exceptions
 
@@ -11,8 +11,8 @@ class ApplicationController < ActionController::Base
     Content.all
   end
 
-  def last_two_posts
-    @last_two_posts ||= Post.published.limit(2)
+  def last_three_posts
+    @last_three_posts ||= Post.published.limit(3)
   end
 
   def random_quote
