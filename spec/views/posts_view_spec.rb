@@ -3,7 +3,7 @@ describe "posts/feed.atom.builder" do
 
   before :each do
     assign(:title, "Some Title")
-    @posts = [build_stubbed(:post, :posted_on => DateTime.new(2013, 1, 1)), build_stubbed(:post)]
+    @posts = [build(:post, :posted_on => DateTime.new(2013, 1, 1)), build(:post)]
     assign(:posts, @posts)
     assign(:feed_url, 'http://www.coshx.com/feed')
     render

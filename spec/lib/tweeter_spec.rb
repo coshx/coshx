@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe Tweeter do
   let(:post) { mock_model(Post) }
+  # let(:author) {FactoryGirl.create(:author)}
+  # let(:post) { FactoryGirl.build(:published_post, author: author) }
   let(:permalink_attrs) { {:year => '2012', :month => '1', :day => '1',
                            :title => 'Title!'} }
 
@@ -12,7 +14,7 @@ describe Tweeter do
   describe "blog post tweet" do
     it "sends twitter a tweet about the blog post" do
       Twitter.should_receive(:update)
-      Tweeter.blog_post_tweet(build_stubbed :published_post)
+      Tweeter.blog_post_tweet(build :published_post)
     end
   end
 
@@ -42,7 +44,7 @@ describe Tweeter do
 
   describe "short tweet" do
     let(:title) { "Hey dog I heard you like twitter so I put some tweets in a tweeter module so you can tweet after you blog. Hey dog I heard you like twitter so I put some tweets in a tweeter module so you can tweet after you blog." }
-    let(:post) { build_stubbed :post, title: title, posted_on: Date.parse("5/5/12")}
+    let(:post) { build :post, title: title, posted_on: Date.parse("5/5/12")}
 
     it "trims tweets to 140 chars" do
       described_class.short_tweet(post).length.should == 140
@@ -50,17 +52,22 @@ describe Tweeter do
   end
 
   describe "random tweet should contain the" do
-    let(:author) { 'Calvin' }
+    let(:author_name) { 'Calvin' }
     let(:title)  { 'Why is Twitter always down?' }
     let(:url)    do
       Rails.application.routes.url_helpers.show_post_url(
                   post.permalink_attributes.merge(:host => ENV['COSHX_HOST']))
     end
-    let(:post)   { build_stubbed :post, author: build_stubbed(:admin, :name => author), title: title, posted_on: Date.parse("5/5/12")}
+    let(:author) { build :author, name: author_name}
+    let(:post)   { build :post, title: title, posted_on: Date.parse("5/5/12")}
     subject      { Tweeter.random_tweet post }
 
+    before :each do
+      post.stub(:author).and_return(author)
+    end
+
     it "author" do
-      subject.should include author
+      subject.should include author_name
     end
 
     it "title" do
