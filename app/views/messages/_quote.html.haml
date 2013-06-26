@@ -74,7 +74,7 @@ $(document).ready(function() {
       if (validate_quote() == 1) $("#quote-form").submit();
     });
     $('#message_name').focus().prev().addClass('whiteText');
-
+    
     $(".next-link").click(function (e) {
       e.preventDefault();
       var currentSlide = extractSlideNum($('.quote-slide.active').attr('class'));
