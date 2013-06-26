@@ -4,6 +4,10 @@ ruby "1.9.3"
 
 gem "rails", "~> 3.2.9"
 
+#moving nokogiri up here because of dependency issues
+gem "nokogiri"
+
+
 # web server
 gem 'thin'
 
@@ -17,7 +21,6 @@ gem "devise", '2.1.2'
 # presentation
 gem "redcarpet"
 gem "pygmentize"
-gem "nokogiri"
 gem 'jquery-rails', '~> 2.3.0'
 gem "haml-rails"
 gem "gravatar-ultimate"
