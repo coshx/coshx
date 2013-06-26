@@ -108,4 +108,15 @@ describe Post do
     end
   end
 
+  describe "#author" do
+    let(:author) {FactoryGirl.create(:author)}
+    let(:post) {FactoryGirl.create(:post, author: author)}
+
+    it "gets deleted authors" do
+      author.destroy
+      post.reload
+      post.author.should == author
+    end
+  end
+
 end

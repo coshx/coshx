@@ -13,6 +13,10 @@ class Post < ActiveRecord::Base
   before_save :set_permalink
   after_update :send_tweet
 
+  def author 
+    Admin.unscoped.where(id: author_id).first
+  end
+
   def preview
     lines = self.body.split(/(\n)+/)
     preview_text = lines.reject do |line|

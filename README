@@ -4,3 +4,6 @@ The Coshx web site. www.coshx.com
 
 Dev note:
 You can override database.yml with database.overrides.yml in /config which is not tracked.
+
+Troubleshooting note:
+When looking at the site on staging, use URL staging.coshx.com. Firefox got confused on which image to serve when using URL coshx-web-staging.herokuapp.com
