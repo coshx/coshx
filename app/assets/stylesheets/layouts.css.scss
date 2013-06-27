@@ -357,6 +357,16 @@ footer .small-line {
   background: $dark-blue;
 }
 
+#footer-tweet h2 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    color: $dark-blue;
+    text-transform: uppercase;
+    line-height: 125%;
+    display: inline-block;
+    margin-left: 50px;
+}
+
 .footer-gotop-ribbon {
   content: ' ';
   width: 50px;

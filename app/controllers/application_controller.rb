@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   contenteditable_filter "admin_signed_in?"
 
-  helper_method :last_two_posts, :random_quote, :whereami, :contents
+  helper_method :last_two_posts, :random_quote, :whereami, :contents, :latest_tweet
 
   around_filter :catch_exceptions
 
@@ -22,6 +22,11 @@ class ApplicationController < ActionController::Base
   def whereami
      params[:controller].to_s + "/" + params[:action]
      #     controller.controller_name.to_s + "/" + controller.action_name
+  end
+
+  def latest_tweet
+    @twitter_url = "coshxlabs"
+    @latest_tweet = Twitter.user_timeline(@twitter_url, :count => 1)[0]
   end
 
   protected

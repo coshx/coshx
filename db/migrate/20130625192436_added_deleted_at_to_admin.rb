@@ -1,5 +1,7 @@
 class AddedDeletedAtToAdmin < ActiveRecord::Migration
- def change
-    add_column :deleted_at, :datetime
+  def up
+  end
+
+  def down
   end
 end
