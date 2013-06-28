@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
   end
 
   def latest_tweet
-    
+
     if Rails.env.staging?
       @twitter_url = "SiteStagingTest"
     else
@@ -54,7 +54,7 @@ class ApplicationController < ActionController::Base
     def catch_exceptions
       if Rails.env.production?
         begin
-          yield 
+          yield
         rescue Exception => exception
           if exception.is_a?(ActiveRecord::RecordNotFound) || exception.is_a?(ActionController::RoutingError)
             render_page_not_found

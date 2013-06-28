@@ -1,6 +1,6 @@
 .all-posts
   - y = 0
-  
+
   .row
     .four.columns
     .eight.columns
@@ -13,8 +13,7 @@
           .year=year
           ="</div><div class='eight columns'>".html_safe
         - y = year
-        - link_text = p.title + " / " 
-        
+        - link_text = p.title + " / "
 
         - if p.published?
           = link_to link_text.html_safe, show_post_path(p.permalink_attributes), :title => "Read More"
@@ -24,13 +23,5 @@
           .edit-link
             = link_to 'Edit', edit_post_path(p)
             = link_to("Publish", publish_post_path(p), :method => :put) unless p.published?
-        
-    
-    
-
 
   = paginate @posts
-  
-  
-  
- 

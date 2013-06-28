@@ -24,9 +24,6 @@
           %h2 39
           %p Thai-food orders this year
 
-
-
-
     .row.small-icons
       .twelve.columns
         .git
@@ -68,16 +65,11 @@
             Total number:
           =image_tag "formula.png"
 
-                    
-
-
-
 %section#team
   %ul
     - @coshx_folks.each_with_index do |person, i|
       %li
         %a{:href => person.url, :class => 'about-us-avatar'}(style="background:url(#{Gravatar.new(person.email).image_url(:size => 180)});")
-          
           %p
             = person.name
     %li.last
@@ -86,7 +78,7 @@
         = image_tag("team/new.png", :mouseover => "team/new-white.png")
         %p
           You?
-  
+
 = render :partial => 'home/testimonials'
 
 

@@ -18,12 +18,12 @@
   .field
     = f.label :featured
     = f.check_box :featured
-  .images    
+  .images
     = image_tag(@project.picture_url) if @project.picture?
     = f.file_field :picture
-    Remove picture  
+    Remove picture
     = f.check_box :remove_picture
   .actions
     = f.submit 'Save'
-    
+
 = render :partial => 'quotes/list', :locals => {:project => @project}

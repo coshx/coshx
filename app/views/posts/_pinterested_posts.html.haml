@@ -1,16 +1,13 @@
 = javascript_include_tag "pinterestize"
 
 %section.primary
-  %h1.formula Blog  
+  %h1.formula Blog
   %ul.all_posts
     - @posts.each do |post|
       = render :partial => "post_box", :locals => {:post => post, :preview => true }
-      
+
   = paginate @posts
-  
-  
-  
-  
+
 %script(type="text/javascript")
   $(document).ready(function () {
   var options = {

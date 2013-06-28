@@ -10,7 +10,7 @@
     .post-body=preserve post.preview_html.html_safe
   - else
     .post-body=preserve post.body_html.html_safe
-    
+
   = link_to "Read More", blog_post_path(post)
   - if admin_signed_in?
     .post-admin
