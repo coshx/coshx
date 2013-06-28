@@ -25,7 +25,13 @@ class ApplicationController < ActionController::Base
   end
 
   def latest_tweet
-    @twitter_url = "coshxlabs"
+    
+    if Rails.env.staging?
+      @twitter_url = "SiteStagingTest"
+    else
+      @twitter_url = "coshxlabs"
+    end
+
     if Rails.env.test?
       @user = OpenStruct.new ({:screen_name => "test_user"})
       @latest_tweet = OpenStruct.new ({:user => @user, :text => "This is a tweet", :id => 1, :created_at => Time.parse("2013-06-26 13:10:23 -0400")} )
