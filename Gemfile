@@ -45,6 +45,9 @@ gem 'contenteditable', :github => 'micmmakarov/contenteditable', :branch => 'mas
 # sass mixin library
 gem 'bourbon'
 
+# best practices
+gem 'rails_best_practices'
+
 group :assets do
   # upload assets to s3 before deploying to heroku
   gem "asset_sync"
@@ -62,6 +65,7 @@ group :development do
   gem "heroku_san", '~> 4.2.2'
   gem "pry"
   gem "pry-nav"
+  gem 'better_errors'
 end
 
 group :development, :test do
