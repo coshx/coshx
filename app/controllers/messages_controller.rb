@@ -84,9 +84,7 @@ class MessagesController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
   def thank_you
   end
-  
-  
 end

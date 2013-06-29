@@ -26,7 +26,7 @@
         .field-comment.hidden
           .arrow-left
           .text We can't go without your email!
-        
+
     .row
       .twelve.columns
         .field
@@ -41,9 +41,9 @@
         .link
           %a.a-button.darkblue.next-link.next{:href => '#', "data-slide" => '2'}
             ='Next →'.html_safe
-      
+
   .quote-slide.slide2
-    .field  
+    .field
       = f.label :project_description
       = f.text_area :project_description
     .field
@@ -54,8 +54,8 @@
         ='← Back'.html_safe
       %a.a-button.darkblue.next-link.next{:href => '#', "data-slide" => '3'}
         ='Next → <div class="arrow"></div>'.html_safe
-    
-  .quote-slide.slide3  
+
+  .quote-slide.slide3
     .field
       = f.label :budget
       = f.text_field :budget
@@ -74,7 +74,7 @@ $(document).ready(function() {
       if (validate_quote() == 1) $("#quote-form").submit();
     });
     $('#message_name').focus().prev().addClass('whiteText');
-    
+
     $(".next-link").click(function (e) {
       e.preventDefault();
       var currentSlide = extractSlideNum($('.quote-slide.active').attr('class'));

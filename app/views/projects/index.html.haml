@@ -1,5 +1,5 @@
 %div.featured_projects
-  - rowify(@projects, 3).each_with_index do |projects, row_num|    
+  - rowify(@projects, 3).each_with_index do |projects, row_num|
     .row
       - projects.each_with_index do |p, i|
         %div.four.columns
@@ -17,6 +17,3 @@
     = link_to " ", "/get_random_quote", :remote => true, :class => "test-nav prev"
 
   = render :partial => "quotes/random_quote", :locals => {:random_quote => random_quote}
-
-
-

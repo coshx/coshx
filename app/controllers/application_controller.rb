@@ -25,8 +25,14 @@ class ApplicationController < ActionController::Base
   end
 
   def latest_tweet
-    @twitter_url = "coshxlabs"
-    unless Rails.env.production?
+
+    if Rails.env.staging?
+      @twitter_url = "SiteStagingTest"
+    else
+      @twitter_url = "coshxlabs"
+    end
+
+    if Rails.env.test?
       @user = OpenStruct.new ({:screen_name => "test_user"})
       @latest_tweet = OpenStruct.new ({:user => @user, :text => "This is a tweet", :id => 1, :created_at => Time.parse("2013-06-26 13:10:23 -0400")} )
     else
@@ -48,7 +54,7 @@ class ApplicationController < ActionController::Base
     def catch_exceptions
       if Rails.env.production?
         begin
-          yield 
+          yield
         rescue Exception => exception
           if exception.is_a?(ActiveRecord::RecordNotFound) || exception.is_a?(ActionController::RoutingError)
             render_page_not_found
