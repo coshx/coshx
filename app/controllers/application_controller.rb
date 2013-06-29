@@ -33,10 +33,15 @@ class ApplicationController < ActionController::Base
     end
 
     if Rails.env.test?
-      @user = OpenStruct.new ({:screen_name => "test_user"})
-      @latest_tweet = OpenStruct.new ({:user => @user, :text => "This is a tweet", :id => 1, :created_at => Time.parse("2013-06-26 13:10:23 -0400")} )
+      user = OpenStruct.new ({:screen_name => "test_user"})
+      @latest_tweet = OpenStruct.new ({:user => user, :text => "This is a tweet", :id => 1, :created_at => Time.parse("2013-06-26 13:10:23 -0400")} )
     else
-      @latest_tweet = Twitter.user_timeline(@twitter_url, :count => 1)[0]
+      begin
+        @latest_tweet = Twitter.user_timeline(@twitter_url, :count => 1)[0]
+      rescue ex
+        user = OpenStruct.new({:screen_name => "system_error"})
+        @latest_tweet = OpenStruct.new ({:user => user, :text => "Error retrieving tweets: #{ex}"})
+      end
     end
   end
 
