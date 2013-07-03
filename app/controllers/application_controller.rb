@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   contenteditable_filter "admin_signed_in?"
 
-  helper_method :last_two_posts, :random_quote, :whereami, :contents, :latest_tweet
+  helper_method :last_three_posts, :random_quote, :whereami, :contents, :latest_tweet
 
   around_filter :catch_exceptions
 
@@ -11,8 +11,8 @@ class ApplicationController < ActionController::Base
     Content.all
   end
 
-  def last_two_posts
-    @last_two_posts ||= Post.published.limit(2)
+  def last_three_posts
+    @last_three_posts ||= Post.published.limit(3)
   end
 
   def random_quote
@@ -38,9 +38,9 @@ class ApplicationController < ActionController::Base
     else
       begin
         @latest_tweet = Twitter.user_timeline(@twitter_url, :count => 1)[0]
-      rescue ex
+      rescue => ex
         user = OpenStruct.new({:screen_name => "system_error"})
-        @latest_tweet = OpenStruct.new ({:user => user, :text => "Error retrieving tweets: #{ex}"})
+        @latest_tweet = OpenStruct.new ({:user => user, :text => "Error retrieving tweets: #{ex}", :id => 1, :created_at => Time.parse("2013-06-26 13:10:23 -0400")})
       end
     end
   end

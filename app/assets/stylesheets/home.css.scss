@@ -1,9 +1,5 @@
 @import "common";
 
-body p {
-  line-height: 140%;
-}
-
 .popover-content p {
   font-size: 12px;
 }
@@ -73,10 +69,9 @@ body p {
   }
 
   h1 {
-    color: white;
+    color: #535353;
     font: bold 48px 'PT Sans', sans-serif;
     text-transform: uppercase;
-    display: block;
     text-align: center;
   }
 
