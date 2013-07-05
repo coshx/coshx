@@ -32,4 +32,52 @@ module ApplicationHelper
     array_of_rows_of_things
   end
 
+  def title(controller, action)
+    default_title = "Software Consulting for Start-Ups and the Enterprise | Coshx Labs"
+    title_hash = {
+      "home" => {
+        "index"       => default_title,
+        "about"       => "Over 80 years of combined experience with Ruby on Rails web applications",
+        "services"    => "Web application consulting in Austin, Boulder, Charlottesville and San Francisco",
+        "contact_us"  => "Start your web or mobile application project today by contacting Coshx"
+      },
+      "jobs" => {
+        "index"       => "Build web and mobile applications as a Coshx team member"
+      },
+      "posts" => {
+        "index"       => "Web applications expertise from our accomplished engineering team",
+        "show"        => "Web applications expertise from our accomplished engineering team"
+      },
+      "projects" => {
+        "index"       => "We build web software for diverse industries"
+      }
+    }
+
+    title_hash[controller].try(:[], action) || default_title
+  end
+
+  def meta_description(controller, action)
+    default_meta_description = "Coshx creates innovative web and mobile applications to help your business reach its goals. Our experienced engineers apply proven development technologies using an Agile framework to meet your specialized software needs."
+    meta_description_hash = {
+      "home" => {
+        "index"       => default_meta_description,
+        "about"       => default_meta_description,
+        "services"    => default_meta_description,
+        "contact_us"  => default_meta_description
+      },
+      "jobs" => {
+        "index"       => default_meta_description
+      },
+      "posts" => {
+        "index"       => default_meta_description,
+        "show"        => default_meta_description
+      },
+      "projects" => {
+        "index"       => default_meta_description
+      }
+    }
+
+    meta_description_hash[controller].try(:[], action) || default_meta_description
+  end
+
 end
