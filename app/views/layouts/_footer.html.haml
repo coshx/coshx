@@ -31,15 +31,8 @@
         = link_to "https://www.twitter.com/coshxlabs", :class => "a-button darkblue" do
           Follow Us
       %div{:id => "footer-tweet"}
-        %script{:src => "assets/twitter_stream.js", :type => "text/javascript"}
         :javascript
           twitterCallback2 ("#{latest_tweet.user.screen_name}", "#{escape_javascript latest_tweet.text}", "#{latest_tweet.id.to_s}", "#{latest_tweet.created_at.strftime("%b %d, %Y %H:%M")}");
-
-        / %script{:src => "https://api.twitter.com/1/statuses/user_timeline.json?screen_name=#{@twitter_url}&include_rts=true&count=1&callback=twitterCallback2", :type => "text/javascript"}
-
-
-
-
 
     %h2.contact-heading
       Shoot us an email at
