@@ -7,7 +7,7 @@
 #     - <Heroku config:var name>: <Heroku config:var value>
 #
 
-config_repo: 'https://github.com/coshx/coshx_configuration'
+config_repo: 'git@github.com:coshx/coshx_configuration'
 
 production:
   app: coshx-web-production
