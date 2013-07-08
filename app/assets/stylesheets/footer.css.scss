@@ -21,7 +21,7 @@ footer .star-header {
   border-bottom: 1px solid $dark-blue;
   font: bold 18px 'PT Sans', sans-serif;
   color: white;
-  background: url(twitter_footer.png) no-repeat 0px 3px;
+  background: url(twitter_footer.png) no-repeat 0px 45px;
   text-transform: none;
   position: relative;
   p {
@@ -32,6 +32,10 @@ footer .star-header {
 
   &#footer-tweet {
     font: 13px "Droid Serif", serif;
+  }
+
+  .days {
+    padding-left: 50px;
   }
 }
 
