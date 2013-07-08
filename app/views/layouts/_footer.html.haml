@@ -29,11 +29,11 @@
         %h2 Last tweet
         %p#tweet-box
           %li
-            %span #{formatted_tweet}
+            %span #{formatted_tweet.html_safe}
             %br/
             %br/
             .days
-              -unless latest_tweet.user.screen_name = "system_error"
+              -unless latest_tweet.user.screen_name == "system_error"
                 = link_to relative_tweet_date, tweet_url, :target => "_blank"
         = link_to "https://www.twitter.com/coshxlabs", :class => "a-button darkblue" do
           Follow Us
