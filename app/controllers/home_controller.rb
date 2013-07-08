@@ -1,5 +1,4 @@
 class HomeController < ApplicationController
-  caches_page :services
 
   def index
     @featured_projects = Project.find(:all, :limit => 3, :order=> 'created_at desc')
