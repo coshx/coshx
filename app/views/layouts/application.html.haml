@@ -1,9 +1,10 @@
 !!!
 %html
   %head
-    %title= "Coshx Labs #{yield(:title)}"
+    %title= title(params['controller'], params['action'])
     %meta{:name => "google-site-verification", :content => "GG9HzTQhQZszRRYo-W_el_Dh1LQs-3SQOuCzZS88FvI"}
     %meta{:charset => "UTF-8"}
+    %meta{:name => "description", :content => meta_description(params['controller'], params['action'])}
     = render "shared/fonts"
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
