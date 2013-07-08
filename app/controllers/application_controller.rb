@@ -1,9 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  include ActionView::Helpers::DateHelper
+  include Twitter::Autolink
+
   contenteditable_filter "admin_signed_in?"
 
-  helper_method :last_two_posts, :random_quote, :whereami, :contents, :latest_tweet
+  helper_method :last_two_posts, :random_quote, :whereami, :contents, 
+    :latest_tweet, :formatted_tweet, :tweet_url, :relative_tweet_date
 
   around_filter :catch_exceptions
 
@@ -43,6 +47,18 @@ class ApplicationController < ActionController::Base
         @latest_tweet = OpenStruct.new ({:user => user, :text => "Error retrieving tweets: #{ex}", :id => 1, :created_at => Time.parse("2013-06-26 13:10:23 -0400")})
       end
     end
+  end
+
+  def formatted_tweet
+    @formatted_tweet = auto_link(latest_tweet.text)
+  end
+
+  def tweet_url
+    @tweet_url = "http://twitter.com/" + latest_tweet.user.screen_name + "/statuses/" + latest_tweet.id.to_s
+  end
+
+  def relative_tweet_date
+    @formatted_tweet_date = distance_of_time_in_words(latest_tweet.created_at, Time.now) + " ago"
   end
 
   protected

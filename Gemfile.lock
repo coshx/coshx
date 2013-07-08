@@ -277,10 +277,15 @@ GEM
       faraday (~> 0.8, < 0.10)
       multi_json (~> 1.0)
       simple_oauth (~> 0.2)
+    twitter-text (1.6.1)
+      unf (~> 0.0.5)
     tzinfo (0.3.35)
     uglifier (1.2.7)
       execjs (>= 0.3.0)
       multi_json (~> 1.3)
+    unf (0.0.5)
+      unf_ext
+    unf_ext (0.0.6)
     warden (1.2.1)
       rack (>= 1.0)
     websocket (1.0.7)
@@ -335,5 +340,6 @@ DEPENDENCIES
   timecop
   turbolinks
   twitter
+  twitter-text
   uglifier
   zurb-foundation (~> 3.0.1)

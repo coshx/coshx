@@ -30,6 +30,7 @@ gem 'fog'
 
 #Social media is cool?
 gem "twitter"
+gem "twitter-text"
 
 # Turbolinks!
 gem "turbolinks"
