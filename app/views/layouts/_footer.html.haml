@@ -24,18 +24,20 @@
                   |
                   %a.comments{:href => show_post_path(post.permalink_attributes.merge(:anchor => 'disqus_thread'))}
 
-    .row
-      .star-header#footer-tweet
-        %h2 Last tweet
-        %p#tweet-box
-          %span #{formatted_tweet.html_safe}
-          %br/
-          %br/
-          .days
-            -unless latest_tweet.user.screen_name == "system_error"
-              = link_to relative_tweet_date, tweet_url, :target => "_blank"
-        = link_to "https://www.twitter.com/coshxlabs", :class => "a-button darkblue" do
-          Follow Us
+    - cache("tweets", :expires_in => 5.minutes) do
+      .row
+        .star-header#footer-tweet
+          %h2 Last tweet
+          %p#tweet-box
+            %span #{formatted_tweet.html_safe}
+            %br/
+            %br/
+            .days
+              -unless latest_tweet.user.screen_name == "system_error"
+                = link_to relative_tweet_date, tweet_url, :target => "_blank"
+          = link_to "https://www.twitter.com/coshxlabs", :class => "a-button darkblue" do
+            Follow Us
+    
 
     %h2.contact-heading
       Shoot us an email at

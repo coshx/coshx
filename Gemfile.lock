@@ -97,6 +97,7 @@ GEM
       cucumber (>= 1.1.8)
       nokogiri (>= 1.5.0)
     daemons (1.1.9)
+    dalli (2.6.4)
     database_cleaner (0.8.0)
     devise (2.1.2)
       bcrypt-ruby (~> 3.0)
@@ -161,6 +162,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcachier (0.0.2)
     method_source (0.8)
     mime-types (1.21)
     modular-scale (1.0.2)
@@ -309,6 +311,7 @@ DEPENDENCIES
   compass-rails (~> 1.0.3)
   contenteditable!
   cucumber-rails
+  dalli
   database_cleaner
   devise (= 2.1.2)
   execjs
@@ -322,6 +325,7 @@ DEPENDENCIES
   i18n-active_record!
   jquery-rails
   kaminari
+  memcachier
   nokogiri
   paranoia
   pg
