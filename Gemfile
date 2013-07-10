@@ -36,8 +36,7 @@ gem "twitter-text"
 gem "turbolinks"
 
 # caching
-gem 'memcachier'
-gem 'dalli'
+gem 'redis'
 
 gem 'i18n-active_record',
     :git => 'git://github.com/svenfuchs/i18n-active_record.git',

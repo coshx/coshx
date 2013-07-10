@@ -97,7 +97,6 @@ GEM
       cucumber (>= 1.1.8)
       nokogiri (>= 1.5.0)
     daemons (1.1.9)
-    dalli (2.6.4)
     database_cleaner (0.8.0)
     devise (2.1.2)
       bcrypt-ruby (~> 3.0)
@@ -162,7 +161,6 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    memcachier (0.0.2)
     method_source (0.8)
     mime-types (1.21)
     modular-scale (1.0.2)
@@ -220,6 +218,7 @@ GEM
     rdoc (3.12.1)
       json (~> 1.4)
     redcarpet (2.1.1)
+    redis (3.0.4)
     rmagick (2.13.2)
     rspec (2.11.0)
       rspec-core (~> 2.11.0)
@@ -311,7 +310,6 @@ DEPENDENCIES
   compass-rails (~> 1.0.3)
   contenteditable!
   cucumber-rails
-  dalli
   database_cleaner
   devise (= 2.1.2)
   execjs
@@ -325,7 +323,6 @@ DEPENDENCIES
   i18n-active_record!
   jquery-rails
   kaminari
-  memcachier
   nokogiri
   paranoia
   pg
@@ -335,6 +332,7 @@ DEPENDENCIES
   rails (~> 3.2.9)
   rails_best_practices
   redcarpet
+  redis
   rmagick (~> 2.13.2)
   rspec-rails
   sass-rails (~> 3.2.3)
