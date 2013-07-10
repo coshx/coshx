@@ -38,4 +38,9 @@ Coshx::Application.configure do
   config.active_support.deprecation = :stderr
 
   routes.default_url_options[:host] = 'localhost:3000'
+
+  
+  # Set Redis URL
+  ENV["REDISTOGO_URL"] = 'redis://redistogo:9456d6d4c8ae2ca7478523d20e7cea2d@crestfish.redistogo.com:9362/'
+  
 end
