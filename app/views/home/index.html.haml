@@ -1,50 +1,48 @@
-= render :partial => "home/slider"
-
 .divider.homepage
 
-%div#features.row
-  %div.feature.four.columns
-    = image_tag "people.png", :class => :people
-    = render :partial => "coshx_blue_x", :locals => {:feature => "COMPANY"}
-    = ceditable "company_overview", "p"
-    = link_to about_path, :class => "a-button" do
-      About Us
-  %div.feature.four.columns
-    = image_tag "services.png", :class => :gears
-    = render :partial => "coshx_blue_x", :locals => {:feature => "SERVICES"}
-    = ceditable "services_overview", "p"
-    = link_to services_path, :class => "a-button" do
-      Our Services
-  %div.feature.four.columns
-    = image_tag "projects.png", :class => :beaker
-    = render :partial => "coshx_blue_x", :locals => {:feature => "PROJECTS"}
-    = ceditable "projects_overview", "p"
-    = link_to projects_path, :class => "a-button" do
-      Our Projects
+%div#mission-statement.row
+  %section
+    %h1 Execution is easy, when you have the right partners.
+    %h2 You have an idea, and we have the skills to build it. We will sweat the technical details so you can focus on what your users need most. Let's build something together.
 
 .divider
 
-%section#contact-us
-  = image_tag "mail.png"
-  = ceditable "frontpage_contact_header", "h2"
+%div#first-project.row
+  #first-project-image.column.two
+    %h1#first-project-logo
+  #first-project-description.column.two
+    %h3 CloseoutBike
+    %h4 We practice perfect simplicity, crafting designs that fulfill the needs of your users, without wasting anyone's time or money.
+    = link_to root_path, :class => "a-case-study-button gray" do
+      View case study
 
-  = ceditable "frontpage_contact_text", "p"
+%div#second-project.row
+  #second-project-description.column.two
+    %h3 MobilizeArt
+    %h4 Connect your customers with your market, not your website. Technology is a tool that gets out of the way when used right.
+    = link_to root_path, :class => "a-case-study-button teal" do
+      View case study
+  #second-project-image.column.two
+    %h1#second-project-logo
 
-  = link_to contact_path, :class => ["first", "a-button"] do
-    Contact Us
+%div#third-project.row
+  #third-project-image.column.two
+    %h1#third-project-logo
+  #third-project-description.column.two
+    %h3 Gigdog
+    %h4 Why guess when you can test? Use our expertise to validate (or destroy) assumptions, making your site stronger along the way
+    = link_to root_path, :class => "a-case-study-button blue" do
+      View case study
 
-  = link_to contact_path(:anchor => "quote"), :class => "a-button white" do
-    Request a FREE Quote
+%div#fourth-project.row
+  #fourth-project-description.column.two
+    %h3 GreenEggs
+    %h4 A Coshx product for the masses. We love to build, and will care for your app as if it were one of our own.
+    = link_to root_path, :class => "a-case-study-button green" do
+      View case study
+  #fourth-project-image.column.two
+    %h1#fourth-project-logo
 
-
-= render :partial => "projects/list", :locals => {:featured_projects => @featured_projects}
-
-.divider
-
-= render 'get_a_proposal'
-
-.divider
-
-
-
-
+%div#site-links.row
+  %h1 You want to see more?
+  %h2 Well you can check out our #{link_to "portfolio page", projects_path}. You can get to know us #{link_to "here", about_path}. Read our thoughts along #{link_to "the Journey", blog_posts_path} and find our about possible new #{link_to "open positions", jobs_path} on our team.

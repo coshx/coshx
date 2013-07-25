@@ -31,11 +31,62 @@
   }
 }
 
+.a-case-study-button {
+
+  margin-top: 20px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  margin-right: 10px;
+
+  -webkit-transition: all 0.2s ease-out; /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.2s ease-out; /* Firefox 4-15 */
+  -o-transition: all 0.2s ease-out; /* Opera 10.5–12.00 */
+  transition: all 0.2s ease-out; /* Firefox 16+, Opera 12.50+ */
+
+  display: inline-block;
+  font-weight: bold !important;
+  vertical-align: middle;
+  text-transform: uppercase;
+  height: 40px;
+  text-decoration: none;
+  font: 14px 'Merriweather Sans', sans-serif;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+
+  &:hover{
+    color: white;
+  }
+}
+
+.gray {
+  border-color: #B5BBBF;
+  color: #B5BBBF;
+}
+
+.teal {
+  border-color: #E9F6F3;
+  color: #E9F6F3;
+}
+
+.blue {
+  border-color: #A2B8C2;
+  color: #A2B8C2;
+}
+
+.green {
+  border-color: #F1F6E9;
+  color: #F1F6E9;
+}
+
 .a-button {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
   margin-right: 10px;
+
 
   -webkit-transition: all 0.2s ease-out; /* Safari 3.2+, Chrome */
   -moz-transition: all 0.2s ease-out; /* Firefox 4-15 */
@@ -57,6 +108,7 @@
     color: white;
   }
 }
+
 
 body .darkblue {
   color: white;
