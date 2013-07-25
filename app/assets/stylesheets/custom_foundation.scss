@@ -31,7 +31,9 @@
 // typography includes stuff that has nothing to do with typography :(
 // let's fix it here:
 
-body { font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+body { 
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; 
+}
 
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td {
@@ -45,7 +47,7 @@ ul, ol, dl { font-size: 14px; line-height: 1.6; margin-bottom: 15px; list-style-
 
 
 /* The Grid ---------------------- */
-.row { width: 1140px; max-width: 100%; min-width: 768px; margin: 0 auto; }
+.row { width: 100%; max-width: 100%; min-width: 768px; margin: 0 auto; }
 
 
 @import "foundation/common/forms";

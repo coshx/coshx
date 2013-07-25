@@ -23,6 +23,6 @@
         - if admin_signed_in?
           = render "layouts/admin_menu"
         = render "layouts/header"
-      %div#content.row
+      %div#content
         = yield
     = render "layouts/footer"

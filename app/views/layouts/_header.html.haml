@@ -1,6 +1,4 @@
-//= link_to "CAREERS", jobs_path, :class => 'jobs'
-#site-loader.loader{:style => "width: 100%; height: 3px; background-color: #fcb040;"}
-#header-content.row
+#header-content
 
 	%h1#logo
 		%a{:href => root_path}
@@ -8,12 +6,11 @@
 	%nav
 		%ul#main-nav
 			// = tab_to "HOME", root_path
-			= tab_to "About us", about_path
-			= tab_to "Our projects", projects_path
-			= tab_to "Our services", services_path
-			= tab_to "Blog", blog_posts_path
-			= tab_to "Contact us", contact_path
+			= tab_to "Get to know us", about_path
+			= tab_to "Our results", projects_path
+			= tab_to "Log book", blog_posts_path
 			= tab_to "Careers", jobs_path
+			= tab_to "Contact", contact_path
 	  
 
 

@@ -1,82 +1,46 @@
-%article#quote
+%article#together
   %section.row
-    %h1 Need a quote?
-    .dots
-    %p.eleven.column.centered.text-center
-      Considering us for your next project, then simply use our project planner below. The more details you fill in, the more accurate the estimate will be...
-    %a.btn.orange.center.top-margin-small{:href => "planner.html"} project planner
-%article#blog-section
-  -unless last_three_posts[0].nil? && last_three_posts[1].nil? && last_three_posts[2].nil?
-    %section.row
-      .column.three
-        %h3 Latest Blog Posts
-      - last_three_posts.each do |post|
-        .column.three
-          = link_to post.title, show_post_path(post.permalink_attributes), :class => "blog-link"
-          .date
-            = post.posted_on.strftime("%B %e, %Y")
-
+    #heroes.column.two
+      %h3 We are a distributed team of superheroes.
+    #work-together.column.two
+      = button_to "let's work together", contact_path(:anchor => "request"), :class => "btn blue center top-margin-small", :method => :get
 %footer.container
   .row
-    .column.three
-      %h4 Locations
-      %strong Boulder
-      %p
-        3080 Valmont Rd 
-        %br/
-        Suite 280
-        %br/
-        CO 80301
-      %strong Charlottesville
-      %p
-        1110 East Market St
-        %br/
-        Suite N7
-        %br/
-        VA 22902
-      %strong San Francisco
-      %p
-        972 Mission Street
-        %br/
-        5th Floor
-        %br/
-        CA 94103
-      %strong Austin
-      %p
-        701 Brazos St
-        %br/
-        Suite 1601
-        %br/
-        TX 78701
-    .column.three
-      %h4 Navigation
-      %ul
-        = tab_to "Home", root_path
-        = tab_to "About us", about_path
-        = tab_to "Our projects", projects_path
-        = tab_to "Our services", services_path
-        = tab_to "Blog", blog_posts_path
-        = tab_to "Contact us", contact_path
-        = tab_to "Careers", jobs_path
-
-    .column.three
-      %h4 Social
-      %ul
-        %li
-          %a{:href => "http://www.twitter.com/coshxlabs"} Twitter
-        %li
-          %a{:href => "http://www.facebook.com/coshxlabs"} Facebook
-        %li
-          %a{:href => "http://www.dribbble.com/coshxlabs"} Dribbble
-
-    .column.three
-      %h4 Shoot us an email
-      %ul
-        %li
-          %a{:href => "mailto:info@coshx.com"} info@coshx.com
-      %h4 Need a quote?
-      %ul
-        %li
-          %a{:href => "planner.html"} Project Planner
-      %h1#logo-light
+    #footer-logo.column.five
+      #logo-grey
         %a{:href => root_path}
+    #location.column.five
+      %h3 Boulder
+      %br
+      %h4 3080 Valmont Rd Suite 280
+      %h4 Boulder, CO 80301
+      %br
+      %h5 info@coshx.com
+    #location.column.five
+      %h3 Charlottesville
+      %br
+      %h4 1110 East Market St Suite N7
+      %h4 Charlottesville, VA 22902
+      %br
+      %h5 info@coshx.com
+    #location.column.five
+      %h3 San Francisco
+      %br
+      %h4 972 Mission Street, 5th Floor
+      %h4 San Francisco, CA 94103
+      %br
+      %h5 info@coshx.com
+    #location.column.five
+      %h3 Austin
+      %br
+      %h4 701 Brazos St, Suite 1601
+      %h4 Austin, TX 78701
+      %br
+      %h5 info@coshx.com
+    #location.column.five
+      %h3 Social
+      %br
+      #twitter-logo.row
+        %a{:href => "http://www.twitter.com/coshxlabs"}
+      #facebook-logo.row
+        %a{:href => "http://www.facebook.com/coshxlabs"}
