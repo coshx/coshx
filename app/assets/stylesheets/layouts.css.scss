@@ -65,25 +65,27 @@ h1#logo a {
 }
 
 #twitter-logo {
-  margin: 0 0px;
+  margin-top: 10px;
+  margin-left: 20px;
+  float: right;
 }
 
 #facebook-logo {
-  margin: 0 0px;
+  margin-top: 10px;
+  margin-left: 20px;
+  float: right;
 }
 
 #twitter-logo a {
   background: image-url("footer-twitter.png") no-repeat;
-  width: 75px;
-  height: 50px;
-  float: left;
+  width: 42px;
+  height: 37px;
 }
 
 #facebook-logo a {
   background: image-url("footer-facebook.png") no-repeat;
-  width: 75px;
-  height: 50px;
-  float: left;  
+  width: 42px;
+  height: 37px;
 }
 
 
@@ -346,11 +348,11 @@ footer .small-line {
 }
 
 #footer-logo {
-  width: 120px;
+  width: 130px;
 }
 
 #location {
-  width: 200px;
+  width: 235px;
   float: left;
 
   h3 {
@@ -384,6 +386,22 @@ footer .small-line {
     margin-bottom: 5px;
     line-height: 1.1;
   }
+}
+
+#social {
+  width: 70px;
+
+  h3 {
+    font-size: 12px;
+    font-family: "Merriweather Sans", sans-serif;
+    text-transform: uppercase;
+    color: #707070;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1.1;
+    float: right;
+  }
+
 }
 
 
