@@ -42,14 +42,6 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td {
 }
 
 
-/* Lists ---------------------- */
-ul, ol, dl { font-size: 14px; line-height: 1.6; margin-bottom: 15px; list-style-position: outside; }
-
-
-/* The Grid ---------------------- */
-.row { width: 100%; max-width: 100%; min-width: 768px; margin: 0 auto; }
-
-
 @import "foundation/common/forms";
 
 @import "foundation/components/modules/buttons";
@@ -59,3 +51,13 @@ ul, ol, dl { font-size: 14px; line-height: 1.6; margin-bottom: 15px; list-style-
 @import "foundation/components/modules/navbar";
 @import "foundation/components/modules/orbit";
 @import "foundation/components/modules/reveal";
+
+
+
+/* Lists ---------------------- */
+ul, ol, dl { font-size: 14px; line-height: 1.6; margin-bottom: 15px; list-style-position: outside; }
+
+
+/* The Grid ---------------------- */
+.row { max-width: 1140px; width: 100%; min-width: 768px; margin: 0 auto; }
+.column { padding: 0 0px; }

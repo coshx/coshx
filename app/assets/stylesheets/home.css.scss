@@ -98,11 +98,15 @@
   width: 100%;
   background-color: #FFFFFF;
 
-  section {
-
-    margin-left: 100px;
-    margin-right: 100px;
+  .row {
+    padding-top: 80px;
   }
+}
+
+#project-image {
+  width: 721px;
+  height: 370px;
+  padding: 0 0px;
 }
 
 #first-project {
@@ -111,15 +115,8 @@
   background-color: #455560;
 }
 
-#first-project-image {
-  width: 821px;
-  height: 370px;
-  padding: 0 0px;
-}
-
 h1#first-project-logo {
   background: image-url("closeoutbike_img.png") no-repeat;
-  margin-left: 100px;
   width: 721px;
   height: 295px;
   position: absolute;
@@ -127,7 +124,6 @@ h1#first-project-logo {
 }
 
 #first-project-description{
-  float: left;
   margin-left: 10px;
   margin-top: 80px;
   width: 380px;
@@ -140,17 +136,8 @@ h1#first-project-logo {
 }
 
 #second-project-description{
-  float: left;
-  margin-left: 100px;
   margin-top: 80px;
   width: 330px;
-  padding: 0 0px;
-}
-
-#second-project-image {
-  width: 721px;
-  margin-right: 100px;
-  height: 370px;
   padding: 0 0px;
 }
 
@@ -168,15 +155,8 @@ h1#second-project-logo {
   background-color: #164d67;
 }
 
-#third-project-image {
-  width: 821px;
-  height: 370px;
-  padding: 0 0px;
-}
-
 h1#third-project-logo {
   background: image-url("gigdog_img.png") no-repeat;
-  margin-left: 100px;
   width: 721px;
   height: 295px;
   position: absolute;
@@ -184,7 +164,6 @@ h1#third-project-logo {
 }
 
 #third-project-description {
-  float: left;
   margin-left: 10px;
   margin-top: 80px;
   width: 380px;
@@ -197,17 +176,8 @@ h1#third-project-logo {
 }
 
 #fourth-project-description{
-  float: left;
-  margin-left: 100px;
   margin-top: 80px;
   width: 330px;
-  padding: 0 0px;
-}
-
-#fourth-project-image {
-  width: 721px;
-  margin-right: 100px;
-  height: 370px;
   padding: 0 0px;
 }
 
@@ -228,11 +198,6 @@ h1#fourth-project-logo {
 
     margin-left: 10%;
     width: 80%;
-  }
-
-  h2 { 
-    margin-left: 100px;
-    margin-right: 100px;
   }
 }
 
