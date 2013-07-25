@@ -427,24 +427,18 @@ code {
 
 /* button classes */
 .btn {
+  border: none;
+  border-radius: 3px;
   width: 202px;
   height: 51px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-     -ms-border-radius: 5px;
-     -o-border-radius: 5px;
-     border-radius: 5px;
-     -webkit-transition-property: all;
-     -moz-transition-property: all;
-     -o-transition-property: all;
-     transition-property: all;
-     -webkit-transition-duration: 275ms;
-     -moz-transition-duration: 275ms;
-     -o-transition-duration: 275ms;
-     transition-duration: 275ms;;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box; 
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 275ms;
+  -moz-transition-duration: 275ms;
+  -o-transition-duration: 275ms;
+  transition-duration: 275ms;;
   color: #fff;
   font-size: 18px;
   font-weight: bold;
