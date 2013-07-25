@@ -36,7 +36,6 @@ body {
 
 h1#logo {
   margin-top: 0;
-  margin-left: 180px;
 }
 
 h1#logo.no-animation {
@@ -45,6 +44,7 @@ h1#logo.no-animation {
 
 #header-content h1#logo {
   position: absolute; 
+  height: 110px;
   /*left: 50%;
   margin-left: -101px;*/
 }
@@ -54,7 +54,7 @@ h1#logo a {
   height: 75px;
   background: image-url("logo.png") no-repeat;
   float: left;
-  margin-top: 13px;
+  margin-top: 25px;
 }
 
 #logo-grey a {
@@ -119,18 +119,18 @@ section p a {
 
 #heroes {
 
-  width: 700px;
-  margin-left: 100px;
+  padding-top: 50px; 
 
   h3 {
     color: #535353;
+    float: right;
+    margin-right: 10px;
   }
 }
 
 #work-together {
   float: left;
-  width: 400px;
-}
+ }
 
 #blog-section {
  background: #545454
@@ -169,11 +169,12 @@ div.dialog {
 
 #header-content nav {
   margin-top: 12px;
+  height: 110px;
 }
 
 #header {
-  width: 100%;
   height: 110px;
+  width: 100%;
   background: #FFFFFF;
   border-bottom: 1px solid #e9e9e9;
   padding-bottom: 12px;
@@ -189,7 +190,6 @@ div.dialog {
 nav ul {
   float: right;
   margin-top: 37px;
-  margin-right: 180px;
 }
 
 nav ul li {
@@ -336,8 +336,7 @@ footer .small-line {
 }
 
 #footer-logo {
-  width: 100px;
-  margin-left: 100px;
+  width: 120px;
 }
 
 #location {
