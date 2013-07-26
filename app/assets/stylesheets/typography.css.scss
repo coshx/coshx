@@ -1,3 +1,5 @@
+@import "common";
+
 p {
   margin-bottom:17px;
   font-family: inherit;
@@ -38,7 +40,7 @@ h2 {
   font-family: "Merriweather", serif;
   font-size: 24px;
   line-height: 27px;
-  color: #929292;
+  color: $text-grey;
   text-align: center;
   font-weight: normal;
 } 
@@ -61,4 +63,12 @@ h4 {
   line-height: 28px;
   color: #FFFFFF;
   font-weight: regular;
+}
+
+h5 {
+  font-size: 18px;
+  font-family: "Merriweather Sans", sans-serif;
+  line-height: 28px;
+  font-weight: bold;
+  margin-bottom: 0px;
 }
