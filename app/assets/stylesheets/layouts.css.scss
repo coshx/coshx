@@ -64,28 +64,22 @@ h1#logo a {
   float: left;  
 }
 
-#twitter-logo {
-  margin-top: 10px;
-  margin-left: 20px;
-  float: right;
-}
-
-#facebook-logo {
-  margin-top: 10px;
-  margin-left: 20px;
-  float: right;
-}
-
-#twitter-logo a {
+#twitter-icon a {
   background: image-url("footer-twitter.png") no-repeat;
   width: 42px;
   height: 37px;
+  margin-top: 10px;
+  margin-left: 20px;
+  float: right;
 }
 
-#facebook-logo a {
+#facebook-icon a {
   background: image-url("footer-facebook.png") no-repeat;
   width: 42px;
   height: 37px;
+  margin-top: 10px;
+  margin-left: 20px;
+  float: right;
 }
 
 
@@ -114,7 +108,7 @@ section p a {
 }
 
 #together {
-  background: #f6f6f6;
+  background: $grey-white;
   height: 150px;
 
 }
@@ -137,7 +131,7 @@ section p a {
   width: 30px;
   margin-top: 20px;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
 #work-together {
@@ -349,6 +343,22 @@ footer .small-line {
 
 #footer-logo {
   width: 130px;
+}
+
+#site-links {
+  height: 370px;
+  width: 100%;
+  background-color: #FFFFFF;
+
+  h1 {
+    margin-top: 80px;
+  }
+
+  section {
+
+    margin-left: 10%;
+    width: 80%;
+  }
 }
 
 #location {

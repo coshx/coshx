@@ -10,7 +10,7 @@
     #first-project-description.column.two
       %h3 CloseoutBike
       %h4 We practice perfect simplicity, crafting designs that fulfill the needs of your users, without wasting anyone's time or money.
-      = link_to root_path, :class => "a-case-study-button gray" do
+      = link_to case_study_path, :class => "a-case-study-button gray" do
         View case study
 
 %div#second-project
@@ -18,7 +18,7 @@
     #second-project-description.column.two
       %h3 MobilizeArt
       %h4 Connect your customers with your market, not your website. Technology is a tool that gets out of the way when used right.
-      = link_to root_path, :class => "a-case-study-button teal" do
+      = link_to case_study_path, :class => "a-case-study-button teal" do
         View case study
     #project-image.column.two
       %h1#second-project-logo
@@ -30,7 +30,7 @@
     #third-project-description.column.two
       %h3 Gigdog
       %h4 Why guess when you can test? Use our expertise to validate (or destroy) assumptions, making your site stronger along the way
-      = link_to root_path, :class => "a-case-study-button blue" do
+      = link_to case_study_path, :class => "a-case-study-button blue" do
         View case study
 
 %div#fourth-project
@@ -38,14 +38,7 @@
     #fourth-project-description.column.two
       %h3 GreenEggs
       %h4 A Coshx product for the masses. We love to build, and will care for your app as if it were one of our own.
-      = link_to root_path, :class => "a-case-study-button green" do
+      = link_to case_study_path, :class => "a-case-study-button green" do
         View case study
     #project-image.column.two
       %h1#fourth-project-logo
-
-%div#site-links
-  .row
-    %h1 You want to see more?
-    %h2 Well you can check out our #{link_to "portfolio page", projects_path}. You can get to know us #{link_to "here", about_path}. Read our thoughts along #{link_to "the Journey", blog_posts_path} and find our about possible new #{link_to "open positions", jobs_path} on our team.
-  .row
-    #heart-icon

@@ -112,7 +112,7 @@
 #first-project {
   height: 370px;
   width: 100%;
-  background-color: #455560;
+  background-color: $steel-gray;
 }
 
 h1#first-project-logo {
@@ -187,18 +187,6 @@ h1#fourth-project-logo {
   height: 295px;
   position: absolute;
   bottom: -15px;
-}
-
-#site-links {
-  height: 370px;
-  width: 100%;
-  background-color: #FFFFFF;
-
-  section {
-
-    margin-left: 10%;
-    width: 80%;
-  }
 }
 
 

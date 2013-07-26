@@ -1,3 +1,10 @@
+%div#site-links
+  .row
+    %h1 You want to see more?
+    %h2 Well you can check out our #{link_to "portfolio page", projects_path}. You can get to know us #{link_to "here", about_path}. Read our thoughts along #{link_to "the Journey", blog_posts_path} and find our about possible new #{link_to "open positions", jobs_path} on our team.
+  .row
+    #heart-icon
+
 %article#together
   #heroes.row
     .column.eight
@@ -40,8 +47,8 @@
     #social.column.one
       %h3 Social
       %br
-      #twitter-logo
+      #twitter-icon
         %a{:href => "http://www.twitter.com/coshxlabs"}
       %br
-      #facebook-logo
+      #facebook-icon
         %a{:href => "http://www.facebook.com/coshxlabs"}
