@@ -1,0 +1,11 @@
+%a{:href => about_path, :class => 'about-us-avatar'}(style="background:url(#{Gravatar.new(person.email).image_url(:size => 80)});")
+#member-info
+	%h7 
+		= person.name
+	%br
+	%h8 
+		= person.position
+	%br
+	%h8 
+		- if person.twitter?
+			%a{:href => "http://twitter.com/#{person.twitter}"}@#{person.twitter}
