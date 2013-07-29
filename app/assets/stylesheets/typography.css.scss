@@ -66,9 +66,34 @@ h4 {
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Merriweather Sans", sans-serif;
   line-height: 28px;
   font-weight: bold;
   margin-bottom: 0px;
+}
+
+h6 {
+  font-size: 14px;
+  font-family: "Merriweather", serif;
+  line-height: 24px;
+  color: $text-grey;
+  font-weight: normal;
+  margin-top: 15px;
+}
+
+h7 {
+  font-size: 13px;
+  font-family: "Merriweather Sans", sans-serif;
+  line-height: 24px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+h8 {
+  font-size: 12px;
+  font-family: "Merriweather Sans", sans-serif;
+  line-height: 24px;
+  font-weight: normal;
+  margin-top: 15px;
 }

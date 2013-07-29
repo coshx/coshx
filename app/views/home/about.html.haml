@@ -1,84 +1,121 @@
-%section#about-us
-  = ceditable "about page title", "h1", :class => "formula"
-  = ceditable "about page text", "p"
+%div#about-header
+  .row
+    %h1 Applications are built for people, and so are we.
+    %h2 We take the stress out of building web and mobile applications by blowing up the black box. Watching your idea develop into a valuable application should be rewarding and informative, not daunting, and our methodologies make you an integral part of the process.
+%div#principles
+  .row
+    .column.four
+      #circle-white
+      #tech-craft-icon
+      %h5 Technical craft
+      %h6 We have the tools, and we know how to use them. We build powerfully simple software
+    .column.four
+      #circle-white
+      #creative-icon
+      %h5 Creative design
+      %h6 Great design means more than looking pretty, but your software will be the hottest in town
+    .column.four
+      #circle-white
+      #user-centered-icon
+      %h5 User-centered development
+      %h6 You know your customers, and we know how people use technology
 
-  .about-stats.hide-for-small
-    .row.big-icons
-      .four.columns
-        .coffee
-          %img{:alt => "", :src => "/assets/coffee.png"}
-          %h3 Coffee consumed
-          %h2 1,978
-          %p cups this year
-      .four.columns
-        .tracks.b
-          %img{:alt => "", :src => "/assets/headphones.png"}
-          %h3 Tracks played
-          %h2 3,645
-          %p
-            %a{:href => "http://turntable.fm/salad_labs"} http://turntable.fm/salad_labs
-      .four.columns
-        .food.b
-          %img{:alt => "", :src => "/assets/food.png"}
-          %h3 Favorite food
-          %h2 39
-          %p Thai-food orders this year
+%div#expertise
+  #expertise-text.row
+    %h3 Cross-Disciplinary Digital Expertise
+    %h4 We combine a design-oriented approach with technical and commercial expertise and strategic decision-making. We've got years of experience in everything involved with planning, designing, building and shipping digital products. We know our stuff.
 
-    .row.small-icons
-      .twelve.columns
-        .git
-          %h3
-            Github:
-            %br
-            Code committed in KB
-          %h2 8,124,305
-        .rails.b
-          %h3
-            Ruby on rails:
-            %br
-            Experience in days
-          %h2 30,456
-        .tweets.b
-          %h3
-            Twitter:
-            %br
-            Total tweets
-          %h2 542
-        .blog.b
-          %h3
-            Blog:
-            %br
-            Total number
-          %h2 #{Post.all.count}
-        .lunch.b
-          %h3
-            Techlunch:
-            %a.techlunch{:href => "#"}>
-              =image_tag("circle-add.png", :mouseover => "circle-add-white.png")
-            %br
-            Total number
-          %h2 14
-        .ideas.b
-          %h3
-            Ideas & creativity:
-            %br
-            Total number:
-          =image_tag "formula.png"
+%div#services
+  .row
+    .column.four
+      #icon-text-row
+        #web-app-icon
+        %h5 Web Applications
+      %h6 Do you have an idea that will make or save money? If your product is your business then let's build an application that meets your needs, perfectly.
+    .column.four
+      #icon-text-row
+        #mobile-app-icon
+        %h5 Mobile Applications
+      %h6 Customers are on the go, and so is their technology. We make software that is as mobile as the people who use it.
+    .column.four
+      #icon-text-row
+        #scalability-icon
+        %h5 Scalability
+      %h6 Growing pains mean traction, but they don't have to hurt. You can't afford to lose customers due to poorly implemented code, and we won't let you.
+  .row
+    .column.four
+      #icon-text-row
+        #testing-icon
+        %h5 Testing
+      %h6 Stories are nice, but learning through data is what strokes our geek. We track, analyze and learn as we build simply perfect software
+    .column.four
+      #icon-text-row
+        #lean-tactics-icon
+        %h5 Lean Tactics
+      %h6 Why guess when you can know? Lean tactics ensure we build the right application, every time, by adapting to new information gleaned through testing.
+    .column.four
+      #icon-text-row
+        #agile-methodologies-icon
+        %h5 Agile Methodologies
+      %h6 We will work together to uncover the most pressing needs of your users before writing one line of code, and ensure our work serves the end goal, not to project plan as dictated on day one.
 
-%section#team
-  %ul
-    - @coshx_folks.each_with_index do |person, i|
-      %li
-        %a{:href => person.url, :class => 'about-us-avatar'}(style="background:url(#{Gravatar.new(person.email).image_url(:size => 180)});")
-          %p
-            = person.name
-    %li.last
-      %a{:href => jobs_path}
-        .new
-        = image_tag("team/new.png", :mouseover => "team/new-white.png")
-        %p
-          You?
-
-= render :partial => 'home/testimonials'
-
-
+%div#team
+  .row
+    #team-header
+      %h3 Meet Your Team
+      %h4 We're a purposefully small, highly driven team that takes pride in our work - each one of us brings something unique to the table. 
+  .row#team-row
+    - @coshx_folks[0..5].each do |person, a|
+      .column.two
+        = render "team_member", :person => person
+  .row#team-row
+    - @coshx_folks[6..11].each do |person, a|
+      .column.two
+        = render "team_member", :person => person
+%div#how-we-work
+  .row
+    #circle-white
+    #down-triangle  
+  .row#work-header
+    %h3 How We Work
+    %h4 Our working process is highly iterative and built specifically for agile and responsive digital development. That means tight collaboration, streamlined projects, and better results.
+  .row#step-even
+    .column.one
+    .column.four
+      #circle-off-white
+      #meet-icon
+    .column.eight
+      %h5 Pleased to Meet You
+      %h4 Our vision matters most, and we want to learn about it while getting to know you and your business needs. We are not faceless mercenaries, but a talented team of superheroes that wants to help our clients succeed. Let’s make sure we are the right fit before taking this journey together.
+  .row#step-odd
+    .column.two
+    .column.six
+      %h5 Planning Session
+      %h4 Your idea is the center of this energetic process, where we will sketch your application before writing one line of code. Furious whiteboarding and challenged ideas will generate a set of user stories, which are your entire application in written form. We will use these to prioritize your needs, estimate your cost and get cracking on the code.
+    .column.four
+      #circle-off-white
+      #planning-icon
+  .row#step-even
+    .column.one
+    .column.four
+      #circle-off-white
+      #design-icon
+    .column.eight
+      %h5 Design
+      %h4 Design is where form and function meet. Tools are only as powerful as one’s ability to use them, and we will work together to design intuitive, powerfully simple applications. Our designers are artists, and our developers are craftsmen. Your software will look as good as it feels, solving problems along the way.
+  .row#step-odd
+    .column.two
+    .column.six
+      %h5 Minimum Viable Product
+      %h4 Everything comes together in your Minimum Viable Product. We will get this into the hands of users in order to learn from their interactions and the data they generate. This saves you money by taking the guesswork out of development. We will crunch the numbers and sweat the technical details so you can focus on the fun stuff.
+    .column.four
+      #circle-off-white
+      #mvp-icon
+  .row#step-even
+    .column.one
+    .column.four
+      #circle-off-white
+      #iterate-icon
+    .column.eight
+      %h5 Iterate
+      %h4 You have users, revenue and an appetite for more. Lessons learned will be turned into improved functionality and a better, stronger application, capturing more users along the way. Perhaps you are ready to hire your own tech team, and we will proudly hand you off like parents at the first day of school…but you will always have a room in our house.

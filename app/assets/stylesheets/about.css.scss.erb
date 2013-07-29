@@ -1,116 +1,346 @@
 @import "common";
 
-.about-stats {
-  background: $blue;
-  position: relative;
-  padding-bottom: 50px;
-  &:after {
-    content: ' ';
-    width: 221px;
-    height: 88px;
-    position: absolute;
-    bottom: -50px;
-    left: -111px;
-    margin-left: 50%;
-    background: image-url("about-arrow.png") no-repeat;
-    z-index: -1;
+#about-header {
+  background: #38a8cc;
+  padding-top: 130px;
+  height: 508px;
+  h1, h2 {
+    color: #FFFFFF;
+    margin-top: 40px;
   }
-  p {
-    font: 12px 'Droid Serif', serif;
-    color: $dark-blue;
-  }
-  h3 {
-    font-family: 'Droid Sans', sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: bold;
-    color: $dark-blue;
-    text-align: -webkit-auto;
-    text-rendering: optimizelegibility;
-    text-transform: uppercase;
-  }
-  h2 {
-    font: bold 48px/46px "Droid Sans", sans-serif;
-    color: $dark-blue;
-  }
-  .b {
-    border-left: 1px dotted $dark-blue;
-  }
-  .columns div {
-    margin: 20px;
-    padding: 0 20px;
-  }
-  .small-icons {
-    .columns div {
-      margin: 10px;
-      padding: 0px 10px;
-      width: 140px;
-      float: left;
-      height: 100px;
-    }
-    &:after {
-      clear: both;
-    }
-    .about-stats-icons {
-      overflow: hidden;
-    }
-    h3 {
-      font-size: 12px !important;
-    }
-    h2 {
-      font-size: 30px !important;
-    }
-  }
-  .big-icons {
-    img {
-      float: left;
-    }
-    h2, h3, p {
-      padding-left: 100px;
-    }
+}
 
+#principles {
+  background: #FFFFFF;
+  text-align: center;
+  height: 215px;
+  .row {
+    height: 100%;
+    border-bottom: 1px solid #e9e9e9;
   }
+  h5 {
+    margin-top: 25px;
+    color: black;
+  }
+  h6 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+#circle-white {
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+  behavior: url(PIE.htc);
+  width: 125px;
+  height: 125px;
+  margin-top: -55px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #FFFFFF;
+}
+
+#tech-craft-icon {
+  background: image-url("tech_craft.png") no-repeat;
+  width: 40px;
+  height: 43px;
+  margin-top: -87px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#creative-icon {
+  background: image-url("creative_design.png") no-repeat;
+  width: 30px;
+  height: 43px;
+  margin-top: -87px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#user-centered-icon {
+  background: image-url("cendev.png") no-repeat;
+  width: 40px;
+  height: 43px;
+  margin-top: -87px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#expertise {
+  background: #FFFFFF;
+  text-align: center;
+  height: 245px;
+  padding-top: 50px;
+  border-bottom: 1px solid #e9e9e9;
+  h3 {
+    margin-top: 0px;
+    color: black;
+  }
+  h4 {
+    margin-top: 20px;
+    color: $text-grey;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}
+
+#services {
+  background: #FFFFFF;
+  height: 480px;
+  padding-top: 70px;
+  .row .column 
+  {
+    padding-bottom: 70px;
+    padding-right: 15px;
+  }
+  h5 {
+    color: black;
+  }
+}
+
+#icon-text-row{
+  h5 {
+    display: inline;
+    margin-left: 10px;
+  }
+}
+
+#web-app-icon {
+  background: image-url("webapp.png") no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 19px;
+  height: 14px;
+}
+
+#mobile-app-icon {
+  background: image-url("mobapp.png") no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 13px;
+  height: 19px;
+}
+
+#scalability-icon {
+  background: image-url("scala.png") no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 17px;
+  height: 18px;
+}
+
+#testing-icon {
+  background: image-url("testing.png") no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+#lean-tactics-icon {
+  background: image-url("tactics.png") no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 17px;
+  height: 15px;
+}
+
+#agile-methodologies-icon {
+  background: image-url("agile.png") no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 17px;
+  height: 14px;
 }
 
 #team {
-  ul {
-    overflow: hidden;
+  background: $grey-white;
+  height: 780px;
+
+  h3 {
+    color: black;
+  }
+  h4 {
+    color: $text-grey;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+
+  h7, h8 {
+    margin-left: 53px;
+  }
+
+  a {
+    color: #2ba6cb;
+  }
+
+}
+
+#team-header{
+  margin-top: 70px;
+  text-align: center;
+}
+
+#member-info{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#team-row {
+  margin-top: 40px;
+}
+
+#down-triangle {
+  background: image-url("triangle_down.png") no-repeat;
+  width: 35px;
+  height: 25px;
+  margin-top: -70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#how-we-work {
+  background: #FFFFFF;
+  height: 1850px;
+  border-bottom: 1px solid #e9e9e9;
+  h3 {
+    color: black;
+  }
+  h4 {
+    margin-top: 20px;
+    color: $text-grey;
+  }
+  h5 {
+    font-size: 24px;
   }
 }
 
+#work-header {
+  margin-top: 45px;
+  height: 180px;
+  text-align: center;
+  border-bottom: 1px solid #e9e9e9;
+  h4 {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}
+
+#step-even {
+  margin-top: 60px;
+  height: 260px;
+  border-bottom: 1px solid #e9e9e9;
+
+  .one {
+    width: 5%;
+  }
+
+  .four {
+    width: 25%;
+  }
+
+  .eight {
+    width: 70%;
+  }
+
+  h4 {
+    margin-right: 85px;
+  }
+}
+
+#step-odd {
+  margin-top: 60px;
+  height: 260px;
+  border-bottom: 1px solid #e9e9e9;
+
+  .two {
+    width: 9%;
+  }
+
+  .four {
+    width: 25%;
+    float: left;
+  }
+
+  .six {
+    width: 62%
+  }
+}
+
+#circle-off-white {
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+  behavior: url(PIE.htc);
+  width: 190px;
+  height: 190px;
+  margin-left: auto;
+  margin-right: auto;
+  background: $grey-white;
+}
+
+#meet-icon {
+  background: image-url("handshake.png") no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -120px;
+  width: 170px;
+  height: 73px;
+}
+
+#planning-icon {
+  background: image-url("planning.png") no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -160px;
+  width: 105px;
+  height: 131px;
+}
+
+#design-icon {
+  background: image-url("design.png") no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -155px;
+  width: 101px;
+  height: 130px;
+}
+
+#mvp-icon {
+  background: image-url("mvp.png") no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -130px;
+  width: 130px;
+  height: 85px;
+}
+
+#iterate-icon {
+  background: image-url("iterate.png") no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -140px;
+  width: 132px;
+  height: 95px;
+}
+
+
+
 .about-us-avatar {
   display: block;
-  width: 180px;
-  height: 180px;
-  border-radius: 100px;
-  border: 6px solid white;
+  width: 80px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
 
   //-webkit-transition: all 0.3s ease-out; /* Safari 3.2+, Chrome */
   -moz-transition: all 0.3s ease-out; /* Firefox 4-15 */
   -o-transition: all 0.3s ease-out; /* Opera 10.5–12.00 */
   transition: all 0.3s ease-out; /* Firefox 16+, Opera 12.50+ */
-
-  /* there is a bug in Firefox 18 that prohibits the request for the svg file
-     from any host but the app server.
-     CRUFT, remove when fixed, and put filters.svg in app/assets/images/
-     cf. https://bugzilla.mozilla.org/show_bug.cgi?id=833522  */
-  filter: url(http://<%= ENV['COSHX_HOST'] || "localhost:3000"%>/filters.svg#grayscale); /* Firefox 3.5+ */
-  filter: gray; /* IE6-9 */
-  -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
-
-  &:hover {
-    border: 6px solid $blue;
-    filter: none;
-    -webkit-filter: grayscale(0);
-  }
-
-  p {
-    position: absolute;
-    bottom: -60px;
-    text-align: center;
-    width: 100%;
-  }
 
 }
 
