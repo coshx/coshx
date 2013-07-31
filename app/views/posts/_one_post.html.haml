@@ -1,14 +1,15 @@
 .post-show
-  .row
-    %h3= post.title
-    
-    %h2
-      Written by
-      = link_to post.author.name, post.author.url
-      on
-      = post.created_at.strftime("%B %d, %Y")
-    .post-content
-      =post.body_html.html_safe
+	.row
+		#post-text
+			%h3= post.title
+	    
+			%h2
+				Written by
+				= link_to post.author.name, post.author.url
+				on
+				= post.created_at.strftime("%B %d, %Y")
+			.post-content
+				=post.body_html.html_safe
 
 
 

@@ -7,28 +7,31 @@
 
   h3 {
     font-size: 42px;
-    margin-left: 150px;
-    margin-right: 150px;
     a {
-      color: black;
+      color: $dark-grey;
 
     }
   }
 
   h2 {
     text-align: left;
-    margin-left: 150px;
-    margin-right: 150px;
+    font-size: 22px;
     a {
       color: #38A8CC;
     }
   }
 
-  .row {
-    padding-top: 70px;
-    padding-bottom: 50px;
-    border-bottom: 1px solid #e9e9e9;
-  }
+
+}
+
+#post-description {
+  width: 833px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #e3e1df;
+  padding-top: 70px;
+  padding-bottom: 50px;
+
 }
 
 .post-box {
@@ -44,8 +47,6 @@
 .post-content {
   p {
     font-size: 24px;
-    margin-left: 150px;
-    margin-right: 150px;
     font-family: "Merriweather", serif;
     line-height: 36px;
     color: $black;
@@ -85,28 +86,28 @@
 
   h3 {
     font-size: 42px;
-    color: black;
-    margin-left: 150px;
-    margin-right: 150px;
+    color: $dark-grey;
   }
 
   h2 {
     text-align: left;
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 10px;
     margin-bottom: 50px;
-    margin-left: 150px;
-    margin-right: 150px;
     a {
       color: #38A8CC;
     }
   }
 
-  .row {
-    padding-top: 70px;
-    padding-bottom: 50px;
-    border-bottom: 1px solid #e9e9e9;
-  }
+}
+
+#post-text {
+  width: 833px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #e3e1df;
+  padding-top: 70px;
+  padding-bottom: 50px;
 }
 
 .share-buttons {
