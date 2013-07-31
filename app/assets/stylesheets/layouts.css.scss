@@ -17,7 +17,8 @@ h2 {
 }
 
 #content {
-  margin-top: 110px;
+  margin-top: 109px;
+  border-top: 1px solid #e3e1df;
   width: 100%;
 }
 
@@ -175,14 +176,14 @@ div.dialog {
 }
 
 #header {
-  height: 110px;
+  height: 109px;
   width: 100%;
   background: #FFFFFF;
   padding-bottom: 12px;
   opacity: .98;
   z-index: 10;
   position: fixed;
-  margin-top: -110px;
+  margin-top: -109px;
 }
 
 #header-content {
