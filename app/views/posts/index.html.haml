@@ -1,7 +1,7 @@
 .all-posts
   - @posts.each do |p|
-    #post-description
-      .row
+    .row
+      #post-description
         - year = (p.posted_on.present? ? p.posted_on.strftime("%Y") : p.created_at.strftime("%Y"))
 
         - link_text = p.title
