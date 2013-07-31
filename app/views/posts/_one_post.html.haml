@@ -1,18 +1,14 @@
 .post-show
   .row
-    .three.columns
-      %span.post-description
-        .an_image(style="width:120px;height:120px;background:url(#{Gravatar.new(post.author.email).image_url(:size => 120)});border-radius:100px;border:4px solid white;display:block;margin:auto;margin-bottom:20px;")
-        By
-        = (post.author.deleted_at.nil?) ? link_to(post.author.name, post.author.url) : post.author.name
-        %br
-        on
-        =(post.posted_on.present? ? post.posted_on.strftime("%B %e, %Y") : post.created_at.strftime("%B %e, %Y"))
-    .nine.columns
-      %h1=post.title
-      .post-content
-        =post.body_html.html_safe
-      = render :partial => "share_buttons"
+    %h3= post.title
+    
+    %h2
+      Written by
+      = link_to post.author.name, post.author.url
+      on
+      = post.created_at.strftime("%B %d, %Y")
+    .post-content
+      =post.body_html.html_safe
 
 
 

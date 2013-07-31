@@ -6,6 +6,7 @@ require 'contenteditable'
 
 ben = Admin.find_or_create_by_email("ben@coshx.com") do |b|
   b.name = 'Ben Taitelbaum'
+  b.last_name = "Taitelbaum"
   b.password = 'password'
   b.twitter = 'coshx'
   b.github = 'btaitelb'
@@ -18,6 +19,7 @@ puts "Created User #{ben.name}"
 
 david = Admin.find_or_create_by_email("david@coshx.com") do |d|
   d.name = 'David Kovsky'
+  d.last_name = "Kovsky"
   d.password = 'password'
   d.twitter = 'davidkovsky'
   d.github = 'davidkovsky'
@@ -30,6 +32,7 @@ puts "Created User #{david.name}"
 
 dave_kapp = Admin.find_or_create_by_email("davidkapp@coshx.com") do |d|
   d.name = 'David Kapp'
+  d.last_name = 'Kapp'
   d.password = 'not_your_password'
   d.twitter = "Happymrdave"
   d.github = "davekapp"
@@ -42,6 +45,7 @@ puts "Created User #{dave_kapp.name}"
 
 ryan = Admin.find_or_create_by_email("ryan@coshx.com") do |r|
   r.name = 'Ryan Ahearn'
+  r.last_name = 'Ahearn'
   r.password = 'ryans_password'
   r.twitter = "rcahearn"
   r.github = "rahearn"
@@ -54,6 +58,7 @@ puts "Created User #{ryan.name}"
 
 gabe = Admin.find_or_create_by_email("gabe@coshx.com") do |g|
   g.name = "Gabe Kopley"
+  g.last_name = "Kopley"
   g.password = "gabes_password"
   g.twitter = "kopley"
   g.position = "Developer"
@@ -66,6 +71,7 @@ puts "Created User #{gabe.name}"
 
 chielo = Admin.find_or_create_by_email("chielo@coshx.com") do |c|
   c.name = "Chielo Zimmerman"
+  c.last_name = "Zimmerman"
   c.password = "chielos_password"
   c.position = "Developer"
   c.bio = "Laying Ruby code like concrete blocks, Chielo is a builder by trade and obsession.  He enjoys working and finds it highly rewarding to deliver value and quality through beautiful programming."
@@ -76,8 +82,10 @@ puts "Created User #{chielo.name}"
 
 calvin = Admin.find_or_create_by_email("calvin@coshx.com") do |c|
   c.name = "Calvin Delamere"
+  c.last_name = "Delamere"
   c.position = "Developer"
   c.password = "calvins_password"
+  c.twitter = "calvindelamere"
   c.bio = "Although Calvin is the youngest software engineer at Coshx, he started programming nine years ago and built his first website eight years ago. In the last few years he has focused his computer science and applied math background on web development. In his free time, Calvin enjoys skiing, biking, bouldering, and ultimate frisbee. Calvin also enjoys crushing the competition at foosball."
   c.img = "calvin.png"
 end
@@ -86,6 +94,7 @@ puts "Created User #{calvin.name}"
 
 sang = Admin.find_or_create_by_email("sang@coshx.com") do |s|
     s.name = "Sang Won Seo"
+    s.last_name = "Seo"
     s.position = "Developer"
     s.password = "sangs_password"
     s.twitter = "sws4q"
@@ -98,9 +107,10 @@ puts "Created user #{sang.name}"
 
 mm = Admin.find_or_create_by_email("mikhail@coshx.com") do |s|
     s.name = "Michael Makarov"
+    s.last_name = "Makarov"
     s.position = "Developer"
     s.password = "password"
-    s.twitter = ""
+    s.twitter = "michaelmakarov"
     s.github = "micmmakarov"
     s.bio = "Michael loves code, he worked in Japan with databases, he a huge front-end experience, and on his free time he teaches a Rails class in San Francisco"
     s.img = "m.png"
@@ -109,9 +119,10 @@ mm.save!
 
 josh = Admin.find_or_create_by_email("josh@coshx.com") do |j|
     j.name = "Josh Rohrbaugh"
+    j.last_name = "Rohrbaugh"
     j.position = "Developer"
     j.password = "password"
-    j.twitter = ""
+    j.twitter = "joshrohrbaugh"
     j.github = "jrohrbaugh"
     j.bio = "Josh is a new employee at Coshx. He enjoys working through problems with clients, but also like back-end database programming. His hobbies include hiking and playing the piano"
 end
@@ -120,6 +131,7 @@ puts "Created user #{josh.name}"
 
 owen = Admin.find_or_create_by_email("owen@coshx.com") do |o|
     o.name = "Owen Larkin"
+    o.last_name = "Larkin"
     o.position = "COO"
     o.password = "password"
     o.twitter = "owenthethird"
@@ -131,11 +143,13 @@ puts "Created user #{owen.name}"
 
 gil = Admin.find_or_create_by_email("gil@coshx.com") do |g|
   g.name = "Edi Gil"
+  g.last_name = "Gil"
   g.bio = "Web design and web development are his first love. Because you never know when inspiration hits you he always keeps a pencil and paper in his pocket. He adores tough UI/UX problems and is also a huge fan of HTML5 and CSS3. He loves learning new things and is always trying to be on top of his game."
   g.likes = "books, movies, good food, science, manga, anime, travel, strategic games, puzzles and long walks when it rains"
   g.dislikes = "cold winters, extreme tropical heats, eggplants, spinach"
   g.password = "gills_password"
   g.position = "Web, UI, UX Designer"
+  g.twitter = "egil42"
   g.github = "edigil"
   g.img = "gil.png"
 end

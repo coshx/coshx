@@ -1,24 +1,24 @@
 .all-posts
-  - y = 0
-
-  .row
-    .four.columns
-    .eight.columns
-      - @posts.each do |p|
+  - @posts.each do |p|
+    #post-description
+      .row
         - year = (p.posted_on.present? ? p.posted_on.strftime("%Y") : p.created_at.strftime("%Y"))
-        - if y != year
-          ="</div></div>".html_safe
-          ="<div class='row'>".html_safe
-          ="<div class='four columns'>".html_safe
-          .year=year
-          ="</div><div class='eight columns'>".html_safe
-        - y = year
-        - link_text = p.title + " / "
+
+        - link_text = p.title
 
         - if p.published?
-          = link_to link_text.html_safe, show_post_path(p.permalink_attributes), :title => "Read More"
+          %h3= link_to link_text.html_safe, show_post_path(p.permalink_attributes), :title => "Read More"
+          %h2
+            Written by
+            = link_to p.author.name, p.author.url
+            on
+            = p.created_at.strftime("%B %d, %Y")
+
+
+
         - else
-          = link_to link_text.html_safe, p, :title => 'Not Yet Published'
+          %h1 
+            = link_to link_text.html_safe, p, :title => 'Not Yet Published'
         -if admin_signed_in?
           .edit-link
             = link_to 'Edit', edit_post_path(p)
