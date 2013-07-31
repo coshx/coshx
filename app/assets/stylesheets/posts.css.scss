@@ -1,6 +1,36 @@
 @import "common";
 @import "bourbon";
 
+.all-posts {
+
+  background: $grey-white;
+
+  h3 {
+    font-size: 42px;
+    margin-left: 150px;
+    margin-right: 150px;
+    a {
+      color: black;
+
+    }
+  }
+
+  h2 {
+    text-align: left;
+    margin-left: 150px;
+    margin-right: 150px;
+    a {
+      color: #38A8CC;
+    }
+  }
+
+  .row {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #e9e9e9;
+  }
+}
+
 .post-box {
   @include box-sizing(border-box);
 
@@ -11,48 +41,24 @@
   background: $bright-blue;
 }
 
-.all_posts {
-  list-style-type: none;
-  position: relative;
-  margin: 0;
-
-  li:first-child {
-    background: white;
-  }
-}
-
-.post-comments {
-  padding: 30px 50px 0px 50px;
-  color: $off-white;
-  h3 {
-    font-size: 16px;
-  }
-}
-
 .post-content {
-  font: 14px/24px "Droid Serif", serif;
-  color: white;
-  margin-top: 20px;
-    p, ul {
-    margin-bottom: 30px;
-    font-size: 16px;
-  }
-  code {
-    background: transparent;
-  }
+  p {
+    font-size: 24px;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-family: "Merriweather", serif;
+    line-height: 36px;
+    color: $black;
+    font-weight: regular;
 
-  ul {
-    margin-left: 16px;
-    color: $off-white;
-    list-style-type: circle;
-
-    li {
-      font: 14px/24px "Droid Serif", serif;
-      font-size: 16px;
-      padding: 10px;
+    a {
+      color: #38A8CC;
+      text-decoration: underline;
     }
   }
 }
+
+
 
 .post-show .post-description {
   font: bold 12px 'PT Sans', sans-serif;
@@ -74,26 +80,33 @@
 
 .post-show {
   padding: 0px 10px;
+  background-color: $grey-white;
 
-  h1 {
-    font: bold 60px 'PT Sans', sans-serif;
-  }
-  h4 {
-    font: 30px normal "Droid Serif", serif;
-  }
-  p {
-    font: 18px normal "Droid Serif", serif;
-    line-height: 180%;
-  }
-  .gray {
-    color: $gray;
-  }
-  h3, h2 {
-    font: 30px normal "Droid Serif", serif;
-    color: $gray;
-    line-height: 170%;
+
+  h3 {
+    font-size: 42px;
+    color: black;
+    margin-left: 150px;
+    margin-right: 150px;
   }
 
+  h2 {
+    text-align: left;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    a {
+      color: #38A8CC;
+    }
+  }
+
+  .row {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #e9e9e9;
+  }
 }
 
 .share-buttons {
@@ -113,22 +126,4 @@
   font-weight: bold;
 }
 
-.all-posts {
 
-  a {
-    border-bottom: 1px solid $gray;
-    display: block;
-    padding-bottom: 7px;
-    margin-bottom: 7px;
-    color: $gray;
-    font-size: 18px;
-    &:hover {
-      color: $off-white;
-    }
-  }
-
-  .row {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-}

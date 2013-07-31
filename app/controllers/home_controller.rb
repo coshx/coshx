@@ -14,7 +14,7 @@ class HomeController < ApplicationController
   def blog; end
 
   def about
-    @coshx_folks = Admin.order :name
+    @coshx_folks = Admin.order :last_name
   end
 
   def profile
