@@ -19,9 +19,9 @@
         - else
           %h1 
             = link_to link_text.html_safe, p, :title => 'Not Yet Published'
-        -if admin_signed_in?
+        - if admin_signed_in?
           .edit-link
             = link_to 'Edit', edit_post_path(p)
             = link_to("Publish", publish_post_path(p), :method => :put) unless p.published?
-
-  = paginate @posts
+  .row#pages
+    = paginate @posts
