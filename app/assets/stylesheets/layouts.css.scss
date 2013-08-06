@@ -205,22 +205,17 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #525252;
+  color: #535353;
   text-transform: uppercase;
   font-family: "Merriweather Sans", Georgia;
   font-size: 14px;
-}
-
-nav ul a.active {
-  color: #fcb040; 
+  padding-bottom: 2px;
 }
 
 nav ul li a.selected, nav ul li a:hover {
-  webkit-transition: all 275ms;
-     -moz-transition: all 275ms;
-     -o-transition: all 275ms;
-     transition: all 275ms;
-  color: #fcb040; 
+  border-bottom: 1px solid #535353;
+  color: #535353;
+
 }
 
 #content-wrapper {
@@ -575,7 +570,7 @@ a.blog-link:hover {
 }
 
 footer {
-  background: #2f2f2f;
+  background: #16171a;
   padding: 50px 0px 90px;
   color: #818181;
 }
