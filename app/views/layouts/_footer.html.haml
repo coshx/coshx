@@ -1,5 +1,5 @@
 %footer.container
-  .row
+  .row#footer-info
     #footer-logo.column.three
       #logo-grey
         %a{:href => root_path}
@@ -39,6 +39,12 @@
       %br
       #facebook-icon
         %a{:href => "http://www.facebook.com/coshxlabs"}
+  .row#copyright
+    .column.four
+      %h3 Copyright © 2013. All rights reserved
+    .column.one
+      =link_to "Back to top", root_path
+
 - if current_page?('/contact')
   #map-container
     #map-canvas

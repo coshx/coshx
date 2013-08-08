@@ -579,7 +579,7 @@ footer {
   z-index: 1;
   position: relative;
   background: #16171a;
-  padding: 50px 0px 90px;
+  padding: 50px 0px 60px;
   color: #818181;
 }
 
@@ -593,4 +593,33 @@ footer h4 {
   text-transform: uppercase;
   color: white;
   margin-bottom: 25px;
+}
+
+#footer-info {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #303030;
+
+}
+
+#copyright {
+
+  padding-top: 20px;
+  h3, a {
+    font-family: "Merriweather Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #505050;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  a {
+    font-size: 11px;
+  }
+
 }
