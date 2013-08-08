@@ -214,7 +214,7 @@ nav ul li a {
   padding-bottom: 2px;
 }
 
-nav ul li a.selected, nav ul li a:hover {
+nav ul li a:hover, nav ul li a.active {
   border-bottom: 1px solid #535353;
   color: #535353;
 
