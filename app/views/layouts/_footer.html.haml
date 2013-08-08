@@ -1,18 +1,3 @@
-- unless params[:controller] == 'posts'
-  %div#site-links
-    .row
-      %h1 Want to start the conversation?
-      %h2 Contact us #{link_to "here", contact_path}, or #{link_to "get to know us", about_path}. You can read our thoughts along #{link_to "the journey", blog_posts_path} or look at our #{link_to "portfolio page", projects_path}. Want to join the team? Check for #{link_to "open positions", jobs_path}.
-    .row
-      #heart-icon
-
-  - unless current_page?('/contact')
-    %article#together
-      #heroes.row
-        .column.eight
-          %h3 We are a distributed team of superheroes.
-        #work-together.column.four
-          = button_to "let's work together", contact_path(:anchor => "request"), :class => "btn blue center top-margin-small", :method => :get
 %footer.container
   .row
     #footer-logo.column.three
@@ -54,5 +39,6 @@
       %br
       #facebook-icon
         %a{:href => "http://www.facebook.com/coshxlabs"}
-
-#map-canvas
+- if current_page?('/contact')
+  #map-container
+    #map-canvas

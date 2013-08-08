@@ -64,7 +64,15 @@
 	}
 }
 
+#map-container {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
 #map-canvas {
 	height: 550px;
+	z-index: 0;
 	background-color: white;
 }

@@ -19,6 +19,8 @@ h2 {
 #content {
   margin-top: 110px;
   width: 100%;
+  z-index: 1;
+  position: relative;
 }
 
 body {
@@ -342,6 +344,8 @@ footer .small-line {
 
 #site-links {
   height: 370px;
+  position: relative;
+  z-index: 1;
   width: 100%;
   background-color: #FFFFFF;
 
@@ -572,9 +576,15 @@ a.blog-link:hover {
 }
 
 footer {
+  z-index: 1;
+  position: relative;
   background: #16171a;
   padding: 50px 0px 90px;
   color: #818181;
+}
+
+#footer-with-map {
+  margin-bottom: 550px;
 }
 
 footer h4 {

@@ -25,4 +25,13 @@
         = render "layouts/header"
       %div#content
         = yield
-    = render "layouts/footer"
+
+    - unless params[:controller] == 'posts'
+      = render "layouts/site_links"
+      - unless current_page?('/contact')
+        = render "layouts/together"
+    - if current_page?('/contact')
+      #footer-with-map
+        = render "layouts/footer"
+    - else 
+      = render "layouts/footer"
