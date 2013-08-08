@@ -24,19 +24,19 @@ initialize = ->
   )	
 
   austin_marker = new google.maps.Marker (
-	  position: new google.maps.LatLng(30.269038,-97.740344)
+	  position: new google.maps.LatLng(30.269038, -97.740344)
 	  map: map
 	  icon: "/assets/austin.png"
   )	
 
   cville_marker = new google.maps.Marker (
-	  position: new google.maps.LatLng(38.028487,-78.471504)
+	  position: new google.maps.LatLng(38.028487, -78.471504)
 	  map: map
 	  icon: "/assets/charlottesville.png"
   )	
 
   sf_marker = new google.maps.Marker (
-	  position: new google.maps.LatLng(37.782044,-122.408148)
+	  position: new google.maps.LatLng(37.782044, -122.408148)
 	  map: map
 	  icon: "/assets/san_francisco.png"
   )	

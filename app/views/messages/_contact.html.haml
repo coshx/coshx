@@ -8,14 +8,14 @@
   .row
     .five.columns
       .text-field
-        = f.text_field :name, :value => "Your name"
+        = f.text_field :name, :placeholder => "Your name"
     .five.columns
       .text-field
-        = f.email_field :email, :value => "Email address"
+        = f.email_field :email, :placeholder => "Email address"
   .row
     .twelve.columns
       .long-field
-        = f.text_area :text, :value => "Tell us about your project or send us a simple hello..."
+        = f.text_area :text, :placeholder => "Tell us about your project or send us a simple hello..."
       .link
         %a.btn.blue.center.top-margin-small.submit-link{:href => '#'}
           ="Let's get started".html_safe
