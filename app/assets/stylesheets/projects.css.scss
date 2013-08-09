@@ -1,5 +1,126 @@
 @import "common";
 
+#results-header {
+  height: 210px;
+  background-color: $grey-white;
+
+  h1 {
+    color: #535353;
+    margin-top: 80px;
+  }
+}
+
+#recent-work {
+  background: #FFFFFF;
+  text-align: center;
+  height: 1230px;
+  padding-top: 50px;
+
+  border-bottom: 1px solid #e9e9e9;
+  h3 {
+    margin-top: 0px;
+    color: #535353;
+  }
+  h4 {
+    margin-top: 20px;
+    color: $text-grey;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 30px;
+
+  }
+}
+
+#closeoutbike-box {
+  width: 400px;
+  height: 300px;
+  margin-bottom: 35px;
+  margin-left: 150px;
+  background-color: #455560;
+}
+
+#mobilizeart-box {
+  width: 400px;
+  height: 300px;
+  margin-bottom: 35px;
+  margin-right: 150px;
+  background-color: #75c6b2;
+}
+
+#gigdog-box {
+  width: 400px;
+  height: 300px;
+  margin-bottom: 35px;
+  margin-left: 150px;
+  background-color: #164d67;
+}
+
+#greeneggs-box {
+  width: 400px;
+  height: 300px;
+  margin-bottom: 35px;
+  margin-right: 150px;
+  background-color: #a5c675;
+}
+
+#textus-box {
+  width: 400px;
+  height: 300px;
+  margin-bottom: 35px;
+  margin-left: 150px;
+  background-color: #922b8d;
+}
+
+#lastproject-box {
+  width: 400px;
+  height: 300px;
+  margin-bottom: 35px;
+  margin-right: 150px;
+  background-color: $grey-white;
+}
+
+
+#closeoutbike-result-image {
+  background: image-url("closeoutbikes_result.png") no-repeat;
+  float: right;
+  margin-top: 60px;
+  width: 336px;
+  height: 240px;
+}
+
+#mobilizeart-result-image {
+  background: image-url("mobilizeart_result.png") no-repeat;
+  float: right;
+  margin-top: 60px;
+  width: 333px;
+  height: 240px;
+}
+
+#gigdog-result-image {
+  background: image-url("gigdog_result.png") no-repeat;
+  float: right;
+  margin-top: 63px;
+  width: 332px;
+  height: 237px;
+}
+
+#greeneggs-result-image {
+  background: image-url("greeneggs_result.png") no-repeat;
+  float: right;
+  width: 336px;
+  height: 300px;
+}
+
+#textus-result-image {
+  background: image-url("textus_result.png") no-repeat;
+  float: right;
+  margin-top: 61px;
+  width: 332px;
+  height: 239px;
+}
+
+
+
 .admin_bar {
   text-align: center;
   padding: 10px;

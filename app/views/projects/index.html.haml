@@ -1,19 +1,22 @@
-%div.featured_projects
-  - rowify(@projects, 3).each_with_index do |projects, row_num|
-    .row
-      - projects.each_with_index do |p, i|
-        %div.four.columns
-          =render :partial => "project", :locals => {:row=> row_num, :p => p, :i => i} if (row_num*3+i) < (@projects.length-1)
-          =render :partial => "your_project" if (row_num*3+i) == (@projects.length-1)
-
-
-- if admin_signed_in?
-  = link_to 'New Project', new_project_path, :class => "large blue button"
-
-%section#testimonials.row
-  %header.divider
-    %h2 Testimonials
-    = link_to " ", "/get_random_quote", :remote => true, :class => "test-nav next"
-    = link_to " ", "/get_random_quote", :remote => true, :class => "test-nav prev"
-
-  = render :partial => "quotes/random_quote", :locals => {:random_quote => random_quote}
+#results-header
+  .row
+    %h1 Simple is better than complex.
+%div#recent-work
+  #our-work-text.row
+    %h3 Our Work
+    %h4 We have a solid track record of delivering great results - on time and on budget. Here are just a few of our recent wins.
+  .row
+    #closeoutbike-box.column.five
+      #closeoutbike-result-image
+    #mobilizeart-box.column.five
+      #mobilizeart-result-image
+  .row
+    #gigdog-box.column.five
+      #gigdog-result-image
+    #greeneggs-box.column.five
+      #greeneggs-result-image
+  .row
+    #textus-box.column.five
+      #textus-result-image
+    #lastproject-box.column.five
+      #lastproject-result-image  
