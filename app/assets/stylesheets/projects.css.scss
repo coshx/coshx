@@ -27,7 +27,21 @@
     margin-left: 250px;
     margin-right: 250px;
     margin-bottom: 30px;
+  }
 
+  a {
+    display: none;
+    position: relative;
+    z-index: 2;
+    margin-top: 135px;
+  }
+
+  .column.five:hover {
+    -webkit-filter: brightness(0.5);
+    a {
+      -webkit-filter: brightness(0);
+      display: inline-block;
+    }
   }
 }
 
@@ -37,6 +51,7 @@
   margin-bottom: 35px;
   margin-left: 150px;
   background-color: #455560;
+  z-index: 0;
 }
 
 #mobilizeart-box {
@@ -44,6 +59,7 @@
   height: 300px;
   margin-bottom: 35px;
   margin-right: 150px;
+  z-index: 0;
   background-color: #75c6b2;
 }
 
@@ -52,7 +68,8 @@
   height: 300px;
   margin-bottom: 35px;
   margin-left: 150px;
-  background-color: #164d67;
+  z-index: 0;
+ background-color: #164d67;
 }
 
 #greeneggs-box {
@@ -60,6 +77,7 @@
   height: 300px;
   margin-bottom: 35px;
   margin-right: 150px;
+  z-index: 0;
   background-color: #a5c675;
 }
 
@@ -68,6 +86,7 @@
   height: 300px;
   margin-bottom: 35px;
   margin-left: 150px;
+  z-index: 0;
   background-color: #922b8d;
 }
 
@@ -76,45 +95,57 @@
   height: 300px;
   margin-bottom: 35px;
   margin-right: 150px;
+  z-index: 0;
   background-color: $grey-white;
 }
 
 
 #closeoutbike-result-image {
   background: image-url("closeoutbikes_result.png") no-repeat;
-  float: right;
-  margin-top: 60px;
   width: 336px;
   height: 240px;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 #mobilizeart-result-image {
   background: image-url("mobilizeart_result.png") no-repeat;
-  float: right;
-  margin-top: 60px;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
   width: 333px;
   height: 240px;
 }
 
 #gigdog-result-image {
   background: image-url("gigdog_result.png") no-repeat;
-  float: right;
-  margin-top: 63px;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
   width: 332px;
   height: 237px;
 }
 
 #greeneggs-result-image {
   background: image-url("greeneggs_result.png") no-repeat;
-  float: right;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
   width: 336px;
   height: 300px;
 }
 
 #textus-result-image {
   background: image-url("textus_result.png") no-repeat;
-  float: right;
-  margin-top: 61px;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
   width: 332px;
   height: 239px;
 }
