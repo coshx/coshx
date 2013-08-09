@@ -598,7 +598,14 @@ footer h4 {
 #footer-info {
   padding-bottom: 50px;
   border-bottom: 1px solid #303030;
+}
 
+#footer-arrow {
+  height: 8px;
+  width: 8px;
+  float: left;
+  margin-top: 7px;
+  background: image-url("footer_arrow.png");
 }
 
 #copyright {
@@ -620,6 +627,7 @@ footer h4 {
 
   a {
     font-size: 11px;
+    float: right;
   }
 
 }
