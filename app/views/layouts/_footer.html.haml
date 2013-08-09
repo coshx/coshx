@@ -43,7 +43,8 @@
     .column.four
       %h3 Copyright © 2013. All rights reserved
     .column.one
-      =link_to "Back to top", root_path
+      #footer-arrow
+      =link_to "Back to top", "#", :class => "scrollup"
 
 - if current_page?('/contact')
   #map-container
