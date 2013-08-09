@@ -26,10 +26,10 @@
       %div#content
         = yield
 
-    - unless params[:controller] == 'posts'
+    - unless (params[:controller] == 'posts' || params[:controller] == 'projects')
       = render "layouts/site_links"
-      - unless current_page?('/contact')
-        = render "layouts/together"
+    - unless (params[:controller] == 'posts' || current_page?('/contact'))
+      = render "layouts/together"
     - if current_page?('/contact')
       #footer-with-map
         = render "layouts/footer"
