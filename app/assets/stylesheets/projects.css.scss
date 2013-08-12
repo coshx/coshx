@@ -38,6 +38,8 @@
 
   .column.five:hover {
     -webkit-filter: brightness(0.5);
+    -moz-filter: brightness(0.5);
+    -o--filter: brightness(0.5);
     a {
       -webkit-filter: brightness(0);
       display: inline-block;

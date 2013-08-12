@@ -14,7 +14,8 @@ Coshx::Application.routes.draw do
   get 'generate_slugs' => 'admins#generate_slugs'
   get 'thank_you' => 'messages#thank_you'
   get 'contact' => 'home#contact_us'
-  get 'case_study' => 'home#case_study'
+  get 'closeoutbikes_case_study' => 'home#closeoutbikes_case_study'
+  get 'case_study' => 'home#textus_case_study'
 
   devise_for :admins
 
