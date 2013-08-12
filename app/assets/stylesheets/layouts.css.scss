@@ -23,6 +23,24 @@ h2 {
   position: relative;
 }
 
+#page-section {
+  background: #FFFFFF;
+  text-align: center;
+  padding-top: 50px;
+  height: 100%;
+
+  h3 {
+    margin-top: 0px;
+    color: #535353;
+  }
+  h4 {
+    margin-top: 20px;
+    color: $text-grey;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}
+
 body {
   background: black;
   -webkit-backface-visibility: hidden;

@@ -1,16 +1,22 @@
 @import "common";
 
+
 #tagline {
 	height: 550px;
 	width: 100%;
 	padding-top: 50px;
 	text-align: center;
+}
+
+#tagline.closeoutbikes {
 	background-color: $steel-gray;
+}
+#tagline.textus {
+	background-color: #922b8d;	
 }
 
 #project-screen {
 	margin-top: 50px;
-	background: image-url("closeoutbike_laptop.png") no-repeat;
 	height: 518px;
 	width: 890px;
 	display: block;
@@ -18,7 +24,14 @@
 	margin-right: auto;
 	z-index: 2;
 	position: relative;
+}
 
+#project-screen.closeoutbikes {
+	background: image-url("closeoutbike_laptop.png") no-repeat;
+}
+
+#project-screen.textus {
+	background: image-url("textus_laptop.png") no-repeat;
 }
 
 #about-project {
@@ -41,6 +54,62 @@
 		padding-left: 10px;
 		padding-right: 50px;
 	}
+}
+
+#purple-circle {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background-color: #922b8d;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -90px;
+	h1 {
+		color: white;
+		font-size: 22px;
+		font-weight: normal;
+		padding-top: 3px; 
+	} 
+}
+
+#textus-summary {
+  background: #FFFFFF;
+  text-align: center;
+  padding-top: 70px;
+  height: 100%;
+
+  h3 {
+    margin-top: 0px;
+    color: #535353;
+  }
+  h4 {
+    margin-top: 20px;
+    color: $text-grey;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}
+
+#textus-steps {
+  background: #FFFFFF;
+  text-align: center;
+  padding-top: 50px;
+  height: 100%;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #e9e9e9;
+
+
+  h3 {
+    margin-top: 0px;
+    color: #535353;
+  }
+  h4 {
+    margin-top: 20px;
+    color: $text-grey;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+  }
 }
 
 #logo-versions {
