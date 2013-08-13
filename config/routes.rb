@@ -17,6 +17,8 @@ Coshx::Application.routes.draw do
   get 'closeoutbikes_case_study' => 'home#closeoutbikes_case_study'
   get 'mobilizeart_case_study' => 'home#mobilizeart_case_study'
   get 'gigdog_case_study' => 'home#gigdog_case_study'
+  get 'textus_case_study' => 'home#textus_case_study'
+
   get 'case_study' => 'home#textus_case_study'
 
   devise_for :admins
