@@ -9,10 +9,8 @@
     font-size: 42px;
     a {
       color: $dark-grey;
-
     }
   }
-
   h2 {
     text-align: left;
     font-size: 22px;
@@ -20,8 +18,6 @@
       color: #38A8CC;
     }
   }
-
-
 }
 
 #post-description {
@@ -31,17 +27,6 @@
   border-bottom: 1px solid #e3e1df;
   padding-top: 70px;
   padding-bottom: 50px;
-
-}
-
-.post-box {
-  @include box-sizing(border-box);
-
-  width: 230px;
-  margin: 10px;
-  padding: 15px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1) inset;
-  background: $bright-blue;
 }
 
 .post-content {
@@ -59,36 +44,14 @@
   }
 }
 
-
-
-.post-show .post-description {
-  font: bold 12px 'PT Sans', sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  color: $gray;
-  margin-bottom: 20px;
-  display: block;
-  border-right: 1px solid $medium-gray;
-  min-height:300px;
-}
-
-.post-show .post-description span a {
-  font: bold 12px 'PT Sans', sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  color: $dark-blue;
-}
-
 .post-show {
   padding: 0px 10px;
   background-color: $grey-white;
-
 
   h3 {
     font-size: 42px;
     color: $dark-grey;
   }
-
   h2 {
     text-align: left;
     font-size: 22px;
@@ -98,7 +61,6 @@
       color: #38A8CC;
     }
   }
-
 }
 
 #more-by-author {
@@ -111,7 +73,6 @@
   .column.two {
     width: 80px;
   }
-
   .column.ten {
     float: left;
     padding-left: 30px;
@@ -128,30 +89,12 @@
   padding-bottom: 50px;
 }
 
-.share-buttons {
-  margin-top: 30px;
-  overflow: hidden;
-}
-
-.all-posts .year {
-  padding-top: 44px;
-  text-align: center;
-  height: 120px;
-  width: 120px;
-  border-radius: 100px;
-  font-size: 32px;
-  color: white;
-  background: $blue;
-  font-weight: bold;
-}
-
 #pages {
   height: 60px;
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   width: 833px;
-
 }
 
 nav span {

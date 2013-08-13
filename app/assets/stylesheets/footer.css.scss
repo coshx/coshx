@@ -1,62 +1,178 @@
 @import "common";
 
-@media only screen and (max-width: 960px) {
-  footer {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-footer .the-button {
-  display: block;
-  margin: auto;
-  margin-top: 10px;
-  text-align: center;
-}
-
-footer .star-header {
-  margin-top: 0px;
-  margin-bottom: 14px;
-  border-top: 2px solid $blue;
-  border-bottom: 1px solid $dark-blue;
-  font: bold 18px 'PT Sans', sans-serif;
-  color: white;
-  background: url(twitter_footer.png) no-repeat 0px 3px;
-  text-transform: none;
+footer {
+  z-index: 1;
   position: relative;
-  p {
-    padding-left: 50px;
-    margin: 0px 120px 0px 0px;
-    font-size: 13px;
-  }
-
-  &#footer-tweet {
-    font: 13px "Droid Serif", serif;
-  }
+  background: #16171a;
+  padding: 50px 0px 60px;
+  color: #818181;
 }
 
-@media only screen and (max-width: 500px) {
-  footer .star-header {
-    background-position: center 0px !important;
-    p {
-      padding-left: 0px;
-    }
-  }
+#footer-with-map {
+  margin-bottom: 550px;
 }
 
-#latest-blogs h2 a {
-  &:hover {
-    color: black !important;
-  }
-}
-
-.post-info a {
-  &:hover {
-    color: black;
-  }
-}
-
-.contact-details .the-button {
+footer h4 {
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
   color: white;
+  margin-bottom: 25px;
 }
 
+#together {
+  background: $grey-white;
+  height: 165px;
+}
+
+#heroes {
+  padding-top: 50px; 
+
+  h3 {
+    color: #535353;
+    float: right;
+    margin-right: 10px;
+  }
+}
+
+#heart-icon {
+  background: image-url("heart.png") no-repeat;
+  display: block;
+  height: 80px;
+  width: 30px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#work-together {
+  float: left;
+ }
+
+#site-links {
+  height: 370px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: #FFFFFF;
+
+  h1 {
+    margin-top: 80px;
+  }
+  section {
+    margin-left: 10%;
+    width: 80%;
+  }
+} 
+
+#footer-info {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #303030;
+}
+
+#footer-logo {
+  width: 130px;
+}
+
+#logo-grey a {
+  background: image-url("logo_grey.png") no-repeat;
+  width: 75px;
+  height: 75px;
+  float: left;  
+}
+
+#location {
+  width: 235px;
+  float: left;
+
+  h3 {
+    font-size: 12px;
+    font-family: "Merriweather Sans", sans-serif;
+    text-transform: uppercase;
+    color: #707070;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1.1;
+  }
+
+  h4 {
+    font-size: 11px;
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: normal;
+    text-transform: none;
+    color: #B8B8B8;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1.1;
+  }
+
+  h5 {
+    font-size: 11px;  
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: bold;
+    text-transform: none;
+    color: #B8B8B8;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1.1;
+  }
+}
+
+#social {
+  width: 70px;
+
+  h3 {
+    font-size: 12px;
+    font-family: "Merriweather Sans", sans-serif;
+    text-transform: uppercase;
+    color: #707070;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1.1;
+    float: right;
+  }
+}
+
+#social-media-link a {
+  width: 42px;
+  height: 37px;
+  margin-top: 10px;
+  margin-left: 20px;
+  float: right;
+}
+  
+#twitter-icon {
+  background: image-url("footer-twitter.png") no-repeat;
+}
+
+#facebook-icon {
+  background: image-url("footer-facebook.png") no-repeat;
+}
+
+#copyright {
+  padding-top: 20px;
+  h3, a {
+    font-family: "Merriweather Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #505050;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1.1;
+  }
+  h3 {
+    font-size: 12px;
+  }
+  a {
+    font-size: 11px;
+    float: right;
+  }
+}
+
+#footer-arrow {
+  height: 8px;
+  width: 8px;
+  float: left;
+  margin-top: 7px;
+  background: image-url("footer_arrow.png");
+}
