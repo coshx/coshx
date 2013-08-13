@@ -18,6 +18,12 @@
 #tagline.textus {
 	background-color: #922b8d;	
 }
+#tagline.mobilizeart {
+	background-color: #75c6b2;
+}
+#tagline.gigdog {
+	background-color: #164d67;
+}
 
 #project-screen {
 	margin-top: 50px;
@@ -36,6 +42,14 @@
 
 #project-screen.textus {
 	background: image-url("textus_laptop.png") no-repeat;
+}
+
+#project-screen.mobilizeart {
+	background: image-url("mobilizeart_laptop.png") no-repeat;
+}
+
+#project-screen.gigdog {
+	background: image-url("gigdog_laptop.png") no-repeat;
 }
 
 #about-project {
@@ -60,11 +74,10 @@
 	}
 }
 
-#purple-circle {
+#cs-circle {
 	border-radius: 50%;
 	width: 40px;
 	height: 40px;
-	background-color: #922b8d;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: -90px;
@@ -74,6 +87,18 @@
 		font-weight: normal;
 		padding-top: 3px; 
 	} 
+}
+
+#cs-circle.purple {
+	background-color: #922b8d;
+}
+
+#cs-circle.teal {
+	background-color: #75c6b2;
+}
+
+#cs-circle.blue {
+	background-color: #164d67;
 }
 
 #textus-summary {
