@@ -98,7 +98,7 @@ h1#third-project-logo {
 #fourth-project {
   height: 370px;
   width: 100%;
-  background-color: #a5c675;
+  background-color: #2c2c2c;
 
   h3, h4 {
     color: $white;
@@ -112,9 +112,33 @@ h1#third-project-logo {
 }
 
 h1#fourth-project-logo {
-  background: image-url("greeneggs_img.png") no-repeat;
+  background: image-url("scheduleshare_img.png") no-repeat;
   width: 721px;
   height: 295px;
   position: absolute;
   bottom: -14px;
+}
+
+#fifth-project {
+  height: 370px;
+  width: 100%;
+  background-color: #922b8d;
+
+  h3, h4 {
+    color: $white;
+  }
+}
+
+h1#fifth-project-logo {
+  background: image-url("textus_img.png") no-repeat;
+  width: 721px;
+  height: 295px;
+  position: absolute;
+  bottom: -14px;
+}
+
+#fifth-project-description {
+  margin-left: 10px;
+  margin-top: 80px;
+  width: 380px;
 }
