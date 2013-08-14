@@ -50,6 +50,10 @@
   margin-top: 5px;
 }
 
+.btn.top-padding {
+  padding-top: 5px;
+}
+
 .btn.orange {  
   background-color: #fbaf3f;
 }
@@ -74,6 +78,10 @@
   font-size: 16px;
   width: 300px;
   height: 60px;
+}
+
+.btn.blue:hover {
+  cursor: pointer;
 }
 
 .btn.light-grey {
