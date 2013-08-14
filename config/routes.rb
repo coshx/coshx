@@ -18,6 +18,7 @@ Coshx::Application.routes.draw do
   get 'mobilizeart_case_study' => 'home#mobilizeart_case_study'
   get 'gigdog_case_study' => 'home#gigdog_case_study'
   get 'textus_case_study' => 'home#textus_case_study'
+  get 'greeneggs_case_study' => 'home#greeneggs_case_study'
 
   get 'case_study' => 'home#textus_case_study'
 
