@@ -25,6 +25,10 @@
 	background-color: #164d67;
 }
 
+#tagline.greeneggs {
+	background-color: #a5c675;
+}
+
 #project-screen {
 	margin-top: 50px;
 	height: 518px;
@@ -50,6 +54,12 @@
 
 #project-screen.gigdog {
 	background: image-url("gigdog_laptop.png") no-repeat;
+}
+
+#project-screen.greeneggs {
+	background: image-url("greeneggs_iphone.png") no-repeat;
+	width: 834px;
+	height: 562px;
 }
 
 #case-study-middle-row {
