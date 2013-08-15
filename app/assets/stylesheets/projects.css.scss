@@ -1,20 +1,17 @@
 @import "common";
 
 #results-header {
-  height: 210px;
   background-color: $grey-white;
-
   h1 {
-    color: #535353;
     margin-top: 80px;
+    padding-bottom: 62px;
   }
 }
 
 #recent-work {
-  background: #FFFFFF;
   text-align: center;
-  height: 1560px;
-  padding-top: 50px;
+  padding-top: 41px;
+  padding-bottom: 25px;
 
   a {
     display: none;
@@ -22,7 +19,26 @@
     z-index: 3;
   }
 
-  .column.five:hover {
+  img {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  img.website {
+    right: 248px;
+    bottom: 20px;
+  }
+
+  .column.five {
+    width: 400px;
+    height: 300px;
+    margin-bottom: 35px;
+    z-index: 0;
+  }
+
+  .column:hover {
     a {
       display: inline-block;
     }
@@ -30,13 +46,8 @@
 }
 
 #our-work-text {
-  h3 {
-    margin-top: 0px;
-    color: #535353;
-  }
   h4 {
     margin-top: 20px;
-    color: $text-grey;
     margin-left: 250px;
     margin-right: 250px;
     margin-bottom: 30px;
@@ -72,57 +83,33 @@
 }
 
 #closeoutbike-box {
-  width: 400px;
-  height: 300px;
-  margin-bottom: 35px;
   margin-left: 150px;
-  background-color: #455560;
-  z-index: 0;
+  background-color: $closeoutbike-bg;
 }
 
 #mobilizeart-box {
-  width: 400px;
-  height: 300px;
-  margin-bottom: 35px;
   margin-right: 150px;
-  z-index: 0;
-  background-color: #75c6b2;
+  background-color: $mobilizeart-bg;
 }
 
 #gigdog-box {
-  width: 400px;
-  height: 300px;
-  margin-bottom: 35px;
   margin-left: 150px;
-  z-index: 0;
- background-color: #164d67;
+  background-color: $gigdog-bg;
 }
 
 #greeneggs-box {
-  width: 400px;
-  height: 300px;
-  margin-bottom: 35px;
   margin-right: 150px;
-  z-index: 0;
-  background-color: #a5c675;
+  background-color: $greeneggs-bg;
 }
 
 #textus-box {
-  width: 400px;
-  height: 300px;
-  margin-bottom: 35px;
   margin-left: 150px;
-  z-index: 0;
-  background-color: #922b8d;
+  background-color: $textus-bg;
 }
 
 #scheduleshare-box {
-  width: 400px;
-  height: 300px;
-  margin-bottom: 35px;
   margin-right: 150px;
-  z-index: 0;
-  background-color: #2c2c2c;
+  background-color: $scheduleshare-bg;
 }
 
 #old-site-box {
@@ -133,75 +120,4 @@
   margin-left: 150px;
   margin-right: 150px;
   background-color: #fbaf3f;
-}
-
-
-#closeoutbike-result-image {
-  background: image-url("closeoutbikes_result.png") no-repeat;
-  width: 336px;
-  height: 240px;
-  z-index: 1;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-#mobilizeart-result-image {
-  background: image-url("mobilizeart_result.png") no-repeat;
-  z-index: 1;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 333px;
-  height: 240px;
-}
-
-#gigdog-result-image {
-  background: image-url("gigdog_result.png") no-repeat;
-  z-index: 1;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 332px;
-  height: 237px;
-}
-
-#greeneggs-result-image {
-  background: image-url("greeneggs_result.png") no-repeat;
-  z-index: 1;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 336px;
-  height: 300px;
-}
-
-#textus-result-image {
-  background: image-url("textus_result.png") no-repeat;
-  z-index: 1;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 332px;
-  height: 239px;
-}
-
-#scheduleshare-result-image {
-  background: image-url("scheduleshare_result.png") no-repeat;
-  z-index: 1;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 332px;
-  height: 239px;
-}
-
-#old-site-result-image {
-  background: image-url("old_site_result.png") no-repeat;
-  z-index: 1;
-  position: absolute;
-  right: 248px;
-  bottom: 20px;
-  width: 344px;
-  height: 261px;
 }
