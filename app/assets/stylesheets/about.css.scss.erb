@@ -3,28 +3,28 @@
 #about-header {
   background: #38a8cc;
   padding-top: 130px;
-  height: 508px;
   h1, h2 {
     color: #FFFFFF;
     margin-top: 40px;
   }
+  h2 {
+    padding-bottom: 160px;
+  }
 }
 
 #principles {
-  background: #FFFFFF;
   text-align: center;
-  height: 215px;
   .row {
     height: 100%;
     border-bottom: 1px solid #e9e9e9;
   }
   h5 {
     margin-top: 25px;
-    color: #535353;
   }
   h6 {
     margin-left: 10px;
     margin-right: 10px;
+    padding-bottom: 72px;
   }
 }
 
@@ -36,67 +36,37 @@
   width: 125px;
   height: 125px;
   margin-top: -55px;
+  margin-bottom: -87px;
   margin-left: auto;
   margin-right: auto;
   background: #FFFFFF;
-}
-
-#tech-craft-icon {
-  background: image-url("tech_craft.png") no-repeat;
-  width: 40px;
-  height: 43px;
-  margin-top: -87px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#creative-icon {
-  background: image-url("creative_design.png") no-repeat;
-  width: 30px;
-  height: 43px;
-  margin-top: -87px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#user-centered-icon {
-  background: image-url("cendev.png") no-repeat;
-  width: 40px;
-  height: 43px;
-  margin-top: -87px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #expertise {
-  background: #FFFFFF;
   text-align: center;
-  height: 245px;
-  padding-top: 50px;
+  padding-top: 36px;
   border-bottom: 1px solid #e9e9e9;
-  h3 {
-    margin-top: 0px;
-    color: #535353;
-  }
+
   h4 {
     margin-top: 20px;
     color: $text-grey;
     margin-left: 200px;
     margin-right: 200px;
+    padding-bottom: 37px;
   }
 }
 
 #services {
-  background: #FFFFFF;
-  height: 480px;
   padding-top: 70px;
+  padding-bottom: 16px;
   .row .column 
   {
     padding-bottom: 70px;
     padding-right: 15px;
   }
-  h5 {
-    color: #535353;
+  img {
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 
@@ -107,63 +77,11 @@
   }
 }
 
-#web-app-icon {
-  background: image-url("webapp.png") no-repeat;
-  display: inline-block;
-  vertical-align: middle;
-  width: 19px;
-  height: 14px;
-}
-
-#mobile-app-icon {
-  background: image-url("mobapp.png") no-repeat;
-  display: inline-block;
-  vertical-align: middle;
-  width: 13px;
-  height: 19px;
-}
-
-#scalability-icon {
-  background: image-url("scala.png") no-repeat;
-  display: inline-block;
-  vertical-align: middle;
-  width: 17px;
-  height: 18px;
-}
-
-#testing-icon {
-  background: image-url("testing.png") no-repeat;
-  display: inline-block;
-  vertical-align: middle;
-  width: 16px;
-  height: 16px;
-}
-
-#lean-tactics-icon {
-  background: image-url("tactics.png") no-repeat;
-  display: inline-block;
-  vertical-align: middle;
-  width: 17px;
-  height: 15px;
-}
-
-#agile-methodologies-icon {
-  background: image-url("agile.png") no-repeat;
-  display: inline-block;
-  vertical-align: middle;
-  width: 17px;
-  height: 14px;
-}
-
 #team {
   background: $grey-white;
-  height: 780px;
+  padding-bottom: 77px;
 
-  h3 {
-    color: #535353;
-  }
   h4 {
-    color: $text-grey;
     margin-top: 20px;
     margin-left: 200px;
     margin-right: 200px;
@@ -194,33 +112,32 @@
 }
 
 #down-triangle {
-  background: image-url("triangle_down.png") no-repeat;
-  width: 35px;
-  height: 25px;
-  margin-top: -70px;
+  margin-top: 17px;
   margin-left: auto;
   margin-right: auto;
 }
 
 #how-we-work {
-  background: #FFFFFF;
-  height: 1850px;
   border-bottom: 1px solid #e9e9e9;
-  h3 {
-    color: #535353;
-  }
+
   h4 {
     margin-top: 20px;
-    color: $text-grey;
   }
+
   h5 {
     font-size: 24px;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 #work-header {
-  margin-top: 45px;
-  height: 180px;
+  padding-top: 45px;
+  padding-bottom: 36px; 
   text-align: center;
   border-bottom: 1px solid #e9e9e9;
   h4 {
@@ -229,44 +146,37 @@
   }
 }
 
-#step-even {
-  margin-top: 60px;
-  height: 260px;
-  border-bottom: 1px solid #e9e9e9;
+#step {
+  padding-top: 60px;
+  padding-bottom: 69px;
+}
 
-  .one {
-    width: 5%;
-  }
-
+#step.even, #step.last {
   .four {
-    width: 25%;
+    width: 26%;
   }
 
   .eight {
     width: 70%;
-  }
-
-  h4 {
-    margin-right: 85px;
+    padding-right: 85px;
   }
 }
 
-#step-odd {
-  margin-top: 60px;
-  height: 260px;
+#step.even {
   border-bottom: 1px solid #e9e9e9;
+}
 
-  .two {
-    width: 9%;
-  }
+#step.odd {
+  border-bottom: 1px solid #e9e9e9;
 
   .four {
     width: 25%;
-    float: left;
+    padding-right: 96px;
   }
 
   .six {
-    width: 62%
+    width: 71%;
+    padding-left: 108px;
   }
 }
 
@@ -277,54 +187,18 @@
   behavior: url(PIE.htc);
   width: 190px;
   height: 190px;
-  margin-left: auto;
-  margin-right: auto;
+  float: right;
   background: $grey-white;
-}
 
-#meet-icon {
-  background: image-url("handshake.png") no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -120px;
-  width: 170px;
-  height: 73px;
-}
-
-#planning-icon {
-  background: image-url("planning.png") no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -160px;
-  width: 105px;
-  height: 131px;
-}
-
-#design-icon {
-  background: image-url("design.png") no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -155px;
-  width: 101px;
-  height: 130px;
-}
-
-#mvp-icon {
-  background: image-url("mvp.png") no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -130px;
-  width: 130px;
-  height: 85px;
-}
-
-#iterate-icon {
-  background: image-url("iterate.png") no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -140px;
-  width: 132px;
-  height: 95px;
+  img {
+    padding: 30% 0px;
+  }
+  img.planning{
+      padding: 15% 0px;
+    }
+  img.design {
+      padding: 20% 0px;
+  }
 }
 
 .about-us-avatar {
@@ -339,5 +213,4 @@
   -moz-transition: all 0.3s ease-out; /* Firefox 4-15 */
   -o-transition: all 0.3s ease-out; /* Opera 10.5–12.00 */
   transition: all 0.3s ease-out; /* Firefox 16+, Opera 12.50+ */
-
 }

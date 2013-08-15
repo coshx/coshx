@@ -1,65 +1,65 @@
-%div#about-header
+#about-header
   .row
     %h1 Applications are built for people, and so are we.
     %h2 Watching your idea develop into a valuable application should be fun, not daunting. Our approach makes you an integral part of the process while improving your tech along the way.
-%div#principles
+#principles
   .row
     .column.four
       #circle-white
-      #tech-craft-icon
+      = image_tag("tech_craft.png")
       %h5 Technical craft
       %h6 Our team has all the tools and the experience to know how to use them effectively
     .column.four
       #circle-white
-      #creative-icon
+      = image_tag("creative_design.png")
       %h5 Creative design
       %h6 Great design means more than looking pretty, but your software will be the hottest in town
     .column.four
       #circle-white
-      #user-centered-icon
+      = image_tag("cendev.png")
       %h5 User-centered development
       %h6 We build powerfully simple software by focusing on users and their needs
 
-%div#expertise
-  #expertise-text.row
+#expertise
+  .row
     %h3 Digital Expertise
     %h4 We have managed every facet of development from ideation to launch and use our experience to solve problems before they arise.  Our design-oriented approach ensures your software will feel like home to your users, whether you have one or one million.
 
-%div#services
+#services
   .row
     .column.four
       #icon-text-row
-        #web-app-icon
+        = image_tag("webapp.png")
         %h5 Web Applications
       %h6 If your business is on the web then we can help build it or make it better. We have done it all, but will spare you the jargon.
     .column.four
       #icon-text-row
-        #mobile-app-icon
+        = image_tag("mobapp.png")
         %h5 Mobile Applications
       %h6 Customers are on the go, and so is their technology. We make software that is as mobile as the people who use it.
     .column.four
       #icon-text-row
-        #scalability-icon
+        = image_tag("scala.png")
         %h5 Scalability
       %h6 Growing pains mean traction, but they don't have to hurt. You can't afford to lose customers due to poorly implemented code, and we won't let you.
   .row
     .column.four
       #icon-text-row
-        #testing-icon
+        = image_tag("testing.png")
         %h5 Testing
       %h6 Stories are nice, but learning through data is what strokes our geek. We track, analyze and learn as we build simply perfect software.
     .column.four
       #icon-text-row
-        #lean-tactics-icon
+        = image_tag("tactics.png")
         %h5 Lean Tactics
       %h6 Lean tactics ensure we build the right application, every time, by adapting to new information gleaned through user interactions.
     .column.four
       #icon-text-row
-        #agile-methodologies-icon
+        = image_tag("agile.png")
         %h5 Agile Methodologies
       %h6 We will work together to uncover the most pressing needs of your users before writing one line of code, and ensure our work serves the end goal, not to project plan as dictated on day one.
 
-%div#team
+#team
   .row
     #team-header
       %h3 Meet Your Team
@@ -75,47 +75,43 @@
 %div#how-we-work
   .row
     #circle-white
-    #down-triangle  
+    #down-triangle
+      = image_tag("triangle_down.png")
   .row#work-header
     %h3 Our Approach
     %h4 Our process is highly iterative and focused on the needs of your business, not ours. Technology exists for the people who will use (and pay for) it, and we never forget that.
-  .row#step-even
-    .column.one
+  .row#step.even
     .column.four
       #circle-off-white
-      #meet-icon
+        = image_tag("handshake.png")
     .column.eight
       %h5 Pleased to Meet You
       %h4 Your vision matters most, and we want to learn about it while getting to know you and your business needs. We are not faceless mercenaries, but a talented team of superheroes that wants to help our clients succeed.
-  .row#step-odd
-    .column.two
+  .row#step.odd
     .column.six
       %h5 Planning Session
       %h4 Furious whiteboarding and challenged ideas will lead to a sketch of your idea while generating a set of user stories, which are your entire application in written form. We will use these to prioritize your needs, estimate your cost and get cracking on the code.
     .column.four
       #circle-off-white
-      #planning-icon
-  .row#step-even
-    .column.one
+        = image_tag("planning.png", :class => "planning")
+  .row#step.even
     .column.four
       #circle-off-white
-      #design-icon
+        = image_tag("design.png", :class => "design")
     .column.eight
       %h5 Design
       %h4 Design is where form and function meet. Tools are only as powerful as one’s ability to use them, and we will work together to design intuitive, powerfully simple applications. Our designers are artists, and our developers are craftsmen. Your software will look as good as it feels.  
-  .row#step-odd
-    .column.two
+  .row#step.odd
     .column.six
       %h5 Minimum Viable Product
       %h4 Everything comes together in your Minimum Viable Product. We will get this into the hands of users in order to learn from their interactions and the data they generate. This saves you money by taking the guesswork out of development. We will crunch the numbers and sweat the technical details to keep you on the path to profitability. 
     .column.four
       #circle-off-white
-      #mvp-icon
-  .row#step-even
-    .column.one
+        = image_tag("mvp.png")
+  .row#step.last
     .column.four
       #circle-off-white
-      #iterate-icon
+        = image_tag("iterate.png")
     .column.eight
       %h5 Iterate
       %h4 You have users, revenue and an appetite for more. Lessons learned will be turned into improved functionality and a better, stronger application, capturing more users along the way. Perhaps you are ready to hire your own tech team, and we will proudly hand you off like parents at the first day of school…but you will always have a room in our home.
