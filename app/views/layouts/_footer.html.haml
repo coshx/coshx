@@ -1,50 +1,37 @@
 %footer.container
   .row#footer-info
     #footer-logo.column.three
-      #logo-grey
-        %a{:href => root_path}
+      = link_to image_tag("logo_grey.png"), root_path
     #location.column.two
-      %h3 Boulder
-      %br
+      %h3 Boulder <br><br>
       %h4 3080 Valmont Rd Suite 280
-      %h4 Boulder, CO 80301
-      %br
+      %h4 Boulder, CO 80301 <br><br>
       %h5 info@coshx.com
     #location.column.two
-      %h3 Charlottesville
-      %br
+      %h3 Charlottesville <br><br>
       %h4 1110 East Market St Suite N7
-      %h4 Charlottesville, VA 22902
-      %br
+      %h4 Charlottesville, VA 22902 <br><br>
       %h5 info@coshx.com
     #location.column.two
-      %h3 San Francisco
-      %br
+      %h3 San Francisco <br><br>
       %h4 972 Mission Street, 5th Floor
-      %h4 San Francisco, CA 94103
-      %br
+      %h4 San Francisco, CA 94103 <br><br>
       %h5 info@coshx.com
     #location.column.two
-      %h3 Austin
-      %br
+      %h3 Austin <br><br>
       %h4 701 Brazos St, Suite 1601
-      %h4 Austin, TX 78701
-      %br
+      %h4 Austin, TX 78701 <br><br>
       %h5 info@coshx.com
     #social.column.one
-      %h3 Social
-      %br
-      #social-media-link
-        %a#twitter-icon{:href => "http://www.twitter.com/coshxlabs"}
-      %br
-      #social-media-link
-        %a#facebook-icon{:href => "http://www.facebook.com/coshxlabs"}
+      %h3 Social 
+      = link_to image_tag("footer-twitter.png"), "http://www.twitter.com/coshxlabs"
+      = link_to image_tag("footer-facebook.png"), "http://www.facebook.com/coshxlabs"
   .row#copyright
     .column.four
       %h3 Copyright © 2013. All rights reserved
     .column.one
-      #footer-arrow
-      =link_to "Back to top", "#", :class => "scrollup"
+      = image_tag("footer_arrow.png")
+      = link_to "Back to top", "#", :class => "scrollup"
 
 - if current_page?('/contact')
   #map-container
