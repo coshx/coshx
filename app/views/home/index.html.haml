@@ -1,55 +1,56 @@
-%div#mission-statement
-  .row
+%article#mission-statement
+  %section.row
     %h1 We take the stress out of web and mobile development.
     %h2 Execution is easy, when you have the right partners.  We’ll handle the technical details so you can focus on what your business needs most.  Let’s build something together.
 
-%div#first-project
-  .row
-    #project-image.column.two
-      %h1#first-project-logo
-    #first-project-description.column.two
+%article#featured-project.closeoutbike
+  %section.row
+    .column
+      = image_tag("closeoutbike_img.png")
+    #project-description.column
       %h3 CloseoutBike
       %h4 We practice perfect simplicity, crafting designs that fulfill the needs of your users, without wasting anyone's time or money.
-      = link_to closeoutbikes_case_study_path, :class => "a-case-study-button gray" do
+      = link_to closeoutbikes_case_study_path, :class => "a-case-study-button closeoutbike" do
         View case study
 
-%div#second-project
-  .row
-    #second-project-description.column.two
+%article#featured-project.mobilizeart
+  %section.row
+    #project-description.column
       %h3 MobilizeArt
       %h4 Connect your customers with your market, not your website. Technology is a tool that gets out of the way when used right.
-      = link_to mobilizeart_case_study_path, :class => "a-case-study-button teal" do
+      = link_to mobilizeart_case_study_path, :class => "a-case-study-button mobilizeart" do
         View case study
-    #project-image.column.two
-      %h1#second-project-logo
+    .column    
+      = image_tag("mobilizeart_img.png")
 
-%div#third-project
-  .row
-    #project-image.column.two
-      %h1#third-project-logo
-    #third-project-description.column.two
+%article#featured-project.gigdog
+  %section.row
+    .column
+      = image_tag("gigdog_img.png")
+    #project-description.column
       %h3 Gigdog
       %h4 Why guess when you can test? Use our expertise to validate (or destroy) assumptions, making your site stronger along the way.
-      = link_to gigdog_case_study_path, :class => "a-case-study-button light-blue" do
+      = link_to gigdog_case_study_path, :class => "a-case-study-button gigdog" do
         View case study
 
-%div#fourth-project
-  .row
-    #fourth-project-description.column.two
+%article#featured-project.scheduleshare
+  %section.row
+    #project-description.column
       %h3 ScheduleShare
       %h4 A Coshx product for the masses. We love to build, and will care for your app as if it were one of our own.
-      = link_to case_study_path, :class => "a-case-study-button black" do
+      = link_to case_study_path, :class => "a-case-study-button scheduleshare" do
         View case study
-    #project-image.column.two
-      %h1#fourth-project-logo
+    .column
+      = image_tag("scheduleshare_img.png")
 
-%div#fifth-project
-  .row
-    #project-image.column.two
-      %h1#fifth-project-logo
-    #fifth-project-description.column.two
+%article#featured-project.textus
+  %section.row
+    .column
+      = image_tag("textus_img.png")
+    #project-description.column
       %h3 TextUs
       %h4 A Coshx product for the masses. We love to build, and will care for your app as if it were one of our own.
-      = link_to textus_case_study_path, :class => "a-case-study-button purple" do
+      = link_to textus_case_study_path, :class => "a-case-study-button textus" do
         View case study
+
 

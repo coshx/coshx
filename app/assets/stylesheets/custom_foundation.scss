@@ -32,15 +32,13 @@
 // let's fix it here:
 
 body { 
-	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; 
+	font-family: "Merriweather Sans", "Merriweather", sans-serif; 
 }
-
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td {
   margin:0;
   padding:0;
 }
-
 
 @import "foundation/common/forms";
 
@@ -53,11 +51,6 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td {
 @import "foundation/components/modules/reveal";
 
 
-
-/* Lists ---------------------- */
-ul, ol, dl { font-size: 14px; line-height: 1.6; margin-bottom: 15px; list-style-position: outside; }
-
-
 /* The Grid ---------------------- */
-.row { max-width: 1140px; width: 100%; min-width: 768px; margin: 0 auto; }
-.column { padding: 0 0px; }
+.row { max-width: 1140px; width: 100%; margin: 0 auto; }
+.column { padding: 0 0px; line-height: 0; }

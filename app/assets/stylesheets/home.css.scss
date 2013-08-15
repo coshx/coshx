@@ -1,144 +1,54 @@
 @import "common";
 
-.popover-content p {
-  font-size: 12px;
-}
-
 #mission-statement {
-  height: 550px;
+  height: 100%;
   width: 100%;
   background-color: #FFFFFF;
 
   h1 {
     font-size: 40px;
   }
+  h2 {
+    padding-bottom: 175px;
+  }
   .row {
     padding-top: 80px;
   }
 }
 
-#project-image {
-  width: 721px;
-  height: 370px;
-  padding: 0 0px;
-}
-
-#first-project {
-  height: 370px;
+#featured-project {
+  height: 100%;
   width: 100%;
-  background-color: $steel-gray;
 
   h3, h4 {
     color: $white;
   }
-}
-
-h1#first-project-logo {
-  background: image-url("closeoutbike_img.png") no-repeat;
-  width: 721px;
-  height: 295px;
-  position: absolute;
-  bottom: -14px;
-}
-
-#first-project-description{
-  margin-left: 10px;
-  margin-top: 80px;
-  width: 380px;
-}
-
-#second-project {
-  height: 370px;
-  width: 100%;
-  background-color: #75c6b2;
-
-  h3, h4 {
-    color: $white;
+  img {
+    padding-top: 75px;
   }
 }
 
-#second-project-description{
-  margin-top: 80px;
-  width: 330px;
-  padding: 0 0px;
+#featured-project.closeoutbike {
+  background-color: $closeoutbike-bg;
 }
 
-h1#second-project-logo {
-  background: image-url("mobilizeart_img.png") no-repeat;
-  width: 721px;
-  height: 295px;
-  position: absolute;
-  bottom: -14px;
+#featured-project.mobilizeart {
+  background-color: $mobilizeart-bg;
 }
 
-#third-project {
-  height: 370px;
-  width: 100%;
-  background-color: #164d67;
-
-  h3, h4 {
-    color: $white;
-  }
+#featured-project.gigdog {
+  background-color: $gigdog-bg;
 }
 
-h1#third-project-logo {
-  background: image-url("gigdog_img.png") no-repeat;
-  width: 721px;
-  height: 295px;
-  position: absolute;
-  bottom: -14px;
+#featured-project.scheduleshare {
+  background-color: $scheduleshare-bg;
 }
 
-#third-project-description {
-  margin-left: 10px;
-  margin-top: 80px;
-  width: 380px;
+#featured-project.textus {
+  background-color: $textus-bg;
 }
 
-#fourth-project {
-  height: 370px;
-  width: 100%;
-  background-color: #2c2c2c;
-
-  h3, h4 {
-    color: $white;
-  }
-}
-
-#fourth-project-description{
-  margin-top: 80px;
-  width: 330px;
-  padding: 0 0px;
-}
-
-h1#fourth-project-logo {
-  background: image-url("scheduleshare_img.png") no-repeat;
-  width: 721px;
-  height: 295px;
-  position: absolute;
-  bottom: -14px;
-}
-
-#fifth-project {
-  height: 370px;
-  width: 100%;
-  background-color: #922b8d;
-
-  h3, h4 {
-    color: $white;
-  }
-}
-
-h1#fifth-project-logo {
-  background: image-url("textus_img.png") no-repeat;
-  width: 721px;
-  height: 295px;
-  position: absolute;
-  bottom: -14px;
-}
-
-#fifth-project-description {
-  margin-left: 10px;
-  margin-top: 80px;
-  width: 380px;
+#project-description {
+  max-width: 380px;
+  padding-top: 80px;
 }
