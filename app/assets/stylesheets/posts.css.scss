@@ -21,7 +21,7 @@
 }
 
 #post-description {
-  width: 833px;
+  max-width: 833px;
   margin-left: auto;
   margin-right: auto;
   border-bottom: 1px solid #e3e1df;
@@ -64,9 +64,9 @@
 }
 
 #more-by-author {
-  height: 180px;
   padding-top: 55px;
-  width: 833px;
+  padding-bottom: 21px;
+  max-width: 833px;
   margin-left: auto;
   margin-right: auto;
 
@@ -81,7 +81,7 @@
 }
 
 #post-text {
-  width: 833px;
+  max-width: 833px;
   margin-left: auto;
   margin-right: auto;
   border-bottom: 1px solid #e3e1df;
