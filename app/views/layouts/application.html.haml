@@ -25,13 +25,13 @@
         = render "layouts/header"
       %div#content
         = yield
-
-    - unless (params[:controller] == 'posts' || params[:controller] == 'projects')
-      = render "layouts/site_links"
-    - unless (params[:controller] == 'posts' || current_page?('/contact'))
-      = render "layouts/together"
-    - if current_page?('/contact')
-      #footer-with-map
+    - unless (params[:controller] == 'errors')
+      - unless (params[:controller] == 'posts' || params[:controller] == 'projects')
+        = render "layouts/site_links"
+      - unless (params[:controller] == 'posts' || current_page?('/contact'))
+        = render "layouts/together"
+      - if current_page?('/contact')
+        #footer-with-map
+          = render "layouts/footer"
+      - else 
         = render "layouts/footer"
-    - else 
-      = render "layouts/footer"
