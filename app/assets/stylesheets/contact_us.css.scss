@@ -1,12 +1,11 @@
 @import "common";
 
 #contact-header {
-	height: 210px;
 	background-color: $grey-white;
 
 	h1 {
-		color: #535353;
 		margin-top: 80px;
+		padding-bottom: 62px;
 	}
 }
 
@@ -16,12 +15,12 @@
 	border-bottom: 1px solid #e9e9e9;
 
 	.row {
-		width: 833px;
+		max-width: 833px;
 		margin-left: auto;
 		margin-right: auto;
 
 		.five.columns {
-			width: 400px;
+			max-width: 400px;
 		}
 
 		.twelve.columns {
@@ -29,12 +28,8 @@
 		}
 	}
 
-	h3 {
-		color: #535353;
-	}
 	h4 {
-		color: $text-grey;
-		width: 500px;
+		max-width: 500px;
 		padding-bottom: 30px;
 	}
 
