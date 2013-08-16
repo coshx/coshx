@@ -19,6 +19,7 @@ Coshx::Application.routes.draw do
   get 'gigdog_case_study' => 'home#gigdog_case_study'
   get 'textus_case_study' => 'home#textus_case_study'
   get 'greeneggs_case_study' => 'home#greeneggs_case_study'
+  get 'scheduleshare_case_study' => 'home#scheduleshare_case_study'
 
   get 'case_study' => 'home#textus_case_study'
 
