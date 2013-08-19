@@ -1,12 +1,23 @@
-%p#notice= notice
+#tagline{:style => "background-color: #{@project.background_color}"}
+	.row
+		%h3 
+			= @project.tagline
+		= image_tag(@project.picture.to_s)
+%div#case-study-middle-row
 
-%p
-  %b Title:
-  = @project.title
-%p
-  %b Description:
-  = @project.description
+#case-study-steps
+	.row
+		%h3 The Product
+		%h4 
+			= @project.product_description
+	.row
+		%h3 The Project
+		%h4 
+			= @project.project_description
+	.row
+		%h3 The Results
+		%h4 
+			= @project.result_description
+	.row
+		= link_to "view the site", @project.url, :target => "_blank", :class => "btn blue center top-padding top-margin-small", :method => :get
 
-= link_to 'Edit', edit_project_path(@project)
-\|
-= link_to 'Back', projects_path
