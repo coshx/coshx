@@ -4,4 +4,21 @@ class Project < ActiveRecord::Base
 	mount_uploader :featured_picture, PictureUploader
 
   has_many :quotes
+
+
+  def permalink_attributes
+    {
+      :title => title.downcase.gsub(/[^\w\s]/, '').gsub(/\s+/, '-')
+    }
+  end
+
+  def self.build_permalink(params)
+    "#{params[:title]}"
+  end
+
+  private
+
+  def set_permalink
+    self.permalink = self.class.build_permalink permalink_attributes
+  end
 end

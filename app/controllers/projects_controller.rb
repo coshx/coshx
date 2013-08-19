@@ -4,8 +4,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = admin_signed_in? ? Project.all : Project.where(featured: true)
-    @projects << Project.new(:description => "your_project_here")
+    @projects = Project.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,7 +15,8 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
-    @project = Project.find(params[:id])
+    @project ||= Project.where(:permalink => Project.build_permalink(params)).first
+    raise ActiveRecord::RecordNotFound if @project.nil?
 
     respond_to do |format|
       format.html # show.html.erb
@@ -37,7 +37,8 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
-    @project = Project.find(params[:id])
+    @project ||= Project.where(:permalink => Project.build_permalink(params)).first
+    raise ActiveRecord::RecordNotFound if @project.nil?
   end
 
   # POST /projects

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130819142007) do
+ActiveRecord::Schema.define(:version => 20130819210547) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "",                                                                                                       :null => false
@@ -103,7 +103,10 @@ ActiveRecord::Schema.define(:version => 20130819142007) do
     t.string   "background_color"
     t.string   "featured_picture"
     t.string   "tagline"
+    t.string   "permalink"
   end
+
+  add_index "projects", ["permalink"], :name => "index_projects_on_permalink", :unique => true
 
   create_table "quotes", :force => true do |t|
     t.string   "text"

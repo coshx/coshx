@@ -23,6 +23,11 @@ Coshx::Application.routes.draw do
 
   get 'case_study' => 'home#textus_case_study'
 
+  get ':title' => 'projects#show', :as => :show_project
+  get ':title/edit' => 'projects#edit', :as => :edit_project
+
+
+
   devise_for :admins
 
   #admins urls
