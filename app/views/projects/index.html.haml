@@ -45,3 +45,7 @@
         %h3 View our Previous Site
         %h4 Branding, Design, Frontend, Backend
       = image_tag("old_site_result.png", :class => "website")
+
+.row 
+  - @projects.each do |p|
+    = link_to p.title, show_project_path(p.permalink_attributes)
