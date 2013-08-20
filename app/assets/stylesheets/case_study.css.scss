@@ -9,16 +9,39 @@
 
 	h3 {
 		color: #FFFFFF;
-	}
-
-	img {
-		margin-top: 50px;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		z-index: 2;
-		position: relative;
 	}	
+}
+
+#laptop_image {
+	margin-top: 50px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 2;
+	position: relative;
+}
+
+#page_arrow {
+	position: absolute;
+	bottom: 53%;
+
+	height: 53px;
+	width: 30px;
+}
+
+
+
+#page_arrow.prev {
+	left: 0;
+	background: image-url("previous_arrow.png");
+}
+#page_arrow.next {
+	right: 0;
+	background: image-url("next_arrow.png")
+}
+
+#page_arrow:hover {
+	background-position: 0px -53px;
 }
 
 #tagline.closeoutbikes {
