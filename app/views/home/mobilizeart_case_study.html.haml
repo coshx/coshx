@@ -1,7 +1,9 @@
 %div#tagline.mobilizeart
-	.row
+	.row{:style => "position: relative"}
 		%h3 Reimagine your relationship with art.
-		= image_tag("mobilizeart_laptop.png")
+		= image_tag ("mobilizeart_laptop.png"), :id => "laptop_image"
+		= link_to "", closeoutbikes_case_study_path, :id => "page_arrow", :class => "prev"
+		= link_to "", gigdog_case_study_path, :id => "page_arrow", :class => "next"
 %div#case-study-middle-row
 
 #case-study-steps

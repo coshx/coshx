@@ -1,7 +1,11 @@
 %div#tagline.closeoutbikes
-	.row
+	.row{:style => "position: relative"}
 		%h3 Your bicycle shopping gets easier!
-		= image_tag("closeoutbike_laptop.png")
+		= image_tag ("closeoutbike_laptop.png"), :id => "laptop_image"
+		= link_to "", textus_case_study_path, :id => "page_arrow", :class => "prev"
+		= link_to "", mobilizeart_case_study_path, :id => "page_arrow", :class => "next"
+
+
 %div#case-study-middle-row
 
 #case-study-steps
