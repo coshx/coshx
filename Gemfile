@@ -34,6 +34,9 @@ gem 'fog'
 #Social media is cool?
 gem "twitter"
 
+# Permalinks
+gem 'has_permalink'
+
 # Turbolinks!
 gem "turbolinks"
 
