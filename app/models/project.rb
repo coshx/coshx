@@ -3,6 +3,8 @@ class Project < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
 	mount_uploader :featured_picture, PictureUploader
 
+  validates_uniqueness_of :title
+
   has_many :quotes
 
 
