@@ -30,31 +30,6 @@
     .field
       = f.label :featured
       = f.check_box :featured
-      
-//  .row{:style => "padding-top: 50px"}
-//    .images
-//      %h3 Main picture for show page:
-//      = image_tag(@project.picture_url) if @project.picture?
-//      %br/
-//      = f.file_field :picture
-//      Remove picture
-//      = f.check_box :remove_picture
-//  .row{:style => "padding-top: 50px"}
-//    .images
-//      %h3 Featured image for home page:
-//      = image_tag(@project.featured_picture_url) if @project.featured_picture?
-//      %br/
-//      = f.file_field :featured_picture
-//      Remove picture
-//      = f.check_box :remove_picture
-//  .row{:style => "padding-top: 50px"}
-//    .images
-//      %h3 Image for projects index page:
-//      = image_tag(@project.index_picture_url) if @project.index_picture?
-//      %br/
-//      = f.file_field :index_picture
-//      Remove picture
-//      = f.check_box :remove_picture
   .row{:style => "padding-top: 50px"}
     %h3 Save Project:
     .actions
