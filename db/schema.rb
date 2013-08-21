@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130821191926) do
+ActiveRecord::Schema.define(:version => 20130821210801) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "",                                                                                                       :null => false
@@ -102,6 +102,7 @@ ActiveRecord::Schema.define(:version => 20130821191926) do
     t.string   "tagline"
     t.string   "permalink"
     t.string   "index_picture"
+    t.boolean  "link_disabled"
   end
 
   add_index "projects", ["permalink"], :name => "index_projects_on_permalink", :unique => true
