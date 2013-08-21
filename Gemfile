@@ -35,6 +35,9 @@ gem 'fog'
 gem "twitter"
 gem "twitter-text"
 
+# Permalinks
+gem 'has_permalink'
+
 # Turbolinks!
 gem "turbolinks"
 
