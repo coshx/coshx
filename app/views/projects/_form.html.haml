@@ -47,6 +47,14 @@
       Remove picture
       = f.check_box :remove_picture
   .row{:style => "padding-top: 50px"}
+    .images
+      %h3 Image for projects index page:
+      = image_tag(@project.index_picture_url) if @project.index_picture?
+      %br/
+      = f.file_field :index_picture
+      Remove picture
+      = f.check_box :remove_picture
+  .row{:style => "padding-top: 50px"}
     %h3 Save Project:
     .actions
       = f.submit 'Save Project'

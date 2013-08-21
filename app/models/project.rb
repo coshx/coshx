@@ -1,7 +1,8 @@
 class Project < ActiveRecord::Base
-  attr_accessible :title, :tagline, :product_description, :project_description, :result_description, :picture, :url, :featured_picture, :background_color
+  attr_accessible :title, :tagline, :product_description, :project_description, :result_description, :picture, :url, :featured_picture, :index_picture, :background_color
   mount_uploader :picture, PictureUploader
 	mount_uploader :featured_picture, PictureUploader
+  mount_uploader :index_picture, PictureUploader
 
   validates_uniqueness_of :title
 
