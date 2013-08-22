@@ -10,6 +10,11 @@ Coshx::Application.routes.draw do
   resources :quotes
   resources :projects
 
+  scope "/blog" do
+    get ':year/:month/:day/:title' => 'posts#show',  :as => :show_post
+    get '(/:year(/:month(/:day)))' => 'posts#index', :as => :blog_posts
+  end
+
   get 'get_random_quote' => 'quotes#get_random_quote'
   get 'generate_slugs' => 'admins#generate_slugs'
   get 'thank_you' => 'messages#thank_you'
@@ -39,10 +44,7 @@ Coshx::Application.routes.draw do
   get 'dashboard' => 'dashboard#index', :as => :admin_root
   get '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
 
-  scope "/blog" do
-    get ':year/:month/:day/:title' => 'posts#show',  :as => :show_post
-    get '(/:year(/:month(/:day)))' => 'posts#index', :as => :blog_posts
-  end
+
 
   resources :posts, :except => [:index, :destroy] do
     put 'publish', :on => :member
