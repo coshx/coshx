@@ -1,5 +1,7 @@
 #tagline{:style => "background-color: #{@project.background_color}"}
 	.row{:style => "position: relative"}
+		- if admin_signed_in?
+			= link_to "Edit", edit_project_path(@project)
 		%h3 
 			= @project.tagline
 		= image_tag (@project.picture.to_s), :id => "laptop_image"

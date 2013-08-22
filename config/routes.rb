@@ -29,11 +29,6 @@ Coshx::Application.routes.draw do
 
   get 'case_study' => 'home#textus_case_study'
 
-  get ':title' => 'projects#show', :as => :show_project
-  get ':title/edit' => 'projects#edit', :as => :edit_project
-
-
-
   devise_for :admins
 
   #admins urls
@@ -61,4 +56,7 @@ Coshx::Application.routes.draw do
   root :to => 'home#index'
 
   match '/404', :to => 'errors#not_found'
+
+  get 'projects/:title' => 'projects#show', :as => :show_project
+  get 'projects/:title/edit' => 'projects#edit', :as => :edit_project
 end
