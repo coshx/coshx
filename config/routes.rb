@@ -13,6 +13,7 @@ Coshx::Application.routes.draw do
   get 'get_random_quote' => 'quotes#get_random_quote'
   get 'generate_slugs' => 'admins#generate_slugs'
   get 'thank_you' => 'messages#thank_you'
+  get 'about' => 'home#about'
   get 'contact' => 'home#contact_us'
   get 'closeoutbikes_case_study' => 'home#closeoutbikes_case_study'
   get 'mobilizeart_case_study' => 'home#mobilizeart_case_study'
@@ -52,7 +53,6 @@ Coshx::Application.routes.draw do
   end
 
   get '/services' => 'home#services', :as => :services
-  get '/about' => 'home#about', :as => :about
 
   mount Contenteditable::Engine => "/contenteditable"
 
