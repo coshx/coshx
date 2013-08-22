@@ -7,35 +7,35 @@
     %h4 We have a solid track record of delivering great results - on time and on budget. Here are just a few of our recent wins.
   .row
     #closeoutbike-box.column.five
-      %a#darken-box{:href => closeoutbikes_case_study_path}
+      %a#darken-box{:href => "projects/closeoutbike"}
         %h3 CloseoutBike
         %h4 UI, UX & Branding
       = image_tag("closeoutbike_result.png")
 
     #mobilizeart-box.column.five
-      %a#darken-box{:href => mobilizeart_case_study_path}
+      %a#darken-box{:href => "projects/mobilizeart"}
         %h3 MobilizeArt
         %h4 Design & Frontend
       = image_tag("mobilizeart_result.png")
   .row
     #gigdog-box.column.five
-      %a#darken-box{:href => gigdog_case_study_path}
+      %a#darken-box{:href => "projects/gigdog"}
         %h3 Gigdog
         %h4 Design, Frontend & Backend    
       = image_tag("gigdog_result.png")
     #greeneggs-box.column.five
-      %a#darken-box{:href => greeneggs_case_study_path}
+      %a#darken-box{:href => "projects/greeneggs"}
         %h3 GreenEggs
         %h4 Design, Frontend & Backend
       = image_tag("greeneggs_result.png")
   .row
     #textus-box.column.five
-      %a#darken-box{:href => textus_case_study_path}
+      %a#darken-box{:href => "projects/textus"}
         %h3 TextUs
         %h4 Backend
       = image_tag("textus_result.png")
     #scheduleshare-box.column.five
-      %a#darken-box{:href => scheduleshare_case_study_path}
+      %a#darken-box{:href => "projects/scheduleshare"}
         %h3 ScheduleShare
         %h4 Design, Frontend & Backend
       = image_tag("scheduleshare_result.png")
@@ -45,7 +45,3 @@
         %h3 View our Previous Site
         %h4 Branding, Design, Frontend, Backend
       = image_tag("old_site_result.png", :class => "website")
-
-  .row
-    - @projects.each do |project|
-      =link_to project.title, project
