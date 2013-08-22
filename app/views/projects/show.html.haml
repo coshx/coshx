@@ -1,8 +1,10 @@
 #tagline{:style => "background-color: #{@project.background_color}"}
-	.row
+	.row{:style => "position: relative"}
 		%h3 
 			= @project.tagline
 		= image_tag (@project.picture.to_s), :id => "laptop_image"
+		= link_to "", @project.previous, :id => "page_arrow", :class => "prev"
+		= link_to "", @project.next, :id => "page_arrow", :class => "next"
 %div#case-study-middle-row
 
 #case-study-steps

@@ -24,6 +24,24 @@ class Project < ActiveRecord::Base
     "#{params[:title]}"
   end
 
+  def previous()
+    prev_projects = Project.where("id < ?", self.id)
+    if prev_projects.any?
+      return prev_projects.order("id desc").first
+    else 
+      return Project.order("id desc").first
+    end
+  end
+
+  def next()
+    next_projects = Project.where("id > ?", self.id)
+    if next_projects.any?
+      return next_projects.order("id asc").first
+    else 
+      return Project.order("id asc").first
+    end
+  end
+
   private
 
   def set_permalink
