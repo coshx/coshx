@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   include ActionView::Helpers::DateHelper
   include Twitter::Autolink
 
-  contenteditable_filter "admin_signed_in?"
+  # contenteditable_filter "admin_signed_in?"
 
   helper_method :last_three_posts, :random_quote, :whereami, :contents
 

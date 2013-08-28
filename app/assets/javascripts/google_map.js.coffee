@@ -1,5 +1,6 @@
 initialize = ->
   map_canvas = document.getElementById("map-canvas")
+  return unless map_canvas
   map_options =
     center: new google.maps.LatLng(36.0403, -100.5463)
     zoom: 5
@@ -42,4 +43,4 @@ initialize = ->
   )	
 
 
-google.maps.event.addDomListener window, "load", initialize
+google.maps.event.addDomListener document, "page:load", initialize

@@ -43,7 +43,7 @@ Coshx::Application.routes.draw do
 
   get '/services' => 'home#services', :as => :services
 
-  mount Contenteditable::Engine => "/contenteditable"
+  # mount Contenteditable::Engine => "/contenteditable"
 
   root :to => 'home#index'
 

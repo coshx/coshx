@@ -1,6 +1,4 @@
-
 # -*- coding: utf-8 -*-
-require 'contenteditable'
 
 #ADMINS
 
@@ -34,18 +32,13 @@ post = Post.find_or_create_by_title('First Post') do |post|
 ```ruby
   class DemoClass
     def demo_method
-      [:world,:darkness,:nurse].each{ |n| puts "Hello, #{n}"}
+      [:world,:darkness,:nurse].each{ |n| puts "Hello, #\{n\}"}
     end
   end
 ```
 EOF
 end
 
-posts.each do |p|
-  puts "Publishing post '#{p.title}'"
-  post_date = p.posted_on
-  p.publish
-  p.posted_on = post_date
-  p.save!
-end
-
+puts "Publishing Demo Post"
+post.publish
+post.save!

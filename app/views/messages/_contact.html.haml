@@ -19,10 +19,3 @@
       .link
         %a.btn.blue.center.top-margin-small.submit-link{:href => '#'}
           ="Let's get started".html_safe
-:javascript
-$(document).ready(function() {
-  $(".submit-link").click(function (e) {
-      e.preventDefault();
-      if (validate_contact()==1) $("#contact-form").submit();
-    });
-})

@@ -41,16 +41,13 @@ gem 'has_permalink'
 # Turbolinks!
 gem "turbolinks"
 
-# caching
-gem 'redis'
-
 gem 'i18n-active_record',
     :git => 'git://github.com/svenfuchs/i18n-active_record.git',
     :branch => 'rails-3.2',
     :require => 'i18n/active_record'
 
 # lightweight I18n frontend
-gem 'contenteditable', :github => 'micmmakarov/contenteditable', :branch => 'master'
+# gem 'contenteditable', :github => 'micmmakarov/contenteditable', :branch => 'master'
 
 # sass mixin library
 gem 'bourbon'
@@ -75,6 +72,7 @@ group :development do
   gem "pry"
   gem "pry-nav"
   gem 'better_errors'
+  gem 'meta_request'
 end
 
 group :development, :test do

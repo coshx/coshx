@@ -63,15 +63,8 @@
   .row
     #team-header
       %h3 Meet Your Team
-      %h4 We're a purposefully small, highly driven team that takes pride in our work - each one of us brings something unique to your project. 
-  .row#team-row
-    - @coshx_folks[0..5].each do |person, a|
-      .column.two
-        = render "team_member", :person => person
-  .row#team-row
-    - @coshx_folks[6..11].each do |person, a|
-      .column.two
-        = render "team_member", :person => person
+      %h4 We're a purposefully small, highly driven team that takes pride in our work - each one of us brings something unique to your project.
+  = render_team
 %div#how-we-work
   .row
     #circle-white
