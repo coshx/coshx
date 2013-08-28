@@ -20,14 +20,6 @@ Coshx::Application.routes.draw do
   get 'thank_you' => 'messages#thank_you'
   get 'about' => 'home#about'
   get 'contact' => 'home#contact_us'
-  get 'closeoutbikes_case_study' => 'home#closeoutbikes_case_study'
-  get 'mobilizeart_case_study' => 'home#mobilizeart_case_study'
-  get 'gigdog_case_study' => 'home#gigdog_case_study'
-  get 'textus_case_study' => 'home#textus_case_study'
-  get 'greeneggs_case_study' => 'home#greeneggs_case_study'
-  get 'scheduleshare_case_study' => 'home#scheduleshare_case_study'
-
-  get 'case_study' => 'home#textus_case_study'
 
   devise_for :admins
 
