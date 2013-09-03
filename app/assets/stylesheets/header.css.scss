@@ -23,6 +23,15 @@
   }
 }
 
+nav select {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  nav ul     { display: none; }
+  nav select { display: inline-block; }
+}
+
 nav ul {
   float: right;
   margin-top: 53px;
