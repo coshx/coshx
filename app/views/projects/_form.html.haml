@@ -5,25 +5,35 @@
       %ul
         - @project.errors.full_messages.each do |msg|
           %li= msg
-
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :url
-    = f.text_field :url
-  .field
-    = f.label :description
-    = f.text_area :description
-  .field
-    = f.label :featured
-    = f.check_box :featured
-  .images
-    = image_tag(@project.picture_url) if @project.picture?
-    = f.file_field :picture
-    Remove picture
-    = f.check_box :remove_picture
-  .actions
-    = f.submit 'Save'
-
-= render :partial => 'quotes/list', :locals => {:project => @project}
+  .row
+    .field
+      = f.label :title
+      = f.text_field :title
+    .field
+      = f.label :tagline
+      = f.text_field :tagline
+    .field
+      = f.label :url
+      = f.text_field :url
+    .field
+      = f.label :background_color
+      = f.text_field :background_color
+    .field
+      = f.label :product_description
+      = f.text_area :product_description
+    .field
+      = f.label :project_description
+      = f.text_area :project_description
+    .field
+      = f.label :result_description
+      = f.text_area :result_description
+    .field
+      = f.label :featured
+      = f.check_box :featured
+    .field
+      = f.label :link_disabled
+      = f.check_box :link_disabled
+  .row{:style => "padding-top: 50px"}
+    %h3 Save Project:
+    .actions
+      = f.submit 'Save Project'

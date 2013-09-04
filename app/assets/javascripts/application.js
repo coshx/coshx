@@ -11,5 +11,5 @@
 //= require_tree
 //= require foundation
 //= require foundation/app
-//= require contenteditable/contenteditable
+//x require contenteditable/contenteditable
 //= require turbolinks

@@ -7,12 +7,12 @@ class PostsController < ApplicationController
   def index
     @body_class = :split
     @posts = if params[:year].present?
-               Post.where "permalink LIKE '#{Post.build_like_permalink params}'"
+               Post.where("permalink LIKE '#{Post.build_like_permalink params}'").page(params[:page])
              elsif admin_signed_in?
-               Post.where({})
+               Post.where({}).page(params[:page])
              else
-               Post.published
-             end.page params[:page]
+               Post.published.page(params[:page])
+             end.page(params[:page]).per(4)
   end
 
   def new

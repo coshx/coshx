@@ -4,10 +4,9 @@ class ApplicationController < ActionController::Base
   include ActionView::Helpers::DateHelper
   include Twitter::Autolink
 
-  contenteditable_filter "admin_signed_in?"
+  # contenteditable_filter "admin_signed_in?"
 
-  helper_method :last_two_posts, :random_quote, :whereami, :contents, 
-    :latest_tweet, :formatted_tweet, :tweet_url, :relative_tweet_date
+  helper_method :last_three_posts, :random_quote, :whereami, :contents
 
   around_filter :catch_exceptions
 
@@ -15,8 +14,8 @@ class ApplicationController < ActionController::Base
     Content.all
   end
 
-  def last_two_posts
-    @last_two_posts ||= Post.published.limit(2)
+  def last_three_posts
+    @last_three_posts ||= Post.published.limit(3)
   end
 
   def random_quote

@@ -1,90 +1,38 @@
 %footer.container
-  %div.row.footer-content
-    %a.footer-gotop-ribbon{:href => '#top', :id => "top-nav"}
-    %h2.blogpost Latest blog posts
-    -unless last_two_posts[0].nil? && last_two_posts[1].nil?
-      #latest-blogs.row
-        - last_two_posts.each do |post|
-          .six.column.post
-            .row
-              .three.columns.fourfoot.mobile-one
-                %div.post_pic(style="width:74px;height:74px;background:url(#{Gravatar.new(post.author.email).image_url(:size => 74)});border-radius:100px;border: 4px solid white;")
-                %span.post-info
-                  = (post.author.deleted_at.nil?) ? link_to(post.author.name, post.author.url) : post.author.name
-                  %br/
-                  = post.posted_on.strftime("%B %e, %Y")
-                %div.small-line
-              .content.nine.columns.mobile-three
-                %h2
-                  = link_to post.title, show_post_path(post.permalink_attributes)
-                %div
-                  = preserve post.preview_html.html_safe
-                .links
-                  = link_to "Read more", show_post_path(post.permalink_attributes), :class => "read-more"
-                  |
-                  %a.comments{:href => show_post_path(post.permalink_attributes.merge(:anchor => 'disqus_thread'))}
+  .row#footer-info
+    #footer-logo.column.three
+      = link_to image_tag("logo_grey.png"), root_path
+    #location.column.two
+      %h3 Boulder <br><br>
+      %h4 3080 Valmont Rd Suite 280
+      %h4 Boulder, CO 80301 <br><br>
+      %h5 info@coshx.com
+    #location.column.two
+      %h3 Charlottesville <br><br>
+      %h4 1110 East Market St Suite N7
+      %h4 Charlottesville, VA 22902 <br><br>
+      %h5 info@coshx.com
+    #location.column.two
+      %h3 San Francisco <br><br>
+      %h4 972 Mission Street, 5th Floor
+      %h4 San Francisco, CA 94103 <br><br>
+      %h5 info@coshx.com
+    #location.column.two
+      %h3 Austin <br><br>
+      %h4 701 Brazos St, Suite 1601
+      %h4 Austin, TX 78701 <br><br>
+      %h5 info@coshx.com
+    #social.column.one
+      %h3 Social 
+      = link_to image_tag("footer-twitter.png"), "http://www.twitter.com/coshxlabs"
+      = link_to image_tag("footer-facebook.png"), "http://www.facebook.com/coshxlabs"
+  .row#copyright
+    .column.four
+      %h3 Copyright © 2013. All rights reserved
+    .column.one
+      = image_tag("footer_arrow.png")
+      = link_to "Back to top", "#", :class => "scrollup"
 
-    - cache("tweets", :expires_in => 5.minutes) do
-      .row
-        .star-header#footer-tweet
-          %h2 Last tweet
-          %p#tweet-box
-            %span #{formatted_tweet.html_safe}
-            %br/
-            %br/
-            .days
-              -unless latest_tweet.user.screen_name == "system_error"
-                = link_to relative_tweet_date, tweet_url, :target => "_blank"
-          = link_to "https://www.twitter.com/coshxlabs", :class => "a-button darkblue" do
-            Follow Us
-    
-
-    %h2.contact-heading
-      Shoot us an email at
-      = link_to "info@coshx.com", "mailto:info@coshx.com"
-    %div.contact-details.row
-      .three.columns.fourfoot
-        %strong Boulder
-        %br/
-        3080 Valmont Rd Suite 280
-        %br/
-        Boulder, CO 80301
-      .three.columns.fourfoot
-        %strong Charlottesville
-        %br/
-        1110 Market St East Suite N7
-        %br/
-        Charlottesville, VA 22902
-      .three.columns.fourfoot
-        %strong San Francisco
-        %br/
-        972 Mission Street, 5th Floor
-        %br/
-        San Francisco, CA 94103
-        %br/
-      .three.columns.fourfoot
-        %strong Austin
-        %br/
-        701 Brazos St, Suite 1601
-        %br/
-        Austin, TX 78701
-
-      .three.columns.fourfoot
-        CONSIDERING COSHX FOR
-        %br/
-        YOUR NEXT PROJECT?<br>
-        = link_to contact_path(:anchor => "quote"), :class => "the-button" do
-          Get a Proposal
-    .footer-bottom
-      %span.copy Copyright © 2012 Coshx Labs. All rights reserved
-      \•
-      %span.links
-        %a{:href => root_path} Home
-        |
-        %a{:href => about_path} About
-        |
-        %a{:href => projects_path} Projects
-        |
-        %a{:href => services_path} Services
-        |
-        = link_to "Contact", contact_path
+- if current_page?('/contact')
+  #map-container
+    #map-canvas

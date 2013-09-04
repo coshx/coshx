@@ -19,7 +19,7 @@ Feature: Admin blog post functionality
     And I press "Save"
     Then I should be on the dashboard page
     When I go to the blogs page
-    Then I should see "Blog"
+    Then I should see "Log book"
     And I should see "post title"
     When I follow "post title"
     Then I should be on the "post title" blog page

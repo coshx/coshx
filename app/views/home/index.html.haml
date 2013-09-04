@@ -1,50 +1,54 @@
-= render :partial => "home/slider"
+#mission-statement
+  .row
+    %h1 We take the stress out of web and mobile development
+    %h2 by using our digital expertise and business experience to craft the right application for you and your users.  Let’s build something together.  
 
-.divider.homepage
+#featured-project.closeoutbike
+  .row
+    #project-description.column.float-right
+      %h3 CloseoutBike
+      %h4 We practice perfect simplicity, crafting designs that fulfill the needs of your users, without wasting anyone's time or money.
+      = link_to "projects/closeoutbike", :class => "a-case-study-button closeoutbike" do
+        View case study
+    .column.float-left
+      = image_tag("closeoutbike_img.png")
 
-%div#features.row
-  %div.feature.four.columns
-    = image_tag "people.png", :class => :people
-    = render :partial => "coshx_blue_x", :locals => {:feature => "COMPANY"}
-    = ceditable "company_overview", "p"
-    = link_to about_path, :class => "a-button" do
-      About Us
-  %div.feature.four.columns
-    = image_tag "services.png", :class => :gears
-    = render :partial => "coshx_blue_x", :locals => {:feature => "SERVICES"}
-    = ceditable "services_overview", "p"
-    = link_to services_path, :class => "a-button" do
-      Our Services
-  %div.feature.four.columns
-    = image_tag "projects.png", :class => :beaker
-    = render :partial => "coshx_blue_x", :locals => {:feature => "PROJECTS"}
-    = ceditable "projects_overview", "p"
-    = link_to projects_path, :class => "a-button" do
-      Our Projects
+#featured-project.mobilizeart
+  .row
+    #project-description.column
+      %h3 MobilizeArt
+      %h4 Connect your customers with your market, not your website. Technology is a tool that gets out of the way when used right.
+      = link_to "projects/mobilizeart", :class => "a-case-study-button mobilizeart" do
+        View case study
+    .column
+      = image_tag("mobilizeart_img.png")
 
-.divider
+#featured-project.gigdog
+  .row
+    #project-description.column.float-right
+      %h3 Gigdog
+      %h4 Why guess when you can test? Use our expertise to validate (or destroy) assumptions, making your site stronger along the way.
+      = link_to "projects/gigdog", :class => "a-case-study-button gigdog" do
+        View case study
+    .column.float-left
+      = image_tag("gigdog_img.png")
 
-%section#contact-us
-  = image_tag "mail.png"
-  = ceditable "frontpage_contact_header", "h2"
+#featured-project.scheduleshare
+  .row
+    #project-description.column
+      %h3 ScheduleShare
+      %h4 A Coshx product for the masses. We love to build, and will care for your app as if it were one of our own.
+      = link_to "projects/scheduleshare", :class => "a-case-study-button scheduleshare" do
+        View case study
+    .column
+      = image_tag("scheduleshare_img.png")
 
-  = ceditable "frontpage_contact_text", "p"
-
-  = link_to contact_path, :class => ["first", "a-button"] do
-    Contact Us
-
-  = link_to contact_path(:anchor => "quote"), :class => "a-button white" do
-    Request a FREE Quote
-
-
-= render :partial => "projects/list", :locals => {:featured_projects => @featured_projects}
-
-.divider
-
-= render 'get_a_proposal'
-
-.divider
-
-
-
-
+#featured-project.textus
+  .row
+    #project-description.column.float-right
+      %h3 TextUs
+      %h4 The simplest solutions are often the best, and we will work to implement them while keeping costs low.
+      = link_to "projects/textus", :class => "a-case-study-button textus" do
+        View case study
+    .column.float-left
+      = image_tag("textus_img.png")

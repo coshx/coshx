@@ -13,7 +13,7 @@ class Post < ActiveRecord::Base
   before_save :set_permalink
   after_update :send_tweet
 
-  def author
+  def author 
     Admin.unscoped.where(id: author_id).first
   end
 

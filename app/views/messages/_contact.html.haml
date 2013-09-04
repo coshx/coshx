@@ -5,37 +5,17 @@
       %ul
         - @message.errors.full_messages.each do |msg|
           %li= msg
-  .row.name
-    .six.columns
+  .row
+    .five.columns
       .text-field
-        = f.label :name
-        = f.text_field :name
-    .six.columns
-      .field-comment.hidden
-        .arrow-left
-        .text Tell me your name, sir
-
-  .row.email
-    .six.columns
+        = f.text_field :name, :placeholder => "Your name"
+    .five.columns
       .text-field
-        = f.label :email
-        = f.email_field :email
-    .six.columns
-      .field-comment.hidden
-        .arrow-left
-        .text We cant go without your email
+        = f.email_field :email, :placeholder => "Email address"
   .row
     .twelve.columns
       .long-field
-        = f.label :text
-        = f.text_area :text
+        = f.text_area :text, :placeholder => "Tell us about your project or send us a simple hello..."
       .link
-        %a.a-button.darkblue.submit-link{:href => '#'}
-          ='Send mail'.html_safe
-:javascript
-$(document).ready(function() {
-  $(".submit-link").click(function (e) {
-      e.preventDefault();
-      if (validate_contact()==1) $("#contact-form").submit();
-    });
-})
+        %a.btn.blue.center.top-margin-small.submit-link{:href => '#'}
+          ="Let's get started".html_safe

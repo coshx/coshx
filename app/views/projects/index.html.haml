@@ -1,19 +1,42 @@
-%div.featured_projects
-  - rowify(@projects, 3).each_with_index do |projects, row_num|
-    .row
-      - projects.each_with_index do |p, i|
-        %div.four.columns
-          =render :partial => "project", :locals => {:row=> row_num, :p => p, :i => i} if (row_num*3+i) < (@projects.length-1)
-          =render :partial => "your_project" if (row_num*3+i) == (@projects.length-1)
+#results-header
+  .row
+    %h1 Simple is better than complex.
+#recent-work
+  #our-work-text.row
+    %h3 Recent Work
+    %h4 We have a solid track record of delivering great results - on time and on budget. Here are just a few of our recent wins.
+  .row
+    #closeoutbike-box.column.five
+      %a#darken-box{:href => "projects/closeoutbike"}
+        %h3 CloseoutBike
+        %h4 UI, UX & Branding
+      = image_tag("closeoutbike_result.png")
 
-
-- if admin_signed_in?
-  = link_to 'New Project', new_project_path, :class => "large blue button"
-
-%section#testimonials.row
-  %header.divider
-    %h2 Testimonials
-    = link_to " ", "/get_random_quote", :remote => true, :class => "test-nav next"
-    = link_to " ", "/get_random_quote", :remote => true, :class => "test-nav prev"
-
-  = render :partial => "quotes/random_quote", :locals => {:random_quote => random_quote}
+    #mobilizeart-box.column.five
+      %a#darken-box{:href => "projects/mobilizeart"}
+        %h3 MobilizeArt
+        %h4 Design & Frontend
+      = image_tag("mobilizeart_result.png")
+  .row
+    #gigdog-box.column.five
+      %a#darken-box{:href => "projects/gigdog"}
+        %h3 Gigdog
+        %h4 Design, Frontend & Backend    
+      = image_tag("gigdog_result.png")
+    #greeneggs-box.column.five
+      %a#darken-box{:href => "projects/greeneggs"}
+        %h3 GreenEggs
+        %h4 Design, Frontend & Backend
+      = image_tag("greeneggs_result.png")
+  .row
+    #textus-box.column.five
+      %a#darken-box{:href => "projects/textus"}
+        %h3 TextUs
+        %h4 Backend
+      = image_tag("textus_result.png")
+    #scheduleshare-box.column.five
+      %a#darken-box{:href => "projects/scheduleshare"}
+        %h3 ScheduleShare
+        %h4 Design, Frontend & Backend
+      = image_tag("scheduleshare_result.png")
+      

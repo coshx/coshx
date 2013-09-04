@@ -1,28 +1,9 @@
-= ceditable "contact page title", "h1", :class => "centre"
-= ceditable "contact page text", "p", :class => "graytext centre"
-
-.short-white-line
-
-%dl.tabs.message-tabs
-  %dd.active.left-tab
-    %a{:href => "#quote"}
-      %h5 REQUEST A QUOTE
-      %p I need help building something awesome
-  %dd.right-tab
-    %a{:href => "#contact"}
-      %h5 CONTACT US
-      %p Just saying "Hi!"
-
-="</div></div>".html_safe
-.container.bluu
+#contact-header
   .row
-    %ul.tabs-content
-      %li.active#quoteTab
-        =render :partial => "messages/quote"
-      %li#contactTab
-        =render :partial => "messages/contact"
-
-="<div class='container'><div class='row with_maps'>".html_safe
-
-=render "maps"
+    %h1 Interested in hiring us?
+#contact-body
+  .row
+    %h3 Let's start the conversation.  
+    #contactTab
+      =render :partial => "messages/contact"
 

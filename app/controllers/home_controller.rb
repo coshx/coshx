@@ -13,7 +13,7 @@ class HomeController < ApplicationController
   def blog; end
 
   def about
-    @coshx_folks = Admin.order :name
+    @team = Admin.order :last_name
   end
 
   def profile
