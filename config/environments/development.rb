@@ -28,7 +28,4 @@ Coshx::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  # Set Redis URL
-  ENV["REDISTOGO_URL"] = 'redis://redistogo:9456d6d4c8ae2ca7478523d20e7cea2d@crestfish.redistogo.com:9362/'
-  
 end

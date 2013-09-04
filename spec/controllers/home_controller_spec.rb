@@ -13,7 +13,7 @@ describe HomeController do
   describe "GET :about" do
     it "queries for admins" do
       get :about
-      admins = assigns :coshx_folks
+      admins = assigns :team
       admins.to_sql.should == 'SELECT "admins".* FROM "admins"  WHERE "admins"."deleted_at" IS NULL ORDER BY last_name'
     end
   end

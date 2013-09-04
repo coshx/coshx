@@ -50,6 +50,4 @@ Coshx::Application.routes.draw do
 
   match '/404', :to => 'errors#not_found'
 
-  get 'projects/:title' => 'projects#show', :as => :show_project
-  get 'projects/:title/edit' => 'projects#edit', :as => :edit_project
 end
