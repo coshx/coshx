@@ -4,6 +4,10 @@ module ApplicationHelper
     (@body_class || :default).to_s
   end
 
+  def active_tab(path)
+    request.path.match(/^#{path}/) ? { :class => 'active' } : {}
+  end
+
   #This does not support blocks like link_to does(cause who uses that...)
   def tab_to(*args)
     name         = args[0]

@@ -1,5 +1,4 @@
 class HomeController < ApplicationController
-  caches_page :services
 
   def index
     @featured_projects = Project.find(:all, :limit => 3, :order=> 'created_at desc')
@@ -14,7 +13,7 @@ class HomeController < ApplicationController
   def blog; end
 
   def about
-    @coshx_folks = Admin.order :name
+    @team = Admin.order :last_name
   end
 
   def profile

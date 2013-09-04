@@ -64,6 +64,8 @@ module Coshx
       g.fixture_replacement :factory_girl, :dir => 'spec/factories'
     end
 
+    config.exceptions_app = self.routes
+
     #overrides
     db_overrides_file = 'config/database.overrides.yml'
     self.paths['config/database'] = db_overrides_file if File.exist?(db_overrides_file)

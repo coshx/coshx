@@ -41,14 +41,22 @@ describe ProjectsController do
       project = Project.create! valid_attributes
       get :index
 
-      assigns(:projects).size.should ==(2)
+      assigns(:projects).size.should == 1
     end
   end
 
   describe "GET show" do
     it "assigns the requested project as @project" do
       project = Project.create! valid_attributes
-      get :show, {:id => project.to_param}
+      get :show, {:id => project.id}
+      assigns(:project).should eq(project)
+    end
+  end
+
+  describe "GET show with permalink" do
+    it "assigns the requested project as @project" do
+      project = Project.create! valid_attributes
+      get :show, {:id => project.permalink}
       assigns(:project).should eq(project)
     end
   end
@@ -89,7 +97,7 @@ describe ProjectsController do
       it "redirects to the created project" do
         sign_in admin
         post :create, {:project => valid_attributes}
-        response.should redirect_to(Project.last)
+        response.should redirect_to(project_path(Project.last.id))
       end
     end
 
@@ -136,7 +144,7 @@ describe ProjectsController do
         sign_in admin
         project = Project.create! valid_attributes
         put :update, {:id => project.to_param, :project => valid_attributes}
-        response.should redirect_to(project)
+        response.should redirect_to(project_path(project.id))
       end
     end
 

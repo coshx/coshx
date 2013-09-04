@@ -1,134 +1,111 @@
 @import "common";
 @import "bourbon";
 
-.post-box {
-  @include box-sizing(border-box);
+.all-posts {
 
-  width: 230px;
-  margin: 10px;
-  padding: 15px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1) inset;
-  background: $bright-blue;
-}
+  background: $grey-white;
 
-.all_posts {
-  list-style-type: none;
-  position: relative;
-  margin: 0;
-
-  li:first-child {
-    background: white;
-  }
-}
-
-.post-comments {
-  padding: 30px 50px 0px 50px;
-  color: $off-white;
   h3 {
-    font-size: 16px;
+    font-size: 42px;
+    a {
+      color: $dark-grey;
+    }
   }
-}
-
-.post-content {
-  font: 14px/24px "Droid Serif", serif;
-  color: white;
-  margin-top: 20px;
-    p, ul {
-    margin-bottom: 30px;
-    font-size: 16px;
-  }
-  code {
-    background: transparent;
-  }
-
-  ul {
-    margin-left: 16px;
-    color: $off-white;
-    list-style-type: circle;
-
-    li {
-      font: 14px/24px "Droid Serif", serif;
-      font-size: 16px;
-      padding: 10px;
+  h2 {
+    text-align: left;
+    font-size: 22px;
+    a {
+      color: #38A8CC;
     }
   }
 }
 
-.post-show .post-description {
-  font: bold 12px 'PT Sans', sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  color: $gray;
-  margin-bottom: 20px;
-  display: block;
-  border-right: 1px solid $medium-gray;
-  min-height:300px;
+#post-description {
+  max-width: 833px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #e3e1df;
+  padding-top: 70px;
+  padding-bottom: 50px;
 }
 
-.post-show .post-description span a {
-  font: bold 12px 'PT Sans', sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  color: $dark-blue;
+.post-content {
+  p {
+    font-size: 24px;
+    font-family: "Merriweather", serif;
+    line-height: 36px;
+    color: #535353;
+    font-weight: regular;
+
+    a {
+      color: #38A8CC;
+      text-decoration: underline;
+    }
+  }
 }
 
 .post-show {
   padding: 0px 10px;
+  background-color: $grey-white;
 
-  h1 {
-    font: bold 60px 'PT Sans', sans-serif;
+  h3 {
+    font-size: 42px;
+    color: $dark-grey;
   }
-  h4 {
-    font: 30px normal "Droid Serif", serif;
-  }
-  p {
-    font: 18px normal "Droid Serif", serif;
-    line-height: 180%;
-  }
-  .gray {
-    color: $gray;
-  }
-  h3, h2 {
-    font: 30px normal "Droid Serif", serif;
-    color: $gray;
-    line-height: 170%;
-  }
-
-}
-
-.share-buttons {
-  margin-top: 30px;
-  overflow: hidden;
-}
-
-.all-posts .year {
-  padding-top: 44px;
-  text-align: center;
-  height: 120px;
-  width: 120px;
-  border-radius: 100px;
-  font-size: 32px;
-  color: white;
-  background: $blue;
-  font-weight: bold;
-}
-
-.all-posts {
-
-  a {
-    border-bottom: 1px solid $gray;
-    display: block;
-    padding-bottom: 7px;
-    margin-bottom: 7px;
-    color: $gray;
-    font-size: 18px;
-    &:hover {
-      color: $off-white;
+  h2 {
+    text-align: left;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    a {
+      color: #38A8CC;
     }
   }
+}
 
-  .row {
-    padding-top: 20px;
-    padding-bottom: 20px;
+#more-by-author {
+  padding-top: 55px;
+  padding-bottom: 21px;
+  max-width: 833px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .column.two {
+    width: 80px;
+  }
+  .column.ten {
+    float: left;
+    padding-left: 30px;
+    padding-top: 10px;
   }
 }
+
+#post-text {
+  max-width: 833px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #e3e1df;
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+#pages {
+  height: 60px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 833px;
+}
+
+nav span {
+  padding-right: 5px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  a {
+      color: #38A8CC;
+  }
+}
+
+

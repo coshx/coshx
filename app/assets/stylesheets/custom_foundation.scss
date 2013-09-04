@@ -31,6 +31,10 @@
 // typography includes stuff that has nothing to do with typography :(
 // let's fix it here:
 
+body { 
+	font-family: "Merriweather Sans", "Merriweather", sans-serif; 
+}
+
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td {
   margin:0;
   padding:0;
@@ -45,3 +49,8 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td {
 @import "foundation/components/modules/navbar";
 @import "foundation/components/modules/orbit";
 @import "foundation/components/modules/reveal";
+
+
+/* The Grid ---------------------- */
+.row { max-width: 1140px; width: 100%; margin: 0 auto; }
+.column { padding: 0 0px; line-height: 0; }

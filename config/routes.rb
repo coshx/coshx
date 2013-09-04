@@ -10,9 +10,16 @@ Coshx::Application.routes.draw do
   resources :quotes
   resources :projects
 
+  scope "/blog" do
+    get ':year/:month/:day/:title' => 'posts#show',  :as => :show_post
+    get '(/:year(/:month(/:day)))' => 'posts#index', :as => :blog_posts
+  end
+
   get 'get_random_quote' => 'quotes#get_random_quote'
   get 'generate_slugs' => 'admins#generate_slugs'
   get 'thank_you' => 'messages#thank_you'
+  get 'about' => 'home#about'
+  get 'careers' => 'home#careers'
   get 'contact' => 'home#contact_us'
 
   devise_for :admins
@@ -25,10 +32,7 @@ Coshx::Application.routes.draw do
   get 'dashboard' => 'dashboard#index', :as => :admin_root
   get '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
 
-  scope "/blog" do
-    get ':year/:month/:day/:title' => 'posts#show',  :as => :show_post
-    get '(/:year(/:month(/:day)))' => 'posts#index', :as => :blog_posts
-  end
+
 
   resources :posts, :except => [:index, :destroy] do
     put 'publish', :on => :member
@@ -39,11 +43,11 @@ Coshx::Application.routes.draw do
   end
 
   get '/services' => 'home#services', :as => :services
-  get '/about' => 'home#about', :as => :about
 
-  mount Contenteditable::Engine => "/contenteditable"
+  # mount Contenteditable::Engine => "/contenteditable"
 
   root :to => 'home#index'
 
   match '/404', :to => 'errors#not_found'
+
 end

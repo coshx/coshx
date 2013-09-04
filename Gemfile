@@ -4,6 +4,11 @@ ruby "1.9.3"
 
 gem "rails", "~> 3.2.9"
 
+#moving nokogiri up here because of dependency issues
+gem "nokogiri"
+
+gem "seed_dump", "~> 0.6.0"
+
 # web server
 gem 'thin'
 
@@ -17,8 +22,7 @@ gem "devise", '2.1.2'
 # presentation
 gem "redcarpet"
 gem "pygmentize"
-gem "nokogiri"
-gem "jquery-rails"
+gem 'jquery-rails', '~> 2.3.0'
 gem "haml-rails"
 gem "gravatar-ultimate"
 gem "kaminari"
@@ -32,6 +36,9 @@ gem 'fog'
 gem "twitter"
 gem "twitter-text"
 
+# Permalinks
+gem 'has_permalink'
+
 # Turbolinks!
 gem "turbolinks"
 
@@ -41,13 +48,10 @@ gem 'i18n-active_record',
     :require => 'i18n/active_record'
 
 # lightweight I18n frontend
-gem 'contenteditable', :github => 'micmmakarov/contenteditable', :branch => 'master'
+# gem 'contenteditable', :github => 'micmmakarov/contenteditable', :branch => 'master'
 
 # sass mixin library
 gem 'bourbon'
-
-# best practices
-gem 'rails_best_practices'
 
 group :assets do
   # upload assets to s3 before deploying to heroku
@@ -66,6 +70,7 @@ group :development do
   gem "pry"
   gem "pry-nav"
   gem 'better_errors'
+  gem 'meta_request'
 end
 
 group :development, :test do

@@ -1,66 +1,120 @@
 @import "common";
 
-@media only screen and (max-width: 960px) {
-  footer {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-footer .the-button {
-  display: block;
-  margin: auto;
-  margin-top: 10px;
-  text-align: center;
-}
-
-footer .star-header {
-  margin-top: 0px;
-  margin-bottom: 14px;
-  border-top: 2px solid $blue;
-  border-bottom: 1px solid $dark-blue;
-  font: bold 18px 'PT Sans', sans-serif;
-  color: white;
-  background: url(twitter_footer.png) no-repeat 0px 45px;
-  text-transform: none;
+footer {
+  z-index: 1;
   position: relative;
-  p {
-    padding-left: 50px;
-    margin: 0px 120px 0px 0px;
-    font-size: 13px;
+  background: #16171a;
+  padding: 50px 0px 60px;
+  color: #818181;
+
+  h3, h4, h5, a {
+  font-family: "Merriweather Sans", sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 1.1;
   }
 
-  &#footer-tweet {
-    font: 13px "Droid Serif", serif;
+  h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #707070;
   }
 
-  .days {
-    padding-left: 50px;
+  h4 {
+    font-size: 11px;
+    font-weight: normal;
+    text-transform: none;
+    color: #B8B8B8;
   }
-}
 
-@media only screen and (max-width: 500px) {
-  footer .star-header {
-    background-position: center 0px !important;
-    p {
-      padding-left: 0px;
-    }
-  }
-}
-
-#latest-blogs h2 a {
-  &:hover {
-    color: black !important;
-  }
-}
-
-.post-info a {
-  &:hover {
-    color: black;
+  h5 {
+    font-size: 11px;  
+    font-weight: bold;
+    text-transform: none;
+    color: #B8B8B8;
   }
 }
 
-.contact-details .the-button {
-  color: white;
+#footer-with-map {
+  margin-top: -370px;
+  margin-bottom: 550px;
 }
 
+#together {
+  background: $grey-white;
+
+  padding-top: 50px; 
+  padding-bottom: 30px;
+
+  h3 {
+    color: #535353;
+    float: right;
+    margin-right: 10px;
+  }
+}
+
+#work-together {
+  float: left;
+ }
+
+#site-links {
+
+  h1 {
+    margin-top: 80px;
+  }
+
+  h2 {
+    margin-bottom: 35px;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 43px;
+  }
+} 
+
+#footer-info {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #303030;
+}
+
+#footer-logo {
+  width: 130px;
+}
+
+#location {
+  width: 235px;
+  float: left;
+}
+
+#social {
+  width: 70px;
+
+  h3 {
+    float: right;
+  }
+
+  img {
+    float: right;
+    padding-top: 10px;
+  }
+}
+
+#copyright {
+  padding-top: 20px;
+  h3, a {
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #505050;
+  }
+  a {
+    font-size: 11px;
+    float: right;
+  }
+
+  img {
+    margin-top: 7px;
+  }
+}

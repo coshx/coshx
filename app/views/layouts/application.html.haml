@@ -4,7 +4,7 @@
     %title= title(params['controller'], params['action'])
     %meta{:name => "google-site-verification", :content => "GG9HzTQhQZszRRYo-W_el_Dh1LQs-3SQOuCzZS88FvI"}
     %meta{:charset => "UTF-8"}
-    %meta{:name => "description", :content => meta_description(params['controller'], params['action'])}
+    %script{:src => "http://maps.googleapis.com/maps/api/js?sensor=false"}
     = render "shared/fonts"
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
@@ -17,12 +17,21 @@
     = render "shared/facebook_meta", :image => yield(:image), :description => yield(:description), :title => yield(:title)
 
   %body
-    = save_button
+    - # for contenteditable: save_button
     %div.container.main-container
-      %div#header.row
+      %div#header
         - if admin_signed_in?
           = render "layouts/admin_menu"
         = render "layouts/header"
-      %div#content.row
+      %div#content
         = yield
-    = render "layouts/footer"
+    - unless (params[:controller] == 'errors')
+      - unless (params[:controller] == 'posts' || params[:controller] == 'projects')
+        = render "layouts/site_links"
+      - unless (params[:controller] == 'posts' || current_page?('/contact'))
+        = render "layouts/together"
+      - if current_page?('/contact')
+        #footer-with-map
+          = render "layouts/footer"
+      - else 
+        = render "layouts/footer"

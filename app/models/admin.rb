@@ -1,6 +1,6 @@
 class Admin < ActiveRecord::Base
   acts_as_paranoid
-
+  
   devise :database_authenticatable, :recoverable,
     :rememberable, :trackable, :validatable
 

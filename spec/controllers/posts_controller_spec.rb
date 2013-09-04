@@ -8,7 +8,7 @@ describe PostsController do
   describe "GET :index" do
     it "pages the results" do
       get :index
-      assigns(:posts).to_sql.should include("LIMIT 25 OFFSET 0")
+      assigns(:posts).to_sql.should include("LIMIT 4 OFFSET 0")
     end
 
     context "admin signed in" do
@@ -72,7 +72,9 @@ describe PostsController do
         get :new
       end
 
-      it { should assign_to(:post).with_kind_of Post }
+      it "creates an empty post" do
+        assigns(:post).should be_a_kind_of Post
+      end
       it { should respond_with :success }
     end
 
@@ -113,7 +115,9 @@ describe PostsController do
         sign_in admin
         get :edit, :id => blog_post.id
       end
-      it { should assign_to(:post).with blog_post }
+      it "assigns the blog post" do
+        assigns(:post).should eq(blog_post)
+      end
       it { should respond_with :success }
     end
 
