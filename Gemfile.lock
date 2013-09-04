@@ -40,7 +40,6 @@ GEM
     asset_sync (1.0.0)
       activemodel
       fog (>= 1.8.0)
-    awesome_print (1.1.0)
     bcrypt-ruby (3.1.1)
     better_errors (0.9.0)
       coderay (>= 1.0.0)
@@ -69,7 +68,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    colored (1.2)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -148,7 +146,6 @@ GEM
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    libv8 (3.16.14.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -200,15 +197,6 @@ GEM
       activesupport (= 3.2.14)
       bundler (~> 1.0)
       railties (= 3.2.14)
-    rails_best_practices (1.14.0)
-      activesupport
-      awesome_print
-      code_analyzer
-      colored
-      erubis
-      i18n
-      require_all
-      ruby-progressbar
     railties (3.2.14)
       actionpack (= 3.2.14)
       activesupport (= 3.2.14)
@@ -220,7 +208,6 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     redcarpet (3.0.0)
-    require_all (1.2.1)
     rmagick (2.13.2)
     rspec-core (2.14.4)
     rspec-expectations (2.14.0)
@@ -234,7 +221,6 @@ GEM
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
     ruby-hmac (0.4.0)
-    ruby-progressbar (1.1.1)
     sass (3.2.10)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -242,6 +228,7 @@ GEM
       tilt (~> 1.3)
     sassy-math (1.5)
       compass (~> 0.11)
+    seed_dump (0.6.0)
     shoulda-matchers (2.2.0)
       activesupport (>= 3.0.0)
     simple_oauth (0.2.0)
@@ -323,11 +310,11 @@ DEPENDENCIES
   pry-nav
   pygmentize
   rails (~> 3.2.9)
-  rails_best_practices
   redcarpet
   rmagick (~> 2.13.2)
   rspec-rails
   sass-rails (~> 3.2.3)
+  seed_dump (~> 0.6.0)
   shoulda-matchers
   simplecov
   thin

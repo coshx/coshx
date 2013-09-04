@@ -7,6 +7,7 @@ gem "rails", "~> 3.2.9"
 #moving nokogiri up here because of dependency issues
 gem "nokogiri"
 
+gem "seed_dump", "~> 0.6.0"
 
 # web server
 gem 'thin'
@@ -51,9 +52,6 @@ gem 'i18n-active_record',
 
 # sass mixin library
 gem 'bourbon'
-
-# best practices
-gem 'rails_best_practices'
 
 group :assets do
   # upload assets to s3 before deploying to heroku

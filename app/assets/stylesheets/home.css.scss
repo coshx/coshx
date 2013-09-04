@@ -26,6 +26,14 @@
   img {
     padding-top: 75px;
   }
+
+  .float-left {
+    float: left;
+  }
+
+  .float-right {
+    float: right;
+  }
 }
 
 #featured-project.closeoutbike {
@@ -51,4 +59,8 @@
 #project-description {
   max-width: 380px;
   padding-top: 80px;
+}
+
+@media (max-width: 960px) {
+  #featured-project h4 { display: none; }
 }

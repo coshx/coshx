@@ -12,6 +12,13 @@ body {
   -webkit-backface-visibility: hidden;
 }
 
+@media (max-width: 1140px) {
+  .row {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 .clear{
   clear: both;
 }
