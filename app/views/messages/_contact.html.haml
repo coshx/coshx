@@ -17,5 +17,4 @@
       .long-field
         = f.text_area :text, :placeholder => "Tell us about your project or send us a simple hello..."
       .link
-        %a.btn.blue.center.top-margin-small.submit-link{:href => '#'}
-          ="Let's get started".html_safe
+        =f.submit :class => 'submit btn blue center top-margin-small submit-link', :value => "Let's get started"

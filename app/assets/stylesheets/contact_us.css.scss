@@ -33,7 +33,7 @@
 		padding-bottom: 30px;
 	}
 
-	input, textarea {
+	input:not(.submit-link), textarea {
 		background-color: #f6f6f6;
 		padding-left: 20px;
 		font-size: 18px;
@@ -41,7 +41,7 @@
 		color: #535353;
 	}
 
-	input {
+	input:not(.submit-link) {
 		height: 50px;
 	}
 
