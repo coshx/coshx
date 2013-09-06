@@ -18,7 +18,8 @@
 
   %body
     - # for contenteditable: save_button
-    %div.container.main-container
+    =render "layouts/side_menu"
+    %div.container.main-container.body
       %div#header
         - if admin_signed_in?
           = render "layouts/admin_menu"
