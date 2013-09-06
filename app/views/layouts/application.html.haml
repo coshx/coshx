@@ -17,8 +17,6 @@
     = render "shared/facebook_meta", :image => yield(:image), :description => yield(:description), :title => yield(:title)
 
   %body
-    - # for contenteditable: save_button
-    =render "layouts/side_menu"
     %div.container.main-container.body
       %div#header
         - if admin_signed_in?

@@ -54,6 +54,18 @@ nav {
   nav .burger { display: block; }
 }
 
+nav ul.mobile {
+  display: block;
+  float: none;
+  li {
+    float: none;
+    display: block;
+    width: 100%;
+    padding-bottom: 16px;
+    margin-left: 0px;
+  }
+}
+
 .burger {
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;

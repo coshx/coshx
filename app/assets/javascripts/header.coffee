@@ -3,22 +3,15 @@ window.Coshx ||= {}
 header = Coshx.header =
 
   showMenu: ->
-    @body.animate
-      marginLeft: -150
-    @sideMenu.animate
-      marginLeft: -150
-    @sideMenu.css
-      display: 'block'
+    @content.animate
+      paddingTop: 150
+    $('nav ul').addClass('mobile')
     @menuShown = true
 
   hideMenu: ->
-    @body.animate
-      marginLeft: 0
-    @sideMenu.animate
-      marginLeft: 0
-    , =>
-      @sideMenu.css
-        display: 'none'
+    $('nav ul').removeClass('mobile')
+    @content.animate
+      paddingTop: 0
     @menuShown = false
 
   toggleMenu: ->
@@ -28,16 +21,10 @@ header = Coshx.header =
       @hideMenu()
 
   init: ->
-    @body = $(".body")
-    @sideMenu =  $(".side-menu")
-    setTimeout =>
-      bodyHeight = $("body").height()
-      console.log bodyHeight
-      @sideMenu.height(bodyHeight)
-    ,
-      1000
+    @content = $("#content")
+    @hideMenu()
 
-$ ->
+$(document).on 'page:load', ->
   header.init()
   $(".burger").click ->
     header.toggleMenu()
