@@ -9,16 +9,6 @@ body {
   overflow-x: hidden;
 }
 
-.side-menu {
-  margin-top: -110px;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  display: none;
-  width: 150px;
-  background: gray;
-}
-
 #header {
   min-height: 110px;
   width: 100%;
@@ -106,6 +96,7 @@ nav ul li {
 }
 
 nav ul li a {
+  display: block;
   color: #535353;
   text-transform: uppercase;
   font-family: "Merriweather Sans", Georgia;
