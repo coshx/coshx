@@ -1,5 +1,23 @@
 @import "common";
 
+.main-container, #site-links, #together {
+  width: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.side-menu {
+  margin-top: -110px;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  display: none;
+  width: 150px;
+  background: gray;
+}
 
 #header {
   min-height: 110px;
@@ -23,13 +41,45 @@
   }
 }
 
-nav select {
+nav .burger {
   display: none;
+}
+
+nav {
+  overflow: hidden;
 }
 
 @media (max-width: 960px) {
   nav ul { display: none; }
-  nav select { display: inline-block; }
+  nav .burger { display: block; }
+}
+
+.burger {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background-color: rgba(0,0,0,0.1);
+  padding-top: 12px;
+  border-radius: 5px;
+  width: 60px;
+  height:60px;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0,0,0,0.25);
+  }
+  .patty {
+    content: '';
+    background: image-url("burger.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 40px;
+    height: 35px;
+    margin: auto;
+  }
 }
 
 nav ul {
