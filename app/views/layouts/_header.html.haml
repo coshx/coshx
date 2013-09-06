@@ -6,17 +6,8 @@
   %nav
     %ul#main-nav
       // = tab_to "HOME", root_path,
-      = tab_to "Get to know us", about_path, active_tab("#{about_path}$")
-      = tab_to "Our work", projects_path, active_tab("#{projects_path}$")
-      = tab_to "Log book", blog_posts_path, active_tab("#{blog_posts_path}$")
-      = tab_to "Careers", careers_path, active_tab("#{jobs_path}$")
-      = tab_to "Contact", contact_path, active_tab("#{contact_path}$").merge({'data-no-turbolink' => true})
-    %select
-      %option{:value => about_path} Get to know us
-      %option{:value => projects_path} Our work
-      %option{:value => blog_posts_path} Log book
-      %option{:value => careers_path} Careers
-      %option{:value => contact_path} Contact
-
+      =render "layouts/menu_tabs"
+    .burger
+      .patty
 
 //=render 'jobs/jobs'
