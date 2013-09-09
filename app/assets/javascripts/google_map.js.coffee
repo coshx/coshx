@@ -43,4 +43,4 @@ initialize = ->
   )	
 
 
-google.maps.event.addDomListener document, "page:load", initialize
+google.maps.event.addDomListener window, "load", initialize
