@@ -16,45 +16,51 @@
   }
 }
 
-#featured-project {
-  height: 100%;
-  width: 100%;
+#projects {
 
-  h3, h4 {
-    color: $white;
+  .featured-project {
+    height: 100%;
+    width: 100%;
+
+    h3, h4 {
+      color: $white;
+    }
+    img {
+      padding-top: 75px;
+    }
+
+    .float-left {
+      float: left;
+    }
+
+    .float-right {
+      float: right;
+    }
   }
-  img {
-    padding-top: 75px;
+
+  .featured-project.closeoutbike {
+    background-color: $closeoutbike-bg;
   }
 
-  .float-left {
-    float: left;
+  .featured-project.mobilizeart {
+    background-color: $mobilizeart-bg;
   }
 
-  .float-right {
-    float: right;
+  .featured-project.gigdog {
+    background-color: $gigdog-bg;
   }
+
+  .featured-project.scheduleshare {
+    background-color: $scheduleshare-bg;
+  }
+
+  .featured-project.textus {
+    background-color: $textus-bg;
+  }
+
+
 }
 
-#featured-project.closeoutbike {
-  background-color: $closeoutbike-bg;
-}
-
-#featured-project.mobilizeart {
-  background-color: $mobilizeart-bg;
-}
-
-#featured-project.gigdog {
-  background-color: $gigdog-bg;
-}
-
-#featured-project.scheduleshare {
-  background-color: $scheduleshare-bg;
-}
-
-#featured-project.textus {
-  background-color: $textus-bg;
-}
 
 #project-description {
   max-width: 380px;
@@ -62,5 +68,5 @@
 }
 
 @media (max-width: 960px) {
-  #featured-project h4 { display: none; }
+  #projects h4 { display: none; }
 }
