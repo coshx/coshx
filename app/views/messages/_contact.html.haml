@@ -6,10 +6,10 @@
         - @message.errors.full_messages.each do |msg|
           %li= msg
   .row
-    .five.columns
+    .six.columns
       .text-field
         = f.text_field :name, :placeholder => "Your name"
-    .five.columns
+    .six.columns
       .text-field
         = f.email_field :email, :placeholder => "Email address"
   .row
