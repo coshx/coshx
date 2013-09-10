@@ -1,0 +1,9 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - rake production deploy
+  staging:
+    branch: develop
+    commands:
+      - rake staging deploy
