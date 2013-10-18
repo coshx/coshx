@@ -4,6 +4,7 @@
   height: 100%;
   width: 100%;
   background-color: #FFFFFF;
+  position: relative;
 
   h1 {
     font-size: 40px;
@@ -69,4 +70,90 @@
 
 @media (max-width: 960px) {
   #projects h4 { display: none; }
+}
+
+
+.clouds, .trucks, .rocket, .launch-pad, .cloud1, .cloud2, .cloud3, .moon{
+        position: absolute;
+}
+
+.clouds{
+        top: 5px;
+        right: 0;
+}
+
+.cloud1{
+        top: 10px;
+        right: 10px;        
+}
+
+.cloud2{
+        top: 34px;
+        right: 96px;        
+}
+
+.cloud3{
+        top: 62px;
+        right: 0;        
+}
+
+.moon{
+        top: 16px;
+        right: 59px;        
+        z-index: -1;
+}
+
+
+.trucks{
+        bottom: 0;
+        left: 0;
+}
+
+.truck1, .truck2, .truck3{
+        position: absolute;
+}
+
+.truck1{
+        bottom: 0;
+        left: 132px;
+}
+
+.truck2{
+        bottom: 0;
+        left: 67px;
+}
+
+.truck3{
+        bottom: 0;
+        left: 0px;
+}
+
+.truck-star, .truck-bulb, .truck-heart{
+        position: absolute;
+}
+
+.truck-heart{
+        bottom: 36px;
+        left: 138px;
+}
+
+.truck-bulb{
+        bottom: 35px;
+        left: 75px;
+}
+
+.truck-star{
+        bottom: 37px;
+        left: 7px;
+}
+
+
+.launch-pad{
+        bottom: -10px;
+        right: 0;
+}
+
+.rocket{
+        bottom: 12px;
+        right: 20px;
 }
