@@ -10,7 +10,7 @@
           %h3= link_to link_text.html_safe, show_post_path(p.permalink_attributes), :title => "Read More"
           %h2
             Written by
-            = link_to p.author.name, p.author.url
+            = link_to p.author.name, blog_posts_path(:author_id => p.author_id)
             on
             = p.created_at.strftime("%B %d, %Y")
 

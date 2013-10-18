@@ -39,6 +39,9 @@ gem "twitter-text"
 # Permalinks
 gem 'has_permalink'
 
+# Blog post formatting
+gem 'coderay'
+
 # Turbolinks!
 gem "turbolinks"
 

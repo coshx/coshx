@@ -8,4 +8,12 @@ module PostsHelper
     end
   end
 
+def coderay(text)
+  text.gsub(/\<code( lang="(.+?)")?\>(.+?)\<\/code\>/m) do
+    CodeRay.scan($3, $2).html
+  end
+end
+
+
+
 end
