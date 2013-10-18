@@ -5,7 +5,7 @@
 	    
 			%h2
 				Written by
-				= link_to post.author.name, post.author.url
+				= link_to post.author.name, blog_posts_path(:author_id => post.author_id)
 				on
 				= post.created_at.strftime("%B %d, %Y")
 			.post-content
@@ -16,4 +16,4 @@
 		.column.ten
 			%h2 
 				More posts by 
-				= link_to post.author.name, post.author.url
+				= link_to post.author.name, blog_posts_path(:author_id => post.author_id)
