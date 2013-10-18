@@ -31,6 +31,17 @@ body {
   }
 }
 
+#logo a{
+        background: url(/assets/logo.png) no-repeat;
+        width: 261px;
+        height: 60px;
+        float: left;        
+        margin-top: 27px;
+}
+
+#logo:hover a{
+        background-position: 0px -60px;
+}
 nav .burger {
   display: none;
 }
