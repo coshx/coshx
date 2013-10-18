@@ -64,8 +64,9 @@
 
   li {
     text-align: left;
-    font-size: 22px;
-    font-family: "Merriweather", serif;
+    font-size: 15px;
+    line-height: 26px;
+    font-family: "Merriweather Sans", serif;
     margin-top: 30px;
     margin-bottom: 30px;
     a {
@@ -87,7 +88,10 @@
   .column.ten {
     float: left;
     padding-left: 30px;
-    padding-top: 10px;
+  }
+
+  h2 {
+    margin-top: 25px;
   }
 }
 
