@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     @posts = if params[:year].present?
                Post.where("permalink LIKE '#{Post.build_like_permalink params}'").page(params[:page])
              elsif params[:author_id].present?
-               Post.where(:author_id => params[:author_id])
+               Post.published.where(:author_id => params[:author_id])
              elsif admin_signed_in?
                Post.where({}).page(params[:page])
              else
