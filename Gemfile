@@ -45,10 +45,10 @@ gem 'coderay'
 # Turbolinks!
 gem "turbolinks"
 
-#gem 'i18n-active_record',
-#    :git => 'git://github.com/svenfuchs/i18n-active_record.git',
-#    :branch => 'rails-3.2',
-#    :require => 'i18n/active_record'
+gem 'i18n-active_record',
+    :git => 'git://github.com/svenfuchs/i18n-active_record.git',
+    :branch => 'rails-3.2',
+    :require => 'i18n/active_record'
 
 # lightweight I18n frontend
 # gem 'contenteditable', :github => 'micmmakarov/contenteditable', :branch => 'master'
