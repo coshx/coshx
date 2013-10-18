@@ -9,7 +9,7 @@
 				on
 				= post.created_at.strftime("%B %d, %Y")
 			.post-content
-				=post.body_html.html_safe
+				= coderay(post.body_html).html_safe
 	.row#more-by-author
 		.column.two
 			%a{:href => about_path, :class => 'about-us-avatar'}(style="background:url(#{Gravatar.new(post.author.email).image_url(:size => 80)});")

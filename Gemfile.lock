@@ -285,6 +285,7 @@ DEPENDENCIES
   better_errors
   bourbon
   carrierwave
+  coderay
   coffee-rails (~> 3.2.1)
   compass-rails (~> 1.0.3)
   cucumber-rails
