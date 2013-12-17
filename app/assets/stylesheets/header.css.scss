@@ -4,19 +4,35 @@
   width: 100%;
 }
 
+.main-container {
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
 body {
   position: relative;
   overflow-x: hidden;
+  height: 100%;
 }
 
-#header {
-  min-height: 110px;
+header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: auto;
   width: 100%;
+  z-index: 99;
+}
+
+#site-header {
+  min-height: 110px;
   background: #FFFFFF;
   opacity: 1;
-  z-index: 10;
-  position: fixed;
-  margin-top: -110px;
+  width: 100%;
+  max-height: 110px;
 
   -moz-box-shadow: 0 0 6px #E0E0E0;
   -webkit-box-shadow: 0 0 6px #E0E0E0;
@@ -115,4 +131,60 @@ nav ul li a {
 nav ul li a:hover, nav ul li a.active {
   border-bottom: 1px solid #535353;
   color: #535353;
+}
+
+.feature {
+  background-color: $bright-blue;
+  height: 100%;
+
+  h1, h2, h3, h4 {
+    color: $white;
+  }
+
+  h1 {
+    font-size: 70px;
+    line-height: 85px;
+    margin-top: 0px;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 38px;
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  h4 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  #title {
+    position: fixed;
+    left: 77px;
+    top: 30px;
+    width: 200px;
+  }
+
+  #slogan {
+    position: fixed;
+    top: 35px;
+    left: 345px;
+    width: 725px;
+  }
+
+  .row {
+    position: fixed;
+    padding-top: 310px;
+    padding-bottom: 60px;
+    padding-left: 65px;
+  }
+  .six {
+    width: 48.1%;
+  }
 }
