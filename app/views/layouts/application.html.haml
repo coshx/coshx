@@ -18,13 +18,16 @@
 
   %body
     %header
-      %div#site-header.sticky-header
+      %div#site-header{class: current_page?('/') ? 'sticky-header' : 'fixed-header'}
         - if admin_signed_in?
           = render "layouts/admin_menu"
         = render "layouts/header"
     %div.container.main-container.body
-      %section.feature
-        = render "layouts/top_section"
+      - if current_page?('/')
+        %section.feature
+          = render "layouts/top_section"
+      - else
+        #header-padding
       = yield
       - unless (params[:controller] == 'errors')
         - unless (params[:controller] == 'posts' || params[:controller] == 'projects' || current_page?('/careers'))

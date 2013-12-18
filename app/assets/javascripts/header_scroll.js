@@ -1,41 +1,17 @@
 /* trigger when page is ready */
 $(document).ready(function (){
 
-    if(window.location.href.indexOf('#') === -1 && window.location.pathname != '/') { // don't scroll if it's a hash
-	(function() {
-    var scrollTop;
-
-    if ('pageXOffset' in window) {  // all browsers, except IE before version 9
-        scrollTop = window.pageYOffset;
-    }
-    else {  // Internet Explorer before version 9
-        scrollTop = document.documentElement.scrollTop;
-    }
-      
-		try {
-			if((scrollTop > 0) === false) {
-				window.scrollTo(0, 550);
-				setTimeout(arguments.callee, 1); // recurse until scrolled
-			}
-		} catch(e) {
-		    setTimeout(arguments.callee, 1); // recurse if document.body fails
-		}
-	})();
-	} 
-
-	// your functions go here
-	
-	// add animated scroll to # links 
-	function scrollTo(hash) {
-	    location.hash = "#" + hash;
-    }
     
    
     // the stickem script to make header fixed when scroll to top
 	$(document).ready(function() {
 		//sticky Nav
 		// grab the initial top offset of the navigation -use .front-header to only call header bar on homepage
-		var sticky_navigation_offset_top = $('.sticky-header').offset().top;
+
+		if ($('.sticky-header').length > 0)
+			var sticky_navigation_offset_top = $('.sticky-header').offset().top;
+		else
+			var sticky_navigation_offset_top = 500;
 		
 		// our function that decides weather the navigation bar should have "fixed" css position or not.
 		var sticky_navigation = function(){
