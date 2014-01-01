@@ -36,6 +36,7 @@ GEM
     activesupport (3.2.15)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
+    addressable (2.3.5)
     arel (3.0.2)
     asset_sync (1.0.0)
       activemodel
@@ -145,6 +146,8 @@ GEM
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    launchy (2.4.2)
+      addressable (~> 2.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -302,6 +305,7 @@ DEPENDENCIES
   i18n-active_record!
   jquery-rails (~> 2.3.0)
   kaminari
+  launchy
   meta_request
   nokogiri
   paranoia

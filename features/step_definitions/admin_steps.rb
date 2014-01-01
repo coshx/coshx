@@ -20,6 +20,21 @@ Given /^twitter is configured$/ do
   end
 end
 
+#idea tests
+Given /^there are no ideas$/ do
+  Idea.delete_all
+end
+
+Given /^I submit a new idea$/ do
+  @idea = FactoryGirl.build(:idea)
+  step %{I fill in "idea_title" with "#{@idea.title}"}
+  step %{I fill in "idea_description" with "#{@idea.description}"}
+  step %{I press "Save"}
+end
+
+Then /^I should see the new idea$/ do
+  step %{I should see "#{@idea.title}"}
+end
 
 #contenteditable tests
 

@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Author:
+  = @idea.author_id
+%p
+  %b Title:
+  = @idea.title
+%p
+  %b Description:
+  = @idea.description
+%p
+  %b Up votes:
+  = @idea.up_votes
+
+= link_to 'Edit', edit_idea_path(@idea)
+\|
+= link_to 'Back', ideas_path

@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130822161734) do
+ActiveRecord::Schema.define(:version => 20140101193457) do
 
   create_table "admins", :force => true do |t|
-    t.string   "email",                                 :default => "",                                       :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "",                                       :null => false
+    t.string   "email",                                 :default => "",                                               :null => false
+    t.string   "encrypted_password",     :limit => 128, :default => "",                                               :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20130822161734) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.text     "bio",                                   :default => "I am a developer at Coshx and love it!"
+    t.text     "bio",                                   :default => "I''''''''m a developer at Coshx and I love it!"
     t.string   "twitter"
     t.string   "github"
     t.string   "img"
@@ -50,6 +50,15 @@ ActiveRecord::Schema.define(:version => 20130822161734) do
     t.text     "value"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "ideas", :force => true do |t|
+    t.integer  "author_id"
+    t.string   "title"
+    t.text     "description"
+    t.integer  "up_votes",    :default => 0
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   create_table "jobs", :force => true do |t|
