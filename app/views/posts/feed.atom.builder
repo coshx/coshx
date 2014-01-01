@@ -1,6 +1,6 @@
 atom_feed :language => 'en-US' do |feed|
     feed.title(@title)
-    feed.updated(@posts[0].created_at) if @posts.length > 0
+    feed.updated(@posts[0].posted_on) if @posts.length > 0
 
     @posts.each do |post|
       feed.entry(post) do |entry|
