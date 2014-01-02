@@ -9,5 +9,5 @@
   .four.columns
     %span.status
       Signed in as
-      =current_admin.name
+      = link_to(current_admin.name, "edit_my_profile")
       = link_to('Sign Out', destroy_admin_session_path, :method => :delete)
