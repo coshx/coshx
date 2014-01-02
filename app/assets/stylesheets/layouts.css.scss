@@ -67,5 +67,7 @@ div {
 }
 
 #admin-menu {
-  padding-top: 20px;
+  padding-top: 8px;
+  background-color: lighten($blue, 50%);
+  line-height: 19px;
 }
