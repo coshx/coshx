@@ -9,7 +9,7 @@ demo = Admin.find_or_create_by_email("demo@example.org") do  |user|
   user.twitter = ''
   user.github = ''
   user.position = 'Code Monkey'
-  user.bio = 'This is my bio'
+  user.bio = ''
 end
 demo.save!
 puts "Created Demo User"

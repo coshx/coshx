@@ -88,5 +88,4 @@ group :development, :test do
   gem 'pry'
   gem 'pry-nav'
   gem 'faker'
-  gem 'launchy'
 end

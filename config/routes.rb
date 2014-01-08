@@ -42,8 +42,6 @@ Coshx::Application.routes.draw do
     put 'publish', :on => :member
   end
 
-  resources :ideas
-
   get '/services' => 'home#services', :as => :services
 
   # mount Contenteditable::Engine => "/contenteditable"
