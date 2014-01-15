@@ -149,7 +149,7 @@ nav ul li a:hover, nav ul li a.active {
 
   h1 {
     font-size: 70px;
-    line-height: 85px;
+    line-height: 147px;
     margin-top: 0px;
     text-align: left;
   }
@@ -158,6 +158,14 @@ nav ul li a:hover, nav ul li a.active {
     font-size: 22px;
     line-height: 38px;
     text-align: left;
+  }
+
+  @media (max-width: 767px) {
+    h2 {
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
   }
 
   h3 {
@@ -174,14 +182,15 @@ nav ul li a:hover, nav ul li a.active {
     position: fixed;
     left: 77px;
     top: 30px;
-    width: 200px;
+    width: 80%;
   }
 
   #slogan {
     position: fixed;
-    top: 35px;
-    left: 345px;
-    width: 725px;
+    top: 115px;
+    right: 80px;
+    width: 58%;
+    height: 150px;
   }
 
   .row {
