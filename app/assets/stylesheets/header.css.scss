@@ -157,7 +157,8 @@ nav ul li a:hover, nav ul li a.active {
   h2 {
     font-size: 22px;
     line-height: 38px;
-    text-align: left;
+    text-align: center;
+    font-family: "Merriweather Sans", Georgia;
   }
 
   @media (max-width: 767px) {
@@ -188,7 +189,7 @@ nav ul li a:hover, nav ul li a.active {
   #slogan {
     position: fixed;
     top: 115px;
-    right: 80px;
+    right: 98px;
     width: 58%;
     height: 150px;
   }
