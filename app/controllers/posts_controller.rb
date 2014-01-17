@@ -11,7 +11,7 @@ class PostsController < ApplicationController
              elsif params[:author_id].present?
                Post.published.where(:author_id => params[:author_id])
              elsif admin_signed_in?
-               Post.where({}).page(params[:page])
+               Post.scoped.order("posted_on DESC").order("created_at DESC").page(params[:page])
              else
                Post.published.page(params[:page])
              end.page(params[:page]).per(4)

@@ -18,6 +18,11 @@ describe PostsController do
         get :index
         assigns(:posts).to_sql.should_not =~ /WHERE/i
       end
+
+      it "orders the posts with unpublished posts first, then in descending order of creation" do
+        get :index
+        assigns(:posts).to_sql.should =~ /ORDER BY posted_on DESC, created_at DESC/
+      end
     end
 
     it "retrieves published posts for a guest" do
