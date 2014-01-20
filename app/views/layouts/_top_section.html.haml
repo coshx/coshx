@@ -1,0 +1,33 @@
+#feature-content  
+  #title
+    %h1.fit-title Let's <br> Build <br> Something
+
+  #slogan
+    %h2.fit-slogan We will work together to build the right web and mobile applications for you and your users.
+
+%script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"}
+%script{src: "http://code.jquery.com/ui/1.10.0/jquery-ui.js"}
+:javascript
+  // fittext.js plugin
+  (function($){
+    $.fn.fitText = function(kompressor, options){
+      var compressor = kompressor || 1,
+          settings = $.extend({
+            'minFontSize' : Number.NEGATIVE_INFINITY,
+            'maxFontSize' : Number.POSITIVE_INFINITY
+          }, options);
+    
+      return this.each(function(){
+        var $this = $(this);
+        var resizer = function () {
+          $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+        };
+        resizer();
+        $(window).on('resize orientationchange', resizer);
+      });
+    };
+  })( jQuery );
+:javascript
+  $(".fit-title").fitText(1, {minFontSize: '30px'});
+  $(".fit-slogan").fitText(1, {maxFontSize: '30px'});
+

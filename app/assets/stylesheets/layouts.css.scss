@@ -12,6 +12,10 @@ body {
   -webkit-backface-visibility: hidden;
 }
 
+div { 
+  position: relative;
+}
+
 @media (max-width: 1140px) {
   .row {
     padding-left: 30px;
@@ -48,6 +52,10 @@ body {
   }
 }
 
+#header-padding {
+  height: 110px;
+}
+
 #error-text {
   h1 {
     padding-top: 100px;
@@ -59,5 +67,7 @@ body {
 }
 
 #admin-menu {
-  padding-top: 20px;
+  padding-top: 8px;
+  background-color: lighten($blue, 50%);
+  line-height: 19px;
 }

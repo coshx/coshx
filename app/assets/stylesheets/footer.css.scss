@@ -1,7 +1,7 @@
 @import "common";
 
 footer {
-  z-index: 1;
+  z-index: 10;
   position: relative;
   background: #16171a;
   padding: 50px 0px 60px;
@@ -36,12 +36,12 @@ footer {
 }
 
 #footer-with-map {
-  margin-top: -370px;
-  margin-bottom: 550px;
+  padding-bottom: 508px;
 }
 
 #together {
   background: $grey-white;
+  position: relative;
 
   padding-top: 50px; 
   padding-bottom: 30px;
@@ -58,6 +58,9 @@ footer {
  }
 
 #site-links {
+
+  z-index: 10;
+  background: white;
 
   h1 {
     margin-top: 80px;

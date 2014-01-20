@@ -4,7 +4,6 @@
   height: 100%;
   width: 100%;
   background-color: #FFFFFF;
-  position: relative;
   padding-top: 60px;
 
 
@@ -51,6 +50,10 @@
     .float-right {
       float: right;
     }
+  }
+
+  .featured-project.availendar {
+    background-color: $availendar-bg;
   }
 
   .featured-project.closeoutbike {
