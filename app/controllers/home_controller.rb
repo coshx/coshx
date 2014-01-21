@@ -22,7 +22,12 @@ class HomeController < ApplicationController
   end
 
   def contact_us
-    @message = Message.new
+    if params[:error_check] == "true"
+      @message = Message.new(params[:message])
+      @message.valid?
+    else
+      @message = Message.new
+    end
   end
 
 end

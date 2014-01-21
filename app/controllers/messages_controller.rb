@@ -49,8 +49,8 @@ class MessagesController < ApplicationController
         format.html { redirect_to "/thank_you", notice: 'Your message was sent' }
         format.json { render json: @message, status: :created, location: @message }
       else
-        format.html { redirect_to "/thank_you" }
-        #format.html { render action: "new" }
+        flash[:alert] = "Sorry, looks like you didn't fill out all the fields. Please check and try again."
+        format.html { redirect_to contact_path(error_check: true, message: params[:message]) }
         format.json { render json: @message.errors, status: :unprocessable_entity }
       end
     end

@@ -67,7 +67,7 @@ class ApplicationController < ActionController::Base
     end
 
     def render_error
-      render 'error/500', :status => :internal_server_error
+      render 'errors/505', :status => :internal_server_error
     end
 
 
