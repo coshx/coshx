@@ -27,7 +27,7 @@ describe MessagesController do
   let(:admin)     { create :admin }
 
   def valid_attributes
-    {email: "test_sender@example.org"}
+    {email: "test_sender@example.org", name: "Test Person"}
   end
 
   # This should return the minimal set of values that should be in the session
