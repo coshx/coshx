@@ -1,5 +1,5 @@
 class Message < ActiveRecord::Base
   attr_accessible :budget, :comment, :company_name, :country, :deadline, :email, :name, :phone, :project_description, :text
 
-  validate :email, :name, :presence => true
+  validates :email, :name, :presence => true
 end
