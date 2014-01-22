@@ -15,3 +15,5 @@ public/assets
 .project
 *.overrides*
 public/uploads
+postgresql_log
+
