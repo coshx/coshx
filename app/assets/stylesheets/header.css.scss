@@ -57,7 +57,7 @@ header {
         background: url(/assets/logo.png) no-repeat;
         width: 261px;
         height: 60px;
-        float: left;        
+        float: left;
         margin-top: 27px;
 }
 
@@ -148,10 +148,10 @@ nav ul li a:hover, nav ul li a.active {
   }
 
   h1 {
-    font-size: 70px;
+    font-size: 90px;
     line-height: 147px;
     margin-top: 0px;
-    text-align: left;
+    text-align: center;
   }
 
   h2 {
@@ -181,9 +181,22 @@ nav ul li a:hover, nav ul li a.active {
 
   #title {
     position: fixed;
-    left: 77px;
-    top: 30px;
-    width: 80%;
+    left: 0px;
+    right: 0px;
+    top: 200px;
+
+    .scroll-arrow {
+      position: fixed;
+      width: 100%;
+
+      img {
+        position: fixed;
+        margin-left: -18px;
+        left: 50%;
+        margin-top: 30px;
+      }
+    }
+
   }
 
   #slogan {
