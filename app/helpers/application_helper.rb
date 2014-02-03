@@ -85,7 +85,7 @@ module ApplicationHelper
   end
 
   def should_not_display_any_footer_info
-    (params[:controller] == 'errors') || current_page?('competition')
+    (params[:controller] == 'errors') || current_page?('/competition')
   end
 
   def should_not_display_site_links
