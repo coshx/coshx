@@ -29,10 +29,10 @@
       - else
         #header-padding
       = yield
-      - unless (params[:controller] == 'errors')
-        - unless (params[:controller] == 'posts' || params[:controller] == 'projects' || current_page?('/careers'))
+      - unless should_not_display_any_footer_info
+        - unless should_not_display_site_links
           = render "layouts/site_links"
-        - unless (params[:controller] == 'posts' || current_page?('/contact') || current_page?('/careers'))
+        - unless should_not_display_together_section
           = render "layouts/together"
         - if current_page?('/contact')
           #footer-with-map

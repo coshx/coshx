@@ -84,4 +84,15 @@ module ApplicationHelper
     meta_description_hash[controller].try(:[], action) || default_meta_description
   end
 
+  def should_not_display_any_footer_info
+    (params[:controller] == 'errors') || current_page?('competition')
+  end
+
+  def should_not_display_site_links
+    (params[:controller] == 'posts' || params[:controller] == 'projects' || current_page?('/careers'))
+  end
+
+  def should_not_display_together_section
+    (params[:controller] == 'posts' || current_page?('/contact') || current_page?('/careers'))
+  end
 end
