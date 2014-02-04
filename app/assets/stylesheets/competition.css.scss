@@ -30,30 +30,28 @@
 }
 
 #competition-description {
-  min-height: 640px;
+  min-height: 850px;
   text-align: center;
   background-color: $spring-blue;
-
-  .eight {
-    padding: 0; 
-  }
 
   h1, h2 {
     font-family: "Open Sans", sans-serif;
     color: #ffffff;
-    text-align: left;
   }
 
   h1 {
     font-size: 48px;
     font-weight: bold;
-    margin-top: 210px;
+    margin-top: 20px;
   }
 
   h2 {
     font-size: 18px;
     line-height: 28px;
     margin-top: 40px;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   img {
@@ -64,8 +62,7 @@
   }
 
   form {
-    float: left;
-    padding-top: 50px !important;
+    padding-top: 25px !important;
   }
 
 }
@@ -173,5 +170,9 @@
     width: 154px !important;
     background-color: #f5918f !important;
     font-size: 24px !important;
+  }
+
+  .button:active {
+    background-color: #282a2b !important;
   }
 }
