@@ -58,7 +58,8 @@ header {
         width: 261px;
         height: 60px;
         float: left;
-        margin-top: 27px;
+        margin-top: 26px;
+        margin-left: 22px;
 }
 
 nav .burger {
@@ -67,22 +68,45 @@ nav .burger {
 
 nav {
   overflow: hidden;
+  float: right;
+  width:100%;
+  margin-top:-34px;
 }
 
-@media (max-width: 960px) {
-  nav ul { display: none; }
+@media (max-width: $mobile-view-size) {
+  nav ul { float:none ; display: none; }
   nav .burger { display: block; }
 }
 
-nav ul.mobile {
+body.mobile-menu {
+  margin-left: -200px !important;
+  overflow-x:hidden;
+  max-width:100%;
+}
+#map-container.mobile-menu{   //see contact_us.css.scss for #map-container
+  margin-left:-200px;
+  right:200px;
+}
+section.feature.mobile-menu{
+  height: 40px;
+  overflow:hidden;
+  img{
+    display:none;
+  }
+}
+
+nav ul.mobile-menu {
   display: block;
-  float: none;
+  float: right;
+  width:150px;
+  height:100%;
+  margin-top:100px;
   li {
     float: none;
     display: block;
     width: 100%;
     padding-bottom: 16px;
-    margin-left: 0px;
+    margin-left: 20px;
   }
 }
 
@@ -93,12 +117,13 @@ nav ul.mobile {
   transition: all 0.3s ease-out;
   background-color: rgba(0,0,0,0.1);
   padding-top: 12px;
-  border-radius: 5px;
+  border-radius: 4px;
   width: 60px;
   height:60px;
   position: absolute;
-  right: 25px;
+  right: 20px;
   top: 25px;
+  margin-top: 2px;
   cursor: pointer;
   &:hover {
     background-color: rgba(0,0,0,0.25);
@@ -111,12 +136,14 @@ nav ul.mobile {
     width: 40px;
     height: 35px;
     margin: auto;
+
   }
 }
 
 nav ul {
   float: right;
-  margin-top: 53px;
+  margin-top: 0px;
+  margin-right: 20px;
 }
 
 nav ul li {
@@ -161,7 +188,7 @@ nav ul li a:hover, nav ul li a.active {
     font-family: "Merriweather Sans", Georgia;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $mobile-view-size) {
     h2 {
       text-indent: 100%;
       white-space: nowrap;

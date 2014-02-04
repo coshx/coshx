@@ -3,7 +3,7 @@ scroll_to_top = ->
   $(".scrollup").click ->
     $("html, body").animate
       scrollTop: 0
-    , 600
+      , 600
     false
 
 
