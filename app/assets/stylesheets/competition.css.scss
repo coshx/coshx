@@ -134,7 +134,6 @@
 
 #competition-footer {
   background-color: #EFEFEF;
-  display: inline;
 
   h4 {
     font-family: "Open Sans", sans-serif;
@@ -167,12 +166,12 @@
     border-radius: 5px !important;
     height: 60px !important;
     font-family: "Open Sans", sans-serif !important;
+    box-shadow: none;
   }
 
   .button {
     width: 154px !important;
     background-color: #f5918f !important;
     font-size: 24px !important;
-    box-shadow: none;
   }
 }
