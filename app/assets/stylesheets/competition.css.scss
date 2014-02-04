@@ -10,6 +10,43 @@
   .like {
     padding-top: 55px;
   }
+
+  h4 {
+    width: 355px;
+    padding-left: 5px;
+    margin-left: 15px;
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+    vertical-align: top;
+    margin-top: 48px;
+  }
+}
+
+.bubble {
+  position: relative;
+  width: 260px;
+  height: 25px;
+  padding: 0px;
+  background: #1c4a66;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.bubble:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 7px 9px 7px 0;
+  border-color: transparent #1c4a66;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -9px;
+  top: 5px;
 }
 
 #competition-logo {
