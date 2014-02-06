@@ -223,10 +223,24 @@
   }
 }
 
+@media (max-width: 850px) {
+    #competition-header {
+    .bubble {
+      display: none;
+    }
+  }
+}
+
 @media (max-width: 400px) { 
   #mc-embedded-subscribe-form { 
     .email {
       width: 250px !important;
+    }
+  }
+
+  #competition-header {
+    .like {
+      display: none;
     }
   }
 }
