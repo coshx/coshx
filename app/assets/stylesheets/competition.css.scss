@@ -60,11 +60,18 @@
 #social-like-links {
   float: right;
   display: inline-block;
+  overflow: auto;
 
   .fb-like {
     padding-right: 8px;
+    vertical-align: top;
+
+    div {
+      display: none;
+    }
   }
 }
+
 
 #competition-description {
   min-height: 850px;
@@ -213,5 +220,13 @@
 
   .button:active {
     background-color: #282a2b !important;
+  }
+}
+
+@media (max-width: 400px) { 
+  #mc-embedded-subscribe-form { 
+    .email {
+      width: 250px !important;
+    }
   }
 }

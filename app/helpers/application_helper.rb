@@ -95,4 +95,8 @@ module ApplicationHelper
   def should_not_display_together_section
     (params[:controller] == 'posts' || current_page?('/contact') || current_page?('/careers'))
   end
+
+  def competition_twitter_share_text
+    Rack::Utils.escape('Have a tech idea? Send us your pitch and you could win $50,000 of design and development work, no strings attached')
+  end
 end
