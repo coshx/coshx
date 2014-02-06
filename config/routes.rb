@@ -46,7 +46,8 @@ Coshx::Application.routes.draw do
 
   # mount Contenteditable::Engine => "/contenteditable"
 
-  get '/competition' => 'home#competition'
+  # get '/competition' => 'home#competition'
+  match '/' => 'home#competition', :constraints => { :subdomain => 'competition' }  
 
   root :to => 'home#index'
 

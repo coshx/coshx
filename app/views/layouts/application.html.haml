@@ -16,7 +16,7 @@
     = favicon_link_tag
     = render "shared/facebook_meta", :image => yield(:image), :description => yield(:description), :title => yield(:title)
 
-    - if current_page?('/competition')
+    - if controller.action_name == 'competition'
       %link{href: "//cdn-images.mailchimp.com/embedcode/slim-081711.css", rel: "stylesheet", type: "text/css"}
       #fb-root
       :javascript
@@ -32,15 +32,15 @@
 
   %body
     %header
-      %div#site-header{class: current_page?('/') ? 'sticky-header' : 'fixed-header'}
-        - unless current_page?('/competition')
+      %div#site-header{class: on_home_page? ? 'sticky-header' : 'fixed-header'}
+        - unless controller.action_name == 'competition'
           - if admin_signed_in?
             = render "layouts/admin_menu"
           = render "layouts/header"
         - else
           = yield :competition_header
     %div.container.main-container.body
-      - if current_page?('/')
+      - if on_home_page?
         %section.feature
           = render "layouts/top_section"
       - else
