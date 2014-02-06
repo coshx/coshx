@@ -1,0 +1,37 @@
+- content_for :competition_header do
+  #competition-header
+    .row
+      #competition-logo
+      %h4.bubble Accepting Submissions from March 1st till April 14th
+      = render "social_like_links"
+
+#competition-description
+  .row
+    = image_tag("hero_img.png")
+    %h1 $50K Application Competition
+    %h2 Coshx Labs is giving away $50,000 of development work, no strings attached. We will be seeking submissions from anyone with an idea, but the public will pick the winner. No fees, no fighting over equity, just a kick ass app to springboard you to fame and fortune. All we ask is that you buy us a beer when you bank your first million. Enter your email address below to get the info. Time to start building.
+    = render "mailchimp_form"
+
+#competition-details
+  .row
+    %h1 What Do I Need To Do?
+    %h2 Your task is to get the public to back you, and you can begin by asking yourself the three questions below.  If you win then we will work with you to turn your concept into a beautifully executed product.
+  .row
+    .four.columns
+      %h3 What’s The Problem
+      %h4 Technology solves problems along the spectrum of curing cancer to curing boredom.  What problem will your app solve?  Will it help people make new friends, order food, manage their business or pass time waiting for the dentist?
+    .four.columns
+      %h3 What’s The Solution
+      %h4 What is your solution and why is it better than what is currently on the market?  Everything has competition, be it a similar application or the inertia of the status quo.  What is it about your solution that will gain and retain customers?
+    .four.columns
+      %h3 Why You
+      %h4 We can build the technology, that is the easy part.  Turning a product into a sustainable business is the challenge.  What is it that makes you the person to execute on this idea?  Is it your past experience, your unique insight, or your general badassery?  
+#competition-enter
+  .row
+    %h3 Enter to Win $50,000 In Development & Design Services
+    = render "mailchimp_form"
+
+#competition-footer
+  .row
+    %h4 Copyright © coshxlabs, 2014. All Rights Reserved
+    = render "social_like_links"

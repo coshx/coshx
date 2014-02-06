@@ -1,0 +1,246 @@
+@import "common";
+
+#competition-header {
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  background-color: $spring-blue;
+  border-bottom: 1px solid #3c7293;
+
+  .like {
+    padding-top: 55px;
+  }
+
+  h4 {
+    width: 360px;
+    padding-left: 5px;
+    margin-left: 15px;
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+    vertical-align: top;
+    margin-top: 48px;
+  }
+}
+
+.bubble {
+  position: relative;
+  width: 260px;
+  height: 25px;
+  padding: 0px;
+  background: #1c4a66;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.bubble:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 7px 9px 7px 0;
+  border-color: transparent #1c4a66;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -9px;
+  top: 5px;
+}
+
+#competition-logo {
+  background: url(/assets/contest_logo.png) no-repeat;
+  margin-top: 28px;
+  height: 66px;
+  width: 200px;
+  display: inline-block;
+}
+
+#social-like-links {
+  float: right;
+  display: inline-block;
+  overflow: auto;
+
+  .fb-like {
+    padding-right: 8px;
+    vertical-align: top;
+
+    div {
+      display: none;
+    }
+  }
+}
+
+
+#competition-description {
+  min-height: 850px;
+  text-align: center;
+  background-color: $spring-blue;
+
+  h1, h2 {
+    font-family: "Open Sans", sans-serif;
+    color: #ffffff;
+    margin-top: 60px;
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+
+  img {
+    margin-top: 70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  form {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    margin-bottom: 0;
+  }
+
+}
+
+#competition-details {
+  min-height: 680px;
+  background-color: #EFEFEF;
+
+  .four {
+    padding-left: 0;
+    padding-right: 25px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Open Sans", sans-serif;
+    color: #282a2b;
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+
+  h4 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+#competition-enter {
+  min-height: 280px;
+  background-color: $spring-blue;
+  text-align: center;
+
+  h3 {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 60px;
+  }
+
+  form {
+    padding-top: 30px !important;
+  }
+}
+
+#competition-footer {
+  background-color: #EFEFEF;
+
+  h4 {
+    font-family: "Open Sans", sans-serif;
+    color: #282a2b;
+    font-size: 14px;
+    line-height: 24px;
+    display: inline-block;
+  }
+
+  .like {
+    padding-top: 16px;
+  }
+}
+
+#mc-embedded-subscribe-form {
+  padding-left: 0 !important;
+  display: inline-block !important;
+  padding-top: 50px !important;
+
+  .email {
+    float: left;
+    width: 350px !important;
+    padding-left: 15px !important;
+    margin-right: 10px !important;
+    font-size: 18px;
+  }
+
+  .email, .button {
+    display: inline !important;
+    border-radius: 5px !important;
+    height: 60px !important;
+    font-family: "Open Sans", sans-serif !important;
+    box-shadow: none;
+  }
+
+  .button {
+    width: 154px !important;
+    background-color: #f5918f !important;
+    font-size: 24px !important;
+  }
+
+  .button:active {
+    background-color: #282a2b !important;
+  }
+}
+
+@media (max-width: 850px) {
+    #competition-header {
+    .bubble {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 400px) { 
+  #mc-embedded-subscribe-form { 
+    .email {
+      width: 250px !important;
+    }
+  }
+
+  #competition-header {
+    .like {
+      display: none;
+    }
+  }
+}

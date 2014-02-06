@@ -84,4 +84,23 @@ module ApplicationHelper
     meta_description_hash[controller].try(:[], action) || default_meta_description
   end
 
+  def should_not_display_any_footer_info
+    (params[:controller] == 'errors') || controller.action_name == 'competition'
+  end
+
+  def should_not_display_site_links
+    (params[:controller] == 'posts' || params[:controller] == 'projects' || current_page?('/careers'))
+  end
+
+  def should_not_display_together_section
+    (params[:controller] == 'posts' || current_page?('/contact') || current_page?('/careers'))
+  end
+
+  def competition_twitter_share_text
+    Rack::Utils.escape('Have a tech idea? Send us your pitch and you could win $50,000 of design and development work, no strings attached')
+  end
+
+  def on_home_page?
+    current_page?('/') && controller.action_name == 'index'
+  end
 end
