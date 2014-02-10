@@ -21,6 +21,7 @@ Coshx::Application.routes.draw do
   get 'about' => 'home#about'
   get 'careers' => 'home#careers'
   get 'contact' => 'home#contact_us'
+  get 'competition' => 'home#competition'
 
   devise_for :admins
 
