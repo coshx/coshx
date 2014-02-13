@@ -39,7 +39,6 @@ header {
   opacity: 1;
   width: 100%;
   max-height: 110px;
-
   -moz-box-shadow: 0 0 6px #E0E0E0;
   -webkit-box-shadow: 0 0 6px #E0E0E0;
   box-shadow: 0 0 6px #E0E0E0;
@@ -47,19 +46,18 @@ header {
 
 #header-content {
   position: relative;
-
   img {
     margin-top: 25px;
   }
 }
 
-#logo a{
-        background: url(/assets/logo.png) no-repeat;
-        width: 261px;
-        height: 60px;
-        float: left;
-        margin-top: 26px;
-        margin-left: 22px;
+#logo a {
+  background: url(/assets/logo.png) no-repeat;
+  width: 221px;
+  height: 60px;
+  float: left;
+  margin-top: 26px;
+  margin-left: 18px;
 }
 
 nav .burger {
@@ -83,11 +81,13 @@ body.mobile-menu {
   overflow-x:hidden;
   max-width:100%;
 }
-#map-container.mobile-menu{   //see contact_us.css.scss for #map-container
+
+#map-container.mobile-menu {
   margin-left:-200px;
   right:200px;
 }
-section.feature.mobile-menu{
+
+section.feature.mobile-menu {
   height: 40px;
   overflow:hidden;
   img{
@@ -121,7 +121,7 @@ nav ul.mobile-menu {
   width: 60px;
   height:60px;
   position: absolute;
-  right: 20px;
+  right: 18px;
   top: 25px;
   margin-top: 2px;
   cursor: pointer;
@@ -129,14 +129,13 @@ nav ul.mobile-menu {
     background-color: rgba(0,0,0,0.25);
   }
   .patty {
-    content: '';
+    content:'';
     background: image-url("burger.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
     width: 40px;
     height: 35px;
     margin: auto;
-
   }
 }
 
@@ -149,7 +148,7 @@ nav ul {
 nav ul li {
   list-style-type: none;
   float: left;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 
 nav ul li a {
@@ -169,25 +168,21 @@ nav ul li a:hover, nav ul li a.active {
 .feature {
   background-color: $bright-blue;
   height: 100%;
-
   h1, h2, h3, h4 {
     color: $white;
   }
-
   h1 {
     font-size: 90px;
     line-height: 147px;
     margin-top: 0px;
     text-align: center;
   }
-
   h2 {
     font-size: 22px;
     line-height: 38px;
     text-align: center;
     font-family: "Merriweather Sans", Georgia;
   }
-
   @media (max-width: $mobile-view-size) {
     h2 {
       text-indent: 100%;
@@ -195,17 +190,14 @@ nav ul li a:hover, nav ul li a.active {
       overflow: hidden;
     }
   }
-
   h3 {
     font-size: 20px;
     line-height: 30px;
   }
-
   h4 {
     font-size: 14px;
     line-height: 24px;
   }
-
   #title {
     position: fixed;
     left: 0px;
@@ -223,9 +215,7 @@ nav ul li a:hover, nav ul li a.active {
         margin-top: 30px;
       }
     }
-
   }
-
   #slogan {
     position: fixed;
     top: 115px;
@@ -233,7 +223,6 @@ nav ul li a:hover, nav ul li a.active {
     width: 58%;
     height: 150px;
   }
-
   .row {
     position: fixed;
     padding-top: 310px;

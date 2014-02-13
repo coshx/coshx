@@ -49,12 +49,14 @@ flyingHeader =
 
 
 load = ->
-  mobileMenu.init()
-  $(".burger").click ->
-    mobileMenu.toggleMenu()
-  flyingHeader.init()
-  $(window).scroll ->
-    flyingHeader.position()
+  try
+    mobileMenu.init()
+    $(".burger").click ->
+      mobileMenu.toggleMenu()
+    flyingHeader.init()
+    $(window).scroll ->
+      flyingHeader.position()
+  catch err
 
 $(document).ready(load)
 $(document).on('page:load', load)

@@ -6,27 +6,20 @@ footer {
   background: #16171a;
   padding: 50px 0px 60px;
   color: #818181;
-
   h3, h4, h5, a {
   font-family: "Merriweather Sans", sans-serif;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  line-height: 1.1;
   }
-
   h3 {
     font-size: 12px;
     text-transform: uppercase;
     color: #707070;
   }
-
   h4 {
     font-size: 11px;
     font-weight: normal;
     text-transform: none;
     color: #B8B8B8;
   }
-
   h5 {
     font-size: 11px;  
     font-weight: bold;
@@ -39,39 +32,34 @@ footer {
   padding-bottom: 508px;
 }
 
-
-
 #together {
   background: $grey-white;
   position: relative;
-
-  padding-top: 50px; 
+  padding-top: 50px;
   padding-bottom: 30px;
-
+  a{
+    margin:auto;
+    margin-top:4%;
+    display:none;
+    &:active {
+      background: #4D5E30;
+    }
+  }
   h3 {
     color: #535353;
-    float: right;
-    margin-right: 10px;
+    text-align: center;
   }
 }
 
-#work-together {
-  float: left;
- }
-
 #site-links {
-
   z-index: 10;
   background: white;
-
   h1 {
     margin-top: 80px;
   }
-
   h2 {
     margin-bottom: 35px;
   }
-
   img {
     display: block;
     margin-left: auto;
@@ -85,41 +73,78 @@ footer {
   border-bottom: 1px solid #303030;
 }
 
-#footer-logo {
-  width: 130px;
-}
-
-#location {
-  width: 235px;
-  float: left;
-}
-
-#social {
-  width: 70px;
-
-  h3 {
-    float: right;
+#social, #footer-logo {
+  margin:0px;
+  padding:0px;
+  margin-top:50px;
+  h3{
+    text-align:center;
+    float:none;
+    font-size:10px !important;
   }
-
-  img {
-    float: right;
-    padding-top: 10px;
+  #social-links {
+    width:84px ;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:-15px;
+    img {
+      display:inline;
+     }
+  }
+  #logo-links {
+    width:60px ;
+    height:60px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
   }
 }
 
-#copyright {
-  padding-top: 20px;
-  h3, a {
+#location.column {
+  display:block;
+  padding:0px;
+  margin:0px;
+  margin-top:50px;
+  .city {
+    text-align: center;
+    padding:0px;
+    margin:0px ;
     text-transform: uppercase;
-    font-weight: normal;
+    font-weight:bold;
+  }
+  .address, h5 {
+    text-align: center;
+    line-height:2;
+    margin:0px;
+    padding:0px;
+  }
+  .address {
+    margin-top:10px;
+  }
+}
+
+#footer-bottom {
+  border-top: 1px solid;
+  h4 {
+    text-transform: uppercase;
     color: #505050;
   }
   a {
+    text-transform: uppercase;
     font-size: 11px;
-    float: right;
+    float:right;
+    color: #505050;
   }
-
   img {
     margin-top: 7px;
+    float:right;
+  }
+  @media (max-width:$mobile-view-size) {
+    text-align:center;
+    img,a{
+      float:none;
+    }
   }
 }
+

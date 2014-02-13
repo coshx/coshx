@@ -3,41 +3,35 @@
 #results-header {
   background-color: $grey-white;
   h1 {
-    margin-top: 80px;
-    padding-bottom: 62px;
+    margin-top: 7%;
+    padding-bottom: 5.5%;
   }
+  @media (max-width:$mobile-view-size) {
+    display:none;
+  }
+}
+
+#our-work-text {
+  margin-top:3%;
+  margin-bottom:3%;
 }
 
 #recent-work {
   text-align: center;
-  padding-top: 41px;
-  padding-bottom: 25px;
-
-  a {
-    display: none;
-    position: relative;
-    z-index: 3;
-  }
-
   img {
     z-index: 1;
     position: absolute;
     right: 0;
     bottom: 0;
   }
-
-  img.website {
-    right: 248px;
-    bottom: 20px;
-  }
-
-  .column.five {
-    width: 400px;
+  .column.six {
     height: 300px;
-    margin-bottom: 35px;
     z-index: 0;
+    margin-bottom:10px;
   }
-
+  a {
+    display: none;
+  }
   .column:hover {
     a {
       display: inline-block;
@@ -45,84 +39,74 @@
   }
 }
 
-#our-work-text {
-  h4 {
-    margin-top: 20px;
-    margin-left: 250px;
-    margin-right: 250px;
-    margin-bottom: 30px;
+html.touch #recent-work {
+  a {
+    display: inline-block !important;
+  }
+}
+
+.content-box {
+  height:100%;
+  margin-left:5px;
+  margin-right:5px;
+  img {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
 }
 
 #darken-box {
-  background-color: black;
   z-index: 2;
   position: relative;
-  width: 100%;
-  height: 300px;
-  opacity: 0;
-
-  h3 {
-    padding-top: 100px; 
-    color: #ffffff;
+  width:100%;
+  height:100%;
+  margin:0px;
+  background-color:rgba(0,0,0,0.7);
+  &:hover {
+    background-color:rgba(0,0,0,0.7);
   }
-
-  h4 {
-    color: #f8f7f5;
-    font-size: 18px;
+  .text {
+    display:block;
+    height:100%;
+    width:100%;
+    margin-top:120px;
+    h3 {
+      color: white;
+    }
+    h4 {
+      color: white;
+      font-size: 18px;
+    }
   }
 }
 
-#darken-box:hover {
-  opacity: 0.7;
-}
-
-#link-div {
-  height: 100%;
-  width: 100%;
-}
-
-#closeoutbike-box {
-  margin-left: 150px;
+#closeoutbike {
   background-color: $closeoutbike-bg;
 }
 
-#availendar-box {
-  margin-left: 150px;
+#availendar {
   background-color: $availendar-bg;
 }
 
-#mobilizeart-box {
-  margin-right: 150px;
+#mobilizeart {
   background-color: $mobilizeart-bg;
 }
 
-#gigdog-box {
-  margin-left: 150px;
+#gigdog {
   background-color: $gigdog-bg;
 }
 
-#greeneggs-box {
-  margin-right: 150px;
+#greeneggs {
   background-color: $greeneggs-bg;
 }
 
-#textus-box {
-  margin-left: 150px;
+#textus {
   background-color: $textus-bg;
 }
 
-#scheduleshare-box {
-  margin-right: 150px;
-  background-color: $scheduleshare-bg;
+#scheduleshare {
+   background-color: $scheduleshare-bg;
 }
 
-#old-site-box {
-  width: 840px;
-  height: 300px;
-  margin-bottom: 35px;
-  z-index: 0;
-  margin-left: 150px;
-  margin-right: 150px;
-  background-color: #fbaf3f;
-}

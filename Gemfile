@@ -72,8 +72,6 @@ end
 
 group :development do
   gem "heroku_san", '~> 4.2.2'
-  gem "pry"
-  gem "pry-nav"
   gem 'better_errors'
   gem 'meta_request'
 end
