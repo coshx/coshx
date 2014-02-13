@@ -45,6 +45,8 @@ gem 'coderay'
 # Turbolinks!
 gem "turbolinks"
 
+gem 'mobu'
+
 gem 'i18n-active_record',
     :git => 'git://github.com/svenfuchs/i18n-active_record.git',
     :branch => 'rails-3.2',
@@ -70,8 +72,6 @@ end
 
 group :development do
   gem "heroku_san", '~> 4.2.2'
-  gem "pry"
-  gem "pry-nav"
   gem 'better_errors'
   gem 'meta_request'
 end
