@@ -23,7 +23,7 @@ describe "posts/feed.atom.builder" do
 
   describe "each post" do
     it "displays the author of the blog post" do
-      @feed_doc.at_css('author').content.should == @posts.first.author.name
+      @feed_doc.at_css('author').content.should =~ /\s#{@posts.first.author.name}\s/
     end
 
     it "creates an entry for each post" do

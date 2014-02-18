@@ -13,7 +13,7 @@ describe MarkdownAttributes do
     end
     @object.title = "#Markdown Header 1"
     @object.title.should == "#Markdown Header 1"
-    @object.title_html.should == "<h1>Markdown Header 1</h1>"
+    @object.title_html.should =~ /<h1>Markdown Header 1<\/h1>\s/
   end
 
   it "accepts multiple attributes" do
@@ -24,8 +24,8 @@ describe MarkdownAttributes do
     @object.title = "#Markdown Header 1"
     @object.body = "Markdown body"
 
-    @object.title_html.should == "<h1>Markdown Header 1</h1>"
-    @object.body_html.should == "<p>Markdown body</p>"
+    @object.title_html.should =~ /<h1>Markdown Header 1<\/h1>\s/
+    @object.body_html.should =~ /<p>Markdown body<\/p>\s/
   end
 
   it "highlights syntax" do

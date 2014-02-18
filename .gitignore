@@ -16,4 +16,4 @@ public/assets
 *.overrides*
 public/uploads
 postgresql_log
-
+*.gitkeep
