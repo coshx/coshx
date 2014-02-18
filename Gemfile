@@ -2,7 +2,7 @@ source "http://rubygems.org"
 
 ruby "1.9.3"
 
-gem "rails", "~> 3.2.9"
+gem "rails", "~> 3.2.17"
 
 #moving nokogiri up here because of dependency issues
 gem "nokogiri"
