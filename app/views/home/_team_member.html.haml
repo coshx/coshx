@@ -1,11 +1,9 @@
-%a{:href => about_path, :class => 'about-us-avatar'}(style="background:url(#{Gravatar.new(person.email).image_url(:size => 80)});")
+= link_to(image_tag(Gravatar.new(person.email).image_url(:size => 80), class: 'about-us-avatar'),
+                    "#", {"data-target" => ".#{person.slug}", "data-toggle" => "modal"})
 #member-info
-	%h7 
-		= person.name
-	%br
-	%h8 
-		= person.position
-	%br
-	%h8 
-		- if person.twitter?
-			%a{:href => "http://twitter.com/#{person.twitter}"}@#{person.twitter}
+  %h7
+    = link_to(person.name, "#", {"data-target" => ".#{person.slug}", "data-toggle" => "modal"})
+    = render partial: "employee", locals: {employee: person}
+  %br
+  %h8 
+    = person.position

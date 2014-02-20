@@ -31,7 +31,6 @@
 }
 
 #projects {
-
   .featured-project {
     height: 100%;
     width: 100%;
@@ -85,6 +84,6 @@
   padding-top: 80px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: $mobile-view-size) {
   #projects h4 { display: none; }
 }

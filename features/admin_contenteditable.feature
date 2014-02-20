@@ -7,7 +7,6 @@ Feature: Using contenteditable gem to edit content
   Background:
     Given testuser_1@coshx.com is a valid admin
 
-  @javascript
   Scenario: Edit and saving contenteditable
     And I sign in as "testuser_1@coshx.com" / "password_1"
     When I go to the home page

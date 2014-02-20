@@ -2,13 +2,14 @@
 
 #about-header {
   background: #38a8cc;
-  padding-top: 130px;
+  padding-top: 10.7%;
+
   h1, h2 {
     color: #FFFFFF;
     margin-top: 40px;
   }
   h2 {
-    padding-bottom: 160px;
+    padding-bottom:160px;
   }
 }
 
@@ -18,6 +19,7 @@
     height: 100%;
     border-bottom: 1px solid #e9e9e9;
   }
+
   h5 {
     margin-top: 25px;
   }
@@ -214,4 +216,35 @@
   -moz-transition: all 0.3s ease-out; /* Firefox 4-15 */
   -o-transition: all 0.3s ease-out; /* Opera 10.5–12.00 */
   transition: all 0.3s ease-out; /* Firefox 16+, Opera 12.50+ */
+}
+
+.modal .about-us-avatar {
+  float: left;
+}
+
+.modal h2{
+  text-align: left;
+  margin-top: 0px;
+}
+
+.modal .employee-info {
+  float: left;
+  margin-left: 10px;
+}
+
+.modal .employee-info h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.modal .employee-info h5 {
+  margin: 0px;}
+
+.modal .employee-info li {
+  margin-right: 10px;
+  display: inline;
+}
+
+.modal .employee-header {
+  overflow: hidden;
 }
