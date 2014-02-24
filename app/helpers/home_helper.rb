@@ -11,7 +11,7 @@ private
 	def render_team_members(row)
 		content_tag('div', :id => 'team-row', :class => 'row') do
 			row.map do |person|
-				content_tag('div', render_team_member(person), :class => ['column', 'two'])
+				content_tag('div', render_team_member(person), :class => ['column', 'two', 'mobile-two'])
 			end.join.html_safe
 		end
 	end

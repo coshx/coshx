@@ -91,7 +91,7 @@
   }
 
   h7, h8 {
-    margin-left: 53px;
+    // margin-left: 53px;
   }
 
   a {
@@ -112,6 +112,7 @@
 
 #team-row {
   margin-top: 40px;
+  padding-left: 60px;
 }
 
 #down-triangle {
@@ -174,7 +175,7 @@
 
   .four {
     width: 25%;
-    padding-right: 96px;
+    // padding-right: 96px;
   }
 
   .six {
@@ -190,7 +191,9 @@
   behavior: url(PIE.htc);
   width: 190px;
   height: 190px;
-  float: right;
+  // float: right;
+  margin-left: auto;
+  margin-right: auto;
   background: $grey-white;
 
   img {
@@ -208,8 +211,8 @@
   display: block;
   width: 80px;
   height: 80px;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
   border-radius: 5px;
 
   //-webkit-transition: all 0.3s ease-out; /* Safari 3.2+, Chrome */
@@ -247,4 +250,43 @@
 
 .modal .employee-header {
   overflow: hidden;
+}
+
+@media screen and (max-width: 900px){
+  .main-section-body{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
+}
+
+@media screen and (max-width: 767px){
+  #circle-off-white{
+    width: 90px !important;
+    height: 90px !important;
+  }
+
+  #circle-off-white img{
+    height: 100%;
+  }
+
+  #step.even .eight, #step.last .eight{
+    padding-right: 0px;
+  }
+
+  #team-row{
+    padding-left: 150px;
+  }
+
+}
+
+@media screen and (max-width: 560px){
+  .modal{
+    width: 320px;
+  }
+  #team-row{
+    padding-left: 50px;
+  }
+  .row .mobile-one{
+    padding-left: 0px;
+  }
 }
