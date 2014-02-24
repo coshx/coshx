@@ -289,4 +289,8 @@
   .row .mobile-one{
     padding-left: 0px;
   }
+
+  .row.even .mobile-three, .row.last .mobile-three{
+    padding-left: 35px;
+  }
 }
