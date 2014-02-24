@@ -58,6 +58,5 @@ load = ->
       flyingHeader.position()
   catch err
 
-$(document).ready(load)
-$(document).on('page:load', load)
+$(document).on('page:change', load)
 
