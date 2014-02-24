@@ -51,6 +51,19 @@ header {
   }
 }
 
+@media (max-width: $mobile-view-size) {
+  #header-content.row {
+    padding-left: 0px !important;
+  }
+}
+
+@media (min-width: $desktop-view-size) {
+  #logo {
+    margin-left: 0px !important;
+  }
+}
+
+
 #logo a {
   background: url(/assets/logo.png) no-repeat;
   width: 221px;
@@ -184,11 +197,6 @@ nav ul li a:hover, nav ul li a.active {
     font-family: "Merriweather Sans", Georgia;
   }
 
-  @media (min-width: $desktop-view-size) {
-    #logo {
-      margin-left: 0px;
-    }
-  }
 
   @media (max-width: $mobile-view-size) {
     h2 {
