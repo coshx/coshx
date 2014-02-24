@@ -259,7 +259,7 @@
   }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: $mobile-view-size){
   #circle-off-white{
     width: 90px !important;
     height: 90px !important;
