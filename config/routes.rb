@@ -54,4 +54,7 @@ Coshx::Application.routes.draw do
 
   match '/404', :to => 'errors#not_found'
 
+  # robot requests to rails server ok when cached
+  get '/robots.txt' => 'home#robots'
+
 end
