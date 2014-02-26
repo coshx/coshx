@@ -239,6 +239,8 @@ GEM
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
+    sitemap_generator (5.0.0)
+      builder
     slop (3.4.6)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -322,6 +324,7 @@ DEPENDENCIES
   seed_dump (~> 0.6.0)
   shoulda-matchers
   simplecov
+  sitemap_generator
   thin
   timecop
   turbolinks

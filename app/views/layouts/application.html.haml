@@ -9,6 +9,7 @@
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
     %meta(content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" name="viewport")/
+    %meta{content: "Coshx builds custom web and mobile applications for start ups and established buisnesses using lean tactics, agile methodoglies and test driven develop", name: "description"}/
     = csrf_meta_tags
     = render "shared/google_analytics"
     = render "layouts/disqus_dev_mode" if Rails.env.development? || Rails.env.test?

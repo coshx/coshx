@@ -47,6 +47,9 @@ gem "turbolinks"
 
 gem 'mobu'
 
+# https://github.com/kjvarga/sitemap_generator
+gem 'sitemap_generator'
+
 gem 'i18n-active_record',
     :git => 'git://github.com/svenfuchs/i18n-active_record.git',
     :branch => 'rails-3.2',
