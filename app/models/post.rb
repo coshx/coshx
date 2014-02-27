@@ -6,6 +6,12 @@ class Post < ActiveRecord::Base
   belongs_to :author, :class_name => "Admin"
   default_scope :order => "posted_on DESC"
 
+  scope :by_author_slug, ->(author_slug) { 
+    if author_slug.present?
+      joins(:author).where(admins: { slug: author_slug })
+    end
+  }
+
   attr_markdown :preview, :body
 
   validates_presence_of :title, :body, :author

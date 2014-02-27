@@ -5,7 +5,7 @@
 	    
 			%h2
 				Written by
-				= link_to post.author.name, blog_posts_path(:author_id => post.author_id)
+				= link_to post.author.name, by_author_path(post.author.slug)
 				on
 				= post.created_at.strftime("%B %d, %Y")
 			.post-content

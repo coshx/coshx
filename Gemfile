@@ -87,7 +87,7 @@ group :development, :test do
   gem 'simplecov', :require => false # code coverage tool
   gem "database_cleaner"
   gem "forgery"
-  gem "rspec-rails"
+  gem "rspec-rails", '~> 2.14.1'
   gem 'pry'
   gem 'pry-nav'
   gem 'faker'
