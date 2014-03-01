@@ -17,6 +17,9 @@
         -if employee.twitter
           %li.twitter
             %a{:href => "http://twitter.com/#{employee.twitter}", :target => "_blank"} Twitter
+        -if !employee.posts.empty?
+          %li.twitter
+            %a{:href => by_author_path(employee.slug)} Blog posts
   .modal-body
     %p.bio
       =employee.bio
