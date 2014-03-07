@@ -2,8 +2,10 @@ deployment:
   production:
     branch: master
     commands:
+      - '[[ ! -s "$(git rev-parse --git-dir)/shallow" ]] || git fetch --unshallow'
       - rake production deploy
   staging:
     branch: develop
     commands:
+      - '[[ ! -s "$(git rev-parse --git-dir)/shallow" ]] || git fetch --unshallow'
       - rake staging deploy
