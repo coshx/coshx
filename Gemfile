@@ -47,6 +47,9 @@ gem "turbolinks"
 
 gem 'mobu'
 
+# https://github.com/kjvarga/sitemap_generator
+gem 'sitemap_generator'
+
 gem 'i18n-active_record',
     :git => 'git://github.com/svenfuchs/i18n-active_record.git',
     :branch => 'rails-3.2',
@@ -84,7 +87,7 @@ group :development, :test do
   gem 'simplecov', :require => false # code coverage tool
   gem "database_cleaner"
   gem "forgery"
-  gem "rspec-rails"
+  gem "rspec-rails", '~> 2.14.1'
   gem 'pry'
   gem 'pry-nav'
   gem 'faker'

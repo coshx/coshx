@@ -1,4 +1,4 @@
-.modal.hide.fade{'class' => employee.slug, "tabindex" => "-1", "data-keyboard" => "true"}
+.modal.permalink.hide.fade{'class' => employee.slug, 'id' => employee.slug, "tabindex" => "-1", "data-keyboard" => "true"}
   .modal-header.employee-header
     %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
     = image_tag Gravatar.new(employee.email).image_url(:size => 80), class: 'about-us-avatar', alt: employee.name
@@ -17,6 +17,9 @@
         -if employee.twitter
           %li.twitter
             %a{:href => "http://twitter.com/#{employee.twitter}", :target => "_blank"} Twitter
+        -if !employee.posts.empty?
+          %li.twitter
+            %a{:href => by_author_path(employee.slug)} Blog posts
   .modal-body
     %p.bio
       =employee.bio

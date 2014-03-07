@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  caches_page :robots
 
   def index
     if mobile_request? || tablet_request?
@@ -31,6 +32,12 @@ class HomeController < ApplicationController
     else
       @message = Message.new
     end
+  end
+
+  def robots
+    robot_type = ENV["DISABLE_ROBOTS"] == "true" ? "staging" : "production"
+    robots = File.read(Rails.root + "config/robots/robots.#{robot_type}.txt")
+    render :text => robots, :layout => false, :content_type => "text/plain"
   end
 
 end
