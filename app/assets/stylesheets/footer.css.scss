@@ -151,6 +151,24 @@ footer {
 
 @media (min-width: $desktop-view-size) {
 
+  #together {
+    h3 {
+      width: 660px !important;
+      display: inline !important;
+      float: left !important;
+    }
+  }
+
+  #work-together {
+    width: 24% !important;
+    display: inline !important;
+    float: right !important;
+
+    a {
+      margin-top: 0 !important;
+    }
+  }
+
   #footer-logo {
     width: 70px;
     margin-top: 0px !important;
