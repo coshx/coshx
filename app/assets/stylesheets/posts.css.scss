@@ -6,14 +6,14 @@
   background: $grey-white;
 
   h3 {
-    font-size: 42px;
+    font-size: 42px !important;
     a {
       color: $dark-grey;
     }
   }
   h2 {
     text-align: left;
-    font-size: 22px;
+    font-size: 22px !important;
     a {
       color: #38A8CC;
     }
