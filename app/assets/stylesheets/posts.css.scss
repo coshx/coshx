@@ -73,12 +73,12 @@
   background-color: $grey-white;
 
   h3 {
-    font-size: 42px;
+    font-size: 42px !important;
     color: $dark-grey;
   }
   h2 {
     text-align: left;
-    font-size: 22px;
+    font-size: 22px !important;
     margin-top: 30px;
     margin-bottom: 30px;
     a {
