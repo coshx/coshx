@@ -14,3 +14,4 @@
 //x require contenteditable/contenteditable
 //= require turbolinks
 //= require bootstrap_modal_permalinks
+//= require image_upload

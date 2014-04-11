@@ -1,5 +1,5 @@
 function imgurUploadFeature() {
-	var area = document.getElementById('post_body'); 
+	var area = $('#post_body')[0];
     var imgurIndicator = $('#uploadIndicator');
     var supportIndicator = $('#supportIndicator');
     var supported = true;
@@ -19,10 +19,8 @@ function imgurUploadFeature() {
         });
         if (!supported) {
             supportIndicator.css("color","#E04C7E");
-        } else {
-            supportIndicator.css("color","#00F000");
+            supportIndicator.text("Sorry, dragging images into here is not currently supported. Post them manually to ")
         }
-        supportIndicator.css("cursor","help");
     }
 
     function readFiles(files) {
@@ -78,18 +76,6 @@ function imgurUploadFeature() {
         readFiles(e.dataTransfer.files);
     }
 
-    $('#supportIndicator').mouseover(function() {
-        if (supported) {
-            $('#message').text("Your browser supports drag and drop file uploads.");
-        } else if (!supported) {
-            $('#message').text("Your browser does not support drag and drop file uploads.");
-        }
-        $('#message').css("display","inline");
-    });
-
-    $('#supportIndicator').mouseout(function() {
-        $('#message').css("display","none");
-    });
     testSupport();
 }
 $(document).ready(function() {
