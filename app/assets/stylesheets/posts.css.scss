@@ -6,7 +6,7 @@
   background: $grey-white;
 
   h3 {
-    font-size: 42px;
+    font-size: 42px !important;
     a {
       color: $dark-grey;
     }
@@ -73,7 +73,7 @@
   background-color: $grey-white;
 
   h3 {
-    font-size: 42px;
+    font-size: 42px !important;
     color: $dark-grey;
   }
   h2 {
