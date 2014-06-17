@@ -5,7 +5,7 @@ describe "home/about" do
     before do
       @post = FactoryGirl.build :post
       @admin = FactoryGirl.create(:admin, posts: [@post], position: "engineering guru",
-                                 twitter: "mytwitter", github: "mygithub", linked_in: "mylinkedin")
+                                 twitter: "mytwitter", github: "mygithub", linked_in: "mylinkedin", alumni:false)
       @team = [@admin]
     end
 

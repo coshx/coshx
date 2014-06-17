@@ -7,6 +7,14 @@ module HomeHelper
 		return content.html_safe
 	end
 
+	def render_alumni
+		content = ''
+		@alumni.each_slice(6) do |row|
+			content << render_team_members(row)
+		end
+		return content.html_safe
+	end
+	
 private
 	def render_team_members(row)
 		content_tag('div', :id => 'team-row', :class => 'row') do

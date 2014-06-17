@@ -11,23 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140219234415) do
+ActiveRecord::Schema.define(:version => 20140617154306) do
 
   create_table "admins", :force => true do |t|
-    t.string   "email",                                 :default => "",                                               :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "",                                               :null => false
+    t.string   "email",                  :default => "",                                         :null => false
+    t.string   "encrypted_password",     :default => "",                                         :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                         :default => 0
+    t.integer  "sign_in_count",          :default => 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                                                     :null => false
+    t.datetime "updated_at",                                                                     :null => false
     t.string   "name"
-    t.text     "bio",                                   :default => "I''''''''m a developer at Coshx and I love it!"
+    t.text     "bio",                    :default => "I''m a developer at Coshx and I love it!"
     t.string   "twitter"
     t.string   "github"
     t.string   "img"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20140219234415) do
     t.string   "position"
     t.string   "last_name"
     t.string   "linked_in"
+    t.boolean  "alumni",                 :default => false
   end
 
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
@@ -53,21 +54,12 @@ ActiveRecord::Schema.define(:version => 20140219234415) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "ideas", :force => true do |t|
-    t.integer  "author_id"
-    t.string   "title"
-    t.text     "description"
-    t.integer  "up_votes",    :default => 0
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
-  end
-
   create_table "jobs", :force => true do |t|
     t.string   "title",       :null => false
     t.text     "description", :null => false
     t.datetime "posted_on"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.boolean  "filled"
     t.string   "blog_url"
   end
@@ -91,8 +83,8 @@ ActiveRecord::Schema.define(:version => 20140219234415) do
     t.string   "title",      :null => false
     t.text     "body",       :null => false
     t.integer  "author_id",  :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.datetime "posted_on"
     t.string   "permalink"
   end
@@ -102,12 +94,11 @@ ActiveRecord::Schema.define(:version => 20140219234415) do
   create_table "projects", :force => true do |t|
     t.string   "title"
     t.text     "product_description"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
     t.string   "picture"
     t.boolean  "featured"
     t.string   "url"
-    t.boolean  "visible",             :default => false
     t.text     "project_description"
     t.text     "result_description"
     t.string   "background_color"
@@ -131,8 +122,8 @@ ActiveRecord::Schema.define(:version => 20140219234415) do
   create_table "services", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "sort_order"
   end
 

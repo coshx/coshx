@@ -14,7 +14,9 @@ describe HomeController do
     it "queries for admins" do
       get :about
       admins = assigns :team
-      admins.to_sql.should == 'SELECT "admins".* FROM "admins"  WHERE "admins"."deleted_at" IS NULL ORDER BY last_name'
+      admins.to_sql.should == 'SELECT "admins".* FROM "admins"  WHERE "admins"."deleted_at" IS NULL AND "admins"."alumni" = "f" ORDER BY last_name'
+      alumni_admins = assigns :alumni
+      alumni_admins.to_sql.should == 'SELECT "admins".* FROM "admins"  WHERE "admins"."deleted_at" IS NULL AND "admins"."alumni" = "t" ORDER BY last_name'
     end
   end
 

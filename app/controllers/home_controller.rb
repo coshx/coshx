@@ -17,7 +17,8 @@ class HomeController < ApplicationController
   def blog; end
 
   def about
-    @team = Admin.order :last_name
+    @team = Admin.where(alumni:false).order(:last_name)
+    @alumni = Admin.where(alumni:true).order(:last_name)
   end
 
   def profile
