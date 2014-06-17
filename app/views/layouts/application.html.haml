@@ -4,7 +4,7 @@
     %title= title(params['controller'], params['action'])
     %meta{:name => "google-site-verification", :content => "GG9HzTQhQZszRRYo-W_el_Dh1LQs-3SQOuCzZS88FvI"}
     %meta{:charset => "UTF-8"}
-    %link{:rel => "icon",:type => "image/png", :src => asset_path("favicon.png")}
+    %link{:rel => "icon",:type => "image/png", :href => asset_path("favicon.png")}
     %script{:src => "http://maps.googleapis.com/maps/api/js?sensor=false"}
     = render "shared/fonts"
     = stylesheet_link_tag "application"
@@ -15,7 +15,6 @@
     = render "shared/google_analytics"
     = render "layouts/disqus_dev_mode" if Rails.env.development? || Rails.env.test?
     = auto_discovery_link_tag :atom, "/feed"
-    = favicon_link_tag
     = render "shared/facebook_meta", :image => yield(:image), :description => yield(:description), :title => yield(:title)
 
     - if controller.action_name == 'competition'
