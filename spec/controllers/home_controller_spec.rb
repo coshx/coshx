@@ -14,13 +14,13 @@ describe HomeController do
     it "queries for team members" do
       get :about
       admins = assigns :team
-      admins.to_sql.should == 'SELECT "admins".* FROM "admins"  WHERE "admins"."deleted_at" IS NULL AND "admins"."alumni" = "f" ORDER BY last_name'
+      admins.to_sql.should == %q(SELECT "admins".* FROM "admins"  WHERE "admins"."deleted_at" IS NULL AND "admins"."alumni" = 'f' ORDER BY last_name)
     end
 
     it "queries for alumni" do
       get :about
       admins = assigns :alumni
-      admins.to_sql.should == 'SELECT "admins".* FROM "admins"  WHERE "admins"."deleted_at" IS NULL AND "admins"."alumni" = "t" ORDER BY last_name'
+      admins.to_sql.should == %q(SELECT "admins".* FROM "admins"  WHERE "admins"."deleted_at" IS NULL AND "admins"."alumni" = 't' ORDER BY last_name)
     end
   end
 
