@@ -4,6 +4,7 @@
     %title= title(params['controller'], params['action'])
     %meta{:name => "google-site-verification", :content => "GG9HzTQhQZszRRYo-W_el_Dh1LQs-3SQOuCzZS88FvI"}
     %meta{:charset => "UTF-8"}
+    %link{:rel => "icon",:type => "image/png", :src => asset_path("favicon.png")}
     %script{:src => "http://maps.googleapis.com/maps/api/js?sensor=false"}
     = render "shared/fonts"
     = stylesheet_link_tag "application"

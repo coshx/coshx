@@ -3,7 +3,8 @@
 #member-info
   %h7
     = link_to(person.name, "#", {"data-target" => ".#{person.slug}", "data-toggle" => "modal"})
-    = render partial: "employee", locals: {employee: person}
+    - if !person.alumni?
+      = render partial: "employee", locals: {employee: person}
   %br
   %h8 
     = person.position
