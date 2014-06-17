@@ -7,6 +7,7 @@ describe "home/about" do
       @admin = FactoryGirl.create(:admin, posts: [@post], position: "engineering guru",
                                  twitter: "mytwitter", github: "mygithub", linked_in: "mylinkedin", alumni:false)
       @team = [@admin]
+      @alumni = []
     end
 
     it "renders name, position, twitter, linkedin, github, and link to blog" do
@@ -28,12 +29,34 @@ describe "home/about" do
           position:   "thisismyposition",
         )
       ])
+      @alumni = []
     end
 
     it "renders name and position but none of twitter, linkedin, github, or blog posts" do
       render
       expect(rendered).to include("thisismyname")
       expect(rendered).to include("thisismyposition")
+
+      rendered.should_not match /Github/i
+      rendered.should_not match /LinkedIn/i
+      rendered.should_not match /Twitter/i
+      rendered.should_not match /\/posts/i
+    end
+  end
+
+  context "user is an alumni" do
+    before do
+      @post = FactoryGirl.build :post
+      @admin = FactoryGirl.create(:admin, posts: [@post], position: "engineering guru",
+                                 twitter: "mytwitter", github: "mygithub", linked_in: "mylinkedin", alumni:true, name:"thisismyname")
+      @team = []
+      @alumni = [@admin]
+    end
+
+    it "renders name and position but not modal" do
+      render
+      expect(rendered).to include("thisismyname")
+      expect(rendered).to include("engineering guru")
 
       rendered.should_not match /Github/i
       rendered.should_not match /LinkedIn/i
