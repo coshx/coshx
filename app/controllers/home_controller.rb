@@ -21,6 +21,9 @@ class HomeController < ApplicationController
     @alumni = Admin.where(alumni:true).order(:last_name)
   end
 
+  def approach
+  end
+
   def profile
     @folk = Admin.find_by_slug(params[:slug]) || NullAdmin.instance
     @other_folks = Admin.where("slug != '#{params[:slug]}'")
