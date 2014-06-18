@@ -43,6 +43,7 @@ module ApplicationHelper
       "home" => {
         "index"       => "Software Development and Consulting for startups and the enterprise",
         "about"       => "Over 80 years of combined experience with Ruby on Rails web applications",
+        "approach"    => "A highly iterative process focused on the needs of your buisness and customers",
         "services"    => "Web application consulting in San Francisco, Boulder, Charlottesville and Austin",
         "contact_us"  => "Start your web or mobile application project today by contacting Coshx",
         "careers"     => "Build web and mobile applications as a Coshx team member"
