@@ -10,7 +10,7 @@ module HomeHelper
 	def render_alumni
 		content = ''
 		@alumni.each_slice(6) do |row|
-			content << render_team_members(row)
+			content << render_alumni_rows(row)
 		end
 		return content.html_safe
 	end
@@ -18,6 +18,14 @@ module HomeHelper
 private
 	def render_team_members(row)
 		content_tag('div', :id => 'team-row', :class => 'row') do
+			row.map do |person|
+				content_tag('div', render_team_member(person), :class => ['column', 'two', 'mobile-two'])
+			end.join.html_safe
+		end
+	end
+
+	def render_alumni_rows(row)
+		content_tag('div', :id => 'alumni-row', :class => 'row') do
 			row.map do |person|
 				content_tag('div', render_team_member(person), :class => ['column', 'two', 'mobile-two'])
 			end.join.html_safe

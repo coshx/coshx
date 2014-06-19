@@ -19,6 +19,11 @@ describe "home/about" do
       rendered.should match /<a href=\'#{@admin.linked_in}\' target=\'_blank\'>LinkedIn<\/a>/
       rendered.should match /Blog posts/
     end
+
+    it "does not render alumni" do
+      render
+      rendered.should_not have_selector("div#alumni-row")
+    end
   end
 
   context "linked_in, twitter, github, and blog posts are absent" do
@@ -44,16 +49,28 @@ describe "home/about" do
     end
   end
 
-  context "user is an alumni" do
+  context "a user is an alumni" do
     before do
       @post = FactoryGirl.build :post
       @admin = FactoryGirl.create(:admin, posts: [@post], position: "engineering guru",
                                  twitter: "mytwitter", github: "mygithub", linked_in: "mylinkedin", alumni:true, name:"thisismyname")
-      @team = []
+      @member = FactoryGirl.create(:admin, position: "Code Robot", name:"Bender", alumni:false)
+      
+      @team = [@member]
       @alumni = [@admin]
     end
 
-    it "renders name and position but not modal" do
+    it "renders them under alumni" do
+      render
+      expect(rendered).to have_selector("div#alumni-row")
+    end
+
+    it "includes team member under team" do
+      render
+      expect(rendered).to have_selector("div#team-row")
+    end
+
+    it "renders alumni name and position but not modal" do
       render
       expect(rendered).to include("thisismyname")
       expect(rendered).to include("engineering guru")

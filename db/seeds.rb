@@ -14,6 +14,19 @@ end
 demo.save!
 puts "Created Demo User"
 
+alumni = Admin.find_or_create_by_email("user@example.org") do  |user|
+  user.name = 'User'
+  user.last_name = 'Demo'
+  user.password = 'password'
+  user.twitter = ''
+  user.github = ''
+  user.position = 'Code Robot'
+  user.bio = 'Demoing being an Alumni all my life'
+  user.alumni = true
+end
+alumni.save!
+puts "Created Demo Alumni"
+
 
 #BLOG POSTS
 puts "Creating POSTS..."
