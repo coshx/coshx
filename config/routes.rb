@@ -12,7 +12,8 @@ Coshx::Application.routes.draw do
 
   scope "/blog" do
     get '(/author/:author_slug)'   => 'posts#index', :as => :by_author
-    get ':year/:month/:day/:title' => 'posts#show',  :as => :show_post
+    # get ':year/:month/:day/:title' => 'posts#show',  :as => :show_post
+    get ':seo_title' => 'posts#show',  :as => :show_post
     get '(/:year(/:month(/:day)))' => 'posts#index', :as => :blog_posts
   end
 

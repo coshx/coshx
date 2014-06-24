@@ -8,7 +8,8 @@
         - link_text = p.title
 
         - if p.published?
-          %h3= link_to link_text.html_safe, show_post_path(p.permalink_attributes), :title => "Read More"
+          / %h3= link_to link_text.html_safe, show_post_path(p.permalink_attributes), :title => "Read More"
+          %h3= link_to link_text.html_safe, show_post_path(p.seo_permalink_attributes), :title => "Read More"
           %h2
             Written by
             = link_to p.author.name, by_author_path(p.author.slug)

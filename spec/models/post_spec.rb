@@ -43,6 +43,23 @@ describe Post do
     it { described_class.build_permalink(params).should == '2012/01/13/hello-world' }
   end
 
+  describe "#seo_permalink_attributes" do
+    subject { build_stubbed :published_post, :seo_title => "This'll Exercise Everything & More?" }
+
+    it { subject.seo_permalink_attributes[:seo_title].should == 'thisll-exercise-everything-more' }
+  end
+
+  describe ".seo_build_permalink" do
+    let(:params) do
+      {
+        :seo_title => 'hello-world'
+      }
+    end
+    # it { described_class.build_permalink(params).should == 'hello-world' }
+    it { described_class.build_seo_permalink(params).should == 'hello-world' }
+
+  end
+
   describe ".build_like_permalink" do
     let(:params) { {:year => '2012'} }
     it { described_class.build_like_permalink(params).should == '2012/%/%/%' }

@@ -37,7 +37,8 @@ module Tweeter
 
   private
   def self.build_url(post)
-    options = post.permalink_attributes.merge(:host => ENV['COSHX_HOST'])
+    # options = post.permalink_attributes.merge(:host => ENV['COSHX_HOST'])
+    options = post.seo_permalink_attributes.merge(:host => ENV['COSHX_HOST'])
     Rails.application.routes.url_helpers.show_post_url(options)
   end
 

@@ -54,9 +54,11 @@ describe Tweeter do
   describe "random tweet should contain the" do
     let(:author_name) { 'Calvin' }
     let(:title)  { 'Why is Twitter always down?' }
+    let(:seo_title)  { 'Why is Twitter always down?' }
+
     let(:url)    do
       Rails.application.routes.url_helpers.show_post_url(
-                  post.permalink_attributes.merge(:host => ENV['COSHX_HOST']))
+                  post.seo_permalink_attributes.merge(:host => ENV['COSHX_HOST']))
     end
     let(:author) { build :author, name: author_name}
     let(:post)   { build :post, title: title, posted_on: Date.parse("5/5/12")}

@@ -7,7 +7,8 @@ describe "Blog" do
 
     describe "GET post_path" do
       it "links to the authors blog/index page using a URI-happy version of the author's name" do
-        get show_post_path(post.permalink_attributes)
+        # get show_post_path(post.permalink_attributes)
+        get show_post_path(post.seo_permalink_attributes)
 
         response.body.should include "/blog/author/#{post.author.slug}"
       end
@@ -21,7 +22,8 @@ describe "Blog" do
       it "shows the blog post" do
         response.body.should include "/blog/author/#{post.author.slug}"
         response.body.should include post.title
-        response.body.should include show_post_path(post.permalink_attributes)
+        # response.body.should include show_post_path(post.permalink_attributes)
+        response.body.should include show_post_path(post.seo_permalink_attributes)      
       end
       
       it "displays author information" do

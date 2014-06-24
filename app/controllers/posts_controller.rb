@@ -34,7 +34,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post ||= Post.where(:permalink => Post.build_permalink(params)).first
+    # @post ||= Post.where(:permalink => Post.build_permalink(params)).first
+    @post ||= Post.where(:permalink => Post.build_seo_permalink(params)).first
+    
     raise ActiveRecord::RecordNotFound if @post.nil?
   end
 
@@ -73,7 +75,8 @@ class PostsController < ApplicationController
     if params[:year].present? && params[:year].to_i < 1000
       @post = Post.find params[:year]
       if @post.published?
-        redirect_to show_post_path(@post.permalink_attributes), :status => :moved_permanently
+        # redirect_to show_post_path(@post.permalink_attributes), :status => :moved_permanently
+        redirect_to show_post_path(@post.seo_permalink_attributes), :status => :moved_permanently
       else
         redirect_to @post, :status => :moved_permanently
       end
@@ -84,7 +87,8 @@ class PostsController < ApplicationController
     if params[:id].present?
       @post = Post.find params[:id]
       if @post.published?
-        redirect_to show_post_path(@post.permalink_attributes), :status => :moved_permanently
+        # redirect_to show_post_path(@post.permalink_attributes), :status => :moved_permanently
+        redirect_to show_post_path(@post.seo_permalink_attributes), :status => :moved_permanently
       end
     end
   end

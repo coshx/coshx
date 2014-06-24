@@ -44,7 +44,9 @@ describe PostsController do
   describe "GET :show" do
     context "with permalink" do
       context "of created post" do
-        before(:each) { get :show, blog_post.permalink_attributes }
+        # before(:each) { get :show, blog_post.permalink_attributes }
+        before(:each) { get :show, blog_post.seo_permalink_attributes }
+        
         it { should respond_with :success }
       end
 

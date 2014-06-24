@@ -16,7 +16,7 @@ class Post < ActiveRecord::Base
 
   validates_presence_of :title, :body, :author
 
-  before_save :set_permalink
+  before_save :set_permalink, :set_seo_permalink
   after_update :send_tweet
 
   def author 
@@ -40,8 +40,18 @@ class Post < ActiveRecord::Base
     }
   end
 
+  def seo_permalink_attributes
+    {
+      :seo_title => seo_title.downcase.gsub(/[^\w\s]/, '').gsub(/\s+/, '-')
+    }
+  end
+
   def self.build_permalink(params)
     "#{params[:year]}/#{params[:month]}/#{params[:day]}/#{params[:title]}"
+  end
+
+  def self.build_seo_permalink(params)
+    "#{params[:seo_title]}"
   end
 
   def self.build_like_permalink(params)
@@ -58,6 +68,12 @@ class Post < ActiveRecord::Base
   def set_permalink
     if published?
       self.permalink = self.class.build_permalink permalink_attributes
+    end
+  end
+
+  def set_seo_permalink
+    if published?
+      self.permalink = self.class.build_seo_permalink seo_permalink_attributes
     end
   end
 

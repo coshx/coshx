@@ -2,6 +2,7 @@ FactoryGirl.define do
 
   factory :post do
     sequence(:title) { |i| "Title #{i}" }
+    sequence(:seo_title) { |i| "Seo Title #{i}" }
     author
     body <<-EOF
 ### Markdown header
