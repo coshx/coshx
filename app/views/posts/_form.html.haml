@@ -6,7 +6,12 @@
         - @post.errors.full_messages.each do |msg|
           %li= msg
 
+  -if params[:action] == "edit" || params[:action] == "update"
+    = f.label "This is what will show on the url"
+    = f.text_field :seo_title, :placeholder => "SEO Title"
+  = f.label "This is the title of the blog post"
   = f.text_field :title, :placeholder => "Post Title"
+  = f.label "This is the body of the blog post"
   = f.text_area :body, :placeholder => "Post Content"
   %p.graytext{:style => "font-size:15px;"}
     %span#supportIndicator Drag an image from your desktop into the text area to upload it to

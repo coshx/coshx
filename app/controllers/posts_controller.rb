@@ -24,7 +24,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(:author => current_admin, :title => params[:post][:title], :body => params[:post][:body])
-
+    @post.seo_title = @post.title
     if @post.save
       redirect_to admin_root_path, notice: 'Blog post saved.'
     else
