@@ -4,8 +4,9 @@ describe Tweeter do
   let(:post) { mock_model(Post) }
   # let(:author) {FactoryGirl.create(:author)}
   # let(:post) { FactoryGirl.build(:published_post, author: author) }
-  let(:permalink_attrs) { {:year => '2012', :month => '1', :day => '1',
-                           :title => 'Title!'} }
+  # let(:permalink_attrs) { {:year => '2012', :month => '1', :day => '1',
+  #                          :title => 'Title!'} }
+  let(:seo_permalink_attrs) { {:seo_title => 'Title!'} }
 
   before do
     ENV['COSHX_HOST'] = 'example.com'
@@ -24,7 +25,9 @@ describe Tweeter do
 
       it "returns the random tweet" do
         described_class.should_not_receive :short_tweet
-        post.should_receive(:permalink_attributes).and_return(permalink_attrs)
+        # post.should_receive(:permalink_attributes).and_return(permalink_attrs)
+        post.should_receive(:seo_permalink_attributes).and_return(seo_permalink_attrs)
+        
         described_class.build_tweet(post).should == 'hello'
       end
     end
@@ -36,7 +39,9 @@ describe Tweeter do
       end
 
       it "returns a short tweet" do
-        post.should_receive(:permalink_attributes).and_return(permalink_attrs)
+        # post.should_receive(:permalink_attributes).and_return(permalink_attrs)
+        post.should_receive(:seo_permalink_attributes).and_return(seo_permalink_attrs)
+        
         described_class.build_tweet(post).should == 'hello'
       end
     end
