@@ -26,19 +26,17 @@ function imgurUploadFeature() {
     function readFiles(files) {
         var fr = new FileReader();
         fr.onload = function(event) {
-            var bsfData = event.target.result.slice(event.target.result.search(/\,/)+1,event.target.result.length);
-            var dat = {
-                image:bsfData,
-                type:'base64'
-            };
+            var Tresult = event.target.result;
+            var datatype = Tresult.slice(Tresult.search(/\:/)+1,Tresult.search(/\;/));
+            var blob = Tresult.replace(/^data\:image\/\w+\;base64\,/, '');
             $.ajax({
                 type:"POST",
-                data:dat,
-                url:'https://api.imgur.com/3/image',
-                headers: {
-                    Authorization: "Client-ID 6e0f35eb9a323aa"
+                data:{
+                    file:blob,
+                    mimeType: datatype,
+                    extension:datatype.slice(datatype.search(/\//)+1)
                 },
-                dataType: "json",
+                url:'../uploads/images',
                 success:function(msg) {
                     handleStatus(msg,"success");
                 },
@@ -46,6 +44,7 @@ function imgurUploadFeature() {
                     handleStatus(errormsg,"error");
                 }
             });
+
         }
         fr.readAsDataURL(files[0]);
     }
@@ -53,33 +52,45 @@ function imgurUploadFeature() {
     function handleStatus(msg,type) {
         if (type === "success") {
             imgurIndicator.css("color","#85bf25");
-            area.value += "<img src='"+msg.data.link+"'>";
+            area.value += "<img src='"+msg+"'>";
         }
         if (type === "error") {
             imgurIndicator.css("color","#E04C7E");
             console.log(msg);
-            alert("Sorry, there was an error with your request:" + msg.responseText);
+            alert("Sorry, there was an error with your request:" + msg);
         }
     }
 
     area.ondragover = function(e) {
+        e.stopPropagation();
         e.preventDefault();
         $(this).addClass('hover');
     }
     area.ondragend = function(e) {
+        e.stopPropagation();
         e.preventDefault();
         $(this).removeClass('hover');
     }
     area.ondrop = function(e) {
         if ($(this).hasClass('hover')) $(this).removeClass('hover')
+        e.stopPropagation();
         e.preventDefault();
+        console.log(e.dataTransfer.files);
         readFiles(e.dataTransfer.files);
     }
-
     testSupport();
 }
 $(document).ready(function() {
 	if ($('#post_body').length > 0) {
 		imgurUploadFeature();
+        console.log("Document ready");
 	}
 })
+function dataURItoBlob(dataURI, dataType) {
+    var binary = atob(dataURI.split(',')[1]);
+    var array = [];
+    for(var i = 0; i < binary.length; i++) {
+        array.push(binary.charCodeAt(i));
+    }
+    return new Blob([new Uint8Array(array)], {type: dataType});
+}
