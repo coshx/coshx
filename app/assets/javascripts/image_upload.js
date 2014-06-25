@@ -1,96 +1,55 @@
-function imgurUploadFeature() {
-	var area = $('#post_body')[0];
-    var imgurIndicator = $('#uploadIndicator');
-    var supportIndicator = $('#supportIndicator');
-    var supported = true;
-
-    var tests = {
-        filereader:typeof FileReader != 'undefined',
-        dnd:'draggable' in document.createElement('textarea'),
-        formdata:!!window.FormData
-    }
-
-    function testSupport() {
-        "filereader formdata".split(' ').forEach(function(api) {
-            if (tests[api] === false) {
-                supported = false;
-                console.log(api)
-            } 
-        });
-        if (!supported) {
-            supportIndicator.css("color","#E04C7E");
-            supportIndicator.text("Sorry, dragging images into here is not currently supported. Post them manually to ")
+var imageUpload = {
+    area: null,
+    filereader: null,
+    init:function() {
+        imageUpload.area = $('#post_body')[0];
+        imageUpload.filereader = new FileReader();
+        imageUpload.area.ondrop = function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            imageUpload.readFiles(e.dataTransfer.files);
         }
-    }
-
-    function readFiles(files) {
-        var fr = new FileReader();
-        fr.onload = function(event) {
-            var Tresult = event.target.result;
-            var datatype = Tresult.slice(Tresult.search(/\:/)+1,Tresult.search(/\;/));
-            var blob = Tresult.replace(/^data\:image\/\w+\;base64\,/, '');
+    },
+    readFiles:function(files) {
+        imageUpload.filereader.onload = function(event) {
+            var event_result = event.target.result;
+            var datatype = event_result.slice(event_result.search(/\:/)+1,event_result.search(/\;/));
+            var base64_data = event_result.replace(/^data\:image\/\w+\;base64\,/, '');
+            var image_extension = datatype.slice(datatype.search(/\//)+1)
             $.ajax({
                 type:"POST",
                 data:{
-                    file:blob,
+                    file: base64_data,
                     mimeType: datatype,
-                    extension:datatype.slice(datatype.search(/\//)+1)
+                    extension: image_extension
                 },
                 url:'../uploads/images',
                 success:function(msg) {
-                    handleStatus(msg,"success");
+                    imageUpload.handleStatus(msg,1);
                 },
                 error:function(errormsg) {
-                    handleStatus(errormsg,"error");
+                    imageUpload.handleStatus(errormsg,0);
                 }
             });
-
         }
-        fr.readAsDataURL(files[0]);
-    }
-
-    function handleStatus(msg,type) {
-        if (type === "success") {
-            imgurIndicator.css("color","#85bf25");
-            area.value += "<img src='"+msg+"'>";
+        imageUpload.filereader.readAsDataURL(files[0]);
+    },
+    handleStatus: function(message,status) {
+        switch (status) {
+            case 1:
+                imageUpload.area.value += '<img src="' + message + '">';
+                break;
+            case 0:
+                alert("Sorry, there was an error: " + message);
+                break;
+            default:
+                console.log(status + "," + message);
         }
-        if (type === "error") {
-            imgurIndicator.css("color","#E04C7E");
-            console.log(msg);
-            alert("Sorry, there was an error with your request:" + msg);
-        }
     }
-
-    area.ondragover = function(e) {
-        e.stopPropagation();
-        e.preventDefault();
-        $(this).addClass('hover');
-    }
-    area.ondragend = function(e) {
-        e.stopPropagation();
-        e.preventDefault();
-        $(this).removeClass('hover');
-    }
-    area.ondrop = function(e) {
-        if ($(this).hasClass('hover')) $(this).removeClass('hover')
-        e.stopPropagation();
-        e.preventDefault();
-        console.log(e.dataTransfer.files);
-        readFiles(e.dataTransfer.files);
-    }
-    testSupport();
 }
+
 $(document).ready(function() {
 	if ($('#post_body').length > 0) {
-		imgurUploadFeature();
-        console.log("Document ready");
+		imageUpload.init();
 	}
 })
-function dataURItoBlob(dataURI, dataType) {
-    var binary = atob(dataURI.split(',')[1]);
-    var array = [];
-    for(var i = 0; i < binary.length; i++) {
-        array.push(binary.charCodeAt(i));
-    }
-    return new Blob([new Uint8Array(array)], {type: dataType});
-}

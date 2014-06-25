@@ -1,5 +1,5 @@
+include PostsHelper
 class PostsController < ApplicationController
-
   prepend_before_filter :authenticate_admin!, :except => [:index, :show, :feed]
   before_filter :redirect_old_blog_url, :only => :index
   before_filter :redirect_published_posts, :only => :show
@@ -65,6 +65,14 @@ class PostsController < ApplicationController
     @title = "Coshx Labs Blog"
     @feed_url = feed_url
     @posts = Post.published
+  end
+
+  def upload_image
+    data = Base64.decode64(params[:file].to_s)
+    type = params[:mimeType].to_s
+    extension = params[:extension].to_s
+    url = get_s3_url(data,type,extension)
+    render text: url
   end
 
   private
