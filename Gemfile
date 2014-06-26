@@ -26,6 +26,7 @@ gem 'jquery-rails', '~> 2.3.0'
 gem "haml-rails"
 gem "gravatar-ultimate"
 gem "kaminari"
+gem 'jquery-ui-rails'
 
 # pictures
 gem 'carrierwave'

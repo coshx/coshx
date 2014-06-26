@@ -10,4 +10,27 @@
   = f.text_area :body, :placeholder => "Post Content"
   %p.graytext{:style => "font-size:15px;"}
     %span#supportIndicator Drag an image from your desktop into the text area to upload it to Amazon S3.
+    
   = f.submit "Save"
+%div.hidden#dialog-form{:title => "Insert Image"}
+  %form
+    %fieldset#imageset
+      %label{:for => "URL"} URL
+      %input{:type => "text", :name=>"url", :id=>"url", :class=> "text ui-widget-content ui-corner-all"}
+      %label{:for => "Width"} Width (in px)
+      %input{:type => "text", :name=>"width", :id=>"width", :class=> "text ui-widget-content ui-corner-all"}
+      %label{:for => "Height"} Height (in px)
+      %input{:type => "text", :name=>"height", :id=>"height", :class=> "text ui-widget-content ui-corner-all"}
+      %label{:for => "Padding"} Padding (in px)
+      %input{:type => "text", :name=>"padding", :id=>"padding", :class=> "text ui-widget-content ui-corner-all"}
+      %label{:for => "Title"} Title
+      %input{:type => "text", :name=>"title", :id=>"title", :class=> "text ui-widget-content ui-corner-all"}
+      %label{:for => "Alt Title"} Alt Title
+      %input{:type => "text", :name=>"alt_title", :id=>"alt_title", :class=> "text ui-widget-content ui-corner-all"}
+      %label{:for => "Description"} Description
+      %input{:type => "text", :name=>"description", :id=>"description", :class=> "text ui-widget-content ui-corner-all"}
+      %label{:for => "Float"} Float
+      %select{:name=> "float", :id => "float"}
+        %option{:value => "none"} None
+        %option{:value => "left"} Left
+        %option{:value => "right"} Right
