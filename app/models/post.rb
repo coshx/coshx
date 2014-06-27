@@ -14,9 +14,9 @@ class Post < ActiveRecord::Base
 
   attr_markdown :preview, :body
 
-  validates_presence_of :title, :body, :author, :seo_title
+  validates_presence_of :title, :body, :author#, :seo_title
 
-  before_save :set_permalink, :set_seo_permalink
+  before_save :set_permalink, :set_seo_permalink, :set_seo_title
   after_update :send_tweet
 
   def author 
@@ -74,6 +74,12 @@ class Post < ActiveRecord::Base
   def set_seo_permalink
     if published?
       self.permalink = self.class.build_seo_permalink seo_permalink_attributes
+    end
+  end
+
+  def set_seo_title
+    if self.seo_title.blank?
+      self.seo_title = self.title
     end
   end
 

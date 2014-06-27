@@ -23,8 +23,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(:author => current_admin, :title => params[:post][:title], :body => params[:post][:body])
-    @post.seo_title = @post.title
+    @post = Post.new(:author => current_admin, :title => params[:post][:title],  :body => params[:post][:body])
+    
+    # if @post.seo_title.nil?
+    #   @post.seo_title = @post.title
+    # end
+
     if @post.save
       redirect_to admin_root_path, notice: 'Blog post saved.'
     else
@@ -46,6 +50,9 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+    # if @post.seo_title.nil?
+    #   @post.seo_title = @post.title
+    # end
     if @post.update_attributes(params[:post])
       redirect_to @post, notice: 'Post was successfully updated.'
     else
@@ -88,7 +95,7 @@ class PostsController < ApplicationController
       @post = Post.find params[:id]
       if @post.published?
         # redirect_to show_post_path(@post.permalink_attributes), :status => :moved_permanently
-        redirect_to show_post_path(@post.seo_permalink_attributes), :status => :moved_permanently
+        redirect_to show_post_path(@post.seo_permalink_attributes)#, :status => :moved_permanently
       end
     end
   end
