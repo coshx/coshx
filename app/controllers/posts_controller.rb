@@ -71,7 +71,9 @@ class PostsController < ApplicationController
     data = Base64.decode64(params[:file].to_s)
     type = params[:mimeType].to_s
     extension = params[:extension].to_s
-    url = get_s3_url(data,type,extension)
+    name = generate_name extension
+    bucket = get_s3_bucket
+    url = get_s3_url(data, type, name, bucket)
     render text: url
   end
 
