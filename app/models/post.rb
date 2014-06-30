@@ -14,9 +14,10 @@ class Post < ActiveRecord::Base
 
   attr_markdown :preview, :body
 
-  validates_presence_of :title, :body, :author#, :seo_title
+  validates_presence_of :title, :body, :author, :seo_title
 
-  before_save :set_permalink, :set_seo_permalink, :set_seo_title
+  before_save :set_permalink, :set_seo_permalink#, :set_seo_title
+  before_validation :set_seo_title
   after_update :send_tweet
 
   def author 

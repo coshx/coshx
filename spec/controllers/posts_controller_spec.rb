@@ -53,7 +53,8 @@ describe PostsController do
       context "of missing post" do
         let(:blog_post) { build :published_post }
         it "raises record not found" do
-          expect { get :show, blog_post.permalink_attributes }.
+          # expect { get :show, blog_post.permalink_attributes }.
+          expect { get :show, blog_post.seo_permalink_attributes }.
             to raise_error ActiveRecord::RecordNotFound
         end
       end
