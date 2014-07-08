@@ -15,8 +15,9 @@ class Post < ActiveRecord::Base
   attr_markdown :preview, :body
 
   validates_presence_of :title, :body, :author, :seo_title
+  validates_uniqueness_of :seo_title
 
-  before_save :set_permalink, :set_seo_permalink#, :set_seo_title
+  before_save :set_permalink, :set_seo_permalink
   before_validation :set_seo_title
   after_update :send_tweet
 
@@ -43,7 +44,9 @@ class Post < ActiveRecord::Base
 
   def seo_permalink_attributes
     {
-      :seo_title => seo_title.downcase.gsub(/[^\w\s]/, '').gsub(/\s+/, '-')
+      # :seo_title => seo_title.downcase.gsub(/[^\w\s]/, '').gsub(/\s+/, '-')
+      # :seo_title => seo_title.gsub(/[^\w\s]/, '').gsub(/\s+/, '-')
+      :seo_title => seo_title
     }
   end
 
@@ -74,7 +77,9 @@ class Post < ActiveRecord::Base
 
   def set_seo_permalink
     if published?
-      self.permalink = self.class.build_seo_permalink seo_permalink_attributes
+      # self.permalink = self.class.build_seo_permalink seo_permalink_attributes
+      # self.permalink = self.class.build_seo_permalink self.seo_title
+      self.permalink = self.seo_title
     end
   end
 
@@ -82,6 +87,15 @@ class Post < ActiveRecord::Base
     if self.seo_title.blank?
       self.seo_title = self.title
     end
+
+    # self.seo_title = self.seo_title.downcase.gsub(/[^\w\s]/, '').gsub(/\s+/, '-')
+    # self.seo_title.downcase.gsub(/[^\w\s]/, '').gsub(/\s+/, '-')
+    if !self.seo_title.blank?
+      # self.seo_title = self.seo_title.downcase.parameterize
+      self.seo_title = self.seo_title.downcase.gsub(/[^\w\s]/, '').gsub(/\s+/, '-')
+    end
+    # self.seo_title = self.seo_title.downcase
+    # self.seo_title.downcase
   end
 
   def send_tweet

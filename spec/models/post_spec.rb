@@ -45,9 +45,14 @@ describe Post do
   end
 
   describe "#seo_permalink_attributes" do
-    subject { build_stubbed :published_post, :seo_title => "This'll Exercise Everything & More?" }
+    # subject { build_stubbed :published_post, :seo_title => "This'll Exercise Everything & More?" }
+    let(:post1){ FactoryGirl.build(:post, :seo_title => "This'll Exercise Everything & More?") }
+    # post1.save
 
-    it { subject.seo_permalink_attributes[:seo_title].should == 'thisll-exercise-everything-more' }
+    # it { subject.seo_permalink_attributes[:seo_title].should == 'thisll-exercise-everything-more' }
+    it { 
+      post1.save
+      post1.seo_permalink_attributes[:seo_title].should == 'thisll-exercise-everything-more' }
   end
 
   describe ".seo_build_permalink" do
@@ -136,5 +141,17 @@ describe Post do
       post.author.should == author
     end
   end
+
+  # describe "#seo_title" do
+  #   let(:author) {FactoryGirl.create(:author)}
+  #   let(:post1){ FactoryGirl.create(:post, author: author, seo_title: "Google Url") }
+  #   let(:post2){ FactoryGirl.build(:post, author: author, seo_title: "Google Url") }
+
+  #   it "should be unique" do
+  #     post2.save
+  #     post2.should_not be_valid
+  #   end
+
+  # end
 
 end

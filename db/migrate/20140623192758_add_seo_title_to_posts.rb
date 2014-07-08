@@ -4,7 +4,8 @@ class AddSeoTitleToPosts < ActiveRecord::Migration
 
     Post.reset_column_information
     Post.find(:all).each do |p|
-    	p.seo_title = p.title
+    	# p.seo_title = p.title.downcase.parameterize
+    	p.seo_title = p.title.downcase.gsub(/[^\w\s]/, '').gsub(/\s+/, '-')
     	p.save
     end
     
