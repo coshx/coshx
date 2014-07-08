@@ -17,11 +17,19 @@ require 'capybara/poltergeist'
 # steps to use the XPath syntax.
 Capybara.default_selector = :css
 
-Capybara.register_driver :poltergeist_debug do |app|
+Capybara.register_driver :poltergeist do |app|
   Capybara::Poltergeist::Driver.new(app, :inspector => true)
 end
 
-Capybara.javascript_driver = :poltergeist_debug
+Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+end
+
+Capybara.javascript_driver = :poltergeist
+
+# Capybara.javascript_driver = :chrome
+
+
 
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how 
