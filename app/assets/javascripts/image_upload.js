@@ -80,7 +80,7 @@ var imageUpload = {
             return imageTag.outerHTML;
         }
         function createTitleMarkdown() {
-            var titleTag = "#### " + $('#title').val() + "  ";
+            var titleTag = "#### " + $('#title').val() + "  \n";
             return titleTag;
         }
         function createDescriptionMarkdown() {
