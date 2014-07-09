@@ -90,4 +90,7 @@ group :development, :test do
   gem 'pry'
   gem 'pry-nav'
   gem 'faker'
+  gem 'selenium-webdriver'
+  gem 'poltergeist'
 end
+

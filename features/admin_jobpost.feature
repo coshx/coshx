@@ -1,3 +1,4 @@
+@wip
 Feature: Admin job post functionality
   As an Admin user
   I want to administer job openings
@@ -7,7 +8,6 @@ Feature: Admin job post functionality
     Given testuser_1@coshx.com is a valid admin
     And there are no jobs
 
-  @wip
   Scenario: Admin makes job post
     Given I am not authenticated
     And I sign in as "testuser_1@coshx.com" / "password_1"

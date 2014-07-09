@@ -6,6 +6,7 @@ Feature: Admin blog post functionality
   Background:
     Given testuser_1@coshx.com is a valid admin
 
+  @javascript
   Scenario: Admin makes a blog post
     Given I sign in as "testuser_1@coshx.com" / "password_1"
     And twitter is configured
