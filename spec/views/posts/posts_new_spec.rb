@@ -1,8 +1,10 @@
 require 'spec_helper'
 
 describe "when a picture is dropped", :js => true do
+
 	before :each do
-		@admin = FactoryGirl.build(:admin)
+		@admin = FactoryGirl.build_stubbed(:admin)
+		AWS.stub!
 	end
 
 	it "does some stuff" do 
@@ -10,7 +12,8 @@ describe "when a picture is dropped", :js => true do
 		fill_in "Email", :with => @admin.email
 		fill_in "Password", :with => @admin.password
 		click_button "Sign in"
-
+		sleep(5)
+		page.should_not have_content("Sign in")
 		sleep(60)
 		#page.execute_script("seleniumUpload = window.$('<input/>').attr({id: 'seleniumUpload', type:'file'}).appendTo('body');")
 

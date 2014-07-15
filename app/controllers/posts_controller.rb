@@ -1,4 +1,5 @@
 include PostsHelper
+include AwsHelper
 class PostsController < ApplicationController
   prepend_before_filter :authenticate_admin!, :except => [:index, :show, :feed]
   before_filter :redirect_old_blog_url, :only => :index
@@ -72,8 +73,8 @@ class PostsController < ApplicationController
     type = params[:mimeType].to_s
     extension = params[:extension].to_s
     name = generate_name extension
-    bucket = get_s3_bucket
-    url = get_s3_url(data, type, name, bucket)
+    directory = get_s3_directory("coshx-blog-images")
+    url = get_s3_url(data, type, name, directory)
     render text: url
   end
 

@@ -5,6 +5,7 @@ Feature: Admin blog post functionality
 
   Background:
     Given testuser_1@coshx.com is a valid admin
+    And the proper s3 data structure exists
 
   @javascript
   Scenario: Admin makes a blog post
@@ -17,7 +18,11 @@ Feature: Admin blog post functionality
     And I should see "New Blog Post"
     When I fill in "post_title" with "post title"
     And I fill in "post_body" with "post body"
-    And I press "Save"
+    And I drag and drop on "post_body"
+    Then I should see "Insert Image"
+    When I press "Place the image"
+    Then I should see an image tag
+    When I press "Save"
     Then I should be on the dashboard page
     When I go to the blogs page
     Then I should see "Blog"

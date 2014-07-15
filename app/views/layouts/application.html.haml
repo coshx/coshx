@@ -46,6 +46,8 @@
           = render "layouts/top_section"
       - else
         #header-padding
+      .flash
+        = flash[:alert]
       = yield
       - unless should_not_display_any_footer_info
         - unless should_not_display_site_links

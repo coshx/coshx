@@ -1,5 +1,17 @@
+include AwsHelper
+
 Given /testuser_1@coshx.com is a valid admin$/ do
   FactoryGirl.create(:admin,:email =>"testuser_1@coshx.com", :password=> "password_1")
+end
+
+Given /the proper s3 data structure exists$/ do
+  Fog.mock!
+  ENV['S3_KEY'] = "S3_KEY"
+  ENV['S3_SECRET'] = "S3_SECRET"
+  connection.directories.create(
+    :key => "coshx-blog-images",
+    :public => true
+  )
 end
 
 Given /there are no jobs/   do

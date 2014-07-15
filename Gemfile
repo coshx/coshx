@@ -32,7 +32,6 @@ gem 'jquery-ui-rails'
 gem 'carrierwave'
 gem 'rmagick', '~> 2.13.2'
 gem 'fog'
-gem 'aws-sdk'
 
 #Social media is cool?
 gem "twitter"
