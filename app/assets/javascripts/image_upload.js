@@ -1,9 +1,11 @@
 var imageUpload = {
     area: null,
+    fileselect: null,
     filereader: null,
     form_dialog: null,
     init:function() {
         imageUpload.area = $('#post_body')[0];
+        imageUpload.fileselect = $('#files')[0];
         imageUpload.filereader = new FileReader();
         imageUpload.area.ondrop = function(e) {
             e.stopPropagation();
@@ -14,7 +16,11 @@ var imageUpload = {
         imageUpload.area.ondragover = function(e) {
             e.stopPropagation();
             e.preventDefault();
+            console.log(e.dataTransfer.dropEffect);
             e.dataTransfer.dropEffect = 'copy';
+        }
+        imageUpload.fileselect.onchange = function(e) {
+            imageUpload.readFiles(e.target.files);
         }
         imageUpload.form_dialog = $( "#dialog-form" ).dialog({
             autoOpen: false,
@@ -45,7 +51,7 @@ var imageUpload = {
                     mimeType: datatype,
                     extension: image_extension
                 },
-                url:'../uploads/images',
+                url:'/uploads/images',
                 success:function(msg) {
                     imageUpload.handleStatus(msg,1);
                 },
@@ -56,6 +62,7 @@ var imageUpload = {
         }
         imageUpload.filereader.readAsDataURL(files[0]);
     },
+
     handleStatus: function(message,status) {
         switch (status) {
             case 1:
@@ -124,6 +131,7 @@ var imageUpload = {
         checkEmptyAndPlace(appendItem,createTitleMarkdown(),$('#title').val());
         appendItem(createImageTag());
         checkEmptyAndPlace(appendItem,createDescriptionMarkdown(),$('#description').val());
+        imageUpload.fileselect.value = "";
         imageUpload.form_dialog.dialog("close");
         $('#supportIndicator').text("Finished.");
     },
@@ -135,9 +143,12 @@ var imageUpload = {
 
     }
 }
+var ready;
+ready = function() {
+    if ($('#post_body').length > 0) {
+        imageUpload.init();
+    }
+}
 
-$(document).ready(function() {
-	if ($('#post_body').length > 0) {
-		imageUpload.init();
-	}
-})
+$(document).ready(ready);
+$(document).on('page:load', ready);
