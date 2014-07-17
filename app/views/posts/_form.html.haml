@@ -9,7 +9,8 @@
   = f.text_field :title, :placeholder => "Post Title"
   = f.text_area :body, :placeholder => "Post Content"
   %p.graytext{:style => "font-size:15px;"}
-    %span#supportIndicator Drag an image from your desktop into the text area to upload it to Amazon S3.
+    %span#supportIndicator Drag an image from your desktop into the text area to upload it to Amazon S3, or use this: 
+    %input{:type=>"file",:id=>"files",:name=>"files[]"}
     
   = f.submit "Save"
 %div.hidden#dialog-form{:title => "Insert Image"}
