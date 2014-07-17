@@ -8,8 +8,13 @@ var imageUpload = {
         imageUpload.area.ondrop = function(e) {
             e.stopPropagation();
             e.preventDefault();
-            console.log(e);
+            console.log(e.dataTransfer.dropEffect);
             imageUpload.readFiles(e.dataTransfer.files);
+        }
+        imageUpload.area.ondragover = function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'copy';
         }
         imageUpload.form_dialog = $( "#dialog-form" ).dialog({
             autoOpen: false,
