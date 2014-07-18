@@ -1,4 +1,4 @@
-%script{:src => "http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53c7fdf85e78117f" }
+%script{:src => "http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53c7fdf85e78117f"}
 .post-show
 	.row
 		#post-text
@@ -9,9 +9,9 @@
 				= link_to post.author.name, by_author_path(post.author.slug)
 				on
 				= post.created_at.strftime("%B %d, %Y")
+				%div.addthis_sharing_toolbox.addthis_post_title
 			.post-content
 				= post.body_html.html_safe
-			%div.addthis_sharing_toolbox
 	.row#more-by-author
 		.column.two
 			%a{:href => about_path, :class => 'about-us-avatar'}(style="background:url(#{Gravatar.new(post.author.email).image_url(:size => 80)});")
@@ -19,3 +19,4 @@
 			%h2 
 				More posts by 
 				= link_to post.author.name, blog_posts_path(:author_id => post.author_id)
+				%div.addthis_sharing_toolbox.addthis_post_footer

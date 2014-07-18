@@ -101,7 +101,7 @@
 
 #more-by-author {
   padding-top: 55px;
-  padding-bottom: 21px;
+  padding-bottom: 55px;
   max-width: 833px;
   margin-left: auto;
   margin-right: auto;
@@ -151,5 +151,13 @@ nav span {
 }
 
 div.addthis_sharing_toolbox {
-  padding-top: 20px;
+  display:inline-block;
+}
+div.addthis_post_title {
+  display:relative;
+  top:7px;
+  right:-30px;
+}
+div.addthis_post_footer {
+  float:right;
 }
