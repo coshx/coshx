@@ -18,7 +18,7 @@ Feature: Admin blog post functionality
     And I should see "New Blog Post"
     When I fill in "post_title" with "post title"
     And I fill in "post_body" with "post body"
-    And I drag and drop on "post_body"
+    And I attach a file for upload
     Then I should see "Insert Image"
     When I press "Place the image"
     Then I should see an image tag
