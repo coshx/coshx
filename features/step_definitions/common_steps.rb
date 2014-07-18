@@ -67,3 +67,7 @@ Given /^I drag and drop on "([^"]*)"$/ do |arg1|
   # Trigger the drop event
   page.execute_script("e = $.Event('drop'); e.dataTransfer = { files : seleniumUpload.get(0).files }; $('##{arg1}').trigger(e);")
 end
+
+Given /^I attach a file for upload$/ do
+  attach_file('files', File.join(Rails.root, 'app/assets/images/boulder.png'))
+end
