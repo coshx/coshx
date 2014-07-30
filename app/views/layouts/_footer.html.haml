@@ -44,7 +44,7 @@
           = link_to image_tag("footer-facebook.png"), "http://www.facebook.com/coshxlabs"
   #footer-bottom.row
     #copyright.column.six
-      %h4 Copyright © 2013. All rights reserved
+      %h4= "Copyright © #{DateTime.now.cwyear} . All rights reserved"
     #scrollup.column.six
       = image_tag("footer_arrow.png")
       %h4= link_to "Back to top", "#"

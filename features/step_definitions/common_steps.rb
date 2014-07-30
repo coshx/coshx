@@ -44,6 +44,10 @@ Then /^I should see the sharing buttons$/ do
   page.should have_selector(".sharethis_toolbox")
 end
 
+Then /^the page should have the correct copyright date$/ do
+  page.should have_content(DateTime.now.cwyear)
+end
+
 Then /^(?:|I )should not see "([^"]*)"$/ do |text|
   if page.respond_to? :should
     page.should_not have_content(text)
