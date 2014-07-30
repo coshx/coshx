@@ -9,7 +9,13 @@
 				= link_to post.author.name, by_author_path(post.author.slug)
 				on
 				= post.created_at.strftime("%B %d, %Y")
-				%div.addthis_sharing_toolbox.addthis_post_title
+				%div.sharethis_toolbox.sharethis_post_title
+					%span{class:'st_sharethis_large', displayText:'ShareThis'}
+					%span{class:'st_facebook_large', displayText:'Facebook'}
+					%span{class:'st_twitter_large', displayText:'Tweet'}
+					%span{class:'st_linkedin_large', displayText:'LinkedIn'}
+					%span{class:'st_pinterest_large', displayText:'Pinterest'}
+					%span{class:'st_email_large', displayText:'Email'}
 			.post-content
 				= post.body_html.html_safe
 	.row#more-by-author
@@ -19,4 +25,10 @@
 			%h2 
 				More posts by 
 				= link_to post.author.name, blog_posts_path(:author_id => post.author_id)
-				%div.addthis_sharing_toolbox.addthis_post_footer
+				%div.sharethis_toolbox.sharethis_post_footer
+					%span{class:'st_sharethis_large', displayText:'ShareThis'}
+					%span{class:'st_facebook_large', displayText:'Facebook'}
+					%span{class:'st_twitter_large', displayText:'Tweet'}
+					%span{class:'st_linkedin_large', displayText:'LinkedIn'}
+					%span{class:'st_pinterest_large', displayText:'Pinterest'}
+					%span{class:'st_email_large', displayText:'Email'}
