@@ -43,4 +43,5 @@ Feature: Admin blog post functionality
     And I should not see "Publish"
     When I follow "Read More"
     Then I should be on the "post title2" published blog page
+    And I should see the sharing buttons
 
