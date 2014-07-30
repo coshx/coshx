@@ -37,7 +37,11 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
 end
 
 Then /^I should see an image tag$/ do
-    assert page.find_by_id("post_body").value.include?("img")
+  assert page.find_by_id("post_body").value.include?("img")
+end
+
+Then /^I should see the sharing buttons$/ do
+  page.should have_selector(".sharethis_toolbox")
 end
 
 Then /^(?:|I )should not see "([^"]*)"$/ do |text|
