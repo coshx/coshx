@@ -161,3 +161,30 @@ div.sharethis_post_title {
 div.sharethis_post_footer {
   float:right;
 }
+
+#post-preview-display {
+  font-family: "arial", sans-serif;
+  display:block;
+  margin:20px;
+  #google-title {
+    color:rgb(26,13,171);
+    cursor:pointer;
+    font-size: 18px !important;
+    line-height: 21px;
+    margin:0px;
+    font-weight:normal;
+  }
+  #google-url {
+    color:rgb(0,102,33);
+    font-size:13px !important;
+    line-height: 16px;
+    margin:0px;
+  }
+  #google-description {
+    color:rgb(84,84,84);
+    font-size:13px;
+    line-height:18px;
+    width:512px;
+    margin:0px;
+  }
+}
