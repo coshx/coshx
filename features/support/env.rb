@@ -25,8 +25,11 @@ Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app, :browser => :chrome)
 end
 
+# Use poltergeist to run tests really quickly, but some tests may not pass.
+# Use the chrome driver to get the failing tests working.
 # Capybara.javascript_driver = :poltergeist
 
+# Use the chrome driver to get cucumber tests passing on Circle Ci
 Capybara.javascript_driver = :chrome
 
 
