@@ -66,6 +66,46 @@
       text-decoration: underline;
     }
   }
+  .thumbnail {
+    display: block;
+    padding: 4px;
+    line-height: 1;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+       -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+      img {
+        display: block;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .caption {
+        padding: 9px;
+        color: #333;
+      }
+      .title {
+        text-align: center;
+        margin: 10px 0 10px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "Merriweather", serif;
+      }
+      .description {
+        text-align: center;
+        font-size: 14px;
+        font-family: "Merriweather", serif;
+      }
+  }
+  a.thumbnail:hover {
+    border-color: #0088cc;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+       -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+            box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+  }
 }
 
 .post-show {

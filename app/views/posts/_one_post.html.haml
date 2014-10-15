@@ -18,6 +18,7 @@
 					%span{class:'st_email_large', displayText:'Email'}
 			.post-content
 				= post.body_html.html_safe
+			%span{class:"clearfix"}
 	.row#more-by-author
 		.column.two
 			%a{:href => about_path, :class => 'about-us-avatar'}(style="background:url(#{Gravatar.new(post.author.email).image_url(:size => 80)});")

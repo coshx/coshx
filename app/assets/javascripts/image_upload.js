@@ -82,23 +82,34 @@ var imageUpload = {
     },
     createAndPlaceImage: function() {
         function createImageTag() {
+            var thumbnail = document.createElement('div');
+            thumbnail.className='thumbnail';
             var imageTag = new Image();
             imageTag.src = $('#url').val();
             checkEmptyAndAssign(imageTag,["alt"],$('#alt_title').val());
             checkEmptyAndAssign(imageTag,["height"],$('#height').val());
             checkEmptyAndAssign(imageTag,["width"],$('#width').val());
-            var paddingValueWithPixels = $("#padding").val() + "px"
-            checkEmptyAndAssign(imageTag,["style","padding"],paddingValueWithPixels);
-            imageTag.style.float = $('#float').val();
-            return imageTag.outerHTML;
-        }
-        function createTitleMarkdown() {
-            var titleTag = "#### " + $('#title').val() + "  \n";
-            return titleTag;
-        }
-        function createDescriptionMarkdown() {
-            var descriptionTag = "\n" + $('#description').val();
-            return descriptionTag;
+            thumbnail.appendChild(imageTag);
+            thumbnail.style.float = $('#float').val();
+            if (!isEmpty($('#title').val())) {
+                title = document.createElement('div');
+                title.className='title';
+                titleText = document.createTextNode($('#title').val());
+                title.appendChild(titleText);
+                thumbnail.appendChild(title);
+            } else {
+                console.log("no title");
+            };
+            if (!isEmpty($('#description').val())) {
+                description = document.createElement('div');
+                description.className='description';
+                descriptionText = document.createTextNode($('#description').val());
+                description.appendChild(descriptionText);
+                thumbnail.appendChild(description);
+            } else {
+                console.log("no description");
+            };
+            return "\r\n"+thumbnail.outerHTML+"\r\n";
         }
         function appendItem(item) {
             imageUpload.area.value += item;
@@ -120,17 +131,7 @@ var imageUpload = {
                 return false;
             }
         }
-        function checkEmptyAndPlace(action,args,gate) {
-            if (!isEmpty(gate)) {
-                action(args);
-                return true;
-            } else {
-                return false;
-            }
-        }
-        checkEmptyAndPlace(appendItem,createTitleMarkdown(),$('#title').val());
         appendItem(createImageTag());
-        checkEmptyAndPlace(appendItem,createDescriptionMarkdown(),$('#description').val());
         imageUpload.fileselect.value = "";
         imageUpload.form_dialog.dialog("close");
         $('#supportIndicator').text("Finished.");
