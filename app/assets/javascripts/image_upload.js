@@ -91,15 +91,6 @@ var imageUpload = {
             checkEmptyAndAssign(imageTag,["width"],$('#width').val());
             thumbnail.appendChild(imageTag);
             thumbnail.style.float = $('#float').val();
-            if (!isEmpty($('#title').val())) {
-                title = document.createElement('div');
-                title.className='title';
-                titleText = document.createTextNode($('#title').val());
-                title.appendChild(titleText);
-                thumbnail.appendChild(title);
-            } else {
-                console.log("no title");
-            };
             if (!isEmpty($('#description').val())) {
                 description = document.createElement('div');
                 description.className='description';
