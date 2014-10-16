@@ -9,9 +9,31 @@
   = f.text_field :title, :placeholder => "Post Title"
   = f.text_area :body, :placeholder => "Post Content"
   %p.graytext{:style => "font-size:15px;"}
-    %span#supportIndicator Drag an image from your desktop into the text area to upload it to
-    %span#uploadIndicator Imgur.
-    %br/
-    %span#message{:style => "display:none;font-size:10px;margin:5px"}
-      Your browser supports drag and drop file uploads.
+    %span#supportIndicator Drag an image from your desktop into the text area to upload it to Amazon S3, or use this: 
+    %input{:type=>"file",:id=>"files",:name=>"files[]"}
+    %br
+    %span#supportIndicator Remember, when placing images in between two sections of text, separate the image snippet with a blank line on either side.
+    
+  %div#post-preview
+    %p This is what your post will look like in a Google search result:
+    %span#post-preview-display
+      %h3#google-title - Coshx
+      %p#google-url www.coshx.com/blog/
+      %p#google-description Post Content
   = f.submit "Save"
+%div.hidden#dialog-form{:title => "Insert Image"}
+  %form
+    %fieldset#imageset
+      %label{:for => "URL"} URL
+      %input{:type => "text", :name=>"url", :id=>"url", :class=> "text ui-widget-content ui-corner-all"}
+      %label{:for => "Width"} Width (in px)
+      %input{:type => "text", :name=>"width", :id=>"width", :class=> "text ui-widget-content ui-corner-all"}
+      %label{:for => "Height"} Height (in px)
+      %input{:type => "text", :name=>"height", :id=>"height", :class=> "text ui-widget-content ui-corner-all"}
+      %label{:for => "Description"} Caption
+      %input{:type => "text", :name=>"description", :id=>"description", :class=> "text ui-widget-content ui-corner-all"}
+      %label{:for => "Float"} Float
+      %select{:name=> "float", :id => "float"}
+        %option{:value => "none"} None
+        %option{:value => "left"} Left
+        %option{:value => "right"} Right

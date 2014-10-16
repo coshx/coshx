@@ -36,6 +36,18 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
   end
 end
 
+Then /^I should see an image tag$/ do
+  assert page.find_by_id("post_body").value.include?("img")
+end
+
+Then /^I should see the sharing buttons$/ do
+  page.should have_selector(".sharethis_toolbox")
+end
+
+Then /^the page should have the correct copyright date$/ do
+  page.should have_content(DateTime.now.cwyear)
+end
+
 Then /^(?:|I )should not see "([^"]*)"$/ do |text|
   if page.respond_to? :should
     page.should_not have_content(text)
@@ -56,4 +68,14 @@ Given /^I fill in "([^"]*)" with "([^"]*)"$/ do |arg1, arg2|
   fill_in(arg1, :with => arg2)
 end
 
+Given /^I drag and drop on "([^"]*)"$/ do |arg1|
+  page.execute_script("seleniumUpload = window.$('<input/>').attr({id: 'seleniumUpload', type:'file'}).appendTo('body');")
 
+  attach_file('seleniumUpload', File.join(Rails.root, 'app/assets/images/boulder.png'))
+  # Trigger the drop event
+  page.execute_script("e = $.Event('drop'); e.dataTransfer = { files : seleniumUpload.get(0).files }; $('##{arg1}').trigger(e);")
+end
+
+Given /^I attach a file for upload$/ do
+  attach_file('files', File.join(Rails.root, 'app/assets/images/boulder.png'))
+end

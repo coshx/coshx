@@ -37,3 +37,10 @@ $availendar-bg: #66bae8;
 @mixin pt-sans {
   font-family: 'PT Sans', sans-serif;
 }
+.clearfix {
+  content: "";
+  visibility: hidden;
+  display: table;
+  height: 0;
+  clear: both;
+}

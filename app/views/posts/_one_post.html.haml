@@ -1,3 +1,4 @@
+%script{:src => "http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53c7fdf85e78117f"}
 .post-show
 	.row
 		#post-text
@@ -8,8 +9,16 @@
 				= link_to post.author.name, by_author_path(post.author.slug)
 				on
 				= post.created_at.strftime("%B %d, %Y")
+				%div.sharethis_toolbox.sharethis_post_title
+					%span{class:'st_sharethis_large', displayText:'ShareThis'}
+					%span{class:'st_facebook_large', displayText:'Facebook'}
+					%span{class:'st_twitter_large', displayText:'Tweet'}
+					%span{class:'st_linkedin_large', displayText:'LinkedIn'}
+					%span{class:'st_pinterest_large', displayText:'Pinterest'}
+					%span{class:'st_email_large', displayText:'Email'}
 			.post-content
 				= post.body_html.html_safe
+			%span{class:"clearfix"}
 	.row#more-by-author
 		.column.two
 			%a{:href => about_path, :class => 'about-us-avatar'}(style="background:url(#{Gravatar.new(post.author.email).image_url(:size => 80)});")
@@ -17,3 +26,10 @@
 			%h2 
 				More posts by 
 				= link_to post.author.name, blog_posts_path(:author_id => post.author_id)
+				%div.sharethis_toolbox.sharethis_post_footer
+					%span{class:'st_sharethis_large', displayText:'ShareThis'}
+					%span{class:'st_facebook_large', displayText:'Facebook'}
+					%span{class:'st_twitter_large', displayText:'Tweet'}
+					%span{class:'st_linkedin_large', displayText:'LinkedIn'}
+					%span{class:'st_pinterest_large', displayText:'Pinterest'}
+					%span{class:'st_email_large', displayText:'Email'}

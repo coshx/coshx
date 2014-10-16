@@ -25,6 +25,8 @@ Coshx::Application.routes.draw do
   get 'contact' => 'home#contact_us'
   get 'competition' => 'home#competition'
 
+  post 'uploads/images' => 'posts#upload_image'
+
   devise_for :admins
 
   #admins urls

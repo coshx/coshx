@@ -1,85 +1,146 @@
-function imgurUploadFeature() {
-	var area = $('#post_body')[0];
-    var imgurIndicator = $('#uploadIndicator');
-    var supportIndicator = $('#supportIndicator');
-    var supported = true;
-
-    var tests = {
-        filereader:typeof FileReader != 'undefined',
-        dnd:'draggable' in document.createElement('textarea'),
-        formdata:!!window.FormData
-    }
-
-    function testSupport() {
-        "filereader formdata".split(' ').forEach(function(api) {
-            if (tests[api] === false) {
-                supported = false;
-                console.log(api)
-            } 
-        });
-        if (!supported) {
-            supportIndicator.css("color","#E04C7E");
-            supportIndicator.text("Sorry, dragging images into here is not currently supported. Post them manually to ")
+var imageUpload = {
+    area: null,
+    fileselect: null,
+    filereader: null,
+    form_dialog: null,
+    init:function() {
+        imageUpload.area = $('#post_body')[0];
+        imageUpload.fileselect = $('#files')[0];
+        imageUpload.filereader = new FileReader();
+        imageUpload.area.ondrop = function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            console.log(e);
+            imageUpload.readFiles(e.dataTransfer.files);
         }
-    }
-
-    function readFiles(files) {
-        var fr = new FileReader();
-        fr.onload = function(event) {
-            var bsfData = event.target.result.slice(event.target.result.search(/\,/)+1,event.target.result.length);
-            var dat = {
-                image:bsfData,
-                type:'base64'
-            };
+        imageUpload.area.ondragover = function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            console.log(e.dataTransfer.dropEffect);
+            e.dataTransfer.dropEffect = 'copy';
+        }
+        imageUpload.fileselect.onchange = function(e) {
+            imageUpload.readFiles(e.target.files);
+        }
+        imageUpload.form_dialog = $( "#dialog-form" ).dialog({
+            autoOpen: false,
+            width: 350,
+            modal: true,
+            buttons: {
+                "Place the image": imageUpload.createAndPlaceImage,
+                Cancel: function() {
+                    imageUpload.form_dialog.dialog("close");
+                }
+            },
+            close: function() {
+                imageUpload.formReset();
+            }
+        });
+    },
+    readFiles:function(files) {
+        imageUpload.filereader.onload = function(event) {
+            var event_result = event.target.result;
+            var datatype = event_result.slice(event_result.search(/\:/)+1,event_result.search(/\;/));
+            var base64_data = event_result.replace(/^data\:image\/\w+\;base64\,/, '');
+            var image_extension = datatype.slice(datatype.search(/\//)+1);
+            $("#supportIndicator").text("Loading...");
             $.ajax({
                 type:"POST",
-                data:dat,
-                url:'https://api.imgur.com/3/image',
-                headers: {
-                    Authorization: "Client-ID 6e0f35eb9a323aa"
+                data:{
+                    file: base64_data,
+                    mimeType: datatype,
+                    extension: image_extension
                 },
-                dataType: "json",
+                url:'/uploads/images',
                 success:function(msg) {
-                    handleStatus(msg,"success");
+                    imageUpload.handleStatus(msg,1);
                 },
                 error:function(errormsg) {
-                    handleStatus(errormsg,"error");
+                    imageUpload.handleStatus(errormsg,0);
                 }
             });
         }
-        fr.readAsDataURL(files[0]);
-    }
+        imageUpload.filereader.readAsDataURL(files[0]);
+    },
 
-    function handleStatus(msg,type) {
-        if (type === "success") {
-            imgurIndicator.css("color","#85bf25");
-            area.value += "<img src='"+msg.data.link+"'>";
+    handleStatus: function(message,status) {
+        switch (status) {
+            case 1:
+                $('#supportIndicator').text("Loaded.");
+                imageUpload.showModal(message);
+                break;
+            case 0:
+                alert("Sorry, there was an error: " + message);
+                break;
+            default:
+                console.log(status + "," + message);
         }
-        if (type === "error") {
-            imgurIndicator.css("color","#E04C7E");
-            console.log(msg);
-            alert("Sorry, there was an error with your request:" + msg.responseText);
+    },
+    showModal: function(url) {
+        $('#url').val(url);
+        imageUpload.form_dialog.dialog("open");
+    },
+    createAndPlaceImage: function() {
+        function createImageTag() {
+            var thumbnail = document.createElement('div');
+            thumbnail.className='thumbnail';
+            var imageTag = new Image();
+            imageTag.src = $('#url').val();
+            checkEmptyAndAssign(imageTag,["alt"],$('#alt_title').val());
+            checkEmptyAndAssign(imageTag,["height"],$('#height').val());
+            checkEmptyAndAssign(imageTag,["width"],$('#width').val());
+            thumbnail.appendChild(imageTag);
+            thumbnail.style.float = $('#float').val();
+            if (!isEmpty($('#description').val())) {
+                description = document.createElement('div');
+                description.className='description';
+                descriptionText = document.createTextNode($('#description').val());
+                description.appendChild(descriptionText);
+                thumbnail.appendChild(description);
+            } else {
+                console.log("no description");
+            };
+            return "\r\n"+thumbnail.outerHTML+"\r\n";
         }
-    }
+        function appendItem(item) {
+            imageUpload.area.value += item;
+        }
+        function isEmpty(item) {
+            return item === ""
+        }
+        function checkEmptyAndAssign(object, properties, gate) {
+            if (!isEmpty(gate)) {
+                if (properties.length == 1) {
+                    object[properties[0]] = gate;
+                } else {
+                    object[properties[0]][properties[1]] = gate;
+                }
+                console.log(true)
+                return true;
+            } else {
+                console.log(false);
+                return false;
+            }
+        }
+        appendItem(createImageTag());
+        imageUpload.fileselect.value = "";
+        imageUpload.form_dialog.dialog("close");
+        $('#supportIndicator').text("Finished.");
+    },
+    formReset:function() {
+        var inputs = $('#imageset input');
+        for (var i=0;i<inputs.length;i++) {
+            inputs[i].value = ""
+        }
 
-    area.ondragover = function(e) {
-        e.preventDefault();
-        $(this).addClass('hover');
     }
-    area.ondragend = function(e) {
-        e.preventDefault();
-        $(this).removeClass('hover');
-    }
-    area.ondrop = function(e) {
-        if ($(this).hasClass('hover')) $(this).removeClass('hover')
-        e.preventDefault();
-        readFiles(e.dataTransfer.files);
-    }
-
-    testSupport();
 }
-$(document).ready(function() {
-	if ($('#post_body').length > 0) {
-		imgurUploadFeature();
-	}
-})
+var ready;
+ready = function() {
+    if ($('#post_body').length > 0) {
+        imageUpload.init();
+    }
+}
+
+$(document).ready(ready);
+$(document).on('page:load', ready);

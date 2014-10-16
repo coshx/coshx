@@ -66,6 +66,40 @@
       text-decoration: underline;
     }
   }
+  .thumbnail {
+    display: block;
+    padding: 4px;
+    line-height: 1;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+       -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+      img {
+        display: block;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .caption {
+        padding: 9px;
+        color: #333;
+      }
+      .description {
+        text-align: center;
+        margin: 10px 0 6px;
+        font-size: 14px;
+        font-family: "Merriweather", serif;
+      }
+  }
+  a.thumbnail:hover {
+    border-color: #0088cc;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+       -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+            box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+  }
 }
 
 .post-show {
@@ -101,7 +135,7 @@
 
 #more-by-author {
   padding-top: 55px;
-  padding-bottom: 21px;
+  padding-bottom: 55px;
   max-width: 833px;
   margin-left: auto;
   margin-right: auto;
@@ -125,7 +159,7 @@
   margin-right: auto;
   border-bottom: 1px solid #e3e1df;
   padding-top: 70px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 #pages {
@@ -150,3 +184,41 @@ nav span {
   padding-top: 15px;
 }
 
+div.sharethis_toolbox {
+  display:inline-block;
+}
+div.sharethis_post_title {
+  display:relative;
+  top:7px;
+  right:-30px;
+}
+div.sharethis_post_footer {
+  float:right;
+}
+
+#post-preview-display {
+  font-family: "arial", sans-serif;
+  display:block;
+  margin:20px;
+  #google-title {
+    color:rgb(26,13,171);
+    cursor:pointer;
+    font-size: 18px !important;
+    line-height: 21px;
+    margin:0px;
+    font-weight:normal;
+  }
+  #google-url {
+    color:rgb(0,102,33);
+    font-size:13px !important;
+    line-height: 16px;
+    margin:0px;
+  }
+  #google-description {
+    color:rgb(84,84,84);
+    font-size:13px;
+    line-height:18px;
+    width:512px;
+    margin:0px;
+  }
+}
