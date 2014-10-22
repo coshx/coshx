@@ -40,7 +40,7 @@ Coshx::Application.configure do
   elsif ENV['CLOUDFRONT_HOST']
     config.action_controller.asset_host = ENV['CLOUDFRONT_HOST']
   elsif ENV['FOG_DIRECTORY']
-    config.action_controller.asset_host = "http://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
+    config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
   end
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
