@@ -25,7 +25,7 @@ describe "Blog" do
       end
       
       it "displays author information" do
-        response.body.should include Gravatar.new(post.author.email).image_url
+        response.body.should include Gravatar.new(post.author.email).image_url(:secure => true)
         response.body.should include "Posts by #{post.author.name}"
       end
     end
