@@ -18,12 +18,6 @@ initialize = ->
 
   map = new google.maps.Map(map_canvas, map_options)
 
-  boulder_marker = new google.maps.Marker (
-	  position: new google.maps.LatLng(40.029044, -105.252439)
-	  map: map
-	  icon: "/assets/boulder.png"
-  )	
-
   austin_marker = new google.maps.Marker (
 	  position: new google.maps.LatLng(30.269038, -97.740344)
 	  map: map
