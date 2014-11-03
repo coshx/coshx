@@ -1,6 +1,6 @@
 %li.post-box
   .post-info-wrapper
-    %div(style="width:120px;height:120px;background:url(#{Gravatar.new(post.author.email).image_url(:size => 120)});")
+    %div(style="width:120px;height:120px;background:url(#{Gravatar.new(post.author.email).image_url(:size => 120, :secure => true)});")
     .post-info
       %div
         Coshx Labs

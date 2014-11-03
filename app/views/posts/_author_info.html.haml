@@ -2,6 +2,6 @@
   -author = @posts.first.author
   .row
     #author-info
-      =image_tag Gravatar.new(author.email).image_url(size: 80), class: 'about-us-avatar', alt: author.name
+      =image_tag Gravatar.new(author.email).image_url(size: 80, :secure => true), class: 'about-us-avatar', alt: author.name
       %h1#posted-by
         = "Posts by #{author.name}"

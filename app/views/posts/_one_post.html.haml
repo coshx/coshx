@@ -1,4 +1,4 @@
-%script{:src => "http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53c7fdf85e78117f"}
+%script{:src => "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53c7fdf85e78117f"}
 .post-show
 	.row
 		#post-text
@@ -21,7 +21,7 @@
 			%span{class:"clearfix"}
 	.row#more-by-author
 		.column.two
-			%a{:href => about_path, :class => 'about-us-avatar'}(style="background:url(#{Gravatar.new(post.author.email).image_url(:size => 80)});")
+			%a{:href => about_path, :class => 'about-us-avatar'}(style="background:url(#{Gravatar.new(post.author.email).image_url(:size => 80, :secure => true)});")
 		.column.ten
 			%h2 
 				More posts by 

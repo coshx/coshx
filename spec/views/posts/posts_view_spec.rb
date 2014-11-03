@@ -6,7 +6,7 @@ describe "posts/feed.atom.builder" do
     @posts = [build(:post, :posted_on => DateTime.new(2013, 1, 1)), 
               build(:post, :posted_on => DateTime.new(2013, 5, 1))]
     assign(:posts, @posts)
-    assign(:feed_url, 'http://www.coshx.com/feed')
+    assign(:feed_url, 'https://www.coshx.com/feed')
     render
     @feed_doc = Nokogiri.parse(rendered)
   end
