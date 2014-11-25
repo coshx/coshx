@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     if mobile_request? || tablet_request?
       redirect_to '/about'
     end
-    @featured_projects = Project.find(:all, :limit => 3, :order=> 'created_at desc')
+    @featured_projects = Project.featured.order("created_at DESC")
   end
 
   def services

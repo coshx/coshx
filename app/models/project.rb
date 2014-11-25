@@ -13,6 +13,7 @@ class Project < ActiveRecord::Base
 
   has_many :quotes
 
+  scope :featured, -> { where(featured: true) }
 
   def permalink_attributes
     {
