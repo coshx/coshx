@@ -74,6 +74,12 @@ div {
 
 #error_explanation, #error_explanation h2 {
   color: #AA2222;
+  text-align: left;
+}
+
+#error_explanation {
+  ul { margin: 0 0 20px 18px; }
+  li { list-style-type: disc; }
 }
 
 #thank-you-notice {
