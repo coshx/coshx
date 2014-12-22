@@ -14,12 +14,13 @@
       var compressor = kompressor || 1,
           settings = $.extend({
             'minFontSize' : Number.NEGATIVE_INFINITY,
-            'maxFontSize' : 90 //Number.POSITIVE_INFINITY
+            'maxFontSize' : 42 //Number.POSITIVE_INFINITY
           }, options);
 
       return this.each(function(){
         var $this = $(this);
         var resizer = function () {
+          console.log('resizing', $this.width());
           $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
         };
         resizer();
@@ -27,9 +28,8 @@
       });
     };
   })( jQuery );
-:javascript
-  $(".fit-title").fitText(1, {minFontSize: '30px'});
 
+:javascript
   // set the vertical height on resize as well to keep things centered
   $(document).ready(function() {
     var topOffset = 370;

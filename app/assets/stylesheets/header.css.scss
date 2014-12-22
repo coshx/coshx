@@ -186,8 +186,13 @@ nav ul li a:hover, nav ul li a.active {
   }
   h1 {
     font-size: 90px;
-    line-height: 147px;
-    margin-top: 0px;
+    // height: 147px;
+    // padding-top: 53px;
+    // padding-bottom: 52px;
+    margin-top: 46px;
+    margin-bottom: 91px;
+    // padding: 51px 0 51px 0;
+    // padding-top: 30px;
     text-align: center;
   }
   h2 {
@@ -227,7 +232,6 @@ nav ul li a:hover, nav ul li a.active {
         position: fixed;
         margin-left: -18px;
         left: 50%;
-        margin-top: 30px;
       }
     }
   }

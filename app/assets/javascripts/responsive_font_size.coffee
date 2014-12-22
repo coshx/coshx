@@ -13,6 +13,7 @@ adjustFont = ->
   h2_font_size = calculatedFontSize 1200, 320, 24, 12
   h3_font_size = calculatedFontSize 1200, 320, 30, 16
   h4_font_size = calculatedFontSize 1200, 320, 16, 10
+  
   $("h1").css "font-size", h1_font_size + "px"
   $("h2").css "font-size", h2_font_size + "px"
   $("h3").css "font-size", h3_font_size + "px"
@@ -34,8 +35,13 @@ adjustFont = ->
     $("footer .city").css "font-size", '14px'
     $("footer .address").css "font-size",  '12px'
 
+fitText = ->
+  $(".fit-title").fitText 1.0,
+    minFontSize: "30px"
+
 $(window).resize(adjustFont)
 $(document).ready(adjustFont)
+$(document).ready(fitText)
 $(document).on('page:load', adjustFont)
 $(document).on('page:restore', adjustFont)
 
