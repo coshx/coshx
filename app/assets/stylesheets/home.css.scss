@@ -1,89 +1,43 @@
-@import "common";
 
-#mission-statement {
-  height: 100%;
-  width: 100%;
-  background-color: #FFFFFF;
-  padding-top: 60px;
+#home {
+  background: #4085D4;
 
-
-  h1 {
-    font-size: 40px;
-  }
-  h2 {
-    padding-bottom: 100px;
-  }
-}
-
-#scroll-down {
-  height: 30px;
-  border-top: 1px solid #f8f7f5;
-  padding-top: 0;
-  text-align: center;
-
-  h5 {
-    font-family: "Merriweather Sans", serif;
-    font-size: 12px;
-    margin-top: 2px;
-    font-weight: normal;
-    color: #535353;
-  }
-}
-
-#projects {
-  .featured-project {
-    height: 100%;
-    width: 100%;
-
-    h3, h4 {
-      color: $white;
+  #home-about-us-box {
+    text-align: center;
+    width:75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:2%;
+    h1, h2 {
+      color: #FFFFFF;
+      margin-top: 40px;
     }
-    img {
-      padding-top: 75px;
-    }
-
-    .float-left {
-      float: left;
-    }
-
-    .float-right {
-      float: right;
+    h2 {
+      padding-bottom:60px;
     }
   }
 
-  .featured-project.availendar {
-    background-color: $availendar-bg;
+  #home-our-clients {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width:65%;
+    overflow: hidden;
+
+    .home-client-box {
+      width: 25%;
+      float:left;
+      margin-left:auto;
+      margin-right:auto ;
+
+      img {
+        padding:20%;
+        margin-left:auto;
+        margin-right:auto;
+        background: #4085D4;
+        width:100% ;
+      }
+    }
   }
-
-  .featured-project.closeoutbike {
-    background-color: $closeoutbike-bg;
-  }
-
-  .featured-project.mobilizeart {
-    background-color: $mobilizeart-bg;
-  }
-
-  .featured-project.gigdog {
-    background-color: $gigdog-bg;
-  }
-
-  .featured-project.scheduleshare {
-    background-color: $scheduleshare-bg;
-  }
-
-  .featured-project.textus {
-    background-color: $textus-bg;
-  }
-
-
 }
 
-
-#project-description {
-  max-width: 380px;
-  padding-top: 80px;
-}
-
-@media (max-width: $mobile-view-size) {
-  #projects h4 { display: none; }
-}

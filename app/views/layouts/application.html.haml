@@ -33,29 +33,26 @@
 
   %body
     %header
-      %div#site-header{class: on_home_page? ? 'sticky-header' : 'fixed-header'}
-        - unless controller.action_name == 'competition'
-          - if admin_signed_in?
-            = render "layouts/admin_menu"
-          = render "layouts/header"
-        - else
-          = yield :competition_header
+      %div#site-header{class: 'fixed-header'}
+        = render "layouts/header"
+
+      /  - unless controller.action_name == 'competition'
+      /    - if admin_signed_in?
+      /      = render "layouts/admin_menu"
+      /  - else
+      /    = yield :competition_header
     %div.container.main-container.body
-      - if on_home_page?
-        %section.feature
-          = render "layouts/top_section"
-      - else
-        #header-padding
       .flash
         = flash[:alert]
       = yield
-      - unless should_not_display_any_footer_info
-        - unless should_not_display_site_links
-          = render "layouts/site_links"
-        - unless should_not_display_together_section
-          = render "layouts/together"
-        - if current_page?('/contact')
-          #footer-with-map
-            = render "layouts/footer"
-        - else 
+      = render "layouts/contact_us_banner"
+      /- unless should_not_display_any_footer_info
+      /  - unless should_not_display_site_links
+      /    = render "layouts/site_links"
+      /  - unless should_not_display_together_section
+      /    = render "layouts/together"
+      - if current_page?('/contact')
+        #footer-with-map
           = render "layouts/footer"
+      - else
+        = render "layouts/footer"

@@ -26,36 +26,11 @@ mobileMenu =
     @content = $("#content")
     @hideMenu()
 
-flyingHeader =
-
-  position: ->
-    scroll_top = $(window).scrollTop()
-    mobileMenuVisible = $("body").hasClass("mobile-menu")
-    if scroll_top > @sticky_navigation_offset_top or mobileMenuVisible
-      $(".sticky-header").css
-        position: "fixed"
-        top: 0
-        left: 0
-      $("#map-container").css "z-index": 1
-    else
-      $(".sticky-header").css
-        position: "absolute"
-        bottom: 0
-        top: "auto"
-      $("#map-container").css "z-index": -1
-
-  init:->
-    @sticky_navigation_offset_top = $(".sticky-header").offset().top
-
-
 load = ->
   try
     mobileMenu.init()
     $(".burger").click ->
       mobileMenu.toggleMenu()
-    flyingHeader.init()
-    $(window).scroll ->
-      flyingHeader.position()
   catch err
 
 $(document).on('page:change', load)

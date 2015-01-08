@@ -1,27 +1,13 @@
 @import "common";
 
-.main-container, #site-links, #together {
+#site-links, #together {
   width: 100%;
-}
-
-.main-container {
-  height: 100%;
 }
 
 .fixed-header {
   position: fixed;
   top: 0;
   left: 0;
-}
-
-html {
-  height: 100%;
-}
-
-body {
-  position: relative;
-  overflow-x: hidden;
-  height: 100%;
 }
 
 header {
@@ -34,11 +20,11 @@ header {
 }
 
 #site-header {
-  min-height: 110px;
+  min-height:$header_height;
+  max-height:$header_height;
   background: #FFFFFF;
   opacity: 1;
   width: 100%;
-  max-height: 130px;
   -moz-box-shadow: 0 0 6px #E0E0E0;
   -webkit-box-shadow: 0 0 6px #E0E0E0;
   box-shadow: 0 0 6px #E0E0E0;
@@ -179,7 +165,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .feature {
-  background-color: $bright-blue;
+  background-color: #faebd7;
   height: 100%;
   h1, h2, h3, h4 {
     color: $white;
@@ -218,18 +204,6 @@ nav ul li a:hover, nav ul li a.active {
     left: 0px;
     right: 0px;
     top: 200px;
-
-    .scroll-arrow {
-      position: fixed;
-      width: 100%;
-
-      img {
-        position: fixed;
-        margin-left: -18px;
-        left: 50%;
-        margin-top: 30px;
-      }
-    }
   }
   #slogan {
     position: fixed;

@@ -3,36 +3,19 @@
 $mobile-view-size: 767px;
 $desktop-view-size: 768px;
 
-// Colors!
-
-$off-white: #eeeeee;
-
-$gray: #b2b2b2;
-$light-gray: #97979b;
-$medium-gray: #525357;
-$dark-gray: #333333;
+$header_height: 110px;
+$footer_height: 110px;
 
 $blue: #1588c3;
 $bright-blue: #2ba6cb;
 $dark-blue: #004264;
 $spring-blue: #266287;
-
 $white: #FFF;
 $black: #000;
-
-
 $steel-gray: #455560;
 $text-grey: #929292;
 $grey-white: #f6f6f6;
 $dark-grey: #535353;
-
-$closeoutbike-bg: #455560;
-$mobilizeart-bg: #75c6b2;
-$gigdog-bg: #164d67;
-$scheduleshare-bg: #2c2c2c;
-$textus-bg: #922b8d;
-$greeneggs-bg: #a5c675;
-$availendar-bg: #66bae8;
 
 @mixin pt-sans {
   font-family: 'PT Sans', sans-serif;

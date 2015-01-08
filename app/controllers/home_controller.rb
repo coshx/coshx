@@ -2,10 +2,12 @@ class HomeController < ApplicationController
   caches_page :robots
 
   def index
-    if mobile_request? || tablet_request?
-      redirect_to '/about'
-    end
-    @featured_projects = Project.find(:all, :limit => 3, :order=> 'created_at desc')
+    #if mobile_request? || tablet_request?
+    #  redirect_to '/about'
+    #end
+    #@featured_projects = Project.find(:all, :limit => 3, :order=> 'created_at desc')
+    @projects = Project.all.sort { |x, y| x.id <=> y.id }
+
   end
 
   def services

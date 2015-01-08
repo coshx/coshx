@@ -1,112 +1,32 @@
 @import "common";
 
-#results-header {
-  background-color: $grey-white;
-  h1 {
-    margin-top: 7%;
-    padding-bottom: 5.5%;
+#our-work {
+  margin-top:$header_height;
+  #our-work-header {
+    padding-bottom:8%;
+    padding-top:8%;
+    text-align: center;
+    h3 {color:#4085D4;}
   }
-  @media (max-width:$mobile-view-size) {
-    display:none;
-  }
-}
-
-#our-work-text {
-  margin-top:3%;
-  margin-bottom:3%;
-}
-
-#recent-work {
-  text-align: center;
-  img {
-    z-index: 1;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
-  .column.six {
-    height: 300px;
-    z-index: 0;
-    margin-bottom:10px;
-  }
-  a {
-    display: none;
-  }
-  .column:hover {
-    a {
-      display: inline-block;
-    }
-  }
-}
-
-html.touch #recent-work {
-  a {
-    display: inline-block !important;
-  }
-}
-
-.content-box {
-  height:100%;
-  margin-left:5px;
-  margin-right:5px;
-  img {
-    z-index: 1;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
-}
-
-#darken-box {
-  z-index: 2;
-  position: relative;
-  width:100%;
-  height:100%;
-  margin:0px;
-  background-color:rgba(0,0,0,0.7);
-  &:hover {
-    background-color:rgba(0,0,0,0.7);
-  }
-  .text {
+  #our-work-index {
     display:block;
-    height:100%;
-    width:100%;
-    margin-top:120px;
-    h3 {
-      color: white;
-    }
-    h4 {
-      color: white;
-      font-size: 18px;
+    margin: 0 auto;
+    overflow: hidden;
+    .projects-client-box {
+      margin: 0 auto;
+
+      @media (min-width: $desktop-view-size) {width: 25%;}
+      @media (max-width: $mobile-view-size) {width: 33.3%;}
+      float:left;
+      img {
+        padding:20%;
+        margin-left:auto;
+        margin-right:auto;
+        background: #4085D4;
+        width:100% ;
+        height:100%;
+      }
     }
   }
-}
-
-#closeoutbike {
-  background-color: $closeoutbike-bg;
-}
-
-#availendar {
-  background-color: $availendar-bg;
-}
-
-#mobilizeart {
-  background-color: $mobilizeart-bg;
-}
-
-#gigdog {
-  background-color: $gigdog-bg;
-}
-
-#greeneggs {
-  background-color: $greeneggs-bg;
-}
-
-#textus {
-  background-color: $textus-bg;
-}
-
-#scheduleshare {
-   background-color: $scheduleshare-bg;
 }
 

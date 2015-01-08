@@ -1,14 +1,12 @@
-#header-content.row
-
-  .column
-    #logo
-      %a{href: root_path}
-
+#header-content
+  #logo
+    %a{href: root_path}
   %nav
     %ul#main-nav
-      // = tab_to "HOME", root_path,
-      =render "layouts/menu_tabs"
+      = tab_to "Our Approach", approach_path, active_tab("#{approach_path}&").merge({title: "Approach"})
+      = tab_to "See Our work", projects_path, active_tab("#{projects_path}$").merge({title: "Previous clients and projects"})
+      = tab_to "Our Blog", blog_posts_path, active_tab("#{blog_posts_path}$").merge({title: "Blog"})
+      = tab_to "Contact", contact_path, active_tab("#{contact_path}$").merge({'data-no-turbolink' => true, title: "Contact"})
     .burger
       .patty
 
-//=render 'jobs/jobs'

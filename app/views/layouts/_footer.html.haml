@@ -1,46 +1,10 @@
-%footer.container
-  .row
-    #footer-logo.column.two
-      #logo-links
-        = link_to image_tag("logo_grey.png"), root_path
-    #location.column.two
-      .city
-        Charlottesville
-        %br
-      .address
-        1110 East Market St Suite N7
-        %br
-        Charlottesville, VA 22902
-      %h5= link_to 'info@coshx.com', 'mailto:info@coshx.com'
-    #location.column.two
-      .city
-        San Francisco
-      .address
-        972 Mission Street, 5th Floor
-        %br
-        San Francisco, CA 94103
-      %h5= link_to 'info@coshx.com', 'mailto:info@coshx.com'
-    #location.column.two
-      .city
-        Austin
-      .address
-        701 Brazos St, Suite 1601 #1616
-        %br
-        Austin, TX 78701
-      %h5= link_to 'info@coshx.com', 'mailto:info@coshx.com'
-    #social.column.two
-      %h3 Social
-      #social-links
-        %p<
-          = link_to image_tag("footer-twitter.png"), "http://www.twitter.com/coshxlabs"
-          = link_to image_tag("footer-facebook.png"), "http://www.facebook.com/coshxlabs"
-  #footer-bottom.row
-    #copyright.column.six
-      %h4= "Copyright © #{DateTime.now.cwyear} . All rights reserved"
-    #scrollup.column.six
-      = image_tag("footer_arrow.png")
-      %h4= link_to "Back to top", "#"
+#footer
+  #footer-logo.link
+    = link_to image_tag("logo_without_icon.png"), root_path
+  #footer-blog.link
+    = link_to "Our&nbsp;Blog".html_safe, blog_posts_path, active_tab("#{blog_posts_path}$").merge({title: "Blog"})
+  .link
+    = link_to "Twitter","https://twitter.com/coshxlabs",:target => "_blank"
+  .link
+    = link_to "Facebook", "https://www.facebook.com/CoshxLabs",:target => "_blank"
 
-- if current_page?('/contact')
-  #map-container
-    #map-canvas

@@ -1,53 +1,11 @@
-#projects
-  .featured-project.availendar
-    .row
-      #project-description.column.float-right
-        %h3 Availendar
-        %h4 We know tech and you know your industry. Our teams will unite through collaboration and transparency, working together to build amazing applications.
-        = link_to "projects/availendar", :class => "a-case-study-button availendar" do
-          View case study
-      .column.float-left
-        = image_tag("availendar_homepage.png")
 
-  .featured-project.textus
-    .row
-      #project-description.column.float-left
-        %h3 TextUs
-        %h4 The simplest solutions are often the best, and we will work to implement them while keeping costs low.
-        = link_to "projects/textus", :class => "a-case-study-button textus" do
-          View case study
-      .column.float-right
-        = image_tag("textus_homepage.png")
+#home
+  #home-about-us-box
+    %h1 We build applications for people
+    %h2 Watching your idea develop into a valuable application should be fun, not daunting. Our approach makes you an integral part of the process while improving your tech along the way.
 
-  .featured-project.scheduleshare
-    .row
-      #project-description.column.float-right
-        %h3 ScheduleShare
-        %h4 A Coshx product for the masses. We love to build, and will care for your app as if it were one of our own.
-        = link_to "projects/scheduleshare", :class => "a-case-study-button scheduleshare" do
-          View case study
-      .column.float-left
-        = image_tag("scheduleshare_homepage.png")
-
-  .featured-project.gigdog
-    .row
-      #project-description.column.float-left
-        %h3 Gigdog
-        %h4 Why guess when you can test? Use our expertise to validate (or destroy) assumptions, making your site stronger along the way.
-        = link_to "projects/gigdog", :class => "a-case-study-button gigdog" do
-          View case study
-      .column.float-right
-        = image_tag("gigdog_homepage.png")
-
-  .featured-project.mobilizeart
-    .row
-      #project-description.column.float-right
-        %h3 MobilizeArt
-        %h4 Connect your customers with your market, not your website. Technology is a tool that gets out of the way when used right.
-        = link_to "projects/mobilizeart", :class => "a-case-study-button mobilizeart" do
-          View case study
-      .column.float-left
-        = image_tag("mobilizeart_homepage.png")
-
-
+  #home-our-clients
+    -@projects.each do |project|
+      .home-client-box
+        =image_tag project.picture
 

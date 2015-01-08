@@ -1,54 +1,10 @@
-#results-header
-  .row
-    %h1 Simple is better than complex.
-#recent-work
-  #our-work-text.row
-    %h3 Recent Work
+#our-work
+  #our-work-header
+    %h3 Our Work
     %h4 We have a solid track record of delivering great&nbspresults&nbsp-&nbspon&nbsptime&nbspand&nbspon&nbspbudget. <br>Here are just a few of our recent wins.
-  .row
-    .column.six
-      #availendar.content-box
-        %a#darken-box{:href => "projects/availendar"}
-          .text
-            %h3 Availendar
-            %h4 Design, Frontend & Backend
-        = image_tag("availendar_result.png")
 
-    .column.six
-      #mobilizeart.content-box
-        %a#darken-box{:href => "projects/mobilizeart"}
-          .text
-            %h3 MobilizeArt
-            %h4 Design & Frontend
-        = image_tag("mobilizeart_result.png")
-  .row
-    .column.six
-      #gigdog.content-box
-        %a#darken-box{:href => "projects/gigdog"}
-          .text
-            %h3 Gigdog
-            %h4 Design, Frontend & Backend
-        = image_tag("gigdog_result.png")
-    .column.six
-      #greeneggs.content-box
-        %a#darken-box{:href => "projects/greeneggs"}
-          .text
-            %h3 GreenEggs
-            %h4 Design, Frontend & Backend
-        = image_tag("greeneggs_result.png")
-  .row
-    .column.six
-      #textus.content-box
-        %a#darken-box{:href => "projects/textus"}
-          .text
-            %h3 TextUs
-            %h4 Backend
-        = image_tag("textus_result.png")
-    .column.six
-      #scheduleshare.content-box
-        %a#darken-box{:href => "projects/scheduleshare"}
-          .text
-            %h3 ScheduleShare
-            %h4 Design, Frontend & Backend
-        = image_tag("scheduleshare_result.png")
-      
+  #our-work-index
+    -@projects.each do |project|
+      .projects-client-box
+        =image_tag project.picture
+
