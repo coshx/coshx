@@ -35,11 +35,11 @@ describe ProjectsController do
   # in order to pass any filters (e.g. authentication) defined in
 
 
-  describe "GET index" do
+  describe "GET welcome" do
     it "assigns all projects as @projects" do
       sign_in admin
       project = Project.create! valid_attributes
-      get :index
+      get :welcome
 
       assigns(:projects).size.should == 1
     end

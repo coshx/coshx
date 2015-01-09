@@ -21,11 +21,11 @@ adjustFont = ->
   $("h4").css "line-height", Math.min(windowWidth * 0.006, 2)
   $("h2").css "line-height", Math.min(windowWidth * 0.006, 1.45)
 
-  $("a#lets-work-together.btn.blue.small").css "font-size", h4_font_size + "px"
-  $("a#lets-work-together.btn.blue.small").css "width", 130 + windowWidth * 0.1 + "px"
-  $("a#lets-work-together.btn.blue.small").css "display", "block"
+  $("a#contact-us.btn.rounded").css "font-size", h4_font_size + "px"
+  $("a#contact-us.btn.rounded").css "width", 130 + windowWidth * 0.1 + "px"
+  $("a#contact-us.btn.rounded").css "display", "block"
 
-  if windowWidth > 767 #zurb mobile cutoff
+  if windowWidth > 767 #mobile cutoff
     city_font_size = calculatedFontSize 1200, 767, 14, 12
     address_font_size = calculatedFontSize 1200, 767, 12, 8
     $("footer .city").css "font-size", city_font_size+'px'

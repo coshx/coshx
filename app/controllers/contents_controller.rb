@@ -9,7 +9,7 @@ class ContentsController < ApplicationController
     @contents = Content.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # welcome.html.erb
       format.json { render json: @contents }
     end
   end
@@ -44,7 +44,7 @@ class ContentsController < ApplicationController
   # POST /contents
   # POST /contents.json
   def create
-    @content = Content.where("action = ? AND index = ?", params[:content][:action], params[:content][:index]).first
+    @content = Content.where("action = ? AND welcome = ?", params[:content][:action], params[:content][:welcome]).first
     if @content.blank?
       @content = Content.new(params[:content])
       @content.save

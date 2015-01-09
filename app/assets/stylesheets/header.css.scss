@@ -25,6 +25,7 @@ header {
   background: #FFFFFF;
   opacity: 1;
   width: 100%;
+  padding-bottom: 20px;
   -moz-box-shadow: 0 0 6px #E0E0E0;
   -webkit-box-shadow: 0 0 6px #E0E0E0;
   box-shadow: 0 0 6px #E0E0E0;
@@ -51,7 +52,7 @@ header {
 
 
 #logo a {
-  background: url(/assets/logo.png) no-repeat;
+  background: url(/assets/logo_without_icon.png) no-repeat;
   width: 221px;
   height: 60px;
   float: left;

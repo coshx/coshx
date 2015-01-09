@@ -1,4 +1,4 @@
-module HomeHelper
+module PagesHelper
 	def render_team
 		content = ''
 		@team.each_slice(6) do |row|
@@ -43,7 +43,7 @@ private
 	end
 
 	def render_team_member(person)
-		render(:partial => "home/team_member", :layout => false, :locals => {:person => person})
+		render(:partial => "pages/team_member", :layout => false, :locals => {:person => person})
 	end
 
 end

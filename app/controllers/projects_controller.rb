@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
     @projects = Project.all.sort { |x, y| x.id <=> y.id }
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # welcome.html.erb
       format.json { render json: @projects }
     end
   end
@@ -58,8 +58,10 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update_attributes(params[:project])
+        @project.generate_permalink!
         format.html { redirect_to project_path(@project.id), notice: 'Project was successfully updated.' }
         format.json { head :no_content }
+
       else
         format.html { render action: "edit" }
         format.json { render json: @project.errors, status: :unprocessable_entity }

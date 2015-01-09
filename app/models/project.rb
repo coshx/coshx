@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
   has_many :quotes
-  attr_accessible :title, :icon, :picture, :product_description, :project_description, :result_description, :background_color
+  attr_accessible :title, :icon, :permalink, :picture, :product_description, :project_description, :result_description, :background_color
   validates_uniqueness_of :title
   has_permalink
 
@@ -35,4 +35,5 @@ class Project < ActiveRecord::Base
   def set_permalink
     self.permalink = self.class.build_permalink permalink_attributes
   end
+
 end

@@ -35,11 +35,11 @@ describe MessagesController do
   # MessagesController. Be sure to keep this updated too.
 
 
-  describe "GET index" do
+  describe "GET welcome" do
     it "assigns all messages as @messages" do
       sign_in admin
       message = Message.create! valid_attributes
-      get :index
+      get :welcome
       assigns(:messages).should eq([message])
     end
   end

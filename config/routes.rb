@@ -19,27 +19,23 @@ Coshx::Application.routes.draw do
   get 'get_random_quote' => 'quotes#get_random_quote'
   get 'generate_slugs' => 'admins#generate_slugs'
   get 'thank_you' => 'messages#thank_you'
-  get 'about' => 'home#about'
-  get 'approach' => 'home#approach'
-  get 'careers' => 'home#careers'
-  get 'contact' => 'home#contact_us'
-  get 'competition' => 'home#competition'
+  get 'about' => 'pages#about'
+  get 'approach' => 'pages#approach'
+  get 'careers' => 'pages#careers'
+  get 'contact' => 'pages#contact_us'
+  get 'competition' => 'pages#competition'
 
   post 'uploads/images' => 'posts#upload_image'
 
   devise_for :admins
-
-  #admins urls
   get 'edit_my_profile' => 'admins#edit'
   match 'profile_update' => 'admins#update'
 
-  get 'profile/:slug' => "home#profile"
-  get 'dashboard' => 'dashboard#index', :as => :admin_root
+  get 'profile/:slug' => "pages#profile"
+  get 'dashboard' => 'dashboard#welcome', :as => :admin_root
   get '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
 
-
-
-  resources :posts, :except => [:index, :destroy] do
+  resources :posts, :except => [:welcome, :destroy] do
     put 'publish', :on => :member
   end
 
@@ -47,18 +43,17 @@ Coshx::Application.routes.draw do
     put 'publish', :on => :member
   end
 
-  get '/services' => 'home#services', :as => :services
+  get '/services' => 'pages#services', :as => :services
 
   # mount Contenteditable::Engine => "/contenteditable"
 
-  # get '/competition' => 'home#competition'
-  match '/' => 'home#competition', :constraints => { :subdomain => 'competition' }  
+  # get '/competition' => 'pages#competition'
+  match '/' => 'pages#competition', :constraints => { :subdomain => 'competition' }
 
-  root :to => 'home#index'
+  root :to => 'pages#welcome'
 
   match '/404', :to => 'errors#not_found'
 
-  # robot requests to rails server ok when cached
-  get '/robots.txt' => 'home#robots'
+  get '/robots.txt' => 'pages#robots'
 
 end

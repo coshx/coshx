@@ -3,8 +3,8 @@ require "spec_helper"
 describe QuotesController do
   describe "routing" do
 
-    it "routes to #index" do
-      get("/quotes").should route_to("quotes#index")
+    it "routes to #welcome" do
+      get("/quotes").should route_to("quotes#welcome")
     end
 
     it "routes to #new" do

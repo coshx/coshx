@@ -4,19 +4,19 @@ describe JobsController do
 
   let(:job) { create :job }
 
-  describe "GET :index" do
+  describe "GET :welcome" do
 
       it "retrieves open jobs" do
         jobs = [mock_model(Job)]
         Job.should_receive(:open).and_return jobs
-        get :index
+        get :welcome
         assigns(:open_jobs).should == jobs
       end
 
       it "retrieves filled jobs" do
         jobs = [mock_model(Job)]
         Job.should_receive(:filled).and_return jobs
-        get :index
+        get :welcome
         assigns(:filled_jobs).should == jobs
        end
 

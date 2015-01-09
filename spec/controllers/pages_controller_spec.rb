@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe HomeController do
+describe PagesController do
 
   describe "GET :services" do
     it "queries for services" do

@@ -5,7 +5,6 @@
     %meta{:name => "google-site-verification", :content => "GG9HzTQhQZszRRYo-W_el_Dh1LQs-3SQOuCzZS88FvI"}
     %meta{:charset => "UTF-8"}
     %link{:rel => "icon",:type => "image/png", :href => asset_path("favicon.png")}
-    %script{:src => "//maps.googleapis.com/maps/api/js?sensor=false"}
     = render "shared/fonts"
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
@@ -13,46 +12,16 @@
     %meta{content: "Coshx builds custom web and mobile applications for start-ups and established businesses using lean tactics, agile methodologies and test driven development.", name: "description"}/
     = csrf_meta_tags
     = render "shared/google_analytics"
-    = render "layouts/disqus_dev_mode" if Rails.env.development? || Rails.env.test?
-    = auto_discovery_link_tag :atom, "/feed"
+    = render "shared/disqus_dev_mode" if Rails.env.development? || Rails.env.test?
     = render "shared/facebook_meta", :image => yield(:image), :description => yield(:description), :title => yield(:title)
-
-    - if controller.action_name == 'competition'
-      %link{href: "//cdn-images.mailchimp.com/embedcode/slim-081711.css", rel: "stylesheet", type: "text/css"}
-      #fb-root
-      :javascript
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=427613157279609";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-      :javascript
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-
   %body
     %header
       %div#site-header{class: 'fixed-header'}
         = render "layouts/header"
-
-      /  - unless controller.action_name == 'competition'
-      /    - if admin_signed_in?
-      /      = render "layouts/admin_menu"
-      /  - else
-      /    = yield :competition_header
+        - if admin_signed_in?
+          = render "layouts/admin_menu"
     %div.container.main-container.body
       .flash
         = flash[:alert]
       = yield
-      = render "layouts/contact_us_banner"
-      /- unless should_not_display_any_footer_info
-      /  - unless should_not_display_site_links
-      /    = render "layouts/site_links"
-      /  - unless should_not_display_together_section
-      /    = render "layouts/together"
-      - if current_page?('/contact')
-        #footer-with-map
-          = render "layouts/footer"
-      - else
-        = render "layouts/footer"
+      = render "layouts/footer"

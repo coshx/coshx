@@ -7,14 +7,14 @@ class QuotesController < ApplicationController
     @quotes = Quote.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # welcome.html.erb
       format.json { render json: @quotes }
     end
   end
 
   def get_random_quote
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # welcome.html.erb
       format.json { render json: @quotes }
       format.js
     end

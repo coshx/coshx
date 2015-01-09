@@ -1,7 +1,7 @@
-class HomeController < ApplicationController
+class PagesController < ApplicationController
   caches_page :robots
 
-  def index
+  def welcome
     #if mobile_request? || tablet_request?
     #  redirect_to '/about'
     #end

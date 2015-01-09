@@ -5,9 +5,9 @@ describe PostsController do
   let(:blog_post) { create :published_post }
   let(:admin)     { create :admin }
 
-  describe "GET :index" do
+  describe "GET :welcome" do
     it "pages the results" do
-      get :index
+      get :welcome
       assigns(:posts).to_sql.should include("LIMIT 4 OFFSET 0")
     end
 
@@ -15,28 +15,28 @@ describe PostsController do
       before(:each) { sign_in admin }
 
       it "retrives all Posts" do
-        get :index
+        get :welcome
         assigns(:posts).to_sql.should_not =~ /WHERE/i
       end
 
       it "orders the posts with unpublished posts first, then in descending order of creation" do
-        get :index
+        get :welcome
         assigns(:posts).to_sql.should =~ /ORDER BY posted_on DESC, created_at DESC/
       end
     end
 
     it "retrieves published posts for a guest" do
-      get :index
+      get :welcome
       assigns(:posts).to_sql.should include("WHERE (posted_on IS NOT NULL)")
     end
 
     it "retrives posts for a given year and month when given" do
-      get :index, :year => '2012', :month => '01'
+      get :welcome, :year => '2012', :month => '01'
       assigns(:posts).to_sql.should include("WHERE (permalink LIKE '2012/01/%/%')")
     end
 
     it "redirects old blog urls" do
-      get :index, :year => blog_post.id
+      get :welcome, :year => blog_post.id
       response.should be_redirect
     end
   end

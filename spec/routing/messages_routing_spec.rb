@@ -3,8 +3,8 @@ require "spec_helper"
 describe MessagesController do
   describe "routing" do
 
-    it "routes to #index" do
-      get("/messages").should route_to("messages#index")
+    it "routes to #welcome" do
+      get("/messages").should route_to("messages#welcome")
     end
 
     it "routes to #new" do

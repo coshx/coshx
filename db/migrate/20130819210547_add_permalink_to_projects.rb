@@ -3,7 +3,7 @@ class AddPermalinkToProjects < ActiveRecord::Migration
   def up
     change_table :projects do |t|
       t.string :permalink
-      t.index :permalink, :unique => true
+      t.welcome :permalink, :unique => true
     end
 
     Project.reset_column_information

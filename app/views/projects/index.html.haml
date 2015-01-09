@@ -6,5 +6,6 @@
   #our-work-index
     -@projects.each do |project|
       .projects-client-box
-        =image_tag project.picture
+        =link_to(image_tag(project.picture), project_path(project.permalink))
+= render "shared/contact_us_banner"
 

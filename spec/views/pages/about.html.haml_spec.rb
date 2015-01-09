@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "home/about" do
+describe "pages/about" do
   context "linked_in, twitter, github, and a blog post are present" do
     before do
       @post = FactoryGirl.build :post

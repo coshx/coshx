@@ -3,7 +3,7 @@ class AddPostsPermalink < ActiveRecord::Migration
   def up
     change_table :posts do |t|
       t.string :permalink
-      t.index :permalink, :unique => true
+      t.welcome :permalink, :unique => true
     end
 
     Post.reset_column_information

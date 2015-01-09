@@ -35,10 +35,10 @@ describe QuotesController do
   # in order to pass any filters (e.g. authentication) defined in
   # QuotesController. Be sure to keep this updated too.
 
-  describe "GET index" do
+  describe "GET welcome" do
     it "assigns all quotes as @quotes" do
       quote = Quote.create! valid_attributes
-      get :index
+      get :welcome
       assigns(:quotes).should eq([quote])
     end
   end

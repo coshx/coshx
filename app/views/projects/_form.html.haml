@@ -10,6 +10,9 @@
       = f.label :title
       = f.text_field :title
     .field
+      = f.label :permalink
+      = f.text_field :permalink
+    .field
       = f.label :icon
       = f.text_field :icon
     .field
@@ -19,6 +22,12 @@
       = f.label "Featured On Front Page?"
       = f.check_box :featured
     .field
+      = f.label :background_color
+      = f.text_field :background_color
+    .field
+      = f.label :tagline
+      = f.text_field :tagline
+    .field
       = f.label :product_description
       = f.text_area :product_description
     .field
@@ -27,13 +36,6 @@
     .field
       = f.label :result_description
       = f.text_area :result_description
-    .field
-      = f.label :background_color
-      = f.text_field :background_color
-
-    /.field
-    /  = f.label :tagline
-    /  = f.text_field :tagline
     /.field
     /  = f.label :url
     /  = f.text_field :url

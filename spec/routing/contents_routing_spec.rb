@@ -3,8 +3,8 @@ require "spec_helper"
 describe ContentsController do
   describe "routing" do
 
-    it "routes to #index" do
-      get("/contents").should route_to("contents#index")
+    it "routes to #welcome" do
+      get("/contents").should route_to("contents#welcome")
     end
 
     it "routes to #new" do

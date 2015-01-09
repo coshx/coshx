@@ -2,7 +2,7 @@ include PostsHelper
 include AwsHelper
 class PostsController < ApplicationController
   prepend_before_filter :authenticate_admin!, :except => [:index, :show, :feed]
-  before_filter :redirect_old_blog_url, :only => :index
+  before_filter :redirect_old_blog_url, :only => :welcome
   before_filter :redirect_published_posts, :only => :show
 
   def index

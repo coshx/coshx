@@ -40,8 +40,8 @@ module ApplicationHelper
     default_title = ""
 
     title_hash = {
-      "home" => {
-        "index"       => "Software Development and Consulting",
+      "pages" => {
+        "welcome"       => "Software Development and Consulting",
         "about"       => "Software Development and Consulting",
         "approach"    => "Agile Software Development",
         "services"    => "Web Application Development",
@@ -49,14 +49,14 @@ module ApplicationHelper
         "careers"     => "Web Application Development Careers"
       },
       "jobs" => {
-        "index"       => "Build web and mobile applications as a Coshx team member"
+        "welcome"       => "Build web and mobile applications as a Coshx team member"
       },
       "posts" => {
-        "index"       => "Web applications expertise from our accomplished engineering team",
+        "welcome"       => "Web applications expertise from our accomplished engineering team",
         "show"        => @post.try(:title)
       },
       "projects" => {
-        "index"       => "We build web software for diverse industries",
+        "welcome"       => "We build web software for diverse industries",
         "show"        => @project.try(:title)
       }
     }
@@ -81,6 +81,6 @@ module ApplicationHelper
   end
 
   def on_home_page?
-    current_page?('/') && controller.action_name == 'index'
+    current_page?('/') && controller.action_name == 'welcome'
   end
 end

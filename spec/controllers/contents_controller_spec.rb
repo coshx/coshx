@@ -33,20 +33,20 @@ describe ContentsController do
   # in order to pass any filters (e.g. authentication) defined in
   # ContentsController. Be sure to keep this updated too.
 
-  describe "GET index" do
+  describe "GET welcome" do
     it "shouldnt show anythink if admin is not signed in" do
       content = Content.create! valid_attributes
-      get :index
+      get :welcome
       assigns(:contents).should_not eq([content])
     end
   end
 
 
-  describe "GET index" do
+  describe "GET welcome" do
     it "assigns all contents as @contents" do
       sign_in admin
       content = Content.create! valid_attributes
-      get :index
+      get :welcome
       assigns(:contents).should eq([content])
     end
   end

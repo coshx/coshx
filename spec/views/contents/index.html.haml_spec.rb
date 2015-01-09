@@ -1,16 +1,16 @@
 require 'spec_helper'
 
-describe "contents/index" do
+describe "contents/welcome" do
   before(:each) do
     assign(:contents, [
       stub_model(Content,
         :action => "Action",
-        :index => 1,
+        :welcome => 1,
         :value => "MyText"
       ),
       stub_model(Content,
         :action => "Action",
-        :index => 1,
+        :welcome => 1,
         :value => "MyText"
       )
     ])

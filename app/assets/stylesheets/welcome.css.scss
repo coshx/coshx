@@ -1,0 +1,96 @@
+@import "common";
+
+#welcome-page {
+
+  #welcome-page-intro {
+    display:block;
+    background:white;
+    padding-top:10%;
+    padding-bottom:10%;
+
+    #digital-agency {
+      display:block;
+      width:75%;
+      margin:0 auto;
+      h1 {
+        color: black;
+      }
+    }
+    #scroll-icon {
+      img{
+        display: block;
+        padding-top: 5%;
+        margin:0 auto;
+      }
+      h4 {
+        text-align: center;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  #blue-background-wrapper {
+    background:$blue;
+
+    #welcome-page-about-us {
+      color:white;
+      text-align: center;
+      width:75%;
+      margin:0 auto;
+      padding-top:2%;
+      h1, h2 {
+        color: #FFFFFF;
+        margin-top: 40px;
+      }
+      h2 {
+        padding-bottom:60px;
+      }
+    }
+
+    #welcome-page-our-clients {
+      display:block;
+      margin:0 auto;
+      width:65%;
+      overflow: hidden;
+
+      .welcome-page-client-box {
+        width: 25%;
+        float:left;
+        margin:0 auto;
+
+        img {
+          padding:20%;
+          margin:0 auto;
+          background: #4085D4;
+          width:100% ;
+        }
+      }
+    }
+  }
+  #digital-experience {
+
+    background:$tan;
+    display:block;
+    padding-top:10%;
+
+    #text-block {
+      width:50%;
+      margin:0 auto;
+
+      h1 {
+        margin:0px;
+        padding-top:15%;
+      }
+      h2 {
+        margin:0px;
+        padding-top:4%;
+      }
+      a {
+        margin:0px;
+        padding:0px;
+        display:block;
+      }
+    }
+  }
+}
+
