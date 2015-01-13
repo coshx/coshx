@@ -3,15 +3,15 @@ require 'faker'
 FactoryGirl.define do
 
   factory :message do
-    name                Faker::Name.name
-    email               Faker::Internet.email
-    company_name        Faker::Company.name
-    country             Faker::Address.country
-    phone               Faker::PhoneNumber.phone_number
-    project_description Faker::Lorem.paragraph
+    name                Forgery::Name.full_name
+    email               Forgery::Internet.email_address
+    company_name        Forgery::Name.company_name
+    country             Forgery::Address.country
+    phone               Forgery::Address.phone
+    project_description Forgery('lorem_ipsum').paragraph
     deadline            Date.today + 6.months
     budget              "$$$$$"
-    comment             Faker::Lorem.paragraph
+    comment             Forgery('lorem_ipsum').paragraph
   end
 
 end

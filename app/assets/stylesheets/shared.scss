@@ -1,0 +1,16 @@
+@import "common";
+
+#work-together-block, #contact-us-banner {
+  background: #ECE6D9;
+  font-size:25px;
+  text-align:center;
+  padding:6%;
+  a {
+    margin: 0 auto;
+    display:block;
+  }
+
+  #contact-us-banner-text{
+   margin-bottom: 3%;
+  }
+}

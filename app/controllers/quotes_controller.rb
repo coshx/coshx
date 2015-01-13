@@ -14,7 +14,7 @@ class QuotesController < ApplicationController
 
   def get_random_quote
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.json { render json: @quotes }
       format.js
     end

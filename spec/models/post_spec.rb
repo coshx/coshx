@@ -19,7 +19,7 @@ describe Post do
   end
 
   it "published? is false by default" do
-    subject.published?.should be_false
+    subject.published?.should be_falsey
   end
 
   describe "#permalink_attributes" do
@@ -105,17 +105,6 @@ describe Post do
 
     it "adds ... to the end of the preview content" do
       subject.preview.should match /\.\.\.$/
-    end
-  end
-
-  describe "#author" do
-    let(:author) {FactoryGirl.create(:author)}
-    let(:post) {FactoryGirl.create(:post, author: author)}
-
-    it "gets deleted authors" do
-      author.destroy
-      post.reload
-      post.author.should == author
     end
   end
 

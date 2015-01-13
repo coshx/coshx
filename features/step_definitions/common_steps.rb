@@ -16,6 +16,7 @@ When /^(?:|I )check "(.+)"$/ do |box_name| check(box_name) end
 When /^(?:|I )should be on the careers page$/ do visit ('/careers') end
 
 
+
 Given /^I am not authenticated$/ do
   page.driver.delete('/admins/sign_out')
 end
@@ -42,6 +43,10 @@ end
 
 Then /^I should see the sharing buttons$/ do
   page.should have_selector(".sharethis_toolbox")
+end
+
+Then /^I wait$/ do
+  sleep 60
 end
 
 Then /^the page should have the correct copyright date$/ do

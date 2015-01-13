@@ -1,0 +1,31 @@
+@import "common";
+
+#footer {
+  display: block;
+  margin: 0 auto;
+  height: $footer_height;
+  width:50%;
+
+  #footer-blog {
+    margin-left: 6%; //so all links (including logo image) are equidistant from one another
+  }
+  #footer-logo {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    img{vertical-align: middle;}
+  }
+  .link {
+    float: left;
+    display: block;
+    width:22%;
+    text-align:center;
+    a {
+      color:black;
+      line-height: $footer_height;
+    }
+  }
+}
+
+
+

@@ -10,14 +10,23 @@
       = f.label :title
       = f.text_field :title
     .field
-      = f.label :tagline
-      = f.text_field :tagline
+      = f.label :permalink
+      = f.text_field :permalink
     .field
-      = f.label :url
-      = f.text_field :url
+      = f.label :icon
+      = f.text_field :icon
+    .field
+      = f.label "Case Study Picture"
+      = f.text_field :picture
+    .field
+      = f.label "Featured On Front Page?"
+      = f.check_box :featured
     .field
       = f.label :background_color
       = f.text_field :background_color
+    .field
+      = f.label :tagline
+      = f.text_field :tagline
     .field
       = f.label :product_description
       = f.text_area :product_description
@@ -27,12 +36,12 @@
     .field
       = f.label :result_description
       = f.text_area :result_description
-    .field
-      = f.label :featured
-      = f.check_box :featured
-    .field
-      = f.label :link_disabled
-      = f.check_box :link_disabled
+    /.field
+    /  = f.label :url
+    /  = f.text_field :url
+    /.field
+    /  = f.label :link_disabled
+    /  = f.check_box :link_disabled
   .row{:style => "padding-top: 50px"}
     %h3 Save Project:
     .actions

@@ -72,7 +72,6 @@ class ApplicationController < ActionController::Base
       render 'errors/505', :status => :internal_server_error
     end
 
-
     def catch_exceptions
       if Rails.env.production?
         begin

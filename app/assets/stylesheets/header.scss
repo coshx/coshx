@@ -1,0 +1,136 @@
+@import "common";
+
+//// see header.coffee ////
+
+body.mobile-menu {
+  margin-left: -200px !important;
+  overflow-x:hidden;
+  max-width:100%;
+}
+
+#header.mobile-menu {
+  margin-left: 200px !important;
+}
+
+#nav ul.mobile-menu {
+
+  position:absolute;
+  width:200px !important;
+  height:100%;
+  display:block;
+  top:110px;
+  right:0px;
+
+  li.mobile-menu {
+    width: 100%;
+    padding:10px;
+    margin-left: 10px !important;
+    margin-top: 10px !important;
+  }
+
+  a.mobile-menu {
+    text-decoration: none !important;
+    font-size:18px !important;
+
+    &:hover, &:active {
+      border-bottom: 0px !important;
+    }
+  }
+}
+
+@media (max-width: $mobile-view-size) {
+  #nav ul {
+    display: none;
+  }
+}
+@media (min-width: $desktop-view-size) {
+  #nav #burger {
+    display: none;
+  }
+}
+/////////////////////////
+
+
+#header {
+  height:$header_height;
+  width: 100%;
+  display:block;
+
+  #header-logo {
+    $image_height:30px;
+    $margin:($header_height - $image_height )/2 - 5px;
+    height: 100%;
+    float:left;
+    display:block;
+    margin-left: $margin;
+    margin-top: $margin;
+    img {
+      height:$image_height;
+    }
+  }
+
+  #nav {
+    ul{
+      float: right;
+      margin: 0px;
+      height:100%;
+      li {
+        height:100%;
+        list-style-type: none;
+        float: left;
+        margin-right: 30px;
+        a {
+          height:100%;
+          display: block;
+          color: #535353;
+          text-transform: uppercase;
+          font-family: "Merriweather Sans", Georgia;
+          font-size: 14px;
+          padding-bottom: 2px;
+          line-height:110px;
+          text-decoration: none;
+          &:hover, &:active {
+            text-decoration:underline;
+            color: #535353;
+          }
+        }
+      }
+    }
+  }
+
+  #burger {
+    $burger_length: 60px;
+    $patty_length: 40px;
+
+    $burger_margin:($header_height - $burger_length )/2 - 1px;
+    $patty_margin:($burger_length - $patty_length )/2 - 1px;
+
+    background-color: rgba(0,0,0,0.1);
+    width:  $burger_length;
+    height: $burger_length;
+    border-radius: 4px;
+    cursor: pointer;
+    float:right;
+    margin-top: $burger_margin;
+
+    #patty {
+      background: image-url("patty.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      width: $patty_length;
+      height: $patty_length;
+      margin-top: $patty_margin;
+    }
+
+    &:hover {
+      background-color: rgba(0,0,0,0.25);
+    }
+
+  }
+}
+
+
+
+
+
+

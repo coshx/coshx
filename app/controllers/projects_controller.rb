@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.all.sort { |x, y| x.id <=> y.id }
 
     respond_to do |format|
       format.html # index.html.erb

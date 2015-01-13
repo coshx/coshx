@@ -2,6 +2,7 @@ class JobsController < ApplicationController
   prepend_before_filter :authenticate_admin!, :except => [:index, :show]
   before_filter :build_title, :only => [:show, :edit, :update, :publish]
 
+
   def index
     @jobs = Job.all
     @open_jobs = Job.open
@@ -14,6 +15,7 @@ class JobsController < ApplicationController
   end
 
   def create
+
     @job = Job.new(:title => params[:job][:title], :description => params[:job][:description], :filled => params[:job][:filled])
 
     if @job.save
@@ -25,11 +27,12 @@ class JobsController < ApplicationController
   end
 
   def edit
-    @job = Job.first(:conditions => [ "lower(title) = ?", @title ])
+    @job = Job.where("lower(title) = ?", @title ).first
   end
 
   def update
-    @job = Job.first(:conditions => [ "lower(title) = ?", @title ])
+    @job = Job.where("lower(title) = ?", @title ).first
+
     if @job.update_attributes(params[:job])
       redirect_to @job, :notice => 'Job was successfully updated.'
     else
@@ -39,11 +42,11 @@ class JobsController < ApplicationController
   end
 
   def show
-    @job = Job.first(:conditions => [ "lower(title) = ?", @title ])
+    @job = Job.where("lower(title) = ?", @title ).first
   end
 
   def publish
-    @job = Job.first(:conditions => [ "lower(title) = ?", @title ])
+    @job = Job.where("lower(title) = ?", @title ).first
     if @job.publish && @job.save
       redirect_to jobs_path, notice: %("#{@job.title}" has been published.)
     else

@@ -9,9 +9,8 @@
 //= require jquery_ujs
 //= require vendor
 //= require_tree
-//= require foundation
-//= require foundation/app
-//x require contenteditable/contenteditable
 //= require turbolinks
-//= require bootstrap_modal_permalinks
 //= require image_upload
+
+$(function(){ $(document).foundation(); });
+

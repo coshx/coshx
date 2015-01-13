@@ -17,7 +17,7 @@ describe Publishable do
     end
 
     it "sets published? to true" do
-      subject.publish.published?.should be_true
+      subject.publish.published?.should be_truthy
     end
 
 

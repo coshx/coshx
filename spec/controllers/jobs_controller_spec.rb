@@ -52,7 +52,7 @@ describe JobsController do
       before(:each) { sign_in create(:admin) }
 
       context "good job attributes" do
-        before(:each) { post :create, :job => attributes_for(:job) }
+        before(:each) { post :create, :job => FactoryGirl.attributes_for(:job) }
 
         it { should respond_with :redirect }
         it { should set_the_flash.to 'Job posting saved.' }

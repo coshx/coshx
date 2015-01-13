@@ -40,8 +40,8 @@ module ApplicationHelper
     default_title = ""
 
     title_hash = {
-      "home" => {
-        "index"       => "Software Development and Consulting",
+      "pages" => {
+        "welcome"       => "Software Development and Consulting",
         "about"       => "Software Development and Consulting",
         "approach"    => "Agile Software Development",
         "services"    => "Web Application Development",
@@ -81,6 +81,6 @@ module ApplicationHelper
   end
 
   def on_home_page?
-    current_page?('/') && controller.action_name == 'index'
+    current_page?('/') && controller.action_name == 'welcome'
   end
 end

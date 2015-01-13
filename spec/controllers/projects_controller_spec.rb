@@ -28,7 +28,8 @@ describe ProjectsController do
 
 
   def valid_attributes
-    {}
+    {:permalink => "test"}
+
   end
 
   # This should return the minimal set of values that should be in the session

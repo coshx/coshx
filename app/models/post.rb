@@ -4,7 +4,11 @@ class Post < ActiveRecord::Base
   include Tweeter
 
   belongs_to :author, :class_name => "Admin"
-  default_scope :order => "posted_on DESC"
+
+
+  attr_accessible :author, :title, :body
+
+  default_scope {order('posted_on DESC')}
 
   scope :by_author_slug, ->(author_slug) { 
     if author_slug.present?
@@ -20,7 +24,7 @@ class Post < ActiveRecord::Base
   after_update :send_tweet
 
   def author 
-    Admin.unscoped.where(id: author_id).first
+    Admin.where(id: author_id).first
   end
 
   def preview

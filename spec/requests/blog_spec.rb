@@ -8,7 +8,6 @@ describe "Blog" do
     describe "GET post_path" do
       it "links to the authors blog/index page using a URI-happy version of the author's name" do
         get show_post_path(post.permalink_attributes)
-
         response.body.should include "/blog/author/#{post.author.slug}"
       end
     end

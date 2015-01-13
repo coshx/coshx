@@ -2,8 +2,8 @@ CarrierWave.configure do |config|
   config.storage = Rails.env.production? ? :fog : :file
   config.fog_credentials = {
     :provider               => 'AWS',
-    :aws_access_key_id      => ENV['S3_KEY'],
-    :aws_secret_access_key  => ENV['S3_SECRET']
+    :aws_access_key_id      => Rails.env.production? ? ENV['S3_KEY'] : 'id',
+    :aws_secret_access_key  => Rails.env.production? ? ENV['S3_SECRET'] : "secret"
   }
   config.fog_directory  = 'coshx-website'
   config.fog_public     = true

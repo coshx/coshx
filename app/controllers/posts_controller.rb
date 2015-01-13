@@ -12,7 +12,7 @@ class PostsController < ApplicationController
              elsif params[:author_id].present?
                Post.published.where(:author_id => params[:author_id])
              elsif admin_signed_in?
-               Post.scoped.order("posted_on DESC").order("created_at DESC")
+               Post.all.order("posted_on DESC").order("created_at DESC")
              else
                Post.published.by_author_slug(params[:author_slug])
              end.page(params[:page]).per(4)
@@ -25,6 +25,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(:author => current_admin, :title => params[:post][:title], :body => params[:post][:body])
+
 
     if @post.save
       redirect_to admin_root_path, notice: 'Blog post saved.'

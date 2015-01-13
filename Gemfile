@@ -1,13 +1,18 @@
 source "http://rubygems.org"
+ruby "2.2.0"
 
-ruby "1.9.3"
+gem "rails", "~> 4.2.0"
 
-gem "rails", "~> 3.2.17"
+gem "activeresource"
+gem 'protected_attributes'
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
+gem 'rspec-activemodel-mocks'
 
 #moving nokogiri up here because of dependency issues
 gem "nokogiri"
 
-gem "seed_dump", "~> 0.6.0"
+gem "seed_dump"
 
 # web server
 gem 'thin'
@@ -17,12 +22,12 @@ gem "pg"
 gem "paranoia"
 
 # authentication
-gem "devise", '2.1.2'
+gem 'devise'
 
 # presentation
 gem "redcarpet"
 gem "pygmentize"
-gem 'jquery-rails', '~> 2.3.0'
+gem 'jquery-rails'
 gem "haml-rails"
 gem "gravatar-ultimate"
 gem "kaminari"
@@ -30,7 +35,7 @@ gem 'jquery-ui-rails'
 
 # pictures
 gem 'carrierwave'
-gem 'rmagick', '~> 2.13.2'
+gem 'rmagick'
 gem 'fog'
 
 #Social media is cool?
@@ -48,31 +53,26 @@ gem 'mobu'
 # https://github.com/kjvarga/sitemap_generator
 gem 'sitemap_generator'
 
-gem 'i18n-active_record',
-    :git => 'git://github.com/svenfuchs/i18n-active_record.git',
-    :branch => 'rails-3.2',
-    :require => 'i18n/active_record'
+gem 'i18n-active_record', git:'git://github.com/svenfuchs/i18n-active_record.git', require: 'i18n/active_record'
 
-# lightweight I18n frontend
-# gem 'contenteditable', :github => 'micmmakarov/contenteditable', :branch => 'master'
 
-# sass mixin library
+
 gem 'bourbon'
 
 group :assets do
   # upload assets to s3 before deploying to heroku
   gem "asset_sync"
 
-  gem "sass-rails",   '~> 3.2.3'
-  gem "coffee-rails", '~> 3.2.1'
+  gem "sass-rails"
+  gem "coffee-rails"
   gem "uglifier"
-  gem 'compass-rails', '~> 1.0.3'
-  gem 'zurb-foundation', '~> 3.0.1'
+  gem 'compass-rails'
+
   gem 'execjs'
 end
 
 group :development do
-  gem "heroku_san", '~> 4.2.2'
+  gem "heroku_san"
   gem 'better_errors'
   gem 'meta_request'
 end
@@ -82,10 +82,10 @@ group :development, :test do
   gem "factory_girl_rails"
   gem "timecop"
   gem 'shoulda-matchers'
-  gem 'simplecov', :require => false # code coverage tool
+  gem 'simplecov', :require => false
   gem "database_cleaner"
   gem "forgery"
-  gem "rspec-rails", '~> 2.14.1'
+  gem "rspec-rails"
   gem 'pry'
   gem 'pry-nav'
   gem 'faker'
