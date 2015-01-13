@@ -9,3 +9,6 @@ deployment:
     commands:
       - '[[ ! -s "$(git rev-parse --git-dir)/shallow" ]] || git fetch --unshallow'
       - rake staging deploy
+machine:
+  ruby:
+    version: ruby-2.2.0-preview1
