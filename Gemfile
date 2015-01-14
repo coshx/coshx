@@ -54,9 +54,11 @@ gem 'sitemap_generator'
 
 gem 'i18n-active_record', git:'git://github.com/svenfuchs/i18n-active_record.git', require: 'i18n/active_record'
 
-
-
 gem 'bourbon'
+
+group :production do
+  gem 'rails_12factor'
+end
 
 group :assets do
   # upload assets to s3 before deploying to heroku
