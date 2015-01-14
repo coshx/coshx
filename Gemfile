@@ -7,7 +7,6 @@ gem "activeresource"
 gem 'protected_attributes'
 gem 'actionpack-page_caching'
 gem 'actionpack-action_caching'
-gem 'rspec-activemodel-mocks'
 
 #moving nokogiri up here because of dependency issues
 gem "nokogiri"
@@ -78,6 +77,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'rspec-activemodel-mocks'
   gem "cucumber-rails", :require => false
   gem "factory_girl_rails"
   gem "timecop"
