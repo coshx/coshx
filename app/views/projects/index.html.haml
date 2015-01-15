@@ -3,10 +3,12 @@
     %h3 Our Work
     %h4 We have a solid track record of delivering great&nbspresults&nbsp-&nbspon&nbsptime&nbspand&nbspon&nbspbudget. <br>Here are just a few of our recent wins.
 
+
   #our-work-index
     -@projects.each do |project|
       .projects-client-box
-        =link_to(image_tag(project.picture), project_path(project.permalink))
+        #project-background-style{:style => "background-color: #{project.background_color}"}
+          =link_to(image_tag(project.picture), project_path(project.permalink))
 
 = render "shared/contact_us_banner"
 

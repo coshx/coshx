@@ -14,17 +14,14 @@
     overflow: hidden;
 
    .projects-client-box {
-     @media (min-width: $desktop-view-size) {width: 25%;}
-     @media (max-width: $mobile-view-size) {width: 33.3%;}
+     width: 33.3%;
      float:left;
      margin: 0 auto;
 
      a img {
        display:block;
-       padding:20%;
        margin: 0 auto;
-       background: #4085D4;
-       width:75% ;
+       width:80% ;
       }
     }
   }

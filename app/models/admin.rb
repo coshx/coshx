@@ -1,10 +1,6 @@
 class Admin < ActiveRecord::Base
   acts_as_paranoid
-  
-  devise :database_authenticatable, :recoverable,
-    :rememberable, :trackable, :validatable
-
-  # Setup accessible (or protected) attributes for your model
+  devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :img
 
   validates_presence_of :bio

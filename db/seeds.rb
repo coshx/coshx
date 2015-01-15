@@ -72,7 +72,7 @@ project = Project.where(:id => 1).first_or_create do |project|
   project.permalink = "agogo"
   project.url = ""
   project.link_disabled = true
-  project.background_color = "#4085D4"
+  project.background_color = "#FED94A"
   project.tagline = ""
   project.project_description = ""
   project.product_description = ""
@@ -84,7 +84,7 @@ project = Project.where(:id => 2).first_or_create do |project|
   project.title = "Tendril"
   project.icon = "tendril.png"
   project.picture = "tendril.png"
-  project.permalink = "tendrils"
+  project.permalink = "tendril"
   project.url = ""
   project.link_disabled = true
   project.tagline = ""
@@ -103,7 +103,7 @@ project = Project.where(:id => 3).first_or_create do |project|
   project.url = ""
   project.link_disabled = true
   project.tagline = ""
-  project.background_color = "#4085D4"
+  project.background_color = "#E84D76"
   project.project_description = ""
   project.product_description = ""
   project.result_description = ""
@@ -118,7 +118,7 @@ project = Project.where(:id => 4).first_or_create do |project|
   project.url = ""
   project.link_disabled = true
   project.tagline = ""
-  project.background_color = "#4085D4"
+  project.background_color = "#ECE6D9"
   project.project_description = ""
   project.product_description = ""
   project.result_description = ""
@@ -133,7 +133,7 @@ project = Project.where(:id => 5).first_or_create do |project|
   project.url = ""
   project.link_disabled = true
   project.tagline = ""
-  project.background_color = "#4085D4"
+  project.background_color = "#6BBEE6"
   project.project_description = ""
   project.product_description = ""
   project.result_description = ""
@@ -148,7 +148,7 @@ project = Project.where(:id => 6).first_or_create do |project|
   project.url = ""
   project.link_disabled = true
   project.tagline = ""
-  project.background_color = "#4085D4"
+  project.background_color = "#C8423F"
   project.project_description = ""
   project.product_description = ""
   project.result_description = ""
@@ -163,7 +163,7 @@ project = Project.where(:id => 7).first_or_create do |project|
   project.url = ""
   project.link_disabled = true
   project.tagline = ""
-  project.background_color = "#4085D4"
+  project.background_color = "#86CBA4"
   project.project_description = ""
   project.product_description = ""
   project.result_description = ""
@@ -178,7 +178,7 @@ project = Project.where(:id => 8).first_or_create do |project|
   project.url = ""
   project.link_disabled = true
   project.tagline = ""
-  project.background_color = "#4085D4"
+  project.background_color = "#865593"
   project.project_description = ""
   project.product_description = ""
   project.result_description = ""
@@ -193,7 +193,7 @@ project = Project.where(:id => 9).first_or_create do |project|
   project.url = ""
   project.link_disabled = true
   project.tagline = ""
-  project.background_color = "#4085D4"
+  project.background_color = "#FF9300"
   project.project_description = ""
   project.product_description = ""
   project.result_description = ""
