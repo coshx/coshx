@@ -90,6 +90,7 @@ group :development, :test do
   gem "rspec-rails"
   gem 'pry'
   gem 'pry-nav'
+  gem 'pry-rails'
   gem 'faker'
   gem 'selenium-webdriver'
   gem 'poltergeist'

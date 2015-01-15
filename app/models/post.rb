@@ -5,7 +5,6 @@ class Post < ActiveRecord::Base
 
   belongs_to :author, :class_name => "Admin"
 
-
   attr_accessible :author, :title, :body
 
   default_scope {order('posted_on DESC')}

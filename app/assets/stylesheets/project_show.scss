@@ -14,7 +14,8 @@
 
 #laptop_image {
 	margin-top: 50px;
-	display: block;
+
+    display: block;
 	margin-left: auto;
 	margin-right: auto;
 	z-index: 2;
@@ -22,6 +23,7 @@
 }
 
 #page_arrow {
+  display:none;
 	position: absolute;
 	bottom: 53%;
 
@@ -45,7 +47,7 @@
 }
 
 #case-study-middle-row {
-	height: 210px;
+	height: 50px;
 	padding-top: 160px;
 	background-color: $grey-white;
 	z-index: 1;

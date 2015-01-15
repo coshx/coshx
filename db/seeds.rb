@@ -2,7 +2,8 @@
 
 #ADMINS
 
-demo = Admin.find_or_create_by_email("demo@example.org") do  |user|
+=begin
+demo = Admin.where(:email=>"user@example.org").first_or_create do  |user|
   user.name = 'Demo'
   user.last_name = 'User'
   user.password = 'password'
@@ -15,7 +16,7 @@ end
 demo.save!
 puts "Created Demo User"
 
-alumni = Admin.find_or_create_by_email("user@example.org") do  |user|
+alumni = Admin.where(:email=>"user@example.org").first_or_create do  |user|
   user.name = 'User'
   user.last_name = 'Demo'
   user.password = 'password'
@@ -29,11 +30,10 @@ end
 alumni.save!
 puts "Created Demo Alumni"
 
-
 #BLOG POSTS
 puts "Creating POSTS..."
 
-post = Post.find_or_create_by_title('First Post') do |post|
+post = Post.where(:title => 'First Post').first_or_create do |post|
   post.title = 'First Post'
   post.author_id = Admin.find_by_email('demo@example.org').id
   post.created_at = '2012-03-25 04:14:32 UTC'
@@ -60,13 +60,161 @@ post.save!
 # encoding: utf-8
 # encoding: utf-8
 
-Project.create([
-  { :title => "Greeneggs", :product_description => "Closeoutbikes seamlessly finds you the perfect bike at the right price so you have more time to ride and more money to spend during your adventures. Unlike many ecommerce sites, Closeoutbikes connects you with the local bike shops that allow biking communities to thrive, rather than with a faceless warehouse somewhere in the world.", :picture => "greeneggs_iphone.png", :featured => false, :url => "http://www.closeoutbike.com", :project_description => "Design is functional art, and striking a proper balance between an appealing aesthetic and an intuitive user flow is the main challenge of any designer. Visitors must not simply appreciate a site, but be able to navigate it easily while being confident in their purchases. In addition to the psychology of shoppers, our designers much understand the sentiments of the entrepreneur behind the site, and create something that represents them and their unique offering. To manage this process our designer, Gil, worked hand in hand with the founder of Closeoutbikes to design everything from the logo to the design of the site itself. This included an extensive interview, rounds of mockups and refinements and conversations that drilled down into not only the business function of the site, but the mood and sensibilities of those who would use it most. What emerged was a clean site that connects users to the bikes they want, not to the site itself, by practicing perfect simplicity. Simple means minimalist, easy to use and calming, but does not imply a lack of thought or diligent work. Ask Gil why he used a certain font in a specific place, and he will send you a philosophical treatise on beauty and reference material on modern design theory. All you need to know is that it looks great, and trust that we can explain all the reasons why, but we are always open to a deep conversation on what we love to do.", :result_description => "The new version of the app launched seamlessly and captured the attention (and dollars) of a high profile client that loved the service. An application is only successful when it accomplishes the tasks of all the users, but the business is only successful when the application is built in a cost effective manner. We strive to ensure that our clients get the most out of our time, as we measure ourselves by the success and satisfaction of our partners, and not by our bottom line alone.", :background_color => "#a5c675", :featured_picture => "greeneggs_img.png", :tagline => "Your bicycle shopping gets easier!", :permalink => "greeneggs", :index_picture => "greeneggs_result.png", :link_disabled => nil },
-  { :title => "Closeoutbike", :product_description => "Closeoutbikes seamlessly finds you the perfect bike at the right price so you have more time to ride and more money to spend during your adventures. Unlike many ecommerce sites, Closeoutbikes connects you with the local bike shops that allow biking communities to thrive, rather than with a faceless warehouse somewhere in the world.", :picture => "closeoutbike_laptop.png", :featured => false, :url => "http://www.closeoutbike.com", :project_description => "Design is functional art, and striking a proper balance between an appealing aesthetic and an intuitive user flow is the main challenge of any designer. Visitors must not simply appreciate a site, but be able to navigate it easily while being confident in their purchases. In addition to the psychology of shoppers, our designers much understand the sentiments of the entrepreneur behind the site, and create something that represents them and their unique offering. To manage this process our designer, Gil, worked hand in hand with the founder of Closeoutbikes to design everything from the logo to the design of the site itself. This included an extensive interview, rounds of mockups and refinements and conversations that drilled down into not only the business function of the site, but the mood and sensibilities of those who would use it most. What emerged was a clean site that connects users to the bikes they want, not to the site itself, by practicing perfect simplicity. Simple means minimalist, easy to use and calming, but does not imply a lack of thought or diligent work. Ask Gil why he used a certain font in a specific place, and he will send you a philosophical treatise on beauty and reference material on modern design theory. All you need to know is that it looks great, and trust that we can explain all the reasons why, but we are always open to a deep conversation on what we love to do.", :result_description => "The new version of the app launched seamlessly and captured the attention (and dollars) of a high profile client that loved the service. An application is only successful when it accomplishes the tasks of all the users, but the business is only successful when the application is built in a cost effective manner. We strive to ensure that our clients get the most out of our time, as we measure ourselves by the success and satisfaction of our partners, and not by our bottom line alone.", :background_color => "#455560", :featured_picture => "closeoutbike_img.png", :tagline => "Your bicycle shopping gets easier!", :permalink => "closeoutbike", :index_picture => "closeoutbike_result.png", :link_disabled => nil },
-  { :title => "Mobilizeart", :product_description => "Closeoutbikes seamlessly finds you the perfect bike at the right price so you have more time to ride and more money to spend during your adventures. Unlike many ecommerce sites, Closeoutbikes connects you with the local bike shops that allow biking communities to thrive, rather than with a faceless warehouse somewhere in the world.", :picture => "mobilizeart_laptop.png", :featured => false, :url => "http://www.closeoutbike.com", :project_description => "Design is functional art, and striking a proper balance between an appealing aesthetic and an intuitive user flow is the main challenge of any designer. Visitors must not simply appreciate a site, but be able to navigate it easily while being confident in their purchases. In addition to the psychology of shoppers, our designers much understand the sentiments of the entrepreneur behind the site, and create something that represents them and their unique offering. To manage this process our designer, Gil, worked hand in hand with the founder of Closeoutbikes to design everything from the logo to the design of the site itself. This included an extensive interview, rounds of mockups and refinements and conversations that drilled down into not only the business function of the site, but the mood and sensibilities of those who would use it most. What emerged was a clean site that connects users to the bikes they want, not to the site itself, by practicing perfect simplicity. Simple means minimalist, easy to use and calming, but does not imply a lack of thought or diligent work. Ask Gil why he used a certain font in a specific place, and he will send you a philosophical treatise on beauty and reference material on modern design theory. All you need to know is that it looks great, and trust that we can explain all the reasons why, but we are always open to a deep conversation on what we love to do.", :result_description => "The new version of the app launched seamlessly and captured the attention (and dollars) of a high profile client that loved the service. An application is only successful when it accomplishes the tasks of all the users, but the business is only successful when the application is built in a cost effective manner. We strive to ensure that our clients get the most out of our time, as we measure ourselves by the success and satisfaction of our partners, and not by our bottom line alone.", :background_color => "#75c6b2", :featured_picture => "mobilizeart_img.png", :tagline => "Your bicycle shopping gets easier!", :permalink => "mobilizeart", :index_picture => "mobilizeart_result.png", :link_disabled => nil },
-  { :title => "Gigdog", :product_description => "Closeoutbikes seamlessly finds you the perfect bike at the right price so you have more time to ride and more money to spend during your adventures. Unlike many ecommerce sites, Closeoutbikes connects you with the local bike shops that allow biking communities to thrive, rather than with a faceless warehouse somewhere in the world.", :picture => "gigdog_laptop.png", :featured => false, :url => "http://www.closeoutbike.com", :project_description => "Design is functional art, and striking a proper balance between an appealing aesthetic and an intuitive user flow is the main challenge of any designer. Visitors must not simply appreciate a site, but be able to navigate it easily while being confident in their purchases. In addition to the psychology of shoppers, our designers much understand the sentiments of the entrepreneur behind the site, and create something that represents them and their unique offering. To manage this process our designer, Gil, worked hand in hand with the founder of Closeoutbikes to design everything from the logo to the design of the site itself. This included an extensive interview, rounds of mockups and refinements and conversations that drilled down into not only the business function of the site, but the mood and sensibilities of those who would use it most. What emerged was a clean site that connects users to the bikes they want, not to the site itself, by practicing perfect simplicity. Simple means minimalist, easy to use and calming, but does not imply a lack of thought or diligent work. Ask Gil why he used a certain font in a specific place, and he will send you a philosophical treatise on beauty and reference material on modern design theory. All you need to know is that it looks great, and trust that we can explain all the reasons why, but we are always open to a deep conversation on what we love to do.", :result_description => "The new version of the app launched seamlessly and captured the attention (and dollars) of a high profile client that loved the service. An application is only successful when it accomplishes the tasks of all the users, but the business is only successful when the application is built in a cost effective manner. We strive to ensure that our clients get the most out of our time, as we measure ourselves by the success and satisfaction of our partners, and not by our bottom line alone.", :background_color => "#164d67", :featured_picture => "gigdog_img.png", :tagline => "Your bicycle shopping gets easier!", :permalink => "gigdog", :index_picture => "gigdog_result.png", :link_disabled => nil },
-  { :title => "Textus", :product_description => "Closeoutbikes seamlessly finds you the perfect bike at the right price so you have more time to ride and more money to spend during your adventures. Unlike many ecommerce sites, Closeoutbikes connects you with the local bike shops that allow biking communities to thrive, rather than with a faceless warehouse somewhere in the world.", :picture => "textus_laptop.png", :featured => false, :url => "http://www.closeoutbike.com", :project_description => "Design is functional art, and striking a proper balance between an appealing aesthetic and an intuitive user flow is the main challenge of any designer. Visitors must not simply appreciate a site, but be able to navigate it easily while being confident in their purchases. In addition to the psychology of shoppers, our designers much understand the sentiments of the entrepreneur behind the site, and create something that represents them and their unique offering. To manage this process our designer, Gil, worked hand in hand with the founder of Closeoutbikes to design everything from the logo to the design of the site itself. This included an extensive interview, rounds of mockups and refinements and conversations that drilled down into not only the business function of the site, but the mood and sensibilities of those who would use it most. What emerged was a clean site that connects users to the bikes they want, not to the site itself, by practicing perfect simplicity. Simple means minimalist, easy to use and calming, but does not imply a lack of thought or diligent work. Ask Gil why he used a certain font in a specific place, and he will send you a philosophical treatise on beauty and reference material on modern design theory. All you need to know is that it looks great, and trust that we can explain all the reasons why, but we are always open to a deep conversation on what we love to do.", :result_description => "The new version of the app launched seamlessly and captured the attention (and dollars) of a high profile client that loved the service. An application is only successful when it accomplishes the tasks of all the users, but the business is only successful when the application is built in a cost effective manner. We strive to ensure that our clients get the most out of our time, as we measure ourselves by the success and satisfaction of our partners, and not by our bottom line alone.", :background_color => "#922b8d", :featured_picture => "textus_img.png", :tagline => "Your bicycle shopping gets easier!", :permalink => "textus", :index_picture => "textus_result.png", :link_disabled => nil },
-  { :title => "Scheduleshare", :product_description => "Closeoutbikes seamlessly finds you the perfect bike at the right price so you have more time to ride and more money to spend during your adventures. Unlike many ecommerce sites, Closeoutbikes connects you with the local bike shops that allow biking communities to thrive, rather than with a faceless warehouse somewhere in the world.", :picture => "scheduleshare_laptop.png", :featured => false, :url => "http://www.closeoutbike.com", :project_description => "Design is functional art, and striking a proper balance between an appealing aesthetic and an intuitive user flow is the main challenge of any designer. Visitors must not simply appreciate a site, but be able to navigate it easily while being confident in their purchases. In addition to the psychology of shoppers, our designers much understand the sentiments of the entrepreneur behind the site, and create something that represents them and their unique offering. To manage this process our designer, Gil, worked hand in hand with the founder of Closeoutbikes to design everything from the logo to the design of the site itself. This included an extensive interview, rounds of mockups and refinements and conversations that drilled down into not only the business function of the site, but the mood and sensibilities of those who would use it most. What emerged was a clean site that connects users to the bikes they want, not to the site itself, by practicing perfect simplicity. Simple means minimalist, easy to use and calming, but does not imply a lack of thought or diligent work. Ask Gil why he used a certain font in a specific place, and he will send you a philosophical treatise on beauty and reference material on modern design theory. All you need to know is that it looks great, and trust that we can explain all the reasons why, but we are always open to a deep conversation on what we love to do.", :result_description => "The new version of the app launched seamlessly and captured the attention (and dollars) of a high profile client that loved the service. An application is only successful when it accomplishes the tasks of all the users, but the business is only successful when the application is built in a cost effective manner. We strive to ensure that our clients get the most out of our time, as we measure ourselves by the success and satisfaction of our partners, and not by our bottom line alone.", :background_color => "#2c2c2c", :featured_picture => "scheduleshare_img.png", :tagline => "Your bicycle shopping gets easier!", :permalink => "scheduleshare", :index_picture => "scheduleshare_result.png", :link_disabled => nil }
-], :without_protection => true )
+=end
+
+Project.delete_all
+
+puts "Adding Out of box projects"
+project = Project.where(:id => 1).first_or_create do |project|
+  project.title = "AGOGO"
+  project.icon = "agogo.png"
+  project.picture = "agogo.png"
+  project.permalink = "agogo"
+  project.url = ""
+  project.link_disabled = true
+  project.background_color = "#4085D4"
+  project.tagline = ""
+  project.project_description = ""
+  project.product_description = ""
+  project.result_description = ""
+end
+project.save!(:validate => false)
+
+project = Project.where(:id => 2).first_or_create do |project|
+  project.title = "Tendril"
+  project.icon = "tendril.png"
+  project.picture = "tendril.png"
+  project.permalink = "tendrils"
+  project.url = ""
+  project.link_disabled = true
+  project.tagline = ""
+  project.background_color = "#4085D4"
+  project.project_description = ""
+  project.product_description = ""
+  project.result_description = ""
+end
+project.save!(:validate => false)
+
+project = Project.where(:id => 3).first_or_create do |project|
+  project.title = "Kidfully"
+  project.icon = "kidfully.png"
+  project.picture = "kidfully.png"
+  project.permalink = "kidfully"
+  project.url = ""
+  project.link_disabled = true
+  project.tagline = ""
+  project.background_color = "#4085D4"
+  project.project_description = ""
+  project.product_description = ""
+  project.result_description = ""
+end
+project.save!(:validate => false)
+
+project = Project.where(:id => 4).first_or_create do |project|
+  project.title = "Text Us"
+  project.icon = "textus.png"
+  project.picture = "textus.png"
+  project.permalink = "textus"
+  project.url = ""
+  project.link_disabled = true
+  project.tagline = ""
+  project.background_color = "#4085D4"
+  project.project_description = ""
+  project.product_description = ""
+  project.result_description = ""
+end
+project.save!(:validate => false)
+
+project = Project.where(:id => 5).first_or_create do |project|
+  project.title = "Nuduro"
+  project.icon = "nuduro.png"
+  project.picture = "nuduro.png"
+  project.permalink = "nuduro"
+  project.url = ""
+  project.link_disabled = true
+  project.tagline = ""
+  project.background_color = "#4085D4"
+  project.project_description = ""
+  project.product_description = ""
+  project.result_description = ""
+end
+project.save!(:validate => false)
+
+project = Project.where(:id => 6).first_or_create do |project|
+  project.title = "World Reader"
+  project.icon = "worldreader.png"
+  project.picture = "worldreader.png"
+  project.permalink = "worldreader"
+  project.url = ""
+  project.link_disabled = true
+  project.tagline = ""
+  project.background_color = "#4085D4"
+  project.project_description = ""
+  project.product_description = ""
+  project.result_description = ""
+end
+project.save!(:validate => false)
+
+project = Project.where(:id => 7).first_or_create do |project|
+  project.title = "Couchsurfing"
+  project.icon = "couchsurfing.png"
+  project.picture = "couchsurfing.png"
+  project.permalink = "couchsurfing"
+  project.url = ""
+  project.link_disabled = true
+  project.tagline = ""
+  project.background_color = "#4085D4"
+  project.project_description = ""
+  project.product_description = ""
+  project.result_description = ""
+end
+project.save!(:validate => false)
+
+project = Project.where(:id => 8).first_or_create do |project|
+  project.title = "Amuze"
+  project.icon = "amuze.png"
+  project.picture = "amuze.png"
+  project.permalink = "amuze"
+  project.url = ""
+  project.link_disabled = true
+  project.tagline = ""
+  project.background_color = "#4085D4"
+  project.project_description = ""
+  project.product_description = ""
+  project.result_description = ""
+end
+project.save!(:validate => false)
+
+project = Project.where(:id => 9).first_or_create do |project|
+  project.title = "MINR"
+  project.icon = "minr.png"
+  project.picture = "minr.png"
+  project.permalink = "minr"
+  project.url = ""
+  project.link_disabled = true
+  project.tagline = ""
+  project.background_color = "#4085D4"
+  project.project_description = ""
+  project.product_description = ""
+  project.result_description = ""
+end
+project.save!(:validate => false)
 
 
+=begin
+  { :title => "Greeneggs",
+    :picture => "greeneggs_iphone.png",
+    :featured => false,
+    :url => "http://www.closeoutbike.com",
+    :background_color => "#a5c675",
+    :featured_picture => "greeneggs_img.png",
+    :tagline => "Your bicycle shopping gets easier!",
+    :permalink => "greeneggs",
+    :index_picture => "greeneggs_result.png",
+
+    :project_description => "",
+    :product_description => "",
+    :result_description => "",
+
+    :link_disabled => nil },
+=end

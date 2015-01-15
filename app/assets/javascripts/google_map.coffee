@@ -1,3 +1,4 @@
+###
 initialize = ->
   map_canvas = document.getElementById("map-canvas")
   return unless map_canvas
@@ -38,3 +39,4 @@ initialize = ->
 
 
 google.maps.event.addDomListener window, "load", initialize
+###

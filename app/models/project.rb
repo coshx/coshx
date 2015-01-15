@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
   has_many :quotes
-  attr_accessible :title, :icon, :picture, :permalink, :product_description, :project_description, :result_description, :background_color
+  attr_accessible :title, :icon, :picture, :permalink, :product_description, :project_description, :result_description, :background_color, :link_disabled
   validates_uniqueness_of :title
   has_permalink
 
