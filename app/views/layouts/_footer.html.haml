@@ -1,10 +1,9 @@
 #footer
-  #footer-logo.link
-    = link_to image_tag("logo_without_icon.png"), root_path
-  #footer-blog.link
-    = link_to "Our&nbsp;Blog".html_safe, blog_posts_path, active_tab("#{blog_posts_path}$").merge({title: "Blog"})
-  .link
-    = link_to "Twitter","https://twitter.com/coshxlabs",:target => "_blank"
-  .link
-    = link_to "Facebook", "https://www.facebook.com/CoshxLabs",:target => "_blank"
+  #footer-nav
+    %ul
+      #footer-icon
+        = tab_to image_tag("logo_without_icon.png"), root_path
+      = tab_to image_tag("facebook_icon.png"), "https://www.facebook.com/CoshxLabs",:target => "_blank"
+      = tab_to image_tag("our_blog_icon.png"), blog_posts_path, active_tab("#{blog_posts_path}$").merge({title: "Blog"})
+      = tab_to image_tag("twitter_icon.png"),"https://twitter.com/coshxlabs",:target => "_blank"
 

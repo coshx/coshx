@@ -3,35 +3,33 @@
 //// see header.coffee ////
 
 body.mobile-menu {
-  margin-left: -200px !important;
+  margin-left: -240px !important;
   overflow-x:hidden;
   max-width:100%;
 }
 
 #header.mobile-menu {
-  margin-left: 200px !important;
+  margin-left: 240px !important;
 }
 
 #nav ul.mobile-menu {
-
   position:absolute;
   width:200px !important;
-  height:100%;
   display:block;
   top:110px;
   right:0px;
 
-  li.mobile-menu {
+  li {
     width: 100%;
-    padding:10px;
-    margin-left: 10px !important;
-    margin-top: 10px !important;
+    padding-top:50px;
+    padding:30px;
+    height:10px !important;
   }
 
-  a.mobile-menu {
+  a {
     text-decoration: none !important;
     font-size:18px !important;
-
+    line-height:18px !important;
     &:hover, &:active {
       border-bottom: 0px !important;
     }
@@ -39,12 +37,12 @@ body.mobile-menu {
 }
 
 @media (max-width: $mobile-view-size) {
-  #nav ul {
+  #header #nav ul {
     display: none;
   }
 }
 @media (min-width: $desktop-view-size) {
-  #nav #burger {
+  #header #nav #burger {
     display: none;
   }
 }
