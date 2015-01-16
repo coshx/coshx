@@ -18,6 +18,7 @@
   text-decoration: none;
   border-radius: 30px;
   border-color: $blue;
+  text-align: center;
   -webkit-transition: all 0.2s ease-out; /* Safari 3.2+, Chrome */
   -moz-transition: all 0.2s ease-out; /* Firefox 4-15 */
   -o-transition: all 0.2s ease-out; /* Opera 10.5–12.00 */
@@ -27,3 +28,4 @@
     border-color: white;
   }
 }
+

@@ -5,16 +5,7 @@
       %ul
         - @message.errors.full_messages.each do |msg|
           %li= msg
-  .row
-    .six.columns
-      .text-field
-        = f.text_field :name, :placeholder => "Your name"
-    .six.columns
-      .text-field
-        = f.email_field :email, :placeholder => "Email address"
-  .row
-    .twelve.columns
-      .long-field
-        = f.text_area :text, :placeholder => "Tell us about your project or send us a simple hello..."
-      .link
-        =f.submit :class => 'submit btn blue center top-margin-small submit-link', :value => "Let's get started"
+  = f.text_field :name, :placeholder => "Your name"
+  = f.email_field :email, :placeholder => "Email address"
+  = f.text_area :text, :placeholder => "Tell us about your project or send us a simple hello..."
+  = f.submit :id => "contact-us-form", :class => "btn",  :value => "Let's get started"
