@@ -47,8 +47,6 @@ gem 'has_permalink'
 # Turbolinks!
 gem "turbolinks"
 
-gem 'mobu'
-
 # https://github.com/kjvarga/sitemap_generator
 gem 'sitemap_generator'
 

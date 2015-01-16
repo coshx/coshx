@@ -21,9 +21,7 @@
     %h4
       = @project.result_description
   .row
-    - if @project.link_disabled?
-      = button_to "view the site", '#', :class => "btn light-grey center top-margin-small", :disabled => true, :method => :get
-    - else
+    - unless @project.link_disabled?
       = link_to "view the site", @project.url, :target => "_blank", :class => "btn blue center top-padding top-margin-small", :method => :get
 
 - if admin_signed_in?

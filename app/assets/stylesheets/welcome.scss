@@ -4,8 +4,8 @@
 
   #welcome-page-intro {
     display:block;
-    padding-top:10%;
-    padding-bottom:10%;
+    padding-top:0%;
+    padding-bottom:5%;
 
     #digital-agency {
       display:block;
@@ -30,7 +30,8 @@
 
   #blue-background-wrapper {
     background:$blue;
-
+    padding-top:10%;
+    padding-bottom:10%;
     #welcome-page-about-us {
       color:white;
       text-align: center;

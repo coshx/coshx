@@ -37,12 +37,12 @@ body.mobile-menu {
 }
 
 @media (max-width: $mobile-view-size) {
-  #header #nav ul {
+  #nav ul {
     display: none;
   }
 }
 @media (min-width: $desktop-view-size) {
-  #header #nav #burger {
+  #nav #burger {
     display: none;
   }
 }
