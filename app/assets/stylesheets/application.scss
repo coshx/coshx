@@ -9,11 +9,9 @@
 
 @import "common";
 
-/* The Grid ---------------------- */
-.row { max-width: 1140px; width: 100%; margin: 0 auto; }
-.column { padding: 0 0px; line-height: 0; }
-
-
+html {
+  height: 100%;
+}
 
 body {
   font-family: "Merriweather Sans", "Merriweather", sans-serif;
@@ -23,10 +21,6 @@ body {
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td {
   margin:0;
   padding:0;
-}
-
-html {
-  height: 100%;
 }
 
 body {
@@ -41,198 +35,44 @@ body {
   width: 100%;
 }
 
-.popover-inner {
-  padding: 3px;
-  width: 280px;
-  overflow: hidden;
-  background: #000000;
-  background: rgba(0, 0, 0, 0);
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0);
-  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0);
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0);
-  @include pt-sans;
-  font-size: 12px;
-}
-.popover-title {
-  padding: 0px;
-  background-color: $black;
-  border: 0px;
-}
-.popover-content {
-  background-color: $black;
-  color: $white;
-}
-.highlight {
-  background-color: #fff;
-}
-
-.feature {
-  background-color: #faebd7;
-  height: 100%;
-  h1, h2, h3, h4 {
-    color: $white;
-  }
-  h1 {
-    font-size: 90px;
-    line-height: 147px;
-    margin-top: 0px;
-    text-align: center;
-  }
-  h2 {
-    font-size: 22px;
-    line-height: 38px;
-    text-align: center;
-    font-family: "Merriweather Sans", Georgia;
-  }
-
-
-  @media (max-width: $mobile-view-size) {
-    h2 {
-      text-indent: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-  }
-  h3 {
-    font-size: 20px;
-    line-height: 30px;
-  }
-  h4 {
-    font-size: 14px;
-    line-height: 24px;
-  }
-  #title {
-    position: fixed;
-    left: 0px;
-    right: 0px;
-    top: 200px;
-  }
-  #slogan {
-    position: fixed;
-    top: 115px;
-    right: 98px;
-    width: 58%;
-    height: 150px;
-  }
-  .row {
-    position: fixed;
-    padding-top: 310px;
-    padding-bottom: 60px;
-    padding-left: 65px;
-  }
-  .six {
-    width: 48.1%;
-  }
-}
-
-
-p {
-  margin-bottom:17px;
-  font-family: inherit;
-  font-weight: normal;
-  line-height: 1.6;
-}
-
 h1, h2, h3, h4, h5 {
-  margin-top:14px;
-  margin-bottom:14px;
+  font-family: "Merriweather Sans", serif;
   text-rendering: optimizeLegibility;
-  line-height: 1.3;
   font-style: normal;
   font-weight: normal;
-  color: #535353;
 }
 
-a {
-  color: #9f9f9f;
+h1 {font-size: 42px;}
+h2 {font-size: 24px;}
+h3 {font-size: 30px;}
+h4 {font-size: 16px;}
+h5 {font-size: 12px;}
+
+ul {
+  list-style-type: none;
 }
 
-a:hover {
-  color: #535353;
-}
-
-h1 {
-  margin-top: 100px;
-  font-family: "Merriweather Sans", serif;
-  font-weight: bold;
-  font-size: 42px;
-  color: $dark-grey;
-  text-align: center;
-}
-
-h2 {
-  margin-top: 60px;
-  font-family: "Merriweather", serif;
-  font-size: 24px;
-  line-height: 34px;
-  color: $text-grey;
-  text-align: center;
-  font-weight: normal;
-}
-
-h2 a {
-  color: #38A8CC;
-  text-decoration: underline;
-}
-
-h3 {
-  font-size: 30px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-weight: bold;
-  color: $dark-grey;
-}
-
-h4 {
-  font-size: 16px;
-  font-family: "Merriweather", serif;
-  line-height: 28px;
-  color: $text-grey;
-  font-weight: normal;
-}
-
-h5 {
-  font-size: 16px;
-  font-family: "Merriweather Sans", sans-serif;
-  line-height: 28px;
-  font-weight: bold;
-  margin-bottom: 0px;
-}
-
-h6 {
-  font-size: 14px;
-  font-family: "Merriweather", serif;
-  line-height: 24px;
-  color: $text-grey;
-  font-weight: normal;
-  margin-top: 15px;
-}
-
-h7 {
-  font-size: 13px;
-  font-family: "Merriweather Sans", sans-serif;
-  line-height: 24px;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
-h8 {
-  font-size: 12px;
-  font-family: "Merriweather Sans", sans-serif;
-  line-height: 24px;
-  font-weight: normal;
-  margin-top: 15px;
-}
-
-form.internal {
-  input[type=text], textarea {
-    width: 100%;
+#error-text {
+  h1 {
+    padding-top: 100px;
+    font-size: 200px;
+  }
+  h2 {
+    font-size: 24px;
   }
 }
-.quote-submit-link {
-  width:15%;
+
+#error_explanation, #error_explanation h2 {
+  color: #AA2222;
+}
+
+#thank-you-notice {
+  color: #535353;
   text-align: center;
-  float:right;
+  font-size: 220%;
+  margin-top: 15px;
+}
+
+.error-dialog {
+  text-align: center;
 }

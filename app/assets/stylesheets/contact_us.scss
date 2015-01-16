@@ -1,6 +1,35 @@
 @import "common";
 
 
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+}
+
+#contact-us.btn {
+  width:150px;
+  color: black;
+  font: 14px 'Merriweather Sans', sans-serif;
+  padding: 20px 0px;
+  text-transform: capitalize;
+  text-decoration: none;
+  border-radius: 30px;
+  border-color: $blue;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-out; /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.2s ease-out; /* Firefox 4-15 */
+  -o-transition: all 0.2s ease-out; /* Opera 10.5–12.00 */
+  transition: all 0.2s ease-out; /* Firefox 16+, Opera 12.50+ */
+  &:hover{
+    color: white;
+    border-color: white;
+  }
+}
+
 #contact-us  {
   display:block;
   width:80%;
@@ -15,7 +44,6 @@
 form#contact-form{
   width:80%;
   margin: 0 auto 10% auto;
-
 }
 
 
@@ -74,8 +102,6 @@ input#contact-us-form.btn {
   border-color: blue;
   &:hover{
     color: blue;
-
-
   }
 }
 

@@ -5,44 +5,13 @@
       %ul
         - @project.errors.full_messages.each do |msg|
           %li= msg
-  .row
-    .field
-      = f.label :title
-      = f.text_field :title
-    .field
-      = f.label :permalink
-      = f.text_field :permalink
-    .field
-      = f.label :icon
-      = f.text_field :icon
-    .field
-      = f.label "Case Study Picture"
-      = f.text_field :picture
-    .field
-      = f.label "Featured On Front Page?"
-      = f.check_box :featured
-    .field
-      = f.label :background_color
-      = f.text_field :background_color
-    .field
-      = f.label :tagline
-      = f.text_field :tagline
-    .field
-      = f.label :product_description
-      = f.text_area :product_description
-    .field
-      = f.label :project_description
-      = f.text_area :project_description
-    .field
-      = f.label :result_description
-      = f.text_area :result_description
-    /.field
-    /  = f.label :url
-    /  = f.text_field :url
-    /.field
-    /  = f.label :link_disabled
-    /  = f.check_box :link_disabled
-  .row{:style => "padding-top: 50px"}
-    %h3 Save Project:
-    .actions
-      = f.submit 'Save Project'
+  = f.text_field :title, :required => true, :placeholder => "Title"
+  = f.text_field :permalink, :placeholder => "Permalink title (title with no whitespace)"
+  = f.text_field :icon, :required => true, :placeholder => "URL for project icon"
+  = f.text_field :background_color, :placeholder => "Hex designation for background color (eg, #FFFFFF) for white"
+  = f.text_field :tagline, :placeholder => "Project tagline"
+  = f.text_field :url, :placeholder => "Client website"
+  = f.text_area :product_description, :placeholder => "Product description"
+  = f.text_area :project_description, :placeholder => "Product description"
+  = f.text_area :result_description, :placeholder => "Product description"
+  = f.submit 'Save Project'

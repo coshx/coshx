@@ -1,0 +1,28 @@
+@import "common";
+
+#admin-menu {
+  position:absolute;
+  top:0px;
+  display:block;
+  width:100%;
+  margin:0 auto;
+
+  ul {
+    width:80%;
+    display:block;
+    margin: 0 auto;
+
+    li {
+      display:block;
+      width:25%;
+      float:left;
+      text-align: center;
+      a {
+        text-decoration: none;
+        &:hover{
+          color:black;
+        }
+      }
+    }
+  }
+}
