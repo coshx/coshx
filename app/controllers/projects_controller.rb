@@ -5,8 +5,8 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all.sort { |x, y| x.id <=> y.id }
-
+    @projects = Project.all
+    @featured_projects = Project.featured
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @projects }
@@ -71,7 +71,6 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1.json
   def destroy
     @project.destroy
-
     respond_to do |format|
       format.html { redirect_to projects_url }
       format.json { head :no_content }

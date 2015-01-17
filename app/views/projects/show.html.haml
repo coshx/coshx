@@ -1,9 +1,7 @@
 #tagline{:style => "background-color: #{@project.background_color}"}
   %h3
     = @project.tagline
-    = image_tag (@project.picture.to_s), :id => "laptop_image"
-    = link_to "", @project.previous, :id => "page_arrow", :class => "prev"
-    = link_to "", @project.next, :id => "page_arrow", :class => "next"
+    = image_tag (@project.icon.to_s), :id => "laptop_image"
 
 %div#case-study-middle-row{:style => "background-color: #{@project.background_color}"}
 
@@ -21,8 +19,11 @@
     %h4
       = @project.result_description
   .row
-    - unless @project.url.nil?
+    - unless @project.url.nil? || @project.url.empty?
       = link_to "view the site", @project.url, :target => "_blank", :class => "btn blue center top-padding top-margin-small", :method => :get
+%center
+  - if admin_signed_in?
+    = link_to "Edit", edit_project_path(@project)
+    = link_to 'Destroy', @project, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-- if admin_signed_in?
-  = link_to "Edit", edit_project_path(@project)
+

@@ -64,4 +64,6 @@ Coshx::Application.configure do
   config.log_level = ENV['LOG_LEVEL'] ? ENV['LOG_LEVEL'].to_sym : ('info').to_sym
 
   config.eager_load = true
+
+
 end

@@ -1,8 +1,12 @@
 class Project < ActiveRecord::Base
   has_many :quotes
-  attr_accessible :title, :icon, :picture, :permalink, :product_description, :project_description, :result_description, :background_color
+  attr_accessible :title, :location_id, :icon, :picture, :permalink, :product_description, :project_description, :result_description, :background_color
   validates_uniqueness_of :title
   has_permalink
+
+  def self.featured
+    Project.where.not(location_id: nil).sort{ |x, y| x.location_id <=> y.location_id }
+  end
 
   def permalink_attributes
     {:title => title.downcase.gsub(/[^\w\s]/, '').gsub(/\s+/, '-')}

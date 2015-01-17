@@ -1,11 +1,30 @@
 @import "common";
 
 #welcome-page {
+  h1,h2 {text-align: center}
+  #welcome-page-our-clients {
+    display:block;
+    margin:0 auto;
+    width:65%;
+    overflow: hidden;
 
+    .welcome-page-client-box {
+      width: 25%;
+      float:left;
+      margin:0 auto;
+
+      a img {
+        display:block;
+        margin:0 auto;
+        background: #4085D4;
+        width:75% ;
+      }
+    }
+  }
   #welcome-page-intro {
     display:block;
-    padding-top:0%;
-    padding-bottom:5%;
+    padding-top:8%;
+    padding-bottom:15%;
 
     #digital-agency {
       display:block;
@@ -19,9 +38,10 @@
       img{
         display: block;
         padding-top: 5%;
+        padding-bottom: 2%;
         margin:0 auto;
       }
-      h4 {
+      h5 {
         text-align: center;
         text-transform: capitalize;
       }
@@ -74,7 +94,7 @@
     padding-top:10%;
 
     #text-block {
-      width:50%;
+      width:65%;
       margin:0 auto;
 
       h1 {

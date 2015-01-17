@@ -1,0 +1,15 @@
+#image_index
+  %h1 Listing images
+
+= link_to 'Create New Image', new_image_path
+
+- @images.each do |image|
+  #itemized_image
+    #image
+      = link_to image_tag(image.paperclip.url), image
+    %ul
+      %li=  image.paperclip.url
+      %br
+      %li= link_to 'Edit', edit_image_path(image)
+      %li= link_to 'Destroy', image, :method => :delete, :data => { :confirm => 'Are you sure?' }
+

@@ -1,28 +1,27 @@
 .all-posts
   = render partial: 'author_info'
-  - @posts.each do |p|
+  - @posts.each do |post|
     .row
       #post-description
-        - year = (p.posted_on.present? ? p.posted_on.strftime("%Y") : p.created_at.strftime("%Y"))
+        - year = (post.posted_on.present? ? post.posted_on.strftime("%Y") : post.created_at.strftime("%Y"))
 
-        - link_text = p.title
+        - link_text = post.title
 
-        - if p.published?
-          %h3= link_to link_text.html_safe, show_post_path(p.permalink_attributes), :title => "Read More"
+        - if post.published?
+          %h3= link_to link_text.html_safe, show_post_path(post.permalink_attributes), :title => "Read More"
           %h2
             Written by
-            = link_to p.author.name, by_author_path(p.author.slug)
+            = link_to post.author.name, by_author_path(post.author.slug)
             on
-            = p.created_at.strftime("%B %d, %Y")
-
-
-
+            = post.created_at.strftime("%B %d, %Y")
         - else
-          %h1 
-            = link_to link_text.html_safe, p, :title => 'Not Yet Published'
+          %h1
+            = link_to link_text.html_safe, post, :title => 'Not Yet Published'
         - if admin_signed_in?
           .edit-link
-            = link_to 'Edit', edit_post_path(p)
-            = link_to("Publish", publish_post_path(p), :method => :put) unless p.published?
+            = link_to 'Edit', edit_post_path(post)
+            = link_to("Publish", publish_post_path(post), :method => :put) unless post.published?
+            = link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
   .row#pages
     = paginate @posts

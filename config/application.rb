@@ -71,5 +71,10 @@ module Coshx
     db_overrides_file = 'config/database.overrides.yml'
     self.paths['config/database'] = db_overrides_file if File.exist?(db_overrides_file)
 
+    config.paperclip_defaults = {
+        :storage => :s3,
+    }
+
+
   end
 end

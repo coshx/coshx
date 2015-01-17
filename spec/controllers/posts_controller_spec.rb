@@ -97,7 +97,7 @@ describe PostsController do
         before(:each) { post :create, :post => attributes_for(:post) }
 
         it { should respond_with :redirect }
-        it { should set_the_flash.to 'Blog post saved.' }
+        it { should set_the_flash.to 'Blog post successfully created.' }
       end
 
       context "bad post attributes" do

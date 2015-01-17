@@ -1,0 +1,7 @@
+= @image.paperclip.url
+= image_tag @image.paperclip.url
+
+= link_to 'Edit', edit_image_path(@image)
+\|
+= link_to 'Back', images_path
+%p#notice= notice

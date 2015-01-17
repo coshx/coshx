@@ -2,28 +2,16 @@ source "http://rubygems.org"
 ruby "2.2.0"
 
 gem "rails", "~> 4.2.0"
-
 gem "activeresource"
 gem 'protected_attributes'
 gem 'actionpack-page_caching'
 gem 'actionpack-action_caching'
-
-#moving nokogiri up here because of dependency issues
 gem "nokogiri"
-
 gem "seed_dump"
-
-# web server
 gem 'thin'
-
-# database
 gem "pg"
 gem "paranoia"
-
-# authentication
 gem 'devise'
-
-# presentation
 gem "redcarpet"
 gem "pygmentize"
 gem 'jquery-rails'
@@ -31,28 +19,17 @@ gem "haml-rails"
 gem "gravatar-ultimate"
 gem "kaminari"
 gem 'jquery-ui-rails'
-
-# pictures
 gem 'carrierwave'
-gem 'rmagick'
 gem 'fog'
-
-#Social media is cool?
 gem "twitter"
 gem "twitter-text"
-
-# Permalinks
 gem 'has_permalink'
-
-# Turbolinks!
 gem "turbolinks"
-
-# https://github.com/kjvarga/sitemap_generator
 gem 'sitemap_generator'
-
 gem 'i18n-active_record', git:'git://github.com/svenfuchs/i18n-active_record.git', require: 'i18n/active_record'
-
 gem 'bourbon'
+gem 'paperclip'
+gem 'aws-sdk'
 
 group :production do
   gem 'rails_12factor'

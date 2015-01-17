@@ -2,12 +2,7 @@ class PagesController < ApplicationController
   caches_page :robots
 
   def welcome
-    #if mobile_request? || tablet_request?
-    #  redirect_to '/about'
-    #end
-    #@featured_projects = Project.find(:all, :limit => 3, :order=> 'created_at desc')
-    @projects = Project.all.sort { |x, y| x.id <=> y.id }
-
+    @featured_projects = Project.featured
   end
 
   def services

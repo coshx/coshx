@@ -9,30 +9,21 @@ calculatedFontSize = (full_screen_size, minimum_screen_size, max_font_size, min_
 adjustFont = ->
   windowWidth = $(window).width()
 
-  h1_font_size = calculatedFontSize 1200, 320, 42, 15
-  h2_font_size = calculatedFontSize 1200, 320, 24, 12
-  h3_font_size = calculatedFontSize 1200, 320, 30, 16
-  h4_font_size = calculatedFontSize 1200, 320, 16, 10
+  h1_font_size = calculatedFontSize 1200, 320, 42, 30
+  h2_font_size = calculatedFontSize 1200, 320, 30, 25
+  h3_font_size = calculatedFontSize 1200, 320, 26, 18
+  h4_font_size = calculatedFontSize 1200, 320, 22, 16
+  h5_font_size = calculatedFontSize 1200, 320, 16, 10
+
   $("h1").css "font-size", h1_font_size + "px"
   $("h2").css "font-size", h2_font_size + "px"
   $("h3").css "font-size", h3_font_size + "px"
   $("h4").css "font-size", h4_font_size + "px"
-
-  $("h4").css "line-height", Math.min(windowWidth * 0.006, 2)
-  $("h2").css "line-height", Math.min(windowWidth * 0.006, 1.45)
+  $("h5").css "font-size", h5_font_size + "px"
 
   $("a#contact-us.btn.rounded").css "font-size", h4_font_size + "px"
   $("a#contact-us.btn.rounded").css "width", 130 + windowWidth * 0.1 + "px"
   $("a#contact-us.btn.rounded").css "display", "block"
-
-  if windowWidth > 767 #mobile cutoff
-    city_font_size = calculatedFontSize 1200, 767, 14, 12
-    address_font_size = calculatedFontSize 1200, 767, 12, 8
-    $("footer .city").css "font-size", city_font_size+'px'
-    $("footer .address").css "font-size",  address_font_size+'px'
-  else
-    $("footer .city").css "font-size", '14px'
-    $("footer .address").css "font-size",  '12px'
 
 $(window).resize(adjustFont)
 $(document).ready(adjustFont)

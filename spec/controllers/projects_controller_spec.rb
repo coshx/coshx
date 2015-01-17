@@ -29,11 +29,16 @@ describe ProjectsController do
 
   def valid_attributes
     {:permalink => "test"}
-
   end
+
+  def featured_project_attributes
+    {:permalink => "test", :location_id=>"0"}
+  end
+
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
+
 
 
   describe "GET index" do
@@ -41,9 +46,16 @@ describe ProjectsController do
       sign_in admin
       project = Project.create! valid_attributes
       get :index
-
       assigns(:projects).size.should == 1
     end
+
+    it "assigns all featured_projects as @featured_projects" do
+      sign_in admin
+      featured_projects = Project.create! featured_project_attributes
+      get :index
+      assigns(:featured_projects).size.should == 1
+    end
+
   end
 
   describe "GET show" do

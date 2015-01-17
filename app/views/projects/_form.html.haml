@@ -5,9 +5,13 @@
       %ul
         - @project.errors.full_messages.each do |msg|
           %li= msg
+  %br
+  %br
+  = f.submit 'Save Project'
+  = f.text_field :location_id, :placeholder => "location number"
   = f.text_field :title, :required => true, :placeholder => "Title"
   = f.text_field :permalink, :placeholder => "Permalink title (title with no whitespace)"
-  = f.text_field :icon, :required => true, :placeholder => "URL for project icon"
+  = f.text_field :icon, :required => true, :placeholder => "Image URL for project icon"
   = f.text_field :background_color, :placeholder => "Hex designation for background color (eg, #FFFFFF) for white"
   = f.text_field :tagline, :placeholder => "Project tagline"
   = f.text_field :url, :placeholder => "Client website"

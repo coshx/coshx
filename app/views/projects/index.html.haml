@@ -5,7 +5,7 @@
 
 
   #our-work-index
-    -@projects.each do |project|
+    -@featured_projects.each do |project|
       .projects-client-box
         #project-background-style{:style => "background-color: #{project.background_color}"}
           =link_to(image_tag(project.picture), project_path(project.permalink))

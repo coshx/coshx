@@ -1,5 +1,7 @@
 Coshx::Application.routes.draw do
 
+
+
   # coshx.com#{x} redirects to www.coshx.com#{x}
   get '(*any)' => redirect { |p, req|
     req.url.sub(req.host, 'www.coshx.com') },
@@ -9,6 +11,7 @@ Coshx::Application.routes.draw do
   resources :messages
   resources :quotes
   resources :projects
+  resources :images
 
   scope "/blog" do
     get '(/author/:author_slug)'   => 'posts#index', :as => :by_author
@@ -25,17 +28,14 @@ Coshx::Application.routes.draw do
   get 'contact' => 'pages#contact_us'
   get 'competition' => 'pages#competition'
 
-  post 'uploads/images' => 'posts#upload_image'
-
   devise_for :admins
   get 'edit_my_profile' => 'admins#edit'
   get 'profile_update' => 'admins#update'
 
   get 'profile/:slug' => "pages#profile"
-  get 'dashboard' => 'dashboard#index', :as => :admin_root
   get '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
 
-  resources :posts, :except => [:index, :destroy] do
+  resources :posts, :except => [:index] do
     put 'publish', :on => :member
   end
 

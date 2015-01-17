@@ -10,7 +10,3 @@
 //= require vendor
 //= require_tree
 //= require turbolinks
-//= require image_upload
-
-$(function(){ $(document).foundation(); });
-
