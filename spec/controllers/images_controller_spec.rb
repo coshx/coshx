@@ -82,13 +82,14 @@ RSpec.describe ImagesController, :type => :controller do
         skip("Add a hash of attributes valid for your model")
       }
 
+=begin
       it "updates the requested image" do
         image = Image.create! valid_attributes
         put :update, {:id => image.to_param, :image => new_attributes}, valid_session
         image.reload
         skip("Add assertions for updated state")
       end
-
+=end
       it "assigns the requested image as @image" do
         image = Image.create! valid_attributes
         put :update, {:id => image.to_param, :image => valid_attributes}, valid_session
