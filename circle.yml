@@ -3,7 +3,7 @@ deployment:
     branch: master
     commands:
       - '[[ ! -s "$(git rev-parse --git-dir)/shallow" ]] || git fetch --unshallow'
-      - rake production deploy
+      - bundle exec rake production deploy
   staging:
     branch: develop
     commands:
