@@ -4,7 +4,7 @@ class ImagesController < ApplicationController
   respond_to :html
 
   def index
-    @images = Image.all
+    @images = {:my => current_admin.images, :other => Image.for_other_users_than(current_admin)}
     respond_with(@images)
   end
 
@@ -21,7 +21,7 @@ class ImagesController < ApplicationController
   end
 
   def create
-    @image = Image.new(image_params)
+    @image = current_admin.images.new(image_params)
     @image.save
     respond_with(@image)
   end

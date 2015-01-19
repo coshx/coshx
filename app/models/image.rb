@@ -1,4 +1,5 @@
 class Image < ActiveRecord::Base
+  belongs_to :admin
   has_attached_file :paperclip,
                     #:styles => { :medium => "x300", :thumb => "x100" }, update rmagick / ImageMagick
                     :default_url => "default",
@@ -13,4 +14,8 @@ class Image < ActiveRecord::Base
 
   attr_accessible :paperclip
   validates_attachment_content_type :paperclip, :content_type => /\Aimage\/.*\Z/
+
+  def self.for_other_users_than(current_admin)
+    Image.where('admin_id != ?', current_admin.id)
+  end
 end

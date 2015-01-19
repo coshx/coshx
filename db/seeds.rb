@@ -62,8 +62,6 @@ post.save!
 
 =end
 
-Project.delete_all
-
 puts "Adding Out of box projects"
 project = Project.where(:id => 1).first_or_create do |project|
   project.title = "AGOGO"
@@ -199,22 +197,3 @@ project = Project.where(:id => 9).first_or_create do |project|
   project.result_description = ""
 end
 project.save!(:validate => false)
-
-
-=begin
-  { :title => "Greeneggs",
-    :picture => "greeneggs_iphone.png",
-    :featured => false,
-    :url => "http://www.closeoutbike.com",
-    :background_color => "#a5c675",
-    :featured_picture => "greeneggs_img.png",
-    :tagline => "Your bicycle shopping gets easier!",
-    :permalink => "greeneggs",
-    :index_picture => "greeneggs_result.png",
-
-    :project_description => "",
-    :product_description => "",
-    :result_description => "",
-
-    :link_disabled => nil },
-=end

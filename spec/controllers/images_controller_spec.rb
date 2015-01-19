@@ -4,18 +4,20 @@ RSpec.describe ImagesController, :type => :controller do
 
   let(:valid_attributes) {}
   let(:invalid_attributes) {}
-  let(:valid_session) { {} }
-  let(:admin)     { create :admin }
+  let(:valid_session) {{}}
+  let(:admin) {create :admin}
 
   before(:each) {
     sign_in admin
   }
   describe "GET index" do
-    it "assigns all images as @images" do
-      image = Image.create! valid_attributes
+   it "assigns my images" do
+      Image.create! valid_attributes
+      images = {:my => admin.images, :other => Image.for_other_users_than(admin)}
       get :index, {}, valid_session
-      expect(assigns(:images)).to eq([image])
+      expect(assigns(:images)).to eq(images)
     end
+
   end
 
   describe "GET show" do

@@ -32,6 +32,11 @@ Coshx::Application.routes.draw do
   get 'edit_my_profile' => 'admins#edit'
   get 'profile_update' => 'admins#update'
 
+  devise_scope :admin do
+    get 'login' => 'devise/sessions#new'
+    get 'signin' => 'devise/sessions#new'
+  end
+
   get 'profile/:slug' => "pages#profile"
   get '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
 

@@ -6,6 +6,7 @@ class Admin < ActiveRecord::Base
   validates_presence_of :bio
 
   has_many :posts, :foreign_key => "author_id"
+  has_many :images, :dependent => :destroy
   before_save :generate_slug
 
   def portrait_url

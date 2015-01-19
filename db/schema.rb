@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150117145209) do
+ActiveRecord::Schema.define(version: 20150119164237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,7 +64,10 @@ ActiveRecord::Schema.define(version: 20150117145209) do
     t.datetime "avatar_updated_at"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "admin_id"
   end
+
+  add_index "images", ["admin_id"], name: "index_images_on_admin_id", using: :btree
 
   create_table "jobs", force: :cascade do |t|
     t.string   "title",       null: false
