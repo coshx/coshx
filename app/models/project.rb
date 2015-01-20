@@ -5,11 +5,7 @@ class Project < ActiveRecord::Base
   has_permalink
 
   def self.featured
-    @project = Project.where.not(location_id: nil).sort{ |x, y| x.location_id <=> y.location_id }
-    Rails.logger.info "***********"
-    Rails.logger.info @project
-    Rails.logger.info "***********"
-    @project
+    Project.where.not(location_id: nil).sort{ |x, y| x.location_id <=> y.location_id }
   end
 
   def permalink_attributes

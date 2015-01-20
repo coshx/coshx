@@ -4,18 +4,18 @@
 
 #case-study-details
   #title.row
-    %h2= @project.title
+    %h2= @project.title.html_safe
   #summary.row
     %h5= @project.summary.html_safe
   #client-name.row
-    %h5= @project.client_name
+    %h5= @project.client_name.html_safe
   %br
   .row
-    %h5= @project.description
+    %h5= @project.description.html_safe
   .row
     - unless @project.url.nil? || @project.url.empty?
       %br
-      = link_to "view the site", @project.url, :target => "_blank", :id => "view-the-site", :class => "btn", :method => :get
+      = link_to "view the site", @project.url, :target => "_blank", :id => "view-the-site", :class => "btn"
 
 
 %center
