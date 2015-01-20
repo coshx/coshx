@@ -3,8 +3,8 @@
 	.row
 		#post-text
 			%h3= post.title
-	    
-			%h2
+
+			%h4
 				Written by
 				= link_to post.author.name, by_author_path(post.author.slug)
 				on
@@ -23,8 +23,8 @@
 		.column.two
 			%a{:href => about_path, :class => 'about-us-avatar'}(style="background:url(#{Gravatar.new(post.author.email).image_url(:size => 80, :secure => true)});")
 		.column.ten
-			%h2 
-				More posts by 
+			%h2
+				More posts by
 				= link_to post.author.name, blog_posts_path(:author_id => post.author_id)
 				%div.sharethis_toolbox.sharethis_post_footer
 					%span{class:'st_sharethis_large', displayText:'ShareThis'}

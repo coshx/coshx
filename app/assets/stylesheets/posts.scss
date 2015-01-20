@@ -54,16 +54,21 @@
 
 .post-content {
   p {
-    font-size: 24px;
+    font-size: 20px;
     font-family: "Merriweather", serif;
     line-height: 36px;
     color: #535353;
-    font-weight: regular;
+    font-weight: normal;
+    margin-top: 18px;
+    margin-bottom: 18px;
 
     a {
       color: #38A8CC;
       text-decoration: underline;
     }
+  }
+  p:first-child {
+    margin-top: 10px;
   }
   .thumbnail {
     display: block;
@@ -111,16 +116,18 @@
   }
 
   h3 {
-    font-size: 42px !important;
+    font-size: 32px !important;
     color: $dark-grey;
+    line-height: 34px !important;
   }
-  h2 {
+  h4 {
     text-align: left;
-    font-size: 22px;
     margin-top: 30px;
     margin-bottom: 30px;
+    vertical-align: top;
     a {
       color: #38A8CC;
+      vertical-align: top;
     }
   }
 
