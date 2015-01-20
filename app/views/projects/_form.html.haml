@@ -13,9 +13,8 @@
   = f.text_field :permalink, :placeholder => "Permalink title (title with no whitespace)"
   = f.text_field :icon, :required => true, :placeholder => "Image URL for project icon"
   = f.text_field :background_color, :placeholder => "Hex designation for background color (eg, #FFFFFF) for white"
-  = f.text_field :tagline, :placeholder => "Project tagline"
+  = f.text_field :client_name, :placeholder => "name of client or product owner representative"
   = f.text_field :url, :placeholder => "Client website"
-  = f.text_area :product_description, :placeholder => "Product description"
-  = f.text_area :project_description, :placeholder => "Product description"
-  = f.text_area :result_description, :placeholder => "Product description"
+  = f.text_area :summary, :placeholder => "Short summary"
+  = f.text_area :description, :placeholder => "Full description"
   = f.submit 'Save Project'

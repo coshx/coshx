@@ -6,8 +6,18 @@
  *= require vendor
  *= require_tree .
 */
+@import "macros";
+@mixin pt-sans {
+  font-family: 'PT Sans', sans-serif;
+}
 
-@import "common";
+.clearfix {
+  content: "";
+  visibility: hidden;
+  display: table;
+  height: 0;
+  clear: both;
+}
 
 html {
   height: 100%;
@@ -16,6 +26,9 @@ html {
 body {
   font-family: "Merriweather Sans", "Merriweather", sans-serif;
   height:100%;
+  text-rendering: optimizeLegibility;
+  font-style: normal;
+  font-weight: normal;
 }
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td {
@@ -33,13 +46,6 @@ body {
 .main-container {
   height: 100%;
   width: 100%;
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: "Merriweather Sans", serif;
-  text-rendering: optimizeLegibility;
-  font-style: normal;
-  font-weight: normal;
 }
 
 h1 {font-size: 42px;line-height: 48px;}
@@ -75,4 +81,36 @@ ul {
 
 .error-dialog {
   text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+}
+
+#work-together-block, #contact-us-banner, #heart-banner {
+  background: #ECE6D9;
+  font-size:25px;
+  text-align:center;
+  padding:6%;
+  a {
+    margin: 0 auto;
+    display:block;
+  }
+
+  #contact-us-banner-text{
+    margin-bottom: 3%;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .post-content {
+    p {
+      font-size: 1.3em;
+    }
+  }
 }

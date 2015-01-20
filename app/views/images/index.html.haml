@@ -20,8 +20,7 @@ my images
 %br
 %br
 %hr
-team images
-- @images[:team].each do |image|
+- @images[:other].each do |image|
   #itemized_image
     #image
       = link_to image_tag(image.paperclip.url), image

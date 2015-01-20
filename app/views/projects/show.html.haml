@@ -1,26 +1,23 @@
-#tagline{:style => "background-color: #{@project.background_color}"}
-  %h3
-    = @project.tagline
-    = image_tag (@project.icon.to_s), :id => "laptop_image"
+#case-study-banner{:style => "background-color: #{@project.background_color}"}
+  .helper
+  = image_tag (@project.icon.to_s)
 
-%div#case-study-middle-row{:style => "background-color: #{@project.background_color}"}
-
-#case-study-steps
+#case-study-details
+  #title.row
+    %h2= @project.title
+  #summary.row
+    %h5= @project.summary.html_safe
+  #client-name.row
+    %h5= @project.client_name
+  %br
   .row
-    %h3 The Product
-    %h4
-      = @project.product_description
-  .row
-    %h3 The Project
-    %h4
-      = @project.project_description
-  .row
-    %h3 The Results
-    %h4
-      = @project.result_description
+    %h5= @project.description
   .row
     - unless @project.url.nil? || @project.url.empty?
-      = link_to "view the site", @project.url, :target => "_blank", :class => "btn blue center top-padding top-margin-small", :method => :get
+      %br
+      = link_to "view the site", @project.url, :target => "_blank", :id => "view-the-site", :class => "btn", :method => :get
+
+
 %center
   - if admin_signed_in?
     = link_to "Edit", edit_project_path(@project)

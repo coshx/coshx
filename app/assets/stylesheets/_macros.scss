@@ -1,15 +1,10 @@
-
-
 $mobile-view-size: 767px;
 $desktop-view-size: 768px;
-
 $header_height: 110px;
 $footer_height: 110px;
-
 $blue: #4085D4;
 $tan: #ECE6D9;
 $white: #FFFFFF;
-
 $bright-blue: #2ba6cb;
 $dark-blue: #004264;
 $spring-blue: #266287;
@@ -18,14 +13,3 @@ $steel-gray: #455560;
 $text-grey: #929292;
 $grey-white: #f6f6f6;
 $dark-grey: #535353;
-
-@mixin pt-sans {
-  font-family: 'PT Sans', sans-serif;
-}
-.clearfix {
-  content: "";
-  visibility: hidden;
-  display: table;
-  height: 0;
-  clear: both;
-}

@@ -1,30 +1,10 @@
-@import "common";
-
+@import "macros";
 #welcome-page {
   h1,h2 {text-align: center}
-  #welcome-page-our-clients {
-    display:block;
-    margin:0 auto;
-    width:65%;
-    overflow: hidden;
 
-    .welcome-page-client-box {
-      width: 25%;
-      float:left;
-      margin:0 auto;
-
-      a img {
-        display:block;
-        margin:0 auto;
-        background: #4085D4;
-        width:75% ;
-      }
-    }
-  }
   #welcome-page-intro {
     display:block;
     padding-top:8%;
-    padding-bottom:15%;
 
     #digital-agency {
       display:block;
@@ -37,32 +17,29 @@
     #scroll-icon {
       img{
         display: block;
-        padding-top: 5%;
+        padding-top: 20%;
         padding-bottom: 2%;
         margin:0 auto;
-      }
-      h5 {
-        text-align: center;
-        text-transform: capitalize;
       }
     }
   }
 
   #blue-background-wrapper {
     background:$blue;
-    padding-top:10%;
+    padding-top:5%;
     padding-bottom:10%;
+
     #welcome-page-about-us {
       color:white;
       text-align: center;
       width:75%;
       margin:0 auto;
-      padding-top:2%;
-      h1, h2 {
+
+      h1, h4 {
         color: #FFFFFF;
-        margin-top: 40px;
+        margin-top: 20px;
       }
-      h2 {
+      h4 {
         padding-bottom:60px;
       }
     }
@@ -91,19 +68,18 @@
 
     background:$tan;
     display:block;
-    padding-top:10%;
+    padding-top:5%;
 
     #text-block {
       width:65%;
       margin:0 auto;
-
+      text-align:center;
       h1 {
         margin:0px;
-        padding-top:15%;
+        padding-top:2%;
       }
-      h2 {
-        margin:0px;
-        padding-top:4%;
+      h4 {
+        margin-top: 20px;
       }
       a {
         margin:0px;

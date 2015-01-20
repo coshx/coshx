@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150119164237) do
+ActiveRecord::Schema.define(version: 20150120175356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,20 +108,19 @@ ActiveRecord::Schema.define(version: 20150119164237) do
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
-    t.text     "product_description"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "picture"
     t.boolean  "featured"
     t.string   "url"
-    t.text     "project_description"
-    t.text     "result_description"
+    t.text     "summary"
     t.string   "background_color"
-    t.string   "tagline"
     t.string   "permalink"
     t.string   "icon"
     t.boolean  "link_disabled"
     t.integer  "location_id"
+    t.string   "client_name"
   end
 
   add_index "projects", ["permalink"], name: "index_projects_on_permalink", unique: true, using: :btree

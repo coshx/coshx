@@ -1,4 +1,4 @@
-@import "common";
+@import "macros";
 @import "bourbon";
 
 .all-posts {
@@ -211,6 +211,7 @@ div.sharethis_post_footer {
   font-family: "arial", sans-serif;
   display:block;
   margin:20px;
+
   #google-title {
     color:rgb(26,13,171);
     cursor:pointer;

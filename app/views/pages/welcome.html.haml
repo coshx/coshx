@@ -3,18 +3,18 @@
     #digital-agency
       %h1 A Modern Digital Consultancy
     #scroll-icon
-      %h5 this space intentionally left blank
+      =image_tag 'scroll.png'
   #blue-background-wrapper
     #welcome-page-about-us
       %h1 We build applications for people
-      %h2 Watching your idea develop into a valuable application should be fun, not daunting. Our approach makes you an integral part of the process while improving your tech along the way.
+      %h4 Watching your idea develop into a valuable application should be fun, not daunting. Our approach makes you an integral part of the process while improving your tech along the way.
     #welcome-page-our-clients
       -@featured_projects.each do |project|
         .welcome-page-client-box
-          =link_to(image_tag(project.picture), project_path(project.permalink))
+          =link_to(image_tag(project.icon), project_path(project.permalink))
   #digital-experience
     #text-block
       %h1 Digital Expertise
-      %h2 We have led every facet of development from ideation to launch and used our experience to solve problems before they arise.  Our design-oriented approach ensures your software will feel like welcome to your users, whether you have one or a million.
+      %h4 We have led every facet of development from ideation to launch and used our experience to solve problems before they arise.  Our design-oriented approach ensures your software will feel like welcome to your users, whether you have one or a million.
 
 = render "shared/contact_us_banner"
