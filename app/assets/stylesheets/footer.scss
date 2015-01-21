@@ -15,13 +15,15 @@
         width:25%;
         display:block;
         float:left;
+        margin-bottom: -10px;
         a {
           display:block;
           width:100%;
+          height:100%;
           img {
             display:block;
             margin:0 auto;
-
+            height:30px;
           }
         }
       }
@@ -30,22 +32,27 @@
 }
 
 @media (max-width: $mobile-view-size) {
-  #footer #footer-nav ul{
+  #footer #footer-nav {
+   margin: 0 auto;
+   ul{
     #footer-icon li {
       width:100% !important;
       img {
-        padding-top:10px !important;
-        width:30% !important;
+        display:none;
       }
     }
     li{
       width:33.3%;
-      img {
-        width:90% !important;
-        padding:0px !important;
-        margin-bottom:20px !important;
+      a {
+        img {
+          width:90% !important;
+          padding:0px !important;
+          margin-bottom:20px !important;
+
+        }
       }
     }
+  }
   }
 }
 

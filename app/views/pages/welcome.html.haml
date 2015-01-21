@@ -1,21 +1,28 @@
 #welcome-page
   #welcome-page-intro
-    #digital-agency
+    #tagline
       %h1 Dynamic Digital Development
-      %h4 inspired innovation. exquisite code. intuitive design
+      %h4 inspired&nbsp;innovation.&nbsp;exquisite&nbsp;code. intuitive&nbsp;design.
     #scroll-icon
       =image_tag 'scroll.png'
   #blue-background-wrapper
     #welcome-page-about-us
-      %h1 We build applications for people
-      %h4 Watching your idea develop into a valuable application should be fun, not daunting. Our approach makes you an integral part of the process while improving your tech along the way.
+      %h2 No matter where you are on your product roadmap, we’ll walk with you every step of the way.
+      %ul
+        %li
+          =image_tag 'front-page-startup.png'
+          %h5 StartUps Starting Out
+          %h6 Getting underway with your product idea is exciting. Coshx helps get startups get on the road with ideation, design and product planning that set a course toward success.
+        %li
+          =image_tag 'front-page-mvp.png'
+          %h5 Beyond MVP
+          %h6 You’ve tested out the prototype. When it’s time to ramp up to full-featured app Coshx will get you there.
+        %li
+          =image_tag 'tech_craft.png'
+          %h5 Scaling Up
+          %h6 Lean on our experience to as you build out your product road map helping you make smart investments in your technology future.
     #welcome-page-our-clients
       -@featured_projects.each do |project|
         .welcome-page-client-box
           =link_to(image_tag(project.icon), project_path(project.permalink))
-  #digital-experience
-    #text-block
-      %h1 Digital Expertise
-      %h4 We have led every facet of development from ideation to launch and used our experience to solve problems before they arise.  Our design-oriented approach ensures your software will feel like welcome to your users, whether you have one or a million.
-
 = render "shared/contact_us_banner"
