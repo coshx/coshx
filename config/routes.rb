@@ -27,6 +27,7 @@ Coshx::Application.routes.draw do
   get 'careers' => 'pages#careers'
   get 'contact' => 'pages#contact_us'
   get 'competition' => 'pages#competition'
+  get '/phpMyAdmin/scripts/setup.php' => 'errors#not_found'
 
   devise_for :admins
   get 'edit_my_profile' => 'admins#edit'
