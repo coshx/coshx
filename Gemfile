@@ -59,6 +59,9 @@ gem 'i18n-active_record',
 # sass mixin library
 gem 'bourbon'
 
+# for heroku
+gem 'rails_12factor'
+
 group :assets do
   # upload assets to s3 before deploying to heroku
   gem "asset_sync"

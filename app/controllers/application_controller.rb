@@ -69,7 +69,7 @@ class ApplicationController < ActionController::Base
     end
 
     def render_error
-      render 'errors/505', :status => :internal_server_error
+      render 'errors/500', :status => :internal_server_error
     end
 
 
@@ -78,6 +78,8 @@ class ApplicationController < ActionController::Base
         begin
           yield
         rescue Exception => exception
+          logger.fatal "Caught Exception: #{exception.message}\n\t#{exception.backtrace.join("\n\t")}"
+
           if exception.is_a?(ActiveRecord::RecordNotFound) || exception.is_a?(ActionController::RoutingError)
             render_page_not_found
           else
