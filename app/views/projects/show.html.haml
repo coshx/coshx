@@ -1,30 +1,20 @@
 #tagline{:style => "background-color: #{@project.background_color}"}
-	.row{:style => "position: relative"}
-		- if admin_signed_in?
-			= link_to "Edit", edit_project_path(@project)
-		%h3 
-			= @project.tagline
-		= image_tag (@project.picture.to_s), :id => "laptop_image"
-		= link_to "", @project.previous, :id => "page_arrow", :class => "prev"
-		= link_to "", @project.next, :id => "page_arrow", :class => "next"
-%div#case-study-middle-row
+  %h3
+    = @project.tagline
+    = image_tag (@project.icon.to_s), :id => "laptop_image"
+
+%div#case-study-middle-row{:style => "background-color: #{@project.background_color}"}
 
 #case-study-steps
-	.row
-		%h3 The Product
-		%h4 
-			= @project.product_description
-	.row
-		%h3 The Project
-		%h4 
-			= @project.project_description
-	.row
-		%h3 The Results
-		%h4 
-			= @project.result_description
-	.row
-		- if @project.link_disabled?
-			= button_to "view the site", '#', :class => "btn light-grey center top-margin-small", :disabled => true, :method => :get
-		- else
-			= link_to "view the site", @project.url, :target => "_blank", :class => "btn blue center top-padding top-margin-small", :method => :get
+  .row
+    %h4
+      = @project.description
+  .row
+    - unless @project.url.nil? || @project.url.empty?
+      = link_to "view the site", @project.url, :target => "_blank", :class => "btn blue center top-padding top-margin-small", :method => :get
+%center
+  - if admin_signed_in?
+    = link_to "Edit", edit_project_path(@project)
+    = link_to 'Destroy', @project, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
 
