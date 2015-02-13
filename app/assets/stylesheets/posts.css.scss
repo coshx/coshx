@@ -111,6 +111,11 @@
     padding-right: 0px;
   }
 
+  h4 {
+    font-size: 24px !important;
+    color: $dark-grey;
+    font-weight: bold;
+  }
   h3 {
     font-size: 42px !important;
     color: $dark-grey;
@@ -130,8 +135,8 @@
     font-size: 15px;
     line-height: 26px;
     font-family: "Merriweather Sans", serif;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     a {
       color: #38A8CC;
     }
