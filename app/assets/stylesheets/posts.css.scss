@@ -111,12 +111,10 @@
     font-family: "Merriweather Sans", sans-serif;
     line-height: 28px
   }
-
   .row {
     padding-left: 0px;
     padding-right: 0px;
   }
-
   h4 {
     font-size: 22px !important;
     color: $dark-grey;
@@ -136,18 +134,18 @@
       color: #38A8CC;
     }
   }
-
-  ul {
-    list-style-type: disc;
-    margin-left: 30px;
-  }
-
   pre {
     line-height: 1.4em;
     font-size: 14px;
     letter-spacing: -0.03em;
   }
-
+  ul {
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+  ol {
+    margin-left: 30px;
+  }
   li {
     text-align: left;
     font-family: "Merriweather Sans", sans-serif;
