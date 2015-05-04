@@ -62,6 +62,9 @@ gem 'bourbon'
 # for heroku
 gem 'rails_12factor'
 
+# metrics
+gem 'newrelic_rpm'
+
 group :assets do
   # upload assets to s3 before deploying to heroku
   gem "asset_sync"
